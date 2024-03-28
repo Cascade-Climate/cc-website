@@ -25,5 +25,8 @@
     "vite": "^5.0.3",
     "wrangler": "^3.39.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "svelte-markdown": "^0.4.1"
+  }
 }
