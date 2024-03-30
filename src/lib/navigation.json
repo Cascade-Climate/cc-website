@@ -2,8 +2,8 @@
 {
 	"items": [
 		{
-			"url": "/who-we-are",
-			"label": "WHO WE ARE"
+			"url": "/team",
+			"label": "Team"
 		},
 		{
 			"url": "/qa",
@@ -11,11 +11,11 @@
 		},
 		{
 			"url": "/blog",
-			"label": "BLOG"
+			"label": "Blog"
 		},
 		{
 			"url": "https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1",
-			"label": "SUBSCRIBE",
+			"label": "Subscribe",
 			"external": true,
 			"button": true
 		}

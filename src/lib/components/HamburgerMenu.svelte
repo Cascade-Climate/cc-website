@@ -16,7 +16,7 @@
 <button
 	bind:this={navHamburger}
 	class="hamburger"
-	class:mobile-only={mobileOnly}
+	class:mobile-only={mobileOnly && !active}
 	class:active={active}
 	on:click={toggleHamburger}
 	type="button"
