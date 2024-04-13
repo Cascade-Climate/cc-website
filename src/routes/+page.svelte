@@ -175,6 +175,7 @@
 		font-weight: 350;
 		text-align: center;
 		line-height: 52px;
+		margin: 0;
 	}
 
 	#near-term-focus {
@@ -194,6 +195,7 @@
 	}
 
 	#near-term-focus h2 {
+		margin-top: 0;
 		margin-bottom: 1rem;
 	}
 

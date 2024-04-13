@@ -18,7 +18,7 @@
 <style>
 	footer {
 		background-color: var(--color-dark);
-		padding: 4.8rem 2rem;
+		padding: 4.8rem 4rem;
 	}
 
 	.button {
