@@ -6,8 +6,8 @@
 			"label": "Team"
 		},
 		{
-			"url": "/qa",
-			"label": "Q&A"
+			"url": "/faq",
+			"label": "FAQ"
 		},
 		{
 			"url": "/blog",

@@ -2,16 +2,9 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '$lib/theme.css'
-
-	export let root;
-
-	$: root &&
-		root.style.setProperty('--color-light', '#f7f7f7') &&
-		root.style.setProperty('--color-dark', '#023c40') &&
-		root.style.setProperty('--color-accent', '#f7f7f7');
 </script>
 
-<div bind:this={root} id="root-layout">
+<div id="root-layout">
 	<Header />
 	<slot />
 	<Footer />
