@@ -1,7 +1,7 @@
 <script>
 	import HamburgerMenu from '$lib/components/HamburgerMenu.svelte';
 	import NavModal from '$lib/components/NavModal.svelte';
-	import nav from '$lib/navigation.json';
+	import config from '$lib/config.json';
 
 	let navModalActive = false;
 	function toggleNavModal() {
@@ -12,28 +12,29 @@
 <header>
 	<div id="header-container">
 		<div id="header-logo">
-			<a href="/">
-				<img alt="Logo" />
+			<a href="/" on:click={() => navModalActive = false}>
+				<img alt="" />
 				Cascade Climate
 			</a>
 		</div>
 		{#if !navModalActive}
 			<nav>
-				{#each nav.items as item (item.url)}
+				{#each config.navItems as item (item.url)}
 					<a class:button={item.button} target={item.external ? '_blank' : '_self'} href={item.url}
 						>{item.label}</a
 					>
 				{/each}
+				<a class="button" target="_blank" href={config.subscribeUrl}>Subscribe</a>
 			</nav>
 		{/if}
-		<HamburgerMenu mobileOnly={true} callbackFn={toggleNavModal} />
+		<HamburgerMenu mobileOnly={true} callbackFn={toggleNavModal} active={navModalActive}/>
 	</div>
-	<NavModal active={navModalActive} />
+	<NavModal active={navModalActive} callbackFn={toggleNavModal}/>
 </header>
 
 <style>
 	header {
-		background-color: var(--color-dark);
+		height: 4rem;
 	}
 
 	#header-container {
@@ -43,7 +44,10 @@
 		height: 4rem;
 		padding: 0 1rem;
 		z-index: 4;
-		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
 		background-color: var(--color-dark);
 	}
 
@@ -62,6 +66,7 @@
 		text-decoration: none;
 		font-weight: 400;
 		font-size: 12px;
+		line-height: 16px;
 		font-variation-settings: 'wght' 300;
 		letter-spacing: 0.6px;
 		margin: 0 8px;
@@ -71,7 +76,7 @@
 	header a.button {
 		background-color: var(--color-accent);
 		color: var(--color-light);
-		padding: 8px 24px;
+		padding: 8px 16px;
 		margin: 0 16px;
 		border-radius: 16px;
 	}

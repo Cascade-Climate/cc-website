@@ -1,0 +1,25 @@
+:root {
+	font-family: 'Inter', sans-serif;
+	--color-dark: #023c40;
+	--color-light: #ffffff;
+	--color-accent: #187373;
+	--color-text: #000000;
+}
+
+@font-face {
+	font-family: 'Work Sans';
+	font-style: normal;
+	src: url('/fonts/WorkSans-Variable.ttf');
+	src:
+		local(''),
+		url('/fonts/WorkSans-Variable.ttf?#iefix') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	src: url('/fonts/Inter-Variable.ttf');
+	src:
+		local(''),
+		url('/fonts/Inter-Variable.ttf?#iefix') format('truetype');
+}

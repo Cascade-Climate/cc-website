@@ -1,24 +1,15 @@
 <script>
 	export let mobileOnly;
 	export let callbackFn;
+	export let active;
 
-	let navHamburger;
-	let active = false;
-
-	function toggleHamburger() {
-		active = !active;
-		if (callbackFn) {
-			callbackFn();
-		}
-	}
 </script>
 
 <button
-	bind:this={navHamburger}
 	class="hamburger"
 	class:mobile-only={mobileOnly && !active}
 	class:active={active}
-	on:click={toggleHamburger}
+	on:click={callbackFn}
 	type="button"
 	aria-label="Toggle Hamburger Menu"
 >

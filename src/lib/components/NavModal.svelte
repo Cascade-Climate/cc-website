@@ -1,18 +1,16 @@
 <script>
 	export let active;
-	import nav from '$lib/navigation.json';
+	export let callbackFn;
+
+	import config from '$lib/config.json';
 </script>
 
 <div id="nav-modal" class:active>
 	<nav>
-		{#each nav.items as item, i (item.url)}
-			<a
-				class={'item' + i}
-				class:button={item.button}
-				target={item.external ? '_blank' : '_self'}
-				href={item.url}>{item.label}</a
-			>
+		{#each config.navItems as item, i (item.url)}
+			<a on:click={callbackFn} class={'item' + i} href={item.url}>{item.label}</a>
 		{/each}
+		<a class={'item' + config.navItems.length} href={config.subscribeUrl}>Subscribe</a>
 	</nav>
 </div>
 
@@ -55,7 +53,7 @@
 		text-decoration: none;
 		margin: 1rem;
 		transition: all 0.2s;
-		transition-delay: 1s;
+		transition-delay: 0.36s;
 		transform: translateY(1rem);
 		font-size: 24px;
 	}
@@ -95,5 +93,9 @@
 
 	.item6 {
 		transition-delay: 0.28s;
+	}
+
+	.item7 {
+		transition-delay: 0.32s;
 	}
 </style>
