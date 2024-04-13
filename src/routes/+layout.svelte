@@ -41,7 +41,7 @@
 	}
 
 	:global(p) {
-		margin-bottom: 0;
+		margin-top: 0;
 		line-height: 28px;
 	}
 

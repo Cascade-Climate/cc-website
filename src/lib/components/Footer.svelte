@@ -1,5 +1,6 @@
 <script>
 	import config from '$lib/config';
+	import cascadeLogo from '$lib/images/cc-logo.png';
 </script>
 
 <footer>
@@ -9,7 +10,7 @@
 	</a>
 	<div class="hr"></div>
 	<a class="footer-logo" href="/">
-		<img alt="" />
+		<img src={cascadeLogo} alt="Cascade Logo" />
 		Cascade Climate
 	</a>
 </footer>
@@ -59,5 +60,13 @@
 		color: var(--color-light);
 		text-decoration: none;
 		font-weight: 320;
+		display: flex;
+		align-items: center;
+	}
+
+	.footer-logo img {
+		width: 24px;
+		height: auto;
+		margin-right: 8px;
 	}
 </style>

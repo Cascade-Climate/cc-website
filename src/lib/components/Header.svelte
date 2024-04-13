@@ -1,4 +1,5 @@
 <script>
+	import cascadeLogo from '$lib/images/cc-logo.png';
 	import HamburgerMenu from '$lib/components/HamburgerMenu.svelte';
 	import NavModal from '$lib/components/NavModal.svelte';
 	import config from '$lib/config.json';
@@ -13,7 +14,7 @@
 	<div id="header-container">
 		<div id="header-logo">
 			<a href="/" on:click={() => navModalActive = false}>
-				<img alt="" />
+				<img src={cascadeLogo} alt="Cascade Climate Logo" />
 				Cascade Climate
 			</a>
 		</div>
@@ -54,6 +55,14 @@
 	#header-logo a {
 		font-family: 'Work Sans', sans-serif;
 		font-size: 20px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	#header-logo img {
+		width: 24px;
+		height: auto;
 	}
 
 	nav {
