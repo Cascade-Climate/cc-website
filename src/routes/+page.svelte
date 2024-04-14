@@ -1,7 +1,12 @@
 <script>
 	import wavesPhoto from '$lib/images/waves.png';
 	import asteraLogo from '$lib/images/supporters/astera.png';
-	import CZILogo from '$lib/images/supporters/chan-zuckerberg.png';
+	import czLogo from '$lib/images/supporters/chan-zuckerberg.png';
+	import granthamLogo from '$lib/images/supporters/grantham.png';
+	import kissickLogo from '$lib/images/supporters/kissick.png';
+	import mcgovernLogo from '$lib/images/supporters/mcgovern.png';
+	import quadratureLogo from '$lib/images/supporters/quadrature.png';
+	import spitzerLogo from '$lib/images/supporters/spitzer.png';
 </script>
 
 <div>
@@ -138,27 +143,24 @@
 			<a href="https://astera.org">
 				<img src={asteraLogo} alt="Astera Institute Logo" />
 			</a>
-			<a href="https://astera.org">
-				<img src={CZILogo} alt="Astera Institute Logo" />
+			<a href="https://chanzuckerberg.com/">
+				<img src={czLogo} alt="Chan Zuckerberg Initiative Logo" />
 			</a>
-			<a href="https://astera.org">
-				<img src={asteraLogo} alt="Astera Institute Logo" />
+			<a href="https://www.granthamfoundation.org/">
+				<img src={granthamLogo} alt="Grantham Foundation Logo" />
 			</a>
-			<a href="https://astera.org">
-				<img src={CZILogo} alt="Astera Institute Logo" />
+			<span>
+				<img src={kissickLogo} alt="Kissick Family Foundation Logo" />
+			</span>
+			<a href="https://www.mcgovern.org/">
+				<img src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
 			</a>
-			<a href="https://astera.org">
-				<img src={asteraLogo} alt="Astera Institute Logo" />
+			<a href="https://qc.foundation/">
+				<img src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
 			</a>
-			<a href="https://astera.org">
-				<img src={CZILogo} alt="Astera Institute Logo" />
-			</a>
-			<a href="https://astera.org">
-				<img src={asteraLogo} alt="Astera Institute Logo" />
-			</a>
-			<a href="https://astera.org">
-				<img src={CZILogo} alt="Astera Institute Logo" />
-			</a>
+			<span>
+				<img src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
+			</span>
 		</div>
 	</section>
 </div>
@@ -248,7 +250,7 @@
 	}
 
 	#supporters img {
-		width: 300px;
+		width: 256px;
 		height: auto;
 	}
 

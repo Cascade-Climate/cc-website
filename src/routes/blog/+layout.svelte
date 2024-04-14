@@ -18,12 +18,6 @@
 	:global(h1, h2, h3, h4, h5) {
 		line-height: initial;
 	}
-	
-	:global(a) {
-		color: var(--color-accent);
-		text-decoration: none;
-		font-weight: 420;
-	}
 
 	:global(img) {
 		max-width: 100%;

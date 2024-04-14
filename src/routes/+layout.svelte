@@ -37,6 +37,12 @@
 		line-height: 28px;
 	}
 
+	:global(p a) {
+		color: var(--color-accent);
+		text-decoration: none;
+		font-weight: 420;
+	}
+
 	:global(div) {
 		line-height: 28px;
 	}
