@@ -68,5 +68,6 @@
 		width: 24px;
 		height: auto;
 		margin-right: 8px;
+		margin-left: 0;
 	}
 </style>

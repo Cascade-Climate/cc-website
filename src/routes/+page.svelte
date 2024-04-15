@@ -167,9 +167,11 @@
 
 <style>
 	#hero {
-		background-color: #1c202a;
+		background-image: url('$lib/images/hero.png');
+		background-size: cover;
 		color: var(--color-light);
-		padding: 4.8rem 4rem;
+		padding: 12.8rem 4rem 4.8rem 4rem;
+		margin-top: -8rem;
 	}
 
 	#hero h1 {
@@ -252,6 +254,11 @@
 	#supporters img {
 		width: 256px;
 		height: auto;
+		transition: scale 0.2s ease-out;
+	}
+
+	#supporters img:hover {
+		scale: 1.1;
 	}
 
 	@media (max-width: 660px) {

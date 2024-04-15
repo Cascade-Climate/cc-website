@@ -264,8 +264,9 @@
 	}
 	#hero img {
 		width: 100%;
-		height: 128px;
+		height: 22rem;
 		object-fit: cover;
+		margin-top: -16rem;
 	}
 
 	#faq {

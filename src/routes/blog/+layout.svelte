@@ -16,7 +16,13 @@
 	}
 
 	:global(h1, h2, h3, h4, h5) {
-		line-height: initial;
+		line-height: 3rem;
+	}
+
+	:global(.blog-post a) {
+		text-decoration: none;
+		color: var(--color-accent);
+		font-weight: 420;
 	}
 
 	:global(img) {
