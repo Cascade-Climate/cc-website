@@ -1,5 +1,5 @@
 <script>
-	import heroImage from '$lib/images/rock-weathering.png';
+	import heroImage from '$lib/images/rock-weathering.webp';
 
 	function openAnswer(event) {
 		const answer = event.target.nextElementSibling;
@@ -50,10 +50,12 @@
 				<br />
 				<p>
 					For deeper thinking on OSCI and some of the key challenges that must be navigated as these
-					nascent fields develop, read our founder’s writing here﻿. By ‘open system’, we mean
-					interventions undertaken ‘out in the open’, in natural ecosystems. Oftentimes working with
-					or tapping into natural cycles and existing earth system processes. These interventions
-					could be for the purposes of:
+					nascent fields develop, read our founder’s writing <a
+						target="_blank"
+						href="https://greatunwind.substack.com/p/leveling-the-playing-field-for-open">here</a
+					>. By ‘open system’, we mean interventions undertaken ‘out in the open’, in natural
+					ecosystems. Oftentimes working with or tapping into natural cycles and existing earth
+					system processes. These interventions could be for the purposes of:
 				</p>
 				<ul>
 					<li>

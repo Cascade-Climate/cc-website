@@ -1,6 +1,6 @@
 <script>
-	import headshot from '$lib/images/team/noemma-olagaray.png';
-	import linkedinIcon from '$lib/images/linkedin-icon.png';
+	import headshot from '$lib/images/team/noemma-olagaray.webp';
+	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 
 <svelte:head>

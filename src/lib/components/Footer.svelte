@@ -1,6 +1,6 @@
 <script>
 	import config from '$lib/config';
-	import cascadeLogo from '$lib/images/cc-logo.png';
+	import cascadeLogo from '$lib/images/cc-logo.webp';
 </script>
 
 <footer>

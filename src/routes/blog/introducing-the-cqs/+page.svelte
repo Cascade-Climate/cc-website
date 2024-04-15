@@ -1,6 +1,6 @@
 <script>
-	import image1 from '$lib/images/blog/current-state.png';
-	import image2 from '$lib/images/blog/after-v1.png';
+	import image1 from '$lib/images/blog/current-state.webp';
+	import image2 from '$lib/images/blog/after-v1.webp';
 </script>
 
 <svelte:head>

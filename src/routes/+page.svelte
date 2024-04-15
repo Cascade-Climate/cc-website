@@ -1,12 +1,12 @@
 <script>
-	import wavesPhoto from '$lib/images/waves.png';
-	import asteraLogo from '$lib/images/supporters/astera.png';
-	import czLogo from '$lib/images/supporters/chan-zuckerberg.png';
-	import granthamLogo from '$lib/images/supporters/grantham.png';
-	import kissickLogo from '$lib/images/supporters/kissick.png';
-	import mcgovernLogo from '$lib/images/supporters/mcgovern.png';
-	import quadratureLogo from '$lib/images/supporters/quadrature.png';
-	import spitzerLogo from '$lib/images/supporters/spitzer.png';
+	import wavesPhoto from '$lib/images/waves.webp';
+	import asteraLogo from '$lib/images/supporters/astera.webp';
+	import czLogo from '$lib/images/supporters/chan-zuckerberg.webp';
+	import granthamLogo from '$lib/images/supporters/grantham.webp';
+	import kissickLogo from '$lib/images/supporters/kissick.webp';
+	import mcgovernLogo from '$lib/images/supporters/mcgovern.webp';
+	import quadratureLogo from '$lib/images/supporters/quadrature.webp';
+	import spitzerLogo from '$lib/images/supporters/spitzer.webp';
 </script>
 
 <svelte:head>
@@ -184,7 +184,7 @@
 
 <style>
 	#hero {
-		background-image: url('$lib/images/hero.png');
+		background-image: url('$lib/images/hero.webp');
 		background-size: cover;
 		color: var(--color-light);
 		padding: 12.8rem 4rem 4.8rem 4rem;
@@ -200,7 +200,7 @@
 	}
 
 	#near-term-focus {
-		background-image: url('$lib/images/rock-weathering.png');
+		background-image: url('$lib/images/rock-weathering.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding: 2rem;
@@ -223,7 +223,7 @@
 
 	.container {
 		display: flex;
-		margin-top: 2rem;
+		margin-top: 3rem;
 		margin-bottom: 3rem;
 		justify-content: space-between;
 	}
@@ -256,7 +256,9 @@
 	}
 
 	.our {
-		font-weight: 300;
+		color: var(--color-accent);
+		font-weight: 400;
+		font-size: 1.8rem;
 		margin-bottom: 2rem;
 	}
 

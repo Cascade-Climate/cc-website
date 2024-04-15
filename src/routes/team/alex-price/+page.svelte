@@ -1,8 +1,15 @@
 <script>
-	import headshot from '$lib/images/team/alex-price.png';
-	import linkedinIcon from '$lib/images/linkedin-icon.png';
+	import headshot from '$lib/images/team/alex-price.webp';
+	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 
+<svelte:head>
+	<title>Alex Price - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Alex Price's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Alex Price</h1>

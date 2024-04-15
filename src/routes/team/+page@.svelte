@@ -1,21 +1,21 @@
 <script>
-	import daiEllis from '$lib/images/team/dai-ellis.png';
-	import jenniferMills from '$lib/images/team/jennifer-mills.png';
-	import vilasRao from '$lib/images/team/vilas-rao.png';
-	import haraWang from '$lib/images/team/hara-wang.png';
-	import johnSanchez from '$lib/images/team/john-sanchez.png';
-	import taylorChapman from '$lib/images/team/taylor-chapman.png';
-	import alexPrice from '$lib/images/team/alex-price.png';
-	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.png';
-	import arielleLok from '$lib/images/team/arielle-lok.png';
+	import daiEllis from '$lib/images/team/dai-ellis.webp';
+	import jenniferMills from '$lib/images/team/jennifer-mills.webp';
+	import vilasRao from '$lib/images/team/vilas-rao.webp';
+	import haraWang from '$lib/images/team/hara-wang.webp';
+	import johnSanchez from '$lib/images/team/john-sanchez.webp';
+	import taylorChapman from '$lib/images/team/taylor-chapman.webp';
+	import alexPrice from '$lib/images/team/alex-price.webp';
+	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
+	import arielleLok from '$lib/images/team/arielle-lok.webp';
 
-	import noahPlanavsky from '$lib/images/team/noah-planavsky.png';
-	import chrisReinhard from '$lib/images/team/chris-reinhard.png';
+	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
+	import chrisReinhard from '$lib/images/team/chris-reinhard.webp';
 
-	import anilSoni from '$lib/images/team/anil-soni.png';
-	import antoniusGagern from '$lib/images/team/antonius-gagern.jpeg';
-	import elaineHsieh from '$lib/images/team/elaine-hsieh.png';
-	import elenaCavallero from '$lib/images/team/elena-cavallero.png';
+	import anilSoni from '$lib/images/team/anil-soni.webp';
+	import antoniusGagern from '$lib/images/team/antonius-gagern.webp';
+	import elaineHsieh from '$lib/images/team/elaine-hsieh.webp';
+	import elenaCavallero from '$lib/images/team/elena-cavallero.webp';
 </script>
 
 <svelte:head>

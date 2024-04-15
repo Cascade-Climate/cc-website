@@ -1,5 +1,5 @@
 <script>
-	import cascadeLogo from '$lib/images/cc-logo.png';
+	import cascadeLogo from '$lib/images/cc-logo.webp';
 	import HamburgerMenu from '$lib/components/HamburgerMenu.svelte';
 	import NavModal from '$lib/components/NavModal.svelte';
 	import config from '$lib/config.json';

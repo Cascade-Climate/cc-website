@@ -1,5 +1,5 @@
 <script>
-	import image1 from '$lib/images/blog/increasing-trust-decreasing-cost.png';
+	import image1 from '$lib/images/blog/increasing-trust-decreasing-cost.webp';
 </script>
 
 <svelte:head>
@@ -12,7 +12,8 @@
 <div class="blog-post">
 	<p class="date">December 11, 2023</p>
 	<h1>Foundations for a Healthy ERW Market Cycle</h1>
-	<a href="/team/john-sanchez">John Sanchez</a>, <a href="/team/dai-elllis">Dai Ellis</a>
+	<a href="/team/john-sanchez">John Sanchez</a>,
+	<a href="/team/dai-ellis">Dai Ellis</a>
 
 	<br />
 	<br />

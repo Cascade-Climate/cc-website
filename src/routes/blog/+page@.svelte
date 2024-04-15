@@ -90,6 +90,11 @@
 		color: var(--color-text);
 		text-decoration: none;
 		line-height: 3rem;
+		transition: color 0.2s ease-out;
+	}
+
+	.post a:hover {
+		color: var(--color-accent);
 	}
 
 	.date,

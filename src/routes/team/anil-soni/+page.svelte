@@ -1,5 +1,5 @@
 <script>
-	import headshot from '$lib/images/team/anil-soni.png';
+	import headshot from '$lib/images/team/anil-soni.webp';
 </script>
 
 <svelte:head>
