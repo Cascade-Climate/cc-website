@@ -3,6 +3,13 @@
 	import linkedinIcon from '$lib/images/linkedin-icon.png';
 </script>
 
+<svelte:head>
+	<title>Vilas Rao - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Vilas Rao's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Vilas Rao</h1>

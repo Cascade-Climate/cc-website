@@ -2,6 +2,13 @@
 	import headshot from '$lib/images/team/antonius-gagern.jpeg';
 </script>
 
+<svelte:head>
+	<title>Antonius Gagern - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Antonius Gagern's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Antonius Gagern</h1>

@@ -2,6 +2,13 @@
 	import headshot from '$lib/images/team/anil-soni.png';
 </script>
 
+<svelte:head>
+	<title>Anil Soni - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Anil Soni's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Anil Soni</h1>

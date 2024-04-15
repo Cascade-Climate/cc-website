@@ -4,6 +4,13 @@
 	import twitterIcon from '$lib/images/twitter-icon.png';
 </script>
 
+<svelte:head>
+	<title>Arielle Lok - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Arielle Look's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Arielle Lok</h1>

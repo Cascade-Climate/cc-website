@@ -13,6 +13,13 @@
 	}
 </script>
 
+<svelte:head>
+	<title>FAQ - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Answers to frequently asked questions about Cascade Climate and its work."
+	/>
+</svelte:head>
 <div>
 	<div id="hero">
 		<img width="100%" height="384" src={heroImage} alt="Rock weathering" />

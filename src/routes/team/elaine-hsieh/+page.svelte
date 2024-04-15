@@ -2,6 +2,13 @@
 	import headshot from '$lib/images/team/elaine-hsieh.png';
 </script>
 
+<svelte:head>
+	<title>Elaine Hsieh - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Elaine Hsieh's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Elaine Hsieh</h1>

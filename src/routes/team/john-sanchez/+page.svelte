@@ -3,6 +3,13 @@
 	import linkedinIcon from '$lib/images/linkedin-icon.png';
 </script>
 
+<svelte:head>
+	<title>John Sanchez - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about John Sanchez's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>John Sanchez</h1>

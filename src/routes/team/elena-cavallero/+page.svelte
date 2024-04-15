@@ -2,6 +2,13 @@
 	import headshot from '$lib/images/team/elena-cavallero.png';
 </script>
 
+<svelte:head>
+	<title>Elena Cavallero - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Elena Cavallero's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Elena Cavallero</h1>

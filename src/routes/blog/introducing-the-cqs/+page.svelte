@@ -3,6 +3,13 @@
 	import image2 from '$lib/images/blog/after-v1.png';
 </script>
 
+<svelte:head>
+	<title>Launching the Community Enhanced Rock Weathering Quantification Standard Process - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Launching the Community Enhanced Rock Weathering Quantification Standard Process"
+	/>
+</svelte:head>
 <div class="blog-post">
 	<p class="date">November 2, 2023</p>
 	<h1>Launching the Community Enhanced Rock Weathering Quantification Standard Process</h1>

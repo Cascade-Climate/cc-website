@@ -18,6 +18,13 @@
 	import elenaCavallero from '$lib/images/team/elena-cavallero.png';
 </script>
 
+<svelte:head>
+	<title>Team - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Information about the founding team, contributors, and board members of Cascade Climate."
+	/>
+</svelte:head>
 <div id="team-container">
 	<section id="cta">
 		<h1>Join Cascade Climate</h1>
@@ -135,6 +142,7 @@
 
 	#cta h1 {
 		margin-top: 0;
+		margin-bottom: 1rem;
 	}
 
 	#cta a {
@@ -162,6 +170,7 @@
 	h1 {
 		width: 100%;
 		margin-bottom: 0;
+		font-weight: 600;
 	}
 
 	.team-card {

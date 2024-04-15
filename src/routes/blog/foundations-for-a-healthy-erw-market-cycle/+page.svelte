@@ -2,6 +2,13 @@
 	import image1 from '$lib/images/blog/increasing-trust-decreasing-cost.png';
 </script>
 
+<svelte:head>
+	<title>Foundations for a Healthy ERW Market Cycle - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Foundations for a Healthy ERW Market Cycle."
+	/>
+</svelte:head>
 <div class="blog-post">
 	<p class="date">December 11, 2023</p>
 	<h1>Foundations for a Healthy ERW Market Cycle</h1>

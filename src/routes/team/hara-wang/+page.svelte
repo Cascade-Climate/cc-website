@@ -3,6 +3,13 @@
 	import linkedinIcon from '$lib/images/linkedin-icon.png';
 </script>
 
+<svelte:head>
+	<title>Hara Wang - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Hara Wang's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Hara Wang</h1>

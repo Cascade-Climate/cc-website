@@ -9,6 +9,13 @@
 	import spitzerLogo from '$lib/images/supporters/spitzer.png';
 </script>
 
+<svelte:head>
+	<title>Cascade Climate</title>
+	<meta
+		name="description"
+		content="Cascade Climate accelerates progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+	/>
+</svelte:head>
 <div>
 	<section id="hero">
 		<div id="hero-content">
@@ -156,10 +163,20 @@
 				<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
 			</a>
 			<a href="https://qc.foundation/">
-				<img width="680" height="365" src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
+				<img
+					width="680"
+					height="365"
+					src={quadratureLogo}
+					alt="Quadrature Climate Foundation Logo"
+				/>
 			</a>
 			<span>
-				<img width="680" height="365" src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
+				<img
+					width="680"
+					height="365"
+					src={spitzerLogo}
+					alt="Bernard and Anne Spitzer Charitable Trust Logo"
+				/>
 			</span>
 		</div>
 	</section>
@@ -201,6 +218,7 @@
 	#near-term-focus h2 {
 		margin-top: 0;
 		margin-bottom: 1rem;
+		font-weight: 600;
 	}
 
 	.container {
@@ -263,7 +281,6 @@
 	}
 
 	@media (max-width: 660px) {
-		
 		#hero h1 {
 			font-size: 32px;
 			line-height: 32px;

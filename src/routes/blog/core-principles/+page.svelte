@@ -1,3 +1,11 @@
+
+<svelte:head>
+	<title>Introducing the Core Principles on Quantifying Net Carbon Removal Via Enhanced Rock Weathering - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Cascade Climate accelerates progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+	/>
+</svelte:head>
 <div class="blog-post">
 	<p class="date">November 10, 2023</p>
 	<h1>

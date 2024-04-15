@@ -3,6 +3,13 @@
 	import linkedinIcon from '$lib/images/linkedin-icon.png';
 </script>
 
+<svelte:head>
+	<title>Noah Planavsky - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Learn more about Noah Planavsky's role at Cascade Climate."
+	/>
+</svelte:head>
 <div class="team-member">
 	<div class="member-info">
 		<h1>Noah Planavsky</h1>

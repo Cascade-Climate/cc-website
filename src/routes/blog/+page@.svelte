@@ -1,3 +1,10 @@
+<svelte:head>
+	<title>Blog - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Collection of blog posts published by Cascade Climate."
+	/>
+</svelte:head>
 <div id="blog">
 	<div id="post-list">
 		<div class="post">
