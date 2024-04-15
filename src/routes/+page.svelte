@@ -69,7 +69,7 @@
 		</div>
 	</section>
 	<div class="dividing-image">
-		<img src={wavesPhoto} alt="waves" />
+		<img width="100%" height="128" src={wavesPhoto} alt="waves" />
 	</div>
 	<section id="ours">
 		<div class="container">
@@ -141,25 +141,25 @@
 		Generously supported by:
 		<div id="supporters-container">
 			<a href="https://astera.org">
-				<img src={asteraLogo} alt="Astera Institute Logo" />
+				<img width="680" height="365" src={asteraLogo} alt="Astera Institute Logo" />
 			</a>
 			<a href="https://chanzuckerberg.com/">
-				<img src={czLogo} alt="Chan Zuckerberg Initiative Logo" />
+				<img width="680" height="365" src={czLogo} alt="Chan Zuckerberg Initiative Logo" />
 			</a>
 			<a href="https://www.granthamfoundation.org/">
-				<img src={granthamLogo} alt="Grantham Foundation Logo" />
+				<img width="680" height="365" src={granthamLogo} alt="Grantham Foundation Logo" />
 			</a>
 			<span>
-				<img src={kissickLogo} alt="Kissick Family Foundation Logo" />
+				<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 			</span>
 			<a href="https://www.mcgovern.org/">
-				<img src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
+				<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
 			</a>
 			<a href="https://qc.foundation/">
-				<img src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
+				<img width="680" height="365" src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
 			</a>
 			<span>
-				<img src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
+				<img width="680" height="365" src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
 			</span>
 		</div>
 	</section>
@@ -253,6 +253,7 @@
 
 	#supporters img {
 		width: 256px;
+		max-width: 100%;
 		height: auto;
 		transition: scale 0.2s ease-out;
 	}
@@ -262,6 +263,12 @@
 	}
 
 	@media (max-width: 660px) {
+		
+		#hero h1 {
+			font-size: 32px;
+			line-height: 32px;
+		}
+
 		.container {
 			flex-direction: column;
 		}
@@ -273,6 +280,11 @@
 
 		.content {
 			width: 100%;
+		}
+
+		#initiatives,
+		#ours {
+			padding: 1rem 2rem;
 		}
 
 		#supporters img {

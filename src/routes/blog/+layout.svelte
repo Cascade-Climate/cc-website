@@ -16,7 +16,7 @@
 	}
 
 	:global(h1, h2, h3, h4, h5) {
-		line-height: 3rem;
+		line-height: initial; 
 	}
 
 	:global(.blog-post a) {

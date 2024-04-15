@@ -15,7 +15,7 @@
 
 <div>
 	<div id="hero">
-		<img src={heroImage} alt="Rock weathering" />
+		<img width="100%" height="384" src={heroImage} alt="Rock weathering" />
 	</div>
 	<div id="faq">
 		<h1>Frequently Asked Questions</h1>
@@ -264,9 +264,9 @@
 	}
 	#hero img {
 		width: 100%;
-		height: 22rem;
+		height: 384px;
 		object-fit: cover;
-		margin-top: -16rem;
+		margin-top: -256px;
 	}
 
 	#faq {

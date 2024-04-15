@@ -10,7 +10,7 @@
 	</a>
 	<div class="hr"></div>
 	<a class="footer-logo" href="/">
-		<img src={cascadeLogo} alt="Cascade Logo" />
+		<img width="24" height="24" src={cascadeLogo} alt="Cascade Logo" />
 		Cascade Climate
 	</a>
 </footer>
@@ -37,11 +37,13 @@
 		margin-bottom: 2.4rem;
 		font-family: 'Work Sans', sans-serif;
 		font-size: 48px;
+		line-height: 48px;
 		overflow-wrap: break-word;
 		color: var(--color-light);
 		text-decoration-color: transparent;
 		transition: text-decoration-color 0.2s ease-out;
 		text-underline-offset: 4px;
+		font-weight: 400;
 	}
 
 	.contact:hover {
@@ -66,8 +68,19 @@
 
 	.footer-logo img {
 		width: 24px;
-		height: auto;
+		height: 24px;
 		margin-right: 8px;
 		margin-left: 0;
+	}
+
+	@media (max-width: 660px) {
+
+		footer {
+			padding: 2.4rem 2rem;
+		}
+		.contact {
+			font-size: 24px;
+			line-height: 24px;
+		}
 	}
 </style>

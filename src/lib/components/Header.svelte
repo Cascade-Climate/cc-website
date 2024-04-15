@@ -14,7 +14,7 @@
 	<div id="header-container">
 		<div id="header-logo">
 			<a href="/" on:click={() => navModalActive = false}>
-				<img src={cascadeLogo} alt="Cascade Climate Logo" />
+				<img width="24" height="24" src={cascadeLogo} alt="Cascade Climate Logo" />
 				Cascade Climate
 			</a>
 		</div>
