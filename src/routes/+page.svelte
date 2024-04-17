@@ -184,9 +184,8 @@
 
 <style>
 	#hero {
-		background-image: url('$lib/images/hero.webp');
 		background-size: cover;
-		color: var(--color-light);
+		color: var(--color-dark);
 		padding: 12.8rem 4rem 4.8rem 4rem;
 		margin-top: -8rem;
 	}

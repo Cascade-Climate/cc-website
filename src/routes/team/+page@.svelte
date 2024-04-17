@@ -1,21 +1,27 @@
 <script>
 	import daiEllis from '$lib/images/team/dai-ellis.webp';
 	import jenniferMills from '$lib/images/team/jennifer-mills.webp';
-	import vilasRao from '$lib/images/team/vilas-rao.webp';
-	import haraWang from '$lib/images/team/hara-wang.webp';
 	import johnSanchez from '$lib/images/team/john-sanchez.webp';
-	import taylorChapman from '$lib/images/team/taylor-chapman.webp';
-	import alexPrice from '$lib/images/team/alex-price.webp';
-	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
+	import haraWang from '$lib/images/team/hara-wang.webp';
+	import vilasRao from '$lib/images/team/vilas-rao.webp';
+	
 	import arielleLok from '$lib/images/team/arielle-lok.webp';
+	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
+	import alexPrice from '$lib/images/team/alex-price.webp';
+	import taylorChapman from '$lib/images/team/taylor-chapman.webp';
+	import tannisThorlakson from '$lib/images/team/tannis-thorlakson.webp';
+	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
+	import rachelSmith from '$lib/images/team/rachel-smith.webp';
 
-	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
 	import chrisReinhard from '$lib/images/team/chris-reinhard.webp';
+	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
 
 	import anilSoni from '$lib/images/team/anil-soni.webp';
 	import antoniusGagern from '$lib/images/team/antonius-gagern.webp';
 	import elaineHsieh from '$lib/images/team/elaine-hsieh.webp';
 	import elenaCavallero from '$lib/images/team/elena-cavallero.webp';
+
+	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>
 
 <svelte:head>
@@ -47,6 +53,16 @@
 			<h1>Dai Ellis</h1>
 			<span>Co-founder + CEO</span>
 		</a>
+		<a class="team-card" href="/team/hara-wang">
+			<img src={twitterIcon} alt="Hara Wang" />
+			<h1>Hara Wang</h1>
+			<span>Founding team</span>
+		</a>
+		<a class="team-card" href="/team/john-sanchez">
+			<img src={johnSanchez} alt="John Sanchez" />
+			<h1>John Sanchez</h1>
+			<span>Founding team</span>
+		</a>
 		<a class="team-card" href="/team/jennifer-mills">
 			<img src={jenniferMills} alt="Jennifer Mills" />
 			<h1>Jennifer Mills</h1>
@@ -57,46 +73,53 @@
 			<h1>Vilas Rao</h1>
 			<span>Founding team</span>
 		</a>
-		<a class="team-card" href="/team/hara-wang">
-			<img src={haraWang} alt="Hara Wang" />
-			<h1>Hara Wang</h1>
-			<span>Founding team</span>
-		</a>
-		<a class="team-card" href="/team/john-sanchez">
-			<img src={johnSanchez} alt="John Sanchez" />
-			<h1>John Sanchez</h1>
-			<span>Founding team</span>
-		</a>
-		<a class="team-card" href="/team/taylor-chapman">
-			<img src={taylorChapman} alt="Taylor Chapman" />
-			<h1>Taylor Chapman</h1>
-			<span>Founding team</span>
-		</a>
-		<a class="team-card" href="/team/alex-price">
-			<img src={alexPrice} alt="Alex Price" />
-			<h1>Alex Price</h1>
-			<span>Founding team</span>
+
+		<h1>Team</h1>
+		<a class="team-card" href="/team/arielle-lok">
+			<img src={arielleLok} alt="Arielle Lok" />
+			<h1>Arielle Lok</h1>
+			<span>Associate</span>
 		</a>
 		<a class="team-card" href="/team/noemma-olagaray">
 			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
 			<h1>Noemma Olagaray</h1>
-			<span>Founding team</span>
+			<span>Associate</span>
 		</a>
-		<a class="team-card" href="/team/arielle-lok">
-			<img src={arielleLok} alt="Arielle Lok" />
-			<h1>Arielle Lok</h1>
-			<span>Founding team</span>
+		<a class="team-card" href="/team/alex-price">
+			<img src={alexPrice} alt="Alex Price" />
+			<h1>Alex Price</h1>
+			<span>Fellow</span>
+		</a>
+		<a class="team-card" href="/team/taylor-chapman">
+			<img src={taylorChapman} alt="Taylor Chapman" />
+			<h1>Taylor Chapman</h1>
+			<span>Fellow</span>
+		</a>
+		<a class="team-card" href="/team/tannis-thorlakson">
+			<img src={tannisThorlakson} alt="Tannis Thorlakson" />
+			<h1>Tannis Thorlakson</h1>
+			<span>Program Director</span>
+		</a>
+		<a class="team-card" href="/team/brad-rochlin">
+			<img src={bradRochlin} alt="Brad Rochlin" />
+			<h1>Brad Rochlin</h1>
+			<span>Program Manager</span>
+		</a>
+		<a class="team-card" href="/team/rachel-smith">
+			<img src={rachelSmith} alt="Rachel Smith" />
+			<h1>Rachel Smith</h1>
+			<span>Policy Manager</span>
 		</a>
 
 		<h1>Contributors</h1>
-		<a class="team-card" href="/team/noah-planavsky">
-			<img src={noahPlanavsky} alt="Noah Planavsky" />
-			<h1>Noah Planavsky</h1>
-			<span>Senior Contributing Scientist</span>
-		</a>
 		<a class="team-card" href="/team/chris-reinhard">
 			<img src={chrisReinhard} alt="Chris Reinhard" />
 			<h1>Chris Reinhard</h1>
+			<span>Senior Contributing Scientist</span>
+		</a>
+		<a class="team-card" href="/team/noah-planavsky">
+			<img src={noahPlanavsky} alt="Noah Planavsky" />
+			<h1>Noah Planavsky</h1>
 			<span>Senior Contributing Scientist</span>
 		</a>
 
@@ -184,6 +207,8 @@
 
 	.team-card img {
 		border-radius: 2rem;
+		width: 100%;
+		height: auto;
 	}
 
 	.team-card h1 {
