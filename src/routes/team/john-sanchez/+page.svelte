@@ -1,6 +1,7 @@
 <script>
 	import headshot from '$lib/images/team/john-sanchez.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
+	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>
 
 <svelte:head>
@@ -19,6 +20,8 @@
 				<a target="_blank" href="https://www.linkedin.com/in/john-sanchez-aa60151b1/">
 					<img src={linkedinIcon} alt="LinkedIn" />
 				</a>
+				<a target="_blank" href="https://twitter.com/johnlsanchez8">
+					<img src={twitterIcon} alt="Twitter" />
 			</div>
 		</div>
 		<p>

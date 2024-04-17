@@ -21,7 +21,6 @@
 	import elaineHsieh from '$lib/images/team/elaine-hsieh.webp';
 	import elenaCavallero from '$lib/images/team/elena-cavallero.webp';
 
-	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>
 
 <svelte:head>
@@ -54,7 +53,7 @@
 			<span>Co-founder + CEO</span>
 		</a>
 		<a class="team-card" href="/team/hara-wang">
-			<img src={twitterIcon} alt="Hara Wang" />
+			<img src={haraWang} alt="Hara Wang" />
 			<h1>Hara Wang</h1>
 			<span>Founding team</span>
 		</a>

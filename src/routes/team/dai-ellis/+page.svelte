@@ -1,6 +1,7 @@
 <script>
 	import headshot from '$lib/images/team/dai-ellis.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
+	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>
 
 <svelte:head>
@@ -18,6 +19,9 @@
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/daiellis/">
 					<img src={linkedinIcon} alt="LinkedIn" />
+				</a>
+				<a target="_blank" href="https://twitter.com/DaiEllis">
+					<img src={twitterIcon} alt="Twitter" />
 				</a>
 			</div>
 		</div>
