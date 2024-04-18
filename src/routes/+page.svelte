@@ -233,7 +233,7 @@
 	}
 
 	#initiatives h1 {
-		color: var(--color-dark);
+		color: var(--color-accent);
 		font-weight: 400;
 		margin-top: 3rem;
 	}

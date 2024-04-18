@@ -6,12 +6,13 @@
 	import vilasRao from '$lib/images/team/vilas-rao.webp';
 	
 	import arielleLok from '$lib/images/team/arielle-lok.webp';
-	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
+	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
 	import alexPrice from '$lib/images/team/alex-price.webp';
+	import jamieNewman from '$lib/images/team/jamie-newman.webp';
+	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
+	import rachelSmith from '$lib/images/team/rachel-smith.webp';
 	import taylorChapman from '$lib/images/team/taylor-chapman.webp';
 	import tannisThorlakson from '$lib/images/team/tannis-thorlakson.webp';
-	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
-	import rachelSmith from '$lib/images/team/rachel-smith.webp';
 
 	import chrisReinhard from '$lib/images/team/chris-reinhard.webp';
 	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
@@ -74,40 +75,45 @@
 		</a>
 
 		<h1>Team</h1>
-		<a class="team-card" href="/team/arielle-lok">
-			<img src={arielleLok} alt="Arielle Lok" />
-			<h1>Arielle Lok</h1>
-			<span>Associate</span>
-		</a>
-		<a class="team-card" href="/team/noemma-olagaray">
-			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
-			<h1>Noemma Olagaray</h1>
-			<span>Associate</span>
-		</a>
 		<a class="team-card" href="/team/alex-price">
 			<img src={alexPrice} alt="Alex Price" />
 			<h1>Alex Price</h1>
 			<span>Fellow</span>
 		</a>
-		<a class="team-card" href="/team/taylor-chapman">
-			<img src={taylorChapman} alt="Taylor Chapman" />
-			<h1>Taylor Chapman</h1>
-			<span>Fellow</span>
-		</a>
-		<a class="team-card" href="/team/tannis-thorlakson">
-			<img src={tannisThorlakson} alt="Tannis Thorlakson" />
-			<h1>Tannis Thorlakson</h1>
-			<span>Program Director</span>
+		<a class="team-card" href="/team/arielle-lok">
+			<img src={arielleLok} alt="Arielle Lok" />
+			<h1>Arielle Lok</h1>
+			<span>Associate</span>
 		</a>
 		<a class="team-card" href="/team/brad-rochlin">
 			<img src={bradRochlin} alt="Brad Rochlin" />
 			<h1>Brad Rochlin</h1>
 			<span>Program Manager</span>
 		</a>
+		<a class="team-card" href="/team/jamie-newman">
+			<img src={jamieNewman} alt="Jamie Newman" />
+			<h1>Jamie Newman</h1>
+			<span>Recruiting & Operations Manager</span>
+		</a>
+		<a class="team-card" href="/team/noemma-olagaray">
+			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
+			<h1>Noemma Olagaray</h1>
+			<span>Associate</span>
+		</a>
 		<a class="team-card" href="/team/rachel-smith">
 			<img src={rachelSmith} alt="Rachel Smith" />
 			<h1>Rachel Smith</h1>
 			<span>Policy Manager</span>
+		</a>
+		<a class="team-card" href="/team/tannis-thorlakson">
+			<img src={tannisThorlakson} alt="Tannis Thorlakson" />
+			<h1>Tannis Thorlakson</h1>
+			<span>Program Director</span>
+		</a>
+		<a class="team-card" href="/team/taylor-chapman">
+			<img src={taylorChapman} alt="Taylor Chapman" />
+			<h1>Taylor Chapman</h1>
+			<span>Fellow</span>
 		</a>
 
 		<h1>Contributors</h1>
@@ -201,7 +207,7 @@
 		width: 23.5%;
 		text-decoration-color: transparent;
 		color: var(--color-text);
-		transition: all 0.2s ease-out;
+		transition: color 0.2s ease-out, scale 0.2s ease-out;
 	}
 
 	.team-card img {
