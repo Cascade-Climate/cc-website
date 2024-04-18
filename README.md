@@ -50,7 +50,7 @@ All of the content for the website is contained within the `src` folder. The res
 	- **config.json**: General configuration options for the site. Navigation links, newsletter link, and contact email are all defined here.
 	- **theme.css**: This is where the color themes & fonts for the whole site are defined. Keep in mind that adding/adjusting fonts will require that the new font files are added to the `static/fonts` folder.
 
-- **routes**: Contains the pages of the website. The structure is defined by the folder structure: `/routes/+page.svelte` contains the code for the <cascadeclimate.org> landing page; `routes/faq/+page.svelte` contains the code for the page <cascadeclimate.org/faq>; `routes/team/arielle-lok/+page.svelte` contains the code for the page <cascadeclimate.org/team/arielle-lok>, and so on.
+- **routes**: Contains the pages of the website. The structure is defined by the folder structure: `/routes/+page.svelte` contains the code for the <https://cascadeclimate.org> landing page; `routes/faq/+page.svelte` contains the code for the page <https://cascadeclimate.org/faq>; `routes/team/arielle-lok/+page.svelte` contains the code for the page <https://cascadeclimate.org/team/arielle-lok>, and so on.
 
 ##### Adding a new team member
 
