@@ -78,7 +78,7 @@ Then, add a new element to the list in the appropriate section. Following our ex
 
 To add a new blog post, you'll need to create a new blog post page as well as a link from the blog directory.
 
-To create a new blog post page, simply copy & paste teh `SAMPLE-BLOG-TEMPLATE` folder found in `src/routes/blog`. Rename the duplicated folder to what the new sub-URL should be (e.g. `sample-blog-post`).
+To create a new blog post page, simply copy & paste the `SAMPLE-BLOG-TEMPLATE` folder found in `src/routes/blog`. Rename the duplicated folder to what the new sub-URL should be (e.g. `sample-blog-post`).
 
 Then, update the `+page.svelte` file within the new folder with the new blog content. For any images you want to insert into the post, you'll need to import them at the beginning of the file in the `<script>` tags. A sample image is imported for reference.
 
