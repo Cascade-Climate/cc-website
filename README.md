@@ -1,18 +1,18 @@
 # Cascade Climate Website
 
-### For technical people:
+## For technical people:
 
 This is a SvelteKit project with no extra libraries.
 It is deployed on Vercel.
 
-### For non-technical people:
+## For non-technical people:
 
 This is a SvelteKit project. 
 Don't worry if you don't know what that is, all of the code & content is written in plain HTML/CSS/Javascript, and there is plenty of documentation along with templates to copy/paste for adding new pages & content.
 
 For any questions, concerns, or assistance, please do not hesitate to reach out to <lee.matthew.j.2001@gmail.com>. I am more than happy to help with getting a local environment set up, or making any additions, adjustments, or fixes to the site.
 
-##### Editing & previewing
+#### Editing & previewing
 
 If you want to edit files in your browser and deploy them live directly, you can simply add/edit the files on GitHub.
 
@@ -40,7 +40,7 @@ git commit -m 'Sample description of changes.'
 git push
 ```
 
-##### Navigating the project
+#### Navigating the project
 
 All of the content for the website is contained within the `src` folder. The rest of the files are mostly for configuration and optimization of the code. `.svelte` files contain plain HTML/CSS/JavaScript combined into a single file.
 
@@ -52,7 +52,7 @@ All of the content for the website is contained within the `src` folder. The res
 
 - **routes**: Contains the pages of the website. The structure is defined by the folder structure: `/routes/+page.svelte` contains the code for the <https://cascadeclimate.org> landing page; `routes/faq/+page.svelte` contains the code for the page <https://cascadeclimate.org/faq>; `routes/team/arielle-lok/+page.svelte` contains the code for the page <https://cascadeclimate.org/team/arielle-lok>, and so on.
 
-##### Adding a new team member
+#### Adding a new team member
 
 To add a new team member, you'll need to create a new bio page as well as add a link to the team page.
 
@@ -74,7 +74,7 @@ Then, add a new element to the list in the appropriate section. Following our ex
 </a>
 ```
 
-##### Adding a new blog post
+#### Adding a new blog post
 
 To add a new blog post, you'll need to create a new blog post page as well as a link from the blog directory.
 
@@ -101,10 +101,29 @@ Once your blog post page is ready, you can add a link to it in the main blog ind
 </div>
 ```
 
-##### Layout files
+#### Editing the FAQ
+
+To edit the FAQ, you can edit the code in `src/routes/faq/+page.svelte`. 
+
+```jsx
+<div class="faq-item">
+	<button class="question" on:click={openAnswer}>
+		<span>+</span>
+		How can I add a new FAQ item?
+</button>
+	<div class="answer">
+		<br />
+		<p>
+			You can add a new FAQ item by copy & pasting this code into the list of FAQ items.
+		</p>
+	</div>
+</div>
+```
+
+#### Layout files
 
 For the blog & team bio pages, shared styles are located in a shared `+layout.svelte` file rather than repeated across every blog/team page. If you're having trouble finding where a style for a page is located, be sure to double check the `+layout.svelte` files in the parent directory.
 
-##### Troubleshooting
+## Troubleshooting
 
 Once again: for any questions, concerns, or assistance, please do not hesitate to reach out to <lee.matthew.j.2001@gmail.com>. I am more than happy to help with getting a local environment set up, or making any additions, adjustments, or fixes to the site.
