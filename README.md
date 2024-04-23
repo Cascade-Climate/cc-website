@@ -21,7 +21,7 @@ However, if you want to edit files on your computer & preview them before they g
 You can download the files to you computer using the following Git command from the command line:
 
 ```bash
-git clone git@github.com:Cascade-Climate/cc-website.git
+git clone https://github.com/Cascade-Climate/cc-website.git
 ```
 
 A folder should be downloaded called `cc-website` that contains the site files.
