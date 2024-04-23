@@ -56,25 +56,24 @@
 		<a class="team-card" href="/team/hara-wang">
 			<img src={haraWang} alt="Hara Wang" />
 			<h1>Hara Wang</h1>
-			<span>Founding team</span>
-		</a>
-		<a class="team-card" href="/team/john-sanchez">
-			<img src={johnSanchez} alt="John Sanchez" />
-			<h1>John Sanchez</h1>
-			<span>Founding team</span>
+			<span>Co-founder</span>
 		</a>
 		<a class="team-card" href="/team/jennifer-mills">
 			<img src={jenniferMills} alt="Jennifer Mills" />
 			<h1>Jennifer Mills</h1>
-			<span>Founding team</span>
+			<span>Co-founder</span>
+		</a>
+		<a class="team-card" href="/team/john-sanchez">
+			<img src={johnSanchez} alt="John Sanchez" />
+			<h1>John Sanchez</h1>
+			<span>Co-founder</span>
 		</a>
 		<a class="team-card" href="/team/vilas-rao">
 			<img src={vilasRao} alt="Vilas Rao" />
 			<h1>Vilas Rao</h1>
-			<span>Founding team</span>
+			<span>Co-founder</span>
 		</a>
 
-		<h1>Team</h1>
 		<a class="team-card" href="/team/alex-price">
 			<img src={alexPrice} alt="Alex Price" />
 			<h1>Alex Price</h1>
