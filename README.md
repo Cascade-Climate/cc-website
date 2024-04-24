@@ -16,7 +16,7 @@ For any questions, concerns, or assistance, please do not hesitate to reach out 
 
 If you want to edit files in your browser and deploy them live directly, you can simply add/edit the files on GitHub.
 
-However, if you want to edit files on your computer & preview them before they go live, you'll need to download the files using [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and run them using [npm](https://nodejs.org/en/download/).
+However, if you want to edit files on your computer & preview them before they go live, you'll need to download the files using [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and run them using [npm](https://nodejs.org/en/download/). **You will need both Git & npm installed in order to edit & preview locally!**
 
 You can download the files to you computer using the following Git command from the command line:
 
