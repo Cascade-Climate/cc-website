@@ -47,7 +47,7 @@
 		<a href="https://jobs.lever.co/cascade-climate">Work with us</a>
 	</section>
 	<section id="team">
-		<h1>Founding team</h1>
+		<h1>Team</h1>
 		<a class="team-card" href="/team/dai-ellis">
 			<img src={daiEllis} alt="Dai Ellis" />
 			<h1>Dai Ellis</h1>

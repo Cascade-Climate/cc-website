@@ -65,7 +65,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="heading">Quantification standard development</div>
+			<div class="heading">Policy advocacy</div>
 			<div class="content">
 				<p>
 					Shaping the strategy and driving stakeholder alignment around an overall policy framework
