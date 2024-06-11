@@ -27,7 +27,7 @@
 		on the quantification of net carbon removal via ERW. The Core Principles represent an ERW community-wide
 		view on rigorous quantification and set a shared foundation at the outset of a community process
 		to
-		<a href="blog/introducing-the-cqs"
+		<a href="introducing-the-cqs"
 			>develop the first version of a new ERW quantification standard</a
 		>.
 	</p>
