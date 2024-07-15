@@ -79,6 +79,13 @@
 			<h1>Alex Price</h1>
 			<span>Fellow</span>
 		</a>
+
+		<a class="team-card" href="/team/alison-tune">
+			<img src={alisonTune} alt="Alison Tune" />
+			<h1>Alison Tune</h1>
+			<span>ERW Scientist</span>
+		</a>
+
 		<a class="team-card" href="/team/arielle-lok">
 			<img src={arielleLok} alt="Arielle Lok" />
 			<h1>Arielle Lok</h1>
@@ -99,6 +106,13 @@
 			<h1>Noemma Olagaray</h1>
 			<span>Associate</span>
 		</a>
+
+		<a class="team-card" href="/team/pritha-ghosh">
+			<img src={prithaGhosh} alt="Pritha Ghosh" />
+			<h1>Pritha Ghosh</h1>
+			<span>Program Director</span>
+		</a>
+
 		<a class="team-card" href="/team/rachel-smith">
 			<img src={rachelSmith} alt="Rachel Smith" />
 			<h1>Rachel Smith</h1>
