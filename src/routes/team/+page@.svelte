@@ -6,14 +6,15 @@
 	import vilasRao from '$lib/images/team/vilas-rao.webp';
 	
 	import arielleLok from '$lib/images/team/arielle-lok.webp';
+	import alisonTune from '$lib/images/team/alison-tune.webp';
 	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
 	import alexPrice from '$lib/images/team/alex-price.webp';
 	import jamieNewman from '$lib/images/team/jamie-newman.webp';
 	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
+	import prithaGhosh from '$lib/images/team/pritha-ghoshe.webp';
 	import rachelSmith from '$lib/images/team/rachel-smith.webp';
 	import taylorChapman from '$lib/images/team/taylor-chapman.webp';
 	import tannisThorlakson from '$lib/images/team/tannis-thorlakson.webp';
-
 	import chrisReinhard from '$lib/images/team/chris-reinhard.webp';
 	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
 
