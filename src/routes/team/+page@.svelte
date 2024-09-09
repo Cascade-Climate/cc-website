@@ -10,6 +10,7 @@
 	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
 	import alexPrice from '$lib/images/team/alex-price.webp';
 	import jamieNewman from '$lib/images/team/jamie-newman.webp';
+	import noahAnderson from '$lib/images/team/noah-anderson.webp';
 	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
 	import prithaGhosh from '$lib/images/team/pritha-ghoshe.webp';
 	import rachelSmith from '$lib/images/team/rachel-smith.webp';
@@ -101,6 +102,11 @@
 			<img src={jamieNewman} alt="Jamie Newman" />
 			<h1>Jamie Newman</h1>
 			<span>Recruiting & Operations Manager</span>
+		</a>
+		<a class="team-card" href="/team/noah-anderson">
+			<img src={noahAnderson} alt="Noah Anderson" />
+			<h1>Noah Anderson</h1>
+			<span>ERW Scientist</span>
 		</a>
 		<a class="team-card" href="/team/noemma-olagaray">
 			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
