@@ -17,7 +17,7 @@
 			const element = document.getElementById(section.id);
 			if (element) {
 				const { offsetTop, offsetHeight } = element;
-				if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+				if (scrollPosition >= offsetTop - 10 && scrollPosition < offsetTop + offsetHeight - 10) {
 					activeSection = section.id;
 					console.log(activeSection);
 				}
