@@ -2,16 +2,72 @@
 {
 	"navItems": [
 		{
-			"url": "/team",
-			"label": "Team"
+			"label": "About",
+			"children": [
+				{
+					"label": "What We Do",
+					"url": "/what-we-do"
+				},
+				{
+					"label": "FAQ",
+					"url": "/faq"
+				}
+			]
 		},
 		{
-			"url": "/faq",
-			"label": "FAQ"
+			"label": "Our Work",
+			"children": [
+				{
+					"label": "Overview",
+					"url": "/our-work"
+				},
+				{
+					"label": "Enhanced Rock Weathering",
+					"url": "/our-work#erw"
+				},
+				{
+					"label": "Marine Carbon Dioxide Removal",
+					"url": "/our-work#mcdr"
+				},
+				{
+					"label": "Ice Sheet Stabilization",
+					"url": "/our-work#ice-sheet-stabilization"
+				}
+			]
 		},
 		{
-			"url": "/blog",
-			"label": "Blog"
+			"label": "People",
+			"children": [
+				{
+					"label": "Team",
+					"url": "/team"
+				},
+				{
+					"label": "Board of Directors",
+					"url": "/board"
+				},
+				{
+					"label": "Funders",
+					"url": "/funders"
+				}
+			]
+		},
+		{
+			"label": "Join",
+			"children": [
+				{
+					"label": "Newsletter",
+					"url": "/newsletter"
+				},
+				{
+					"label": "Events",
+					"url": "/events"
+				},
+				{
+					"label": "Careers",
+					"url": "/careers"
+				}
+			]
 		}
 	],
 	"subscribeUrl": "https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1",

@@ -8,29 +8,56 @@
 	function toggleNavModal() {
 		navModalActive = !navModalActive;
 	}
+
+	let opened;
 </script>
 
 <header>
 	<div id="header-container">
 		<div id="header-logo">
-			<a href="/" on:click={() => navModalActive = false}>
+			<a href="/" on:click={() => (navModalActive = false)}>
 				<img width="24" height="24" src={cascadeLogo} alt="Cascade Climate Logo" />
 				Cascade Climate
 			</a>
 		</div>
 		{#if !navModalActive}
 			<nav>
-				{#each config.navItems as item (item.url)}
-					<a class:button={item.button} target={item.external ? '_blank' : '_self'} href={item.url}
-						>{item.label}</a
+				{#each config.navItems as item, i}
+					<div
+						on:mouseover={() => {
+							opened = i;
+						}}
+						on:mouseleave={() => {
+							opened = undefined;
+						}}
+						role="button"
+						class="nav-item"
+						tabindex="0"
+						on:focus={() => {
+							opened = i;
+						}}
 					>
+						<span>
+							{item.label}
+						</span>
+						<div class="subnav" class:open={opened === i}>
+							{#each item.children as subitem}
+								<a
+									target={subitem.external ? '_blank' : '_self'}
+									href={subitem.url}
+									on:click={() => (navModalActive = false)}
+								>
+									{subitem.label}
+								</a>
+							{/each}
+						</div>
+					</div>
 				{/each}
-				<a class="button" target="_blank" href={config.subscribeUrl}>Subscribe</a>
 			</nav>
 		{/if}
-		<HamburgerMenu mobileOnly={true} callbackFn={toggleNavModal} active={navModalActive}/>
+		<HamburgerMenu mobileOnly={true} callbackFn={toggleNavModal} active={navModalActive} />
 	</div>
-	<NavModal active={navModalActive} callbackFn={toggleNavModal}/>
+	<NavModal active={navModalActive} callbackFn={toggleNavModal} />
 </header>
 
 <style>
@@ -47,9 +74,9 @@
 		z-index: 4;
 		position: fixed;
 		top: 0;
-		left: 0;
 		width: 100vw;
 		background-color: var(--color-dark);
+		border-bottom: 1px solid var(--color-light);
 	}
 
 	#header-logo a {
@@ -68,9 +95,10 @@
 	nav {
 		display: flex;
 		align-items: center;
+		height: 100%;
 	}
 
-	header a {
+	header a, span {
 		color: var(--color-light);
 		text-decoration: none;
 		font-weight: 400;
@@ -78,16 +106,37 @@
 		line-height: 16px;
 		font-variation-settings: 'wght' 300;
 		letter-spacing: 0.6px;
-		margin: 0 8px;
 		padding: 0 8px;
+		text-align: center;
 	}
 
-	header a.button {
+	a:hover {
+		color: var(--color-highlight);
+	}
+
+	.nav-item {
+		position: relative;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 2rem;
+	}
+
+	.subnav {
+		display: none;
+		position: absolute;
 		background-color: var(--color-accent);
-		color: var(--color-light);
-		padding: 8px 16px;
-		margin: 0 16px;
-		border-radius: 16px;
+		padding: 0.6rem 0.4rem;
+		gap: 1rem;
+		top: calc(100% - 4px);
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		border-top: 4px solid var(--color-highlight);
+	}
+	.subnav.open {
+		display: flex;
 	}
 
 	@media (max-width: 660px) {
