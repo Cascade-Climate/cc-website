@@ -294,10 +294,10 @@
 	}
 
 	.areas section {
-		padding-top: 8rem;
+		padding-top: 9rem;
 		border-bottom: 1px solid var(--color-text);
 		margin-bottom: -7rem;
-		padding-bottom: 3rem;
+		padding-bottom: 4rem;
 	}
 
 	.highlights {
