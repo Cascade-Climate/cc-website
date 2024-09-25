@@ -302,7 +302,7 @@
 
 	.highlights {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 		grid-gap: 2rem;
 	}
 
@@ -318,5 +318,11 @@
 		padding: 0.5rem 1.2rem;
 		text-decoration: none;
 		color: var(--color-light);
+	}
+
+	@media (max-width: 660px) {
+		.areas, .preamble {
+			padding: 1rem 2rem;
+		}
 	}
 </style>
