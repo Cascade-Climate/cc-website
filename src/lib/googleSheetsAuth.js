@@ -3,7 +3,7 @@ import { env } from '$env/dynamic/private';
 const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = env;
 
 export async function getAccessToken() {
-  const key = Buffer.from(GOOGLE_PRIVATE_KEY, 'base64').toString('ascii');
+  const key = atob(GOOGLE_PRIVATE_KEY);
   
   const jwtHeader = {
     alg: 'RS256',
@@ -19,14 +19,14 @@ export async function getAccessToken() {
     iat: now
   };
 
-  const encodedHeader = Buffer.from(JSON.stringify(jwtHeader)).toString('base64url');
-  const encodedClaimSet = Buffer.from(JSON.stringify(jwtClaimSet)).toString('base64url');
+  const encodedHeader = btoa(JSON.stringify(jwtHeader)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+  const encodedClaimSet = btoa(JSON.stringify(jwtClaimSet)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
   const signatureInput = `${encodedHeader}.${encodedClaimSet}`;
 
   const crypto = await import('crypto');
   const sign = crypto.createSign('RSA-SHA256');
   sign.update(signatureInput);
-  const signature = sign.sign(key, 'base64url');
+  const signature = sign.sign(key, 'base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
 
   const jwt = `${signatureInput}.${signature}`;
 
