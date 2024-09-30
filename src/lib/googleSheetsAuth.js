@@ -1,25 +1,46 @@
-import { JWT } from 'google-auth-library';
 import { env } from '$env/dynamic/private';
 
-const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, GOOGLE_SPREADSHEET_ID } = env;
+const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = env;
 
-const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
-
-export async function getAuthClient() {
-  console.log('GOOGLE_SERVICE_ACCOUNT_EMAIL:', GOOGLE_SERVICE_ACCOUNT_EMAIL);
-  console.log('GOOGLE_PRIVATE_KEY:', GOOGLE_PRIVATE_KEY ? 'Defined' : 'Undefined');
-  console.log('GOOGLE_SPREADSHEET_ID:', GOOGLE_SPREADSHEET_ID);
-
+export async function getAccessToken() {
   const key = Buffer.from(GOOGLE_PRIVATE_KEY, 'base64').toString('ascii');
+  
+  const jwtHeader = {
+    alg: 'RS256',
+    typ: 'JWT'
+  };
+  
+  const now = Math.floor(Date.now() / 1000);
+  const jwtClaimSet = {
+    iss: GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    scope: 'https://www.googleapis.com/auth/spreadsheets',
+    aud: 'https://oauth2.googleapis.com/token',
+    exp: now + 3600,
+    iat: now
+  };
 
-  console.log("key", key)
+  const encodedHeader = Buffer.from(JSON.stringify(jwtHeader)).toString('base64url');
+  const encodedClaimSet = Buffer.from(JSON.stringify(jwtClaimSet)).toString('base64url');
+  const signatureInput = `${encodedHeader}.${encodedClaimSet}`;
 
-  const auth = new JWT({
-    email: GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    key: key,
-    scopes: SCOPES,
+  const crypto = await import('crypto');
+  const sign = crypto.createSign('RSA-SHA256');
+  sign.update(signatureInput);
+  const signature = sign.sign(key, 'base64url');
+
+  const jwt = `${signatureInput}.${signature}`;
+
+  const response = await fetch('https://oauth2.googleapis.com/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams({
+      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+      assertion: jwt
+    })
   });
 
-  await auth.authorize();
-  return auth;
+  const data = await response.json();
+  return data.access_token;
 }

@@ -1,6 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { google } from 'googleapis';
-import { getAuthClient } from '$lib/googleSheetsAuth';
+import { getAccessToken } from '$lib/googleSheetsAuth';
 import { env } from '$env/dynamic/private';
 
 const { GOOGLE_SPREADSHEET_ID } = env;
@@ -8,17 +7,22 @@ const { GOOGLE_SPREADSHEET_ID } = env;
 export async function POST({ request }) {
 	try {
 		const formData = await request.json();
-		const auth = await getAuthClient();
-		const sheets = google.sheets({ version: 'v4', auth });
+		const accessToken = await getAccessToken();
 
-		await sheets.spreadsheets.values.append({
-			spreadsheetId: GOOGLE_SPREADSHEET_ID,
-			range: 'Sheet1!A:Z',
-			valueInputOption: 'USER_ENTERED',
-			resource: {
+		const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${GOOGLE_SPREADSHEET_ID}/values/Sheet1!A:Z:append?valueInputOption=USER_ENTERED`, {
+			method: 'POST',
+			headers: {
+				'Authorization': `Bearer ${accessToken}`,
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
 				values: [[formData.name, formData.email, formData.message, new Date().toISOString()]]
-			}
+			})
 		});
+
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
 
 		return json({ success: true, message: 'Form data submitted successfully' });
 	} catch (error) {
