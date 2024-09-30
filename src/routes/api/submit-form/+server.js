@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { google } from 'googleapis';
 import { getAuthClient } from '$lib/googleSheetsAuth';
-import { GOOGLE_SPREADSHEET_ID } from '$env/static/private';
+import { GOOGLE_SPREADSHEET_ID } from '$env/dynamic/private';
 
 export async function POST({ request }) {
 	try {

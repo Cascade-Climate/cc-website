@@ -1,5 +1,5 @@
 import { JWT } from 'google-auth-library';
-import { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, GOOGLE_SPREADSHEET_ID } from '$env/static/private';
+import { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, GOOGLE_SPREADSHEET_ID } from '$env/dynamic/private';
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 
