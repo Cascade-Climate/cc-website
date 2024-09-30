@@ -27,6 +27,8 @@
   },
   "type": "module",
   "dependencies": {
+    "google-auth-library": "^9.14.1",
+    "googleapis": "^144.0.0",
     "svelte-markdown": "^0.4.1"
   }
 }
