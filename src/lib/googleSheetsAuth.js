@@ -1,17 +1,13 @@
 import { env } from '$env/dynamic/private';
+import * as jose from 'jose';
 
 const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = env;
 
 export async function getAccessToken() {
-  const key = atob(GOOGLE_PRIVATE_KEY);
-  
-  const jwtHeader = {
-    alg: 'RS256',
-    typ: 'JWT'
-  };
-  
+  const privateKey = atob(GOOGLE_PRIVATE_KEY);
+
   const now = Math.floor(Date.now() / 1000);
-  const jwtClaimSet = {
+  const payload = {
     iss: GOOGLE_SERVICE_ACCOUNT_EMAIL,
     scope: 'https://www.googleapis.com/auth/spreadsheets',
     aud: 'https://oauth2.googleapis.com/token',
@@ -19,16 +15,12 @@ export async function getAccessToken() {
     iat: now
   };
 
-  const encodedHeader = btoa(JSON.stringify(jwtHeader)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
-  const encodedClaimSet = btoa(JSON.stringify(jwtClaimSet)).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
-  const signatureInput = `${encodedHeader}.${encodedClaimSet}`;
+  const alg = 'RS256';
+  const privateJwk = await jose.importPKCS8(privateKey, alg);
 
-  const crypto = await import('crypto');
-  const sign = crypto.createSign('RSA-SHA256');
-  sign.update(signatureInput);
-  const signature = sign.sign(key, 'base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
-
-  const jwt = `${signatureInput}.${signature}`;
+  const jwt = await new jose.SignJWT(payload)
+    .setProtectedHeader({ alg })
+    .sign(privateJwk);
 
   const response = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',

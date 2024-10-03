@@ -27,6 +27,6 @@ export async function POST({ request }) {
 		return json({ success: true, message: 'Form data submitted successfully' });
 	} catch (error) {
 		console.error('Error submitting form data:', error);
-		return json({ success: false, message: error.message }, { status: 500 });
+		return json({ success: false, message: error.message + ' ' + error.stack }, { status: 500 });
 	}
 }
