@@ -111,4 +111,10 @@
 			margin: 0;
 		}
 	}
+
+	@media (max-width: 660px) {
+		:global(main, .intro) {
+			padding: 1rem 2rem;
+		}
+	}
 </style>
