@@ -16,7 +16,7 @@ export async function POST({ request }) {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				values: [[formData.name, formData.email, formData.message, new Date().toISOString()]]
+				values: [[formData.email,formData.first_name, formData.last_name, formData.title, formData.organization, formData.link, new Date().toISOString()]]
 			})
 		});
 

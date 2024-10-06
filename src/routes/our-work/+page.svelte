@@ -19,7 +19,6 @@
 				const { offsetTop, offsetHeight } = element;
 				if (scrollPosition >= offsetTop - 10 && scrollPosition < offsetTop + offsetHeight - 10) {
 					activeSection = section.id;
-					console.log(activeSection);
 				}
 			}
 		}
