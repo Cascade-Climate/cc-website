@@ -218,12 +218,11 @@
 
 	h1 {
 		font-weight: 300;
-		margin-top: 2rem;
 		font-size: 2rem;
 	}
 
 	h3 {
-		font-weight: 600;
+		font-weight: 500;
 		font-size: 1.6rem;
 		margin-bottom: 1rem;
 		color: var(--color-dark);
@@ -288,6 +287,7 @@
 	}
 
 	.areas h1 {
+		margin-top: 2rem;
 		margin-bottom: -7rem;
 		color: var(--color-dark);
 	}

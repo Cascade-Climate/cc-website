@@ -134,14 +134,18 @@
 
 	h1 {
 		font-weight: 300;
-		margin-top: 2rem;
 		font-size: 2rem;
+		line-height: 1;
 	}
 
 	.intro {
-		padding: 3rem 4rem;
+		padding: 1rem 4rem;
 		background-color: var(--color-dark);
 		color: var(--color-light);
+	}
+	
+	.intro p {
+		margin-bottom: 1rem;
 	}
 
 	p {

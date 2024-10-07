@@ -5,8 +5,8 @@
 			"label": "About",
 			"children": [
 				{
-					"label": "What We Do",
-					"url": "/what-we-do"
+					"label": "About Us",
+					"url": "/about-us"
 				},
 				{
 					"label": "FAQ",
