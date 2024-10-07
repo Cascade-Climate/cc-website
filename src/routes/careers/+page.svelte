@@ -264,6 +264,10 @@
 		left: 0;
 	}
 
+	#benefits {
+		margin-bottom: 2rem;
+	}
+
 	.steps-wrapper {
 		padding-right: 4rem;
 		width: fit-content;
