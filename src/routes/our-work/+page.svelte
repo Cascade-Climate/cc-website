@@ -77,34 +77,39 @@
 			<div class="highlights">
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Research</h2>
+					<h2>Foundations for carbon removal quantification in ERW deployments</h2>
 					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
+						After a year-long process involving over 100 stakeholders, we produced a technical
+						reference on the framework, considerations and recommendations for quantifying carbon
+						and cation fluxes in an ERW deployment.
 					</p>
-					<a href="/blog/foundations">Learn More</a>
+					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments"
+						>Learn More</a
+					>
 				</div>
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Another Thing</h2>
+					<h2>Data sharing system to advance scientific research</h2>
 					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
+						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever
+						ERW data sharing system, [insert name], that connects researchers with data from
+						commercial ERW deployments.
 					</p>
-					<a href="/blog/foundations">Learn More</a>
+					<a href="/blog/data-sharing-system-to-advance-scientific-research">Learn More</a>
 				</div>
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Secret Third Thing</h2>
+					<h2>ERW measurement cost stack estimator and database</h2>
 					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
+						We built a tool to help inform practitioners on the stacked costs of different
+						analytical measurement choices in an ERW deployment, and a database of cost quotes to
+						help practitioners compare costs for leverage.
 					</p>
-					<a href="/blog/foundations">Learn More</a>
+					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Cost</h2>
+					<h2>Policy supporting ERW research & responsible deployment</h2>
 					<p>
 						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
 						piece of classical Latin literature from 45 BC, making it over 2000 years old.
@@ -320,8 +325,13 @@
 	}
 
 	@media (max-width: 660px) {
-		.areas, .preamble {
+		.areas,
+		.preamble {
 			padding: 1rem 2rem;
+		}
+
+		.areas {
+			padding-bottom: 6rem;
 		}
 	}
 </style>
