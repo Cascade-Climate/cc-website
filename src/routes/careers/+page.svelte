@@ -317,6 +317,18 @@
 	}
 
 	@media (max-width: 660px) {
+		section {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+
+		#intro,
+		#process,
+		#benefits,
+		#hubs {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
 		#intro {
 			flex-direction: column;
 		}
