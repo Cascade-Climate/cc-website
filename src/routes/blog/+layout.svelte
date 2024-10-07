@@ -116,5 +116,9 @@
 		:global(main, .intro) {
 			padding: 1rem 2rem;
 		}
+
+		:global(main) {
+			padding-bottom: 6rem;
+		}
 	}
 </style>
