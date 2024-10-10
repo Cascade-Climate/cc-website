@@ -1,5 +1,5 @@
 
-<div id="team-container">
+<div id="people">
 	<a href="/team">← Back to Team</a>
 	<slot />
 </div>
@@ -20,7 +20,7 @@
 		color: var(--color-light);
 	}
 
-	#team-container {
+	#people {
 		padding: 2rem;
 	}
 

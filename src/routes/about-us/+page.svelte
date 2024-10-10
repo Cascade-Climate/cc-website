@@ -12,10 +12,7 @@
 <section class="intro">
 	<h1>About Us</h1>
 	<p>
-		Cascade is a philanthropically-backed nonprofit organization working across industry, government
-		and science to coordinate ambitious multi-stakeholder initiatives, build tools and
-		infrastructure that unlocks cycles of learning-by-doing, and resource high-leverage R&D and
-		policy work.
+		Cascade is a philanthropically-backed nonprofit organization. Working across industry, government, and science, we coordinate bottleneck-breaking initiatives, build tools and infrastructure that unlock cycles of learning-by-doing, and resource high-leverage R&D and policy work.
 	</p>
 </section>
 <ScrollNav />
@@ -24,20 +21,10 @@
 		<h1>Our motivation</h1>
 		<h2>: the climate crisis and power of Earth's natural systems.</h2>
 		<p>
-			As a species we are already—unintentionally and haphazardly—manipulating Earth’s climate
-			system in ways that produce disastrous consequences for ourselves and the biosphere.
-			Decarbonization must be our top priority but on its own cannot solve the climate emergency. We
-			must embrace the need to harness Earth’s natural systems in the service of avoiding deeper
-			harm. This will mean intervening in soils, rivers, oceans, glaciers and more—but doing so with
-			great deliberation and care.
+			As a species we are already—unintentionally and haphazardly—manipulating Earth’s climate system in ways that produce disastrous consequences for ourselves and the biosphere. Decarbonization must be our top priority, but on its own cannot solve the climate emergency. We must embrace the need to harness Earth’s natural systems in the service of avoiding deeper harm. This will mean intervening in soils, rivers, oceans, glaciers and more—but doing so with great deliberation and care.
 		</p>
 		<p>
-			Accelerating humanity’s readiness to responsibly enhance or modulate natural cycles requires
-			us to approach the endeavor with profound humility. At the core of our motivation to start
-			Cascade are the awe and wonder that come with deeper learning about Earth systems, the
-			biosphere, and humanity’s connected history with them—an unimaginably complex set of
-			interactions that have played out over eons through mass extinctions and extraordinary shifts
-			in the planet’s climate system.
+			Accelerating humanity’s readiness to responsibly enhance or modulate natural cycles requires us to approach the endeavor with profound humility. At the core of our motivation behind Cascade is the awe and wonder that come with deeper learning about Earth systems, the biosphere, and humanity’s connected history with them—an unimaginably complex set of interactions that have played out over eons through mass extinctions and extraordinary shifts in the planet’s climate system.
 		</p>
 	</section>
 	<section id="work">
@@ -46,32 +33,17 @@
 			: coordinating ambitious initiatives across science, industry, philanthropy, and government.
 		</h2>
 		<p>
-			Enhanced weathering and virtually all other open-system climate intervention fields are in
-			their infancy. Scientific uncertainties regarding efficacy, quantification and ecological
-			impacts loom large. Policy frameworks for government engagement remain on the drawing board.
-			Immature markets in these fields—where they exist—struggle with “race-to-the-bottom” incentive
-			problems as well as underdeveloped institutional and regulatory architecture.
+			Enhanced rock weathering and most other natural-system climate intervention fields are in their infancy. Scientific uncertainties regarding efficacy, quantification, and ecological impacts loom large. Policy frameworks for government engagement remain on the drawing board. Immature markets in these fields—where they exist—struggle with “race-to-the-bottom” incentive problems, as well as underdeveloped institutional and regulatory architecture. In some cases, markets may be entirely ill-suited for specific intervention types, leaving non-commercial research and intergovernmental coordination as the primary avenues toward building public trust and responsible deployment. 
 		</p>
 		<p>
-			In these thorny contexts, Cascade coordinates ambitious initiatives across science, industry,
-			philanthropy, and government to overcome the highest-priority bottlenecks hindering progress.
-			Often this involves unlocking bigger flows of funding or talent, filling critical ecosystem
-			gaps by incubating new systems and entities, or shaping the design of policies and markets. At
-			Cascade, we make tackling system-level obstacles our job.
+			In these thorny contexts, Cascade coordinates ambitious initiatives across science, industry, philanthropy, and government to overcome the highest-priority bottlenecks hindering progress. Often this involves unlocking bigger flows of funding or talent, filling critical ecosystem gaps by incubating new systems and entities, or shaping the design of policies and markets. At Cascade, we make tackling system-level obstacles our job.
 		</p>
 	</section>
 	<section id="approach">
 		<h1>Our approach</h1>
 		<h2>: building deep, trust-based relationships across the ecosystem.</h2>
 		<p>
-			The “how” in our approach is every bit as important as the “what.” We have to earn the right
-			to play a system-engineer role. We do this by building deep trust-based relationships across
-			the ecosystem, while maintaining scrupulous neutrality and unimpeachably clean incentives.
-			Philosophically, we put learning at the heart of our work—embracing rather than wishing away
-			uncertainty and helping open-system climate intervention fields shift into virtuous
-			learning-by-doing cycles. This enables the kind of evidence-driven course we will need to
-			chart if we hope to identify interventions that can be deployed safely, effectively, and
-			responsibly.
+			The “how” in our approach is every bit as important as the “what.” We have to earn the right to play a system-engineer role, and do so by building deep, trust-based relationships across the ecosystem—while maintaining scrupulous neutrality and unimpeachably clean incentives. Philosophically, we put learning at the heart of our work, embracing uncertainty rather than wishing it away, and helping natural system climate intervention fields shift into virtuous learning-by-doing cycles. This enables us to plot the evidence-driven course we will need to chart if we hope to identify interventions that can be deployed safely, effectively, and responsibly at scale.
 		</p>
 	</section>
 </main>

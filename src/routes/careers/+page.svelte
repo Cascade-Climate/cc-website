@@ -13,10 +13,7 @@
 	<div class="content">
 		<h1>Careers</h1>
 		<p>
-			Join a passionate, curious, and dedicated team working to address one of the most pressing
-			challenges of our time. At Cascade Climate, we are committed to being one of the best places
-			to work in climate—that means competitive compensation, comprehensive benefits, and a vibrant
-			culture where you can grow.
+			Join a passionate, curious, and dedicated team working to address one of the most pressing challenges of our time. At Cascade Climate, we are committed to being one of the best places to work in climate. To us, this means surrounding ourselves with exceptional people, creating opportunities for personal growth and learning, cultivating a vibrant culture, and offering competitive compensation and benefits. 
 		</p>
 		<a target="_blank" href="/TODO">Current Openings ↗</a>
 	</div>
@@ -27,11 +24,7 @@
 <section id="culture">
 	<h1>Culture</h1>
 	<p>
-		At Cascade Climate, creating a dynamic and fulfilling work environment is at the heart of
-		everything we do. Guided by the principles of curiosity, collaboration, and a bias for action,
-		we empower each team member to make meaningful contributions to our mission. Every individual
-		plays an important role in cultivating an inclusive and thriving culture - we hope you’ll be
-		part of it.
+		At Cascade Climate, creating a dynamic and fulfilling work environment is at the heart of everything we do. We aim to empower every team member to make meaningful contributions to our mission, recognizing that your personal growth is just as important as the impact we make together. Every individual plays an important role in cultivating an inclusive and thriving culture–we hope you’ll be part of it. 
 	</p>
 	<div class="cards">
 		<div class="card">
@@ -46,22 +39,16 @@
 		</div>
 		<div class="card">
 			<img src={careersImage} alt="collaboration" />
-			<h2>Team Collaboration</h2>
+			<h2>Vibrant Culture</h2>
 			<p>
-				Collaboration - whether it’s internally or with our partners - is the backbone of our team.
-				We provide the tools and support to collaborate effectively, no matter the location. We
-				prioritize regular in-person gatherings, from retreats and whiteboarding sessions, that
-				strengthen our connective tissue and fuel creativity.
+				At Cascade, we are building a distinctive culture that reflects the uniqueness of both our mission and the remarkable team we’ve assembled to pursue it. Humility, empathy, and endless curiosity lie at the heart of our culture and the way we think about natural systems. Our hunger to learn gradually leads us to deeply-researched hypotheses and a willingness to take risks as we translate our convictions into bold, think-big initiatives. 
 			</p>
 		</div>
 		<div class="card">
 			<img src={careersImage} alt="learning" />
-			<h2>Continuous Learning</h2>
+			<h2>Team Collaboration</h2>
 			<p>
-				We believe that personal and professional growth go hand-in-hand. At Cascade Climate, we
-				promote a culture of continuous learning, offering consistent feedback, coaching, and
-				resources to help every employee set ambitious goals and reach them. Your development is as
-				important to us as the work we do together.
+				Collaboration is the backbone of our work. We build strong, trust-based relationships–both across the team and with our external partners. We provide the tools and support to collaborate effectively in any situation. We prioritize regular in-person gatherings, from team retreats to whiteboarding sessions, that strengthen our connective tissue and fuel creativity.
 			</p>
 		</div>
 	</div>
@@ -73,7 +60,7 @@
 			<div class="step">
 				<h2>Screen</h2>
 				<p>
-					CA 30-minute video call to get to know you, your background, and your interest in Cascade.
+					A 30-minute video call to get to know you, your background, and your interest in Cascade.
 				</p>
 			</div>
 			<div class="step">
@@ -85,7 +72,7 @@
 			</div>
 			<div class="step">
 				<h2>Topgrade</h2>
-				<p>A 1-hour deep-dive into your academic and professional background and career goals.</p>
+				<p>A 1-hour deep-dive into your academic and professional background to understand how you’ve become the professional you are today.</p>
 			</div>
 			<div class="step">
 				<h2>Assignment</h2>
@@ -100,7 +87,7 @@
 			</div>
 		</div>
 	</div>
-	<p class="footnote">*illustrative and will depend on role</p>
+	<p class="footnote">*This is illustrative and will differ based on the role and hiring process.</p>
 </section>
 <section id="benefits">
 	<h1>Benefits & Perks</h1>
@@ -127,7 +114,7 @@
 		</div>
 		<div class="item">
 			<img src={perksImage} alt="Perks" />
-			<span>Other perks like Peloton memberships, home-office stipend</span>
+			<span>Other perks like Peloton memberships, home-office stipend, and more</span>
 		</div>
 	</div>
 </section>

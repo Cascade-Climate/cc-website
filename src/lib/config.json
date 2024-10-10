@@ -26,12 +26,12 @@
 					"url": "/our-work#erw"
 				},
 				{
-					"label": "Marine Carbon Dioxide Removal",
-					"url": "/our-work#mcdr"
+					"label": "Oceans and Rivers",
+					"url": "/our-work#oceansrivers"
 				},
 				{
-					"label": "Ice Sheet Stabilization",
-					"url": "/our-work#ice-sheet-stabilization"
+					"label": "Blog",
+					"url": "/blog"
 				}
 			]
 		},
@@ -40,15 +40,11 @@
 			"children": [
 				{
 					"label": "Team",
-					"url": "/team"
+					"url": "/people#team"
 				},
 				{
 					"label": "Board of Directors",
-					"url": "/board"
-				},
-				{
-					"label": "Funders",
-					"url": "/funders"
+					"url": "/people#board"
 				}
 			]
 		},
@@ -57,11 +53,7 @@
 			"children": [
 				{
 					"label": "Newsletter",
-					"url": "/newsletter"
-				},
-				{
-					"label": "Events",
-					"url": "/events"
+					"url": "https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1"
 				},
 				{
 					"label": "Careers",

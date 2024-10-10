@@ -4,8 +4,7 @@
 
 	const sections = [
 		{ id: 'erw', title: 'ERW' },
-		{ id: 'mcdr', title: 'MCDR' },
-		{ id: 'ice-sheet-stabilization', title: 'Ice Sheet Stabilization' }
+		{ id: 'oceansrivers', title: 'Oceans & Rivers' },
 	];
 
 	let activeSection = '';
@@ -38,21 +37,7 @@
 	<section class="preamble">
 		<h1>Our Work</h1>
 		<p>
-			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-			classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-			Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
-			words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-			classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-			1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-			Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during
-			the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a
-			line in section 1.10.32.
-		</p>
-		<p>
-			The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-			interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-			also reproduced in their exact original form, accompanied by English versions from the 1914
-			translation by H. Rackham.
+			Cascade is a philanthropically-backed nonprofit organization. Working across industry, government and science, we coordinate ambitious multi-stakeholder initiatives, build tools and infrastructure that unlocks cycles of learning-by-doing, and resource high-leverage R&D and policy work.
 		</p>
 	</section>
 	<nav>
@@ -67,21 +52,15 @@
 		<section id="erw">
 			<h3>Enhanced Rock Weathering</h3>
 			<p>
-				Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-				of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-				a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-				Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-				word in classical literature, discovered the undoubtable source.
+				Our initial focus is advancing the progress of enhanced rock weathering (ERW), underpinned by a strong scientific evidence base. We believe that ERW has great potential to play a part in both the world’s long-term durable carbon removal portfolio and sustainable agricultural practice toolkit. We are supporters of accelerated private and public investment in ERW, with an overriding focus on learning and evidence-building to refine our collective understanding of how to optimize the role that ERW could play over a long time horizon. Cascade is leading the following initiatives in ERW:
 			</p>
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Foundations for carbon removal quantification in ERW deployments</h2>
+					<h2>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</h2>
 					<p>
-						After a year-long process involving over 100 stakeholders, we produced a technical
-						reference on the framework, considerations and recommendations for quantifying carbon
-						and cation fluxes in an ERW deployment.
+						After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the frameworks, considerations, and guidance for quantifying carbon and cation fluxes in an ERW deployment on agricultural soils.
 					</p>
 					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments"
 						>Learn More</a
@@ -91,127 +70,36 @@
 					<img src={erw} alt="Enhanced Rock Weathering" />
 					<h2>Data sharing system to advance scientific research</h2>
 					<p>
-						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever
-						ERW data sharing system, [insert name], that connects researchers with data from
-						commercial ERW deployments.
+						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
 					</p>
 					<a href="/blog/data-sharing-system-to-advance-scientific-research">Learn More</a>
 				</div>
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>ERW measurement cost stack estimator and database</h2>
+					<h2>ERW MRV cost estimator and database</h2>
 					<p>
-						We built a tool to help inform practitioners on the stacked costs of different
-						analytical measurement choices in an ERW deployment, and a database of cost quotes to
-						help practitioners compare costs for leverage.
+						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage
 					</p>
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Policy supporting ERW research & responsible deployment</h2>
+					<h2>Policy supporting ERW research and responsible deployment</h2>
 					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
+						We advance policies that support ERW innovation, provide early research funding, and develop rules and regulations for responsible deployment in close coordination with industry and civil society organizations.
 					</p>
 					<a href="/blog/foundations">Learn More</a>
 				</div>
 			</div>
 		</section>
-		<section id="mcdr">
-			<h3>Marine Carbon Dioxide Removal</h3>
+		<section id="oceansrivers">
+			<h3>Oceans and Rivers</h3>
 			<p>
-				While Lorem Ipsum has been a staple in the design world for decades, many designers and
-				content creators are exploring alternatives to this traditional placeholder text. These
-				alternatives aim to address some of the limitations of Lorem Ipsum and provide more
-				contextually relevant options for different design projects.
+				Cascade is gradually expanding our work to help accelerate progress across the broader family of durable, natural system carbon removal pathways. We will have a particular, though not exclusive, focus on ocean and river alkalinity enhancement pathways that are the most immediately related ‘sibling’ pathways of ERW.
 			</p>
-			<h5>HIGHLIGHTS</h5>
-			<div class="highlights">
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Foundations</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Data Access</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Price</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Policy</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-			</div>
-		</section>
-		<section id="ice-sheet-stabilization">
-			<h3>Ice Sheet Stabilization</h3>
 			<p>
-				Lorem ipsum is a valuable tool in the design process, allowing for focus on layout and
-				typography without the distraction of meaningful content. However, it's important to replace
-				it with actual content before finalizing a design to ensure the layout works with real text.
+				Just as Cascade did in the early days of its work on ERW, we are beginning work in new areas by learning from—and building trusted relationships with—those who have been working in these domains for years. The particular bottlenecks facing durable ocean and river pathways have some commonality with, but also some sharp differences from, those in ERW. Cascade will help strengthen shared learnings amongst researchers and practitioners, and accelerate the pace of progress across these alkalinity enhancement pathways.
 			</p>
-			<h5>HIGHLIGHTS</h5>
-			<div class="highlights">
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Policy</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Lorem</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Ipsum</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Example</h2>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-						piece of classical Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-					<a href="/blog/foundations">Learn More</a>
-				</div>
-			</div>
 		</section>
 	</div>
 </div>
@@ -238,6 +126,7 @@
 		font-size: 1.8rem;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
+		line-height: 2.2rem;
 		color: var(--color-dark);
 	}
 

@@ -1,27 +1,58 @@
 <script>
 	import daiEllis from '$lib/images/team/dai-ellis.webp';
+	import haraWang from '$lib/images/team/hara-wang.webp';
 	import jenniferMills from '$lib/images/team/jennifer-mills.webp';
 	import johnSanchez from '$lib/images/team/john-sanchez.webp';
-	import haraWang from '$lib/images/team/hara-wang.webp';
 	import vilasRao from '$lib/images/team/vilas-rao.webp';
 	
-	import arielleLok from '$lib/images/team/arielle-lok.webp';
-	import alisonTune from '$lib/images/team/alison-tune.webp';
-	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
 	import alexPrice from '$lib/images/team/alex-price.webp';
+	import alisonTune from '$lib/images/team/alison-tune.webp';
+	import arielleLok from '$lib/images/team/arielle-lok.webp';
+	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
+	import chrisReinhard from '$lib/images/team/chris-reinhard.webp';
 	import jamieNewman from '$lib/images/team/jamie-newman.webp';
+	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
 	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
 	import prithaGhosh from '$lib/images/team/pritha-ghosh.webp';
 	import rachelSmith from '$lib/images/team/rachel-smith.webp';
-	import taylorChapman from '$lib/images/team/taylor-chapman.webp';
 	import tannisThorlakson from '$lib/images/team/tannis-thorlakson.webp';
-	import chrisReinhard from '$lib/images/team/chris-reinhard.webp';
-	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
 
 	import anilSoni from '$lib/images/team/anil-soni.webp';
 	import antoniusGagern from '$lib/images/team/antonius-gagern.webp';
 	import elaineHsieh from '$lib/images/team/elaine-hsieh.webp';
 	import elenaCavallero from '$lib/images/team/elena-cavallero.webp';
+
+	import { onMount } from 'svelte';
+
+	let activeSection = '';
+
+	function handleScroll() {
+		const scrollPosition = window.scrollY;
+		activeSection = '';
+		for (const section of sections) {
+			const element = document.getElementById(section.id);
+			if (element) {
+				const { offsetTop, offsetHeight } = element;
+				if (scrollPosition >= offsetTop - 10 && scrollPosition < offsetTop + offsetHeight - 10) {
+					activeSection = section.id;
+				}
+			}
+		}
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', handleScroll);
+		handleScroll();
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
+
+	const sections = [
+		{ id: 'team', title: 'Team' },
+		{ id: 'board', title: 'Board of Directors' }
+	];
 
 </script>
 
@@ -32,7 +63,7 @@
 		content="Information about the founding team, contributors, and board members of Cascade Climate."
 	/>
 </svelte:head>
-<div id="team-container">
+<div id="people">
 	<section id="cta">
 		<h1>Join Cascade Climate</h1>
 		<p>
@@ -124,11 +155,6 @@
 			<h1>Tannis Thorlakson</h1>
 			<span>Program Director</span>
 		</a>
-		<a class="team-card" href="/team/taylor-chapman">
-			<img src={taylorChapman} alt="Taylor Chapman" />
-			<h1>Taylor Chapman</h1>
-			<span>Fellow</span>
-		</a>
 
 		<h1>Contributors</h1>
 		<a class="team-card" href="/team/chris-reinhard">
@@ -141,7 +167,8 @@
 			<h1>Noah Planavsky</h1>
 			<span>Senior Contributing Scientist</span>
 		</a>
-
+	</section>
+	<section id="board">
 		<h1>Our Board</h1>
 		<a class="team-card" href="/team/anil-soni">
 			<img src={anilSoni} alt="Anil Soni" />
@@ -170,7 +197,7 @@
 
 <style>
 
-	#team-container {
+	#people {
 		padding: 2rem;
 	}
 
@@ -204,6 +231,12 @@
 	}
 
 	#team {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem 2%;
+	}
+
+	#board {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem 2%;

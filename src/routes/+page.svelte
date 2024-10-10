@@ -30,12 +30,7 @@
 				local economies, and economic development in the Global South.
 			</p>
 			<p>
-				Yet, realizing the opportunity involves overcoming hurdles. Quantifying the impact of
-				natural system interventions gets complex. Uncertainty around ecosystem impacts can cause
-				paralysis without adequate tools and governance frameworks. Natural system interventions
-				often offer critical but intangible public benefits, requiring ambitious and new financing
-				modes. These interlaced challenges can leave natural system climate interventions at an
-				impasse, struggling to establish a virtuous cycle of learning-by-doing and growing support.
+				Realizing these opportunities involves overcoming complex and cross-sectoral hurdles. Quantifying the full impact of natural system interventions can be challenging, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions often offer critical–but often intangible–public benefits, requiring new and ambitious financing modes and public support models. These interlaced challenges can leave natural system climate interventions at an impasse, struggling to start the learn-by-doing flywheel.
 			</p>
 			<h4>
 				Cascade is a philanthropically-backed nonprofit organization. Working across industry,
