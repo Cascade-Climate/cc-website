@@ -22,12 +22,13 @@
 			<h1>Policy Priorities</h1>
 			<p>
 				Our policy priorities are shaped by the specific considerations of each intervention that we work on, but our driving purpose remains to address obstacles and break down system-level bottlenecks to progress. Several of our primary policy efforts across the U.S. and European Union include:</p>
-			<ul>
+			<ul style="display: flex; flex-direction: column; gap: 1rem;">
 				<li><b>ERW RD&D:</b> We’re advocating for increased public funding for ERW research, development, and demonstration in annual funding and agricultural research legislation, including the U.S. Farm Bill.</li>
 				<li><b>Government CDR Procurement:</b> Governments will need to become one of the biggest buyers and supporters of CDR. We’re educating policymakers on how ERW and other carbon removal pathways can fit within government procurement programs.</li>
 				<li><b>ERW Pay-for-Practice:</b> We’re building a shared understanding of the role that government subsidies and pay-for-practice programs can support early-adopters of ERW, starting with USDA Conservation Practice Standards.</li>
 				<li><b>EU CRCF:</b> As a precedent-setting supply-side regulation, the EU Carbon Removals and Carbon Farming Regulation (CRCF) will help set standards for carbon quantification best-practices across CDR pathways. We’re working to ensure ERW is included in the EU CRCF process.</li>
 			</ul>
+			<p> </p>
 		</section>
 		<section id="nextHorizons">
 			<h1>Next Horizons</h1>

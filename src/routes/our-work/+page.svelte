@@ -88,7 +88,7 @@
 					<img src={farm2} alt="Policy" />
 					<h2>Policy supporting ERW research and responsible deployment</h2>
 					<p>
-						We advance policies that support ERW innovation, provide early research funding, and develop rules and regulations for responsible deployment in close coordination with industry and civil society organizations.
+						We advance policies that support ERW innovation, provide early project financing support, and develop rules and regulations for responsible deployment in close coordination with industry and civil society organizations.
 					</p>
 					<a href="/blog/policy">Learn More</a>
 				</div>
@@ -97,7 +97,7 @@
 		<section id="oceansrivers">
 			<h3>Oceans and Rivers</h3>
 			<p>
-				Cascade is gradually expanding our work to help accelerate progress across the broader family of durable, natural system carbon removal pathways. We will have a particular, though not exclusive, focus on ocean and river alkalinity enhancement pathways that are the most immediately related ‘sibling’ pathways of ERW.
+				Cascade is expanding our work to help accelerate progress across the broader family of durable, natural system carbon removal pathways. We will have a particular, though not exclusive, focus on ocean and river alkalinity enhancement pathways that are the most immediately related ‘sibling’ pathways of ERW.
 			</p>
 			<p>
 				Just as Cascade did in the early days of its work on ERW, we are beginning work in new areas by learning from—and building trusted relationships with—those who have been working in these domains for years. The particular bottlenecks facing durable ocean and river pathways have some commonality with, but also some sharp differences from, those in ERW. Cascade will help strengthen shared learnings amongst researchers and practitioners, and accelerate the pace of progress across these alkalinity enhancement pathways.

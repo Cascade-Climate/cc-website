@@ -25,7 +25,7 @@
 	<section id="about">
 		<img src={heroPhoto} alt="Cascade Climate" />
 		<div>
-			<h5>WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
+			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
 				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Harnessing natural systems will often be the most scalable and affordable path to undo or prevent deep climate harms—carbon cycle imbalance, catastrophic sea-level rise, irreversible damage from near-term warming. Natural system interventions often have the potential to offer a suite of powerful co-benefits—healthier ecosystems, and more resilient local economies.
 			</p>

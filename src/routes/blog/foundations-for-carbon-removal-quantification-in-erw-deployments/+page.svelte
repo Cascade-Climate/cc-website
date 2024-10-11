@@ -18,13 +18,13 @@
 	</div>
 	<div class="links">
 		<PDFLink link="/example.pdf">Foundations - full document↗</PDFLink>
-		<PDFLink link="/example.pdf">Foundations - technical executive summary↗</PDFLink>
+		<PDFLink link="/example.pdf">Foundations - technical summary↗</PDFLink>
 	</div>
 </section>
 <ScrollNav />
 <main>
-	<section id="about">
-		<h1>About</h1>
+	<section id="context">
+		<h1>Context</h1>
 		<p>2023 saw an inflection point for the Enhanced Rock Weathering (ERW) field. The academic community showed a <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.linkedin.com/posts/tjsuhrhoff_the-field-of-enhanced-rock-weathering-erw-activity-7148263729095213057-TLBu?utm_source=share&amp;utm_medium=member_desktop">~50% increase</a> in publications. Nearly 20 ERW project developers <a target="_blank" rel="noopener noreferrer nofollow" href="https://erw.info/">sprung up globally</a>, conducting trials across many countries on virtually all continents. Early buyers like <a target="_blank" rel="noopener noreferrer nofollow" href="https://frontierclimate.com/writing/lithos">Frontier</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://un-do.com/resources/case-studies/undo-becomes-microsofts-first-enhanced-rock-weathering-supplier/">Microsoft</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.nextgencdr.com/wp-content/uploads/2024/05/Final-Detailed-RfP-Document-.pdf">NextGen</a>, and <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.energy.gov/fecm/carbon-dioxide-removal-purchase-pilot-prize-phase-1-semifinalists">the U.S. Department of Energy</a> committed to a first wave of catalytic offtakes. Enhanced Rock Weathering’s potential as a scalable carbon removal solution and agricultural management practice is being noticed, studied, and tested in progressively larger deployments.</p>
 
 		<p>As the field progresses into tens-of-thousand hectares in cumulative scale and as the number of practitioners grows, so does the need to align on a <strong>common foundation </strong>for carbon removal quantification. In the absence of this common core, underaligned quantification rigor would pose the risk of fragmenting quality tiers and result in the emergence of commercial practices incongruent with the state of science.</p>
@@ -94,12 +94,12 @@
                 <p><strong>Solid-phase measurements</strong> of cations released through feedstock dissolution, with deductions then taken to account for the various permanent and temporary carbon and cation loss pathways within the NFZ: non-carbonic acid weathering, cation sorption, secondary carbonates, secondary silicates and biomass uptake.</p>
             </li>
             <li>
-                <p>It is a key research priority to intercompare aqueous phase monitoring with solid-phase mass balance results for the same deployment���when taken over the same depth, they should theoretically be producing the same results!</p>
+                <p>It is a key research priority to intercompare aqueous phase monitoring with solid-phase mass balance results for the same deployment - when taken over the same depth, they should theoretically be producing the same results!</p>
             </li>
         </ul>
     </li>
     <li>
-        <p>An additional flux we need to keep our eyes on in the NFZ is how <strong>soil organic carbon (SOC) stocks are impacted by ERW deployments</strong>. SOC monitoring on a small percentage of a deployment, and the sharing of the associated dataset, can advance research and help reduce potential SOC destabilization risks.</p>
+        <p>An additional flux we need to keep our eyes on in the NFZ is how soil organic carbon (SOC) stocks are impacted by ERW deployments. <b>SOC monitoring on a small percentage of a deployment</b>, and the sharing of the associated dataset, can advance research and help reduce potential SOC destabilization risks.</p>
     </li>
     <li>
         <p><strong>Constraining Far-Field Zone fluxes</strong> is an area of active research—it is challenging to do direct empirical monitoring over the spatial and time scales of the FFZ, and our ability to predictively model these fluxes is nascent. At this stage, the most tractable fluxes for near-term deployments to estimate include outgassing due to DIC equilibration and carbonate mineral precipitation (and burial) in rivers, as well as evasion due to carbonic acid system equilibration where terrestrial water mixes with the surface oceans.</p>
@@ -116,14 +116,16 @@
 
 	<section id="links">
 		<h1>Links</h1>
-		<PDFLink link="/example.pdf" variant="accent">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</PDFLink>
-		<PDFLink link="/example.pdf" variant="accent">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments: Technical Summary↗</PDFLink>
-		<PDFLink link="/example.pdf" variant="accent">Appendix 1: Anonymized Foundations Working Group and market practitioner comment period feedbackt↗</PDFLink>
-		<PDFLink link="/example.pdf" variant="accent">Appendix 2: Foundations research and development (R&D) priorities↗</PDFLink>
-		<PDFLink link="/example.pdf" variant="accent">Appendix 3: Working Group session summaries and requests for feedback from Market Focus Groups↗</PDFLink>
-		<PDFLink link="/example.pdf" variant="accent">Figure 1: Conformance Zones↗</PDFLink>
-		<PDFLink link="/example.pdf" variant="accent">Table 1: Components of the NFZ term balance↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent">Table 2: Considerations for the FFZ↗</PDFLink>
+		<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments: Technical Summary↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Anonymized Foundations Working Group and market practitioner comment period feedbackt↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 2: Foundations research and development (R&D) priorities↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 3: Working Group session summaries and requests for feedback from Market Focus Groups↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Figure 1: Conformance Zones↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the NFZ term balance↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 2: Considerations for the FFZ↗</PDFLink>
+		</div>
 	</section>
 
 	<section id="Acknowledgements">

@@ -4,20 +4,15 @@
   const { openModal } = getContext('modal');
 
   export let link = '';
-  export let variant = 'light'; // Default color
+  export let variant = 'light';
 
   function handleClick() {
-		// if (localStorage.getItem('cc-formSubmitted')) {
-			// window.open(link, '_blank');
-		// } else {
-			console.log(link);
 			openModal(link);
-		// }
   }
 </script>
 
-<button on:click={handleClick} class={variant}>
-  <slot></slot>
+<button on:click={handleClick} class={variant} style="text-align: left;">
+  <slot/>
 </button>
 
 <style>
