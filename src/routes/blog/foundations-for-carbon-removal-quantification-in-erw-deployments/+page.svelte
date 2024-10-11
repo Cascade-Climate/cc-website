@@ -25,7 +25,7 @@
 <main>
 	<section id="context">
 		<h1>Context</h1>
-		<p>2023 saw an inflection point for the Enhanced Rock Weathering (ERW) field. The academic community showed a <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.linkedin.com/posts/tjsuhrhoff_the-field-of-enhanced-rock-weathering-erw-activity-7148263729095213057-TLBu?utm_source=share&amp;utm_medium=member_desktop">~50% increase</a> in publications. Nearly 20 ERW project developers <a target="_blank" rel="noopener noreferrer nofollow" href="https://erw.info/">sprung up globally</a>, conducting trials across many countries on virtually all continents. Early buyers like <a target="_blank" rel="noopener noreferrer nofollow" href="https://frontierclimate.com/writing/lithos">Frontier</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://un-do.com/resources/case-studies/undo-becomes-microsofts-first-enhanced-rock-weathering-supplier/">Microsoft</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.nextgencdr.com/wp-content/uploads/2024/05/Final-Detailed-RfP-Document-.pdf">NextGen</a>, and <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.energy.gov/fecm/carbon-dioxide-removal-purchase-pilot-prize-phase-1-semifinalists">the U.S. Department of Energy</a> committed to a first wave of catalytic offtakes. Enhanced Rock Weathering’s potential as a scalable carbon removal solution and agricultural management practice is being noticed, studied, and tested in progressively larger deployments.</p>
+		<p>2023 saw an inflection point for the Enhanced Rock Weathering (ERW) field. The academic community showed a <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.linkedin.com/posts/tjsuhrhoff_the-field-of-enhanced-rock-weathering-erw-activity-7148263729095213057-TLBu?utm_source=share&amp;utm_medium=member_desktop">~50% increase↗</a> in publications. Nearly 20 ERW project developers <a target="_blank" rel="noopener noreferrer nofollow" href="https://erw.info/">sprung up globally↗</a>, conducting trials across many countries on virtually all continents. Early buyers like <a target="_blank" rel="noopener noreferrer nofollow" href="https://frontierclimate.com/writing/lithos">Frontier↗</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://un-do.com/resources/case-studies/undo-becomes-microsofts-first-enhanced-rock-weathering-supplier/">Microsoft</a>, <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.nextgencdr.com/wp-content/uploads/2024/05/Final-Detailed-RfP-Document-.pdf">NextGen↗</a>, and <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.energy.gov/fecm/carbon-dioxide-removal-purchase-pilot-prize-phase-1-semifinalists">the U.S. Department of Energy↗</a> committed to a first wave of catalytic offtakes. Enhanced Rock Weathering’s potential as a scalable carbon removal solution and agricultural management practice is being noticed, studied, and tested in progressively larger deployments.</p>
 
 		<p>As the field progresses into tens-of-thousand hectares in cumulative scale and as the number of practitioners grows, so does the need to align on a <strong>common foundation </strong>for carbon removal quantification. In the absence of this common core, underaligned quantification rigor would pose the risk of fragmenting quality tiers and result in the emergence of commercial practices incongruent with the state of science.</p>
 
@@ -233,13 +233,13 @@
 				<p><strong>Practitioners/Others:</strong> Marta Camps-Arbestain, Ben Westcott, Linah Ababneh, Tyler Kukla</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on near-term best practice for constraining downstream CO2 evasion:</h5>
+		<h5>Joint Working Group-Industry sessions on near-term best practice for constraining downstream CO₂ evasion:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members: </strong>Frank McDermott, Becca Neumann, Chris Reinhard, Tao Wen</p>
 			</li>
 			<li>
-				<p><strong>Industry practitioners:</strong> Elliot Chang, Matthew Clarkson, Jens Steffen Hammes, Richard Hatz, Ella Holme, Jake Jordan, Sasankh Munukutla</p>
+				<p><strong>Practitioners/Others:</strong> Elliot Chang, Matthew Clarkson, Jens Steffen Hammes, Richard Hatz, Ella Holme, Jake Jordan, Sasankh Munukutla</p>
 			</li>
 		</ul>
 		<h5>Authorship of “Foundations”, the output of the community process:</h5>
@@ -251,7 +251,7 @@
 				<p><strong>Editors:</strong> Noah Anderson, Brad Rochlin</p>
 			</li>
 		</ul>
-		<h5>Governance and facilitation of the community process:</h5>
+		<h5>Governance and Leadership of the Community Process:</h5>
 		<ul>
 			<li>
 				<p><strong>Steering Committee members:</strong> Freya Chay, Anu Khan, Isabel Montañez, Noah Planavsky</p>
@@ -259,12 +259,10 @@
 			<li>
 				<p><strong>Program leads:</strong> Hara Wang, Jenny Mills</p>
 			</li>
-		</ul>
-		<h5>Technical Facilitators:</h5>
-		<ul>
 			<li>
-				<p>Jenny Mills, John Sanchez, Noemma Olagaray, Hara Wang</p>
+				<p><strong>Technical Facilitators:</strong> Jenny Mills, John Sanchez, Noemma Olagaray, Hara Wang</p>
 			</li>
+		</ul>
 
 
 	</section>

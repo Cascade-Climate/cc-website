@@ -75,7 +75,7 @@
 			compensation and benefits, a focus on professional and personal growth, and outstanding
 			culture.
 		</p>
-		<a href="https://jobs.lever.co/cascade-climate">Work with us</a>
+		<a href="/careers">Work with us</a>
 	</section>
 	<section id="team">
 		<h1>Team</h1>

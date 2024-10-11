@@ -32,17 +32,20 @@
 			<p>
 				Realizing these opportunities involves overcoming complex and cross-sectoral hurdles. Quantifying the full impact of natural system interventions can be challenging, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions often offer critical–but often intangible–public benefits, requiring new and ambitious financing modes and public support models. These interlaced challenges can leave natural system climate interventions at an impasse, struggling to start the learn-by-doing flywheel.
 			</p>
-			<hr>
-			<h4 style="text-align: center; margin: 18px; font-weight: 300; line-height: 1.4; font-size: 150%;">
-				Cascade is a philanthropically-backed nonprofit organization. Working across industry,
-				government and science, we <b>coordinate</b> bottleneck-breaking initiatives, <b>build</b> tools and
-				infrastructure that unlock cycles of learning-by-doing, and <b>resource</b> high-leverage R&D and
-				policy work.
-			</h4>
-			<a href="/about-us">About Us</a>
+			<hr style="margin: 64px;">
 		</div>
 	</section>
 	<section id="our-work">
+		<h3><a href="about-us">ABOUT US ↗</a></h3>
+		<h4 style="text-align: center; margin: 18px; font-weight: 300; line-height: 1.4; font-size: 150%;">
+			Cascade is a philanthropically-backed nonprofit organization. Working across industry,
+			government and science, we aim to accelerate the progress in natural system climate interventions by  <b>coordinating</b> bottleneck-breaking initiatives, <b>building</b> tools and
+			infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and
+			policy work.
+		</h4>
+
+		<hr style="margin: 64px;">
+
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
