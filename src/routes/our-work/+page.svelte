@@ -61,9 +61,9 @@
 			<div class="highlights">
 				<div>
 					<img src={erw} alt="Enhanced Rock Weathering" />
-					<h2>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</h2>
+					<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 					<p>
-						After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the frameworks, considerations, and guidance for quantifying carbon and cation fluxes in an ERW deployment on agricultural soils.
+						After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
 					</p>
 					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments"
 						>Learn More</a>
@@ -80,7 +80,7 @@
 					<img src={farm1} alt="Cost Estimator" />
 					<h2>ERW MRV cost estimator and database</h2>
 					<p>
-						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage
+						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
 					</p>
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>

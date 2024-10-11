@@ -69,7 +69,7 @@
 <p><strong>[INSERT CONFORMANCE ZONES]</strong>
 </p>
 <p>The single most important step in CDR monitoring and quantification is to “<strong>know your system and measure accordingly</strong>”. Practitioners should do an initial site characterization study of soil parameters, hydrologic regimes, crop systems, historic pH control practices, flow paths, and similar factors that could impact net carbon drawdown. Then, practitioners can design quantification methodologies and justify measurement choices based on that.</p>
-<p>Quantifying net carbon removal involves combining data from many different imperfect “windows into the system”—geochemical measurements, tracers, and models—in seeking to assemble a comprehensive picture of the full set of carbon and cation fluxes. We can learn a lot about the system through measurements– but what is even more critical is the sharing of the underlying data to advance public research. Through data sharing, the ERW field can truly unlock the deployment-led learning cycle.</p>
+<p>Quantifying net carbon removal involves combining data from many different imperfect “windows into the system”—geochemical measurements, tracers, and models—in seeking to assemble a comprehensive picture of the full set of carbon and cation fluxes. We can learn a lot about the system through measurements– but what is even more critical is the sharing of the underlying data to advance public research. <b>Through data sharing, the ERW field can truly unlock the deployment-led learning cycle.</b></p>
 <p>MRV planning can be challenging in practice, and significant care and expertise needs to go into doing it well. For example:</p>
 <ul>
     <li>

@@ -27,17 +27,13 @@
 		<div>
 			<h5>WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
-				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain
-				planetary balance. Harnessing natural systems will often be the most scalable and affordable
-				path to undo or prevent deep climate harms—carbon cycle imbalance, catastrophic sea-level
-				rise, irreversible damage from near-term warming. Natural system interventions often have
-				the potential to offer a suite of powerful co-benefits—healthier ecosystems, more resilient
-				local economies, and economic development in the Global South.
+				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Harnessing natural systems will often be the most scalable and affordable path to undo or prevent deep climate harms—carbon cycle imbalance, catastrophic sea-level rise, irreversible damage from near-term warming. Natural system interventions often have the potential to offer a suite of powerful co-benefits—healthier ecosystems, and more resilient local economies.
 			</p>
 			<p>
 				Realizing these opportunities involves overcoming complex and cross-sectoral hurdles. Quantifying the full impact of natural system interventions can be challenging, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions often offer critical–but often intangible–public benefits, requiring new and ambitious financing modes and public support models. These interlaced challenges can leave natural system climate interventions at an impasse, struggling to start the learn-by-doing flywheel.
 			</p>
-			<h4>
+			<hr>
+			<h4 style="text-align: center; margin: 18px; font-weight: 300; line-height: 1.4; font-size: 150%;">
 				Cascade is a philanthropically-backed nonprofit organization. Working across industry,
 				government and science, we <b>coordinate</b> bottleneck-breaking initiatives, <b>build</b> tools and
 				infrastructure that unlock cycles of learning-by-doing, and <b>resource</b> high-leverage R&D and
@@ -51,9 +47,9 @@
 		<div class="spotlights">
 			<div class="spotlight">
 				<img src={erwPhoto} alt="Enhanced Rock Weathering" />
-				<h2>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</h2>
+				<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 				<p>
-					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the frameworks, considerations, and guidance for quantifying carbon and cation fluxes in an ERW deployment on agricultural soils.
+					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
 				</p>
 				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
 			</div>
@@ -69,7 +65,7 @@
 				<img src={farm1} alt="Cost Estimator" />
 				<h2>ERW MRV cost estimator and database</h2>
 				<p>
-					We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage
+					We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
 				</p>
 				<a href="https://emce.cascadeclimate.org/">Learn More</a>
 			</div>
