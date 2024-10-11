@@ -50,24 +50,24 @@ All of the content for the website is contained within the `src` folder. The res
 	- **config.json**: General configuration options for the site. Navigation links, newsletter link, and contact email are all defined here.
 	- **theme.css**: This is where the color themes & fonts for the whole site are defined. Keep in mind that adding/adjusting fonts will require that the new font files are added to the `static/fonts` folder.
 
-- **routes**: Contains the pages of the website. The structure is defined by the folder structure: `/routes/+page.svelte` contains the code for the <https://cascadeclimate.org> landing page; `routes/faq/+page.svelte` contains the code for the page <https://cascadeclimate.org/faq>; `routes/team/arielle-lok/+page.svelte` contains the code for the page <https://cascadeclimate.org/team/arielle-lok>, and so on.
+- **routes**: Contains the pages of the website. The structure is defined by the folder structure: `/routes/+page.svelte` contains the code for the <https://cascadeclimate.org> landing page; `routes/faq/+page.svelte` contains the code for the page <https://cascadeclimate.org/faq>; `routes/people/arielle-lok/+page.svelte` contains the code for the page <https://cascadeclimate.org/people/arielle-lok>, and so on.
 
 #### Adding a new team member
 
 To add a new team member, you'll need to create a new bio page as well as add a link to the team page.
 
-To create a new bio page, simple copy & paste the `SAMPLE-TEAM-TEMPLATE` folder found in `src/routes/team`. Rename the duplicated folder to what the new sub-URL should be (e.g. `jane-doe`).
+To create a new bio page, simple copy & paste the `SAMPLE-TEAM-TEMPLATE` folder found in `src/routes/people`. Rename the duplicated folder to what the new sub-URL should be (e.g. `jane-doe`).
 
-Then, update the `+page.svelte` file within the new folder with the new information (this includes adding their photo to the `src/lib/images/team` folder and updating the import on the first line). The template file is labelled with which lines will need to be updated with the corresponding information.
+Then, update the `+page.svelte` file within the new folder with the new information (this includes adding their photo to the `src/lib/images/people` folder and updating the import on the first line). The template file is labelled with which lines will need to be updated with the corresponding information.
 
-To add a new link from the team page to your newly-created bio page, navigate to the file `src/routes/team/+page.svelte`. First, import their profile photo to the file in the `<script>` tags at the start of the file. It should look something like this:
+To add a new link from the team page to your newly-created bio page, navigate to the file `src/routes/people/+page.svelte`. First, import their profile photo to the file in the `<script>` tags at the start of the file. It should look something like this:
 ```jsx
-import janeDoe from '$lib/images/team/jane-doe.webp';
+import janeDoe from '$lib/images/people/jane-doe.webp';
 ```
 
 Then, add a new element to the list in the appropriate section. Following our example above, it would look like this:
 ```jsx
-<a class="team-card" href="/team/jane-doe">
+<a class="team-card" href="/people/jane-doe">
 	<img src={janeDoe} alt="Jane Doe" />
 	<h1>Jane Doe</h1>
 	<span>Chief Documentation Officer</span>
@@ -122,7 +122,7 @@ To edit the FAQ, you can edit the code in `src/routes/faq/+page.svelte`.
 
 #### Layout files
 
-For the blog & team bio pages, shared styles are located in a shared `+layout.svelte` file rather than repeated across every blog/team page. If you're having trouble finding where a style for a page is located, be sure to double check the `+layout.svelte` files in the parent directory.
+For the blog & team bio pages, shared styles are located in a shared `+layout.svelte` file rather than repeated across every blog/people page. If you're having trouble finding where a style for a page is located, be sure to double check the `+layout.svelte` files in the parent directory.
 
 ## Troubleshooting
 

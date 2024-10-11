@@ -10,11 +10,11 @@
 		content="Launching the Community Enhanced Rock Weathering Quantification Standard Process"
 	/>
 </svelte:head>
-<div class="blog-post">
+<section class="intro">	
 	<p class="date">November 2, 2023</p>
 	<h1>Launching the Community Enhanced Rock Weathering Quantification Standard Process</h1>
-	<a href="/team/hara-wang">Hara Wang</a>,
-	<a href="/team/jenny-mills">Jenny Mills</a>
+	<a href="/people/hara-wang">Hara Wang</a>,
+	<a href="/people/jenny-mills">Jenny Mills</a>
 
 	<br />
 	<br />
@@ -346,4 +346,4 @@
 		you are someone or you’ve come across someone that should be involved in this journey, please do
 		not hesitate to reach out to <a target="_blank" href="mailto:hara@cascadeclimate.org">hara@cascadeclimate.org</a>.
 	</p>
-</div>
+</section>

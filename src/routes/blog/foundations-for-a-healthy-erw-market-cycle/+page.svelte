@@ -9,11 +9,11 @@
 		content="Foundations for a Healthy ERW Market Cycle."
 	/>
 </svelte:head>
-<div class="blog-post">
+<section class="intro">
 	<p class="date">December 11, 2023</p>
 	<h1>Foundations for a Healthy ERW Market Cycle</h1>
-	<a href="/team/john-sanchez">John Sanchez</a>,
-	<a href="/team/dai-ellis">Dai Ellis</a>
+	<a href="/people/john-sanchez">John Sanchez</a>,
+	<a href="/people/dai-ellis">Dai Ellis</a>
 
 	<br />
 	<br />
@@ -151,7 +151,7 @@
 		the most important learning.
 	</p>
 
-	<h3><em><strong>Quality and quantification rigor</strong></em></h3>
+	<h3><em>Quality and quantification rigor</em></h3>
 	<p>
 		Much of the scrutiny applied to commercial enhanced weathering activity is due to the fact that
 		buyers intend to use their purchased carbon removal tons to compensate for their emissions, via
@@ -206,7 +206,7 @@
 		prices more affordable for the mass market.
 	</p>
 
-	<h3><em><strong>Data access system</strong></em></h3>
+	<h3><em>Data access system</em></h3>
 	<p>
 		With the first wave of large commercial ERW purchases, the scale of privately-funded deployments
 		is starting to dramatically outpace the scale of publicly-funded research field trials. This
@@ -315,4 +315,4 @@
 			<a href="#citation2">↩</a>
 		</li>
 	</ol>
-</div>
+</section>

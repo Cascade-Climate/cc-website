@@ -313,6 +313,7 @@
 
 	#hubs .content {
 		color: var(--color-light);
+		flex-grow: 1;
 	}
 
 	@media (max-width: 660px) {

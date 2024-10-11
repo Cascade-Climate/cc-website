@@ -6,15 +6,15 @@
 		content="Cascade Climate accelerates progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
 	/>
 </svelte:head>
-<div class="blog-post">
+<section class="intro">
 	<p class="date">November 10, 2023</p>
 	<h1>
 		Introducing the Core Principles on Quantifying Net Carbon Removal Via Enhanced Rock Weathering
 	</h1>
-	<a href="/team/hara-wang">Hara Wang</a>,
-	<a href="/team/jenny-mills">Jenny Mills</a>,
-	<a href="/team/john-sanchez">John Sanchez</a>,
-	<a href="/team/dai-elllis">Dai Ellis</a>
+	<a href="/people/hara-wang">Hara Wang</a>,
+	<a href="/people/jenny-mills">Jenny Mills</a>,
+	<a href="/people/john-sanchez">John Sanchez</a>,
+	<a href="/people/dai-elllis">Dai Ellis</a>
 	<br />
 	<br />
 	<p>
@@ -54,4 +54,4 @@
 		If you are a scientist, researcher, market practitioner, or buyer interested in community ERW
 		quantification standard, please feel free to reach out to hara@cascadeclimate.org.
 	</p>
-</div>
+</section>

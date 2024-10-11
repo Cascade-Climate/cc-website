@@ -1,5 +1,5 @@
 <script>
-	import headshot from '$lib/images/team/pritha-ghosh.webp';
+	import headshot from '$lib/images/people/pritha-ghosh.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 

@@ -1,6 +1,6 @@
 <!-- Be sure to rename this file to +page.svelte after copying it! -->
 <script>
-	import headshot from '$lib/images/team/brad-rochlin.webp';
+	import headshot from '$lib/images/people/brad-rochlin.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 
