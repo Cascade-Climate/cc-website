@@ -1,6 +1,11 @@
 <script>
 	import heroPhoto from '$lib/images/hero.webp';
-	import erwPhoto from '$lib/images/rock-weathering.webp';
+	import erwPhoto from '$lib/images/nature/erw.webp';
+	import farm1 from '$lib/images/nature/farm1.webp';
+	import farm2 from '$lib/images/nature/farm2.webp';
+	import ocean1 from '$lib/images/nature/ocean1.webp';
+	import ocean2 from '$lib/images/nature/ocean2.webp';
+	import data from '$lib/images/nature/data.webp';
 </script>
 
 <svelte:head>
@@ -34,8 +39,8 @@
 			</p>
 			<h4>
 				Cascade is a philanthropically-backed nonprofit organization. Working across industry,
-				government and science, we coordinate bottleneck-breaking initiatives, build tools and
-				infrastructure that unlock cycles of learning-by-doing, and resource high-leverage R&D and
+				government and science, we <b>coordinate</b> bottleneck-breaking initiatives, <b>build</b> tools and
+				infrastructure that unlock cycles of learning-by-doing, and <b>resource</b> high-leverage R&D and
 				policy work.
 			</h4>
 			<a href="/about-us">About Us</a>
@@ -46,30 +51,27 @@
 		<div class="spotlights">
 			<div class="spotlight">
 				<img src={erwPhoto} alt="Enhanced Rock Weathering" />
-				<h2>Foundations...</h2>
+				<h2>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</h2>
 				<p>
-					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-					of classical Latin literature from 45 BC, making it over 2000 years old.
+					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the frameworks, considerations, and guidance for quantifying carbon and cation fluxes in an ERW deployment on agricultural soils.
 				</p>
-				<a href="/our-work">Learn More</a>
+				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={erwPhoto} alt="Enhanced Rock Weathering" />
-				<h2>Data Access...</h2>
+				<img src={data} alt="Data Sharing System" />
+				<h2>Data sharing system to advance scientific research</h2>
 				<p>
-					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-					of classical Latin literature from 45 BC, making it over 2000 years old.
+					To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
 				</p>
-				<a href="/our-work">Learn More</a>
+				<b href="/our-work">Coming Soon</b>
 			</div>
 			<div class="spotlight">
-				<img src={erwPhoto} alt="Enhanced Rock Weathering" />
-				<h2>Cost/Price...</h2>
+				<img src={farm1} alt="Cost Estimator" />
+				<h2>ERW MRV cost estimator and database</h2>
 				<p>
-					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-					of classical Latin literature from 45 BC, making it over 2000 years old.
+					We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage
 				</p>
-				<a href="/our-work">Learn More</a>
+				<a href="https://emce.cascadeclimate.org/">Learn More</a>
 			</div>
 		</div>
 	</section>
@@ -78,7 +80,7 @@
 <style>
 	#headline h1 {
 		max-width: 1100px;
-		padding: 2rem 4rem;
+		padding: 4rem 4rem;
 		text-align: center;
 		margin: 1rem auto;
 	}
@@ -88,12 +90,21 @@
 	}
 
 	h1 {
-		margin-top: 1rem;
+		margin-top: 2rem;
+		margin-bottom:2rem;
 		font-weight: 300;
-		line-height: 1.2;
+		line-height: 1.4;
 	}
 
-	h4,
+	h4 {
+		margin-top: 2rem;
+		margin-bottom:2rem;
+		font-weight: 300;
+		line-height: 1.4;
+		font-size: 120%;
+	}
+
+
 	h5 {
 		font-weight: 550;
 	}
@@ -170,6 +181,17 @@
 		border-radius: 2rem;
 		margin-bottom: 1rem;
 		font-size: 1rem;
+		width: 100%;
+	}
+	.spotlight b {
+		background-color: white;
+		color: var(--color-accent);
+		border: 1px solid var(--color-accent);
+		padding: 0.5rem 1rem;
+		border-radius: 2rem;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+		font-weight: normal;
 		width: 100%;
 	}
 

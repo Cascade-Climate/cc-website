@@ -1,5 +1,5 @@
 <script>
-	import careersImage from '$lib/images/careers.webp';
+	import careersImage from '$lib/images/careers/careers.webp';
 	import medicalImage from '$lib/images/icons/medical.webp';
 	import retirementImage from '$lib/images/icons/401k.webp';
 	import ptoImage from '$lib/images/icons/pto.webp';
@@ -7,6 +7,14 @@
 	import wfhImage from '$lib/images/icons/wfh.webp';
 	import perksImage from '$lib/images/icons/perks.webp';
 	import hubsImage from '$lib/images/hubs.webp';
+	import team1Image from '$lib/images/careers/boat1.webp';
+	import team2Image from '$lib/images/careers/zion1.webp';
+	import team3Image from '$lib/images/careers/zion2.webp';
+	import team4Image from '$lib/images/careers/zion3.webp';
+	import team5Image from '$lib/images/careers/zion4.webp';
+	import team6Image from '$lib/images/careers/zion5.webp';
+	import team7Image from '$lib/images/careers/zion6.webp';
+
 </script>
 
 <section id="intro">
@@ -18,7 +26,7 @@
 		<a target="_blank" href="/TODO">Current Openings ↗</a>
 	</div>
 	<div class="image">
-		<img src={careersImage} alt="Careers" />
+		<img src={team7Image} alt="Careers" />
 	</div>
 </section>
 <section id="culture">
@@ -38,14 +46,14 @@
 			</p>
 		</div>
 		<div class="card">
-			<img src={careersImage} alt="collaboration" />
+			<img src={team2Image} alt="collaboration" />
 			<h2>Vibrant Culture</h2>
 			<p>
 				At Cascade, we are building a distinctive culture that reflects the uniqueness of both our mission and the remarkable team we’ve assembled to pursue it. Humility, empathy, and endless curiosity lie at the heart of our culture and the way we think about natural systems. Our hunger to learn gradually leads us to deeply-researched hypotheses and a willingness to take risks as we translate our convictions into bold, think-big initiatives. 
 			</p>
 		</div>
 		<div class="card">
-			<img src={careersImage} alt="learning" />
+			<img src={team3Image} alt="learning" />
 			<h2>Team Collaboration</h2>
 			<p>
 				Collaboration is the backbone of our work. We build strong, trust-based relationships–both across the team and with our external partners. We provide the tools and support to collaborate effectively in any situation. We prioritize regular in-person gatherings, from team retreats to whiteboarding sessions, that strengthen our connective tissue and fuel creativity.

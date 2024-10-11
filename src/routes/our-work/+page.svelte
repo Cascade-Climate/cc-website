@@ -1,5 +1,8 @@
 <script>
-	import erw from '$lib/images/rock-weathering.webp';
+	import data from '$lib/images/nature/data.webp';
+	import erw from '$lib/images/nature/erw.webp';
+	import farm1 from '$lib/images/nature/farm1.webp';
+	import farm2 from '$lib/images/nature/farm2.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -63,19 +66,18 @@
 						After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the frameworks, considerations, and guidance for quantifying carbon and cation fluxes in an ERW deployment on agricultural soils.
 					</p>
 					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments"
-						>Learn More</a
-					>
+						>Learn More</a>
 				</div>
 				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
+					<img src={data} alt="Data Sharing System" />
 					<h2>Data sharing system to advance scientific research</h2>
 					<p>
 						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
 					</p>
-					<a href="/blog/data-sharing-system-to-advance-scientific-research">Learn More</a>
+					<b href="/our-work">Coming Soon</b>
 				</div>
 				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
+					<img src={farm1} alt="Cost Estimator" />
 					<h2>ERW MRV cost estimator and database</h2>
 					<p>
 						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage
@@ -83,12 +85,12 @@
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
 				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
+					<img src={farm2} alt="Policy" />
 					<h2>Policy supporting ERW research and responsible deployment</h2>
 					<p>
 						We advance policies that support ERW innovation, provide early research funding, and develop rules and regulations for responsible deployment in close coordination with industry and civil society organizations.
 					</p>
-					<a href="/blog/foundations">Learn More</a>
+					<a href="/blog/policy">Learn More</a>
 				</div>
 			</div>
 		</section>
@@ -200,7 +202,9 @@
 	}
 
 	.highlights img {
-		max-width: 100%;
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
 		border-radius: 1rem;
 	}
 
@@ -211,6 +215,18 @@
 		padding: 0.5rem 1.2rem;
 		text-decoration: none;
 		color: var(--color-light);
+	}
+
+	.highlights b {
+		background-color: white;
+		color: var(--color-accent);
+		border: 1px solid var(--color-accent);
+		padding: 0.5rem 1rem;
+		border-radius: 2rem;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+		font-weight: normal;
+		width: 100%;
 	}
 
 	@media (max-width: 660px) {
