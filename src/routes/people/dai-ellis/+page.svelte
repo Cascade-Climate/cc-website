@@ -1,5 +1,5 @@
 <script>
-	import headshot from '$lib/images/team/dai-ellis.webp';
+	import headshot from '$lib/images/people/dai-ellis.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>

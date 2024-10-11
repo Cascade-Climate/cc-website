@@ -1,5 +1,5 @@
 <script>
-	import headshot from '$lib/images/team/alison-tune.webp';
+	import headshot from '$lib/images/people/alison-tune.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 

@@ -37,9 +37,9 @@
 							opened = i;
 						}}
 					>
-						<span>
+						<a href={item.url}>
 							{item.label}
-						</span>
+						</a>
 						<div class="subnav" class:open={opened === i}>
 							{#each item.children as subitem}
 								<a

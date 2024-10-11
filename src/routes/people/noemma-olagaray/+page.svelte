@@ -1,5 +1,5 @@
 <script>
-	import headshot from '$lib/images/team/noemma-olagaray.webp';
+	import headshot from '$lib/images/people/noemma-olagaray.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 

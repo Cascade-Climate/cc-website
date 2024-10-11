@@ -1,6 +1,6 @@
 <!-- Be sure to rename this file to +page.svelte after copying it! -->
 <script>
-	import headshot from '$lib/images/team/arielle-lok.webp'; // Update this line & make sure the new image is present in the src/lib/images/team folder
+	import headshot from '$lib/images/people/arielle-lok.webp'; // Update this line & make sure the new image is present in the src/lib/images/people folder
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>

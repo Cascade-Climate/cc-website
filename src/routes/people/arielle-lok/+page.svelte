@@ -1,5 +1,5 @@
 <script>
-	import headshot from '$lib/images/team/arielle-lok.webp';
+	import headshot from '$lib/images/people/arielle-lok.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>

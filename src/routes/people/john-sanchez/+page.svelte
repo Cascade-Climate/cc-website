@@ -1,5 +1,5 @@
 <script>
-	import headshot from '$lib/images/team/john-sanchez.webp';
+	import headshot from '$lib/images/people/john-sanchez.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>

@@ -7,7 +7,9 @@
 
 	function openModal(link = '') {
 		showModal = true;
+		console.log(link);
 		modalLink = link;
+		console.log(modalLink);
 	}
 
 	setContext('modal', {
@@ -62,6 +64,20 @@
 
 	:global(li) {
 		margin-bottom: -5px;
+	}
+
+	:global(h2) {
+		font-weight: 500;
+		font-size: 1.5rem;
+	}
+
+	:global(h3) {
+		font-weight: 400;
+		font-size: 1.25rem;
+	}
+
+	:global(strong) {
+		font-weight: 550;
 	}
 
 	:global(.content) {

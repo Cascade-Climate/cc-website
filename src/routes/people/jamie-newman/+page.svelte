@@ -1,6 +1,6 @@
 <!-- Be sure to rename this file to +page.svelte after copying it! -->
 <script>
-	import headshot from '$lib/images/team/jamie-newman.webp';
+	import headshot from '$lib/images/people/jamie-newman.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 

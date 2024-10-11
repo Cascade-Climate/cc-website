@@ -14,6 +14,7 @@
 
 	async function handleSubmit() {
 		try {
+			console.log('submit', formData);
 			fetch('/api/submit-form', {
 				method: 'POST',
 				headers: {

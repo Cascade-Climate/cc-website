@@ -7,11 +7,12 @@
   export let variant = 'light'; // Default color
 
   function handleClick() {
-		if (localStorage.getItem('cc-formSubmitted')) {
-			window.open(link, '_blank');
-		} else {
+		// if (localStorage.getItem('cc-formSubmitted')) {
+			// window.open(link, '_blank');
+		// } else {
+			console.log(link);
 			openModal(link);
-		}
+		// }
   }
 </script>
 

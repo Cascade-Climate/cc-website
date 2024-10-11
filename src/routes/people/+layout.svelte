@@ -1,6 +1,6 @@
 
 <div id="people">
-	<a href="/team">← Back to Team</a>
+	<a href="/people">← Back to Team</a>
 	<slot />
 </div>
 

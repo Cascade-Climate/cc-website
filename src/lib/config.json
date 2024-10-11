@@ -3,6 +3,7 @@
 	"navItems": [
 		{
 			"label": "About",
+			"url": "/about-us",
 			"children": [
 				{
 					"label": "About Us",
@@ -38,10 +39,15 @@
 		},
 		{
 			"label": "People",
+			"url": "/people",
 			"children": [
 				{
 					"label": "Team",
 					"url": "/people#team"
+				},
+				{
+					"label": "Contributors",
+					"url": "/people#contributors"
 				},
 				{
 					"label": "Board of Directors",
@@ -51,6 +57,7 @@
 		},
 		{
 			"label": "Join",
+			"url": "/careers",
 			"children": [
 				{
 					"label": "Newsletter",
