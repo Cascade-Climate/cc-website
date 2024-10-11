@@ -20,9 +20,21 @@
 <FormModal bind:showModal {modalLink} />
 
 <style>
-	:global(h1, h2, h3, h4, h5) {
+	:global(h1, h3, h4) {
 		line-height: initial;
 		margin-bottom: 0.5rem;
+	}
+
+	:global(h2) {
+		line-height: initial;
+		font-weight: 300;
+		margin-bottom: 0.5rem;
+	}
+
+	:global(h5) {
+		line-height: initial;
+		text-transform: uppercase;
+		color:#187373;
 	}
 
 	:global(a) {
@@ -40,6 +52,16 @@
 		font-weight: 300;
 		margin-top: 2rem;
 		font-size: 2rem;
+	}
+
+	:global(ul) {
+		padding-left: 1.5rem;
+		margin-top: -10px;
+		margin-bottom: -10px;
+	}
+
+	:global(li) {
+		margin-bottom: -5px;
 	}
 
 	:global(.content) {
