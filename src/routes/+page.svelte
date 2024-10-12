@@ -27,7 +27,7 @@
 		<div>
 			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
-				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Harnessing natural systems will often be the most scalable and affordable path to undo or prevent deep climate harms—carbon cycle imbalance, catastrophic sea-level rise, irreversible damage from near-term warming. Natural system interventions often have the potential to offer a suite of powerful co-benefits—healthier ecosystems, and more resilient local economies.
+				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Harnessing natural systems will often be the most scalable and affordable path to undo or prevent deep climate harms—carbon cycle imbalance, catastrophic sea-level rise, irreversible damage from near-term warming. Natural system interventions often have the potential to offer a suite of powerful co-benefits, such as healthier ecosystems and more resilient local economies.
 			</p>
 			<p>
 				Realizing these opportunities involves overcoming complex and cross-sectoral hurdles. Quantifying the full impact of natural system interventions can be challenging, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions often offer critical–but often intangible–public benefits, requiring new and ambitious financing modes and public support models. These interlaced challenges can leave natural system climate interventions at an impasse, struggling to start the learn-by-doing flywheel.

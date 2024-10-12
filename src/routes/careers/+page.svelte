@@ -70,7 +70,7 @@
 				<p>
 					A quick chat to get to know you, your background, and your interest in Cascade.
 				</p>
-			</div>s
+			</div>
 			<div class="step">
 				<h2>Culture</h2>
 				<p>

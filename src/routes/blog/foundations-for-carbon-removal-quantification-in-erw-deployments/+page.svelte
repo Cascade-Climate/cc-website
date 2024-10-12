@@ -8,11 +8,11 @@
 <section class="intro">
 	<div class="content">
 		<div class="copy">
-			<h1>Foundations for Carbon Removal Quantification in ERW Deployments</h1>
+			<h1>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</h1>
 			<p> </p>
-				<p>In <i>“Foundations”</i>, Cascade Climate has produced a shared framework for quantifying carbon removal in ERW deployments and distilled the best available science and practices for rigorously quantifying each component of the carbon and cation fluxes.</p>
+				<p>In <i>“Foundations for Carbon Dioxide Removal Quantification in ERW Deployments,”</i> Cascade Climate has produced a shared framework for quantifying carbon removal in ERW deployments and distilled the best available science and practices for rigorously quantifying each component of the carbon and cation fluxes.</p>
 				<p>This document is the culmination of a multi-stakeholder process undertaken from October 2023 through August 2024, involving ~50 academic scientists, ~20 ERW project developers, and not-for-profit organizations.</p>
-				<p>The ERW field can accelerate scientific learning through deployments and field trials that (a) follow the guidance articulated in<i>“Foundations”</i>, and (b) share their quantification approaches and underlying data for the purpose of advancing science.</p>
+				<p>The ERW field can accelerate scientific learning through deployments and field trials that (a) follow the guidance articulated in<i>“Foundations for Carbon Dioxide Removal Quantification in ERW Deployments,”</i> and (b) share their quantification approaches and underlying data for the purpose of advancing science.</p>
 		</div>
 		<img src={erw} alt="Enhanced Rock Weathering" />
 	</div>
@@ -99,7 +99,7 @@
         </ul>
     </li>
     <li>
-        <p>An additional flux we need to keep our eyes on in the NFZ is how soil organic carbon (SOC) stocks are impacted by ERW deployments. <b>SOC monitoring on a small percentage of a deployment</b>, and the sharing of the associated dataset, can advance research and help reduce potential SOC destabilization risks.</p>
+        <p>An additional flux we need to keep our eyes on in the NFZ is how soil organic carbon (SOC) stocks are impacted by ERW deployments. <strong>SOC monitoring on a small percentage of a deployment</strong>, and the sharing of the associated dataset, can advance research and help reduce potential SOC destabilization risks.</p>
     </li>
     <li>
         <p><strong>Constraining Far-Field Zone fluxes</strong> is an area of active research—it is challenging to do direct empirical monitoring over the spatial and time scales of the FFZ, and our ability to predictively model these fluxes is nascent. At this stage, the most tractable fluxes for near-term deployments to estimate include outgassing due to DIC equilibration and carbonate mineral precipitation (and burial) in rivers, as well as evasion due to carbonic acid system equilibration where terrestrial water mixes with the surface oceans.</p>
@@ -119,18 +119,18 @@
 		<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
 			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</PDFLink>
 			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments: Technical Summary↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Anonymized Foundations Working Group and market practitioner comment period feedbackt↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Responses to feedback collected during Foundations comment period↗</PDFLink>
 			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 2: Foundations research and development (R&D) priorities↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 3: Working Group session summaries and requests for feedback from Market Focus Groups↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 3: Foundations Working Group summaries↗</PDFLink>
 			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Figure 1: Conformance Zones↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the NFZ term balance↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 2: Considerations for the FFZ↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the Near Field Zone term balance↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 2: Considerations for the Far Field Zone↗</PDFLink>
 		</div>
 	</section>
 
 	<section id="Acknowledgements">
 		<h1>Acknowledgements</h1>
-		<p>The Cascade team would like to express our immense gratitude to the individuals who contributed and gave their time to the output of this work.</p>
+		<p>The Cascade team would like to express our immense gratitude to the individuals who generously contributed their time and insight to this community initiative.</p>
 		<h5 style="margin: 0;">Working Group on feedstock characterization, sampling guardrails, and best practices for taking solid, aqueous, and gas phase measurements:</h5>
 		<ul>
 			<li>
@@ -149,7 +149,7 @@
 				<p><strong>Members: </strong>Christiana Dietzen, Mathilde Hagens, Isabel Montañez, Noah Planavsky, Chris Reinhard, Rafael Santos, Radomir Schmidt, Eric Slessarev, Noah Sokol, Sara Vicca, Arthur Vienne, Bonnie Waring</p>
 			</li>
 		</ul>
-		<h5 style="margin: 0;">Working Group focused on downstream systems in the lower vadose zone, along groundwater flow paths, in surface water systems, and the ocean:</h5>
+		<h5 style="margin: 0;">Working Group on downstream systems in the lower vadose zone, along groundwater flow paths, in surface water systems, and the ocean:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair: </strong>Shuang Zhang</p>
@@ -158,7 +158,7 @@
 				<p><strong>Members: </strong>Yoshiki Kanzaki, Becca Neumann, Kirsty Harrington, Pete Raymond, Jim Saiers, Tao Wen, Chris Reinhard</p>
 			</li>
 		</ul>
-		<h5 style="margin: 0;">Working Group focused on soil biogeochemistry models:</h5>
+		<h5 style="margin: 0;">Working Group on soil biogeochemistry models:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair: </strong>Chris Reinhard</p>
@@ -167,7 +167,7 @@
 				<p><strong>Members:</strong> Salvatore Calabrese, Yoshiki Kanzaki, Maria Val Martin, Brian Rogers, Lyla Taylor</p>
 			</li>
 		</ul>
-		<h5 style="margin: 0;">Working Group focused on considerations for quantifying life cycle emissions and for assessing the human health and ecological impacts:</h5>
+		<h5 style="margin: 0;">Working Group on considerations for quantifying life cycle emissions and for assessing the human health and ecological impacts:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair:</strong> Anu Khan</p>
@@ -242,7 +242,7 @@
 				<p><strong>Practitioners/Others:</strong> Elliot Chang, Matthew Clarkson, Jens Steffen Hammes, Richard Hatz, Ella Holme, Jake Jordan, Sasankh Munukutla</p>
 			</li>
 		</ul>
-		<h5 style="margin: 0;">Authorship of “Foundations”, the output of the community process:</h5>
+		<h5 style="margin: 0;">Authorship of “Foundations for Carbon Dioxide Removal Quantification in ERW Deployments,” the output of the community process:</h5>
 		<ul>
 			<li>
 				<p><strong>Authors: </strong>Jenny Mills, John Sanchez, Noemma Olagaray, Hara Wang, Alison Tune</p>
