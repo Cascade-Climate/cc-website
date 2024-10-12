@@ -8,8 +8,8 @@
 	import perksImage from '$lib/images/icons/perks.webp';
 	import hubsImage from '$lib/images/hubs.webp';
 	import team1Image from '$lib/images/careers/boat1.webp';
-	import team2Image from '$lib/images/careers/zion1.webp';
-	import team3Image from '$lib/images/careers/zion2.webp';
+	import team2Image from '$lib/images/careers/zion7.webp';
+	import team3Image from '$lib/images/careers/boat3.webp';
 	import team4Image from '$lib/images/careers/zion3.webp';
 	import team5Image from '$lib/images/careers/zion4.webp';
 	import team6Image from '$lib/images/careers/zion5.webp';
@@ -68,19 +68,18 @@
 			<div class="step">
 				<h2>Screen</h2>
 				<p>
-					A 30-minute video call to get to know you, your background, and your interest in Cascade.
+					A quick chat to get to know you, your background, and your interest in Cascade.
 				</p>
-			</div>
+			</div>s
 			<div class="step">
 				<h2>Culture</h2>
 				<p>
-					A 30-minute video call to share about Cascade’s culture and explore your working style,
-					personal interests, and what energizes you.
+					A shareout of Cascade’s culture principles and exploration of your working style, personal interests, and what energizes you.
 				</p>
 			</div>
 			<div class="step">
 				<h2>Topgrade</h2>
-				<p>A 1-hour deep-dive into your academic and professional background to understand how you’ve become the professional you are today.</p>
+				<p>A deep-dive into your academic and professional background to understand how you’ve become the professional you are today.</p>
 			</div>
 			<div class="step">
 				<h2>Assignment</h2>
@@ -307,9 +306,6 @@
 		gap: 2rem;
 	}
 
-	#hubs img {
-		width: 70%;
-	}
 
 	#hubs .content {
 		color: var(--color-light);
@@ -351,10 +347,6 @@
 
 		#hubs {
 			flex-direction: column-reverse;
-		}
-
-		#hubs img {
-			width: 100%;
 		}
 
 		#hubs .content {
