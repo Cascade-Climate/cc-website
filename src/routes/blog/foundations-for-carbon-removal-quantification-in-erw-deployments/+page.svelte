@@ -33,7 +33,7 @@
 
 		<h2>Deployment-Led Learning Cycle</h2>
 		<img src={deploymentledlearning} alt="Deployment Led Learning" style="width: 70%; height: auto;" />
-		<p>The virtuous cycle of deployment-led learning goes like this–from top left, in clockwise direction:</p>
+		<p>The virtuous cycle of deployment-led learning goes like this —— from top left, in clockwise direction:</p>
 
 <ul>
     <li>
@@ -131,7 +131,7 @@
 	<section id="Acknowledgements">
 		<h1>Acknowledgements</h1>
 		<p>The Cascade team would like to express our immense gratitude to the individuals who contributed and gave their time to the output of this work.</p>
-		<h5 style="margin-top: 0px;">Working Group on feedstock characterization, sampling guardrails, and best practices for taking solid, aqueous, and gas phase measurements:</h5>
+		<h5 style="margin: 0;">Working Group on feedstock characterization, sampling guardrails, and best practices for taking solid, aqueous, and gas phase measurements:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair: </strong>Noah Planavsky</p>
@@ -140,7 +140,7 @@
 				<p><strong>Members:</strong> Thorben Amann, Antonio Carlos de Azevedo, Jelle Bilma, James Campbell, Rachael James, Mike Kelland, Frank McDermott, Isabel Montañez, Ian Power, Tom Reershemius, Radomir Schmidt, Jesper Suhrhoff</p>
 			</li>
 		</ul>
-		<h5>Working Group on the details of the carbon cycle fluxes / biogeochemical processes in the soil column:</h5>
+		<h5 style="margin: 0;">Working Group on the details of the carbon cycle fluxes / biogeochemical processes in the soil column:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair: </strong>Kate Maher</p>
@@ -149,7 +149,7 @@
 				<p><strong>Members: </strong>Christiana Dietzen, Mathilde Hagens, Isabel Montañez, Noah Planavsky, Chris Reinhard, Rafael Santos, Radomir Schmidt, Eric Slessarev, Noah Sokol, Sara Vicca, Arthur Vienne, Bonnie Waring</p>
 			</li>
 		</ul>
-		<h5>Working Group focused on downstream systems in the lower vadose zone, along groundwater flow paths, in surface water systems, and the ocean:</h5>
+		<h5 style="margin: 0;">Working Group focused on downstream systems in the lower vadose zone, along groundwater flow paths, in surface water systems, and the ocean:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair: </strong>Shuang Zhang</p>
@@ -158,7 +158,7 @@
 				<p><strong>Members: </strong>Yoshiki Kanzaki, Becca Neumann, Kirsty Harrington, Pete Raymond, Jim Saiers, Tao Wen, Chris Reinhard</p>
 			</li>
 		</ul>
-		<h5>Working Group focused on soil biogeochemistry models:</h5>
+		<h5 style="margin: 0;">Working Group focused on soil biogeochemistry models:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair: </strong>Chris Reinhard</p>
@@ -167,7 +167,7 @@
 				<p><strong>Members:</strong> Salvatore Calabrese, Yoshiki Kanzaki, Maria Val Martin, Brian Rogers, Lyla Taylor</p>
 			</li>
 		</ul>
-		<h5>Working Group focused on considerations for quantifying life cycle emissions and for assessing the human health and ecological impacts:</h5>
+		<h5 style="margin: 0;">Working Group focused on considerations for quantifying life cycle emissions and for assessing the human health and ecological impacts:</h5>
 		<ul>
 			<li>
 				<p><strong>Chair:</strong> Anu Khan</p>
@@ -179,7 +179,7 @@
 				<p><strong>Members of the human health and ecological impacts sub-Working Group:</strong> Maya Almaraz, Stephanie Grand, Fatima Haque, Charlotte Levy</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on deep soil measurements:</h5>
+		<h5 style="margin: 0;">Joint Working Group-Industry sessions on deep soil measurements:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members: </strong>Mike Kelland, Noah Planavsky</p>
@@ -188,7 +188,7 @@
 				<p><strong>Practitioners/Others:</strong> Mark Baum, Benjamin Möller, Linah Ababneh</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on assessing frameworks for time accounting:</h5>
+		<h5 style="margin: 0;">Joint Working Group-Industry sessions on assessing frameworks for time accounting:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members: </strong>Freya Chay, Kate Maher, Stephen McCord, Shinichirou Morimoto, Chris Reinhard</p>
@@ -197,7 +197,7 @@
 				<p><strong>Practitioners/Others:</strong> Mark Baum, Matthew Gammans, Jake Jordan, Christina Larkin, Simon Manley, Berta Moya, Eli Mitchell-Larson</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on constraining secondary carbonate formation:</h5>
+		<h5 style="margin: 0;">Joint Working Group-Industry sessions on constraining secondary carbonate formation:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members:</strong> Mathilde Hagens, Frank McDermott, Shinichirou Morimoto, Ian Power</p>
@@ -206,7 +206,7 @@
 				<p><strong>Practitioners/Others: </strong>Elisabete Pedrosa, Ingrid Smet</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on assessing potential changes to soil organic carbon stocks:</h5>
+		<h5 style="margin: 0;">Joint Working Group-Industry sessions on assessing potential changes to soil organic carbon stocks:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members</strong>: Maya Almaraz, Becca Neumann, Radomir Schmidt, Arthur Vienne, Bonnie Waring</p>
@@ -215,7 +215,7 @@
 				<p><strong>Practitioners/Others:</strong> Viri Alcantara-Shivapatham, Marta Camps-Arbestain, Jens Steffen Hammes, Maria Mooshammer, Katie Sierks</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on accounting for soil baseline heterogeneity:</h5>
+		<h5 style="margin: 0;">Joint Working Group-Industry sessions on accounting for soil baseline heterogeneity:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members:</strong> Salvatore Calabrese, Mike Kelland, Ian Power, Bonnie Waring</p>
@@ -224,7 +224,7 @@
 				<p><strong>Practitioners/Others:</strong> Mark Baum, Jake Jordan, Alison Marklein, Marya Matlin-Wainer, Katie Sierks, Philipp Swoboda</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on guardrails and guidelines for counterfactual baselines:</h5>
+		<h5 style="margin: 0;">Joint Working Group-Industry sessions on guardrails and guidelines for counterfactual baselines:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members:</strong> Spyros Foteinis, Noah Planavsky</p>
@@ -233,7 +233,7 @@
 				<p><strong>Practitioners/Others:</strong> Marta Camps-Arbestain, Ben Westcott, Linah Ababneh, Tyler Kukla</p>
 			</li>
 		</ul>
-		<h5>Joint Working Group-Industry sessions on near-term best practice for constraining downstream CO₂ evasion:</h5>
+		<h5 style="margin: 0;">Joint Working Group-Industry sessions on near-term best practice for constraining downstream CO₂ evasion:</h5>
 		<ul>
 			<li>
 				<p><strong>Working Group members: </strong>Frank McDermott, Becca Neumann, Chris Reinhard, Tao Wen</p>
@@ -242,7 +242,7 @@
 				<p><strong>Practitioners/Others:</strong> Elliot Chang, Matthew Clarkson, Jens Steffen Hammes, Richard Hatz, Ella Holme, Jake Jordan, Sasankh Munukutla</p>
 			</li>
 		</ul>
-		<h5>Authorship of “Foundations”, the output of the community process:</h5>
+		<h5 style="margin: 0;">Authorship of “Foundations”, the output of the community process:</h5>
 		<ul>
 			<li>
 				<p><strong>Authors: </strong>Jenny Mills, John Sanchez, Noemma Olagaray, Hara Wang, Alison Tune</p>
@@ -251,7 +251,7 @@
 				<p><strong>Editors:</strong> Noah Anderson, Brad Rochlin</p>
 			</li>
 		</ul>
-		<h5>Governance and Leadership of the Community Process:</h5>
+		<h5 style="margin: 0;">Governance and Leadership of the Community Process:</h5>
 		<ul>
 			<li>
 				<p><strong>Steering Committee members:</strong> Freya Chay, Anu Khan, Isabel Montañez, Noah Planavsky</p>
@@ -267,8 +267,8 @@
 
 	</section>
 
-	<section id="citation-and-usage">
-		<h1>Citation and Usage</h1>
+	<section id="citation">
+		<h1>Citation</h1>
 		<p>To acknowledge and credit this work, please use the following citation:</p>
 		
 		<p>Mills, J. V., Sanchez, J., Olagaray, N. Y., Wang, H., and Tune, A. K., 2024; <em>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</em>, Cascade Climate.</p>

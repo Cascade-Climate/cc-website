@@ -58,12 +58,11 @@
 
 	:global(ul) {
 		padding-left: 1.5rem;
-		margin-top: -10px;
-		margin-bottom: -10px;
 	}
 
 	:global(li) {
-		margin-bottom: -5px;
+		padding-left: 1.5rem;
+		margin-bottom: 0.5rem;
 	}
 
 	:global(h2) {

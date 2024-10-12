@@ -122,7 +122,7 @@
 		</div>
 		<div class="item">
 			<img src={perksImage} alt="Perks" />
-			<span>Other perks like Peloton memberships, home-office stipend, and more</span>
+			<span>Other perks, like Peloton memberships!</span>
 		</div>
 	</div>
 </section>
