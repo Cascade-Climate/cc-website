@@ -3,6 +3,7 @@
 	import deploymentledlearning from '$lib/images/blog/deploymentledlearning.webp';
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
+	import foundations from '$lib/images/nature/foundations.webp';
 	import conformance from '$lib/images/blog/conformance.webp';
 </script>
 
@@ -15,7 +16,7 @@
 				<p>This document is the culmination of a multi-stakeholder process undertaken from October 2023 through August 2024, involving ~50 academic scientists, ~20 ERW project developers, and not-for-profit organizations.</p>
 				<p>The ERW field can accelerate scientific learning through deployments and field trials that (a) follow the guidance articulated in<i>“Foundations for Carbon Dioxide Removal Quantification in ERW Deployments,”</i> and (b) share their quantification approaches and underlying data for the purpose of advancing science.</p>
 		</div>
-		<img src={erw} alt="Enhanced Rock Weathering" />
+		<img src={foundations} alt="Enhanced Rock Weathering" />
 	</div>
 	<div class="links">
 		<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">Foundations - full document↗</PDFLink>

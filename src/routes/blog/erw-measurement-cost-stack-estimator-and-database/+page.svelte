@@ -24,16 +24,16 @@
 			<h1>About</h1>
             <h3>0. About the ERW MRV Cost Estimator (EMCE):</h3>
             <p>As ERW continues to build momentum, practitioners need a common framework to rigorously quantify carbon removal. They also need tools and resources to better understand the cost implications of carrying out the measurements needed.&nbsp;</p>
-            <p>In response, we have developed and released a free-to-use cost estimator and accompanying cost database, collectively known as the ERW MRV Cost Estimator (or &ldquo;EMCE&rdquo; for short). The Cascade team hopes that the estimator and database can help<span> practitioners of ERW deployments to build an informed picture of the stacked costs when pursuing different measurement options in quantifying carbon removal in a deployment.</span></p>
-            <p><span>EMCE allows users to choose among popular measurement techniques for understanding carbon and cation fluxes in an ERW deployment, adjust costs for each technique, and see how stacked costs could be influenced by different spatial and temporal densities of measurement sampling. While preset cost ranges are given for each measurement technique based on our compilation of quotes, the estimator is best used with user-inputted cost data. The final output? An </span><span><strong>estimated </strong></span><span> total cost of removing a tonne of carbon dioxide by ERW.</span></p>
+            <p>In response, we have developed and released a free-to-use cost estimator and accompanying cost database, collectively known as the ERW MRV Cost Estimator (or &ldquo;EMCE&rdquo; for short). The Cascade team hopes that the estimator and database can help practitioners of ERW deployments to build an informed picture of stacked costs when pursuing different measurement options in quantifying carbon removal.</p>
+            <p><span>EMCE allows users to choose among common measurement techniques for understanding carbon and cation fluxes in an ERW deployment, adjust costs for each technique, and see how stacked costs could be influenced by different spatial and temporal densities of measurement sampling. While preset cost ranges are given for each measurement technique based on our compilation of quotes, the estimator is best used with user-inputted cost data. The final output? An <b>estimated</b> total cost of removing a tonne of carbon dioxide by ERW.</span></p>
             <p><span>From the onset, EMCE can (rightfully!) appear overwhelming. What follows provides a walkthrough of why, when, and how to use EMCE.</span></p>
             <ul>
-            <li>Part 1 covers what EMCE is and is not; and what cost components are covered in EMCE and what are not.</li>
+            <li>Part 1 covers what EMCE is and is not; and what cost components are covered.</li>
             <li>Part 2 provides a tab-by-tab user manual and walkthrough.</li>
-            <li>Part 3 provides background for what the quotes in the cost database are collected.&nbsp;&nbsp;</li>
+            <li>Part 3 provides background on how we sourced the quotes in the cost database.</li>
             <li>Part 4 is a detailed glossary of every variable in EMCE.</li>
             </ul>
-            <p><span>Some knowledge on ERW and its quantification does make it easier to be oriented and feel situated in EMCE. If you are still relatively new to ERW quantification for the first time, we recommend reading the </span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Technical Summary: Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗ </em></a><span> first.</span></p>
+            <p><span>Some knowledge on ERW and its quantification does make it easier to be oriented and feel situated in EMCE. If you are still relatively new to ERW quantification, we recommend reading the </span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Technical Summary: Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗ </em></a><span> first.</span></p>
 		</section>
 		<section id="is-and-isnt">
 			<h1>What EMCE Is/Isn't</h1>
@@ -41,11 +41,11 @@
             <p><span>EMCE comprises two major cost buckets: Rock, Hauling, and Spreading (RHS) and Measurement, Reporting and Verification (MRV). EMCE offers a detailed and comprehensive MRV cost estimator module, and a comparatively much more basic RHS module. MRV and RHS costs are the two primary direct cost components for an ERW project developer.&nbsp;</span></p>
             <p><span>What EMCE doesn&rsquo;t cover are (a) capital expenditures associated with any equipment (e.g., spreader, storage shed, spectrometry equipment), (b) sales, general and administrative expenses, (c) any type of financing costs.</span></p>
             <p><span>EMCE is primarily designed for practitioners to estimate the RHS and MRV costs for small-scale deployments, using a suite of direct empirical measurements, and paying for laboratory analyses on an &ldquo;&agrave; la carte&rdquo; basis. It can certainly be used by practitioners who have access to volume-discounted pricing, although it&rsquo;s advised that, in these cases, users input their own component cost data.&nbsp;</span></p>
-            <p><span>EMCE is explicitly not:</span></p>
+            <p><span>What EMCE is explicitly not:</span></p>
             <ul>
-            <li><span>EMCE is explicitly not a tool to project the future trajectory of ERW MRV costs. How the ERW MRV costs evolve over time depends on many factors: economies of scale, advances in landing on optimal quantification approaches, progressive shifts from measurement-heavy to model-heavy quantification schemes, etc. Many nonlinear developments could occur in the coming years that cannot be captured by EMCE in its current iteration.</span></li>
+            <li><span>EMCE is explicitly not a tool to project the future trajectory of ERW MRV costs. How ERW MRV costs evolve over time depends on many factors: economies of scale, advances in landing on optimal quantification approaches, progressive shifts from measurement-heavy to model-heavy quantification schemes, etc. Many nonlinear developments could occur in the coming years that cannot be captured by EMCE in its current iteration.</span></li>
             <li><span>EMCE should not be used to design sampling and measurement plans. Robust quantification and sample planning requires a strong understanding of the characteristics of a given deployment site (e.g., soil biogeochemistry, underlying baseline variability of key parameters, site hydrology, and cropping systems). Once the MRV plan is created, practitioners can use EMCE to estimate stacked cost based on desired measurement techniques and the spatial and temporal densities of the measurements.</span></li>
-            <li><span>We do not recommend buyers to use EMCE as their sole window in understanding the total $/tonne price of carbon removal via ERW deployments. In some areas, EMCE will produce an underestimate: for example, EMCE doesn&rsquo;t include business operating costs or profit margins. In other areas, EMCE will produce an overestimate: for example, EMCE&rsquo;s preset values won&rsquo;t take into account volume-based pricing, cost reductions from co-located or vertically integrated laboratory facilities, etc.</span></li>
+            <li><span>We do not recommend that buyers use EMCE as their sole window in understanding the total $/tonne price of carbon removal via ERW deployments. In some areas, EMCE will produce an underestimate: for example, EMCE doesn&rsquo;t include business operating costs or profit margins. In other areas, EMCE will produce an overestimate: for example, EMCE&rsquo;s preset values won&rsquo;t take into account volume-based pricing, cost reductions from co-located or vertically integrated laboratory facilities, etc.</span></li>
             </ul>
 		</section>
 		<section id="user-manual">
@@ -100,6 +100,7 @@
             </tbody>
             </table>
             </div>
+            <p></p>
             <h5>Weathering Curve&nbsp;</h5>
             <p><span>In the &ldquo;Weathering Curve&rdquo; tab, users can adjust a logarithmic factor to generate a time-integrated estimate of feedstock weathering. This rudimentary simplification of how feedstock dissolves should only be used as a starting point.&nbsp;</span></p>
             <p><span>In the case that users have input 2 or above for the &ldquo;Numbers of Applications&rdquo; field in the &ldquo;Field &amp; Plot Design&rdquo; tab, the &ldquo;Weathering Curve&rdquo; tab will display the option to adjust the weathering factor for each of the applications independently. This is to reflect that, reapplication of feedstocks on the same field, especially multiple reapplications, will likely not have the same CDR efficiency as the prior application(s), e.g.: due to the fact that prior application(s) have already amended the pH of the soil to some degree.</span></p>
@@ -190,6 +191,7 @@
             </tbody>
             </table>
             </div>
+            <p></p>
             <h5>Aqueous Phase Measurements&nbsp;</h5>
             <p><span>The Aqueous Phase Measurements tab computes the total stacked cost of an MRV plan using an aqueous measurement approach.&nbsp;</span></p>
             <p><span>Users can adjust the sampling and measurement plan by choosing the frequency of sampling events, number of porewater samples pooled for each analysis, and the analytical techniques used to measure different properties. There are also options to choose the cost ranges for Rhizons and lysimeters (equipment used for porewater sampling), the cost ranges for each analytical technique, and the temporal and spatial resolution required for analysis.</span></p>
@@ -242,6 +244,7 @@
             </tbody>
             </table>
             </div>
+            <p></p>
             <h5>Validation and Verification</h5>
             <p><span>The "Validation and Verification" tab allows users to adjust the costs associated with third-party validation &amp; verification bodies.&nbsp;</span></p>
             <p><strong>Some additional notes on costs and time of costs</strong></p>
@@ -282,7 +285,6 @@
             <p><strong>Research Plot:</strong>  Percentage of the total area that is the densely monitored area used for advancing specific research priorities. Excluded from netCDR quantification.</p>
             <h5>&ldquo;Losses &amp; Discounts&rdquo; tab</h5>
             <p><span><strong>Lifecycle Emissions (% of Potential CDR): </strong></span><span>Percent reduction in potential CDR due to upstream and ongoing life cycle emissions. This deduction is taken at initial application (t = 0) and at the time of subsequent reapplications.</span></p>
-            <p><span><strong>Other Losses (% of Potential CDR)</strong></span></p>
             <p><span><strong>Control Losses:</strong></span><span> Percent reduction in potential CDR due to deductions from the counterfactual baseline netCDR. This deduction is taken over the project period, proportional to the potential CDR.&nbsp;</span></p>
             <p><span><strong>Cation Sorption Losses: </strong></span><span>Percent reduction in potential CDR due to adsorption of cations onto soil particle surfaces. This deduction is taken over the project period, proportional to the potential CDR.&nbsp;</span></p>
             <p><span><strong>pH/Non-Carbonic Acid Weathering Losses:</strong></span><span> Percent reduction in potential CDR due to </span>chemical weathering done by acids other than carbonic acid such as sulfuric, nitric, or organic acid, or in low pH soil. This deduction is taken over the project period, proportional to potential CDR<span>.&nbsp;</span></p>
@@ -296,7 +298,6 @@
             <h5>&ldquo;Rock Haul Spread&rdquo; tab</h5>
             <p><span><strong>Long Haul Transportation Distance: </strong></span><span>Distance of all rail, river barge, and ocean barge transport. Input value can be in any unit of distance as long as associated cost values use the same unit of distance.</span></p>
             <p><span><strong>Last Mile Trucking Distance: </strong></span><span>Distance of last-mile trucking., Input value can be in any unit of distance as long as associated cost values use the same unit of distance.</span></p>
-            <p><span><strong>Unit Cost Inputs</strong></span></p>
             <p><strong>Raw Feedstock Cost Per Tonne: </strong>Unit cost of the feedstock material before any processing, in currency unit per tonne.</p>
             <p><strong>Grinding &amp; Milling Cost Per Tonne</strong> Unit cost of any processing to adjust the feedstock material to the desired grain size, in currency unit per tonne.</p>
             <p><strong>Long Haul Transportation Unit Cost: </strong>Unit cost of long haul transportation in unit of currency per tonne of feedstock per unit of distance.</p>
@@ -305,22 +306,7 @@
             <p><strong>Spreading Cost Per Hectare: </strong>The cost of labor and equipment to spread feedstock, in currency unit per hectare.</p>
             <h5>&ldquo;Weathering Curve&rdquo; tab</h5>
             <p><strong>Weathering Factors: </strong>The Y-axis is the percentage of feedstock that has been dissolved over the X-axis, the project period in years. The &ldquo;weathering factor&rdquo; is a logarithmic factor that adjusts the rate of feedstock dissolution.</p>
-            <p><strong>Y-axis title:</strong> Potential CDR Dissolved</p>
-            <p><strong>X-axis title:</strong> Year</p>
             <h5>&ldquo;Solid Phase Measurements&rdquo; tab</h5>
-            <p>In the Solid-Phase Sampling Set-up sub-tab:</p>
-            <ol>
-            <li>Input the number of sampling events per year.</li>
-            <li>Input <span>the # of soil samples pooled for each analysis</span></li>
-            <li>Adjust the cost ranges for each shallow and/or deep composite soil sample.</li>
-            </ol>
-            <p>For each analytical approach, there are 10 inputs required</p>
-            <ul>
-            <li>A low cost estimate</li>
-            <li>A high cost estimate</li>
-            <li>Sampling densities (samples per hectare) for each of the plot type</li>
-            <li>Sampling frequencies (taken once, taken per sampling event, not taken at all) for each of the plot type</li>
-            </ul>
             <p><strong>Solid Phase Sampling Frequency:&nbsp;</strong>Occurrences of solid phase sampling events per year. (2 = biyearly, 1 = yearly, 0.5 = every 2 years, 0.25 = every 4 years, etc.)</p>
             <p><strong>Number of Solid Samples Pooled Per Analysis:</strong> Pooling soil samples for more resource-intensive analyses (all of the below except for permeability), with a maximum of 10 samples pooled per analysis.&nbsp;</p>
             <p><strong>Shallow Composite Soil Samples (15-20 cores):</strong> A composite soil sample of 15-20 soil cores with depths up to 30 cm. This unit cost term encompasses the cost of labor to take the sample, any equipment associated per soil core, and shipping costs of the sample. The unit cost is multiplied by the highest sampling density required by any shallow soil analytical techniques to compute the total cost of shallow composite soil samples.</p>
@@ -339,21 +325,7 @@
             <p><span><strong>Falling-head permeability test</strong></span><span>: Measures soil permeability. Soil permeability influences the flow rate of water through the soil, which influences feedstock dissolution rate, transport of weathering products, and secondary phase precipitation.</span></p>
             <p><span><strong>Acid Digestion</strong></span><span>: Laboratory procedure used to prepare soil samples for elemental composition analysis.</span></p>
             <h5>&ldquo;Aqueous Phase Measurements&rdquo; tab</h5>
-            <p>In the Aqueous-Phase Sampling Set-up, and Equipment sub-tabs:</p>
-            <ol>
-            <li>Input the number of sampling events per year.</li>
-            <li>Input <span>the # of soil samples pooled for each analysis.</span></li>
-            <li>Adjust the cost ranges for Rhizon and lysimeter, two common aqueous-phase sampler equipment.</li>
-            </ol>
-            <p>For each analytical approach, there are 10 inputs required:</p>
-            <ul>
-            <li>A low cost estimate</li>
-            <li>A high cost estimate</li>
-            <li>Sampling densities (samples per hectare) for each of the plot type</li>
-            <li>Sampling frequencies (taken once, taken per sampling event, not taken at all) for each of the plot type</li>
-            </ul>
-            <p><strong>Aqueous-Phase Sampling Frequency:</strong></p>
-            <p>Occurrences of aqueous phase sampling events per year. (52 = weekly, 26 = biweekly, 12 = monthly, 1 = yearly, 0.5 = every 2 years, and so on.) Note that aqueous sampling events usually occur multiple times a year.</p>
+            <p><strong>Aqueous-Phase Sampling Frequency</strong>: Occurrences of aqueous phase sampling events per year. (52 = weekly, 26 = biweekly, 12 = monthly, 1 = yearly, 0.5 = every 2 years, and so on.) Note that aqueous sampling events usually occur multiple times a year.</p>
             <p><strong>Porewater Technician (Labor): </strong>Encompasses labor, travel, and other associated expenses for a technician to visit a deployment and take field samples. This unit cost is multiplied by the number of sampling events to compute the total cost of technicians.</p>
             <p><strong>Number of Aqueous Samples Pooled Per Analysis:</strong> Pooling aqueous samples for more resource-intensive analyses (ICP-MS and ion chromatography (only for non-DIC anions)), with a maximum of 10 samples pooled per analysis.&nbsp;</p>
             <p><strong>Rhizon (Equipment):</strong> Soil water sampling device. Costs can vary depending on functionality and ease of reusability. Costs are per Rhizon sampler.</p>
@@ -366,9 +338,7 @@
             <p><strong>Ion Chromatography:</strong> Measures dissolved anions <span>(particularly nitrogen and sulfur species), which can be used to constrain the amount of non-carbonic acid weathering and, along with measurements of cations, track alkalinity.</span></p>
             <p><span><strong>Temperature probe: </strong></span><span>Measures aqueous phase temperature, which influences the speciation of the carbonic acid system and the feedstock weathering rate.</span></p>
             <h5>&ldquo;Feedstock Characterization&rdquo; tab</h5>
-            <p>This tab details the key measurements required to understand the mineralogy of feedstock materials, assess theoretical maximum removal potential, and evaluate heavy metal-associated ecological and human health risks.</p>
-            <p><strong>Samples Required per X Tonne Feedstock:</strong></p>
-            <p>Input the number of samples taken per X tonnes of feedstock materials.&nbsp;</p>
+            <p><strong>Samples Required per X Tonne Feedstock</strong>: input the number of samples taken per X tonnes of feedstock materials.&nbsp;</p>
             <p><strong>Mineralogy:</strong> Identification of minerals, with ability to quantify their relative composition. Common analytical techniques include petrography (by analyzing thin sections with a light microscope), XRD (by analyzing X-ray Diffraction spectra), and SEM/EDS (by surface imaging under an electron microscope).&nbsp;</p>
             <p><strong>Elemental composition:</strong> Identifying composition of different elements in feedstock. Common analytical techniques include Inductively-Coupled Plasma Mass Spectroscopy (ICP-MS), Inductively Coupled Plasma Optical Emission Spectroscopy (ICP-OES), and X-ray Fluorescence (XRF).</p>
             <p><strong>Geotechnical properties: </strong>Characterizes the physical properties of the feedstock, including measurement of water content, specific gravity, particle density, bulk density and permeability.</p>
@@ -378,7 +348,6 @@
             <h5>&ldquo;Validation &amp; Verification&rdquo; tab:&nbsp;</h5>
             <p><strong>Validation: </strong>Third-party assessment that determines whether a project meets the rules and requirements for carbon credit issuance. Typically occurs when the project is initialized (at t = 0) and at minimum once every 5 years during the project period.&nbsp;</p>
             <p><strong>Multiplier: </strong>Occurrences of validation per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.)</p>
-            <p><strong>Cost per validation event</strong></p>
             <p><strong>Verification: </strong>Third-party assessment that reviews project developers&rsquo; monitoring, measurement and quantification data to confirm that the project is performing as planned and accurately computing the carbon removal volumes achieved. Typically occurs annually over the project period.</p>
             <p><strong>Multiplier: </strong>Occurrences of verification per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.)</p>
 		</section>

@@ -7,6 +7,7 @@
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import data from '$lib/images/nature/data.webp';
 	import cost from '$lib/images/nature/cost.webp';
+	import foundations from '$lib/images/nature/foundations.webp';
 	import heroPhoto2 from '$lib/images/nature/heroPhoto2.webp';
 </script>
 
@@ -25,7 +26,7 @@
 		</h1>
 	</section>
 	<section id="about">
-		<img src={heroPhoto2} alt="Cascade Climate" />
+		<img src={heroPhoto} alt="Cascade Climate" />
 		<div>
 			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
@@ -48,7 +49,7 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
-				<img src={erwPhoto} alt="Enhanced Rock Weathering" />
+				<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
 				<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 				<p>
 					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.

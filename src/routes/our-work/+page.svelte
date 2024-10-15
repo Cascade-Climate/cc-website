@@ -4,6 +4,7 @@
 	import farm1 from '$lib/images/nature/farm1.webp';
 	import farm2 from '$lib/images/nature/farm2.webp';
 	import cost from '$lib/images/nature/cost.webp';
+	import foundations from '$lib/images/nature/foundations.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import { onMount } from 'svelte';
 
@@ -61,7 +62,7 @@
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
-					<img src={erw} alt="Enhanced Rock Weathering" />
+					<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
 					<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 					<p>
 						After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
