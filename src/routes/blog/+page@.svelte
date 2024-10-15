@@ -19,7 +19,7 @@
 			<p class="details">
 				<span class="date">10/16/2024</span>
 				·
-				<span class="read-time">60+ MIN READ</span>
+				<span class="read-time">7 MIN READ, 60+ MIN PDFs</span>
 			</p>
 		</div>
 		<div class="post">
@@ -34,7 +34,7 @@
 			<p class="details">
 				<span class="date">10/16/2024</span>
 				·
-				<span class="read-time">10 MIN READ</span>
+				<span class="read-time">27 MIN READ</span>
 			</p>
 		</div>
 		<div class="post">

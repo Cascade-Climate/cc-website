@@ -3,6 +3,8 @@
 	import erw from '$lib/images/nature/erw.webp';
 	import farm1 from '$lib/images/nature/farm1.webp';
 	import farm2 from '$lib/images/nature/farm2.webp';
+	import cost from '$lib/images/nature/cost.webp';
+	import policy from '$lib/images/nature/policy.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -40,8 +42,7 @@
 	<section class="preamble">
 		<h1>Our Work</h1>
 		<p>
-			Cascade is a philanthropically-backed nonprofit organization. Working across industry, government and science, we coordinate ambitious multi-stakeholder initiatives, build tools and infrastructure that unlocks cycles of learning-by-doing, and resource high-leverage R&D and policy work.
-		</p>
+			Cascade is a philanthropically-backed nonprofit organization working across industry, government and science to accelerate progress in natural system climate interventions. We help remove the biggest bottlenecks inhibiting progress by <b>coordinating</b> ambitious cross-sector initiatives, <b>building</b> tools and infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and policy work.		</p>
 	</section>
 	<nav>
 		{#each sections as section}
@@ -77,7 +78,7 @@
 					<b href="/our-work">Coming Soon</b>
 				</div>
 				<div>
-					<img src={farm1} alt="Cost Estimator" />
+					<img src={cost} alt="Cost Estimator" />
 					<h2>ERW MRV cost estimator and database</h2>
 					<p>
 						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
@@ -85,7 +86,7 @@
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
 				<div>
-					<img src={farm2} alt="Policy" />
+					<img src={policy} alt="Policy" />
 					<h2>Policy supporting ERW research and responsible deployment</h2>
 					<p>
 						We advance policies that support ERW innovation, provide early project financing support, and develop rules and regulations for responsible deployment in close coordination with industry and civil society organizations.

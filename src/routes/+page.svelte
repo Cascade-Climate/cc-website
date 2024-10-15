@@ -6,6 +6,8 @@
 	import ocean1 from '$lib/images/nature/ocean1.webp';
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import data from '$lib/images/nature/data.webp';
+	import cost from '$lib/images/nature/cost.webp';
+	import heroPhoto2 from '$lib/images/nature/heroPhoto2.webp';
 </script>
 
 <svelte:head>
@@ -23,14 +25,14 @@
 		</h1>
 	</section>
 	<section id="about">
-		<img src={heroPhoto} alt="Cascade Climate" />
+		<img src={heroPhoto2} alt="Cascade Climate" />
 		<div>
 			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
-				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Harnessing natural systems will often be the most scalable and affordable path to undo or prevent deep climate harms—carbon cycle imbalance, catastrophic sea-level rise, irreversible damage from near-term warming. Natural system interventions often have the potential to offer a suite of powerful co-benefits, such as healthier ecosystems and more resilient local economies.
+				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Interventions that harness and enhance natural systems can bring advantages of scale and cost that will often make them among our best—and sometimes only—options to prevent or undo deep harms that decarbonization alone cannot address. We need to accelerate our learning about these options if we seek to curb calamitous near-term warming, restore a preindustrial atmosphere, or stave off catastrophic sea-level rise and planetary tipping points.
 			</p>
 			<p>
-				Realizing these opportunities involves overcoming complex and cross-sectoral hurdles. Quantifying the full impact of natural system interventions can be challenging, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions often offer critical–but often intangible–public benefits, requiring new and ambitious financing modes and public support models. These interlaced challenges can leave natural system climate interventions at an impasse, struggling to start the learn-by-doing flywheel.
+				Realizing these opportunities involves overcoming complex systemic bottlenecks. Quantifying the full impact of natural system interventions can be particularly difficult, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions can offer powerful climate benefits as well as co-benefits for local economies and ecosystems; yet these benefits are often public and intangible ones, requiring creative and bold new modes of financing and public support. These interlaced challenges can leave natural system interventions at an impasse, struggling to start the learn-by-doing flywheel.
 			</p>
 			<hr style="margin: 64px;">
 		</div>
@@ -38,10 +40,7 @@
 	<section id="our-work">
 		<h3><a href="about-us">ABOUT US ↗</a></h3>
 		<h4 style="text-align: center; margin: 18px; font-weight: 300; line-height: 1.4; font-size: 150%;">
-			Cascade is a philanthropically-backed nonprofit organization. Working across industry,
-			government and science, we aim to accelerate the progress in natural system climate interventions by  <b>coordinating</b> bottleneck-breaking initiatives, <b>building</b> tools and
-			infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and
-			policy work.
+			Cascade is a philanthropically-backed nonprofit organization working across industry, government and science to accelerate progress in natural system climate interventions. We help remove the biggest bottlenecks inhibiting progress by <b>coordinating</b> ambitious cross-sector initiatives, <b>building</b> tools and infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and policy work.
 		</h4>
 
 		<hr style="margin: 64px;">
@@ -65,7 +64,7 @@
 				<b href="/our-work">Coming Soon</b>
 			</div>
 			<div class="spotlight">
-				<img src={farm1} alt="Cost Estimator" />
+				<img src={cost} alt="Cost Estimator" />
 				<h2>ERW MRV cost estimator and database</h2>
 				<p>
 					We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.

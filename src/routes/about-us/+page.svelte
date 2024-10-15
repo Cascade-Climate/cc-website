@@ -12,8 +12,7 @@
 <section class="intro">
 	<h1>About Us</h1>
 	<p>
-		Cascade is a philanthropically-backed nonprofit organization. Working across industry, government, and science, we coordinate bottleneck-breaking initiatives, build tools and infrastructure that unlock cycles of learning-by-doing, and resource high-leverage R&D and policy work.
-	</p>
+		Cascade is a philanthropically-backed nonprofit organization working across industry, government and science to accelerate progress in natural system climate interventions. We help remove the biggest bottlenecks inhibiting progress by <b>coordinating</b> ambitious cross-sector initiatives, <b>building</b> tools and infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and policy work.	</p>
 </section>
 <ScrollNav />
 <main>

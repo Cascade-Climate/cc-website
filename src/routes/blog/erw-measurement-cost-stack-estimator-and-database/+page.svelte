@@ -9,7 +9,7 @@
 		<div class="content">
 			<div class="copy">
 				<h1>ERW MRV cost estimator and database</h1>
-                <p>A key question surrounding enhanced rock weathering (ERW) is the quantification of carbon removal. To tackle that question, we worked with more than 100 ERW researchers and practitioners to develop <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments</em></a>, a document that establishes best practices and core guidance for how to conduct carbon removal measurements and quantification in ERW deployments.</p>
+                <p>A key question surrounding enhanced rock weathering (ERW) is the quantification of carbon removal. To tackle that question, we worked with more than 100 ERW researchers and practitioners to develop <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</em></a>, a document that establishes best practices and core guidance for how to conduct carbon removal measurements and quantification in ERW deployments.</p>
                 <p>In this piece, we break down the cost of deploying feedstock and carrying out these carbon removal measurements (particularly for those measurements in the upper soil regions where direct empirical measurements are required). We have collected over 1,000+ global, ERW-specific measurement cost estimates through compiling published quotes and sourcing quotes from quarries, academic and commercial laboratories, and ERW suppliers. These component-level quotes feed into a cost estimator that paints a comprehensive picture of the costs of sourcing, processing, hauling, and spreading feedstock, as well as the field sampling and laboratory analyses necessary for a small-scale deployment in the present day.</p>
 			</div>
 		</div>
@@ -31,9 +31,9 @@
             <li>Part 1 covers what EMCE is and is not; and what cost components are covered in EMCE and what are not.</li>
             <li>Part 2 provides a tab-by-tab user manual and walkthrough.</li>
             <li>Part 3 provides background for what the quotes in the cost database are collected.&nbsp;&nbsp;</li>
-            <li>Part 4 is a detailed glossary of every variable in EMCE</li>
+            <li>Part 4 is a detailed glossary of every variable in EMCE.</li>
             </ul>
-            <p><span>Some knowledge on ERW and its quantification does make it easier to be oriented and feel situated in EMCE. If you are still relatively new to ERW quantification for the first time, we recommend reading the </span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Technical Summary: Foundations for Carbon Dioxide Removal Quantification in ERW Deployments </em></a><span> first.</span></p>
+            <p><span>Some knowledge on ERW and its quantification does make it easier to be oriented and feel situated in EMCE. If you are still relatively new to ERW quantification for the first time, we recommend reading the </span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Technical Summary: Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗ </em></a><span> first.</span></p>
 		</section>
 		<section id="is-and-isnt">
 			<h1>What EMCE Is/Isn't</h1>
@@ -58,8 +58,8 @@
             <ul>
             <li><span><strong>Treatment Plot</strong></span><span>: a less densely monitored area of the deployment where ERW treatment is applied (the value is preset to 90%).</span></li>
             <li><span><strong>Densely Monitored Plot</strong></span><span>: a more densely monitored area of the deployment where ERW treatment is applied (the value is preset to 5%).</span></li>
-            <li><span><strong>Control Plot:</strong></span><span> a monitored area of the deployment corresponding to business as usual counterfactual or negative controls (the value is preset to 5%).</span></li>
-            <li><span><strong>Research Plot:</strong></span><span> a densely monitored area used for advancing specific outstanding research priorities (the value is preset to 0%).</span></li>
+            <li><span><strong>Control Plot</strong></span><span>: a monitored area of the deployment corresponding to business as usual counterfactual or negative controls (the value is preset to 5%).</span></li>
+            <li><span><strong>Research Plot</strong></span><span>: a densely monitored area used for advancing specific outstanding research priorities (the value is preset to 0%).</span></li>
             </ul>
             <p>Users can choose to input different analytical techniques, cost ranges, time frequencies, sampling density, and sampling depth for different types of plots described above.&nbsp;</p>
             <h5>Rock, Haul, and Spread</h5>
@@ -106,7 +106,7 @@
             <p><span>In addition, when there are 2 or more applications, EMCE assumes that the first application takes place at </span><span><em>t</em></span><span> = 0, and any subsequent re-application is spread evenly across the project period (i.e.: specifying &ldquo;2&rdquo; under &ldquo;Number of Feedstock Applications&rdquo; when &ldquo;Project Period in Years&rdquo; is &ldquo;10&rdquo; would signify an application at </span><span><em>t</em></span><span> = 0 and </span><span><em>t</em></span><span> = 5.</span></p>
             <p><span>We want to be super clear that the &ldquo;Weathering Curve&rdquo; tab is used to generate a numerical &ldquo;Potential CDR&rdquo; estimate describing the release of base cations into solution upon feedstock dissolution over time. This is not netCDR. Users should account for the reduction in netCDR as a result of transient and permanent alkalinity sinks within the NFZ, carbon and cation losses in the FFZ, and upstream and ongoing life cycle emissions in the &ldquo;Losses &amp; Discounts&rdquo; tab.</span></p>
             <h5>Losses and Discounts&nbsp;</h5>
-            <p><span>Users can input estimates of loss terms, as a percentage reduction of &ldquo;Potential CDR&rdquo;. These loss terms include the following. Section 8 of &ldquo;</span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener">Foundations</a><span>&rdquo; provides an overview of the state of science and guidance for accounting these loss terms in near-term deployments.</span></p>
+            <p><span>Users can input estimates of loss terms, as a percentage reduction of &ldquo;Potential CDR&rdquo;. These loss terms include the following. Section 8 of &ldquo;</span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener">Foundations↗</a><span>&rdquo; provides an overview of the state of science and guidance for accounting these loss terms in near-term deployments.</span></p>
             <ul>
             <li><span>Within the NFZ: pH/Non-Carbonic Acid Weathering, Cation Sorption, Secondary Carbonate Formation, Secondary Silicate Formation, Biomass Uptake of Base Cations&nbsp;</span></li>
             <li><span>Within the FFZ: netCDR loss in rivers and in oceans</span></li>
@@ -154,7 +154,7 @@
             </tr>
             <tr style="border-bottom: 1px solid #000;">
             <td style="padding: 10px;"><span>Plant tissue analysis</span></td>
-            <td style="padding: 10px;"><span>Elemental composition (C, N, Ca</span><span>2+</span><span>, Mg</span><span>2+</span><span>, K</span><span>+</span><span>, and Na</span><span>+</span><span>) of plants</span></td>
+            <td style="padding: 10px;"><span>Elemental composition (C, N, Ca</span><span><sup>2+</sup></span><span>, Mg</span><span><sup>2+</sup></span><span>, K</span><span><sup>+</sup></span><span>, and Na</span><span><sup>+</sup></span><span>) of plants</span></td>
             <td style="padding: 10px;"><span>Measures the amount of biomass uptake of base cations; biomass uptake is a reduction in netCDR.</span></td>
             </tr>
             <tr style="border-bottom: 1px solid #000;">
@@ -243,7 +243,7 @@
             </table>
             </div>
             <h5>Validation and Verification</h5>
-            <p><span>The Validation and Verification tab allows users to adjust the costs associated with third-party validation &amp; verification bodies.&nbsp;</span></p>
+            <p><span>The "Validation and Verification" tab allows users to adjust the costs associated with third-party validation &amp; verification bodies.&nbsp;</span></p>
             <p><strong>Some additional notes on costs and time of costs</strong></p>
             <ul>
             <li><span>All currency units are in USD unless otherwise specified.&nbsp;</span></li>
@@ -268,18 +268,18 @@
             <h3>5: Credits</h3>
             <p>Development of the web app, and an earlier spreadsheet-based version of EMCE, was led by <a href="https://cascadeclimate.org/team/arielle-lok" target="_blank" rel="noopener">Arielle Lok</a> under the support of <a href="https://cascadeclimate.org/team/hara-wang" target="_blank" rel="noopener">Hara Wang</a>. <a href="https://github.com/xxmichaellong" target="_blank" rel="noopener">Xiao Xiao Long</a> and Arielle Lok wrote the code for the web app. Hara Wang, <a href="https://cascadeclimate.org/team/noah-anderson" target="_blank" rel="noopener">Noah Anderson</a>, and Arielle Lok drafted the technical documentation of EMCE, and <a href="https://cascadeclimate.org/team/john-sanchez" target="_blank" rel="noopener">John Sanchez</a> edited sections of the document.&nbsp;</p>
             <p>We want to also offer special gratitude to Benjamin M&ouml;ller, Tony Oehm, Kevin Sutherland, Ella Holme, Niklas Kluger, Tyler Kukla, Chris Tolles, Jonathan Lambert, Shrey Agarwal, Sparsh Agarwal, Maurice Bryson, Mohammad Madankan, Simon Manley, Alexander Rink, Phil Renforth, and Matt Villante who reviewed prior versions of EMCE and offered invaluable insights.</p>
-            <p>If you identify any errors or have any suggested updates to the web app and the accompanying technical documentation, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSccdBcMsAT4mnDh7c2x-Vq87QJtcHCL7EUXy1-RgfL2fAjBfg/viewform" target="_blank" rel="noopener">form here</a> or email <a href="mailto:foundations@cascadeclimate.org" target="_blank" rel="noopener">emce@cascadeclimate.org</a>.</p>
+            <p>If you identify any errors or have any suggested updates to the web app and the accompanying technical documentation, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSccdBcMsAT4mnDh7c2x-Vq87QJtcHCL7EUXy1-RgfL2fAjBfg/viewform" target="_blank" rel="noopener">form here</a> or email <a href="mailto:emce@cascadeclimate.org" target="_blank" rel="noopener">emce@cascadeclimate.org</a>.</p>
             <h3>6: Glossary:</h3>
             <h5>&ldquo;Field &amp; Plot Design&rdquo; tab</h5>
             <p><span><strong>Total Hectarage</strong></span><span>: Total hectares of the field that encompasses all treatment, control and research plots. Upper bound is set at 10,000 hectares.</span></p>
             <p><span><strong>Tonne of Feedstock Deployed Per Hectare: </strong></span><span>Tonnes of feedstock deployed per hectare for each deployment.</span></p>
             <p><span><strong>Project Period in Years:</strong></span><span> Total years of monitoring the field. The output table columns adjust to this input.</span></p>
-            <p><span><strong>Potential CDR:</strong></span><span> </span>Estimate of CDR, in tonne of CO2 per tonne of feedstock, driven by feedstock dissolution in the Near-Field Zone, before accounting for any subsequent lags, losses, or inefficiencies.</p>
+            <p><span><strong>Potential CDR:</strong></span><span> </span>Estimate of CDR, in tonne of CO<sub>2</sub> per tonne of feedstock, driven by feedstock dissolution in the Near-Field Zone, before accounting for any subsequent lags, losses, or inefficiencies.</p>
             <p><span><strong>Number of Feedstock Applications:</strong></span><span> Number of feedstock applications over the project period. In EMCE, the same amount of feedstock per hectare is deployed per application. Initial application occurs in t = 0, and any subsequent application occurs evenly throughout the project period.</span></p>
             <p><span><strong>Treatment Plot</strong></span><span>: Percentage of total area that is the less densely monitored area of the deployment where ERW treatment is applied.</span></p>
             <p><span><strong>Densely Monitored Plot</strong></span><span>: Percentage of total area that is the densely monitored area of the deployment where ERW treatment is applied.</span></p>
-            <p><span><strong>Control Plot:</strong></span><span> Percentage of the total area that is the monitored area of the deployment corresponding to business as usual (counterfactual) plots or negative controls.</span></p>
-            <p><span><strong>Research Plot:</strong></span><span> Percentage of the total area that is the densely monitored area used for advancing specific research priorities. Excluded from netCDR quantification.</span></p>
+            <p><span><strong>Control Plot</strong></span><span>: Percentage of the total area that is the monitored area of the deployment corresponding to business as usual (counterfactual) plots or negative controls.</span></p>
+            <p><strong>Research Plot:</strong>  Percentage of the total area that is the densely monitored area used for advancing specific research priorities. Excluded from netCDR quantification.</p>
             <h5>&ldquo;Losses &amp; Discounts&rdquo; tab</h5>
             <p><span><strong>Lifecycle Emissions (% of Potential CDR): </strong></span><span>Percent reduction in potential CDR due to upstream and ongoing life cycle emissions. This deduction is taken at initial application (t = 0) and at the time of subsequent reapplications.</span></p>
             <p><span><strong>Other Losses (% of Potential CDR)</strong></span></p>
@@ -321,8 +321,7 @@
             <li>Sampling densities (samples per hectare) for each of the plot type</li>
             <li>Sampling frequencies (taken once, taken per sampling event, not taken at all) for each of the plot type</li>
             </ul>
-            <p><strong>Solid Phase Sampling Frequency:&nbsp;</strong></p>
-            <p>Occurrences of solid phase sampling events per year. (2 = biyearly, 1 = yearly, 0.5 = every 2 years, 0.25 = every 4 years, etc.)</p>
+            <p><strong>Solid Phase Sampling Frequency:&nbsp;</strong>Occurrences of solid phase sampling events per year. (2 = biyearly, 1 = yearly, 0.5 = every 2 years, 0.25 = every 4 years, etc.)</p>
             <p><strong>Number of Solid Samples Pooled Per Analysis:</strong> Pooling soil samples for more resource-intensive analyses (all of the below except for permeability), with a maximum of 10 samples pooled per analysis.&nbsp;</p>
             <p><strong>Shallow Composite Soil Samples (15-20 cores):</strong> A composite soil sample of 15-20 soil cores with depths up to 30 cm. This unit cost term encompasses the cost of labor to take the sample, any equipment associated per soil core, and shipping costs of the sample. The unit cost is multiplied by the highest sampling density required by any shallow soil analytical techniques to compute the total cost of shallow composite soil samples.</p>
             <p><strong>Deep Composite Soil Sample (5 cores):</strong> A composite soil sample of 5 soil cores with depths &gt;50 cm. This encompasses the cost of labor to take the sample, any equipment associated per core, and shipping costs of the sample. The unit cost is multiplied by the highest sampling density required by any deep soil analytical techniques to compute the total cost of deep composite soil samples.</p>
@@ -331,14 +330,14 @@
             <p><strong>pH by Slurry Probe:</strong> Measures soil pH, which affects f<span>eedstock dissolution rate, cation exchange capacity, bioavailability of nutrients, and the speciation of the carbonic acid system (which will influence netCDR).</span>Slurry pH probe (ISO 10390:2021), taken on shallow soil samples.</p>
             <p><strong>Cation Extraction:</strong> Measures cation exchange capacity (CEC), base saturation, and exchangeable acidity, which collectively offer a picture of current and potential base cation sorption, a transient &ldquo;undoing&rdquo; of CDR.</p>
             <p><span><strong>X-Ray Diffraction (XRD)</strong></span><span>: Identifies clay (and other secondary) minerals in soil. The formation of clay minerals modifies soil hydrology, creates additional base cation sorption sites, and changes porewater composition.</span></p>
-            <p><strong>Plant tissue analysis:</strong> Measures the amount of biomass uptake of base cations <span>(e.g.: Ca</span><span>2+</span><span>, Mg</span><span>2+</span><span>, K</span><span>+</span><span>, and Na</span><span>+</span><span>). Biomass uptake of base cations is a reduction in netCDR.</span></p>
-            <p><strong>Calcimetry:</strong> Measures the amount of <span>inorganic carbon in soils (primarily in the form of calcium carbonate). Carbonates can be a stable CO</span><span>2 </span><span>reservoir (if non-carbonate feedstocks are applied) but represent a reduction in netCDR compared to export of bicarbonate.</span></p>
-            <p><strong>Dry Combustion:</strong> <span>Measures total carbon, total sulfur, and changes in soil organic carbon stocks an important carbon reservoir in agricultural settings.&nbsp;</span></p>
-            <p><strong>Fluid Displacement Test: </strong>Measures bulk density, which is an important agronomic indicator for soil texture, porosity, and compaction and can be used as a proxy for secondary phase formation. Also necessary to <span>calculate soil-based concentration measurements, including soil total carbon, soil inorganic carbon, soil organic carbon, trace elements, etc.</span></p>
-            <p><span><strong>Gravimetric sieving:</strong></span><span> Measures soil texture&mdash;or the relative proportions of clay, silt, and sand. Soil texture influences soil hydrology, CEC, secondary phase formation, and is an important indicator of agronomic health.</span></p>
+            <p><strong>Plant tissue analysis</strong>: Measures the amount of biomass uptake of base cations <span>(e.g.: Ca</span><span>2+</span><span>, Mg</span><span>2+</span><span>, K</span><span>+</span><span>, and Na</span><span>+</span><span>). Biomass uptake of base cations is a reduction in netCDR.</span></p>
+            <p><strong>Calcimetry</strong>: Measures the amount of <span>inorganic carbon in soils (primarily in the form of calcium carbonate). Carbonates can be a stable CO</span><span>2 </span><span>reservoir (if non-carbonate feedstocks are applied) but represent a reduction in netCDR compared to export of bicarbonate.</span></p>
+            <p><strong>Dry Combustion</strong><span>: Measures total carbon, total sulfur, and changes in soil organic carbon stocks an important carbon reservoir in agricultural settings.&nbsp;</span></p>
+            <p><strong>Fluid Displacement Test</strong>: Measures bulk density, which is an important agronomic indicator for soil texture, porosity, and compaction and can be used as a proxy for secondary phase formation. Also necessary to <span>calculate soil-based concentration measurements, including soil total carbon, soil inorganic carbon, soil organic carbon, trace elements, etc.</span></p>
+            <p><span><strong>Gravimetric sieving</strong></span><span>: Measures soil texture&mdash;or the relative proportions of clay, silt, and sand. Soil texture influences soil hydrology, CEC, secondary phase formation, and is an important indicator of agronomic health.</span></p>
             <p><strong>Oven drying: </strong>Measures soil moisture. <span>Soil moisture affects secondary phase precipitation, feedstock dissolution rate, and is an indicator of agronomic health.</span></p>
-            <p><span><strong>Falling-head permeability test: </strong></span><span>Measures soil permeability. Soil permeability influences the flow rate of water through the soil, which influences feedstock dissolution rate, transport of weathering products, and secondary phase precipitation.</span></p>
-            <p><span><strong>Acid Digestion:</strong></span><span> Laboratory procedure used to prepare soil samples for elemental composition analysis.</span></p>
+            <p><span><strong>Falling-head permeability test</strong></span><span>: Measures soil permeability. Soil permeability influences the flow rate of water through the soil, which influences feedstock dissolution rate, transport of weathering products, and secondary phase precipitation.</span></p>
+            <p><span><strong>Acid Digestion</strong></span><span>: Laboratory procedure used to prepare soil samples for elemental composition analysis.</span></p>
             <h5>&ldquo;Aqueous Phase Measurements&rdquo; tab</h5>
             <p>In the Aqueous-Phase Sampling Set-up, and Equipment sub-tabs:</p>
             <ol>
@@ -362,7 +361,7 @@
             <p><strong>ICP-MS and ICP-OES:</strong> Measures cation concentrations, core components in estimating the amount of dissolved weathering projects for aqueous-based monitoring approaches.</p>
             <p><strong>Alkalinity titration:</strong> Measures total alkalinity (including bicarbonate, aqueous carbonate and hydroxide), core components in estimating the amount of dissolved weathering products for aqueous-based monitoring approaches.</p>
             <p><strong>Dissolved Inorganic Carbon Analyzer: </strong>Measured dissolved inorganic carbon (DIC), core components in estimating the amount of dissolved weathering products for aqueous-based monitoring approaches.</p>
-            <p><strong>pCO</strong><strong>2</strong><strong> Devices:</strong> Measures partial pressure of CO2, which provides information on the carbonate equilibrium in the system and influences weathering rates.</p>
+            <p><strong>pCO</strong><strong>2</strong><strong> Devices:</strong> Measures partial pressure of <sub>CO2</sub>, which provides information on the carbonate equilibrium in the system and influences weathering rates.</p>
             <p><strong>pH probe: </strong><span>Aqueous phase pH controls the speciation of carbon in the carbonic acid system, which affects netCDR. pH also affects nutrient availability and trace metal mobility.</span></p>
             <p><strong>Ion Chromatography:</strong> Measures dissolved anions <span>(particularly nitrogen and sulfur species), which can be used to constrain the amount of non-carbonic acid weathering and, along with measurements of cations, track alkalinity.</span></p>
             <p><span><strong>Temperature probe: </strong></span><span>Measures aqueous phase temperature, which influences the speciation of the carbonic acid system and the feedstock weathering rate.</span></p>

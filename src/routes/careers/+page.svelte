@@ -32,7 +32,7 @@
 <section id="culture">
 	<h1>Culture</h1>
 	<p>
-		At Cascade Climate, creating a dynamic and fulfilling work environment is at the heart of everything we do. We aim to empower every team member to make meaningful contributions to our mission, recognizing that your personal growth is just as important as the impact we make together. Every individual plays an important role in cultivating an inclusive and thriving culture–we hope you’ll be part of it. 
+		At Cascade Climate, creating a dynamic and fulfilling work environment is at the heart of everything we do. We aim to empower every team member to make meaningful contributions to our mission, recognizing that your personal growth is just as important as the impact we make together. Every individual plays an important role in cultivating an inclusive and thriving culture—we hope you’ll be part of it. 
 	</p>
 	<div class="cards">
 		<div class="card">
@@ -42,12 +42,12 @@
 				Hiring and retaining a diverse workforce is core to our mission. We strive to listen, learn,
 				and foster an environment where our team feels empowered and valued. Externally, we aim to
 				elevate the voices of those disproportionately affected by climate change, making
-				environmental justice a focus of our work.
+				climate justice a focus of our work.
 			</p>
 		</div>
 		<div class="card">
 			<img src={team2Image} alt="collaboration" />
-			<h2>Vibrant Culture</h2>
+			<h2>Life at Cascade</h2>
 			<p>
 				At Cascade, we are building a distinctive culture that reflects the uniqueness of both our mission and the remarkable team we’ve assembled to pursue it. Humility, empathy, and endless curiosity lie at the heart of our culture and the way we think about natural systems. Our hunger to learn gradually leads us to deeply-researched hypotheses and a willingness to take risks as we translate our convictions into bold, think-big initiatives. 
 			</p>
@@ -56,7 +56,7 @@
 			<img src={team3Image} alt="learning" />
 			<h2>Team Collaboration</h2>
 			<p>
-				Collaboration is the backbone of our work. We build strong, trust-based relationships–both across the team and with our external partners. We provide the tools and support to collaborate effectively in any situation. We prioritize regular in-person gatherings, from team retreats to whiteboarding sessions, that strengthen our connective tissue and fuel creativity.
+				Collaboration is the backbone of our work. We build strong, trust-based relationships—both across the team and with our external partners. We provide the tools and support to collaborate effectively in any situation. We prioritize regular in-person gatherings, from team retreats to whiteboarding sessions, that strengthen our connective tissue and fuel creativity.
 			</p>
 		</div>
 	</div>
@@ -78,7 +78,7 @@
 				</p>
 			</div>
 			<div class="step">
-				<h2>Topgrade</h2>
+				<h2>Deep Dive</h2>
 				<p>A deep-dive into your academic and professional background to understand how you’ve become the professional you are today.</p>
 			</div>
 			<div class="step">
