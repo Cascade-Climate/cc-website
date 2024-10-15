@@ -15,7 +15,9 @@
 				<h1>Launching the Community Enhanced Rock Weathering Quantification Standard Process</h1>
 				<p class="date">November 2, 2023</p>
 				<a href="/people/hara-wang" style="color: white;">Hara Wang</a>,
-				<a href="/people/jenny-mills" style="color: white;">Jenny Mills</a>,
+				<a href="/people/jenny-mills" style="color: white;">Jenny Mills</a>
+				<hr>
+				<p><b>October 16, 2024 Note</b>: Cascade has since changed course as regards the near-term development of an industry standard for quantifying carbon removal via enhanced rock weathering deployments. Our current perspective is captured in <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗ </em></a>. We coordinated a very productive community process that produced strong alignment on the building blocks of rigorous quantification practices. However, we reached the conclusion that premature standardization—encoding generalizable rules that apply across all settings—posed risks at a moment when the ERW field is better served by a pre-standardization period and a measure of flexibility to adopt tailored quantification approaches in different settings. We are publishing foundational guidance on rigorous quantification to help ensure a common core of consistency in quantification as the community scales up deployment-driven learning.</p>
 			</div>
 		</div>
 	</section>

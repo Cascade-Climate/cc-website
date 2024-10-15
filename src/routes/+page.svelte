@@ -9,6 +9,7 @@
 	import cost from '$lib/images/nature/cost.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
 	import heroPhoto2 from '$lib/images/nature/heroPhoto2.webp';
+	import heroPhoto3 from '$lib/images/nature/heroPhoto3.webp';
 </script>
 
 <svelte:head>
@@ -26,7 +27,7 @@
 		</h1>
 	</section>
 	<section id="about">
-		<img src={heroPhoto} alt="Cascade Climate" />
+		<img src={heroPhoto3} alt="Cascade Climate" />
 		<div>
 			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
