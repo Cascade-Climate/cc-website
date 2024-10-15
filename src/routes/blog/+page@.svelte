@@ -24,7 +24,7 @@
 		</div>
 		<div class="post">
 			<h1>
-				<a href="/blog/foundations-for-a-healthy-erw-market-cycle">
+				<a href="/blog/erw-measurement-cost-stack-estimator-and-database">
 					ERW MRV cost estimator and database
 				</a>
 			</h1>

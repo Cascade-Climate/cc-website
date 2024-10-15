@@ -3,6 +3,7 @@
 	import deploymentledlearning from '$lib/images/blog/deploymentledlearning.webp';
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
+	import conformance from '$lib/images/blog/conformance.webp';
 </script>
 
 <section class="intro">
@@ -17,8 +18,8 @@
 		<img src={erw} alt="Enhanced Rock Weathering" />
 	</div>
 	<div class="links">
-		<PDFLink link="/example.pdf">Foundations - full document↗</PDFLink>
-		<PDFLink link="/example.pdf">Foundations - technical summary↗</PDFLink>
+		<PDFLink link="/Cascade Climate_Foundations for Carbon Dioxide Removal Quantification in ERW Deployments.pdf">Foundations - full document↗</PDFLink>
+		<PDFLink link="/Cascade Climate_Foundations Technical Summary.pdf">Foundations - technical summary↗</PDFLink>
 	</div>
 </section>
 <ScrollNav />
@@ -66,8 +67,8 @@
         <p><strong>Far-Field Zone (FFZ)</strong>: The transport path of the weathering flux from leaving the NFZ, through the full soil profile and into groundwater flow paths, river systems, and ultimately the ocean.</p>
     </li>
 </ul>
-<p><strong>[INSERT CONFORMANCE ZONES]</strong>
-</p>
+		<img src={conformance} alt="Conformance Zone (Figure 1)" />
+<p></p>
 <p>The single most important step in CDR monitoring and quantification is to “<strong>know your system and measure accordingly</strong>”. Practitioners should do an initial site characterization study of soil parameters, hydrologic regimes, crop systems, historic pH control practices, flow paths, and similar factors that could impact net carbon drawdown. Then, practitioners can design quantification methodologies and justify measurement choices based on that.</p>
 <p>Quantifying net carbon removal involves combining data from many different imperfect “windows into the system”—geochemical measurements, tracers, and models—in seeking to assemble a comprehensive picture of the full set of carbon and cation fluxes. We can learn a lot about the system through measurements– but what is even more critical is the sharing of the underlying data to advance public research. <b>Through data sharing, the ERW field can truly unlock the deployment-led learning cycle.</b></p>
 <p>MRV planning can be challenging in practice, and significant care and expertise needs to go into doing it well. For example:</p>
@@ -112,19 +113,17 @@
 <p>"Foundations" provides clarity around what differentiates more versus less rigorous quantification in ERW deployments in the coming years. Because commercial deployments will be one key avenue for deployment-driven learning, we are actively working with buyers, project developers, and credit issuers to incorporate "Foundations" guidance and help ensure that all methodologies and protocols are rooted in a common core of quantification rigor.</p>
 <p>While the “Foundations” document represents an assessment at a specific moment in time, we do not intend for the outcome of this community effort to be a static assessment with fixed recommendations; instead, Cascade hopes to regularly contribute to the learning through publishing follow-on case studies and analyses that reflect progress in the science, methods and practices of ERW deployments.</p>
 	</section>
-
-
 	<section id="links">
 		<h1>Links</h1>
 		<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments: Technical Summary↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Responses to feedback collected during Foundations comment period↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 2: Foundations research and development (R&D) priorities↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Appendix 3: Foundations Working Group summaries↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Figure 1: Conformance Zones↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the Near Field Zone term balance↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent" style="display: block; text-align: left;">Table 2: Considerations for the Far Field Zone↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Foundations for Carbon Dioxide Removal Quantification in ERW Deployments.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Foundations Technical Summary.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments: Technical Summary↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Appendix 1_ Anonymized Foundations Working Group and Practitioner Comment Period Feedback.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Responses to feedback collected during Foundations comment period↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Appendix 2_ Foundations R&D Priorities.pdf" variant="accent" style="display: block; text-align: left;">Appendix 2: Foundations research and development (R&D) priorities↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Appendix 3_ Working Group Summaries.pdf" variant="accent" style="display: block; text-align: left;">Appendix 3: Foundations Working Group summaries↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Conformance Zones Illustration.pdf" variant="accent" style="display: block; text-align: left;">Figure 1: Conformance Zones↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Table 1. Components of the NFZ term balance.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the Near Field Zone term balance↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Table 2. Considerations for the FFZ.pdf" variant="accent" style="display: block; text-align: left;">Table 2: Considerations for the Far Field Zone↗</PDFLink>
 		</div>
 	</section>
 

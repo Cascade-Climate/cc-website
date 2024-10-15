@@ -70,7 +70,7 @@
 				<p>
 					We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
 				</p>
-				<a href="https://emce.cascadeclimate.org/">Learn More</a>
+				<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 			</div>
 		</div>
 	</section>
