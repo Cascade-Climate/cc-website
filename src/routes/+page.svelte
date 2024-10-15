@@ -9,6 +9,8 @@
 	import cost from '$lib/images/nature/cost.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
 	import heroPhoto2 from '$lib/images/nature/heroPhoto2.webp';
+	import heroPhoto3 from '$lib/images/nature/heroPhoto3.webp';
+	import heroPhoto4 from '$lib/images/nature/heroPhoto4.webp';
 </script>
 
 <svelte:head>
@@ -26,11 +28,11 @@
 		</h1>
 	</section>
 	<section id="about">
-		<img src={heroPhoto} alt="Cascade Climate" />
+		<img src={heroPhoto4} alt="Cascade Climate" />
 		<div>
 			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
-				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Interventions that harness and enhance natural systems can bring advantages of scale and cost that will often make them among our best—and sometimes only—options to prevent or undo deep harms that decarbonization alone cannot address. We need to accelerate our learning about these options if we seek to curb calamitous near-term warming, restore a preindustrial atmosphere, or stave off catastrophic sea-level rise and planetary tipping points.
+				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Interventions that enhance natural systems can bring advantages of scale and cost that will often make them among our best—and sometimes only—options to avoid deep harms that decarbonization alone cannot address. We need to accelerate our learning about these options if we seek to curb near-term warming, restore a preindustrial atmosphere, or stave off catastrophic sea-level rise and planetary tipping points.
 			</p>
 			<p>
 				Realizing these opportunities involves overcoming complex systemic bottlenecks. Quantifying the full impact of natural system interventions can be particularly difficult, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions can offer powerful climate benefits as well as co-benefits for local economies and ecosystems; yet these benefits are often public and intangible ones, requiring creative and bold new modes of financing and public support. These interlaced challenges can leave natural system interventions at an impasse, struggling to start the learn-by-doing flywheel.

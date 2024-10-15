@@ -13,6 +13,8 @@
 				<p class="date">December 11, 2023</p>
 				<a href="/people/john-sanchez" style="color: white;">John Sanchez</a>,
 				<a href="/people/dai-ellis" style="color: white;">Dai Ellis</a>
+				<hr>
+				<p><b>October 16, 2024 Note</b>: Note: While most of the thinking captured in the blog post above still holds, Cascade has since changed course as regards the near-term development of an industry standard for quantifying carbon removal via enhanced rock weathering deployments. Our current perspective is captured in <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗ </em></a>. We coordinated a very productive community process that produced strong alignment on the building blocks of rigorous quantification practices. However, we reached the conclusion that premature standardization—encoding generalizable rules that apply across all settings—posed risks at a moment when the ERW field is better served by a pre-standardization period and a measure of flexibility to adopt tailored quantification approaches in different settings. We are publishing foundational guidance on rigorous quantification to help ensure a common core of consistency in quantification as the community scales up deployment-driven learning.</p>
 			</div>
 		</div>
 	</section>
@@ -37,17 +39,14 @@
 				href="https://greatunwind.substack.com/p/leveling-the-playing-field-for-open"
 				>previously written about</a
 			>
-			but generally has a more moderate case of these<sup
+			but on some dimensions may have a more moderate case of these<sup
 				><a id="citation2" href="#footnote2">2</a></sup
 			>. The biggest source of messiness for ERW—and the subject of
 			<a
 				target="_blank"
 				href="https://www.reuters.com/sustainability/land-use-biodiversity/can-enhanced-rock-weathering-weather-greater-scrutiny-solution-climate-change-2023-11-01/"
 				>most current public scrutiny</a
-			>—lies in the challenge of rigorously quantifying carbon removal amidst uncertainties. While
-			ERW’s quantification challenges may be somewhat less far-reaching than for some other
-			open-system CDR pathways, there are nonetheless quite a few drivers of uncertainty that require
-			more scientific study and that must be addressed properly in quantifying ERW.
+			>—lies in the challenge of rigorously quantifying carbon removal amidst uncertainties. There exists quite a few drivers of uncertainty that require more scientific study and that must be addressed properly in quantifying ERW.
 		</p>
 		<p>
 			To the extent that some observers are feeling concerned or anxious about the advent of
@@ -292,26 +291,11 @@
 	<h3>Footnotes</h3>
 	<ol>
 		<li id="footnote1">
-			As a form of soil pH management and substitute for traditional agricultural liming, ERW offers
-			an uncommonly powerful set of co-benefits—particularly agronomic co-benefits that result in
-			lower input costs and often substantially higher yields for farmers. ERW is already
-			substantially cheaper than DAC and many other infant-stage durable CDR pathways, and very
-			likely has a faster-than-DAC pathway to the $100-200/ton range in coming years, with prices
-			at—or in some settings even below—$100/ton appearing plausible in the longer range. With
-			direct relevance for the agriculture, mining, and transport/logistics industries, farmers and
-			heavy industry players will get more deeply involved in ERW over time. This will help create
-			political constituencies and growing policy tailwinds. On a global scale, ERW is particularly
-			well suited to deployment across large parts of the Global South, with the opportunity to
-			improve farmer livelihoods while helping to ensure that the economic returns from a
-			potentially enormous new industry don’t flow predominately to the Global North.
+			As a form of soil pH management and substitute for traditional agricultural liming, ERW offers a set of potential agronomic co-benefits that could prove powerful for farmers in many cases. While ERW prices are currently in the hundreds-of-dollars range, there are many clear opportunities for cost reduction over time. With direct relevance for the agriculture, mining, and transport/logistics industries, farmers and heavy industry players will get more deeply involved in ERW over time. This can help create political constituencies and growing policy tailwinds. On a global scale, ERW is particularly well suited to deployment across large parts of the Global South, with the opportunity to improve farmer livelihoods while helping to ensure that the economic returns from a potentially enormous new industry don’t flow predominately to the Global North.
 			<a href="#citation1">↩</a>
 		</li>
 		<li id="footnote2">
-			For example, there are some legitimate questions about ecosystem impacts (e.g., the impacts of
-			trace heavy metals in olivine) and yet the ecological risks are very manageable. ERW also does
-			not face the same kind of permitting and international governance questions that bedevil some
-			other open-system methods, because deployment happens on private agricultural land (as opposed
-			to, e.g., the open ocean).
+			For example, ERW does not face the same kind of permitting and international governance questions that bedevil some other open-system methods, because deployment happens on private agricultural land (as opposed to, e.g., the open ocean).
 			<a href="#citation2">↩</a>
 		</li>
 	</ol>
