@@ -1,22 +1,21 @@
 <script>
-	import daiEllis from '$lib/images/team/dai-ellis.webp';
-	import jenniferMills from '$lib/images/team/jennifer-mills.webp';
-	import johnSanchez from '$lib/images/team/john-sanchez.webp';
-	import haraWang from '$lib/images/team/hara-wang.webp';
-	import vilasRao from '$lib/images/team/vilas-rao.webp';
-	
-	import arielleLok from '$lib/images/team/arielle-lok.webp';
-	import alisonTune from '$lib/images/team/alison-tune.webp';
-	import bradRochlin from '$lib/images/team/brad-rochlin.webp';
-	import alexPrice from '$lib/images/team/alex-price.webp';
-	import jamieNewman from '$lib/images/team/jamie-newman.webp';
-	import noahAnderson from '$lib/images/team/noah-anderson.webp';
-	import noemmaOlagaray from '$lib/images/team/noemma-olagaray.webp';
-	import prithaGhosh from '$lib/images/team/pritha-ghosh.webp';
-	import rachelSmith from '$lib/images/team/rachel-smith.webp';
-	import tannisThorlakson from '$lib/images/team/tannis-thorlakson.webp';
-	import chrisReinhard from '$lib/images/team/chris-reinhard.webp';
-	import noahPlanavsky from '$lib/images/team/noah-planavsky.webp';
+	import daiEllis from '$lib/images/people/dai-ellis.webp';
+	import jenniferMills from '$lib/images/people/jennifer-mills.webp';
+	import johnSanchez from '$lib/images/people/john-sanchez.webp';
+	import haraWang from '$lib/images/people/hara-wang.webp';
+	import vilasRao from '$lib/images/people/vilas-rao.webp';
+	import arielleLok from '$lib/images/people/arielle-lok.webp';
+	import alisonTune from '$lib/images/people/alison-tune.webp';
+	import bradRochlin from '$lib/images/people/brad-rochlin.webp';
+	import alexPrice from '$lib/images/people/alex-price.webp';
+	import jamieNewman from '$lib/images/people/jamie-newman.webp';
+	import noahAnderson from '$lib/images/people/noah-anderson.webp';
+	import noemmaOlagaray from '$lib/images/people/noemma-olagaray.webp';
+	import prithaGhosh from '$lib/images/people/pritha-ghosh.webp';
+	import rachelSmith from '$lib/images/people/rachel-smith.webp';
+	import tannisThorlakson from '$lib/images/people/tannis-thorlakson.webp';
+	import chrisReinhard from '$lib/images/people/chris-reinhard.webp';
+	import noahPlanavsky from '$lib/images/people/noah-planavsky.webp';
 
 	import anilSoni from '$lib/images/people/anil-soni.webp';
 	import antoniusGagern from '$lib/images/people/antonius-gagern.webp';
