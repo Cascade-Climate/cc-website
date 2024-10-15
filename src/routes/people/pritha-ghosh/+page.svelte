@@ -12,7 +12,7 @@
 </svelte:head>
 <div class="team-member">
 	<div class="member-info">
-		<h1>Pritha Ghoshe</h1>
+		<h1>Pritha Ghosh</h1>
 		<div class="details">
 			<span>Program Director</span>
 			<div class="socials">
