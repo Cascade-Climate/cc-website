@@ -58,10 +58,10 @@
             <ul>
             <li><span><strong>Treatment Plot</strong></span><span>: a less densely monitored area of the deployment where ERW treatment is applied (the value is preset to 90%).</span></li>
             <li><span><strong>Densely Monitored Plot</strong></span><span>: a more densely monitored area of the deployment where ERW treatment is applied (the value is preset to 5%).</span></li>
-            <li><span><strong>Control Plot</strong></span><span>: a monitored area of the deployment corresponding to business as usual counterfactual or negative controls (the value is preset to 5%).</span></li>
+            <li><span><strong>Control Plot</strong></span><span>: a monitored area of the deployment corresponding to business-as-usual counterfactual or negative controls (the value is preset to 5%).</span></li>
             <li><span><strong>Research Plot</strong></span><span>: a densely monitored area used for advancing specific outstanding research priorities (the value is preset to 0%).</span></li>
             </ul>
-            <p>Users can choose to input different analytical techniques, cost ranges, time frequencies, sampling density, and sampling depth for different types of plots described above.&nbsp;</p>
+            <p>Users can choose to input different analytical techniques, cost ranges, time frequencies, sampling density, and sampling depth for the different types of plots described above.&nbsp;</p>
             <h5>Rock, Haul, and Spread</h5>
             <p><span>The &ldquo;Rock, Haul, Spread&rdquo; tab computes the cost of the raw feedstock, grinding and milling required to adjust the feedback to its desired grain size, transportation of the feedstock to the deployment site, and spreading the feedstock on soils. Within the transportation category, the tab allows users to choose a subset of long-haul, last-mile trucking, and terminal options, and adjust distances and cost ranges for each.&nbsp;</span></p>
             <h5>Feedstock Characterization</h5>
@@ -103,20 +103,20 @@
             <p></p>
             <h5>Weathering Curve&nbsp;</h5>
             <p><span>In the &ldquo;Weathering Curve&rdquo; tab, users can adjust a logarithmic factor to generate a time-integrated estimate of feedstock weathering. This rudimentary simplification of how feedstock dissolves should only be used as a starting point.&nbsp;</span></p>
-            <p><span>In the case that users have input 2 or above for the &ldquo;Numbers of Applications&rdquo; field in the &ldquo;Field &amp; Plot Design&rdquo; tab, the &ldquo;Weathering Curve&rdquo; tab will display the option to adjust the weathering factor for each of the applications independently. This is to reflect that, reapplication of feedstocks on the same field, especially multiple reapplications, will likely not have the same CDR efficiency as the prior application(s), e.g.: due to the fact that prior application(s) have already amended the pH of the soil to some degree.</span></p>
+            <p><span>In the case that users have input 2 or above for the &ldquo;Numbers of Applications&rdquo; field in the &ldquo;Field &amp; Plot Design&rdquo; tab, the &ldquo;Weathering Curve&rdquo; tab will display the option to adjust the weathering factor for each of the applications independently. This is to reflect the fact that reapplication of feedstocks on the same field, especially multiple reapplications, will likely not have the same CDR efficiency as the prior application(s).</span></p>
             <p><span>In addition, when there are 2 or more applications, EMCE assumes that the first application takes place at </span><span><em>t</em></span><span> = 0, and any subsequent re-application is spread evenly across the project period (i.e.: specifying &ldquo;2&rdquo; under &ldquo;Number of Feedstock Applications&rdquo; when &ldquo;Project Period in Years&rdquo; is &ldquo;10&rdquo; would signify an application at </span><span><em>t</em></span><span> = 0 and </span><span><em>t</em></span><span> = 5.</span></p>
             <p><span>We want to be super clear that the &ldquo;Weathering Curve&rdquo; tab is used to generate a numerical &ldquo;Potential CDR&rdquo; estimate describing the release of base cations into solution upon feedstock dissolution over time. This is not netCDR. Users should account for the reduction in netCDR as a result of transient and permanent alkalinity sinks within the NFZ, carbon and cation losses in the FFZ, and upstream and ongoing life cycle emissions in the &ldquo;Losses &amp; Discounts&rdquo; tab.</span></p>
             <h5>Losses and Discounts&nbsp;</h5>
-            <p><span>Users can input estimates of loss terms, as a percentage reduction of &ldquo;Potential CDR&rdquo;. These loss terms include the following. Section 8 of &ldquo;</span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener">Foundations↗</a><span>&rdquo; provides an overview of the state of science and guidance for accounting these loss terms in near-term deployments.</span></p>
+            <p><span>Users can input estimates of loss terms, as a percentage reduction of &ldquo;Potential CDR&rdquo;. These loss terms include the following. Section 8 of &ldquo;</span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener">Foundations↗</a><span>&rdquo; provides an overview of the state of science and guidance for accounting these loss terms in near-term deployments. These loss terms include the following:</span></p>
             <ul>
             <li><span>Within the NFZ: pH/Non-Carbonic Acid Weathering, Cation Sorption, Secondary Carbonate Formation, Secondary Silicate Formation, Biomass Uptake of Base Cations&nbsp;</span></li>
             <li><span>Within the FFZ: netCDR loss in rivers and in oceans</span></li>
             <li><span>Upstream and ongoing lifecycle emissions</span></li>
-            <li><span>netCDR in counterfactual scenarios</span></li>
+            <li><span>NetCDR in counterfactual scenarios</span></li>
             </ul>
             <p><span>These loss terms are additive, i.e. the percentages first are added together, and generated CDR in the deployment is reduced by the resulting sum.</span></p>
             <p><span>In addition, users can also input an uncertainty discount, capturing the statistical error of the end-to-end quantification. This percentage is deducted from the generated CDR after the above loss terms are first taken into account (i.e., if losses total 20%, and the uncertainty discount is 10%, netCDR will be (1-20%) x (1-10%) = 72% of potential CDR.)</span></p>
-            <p><span>All of these loss and discounts terms are user inputs and explicitly not computed from variables in other parts of the estimator.</span></p>
+            <p><span>All of these loss and discount terms are user inputs and explicitly not computed from variables in other parts of the estimator.</span></p>
             <h5>Sidebar: Quick Overview of Near-Field Zone MRV</h5>
             <p><span>Before we deep-dive into the different tabs, it may be helpful to do a very quick recap of what we mean by Aqueous Phase Measurements and Solid Phase Measurements.</span></p>
             <p><span><strong>Aqueous Phase Measurements </strong></span><span> involve collecting and analyzing water samples, including soil porewater (via lysimeters), drainage waters, or water from downstream catchments. They can provide a direct measurement of dissolved weathering products as they are generated in, and exported from, the NFZ.</span></p>
@@ -251,13 +251,13 @@
             <ul>
             <li><span>All currency units are in USD unless otherwise specified.&nbsp;</span></li>
             <li><span>Rock, Hauling, and Spreading costs, as well as Feedstock Characterization costs, are repeated for each application with the assumption that feedstocks are bought at the same pricing with the same transport route to the field. We opted for this option rather than a large upfront purchase (with storage), given that many current day ERW deployments optimize for short quarry-to-field distances and lean stores of feedstock on site.&nbsp;</span></li>
-            <li><span>Measurement and verification costs are spreaded over the entire project period.</span></li>
+            <li><span>Measurement and verification costs are spread over the entire project period.</span></li>
             </ul>
         </section>
         <section id="cost-database-call-to-action">
 			<h1>Cost Database/CTA</h1>
             <h3>3: What is the cost database and how did we collect the cost information for it?</h3>
-            <p><span>Certain low and high unit cost ranges are set as preset inputs in the web app. Presets are provided if a significant number of cost quotes have been collected for that particular analytical approach (refer to the </span><a href="https://docs.google.com/spreadsheets/d/1mWgcD9wqkQpAhdb79h4AymDnmuCPAPM_mQFrN60RC2o/edit?gid=0#gid=0" target="_blank" rel="noopener">cost database</a><span> for the full set of cost quotes). Low and high unit cost presets represent the low and high values amongst the collected cost quotes, after outliers are excluded.</span></p>
+            <p><span>Certain low and high unit cost ranges are set as preset inputs in the web app. Presets are provided if a significant number of cost quotes have been collected for that particular analytical approach (refer to the </span><a href="https://docs.google.com/spreadsheets/d/1mWgcD9wqkQpAhdb79h4AymDnmuCPAPM_mQFrN60RC2o/edit?gid=0#gid=0" target="_blank" rel="noopener">cost database </a><span> for the full set of cost quotes). Low and high unit cost presets represent the low and high values amongst the collected cost quotes, after outliers are excluded.</span></p>
             <p><span>We gathered cost data through email inquiries, phone interviews, and web scraping in the process of building the cost database. We collected 100+ direct, non-public cost quotes from academic and commercial laboratories across three continents, and a further 1,000+ cost quotes from publicly available sources. We list the data source for all the quotes. This cost quote collection is still an ongoing process.</span></p>
             <p><span>One limitation of this approach is that the available quotes in the cost database tend to be &ldquo;&agrave; la carte&rdquo; pricing, and do not account for volume-based discounts, or cost reduction as a result of vertically integrating or co-locating analytical laboratories close to the deployment site. The effect of such cost optimization warrants further exploration.</span></p>
             <p><span>In order to produce more accurate cost information, we reached out to a cross-section of ERW project developers. However, at this time, given that the number of cost datasets obtained from project developers is still low, we have chosen not to publish any averaged or ranged data on measurement costs from ERW project developers.&nbsp;</span></p>
@@ -283,7 +283,7 @@
             <p><span><strong>Densely Monitored Plot</strong></span><span>: Percentage of total area that is the densely monitored area of the deployment where ERW treatment is applied.</span></p>
             <p><span><strong>Control Plot</strong></span><span>: Percentage of the total area that is the monitored area of the deployment corresponding to business as usual (counterfactual) plots or negative controls.</span></p>
             <p><strong>Research Plot:</strong>  Percentage of the total area that is the densely monitored area used for advancing specific research priorities. Excluded from netCDR quantification.</p>
-            <h5>&ldquo;Losses &amp; Discounts&rdquo; tab</h5>
+            <h5>&ldquo;Losses &amp; Discount&rdquo; tab</h5>
             <p><span><strong>Lifecycle Emissions (% of Potential CDR): </strong></span><span>Percent reduction in potential CDR due to upstream and ongoing life cycle emissions. This deduction is taken at initial application (t = 0) and at the time of subsequent reapplications.</span></p>
             <p><span><strong>Control Losses:</strong></span><span> Percent reduction in potential CDR due to deductions from the counterfactual baseline netCDR. This deduction is taken over the project period, proportional to the potential CDR.&nbsp;</span></p>
             <p><span><strong>Cation Sorption Losses: </strong></span><span>Percent reduction in potential CDR due to adsorption of cations onto soil particle surfaces. This deduction is taken over the project period, proportional to the potential CDR.&nbsp;</span></p>
@@ -299,7 +299,7 @@
             <p><span><strong>Long Haul Transportation Distance: </strong></span><span>Distance of all rail, river barge, and ocean barge transport. Input value can be in any unit of distance as long as associated cost values use the same unit of distance.</span></p>
             <p><span><strong>Last Mile Trucking Distance: </strong></span><span>Distance of last-mile trucking., Input value can be in any unit of distance as long as associated cost values use the same unit of distance.</span></p>
             <p><strong>Raw Feedstock Cost Per Tonne: </strong>Unit cost of the feedstock material before any processing, in currency unit per tonne.</p>
-            <p><strong>Grinding &amp; Milling Cost Per Tonne</strong> Unit cost of any processing to adjust the feedstock material to the desired grain size, in currency unit per tonne.</p>
+            <p><strong>Grinding &amp; Milling Cost Per Tonne</strong>: Unit cost of any processing to adjust the feedstock material to the desired grain size, in currency unit per tonne.</p>
             <p><strong>Long Haul Transportation Unit Cost: </strong>Unit cost of long haul transportation in unit of currency per tonne of feedstock per unit of distance.</p>
             <p><strong>Last Mile Trucking Unit Cost: </strong>Unit cost of last mile trucking in currency unit per tonne of feedstock per unit of distance.</p>
             <p><strong>Terminal In/Out Costs:</strong> Sum of all port terminal handling costs for a deployment, in currency unit.</p>

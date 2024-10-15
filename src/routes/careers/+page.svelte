@@ -30,7 +30,7 @@
 	</div>
 </section>
 <section id="culture">
-	<h1>Culture</h1>
+	<h1>Life at Cascade</h1>
 	<p>
 		At Cascade Climate, creating a dynamic and fulfilling work environment is at the heart of everything we do. We aim to empower every team member to make meaningful contributions to our mission, recognizing that your personal growth is just as important as the impact we make together. Every individual plays an important role in cultivating an inclusive and thriving culture—we hope you’ll be part of it. 
 	</p>
@@ -47,7 +47,7 @@
 		</div>
 		<div class="card">
 			<img src={team2Image} alt="collaboration" />
-			<h2>Life at Cascade</h2>
+			<h2>Vibrant Culture</h2>
 			<p>
 				At Cascade, we are building a distinctive culture that reflects the uniqueness of both our mission and the remarkable team we’ve assembled to pursue it. Humility, empathy, and endless curiosity lie at the heart of our culture and the way we think about natural systems. Our hunger to learn gradually leads us to deeply-researched hypotheses and a willingness to take risks as we translate our convictions into bold, think-big initiatives. 
 			</p>
