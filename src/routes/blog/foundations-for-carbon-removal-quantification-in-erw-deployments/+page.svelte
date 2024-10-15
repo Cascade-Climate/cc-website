@@ -18,7 +18,7 @@
 		<img src={erw} alt="Enhanced Rock Weathering" />
 	</div>
 	<div class="links">
-		<PDFLink link="/Cascade Climate_Foundations for Carbon Dioxide Removal Quantification in ERW Deployments.pdf">Foundations - full document↗</PDFLink>
+		<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">Foundations - full document↗</PDFLink>
 		<PDFLink link="/Cascade Climate_Foundations Technical Summary.pdf">Foundations - technical summary↗</PDFLink>
 	</div>
 </section>
@@ -116,13 +116,13 @@
 	<section id="links">
 		<h1>Links</h1>
 		<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-			<PDFLink link="/Cascade Climate_Foundations for Carbon Dioxide Removal Quantification in ERW Deployments.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</PDFLink>
+			<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Foundations Technical Summary.pdf" variant="accent" style="display: block; text-align: left;">Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments: Technical Summary↗</PDFLink>
-			<PDFLink link="/Cascade Climate_Appendix 1_ Anonymized Foundations Working Group and Practitioner Comment Period Feedback.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Responses to feedback collected during Foundations comment period↗</PDFLink>
+			<PDFLink link="/CC_Appendix 1_ Anonymized Foundations Feedback.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Responses to feedback collected during Foundations comment period↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Appendix 2_ Foundations R&D Priorities.pdf" variant="accent" style="display: block; text-align: left;">Appendix 2: Foundations research and development (R&D) priorities↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Appendix 3_ Working Group Summaries.pdf" variant="accent" style="display: block; text-align: left;">Appendix 3: Foundations Working Group summaries↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Conformance Zones Illustration.pdf" variant="accent" style="display: block; text-align: left;">Figure 1: Conformance Zones↗</PDFLink>
-			<PDFLink link="/Cascade Climate_Table 1. Components of the NFZ term balance.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the Near Field Zone term balance↗</PDFLink>
+			<PDFLink link="/CC_Table 1. Components of the NFZ term balance.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the Near Field Zone term balance↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Table 2. Considerations for the FFZ.pdf" variant="accent" style="display: block; text-align: left;">Table 2: Considerations for the Far Field Zone↗</PDFLink>
 		</div>
 	</section>
