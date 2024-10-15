@@ -2,16 +2,72 @@
 {
 	"navItems": [
 		{
-			"url": "/team",
-			"label": "Team"
+			"label": "About",
+			"url": "/about-us",
+			"children": [
+				{
+					"label": "About Us",
+					"url": "/about-us"
+				},
+				{
+					"label": "FAQ",
+					"url": "/faq"
+				}
+			]
 		},
 		{
-			"url": "/faq",
-			"label": "FAQ"
+			"label": "Our Work",
+			"url":"/our-work",
+			"children": [
+				{
+					"label": "Overview",
+					"url": "/our-work"
+				},
+				{
+					"label": "Enhanced Rock Weathering",
+					"url": "/our-work#erw"
+				},
+				{
+					"label": "Oceans and Rivers",
+					"url": "/our-work#oceansrivers"
+				},
+				{
+					"label": "Blog",
+					"url": "/blog"
+				}
+			]
 		},
 		{
-			"url": "/blog",
-			"label": "Blog"
+			"label": "People",
+			"url": "/people",
+			"children": [
+				{
+					"label": "Team",
+					"url": "/people#team"
+				},
+				{
+					"label": "Contributors",
+					"url": "/people#contributors"
+				},
+				{
+					"label": "Board of Directors",
+					"url": "/people#board"
+				}
+			]
+		},
+		{
+			"label": "Join",
+			"url": "/careers",
+			"children": [
+				{
+					"label": "Newsletter",
+					"url": "https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1"
+				},
+				{
+					"label": "Careers",
+					"url": "/careers"
+				}
+			]
 		}
 	],
 	"subscribeUrl": "https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1",

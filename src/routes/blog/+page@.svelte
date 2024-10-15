@@ -9,6 +9,36 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">
+					Foundations for Carbon Dioxide Removal Quantification in ERW Deployments
+				</a>
+			</h1>
+			<p>
+				After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
+			</p>
+			<p class="details">
+				<span class="date">10/16/2024</span>
+				·
+				<span class="read-time">7 MIN READ, 60+ MIN PDFs</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
+				<a href="/blog/erw-measurement-cost-stack-estimator-and-database">
+					ERW MRV cost estimator and database
+				</a>
+			</h1>
+			<p>
+				We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
+			</p>
+			<p class="details">
+				<span class="date">10/16/2024</span>
+				·
+				<span class="read-time">27 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/foundations-for-a-healthy-erw-market-cycle">
 					Foundations for a Healthy ERW Market Cycle
 				</a>

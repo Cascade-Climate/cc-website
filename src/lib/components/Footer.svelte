@@ -4,7 +4,11 @@
 </script>
 
 <footer>
-	<a class="button" href={config.subscribeUrl} target="_blank">Subscribe</a>
+	<a
+		class="button"
+		href={'https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1'}
+		target="_blank">Subscribe</a
+	>
 	<a class="contact" href={'mailto:' + config.contactAddress} target="_blank">
 		{config.contactAddress}
 	</a>
@@ -74,7 +78,6 @@
 	}
 
 	@media (max-width: 660px) {
-
 		footer {
 			padding: 2.4rem 2rem;
 		}

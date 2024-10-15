@@ -3,24 +3,46 @@
 	export let callbackFn;
 
 	import config from '$lib/config.json';
+
+	let opened = config.navItems.map(() => false);
 </script>
 
 <div id="nav-modal" class:active>
 	<nav>
-		{#each config.navItems as item, i (item.url)}
-			<a on:click={callbackFn} class={'item' + i} href={item.url}>{item.label}</a>
+		{#each config.navItems as item, i}
+			<button
+				on:click={() => {
+					opened[i] = !opened[i];
+				}}
+				class="nav-item item{i}"
+				tabindex="0"
+			>
+				<span>
+					{item.label}
+				</span>
+				<div class="subnav" class:open={opened[i]}>
+					{#each item.children as subitem}
+						<a
+							target={subitem.external ? '_blank' : '_self'}
+							href={subitem.url}
+							on:click={callbackFn}
+						>
+							{subitem.label}
+						</a>
+					{/each}
+				</div>
+			</button>
 		{/each}
-		<a class={'item' + config.navItems.length} href={config.subscribeUrl}>Subscribe</a>
 	</nav>
 </div>
 
 <style>
 	#nav-modal {
 		position: fixed;
-		top: 0;
+		top: 4rem;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		overflow-y: auto;
 		display: flex;
 		color: var(--color-dark);
 		background-color: var(--color-light);
@@ -46,25 +68,61 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
 	}
 
 	nav a {
-		color: transparent;
+		color: var(--color-light);
 		text-decoration: none;
-		margin: 1rem;
-		transition: all 0.2s;
-		transition-delay: 0.36s;
-		transform: translateY(1rem);
-		font-size: 24px;
+	}
+
+	button {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	.nav-item {
+		position: relative;
+		color: var(--color-light);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0 2rem;
+		width: 100%;
+		border-top: 1px solid var(--color-light);
+		font-size: 1.2rem;
+		background-color: var(--color-dark);
+	}
+
+	.nav-item span {
+		padding: 1rem 0;
+	}
+
+	.nav-item:last-child {
+		border-bottom: 1px solid var(--color-dark);
+	}
+
+	.subnav {
+		display: none;
+		background-color: var(--color-accent);
+		padding: 0.6rem 0.4rem;
+		gap: 1rem;
+		top: calc(100%);
+		width: 100vw;
+		flex-direction: column;
+		align-items: center;
+		border-bottom: 4px solid var(--color-highlight);
+		border-top: 1px solid var(--color-light);
+	}
+	.subnav.open {
+		display: flex;
 	}
 
 	nav a:hover {
 		text-decoration: underline;
-	}
-
-	.active a {
-		transform: translateY(0);
-		color: inherit;
 	}
 
 	.item0 {

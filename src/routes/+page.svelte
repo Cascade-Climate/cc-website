@@ -1,12 +1,14 @@
 <script>
-	import wavesPhoto from '$lib/images/waves.webp';
-	import asteraLogo from '$lib/images/supporters/astera.webp';
-	import czLogo from '$lib/images/supporters/chan-zuckerberg.webp';
-	import granthamLogo from '$lib/images/supporters/grantham.webp';
-	import kissickLogo from '$lib/images/supporters/kissick.webp';
-	import mcgovernLogo from '$lib/images/supporters/mcgovern.webp';
-	import quadratureLogo from '$lib/images/supporters/quadrature.webp';
-	import spitzerLogo from '$lib/images/supporters/spitzer.webp';
+	import heroPhoto from '$lib/images/hero.webp';
+	import erwPhoto from '$lib/images/nature/erw.webp';
+	import farm1 from '$lib/images/nature/farm1.webp';
+	import farm2 from '$lib/images/nature/farm2.webp';
+	import ocean1 from '$lib/images/nature/ocean1.webp';
+	import ocean2 from '$lib/images/nature/ocean2.webp';
+	import data from '$lib/images/nature/data.webp';
+	import cost from '$lib/images/nature/cost.webp';
+	import foundations from '$lib/images/nature/foundations.webp';
+	import heroPhoto2 from '$lib/images/nature/heroPhoto2.webp';
 </script>
 
 <svelte:head>
@@ -17,297 +19,194 @@
 	/>
 </svelte:head>
 <div>
-	<section id="hero">
-		<div id="hero-content">
-			<h1>
-				Accelerating progress in interventions that harness Earth’s natural systems—from soils, to
-				oceans, to glaciers—to stabilize our climate.
-			</h1>
-		</div>
+	<section id="headline">
+		<h1>
+			Accelerating progress in interventions that harness Earth’s natural systems—from soils, to
+			oceans, to glaciers—to help stabilize our climate.
+		</h1>
 	</section>
-	<section id="near-term-focus">
-		<div class="content">
-			<h2>Near-term Focus: Enhanced Rock Weathering</h2>
+	<section id="about">
+		<img src={heroPhoto} alt="Cascade Climate" />
+		<div>
+			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
 			<p>
-				Our initial focus is advancing the development of a healthy market for enhanced rock
-				weathering (ERW), underpinned by its scientific evidence base and its potential for
-				gigaton-scale, durable carbon dioxide removal (CDR).
+				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Interventions that harness and enhance natural systems can bring advantages of scale and cost that will often make them among our best—and sometimes only—options to prevent or undo deep harms that decarbonization alone cannot address. We need to accelerate our learning about these options if we seek to curb calamitous near-term warming, restore a preindustrial atmosphere, or stave off catastrophic sea-level rise and planetary tipping points.
 			</p>
 			<p>
-				As commercial activity in ERW ramps up, it is essential that we collectively steer toward a
-				healthy, virtuous market cycle wherein large-scale deployments provide a powerful engine for
-				public scientific learning along with declining uncertainties and costs. For open-system CDR
-				to succeed, ERW needs to thrive—with rigor and quality at its core.
+				Realizing these opportunities involves overcoming complex systemic bottlenecks. Quantifying the full impact of natural system interventions can be particularly difficult, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions can offer powerful climate benefits as well as co-benefits for local economies and ecosystems; yet these benefits are often public and intangible ones, requiring creative and bold new modes of financing and public support. These interlaced challenges can leave natural system interventions at an impasse, struggling to start the learn-by-doing flywheel.
 			</p>
+			<hr style="margin: 64px;">
 		</div>
 	</section>
-	<section id="initiatives">
-		<h1>Cascade is leading the following initiatives in ERW:</h1>
-		<div class="container">
-			<div class="heading">Quantification standard development</div>
-			<div class="content">
+	<section id="our-work">
+		<h3><a href="about-us">ABOUT US ↗</a></h3>
+		<h4 style="text-align: center; margin: 18px; font-weight: 300; line-height: 1.4; font-size: 150%;">
+			Cascade is a philanthropically-backed nonprofit organization working across industry, government and science to accelerate progress in natural system climate interventions. We help remove the biggest bottlenecks inhibiting progress by <b>coordinating</b> ambitious cross-sector initiatives, <b>building</b> tools and infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and policy work.
+		</h4>
+
+		<hr style="margin: 64px;">
+
+		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
+		<div class="spotlights">
+			<div class="spotlight">
+				<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
+				<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 				<p>
-					Orchestrating a methodical process to develop an industry-wide standard that ensures rigor
-					and consistency in the measurement, reporting, and verification of ERW. This community
-					quantification standard is developed in accordance with best available science and will be
-					dynamically iterated as science evolves.
+					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
 				</p>
+				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
 			</div>
-		</div>
-		<div class="container">
-			<div class="heading">Data access system</div>
-			<div class="content">
+			<div class="spotlight">
+				<img src={data} alt="Data Sharing System" />
+				<h2>Data sharing system to advance scientific research</h2>
 				<p>
-					Designing and instituting a community data access system that translates data from
-					commercial deployments into public learning and trust-building, while preserving
-					suppliers’ ability to differentiate competitively and attract investment.
+					To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
 				</p>
+				<b href="/our-work">Coming Soon</b>
 			</div>
-		</div>
-		<div class="container">
-			<div class="heading">Policy advocacy</div>
-			<div class="content">
+			<div class="spotlight">
+				<img src={cost} alt="Cost Estimator" />
+				<h2>ERW MRV cost estimator and database</h2>
 				<p>
-					Shaping the strategy and driving stakeholder alignment around an overall policy framework
-					and specific levers to help ERW get over the early hump on farmer adoption, public
-					confidence, uncertainty reduction, market buy-in, and cost decline.
+					We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
 				</p>
+				<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 			</div>
-		</div>
-	</section>
-	<div class="dividing-image">
-		<img width="100%" height="128" src={wavesPhoto} alt="waves" />
-	</div>
-	<section id="ours">
-		<div class="container">
-			<div class="heading">
-				<div class="our">Our motivation</div>
-				The climate crisis and power of Earth's natural systems.
-			</div>
-			<div class="content">
-				<p>
-					As a species we are already—unintentionally and haphazardly—manipulating Earth’s climate
-					system in ways that produce disastrous consequences for ourselves and the biosphere.
-					Decarbonization must be our top priority but on its own cannot solve the climate
-					emergency. We must embrace the need to harness Earth’s natural systems in the service of
-					avoiding deeper harm. This will mean intervening in soils, rivers, oceans, glaciers and
-					more—but doing so with great deliberation and care.
-				</p>
-				<p>
-					Accelerating humanity’s readiness to responsibly enhance or modulate natural cycles
-					requires us to approach the endeavor with profound humility. At the core of our motivation
-					to start Cascade are the awe and wonder that come with deeper learning about Earth
-					systems, the biosphere, and humanity’s connected history with them—an unimaginably complex
-					set of interactions that have played out over eons through mass extinctions and
-					extraordinary shifts in the planet’s climate system.
-				</p>
-			</div>
-		</div>
-		<div class="container">
-			<div class="heading">
-				<div class="our">Our work</div>
-				Coordinating ambitious initiatives across science, industry, philanthropy, and government.
-			</div>
-			<div class="content">
-				<p>
-					Enhanced weathering and virtually all other open-system climate intervention fields are in
-					their infancy. Scientific uncertainties regarding efficacy, quantification and ecological
-					impacts loom large. Policy frameworks for government engagement remain on the drawing
-					board. Immature markets in these fields—where they exist—struggle with
-					“race-to-the-bottom” incentive problems as well as underdeveloped institutional and
-					regulatory architecture.
-				</p>
-				<p>
-					In these thorny contexts, Cascade coordinates ambitious initiatives across science,
-					industry, philanthropy, and government to overcome the highest-priority bottlenecks
-					hindering progress. Often this involves unlocking bigger flows of funding or talent,
-					filling critical ecosystem gaps by incubating new systems and entities, or shaping the
-					design of policies and markets. At Cascade, we make tackling system-level obstacles our
-					job.
-				</p>
-			</div>
-		</div>
-		<div class="container">
-			<div class="heading">
-				<div class="our">Our approach</div>
-				Building deep, trust-based relationships across the ecosystem.
-			</div>
-			<div class="content">
-				The “how” in our approach is every bit as important as the “what.” We have to earn the right
-				to play a system-engineer role. We do this by building deep trust-based relationships across
-				the ecosystem, while maintaining scrupulous neutrality and unimpeachably clean incentives.
-				Philosophically, we put learning at the heart of our work—embracing rather than wishing away
-				uncertainty and helping open-system climate intervention fields shift into virtuous
-				learning-by-doing cycles. This enables the kind of evidence-driven course we will need to
-				chart if we hope to identify interventions that can be deployed safely, effectively, and
-				responsibly.
-			</div>
-		</div>
-	</section>
-	<section id="supporters">
-		Generously supported by:
-		<div id="supporters-container">
-			<a href="https://astera.org">
-				<img width="680" height="365" src={asteraLogo} alt="Astera Institute Logo" />
-			</a>
-			<a href="https://chanzuckerberg.com/">
-				<img width="680" height="365" src={czLogo} alt="Chan Zuckerberg Initiative Logo" />
-			</a>
-			<a href="https://www.granthamfoundation.org/">
-				<img width="680" height="365" src={granthamLogo} alt="Grantham Foundation Logo" />
-			</a>
-			<span>
-				<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
-			</span>
-			<a href="https://www.mcgovern.org/">
-				<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
-			</a>
-			<a href="https://qc.foundation/">
-				<img
-					width="680"
-					height="365"
-					src={quadratureLogo}
-					alt="Quadrature Climate Foundation Logo"
-				/>
-			</a>
-			<span>
-				<img
-					width="680"
-					height="365"
-					src={spitzerLogo}
-					alt="Bernard and Anne Spitzer Charitable Trust Logo"
-				/>
-			</span>
 		</div>
 	</section>
 </div>
 
 <style>
-	#hero {
-		background-size: cover;
-		color: var(--color-dark);
-		padding: 12.8rem 4rem 4.8rem 4rem;
-		margin-top: -8rem;
-	}
-
-	#hero h1 {
-		font-size: 48px;
-		font-weight: 350;
+	#headline h1 {
+		max-width: 1100px;
+		padding: 4rem 4rem;
 		text-align: center;
-		line-height: 52px;
+		margin: 1rem auto;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	h1 {
+		margin-top: 2rem;
+		margin-bottom:2rem;
+		font-weight: 300;
+		line-height: 1.4;
+	}
+
+	h4 {
+		margin-top: 2rem;
+		margin-bottom:2rem;
+		font-weight: 300;
+		line-height: 1.4;
+		font-size: 120%;
+	}
+
+
+	h5 {
+		font-weight: 550;
+	}
+
+	#about div {
+		background-color: var(--color-dark);
+		padding: 1rem 4rem;
+		color: var(--color-light);
+	}
+
+	#about img {
 		margin: 0;
+		display: block;
 	}
 
-	#near-term-focus {
-		background-image: url('$lib/images/rock-weathering.webp');
-		background-repeat: no-repeat;
-		background-size: cover;
-		padding: 2rem;
-	}
-
-	#near-term-focus .content {
-		background-color: rgba(255, 255, 255, 0.88);
-		color: var(--color-text);
-		padding: 2rem;
-		padding-bottom: 0.8rem;
-		max-width: 100%;
-		width: 670px;
-	}
-
-	#near-term-focus h2 {
-		margin-top: 0;
+	#about a {
+		background-color: var(--color-light);
+		color: var(--color-dark);
+		padding: 0.25rem;
+		border-radius: 2rem;
 		margin-bottom: 1rem;
-		font-weight: 600;
+		font-size: 1rem;
+		width: 100%;
+		display: block;
+		text-align: center;
 	}
 
-	.container {
+	#about {
 		display: flex;
-		margin-top: 3rem;
-		margin-bottom: 3rem;
+		flex-direction: column;
+	}
+
+	h3 {
+		font-weight: 300;
+		font-size: 1.2rem;
+	}
+
+	h3 a {
+		font-weight: 550;
+		color: var(--color-text);
+	}
+
+	#our-work {
+		padding: 2rem 4rem;
+	}
+
+	.spotlights {
+		display: flex;
+		gap: 1.5rem;
 		justify-content: space-between;
 	}
 
-	#initiatives,
-	#ours {
-		padding: 1rem 4rem;
+	.spotlight {
+		width: 25%;
+		flex-grow: 1;
 	}
 
-	#initiatives h1 {
-		color: var(--color-accent);
-		font-weight: 400;
-		margin-top: 3rem;
-	}
-
-	.heading {
-		width: 32%;
-		font-weight: 600;
-		font-size: 24px;
-	}
-
-	.content {
-		width: 64%;
-	}
-
-	.dividing-image img {
+	.spotlight img {
 		width: 100%;
+		height: 150px;
 		object-fit: cover;
-		height: 128px;
+		border-radius: 1rem;
 	}
 
-	.our {
+	.spotlight h2 {
+		font-weight: 300;
+		margin: 1rem 0;
+	}
+
+	.spotlight a {
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		padding: 0.5rem 1rem;
+		border-radius: 2rem;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+		width: 100%;
+	}
+	.spotlight b {
+		background-color: white;
 		color: var(--color-accent);
-		font-weight: 400;
-		font-size: 1.8rem;
-		margin-bottom: 2rem;
-	}
-
-	#supporters {
-		padding: 4rem;
-	}
-	#supporters-container {
-		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-	}
-
-	#supporters img {
-		width: 256px;
-		max-width: 100%;
-		height: auto;
-		transition: scale 0.2s ease-out;
-	}
-
-	#supporters img:hover {
-		scale: 1.1;
+		border: 1px solid var(--color-accent);
+		padding: 0.5rem 1rem;
+		border-radius: 2rem;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+		font-weight: normal;
+		width: 100%;
 	}
 
 	@media (max-width: 660px) {
-		#hero h1 {
-			font-size: 32px;
-			line-height: 32px;
-		}
-
-		.container {
+		.spotlights {
 			flex-direction: column;
 		}
 
-		.heading {
-			width: 100%;
-			margin-bottom: 1rem;
-		}
-
-		.content {
+		.spotlight {
 			width: 100%;
 		}
 
-		#initiatives,
-		#ours {
+		#our-work,
+		#headline h1,
+		#about div {
 			padding: 1rem 2rem;
-		}
-
-		#supporters img {
-			width: 480px;
-			height: auto;
 		}
 	}
 </style>
