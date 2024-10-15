@@ -17,6 +17,14 @@
 
 </script>
 
+<svelte:head>
+    <title>Careers - Cascade Climate</title> 
+    <meta
+	name="description"
+	content="Accelerating progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+/>
+</svelte:head>
+
 <section id="intro">
 	<div class="content">
 		<h1>Careers</h1>

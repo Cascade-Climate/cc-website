@@ -9,6 +9,14 @@
 	import spitzerLogo from '$lib/images/supporters/spitzer.webp';
 </script>
 
+<svelte:head>
+    <title>About Us - Cascade Climate</title> 
+    <meta
+	name="description"
+	content="Accelerating progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+/>
+</svelte:head>
+
 <section class="intro">
 	<h1>About Us</h1>
 	<p>

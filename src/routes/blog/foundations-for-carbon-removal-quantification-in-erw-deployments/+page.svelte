@@ -7,6 +7,14 @@
 	import conformance from '$lib/images/blog/conformance.webp';
 </script>
 
+<svelte:head>
+    <title>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</title> 
+	<meta
+	name="description"
+	content="Cascade Climate has produced a shared framework for quantifying carbon removal in ERW deployments and distilled the best available science and practices for rigorously quantifying each component of the carbon and cation fluxes."
+/>
+</svelte:head>
+
 <section class="intro">
 	<div class="content">
 		<div class="copy">
