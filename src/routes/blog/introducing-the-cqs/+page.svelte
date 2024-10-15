@@ -1,12 +1,12 @@
 
-
-
-
 <script>
 	import image1 from '$lib/images/blog/current-state.webp';
 	import image2 from '$lib/images/blog/after-v1.webp';
 </script>
 
+<svelte:head>
+    <title>Launching the Community Enhanced Rock Weathering Quantification Standard Process</title> 
+</svelte:head>
 
 <div>
 	<section class="intro">

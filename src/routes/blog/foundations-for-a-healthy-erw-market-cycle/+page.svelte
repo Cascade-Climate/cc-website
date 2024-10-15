@@ -5,6 +5,10 @@
 	import image1 from '$lib/images/blog/increasing-trust-decreasing-cost.webp';
 </script>
 
+<svelte:head>
+    <title>Foundations for a Healthy ERW Market Cycle</title> 
+</svelte:head>
+
 <div>
 	<section class="intro">
 		<div class="content">

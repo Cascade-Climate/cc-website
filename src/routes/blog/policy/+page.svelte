@@ -5,6 +5,10 @@
 	import farm2 from '$lib/images/nature/farm2.webp';
 </script>
 
+<svelte:head>
+    <title>Cascade’s Approach to Policy</title> 
+</svelte:head>
+
 <div>
 	<section class="intro">
 		<div class="content">
