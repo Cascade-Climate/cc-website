@@ -4,6 +4,14 @@
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 </script>
 
+<svelte:head>
+    <title>ERW MRV cost estimator and database</title> 
+    <meta
+	name="description"
+	content="Cascade Climate has developed a free-to-use cost estimator and accompanying cost database for enhanced rock weathering deployments."
+/>
+</svelte:head>
+
 <div>
 	<section class="intro">
 		<div class="content">
@@ -347,9 +355,9 @@
             <p><strong>Radiation levels:</strong> Measurement of the radiation level of a mineral. Common analytical technique is the gas flow proportional counter.&nbsp;</p>
             <h5>&ldquo;Validation &amp; Verification&rdquo; tab:&nbsp;</h5>
             <p><strong>Validation: </strong>Third-party assessment that determines whether a project meets the rules and requirements for carbon credit issuance. Typically occurs when the project is initialized (at t = 0) and at minimum once every 5 years during the project period.&nbsp;</p>
-            <p><strong>Multiplier: </strong>Occurrences of validation per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.)</p>
+            <p><strong>Multiplier: </strong>Occurrences of validation per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.</p>
             <p><strong>Verification: </strong>Third-party assessment that reviews project developers&rsquo; monitoring, measurement and quantification data to confirm that the project is performing as planned and accurately computing the carbon removal volumes achieved. Typically occurs annually over the project period.</p>
-            <p><strong>Multiplier: </strong>Occurrences of verification per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.)</p>
+            <p><strong>Multiplier: </strong>Occurrences of verification per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.</p>
 		</section>
 	</main>
 </div>
