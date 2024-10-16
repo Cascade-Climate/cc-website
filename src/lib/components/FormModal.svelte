@@ -3,18 +3,20 @@
 	export let modalLink = '';
 
 	let formData = {
-		name: '',
 		email: '',
 		first_name: '',
 		last_name: '',
 		title: '',
 		organization: '',
-		link: modalLink
+		link: ''
 	};
+
+	$: {
+		formData.link = modalLink;
+	}
 
 	async function handleSubmit() {
 		try {
-			console.log('submit', formData);
 			fetch('/api/submit-form', {
 				method: 'POST',
 				headers: {
@@ -56,8 +58,8 @@
 					</div>
 					<div class="input-group">
 						<div>
-							<label for="name">First name <span>*</span></label>
-							<input id="name" bind:value={formData.first_name} required />
+							<label for="first_name">First name <span>*</span></label>
+							<input id="first_name" bind:value={formData.first_name} required />
 						</div>
 						<div>
 							<label for="last_name">Last name <span>*</span></label>

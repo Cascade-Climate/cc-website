@@ -7,7 +7,11 @@
   export let variant = 'light';
 
   function handleClick() {
+		if (localStorage.getItem('cc-formSubmitted')) {
+			window.open(link, '_blank');
+		} else {
 			openModal(link);
+		}
   }
 </script>
 
