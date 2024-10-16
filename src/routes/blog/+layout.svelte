@@ -1,5 +1,5 @@
 <script>
-	import { setContext } from 'svelte';
+	import { setContext, onMount } from 'svelte';
 	import FormModal from '$lib/components/FormModal.svelte';
 
 	let showModal = false;
@@ -7,9 +7,7 @@
 
 	function openModal(link = '') {
 		showModal = true;
-		console.log(link);
 		modalLink = link;
-		console.log(modalLink);
 	}
 
 	setContext('modal', {
@@ -36,7 +34,7 @@
 	:global(h5) {
 		line-height: initial;
 		text-transform: uppercase;
-		color:#187373;
+		color: #187373;
 	}
 
 	:global(a) {

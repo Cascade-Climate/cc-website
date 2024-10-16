@@ -8,7 +8,6 @@ export async function POST({ request }) {
 	try {
 		const formData = await request.json();
 		const accessToken = await getAccessToken();
-		console.log(formData);
 
 		const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${GOOGLE_SPREADSHEET_ID}/values/Sheet1!A:Z:append?valueInputOption=USER_ENTERED`, {
 			method: 'POST',

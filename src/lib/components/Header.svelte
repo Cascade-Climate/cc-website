@@ -98,7 +98,7 @@
 		height: 100%;
 	}
 
-	header a, span {
+	header a {
 		color: var(--color-light);
 		text-decoration: none;
 		font-weight: 400;
