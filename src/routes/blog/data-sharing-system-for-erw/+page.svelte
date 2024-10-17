@@ -46,8 +46,8 @@
 				Unlocking commercial ERW datasets to answer the most pressing scientific questions facing the field can help to jumpstart a virtuous cycle of deployment-led learning. In a deployment-led learning scenario, real-world deployments help further scientific understanding, which builds trust in the process, unlocking more deployments, and more carbon and farmer benefits.
 			</p>
 
-            <p><em>Why tap into commercial datasets?&nbsp;</em></p>
-            <ul>
+            <p style="margin: 0;"><em>Why tap into commercial datasets?&nbsp;</em></p>
+            <ul style="margin: 0;">
                 <li>First, commercial datasets are <strong>big</strong>. The majority of academic research draws from just a handful of ERW trial locations. In contrast, commercial ERW deployments are expected to top 20 thousand hectares this year, representing over 200x more area than all academic field trials combined.<sup><a id="citation1" href="#footnote1">1</a></sup></li>
                 <li>Second, commercial datasets are <strong>diverse</strong>, set across a wide range of soil, climate, and feedstock types. This diversity is crucial to help understand ERW&rsquo;s effectiveness across a broad suite of contexts, and not just in the Global North where much of the academic research has taken place to date.&nbsp;</li>
                 <li>Third, commercial datasets are <strong>detailed</strong>. Many ERW project developers are robustly sampling their ERW deployments to characterize the netCDR of these projects. Maximizing learning from these datasets will unlock the scientific understanding needed to scale the field.</li>
@@ -119,7 +119,7 @@
 				A data sharing system that protects commercial and farmer interests while accelerating scientific progress. Finding the right balance between transparency, speed, and commercial interests is a delicate balancing act. Through dozens of stakeholder listening sessions and iterative designs, Cascade has developed the ERW Data Quarry to navigate these tensions by building around the following core principles:
 			</p>
 
-            <ol>
+            <ol style="margin: 0;">
                 <li><strong>Focus on priority questions: </strong>Building on the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;↗ </em></a> process, we have identified four priority research topics that commercial datasets can help address. These questions informed the variables collected through the Data Quarry system.</li>
                 <li><strong>Segment initial access: </strong>Health and safety data will be made fully public to build trust in the safety of ERW. Additional data will be made available to researchers through a proposal-based request system.</li>
                 <li><strong>Fair use:</strong> A commitment to use data shared for advancing scientific learning&ndash;not for commercial purposes.</li>
@@ -135,7 +135,7 @@
 
             <p>Rocks take time to dissolve. And thus, datasets take time to collect. We will be announcing the formal launch of the system in the coming months. In the meantime, reach out to <a href="mailto:data@cascadeclimate.org" target="_blank" rel="noopener">data@cascadeclimate.org</a> if:</p>
 
-            <ul>
+            <ul style="margin: 0;">
                 <li><strong>ERW Companies:</strong> You&rsquo;d like to be part of the movement to build a healthy ERW market.</li>
                 <li><strong>Buyers:</strong> You are interested in playing a catalytic role in advancing the ERW field.</li>
                 <li><strong>Researchers:&nbsp;</strong></li>
@@ -162,7 +162,7 @@
 			<h1>Post Script</h1>
             <h2>Data Flow</h2>
             <p>The data system will be comprised of two components:</p>
-                <ol>
+                <ol style="margin: 0;">
                 <li><strong>A Publicly Accessible Data Source: </strong>This will include: a) all health and safety data, and b) datasets that have been used for academic peer reviewed articles, released at the time of article publication. CarbonPlan is leading development on <a href="https://cdrxiv.org" target="_blank" rel="noopener">CDRXIV</a>, a new centralized hub for open academic and commercial CDR preprints and data, which will be used as the public repository.</li>
                 <li><strong>A Permissioned Data Catalog: </strong>Cascade will also host the ERW Data Quarry that provides a description of the datasets and variables available. Researchers will be able to request access to individual datasets by submitting a brief research proposal and a financial conflict of interest statement. Cascade will facilitate a neutral governing board to determine dataset release based on: a) if there are any credible conflicts of interest, and b) if the research proposal relates to advancing ERW science. Research proposals will be shared with the Data Quarry community to facilitate collaboration across research groups.</li>
                 </ol>
@@ -171,10 +171,10 @@
             <p><em>Figure 1:</em> How datasets and information will flow across organizations</p>
 <h2>Data Variables:</h2>
 <p>Whenever possible, datasets in the Data Quarry will share a common set of core variables, as listed in the pdf below. These variables were selected based on their importance to answering the highest priority research questions that overlap with data collected in commercial deployments.</p>
-<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" variant="accent" style="display: block; text-align: left;">Data Quarry Variable List↗</PDFLink>
+<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" variant="accent" style="display: block; text-align: left;">Data Quarry Variable List ↗</PDFLink>
 <p></p>
 <p>Building on learnings from the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;↗ </em></a>  process, these research themes are:&nbsp;&nbsp;</p>
-<ol>
+<ol style="margin: 0;">
 <li>Health and safety</li>
 <li>Time lags in carbon removal</li>
 <li>Dissolution rates</li>
@@ -188,7 +188,7 @@
 
 
 <h3>Footnotes</h3>
-	<ol>
+	<ol style="margin: 0;">
 		<li id="footnote1">
             Based on a survey conducted with 16 project developers, analysis of publicly announced deployments and a scan of published ERW field trials.
 			<a href="#citation1">↩</a>
