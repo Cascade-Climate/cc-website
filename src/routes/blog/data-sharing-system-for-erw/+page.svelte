@@ -63,34 +63,34 @@
             <section id="supporters">
                 <div id="supporters-container">
                     <a href="https://www.alt-carbon.com/">
-                        <img width="680" height="365" src={altcarbon} alt="Alt Carbon" />
+                        <img src={altcarbon} alt="Alt Carbon" />
                     </a>
                     <a href="https://www.andes.bio/">
-                        <img width="680" height="365" src={andes} alt="Andes" />
+                        <img src={andes} alt="Andes" />
                     </a>
                     <a href="https://www.carbonaught.io/">
-                        <img width="680" height="365" src={carbonaught} alt="Carbonaught" />
+                        <img src={carbonaught} alt="Carbonaught" />
                     </a>
                     <a href="https://eioncarbon.com/">
-                        <img width="680" height="365" src={eion} alt="Eion" />
+                        <img src={eion} alt="Eion" />
                     </a>
                     <a href="https://www.fluxcarbon.earth/">
-                        <img width="680" height="365" src={flux} alt="Flux" />
+                        <img src={flux} alt="Flux" />
                     </a>
                     <a href="https://inplanet.earth/">
-                        <img width="680" height="365" src={inplanet} alt="InPlanet" />
+                        <img src={inplanet} alt="InPlanet" />
                     </a>
                     <a href="https://www.mati.earth/">
-                        <img width="680" height="365" src={mati} alt="Mati" />
+                        <img src={mati} alt="Mati" />
                     </a>
                     <a href="https://terradot.earth/">
-                        <img width="680" height="365" src={terradot} alt="Terradot" />
+                        <img src={terradot} alt="Terradot" />
                     </a>
                     <a href="https://v6agronomy.ca/">
-                        <img width="680" height="365" src={v6agronomy} alt="v6 Agronomyx" />
+                        <img src={v6agronomy} alt="v6 Agronomyx" />
                     </a>
                     <a href="https://zeroex.com/">
-                        <img width="680" height="365" src={zeroex} alt="ZeroEx" />
+                        <img src={zeroex} alt="ZeroEx" />
                     </a>
                 </div>
             </section>
@@ -143,7 +143,7 @@
                 <li>You are interested in accessing commercial ERW data and/or collaborating with leading ERW companies. Please share your ERW-related research interests and expertise, and we will reach out with opportunities to engage.</li>
                 <li>Commercial datasets are just one part of the puzzle. More complete and accessible datasets from non-commercial field trials can also help advance the state of the field. If you have data from an ERW field trial and would like to be part of advancing the state of ERW science, please reach out.&nbsp;</li>
                 </ul>
-                <li><strong>For Anyone Else:</strong> You are interested in following along in this journey, sign up for our newsletter here [Add link].&nbsp;</li>
+                <li><strong>For Anyone Else:</strong> You are interested in following along in this journey, sign up for our newsletter <a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1">here↗</a>.&nbsp;</li>
             </ul>
 
 			<p>
@@ -220,9 +220,11 @@
 
 	#supporters img {
 		width: 256px;
-		max-width: 100%;
-		height: auto;
+		height: 100px;
+		object-fit: contain;
 		transition: scale 0.2s ease-out;
+		margin: auto;
+		display: block;
 	}
 
 	#supporters img:hover {
