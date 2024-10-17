@@ -35,6 +35,7 @@
                 </strong>
                 <p></p>
 			</div>
+            <img src={data} alt="Enhanced Rock Weathering" />
 		</div>
 	</section>
 	<ScrollNav />

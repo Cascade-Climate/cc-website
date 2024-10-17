@@ -2,6 +2,7 @@
 	import erw from '$lib/images/rock-weathering.webp';
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
+    import cost from '$lib/images/nature/cost.webp';
 </script>
 
 <svelte:head>
@@ -20,6 +21,7 @@
                 <p>A key question surrounding enhanced rock weathering (ERW) is the quantification of carbon removal. To tackle that question, we worked with more than 100 ERW researchers and practitioners to develop <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗</em></a>, a document that establishes best practices and core guidance for how to conduct carbon removal measurements and quantification in ERW deployments.</p>
                 <p>In this piece, we break down the cost of deploying feedstock and carrying out these carbon removal measurements (particularly for those measurements in the upper soil regions where direct empirical measurements are required). We have collected over 1,000+ global, ERW-specific measurement cost estimates through compiling published quotes and sourcing quotes from quarries, academic and commercial laboratories, and ERW suppliers. These component-level quotes feed into a cost estimator that paints a comprehensive picture of the costs of sourcing, processing, hauling, and spreading feedstock, as well as the field sampling and laboratory analyses necessary for a small-scale deployment in the present day.</p>
 			</div>
+            <img src={cost} alt="Enhanced Rock Weathering" />
 		</div>
 		<div class="links">
 			<a href="https://emce.cascadeclimate.org/">Link to Model↗</a>
@@ -280,7 +282,7 @@
 			<h1>Credits/Glossary</h1>
             <h3>5: Credits</h3>
             <p>Development of the web app, and an earlier spreadsheet-based version of EMCE, was led by <a href="https://cascadeclimate.org/team/arielle-lok" target="_blank" rel="noopener">Arielle Lok</a> under the support of <a href="https://cascadeclimate.org/team/hara-wang" target="_blank" rel="noopener">Hara Wang</a>. <a href="https://github.com/xxmichaellong" target="_blank" rel="noopener">Xiao Xiao Long</a> and Arielle Lok wrote the code for the web app. Hara Wang, <a href="https://cascadeclimate.org/team/noah-anderson" target="_blank" rel="noopener">Noah Anderson</a>, and Arielle Lok drafted the technical documentation of EMCE, and <a href="https://cascadeclimate.org/team/john-sanchez" target="_blank" rel="noopener">John Sanchez</a> edited sections of the document.&nbsp;</p>
-            <p>We want to also offer special gratitude to Benjamin M&ouml;ller, Tony Oehm, Kevin Sutherland, Ella Holme, Niklas Kluger, Tyler Kukla, Chris Tolles, Jonathan Lambert, Shrey Agarwal, Sparsh Agarwal, Maurice Bryson, Mohammad Madankan, Simon Manley, Alexander Rink, Phil Renforth, and Matt Villante who reviewed prior versions of EMCE and offered invaluable insights.</p>
+            <p>We want to also offer special gratitude to Benjamin M&ouml;ller, Tony Oehm, Kevin Sutherland, Ella Holme, Niklas Kluger, Tyler Kukla, Chris Tolles, Jonathan Lambert, Nate Beatty, Shane Scranton, Shrey Agarwal, Sparsh Agarwal, Maurice Bryson, Mohammad Madankan, Simon Manley, Alexander Rink, Phil Renforth, and Matt Villante who reviewed prior versions of EMCE and offered invaluable insights.</p>
             <p>If you identify any errors or have any suggested updates to the web app and the accompanying technical documentation, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSccdBcMsAT4mnDh7c2x-Vq87QJtcHCL7EUXy1-RgfL2fAjBfg/viewform" target="_blank" rel="noopener">form here</a> or email <a href="mailto:emce@cascadeclimate.org" target="_blank" rel="noopener">emce@cascadeclimate.org</a>.</p>
             <h3>6: Glossary:</h3>
             <h5>&ldquo;Field &amp; Plot Design&rdquo; tab</h5>
