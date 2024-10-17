@@ -39,7 +39,7 @@
 	</section>
 	<ScrollNav />
 	<main>
-		<section id="the-oppportunity-challenge-and-action">
+		<section id="the-oppportunity">
 			<h1>The Opportunity</h1>
 			<p>
 				Unlocking commercial ERW datasets to answer the most pressing scientific questions facing the field can help to jumpstart a virtuous cycle of deployment-led learning. In a deployment-led learning scenario, real-world deployments help further scientific understanding, which builds trust in the process, unlocking more deployments, and more carbon and farmer benefits.
@@ -57,7 +57,7 @@
             <p>Layer these challenges together, and it’s easy for the field to remain trapped in the status quo of limited researcher access to commercial data. Many ERW companies are engaged in individual research collaborations with external partners, leading to important, albeit slow, steps forward on specific research topics in specific regions. But to respond to the climate emergency, we need the power of multiple datasets, across multiple contexts, in the hands of multiple researchers to rapidly advance the state of ERW science.</p>
         </section>
 
-            <section id="the-oppportunity-challenge-and-action">
+            <section id="the-action">
             <h1>The Action</h1>
             <p>We are incredibly energized to announce the Data Quarry–the first-ever ERW data sharing system–together with <b>10 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
 
