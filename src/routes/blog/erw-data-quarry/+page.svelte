@@ -25,7 +25,7 @@
 				<h1>Introducing the ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
                 <p></p>
 				<p>
-					Enhanced Rock Weathering (ERW) has the potential to deliver meaningful carbon removal alongside agriculture benefits. Yet there remains a number of <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>open scientific questions related to carbon removal quantification↗ </em></a> and safety that will be critical to address to unlock this potential.
+					Enhanced Rock Weathering (ERW) has the potential to deliver meaningful carbon removal alongside agriculture benefits. Yet there remains a number of open scientific questions related to <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em> carbon removal quantification↗ </em></a> and safety that will be critical to address to unlock this potential.
 				</p>
 				<p>
 					Without addressing these open questions, the ERW field risks being stuck in a limited-demand future: one in which substantial uncertainty discounting, expensive, measurement-intensive quantification, field heterogeneity, and an incomplete health and safety regulatory framework limits ERW’s ability to scale. We don’t want this future for ERW. We want to quickly, transparently, and collaboratively answer these open questions to help ERW reach its full climate and agronomic impact potential.
@@ -40,8 +40,7 @@
 	<ScrollNav />
 	<main>
 		<section id="the-oppportunity-challenge-and-action">
-			<h1>The Opportunity, Challenge, and Action:</h1>
-            <h2>The Opportunity:</h2>
+			<h1>The Opportunity</h1>
 			<p>
 				Unlocking commercial ERW datasets to answer the most pressing scientific questions facing the field can help to jumpstart a virtuous cycle of deployment-led learning. In a deployment-led learning scenario, real-world deployments help further scientific understanding, which builds trust in the process, unlocking more deployments, and more carbon and farmer benefits.
 			</p>
@@ -56,40 +55,42 @@
             <h2>The Challenge:</h2>
             <p>In practice, commercial data sharing is hard for three major reasons. First, ERW companies have invested millions of dollars into data collection. Data can be seen as proprietary; for example, helping companies identify optimal deployment locations or feedstocks. Second, these companies have responsibilities around farmer data privacy which need to be taken seriously, as ERW relies on the trust and collaboration of farmers around the world. Finally, there is a meaningful collective action issue for market participants: <i>“Why should I share? How do I know others will do the same?”</i></p>
             <p>Layer these challenges together, and it’s easy for the field to remain trapped in the status quo of limited researcher access to commercial data. Many ERW companies are engaged in individual research collaborations with external partners, leading to important, albeit slow, steps forward on specific research topics in specific regions. But to respond to the climate emergency, we need the power of multiple datasets, across multiple contexts, in the hands of multiple researchers to rapidly advance the state of ERW science.</p>
+        </section>
 
-            <h2>The Action</h2>
+            <section id="the-oppportunity-challenge-and-action">
+            <h1>The Action</h1>
             <p>We are incredibly energized to announce the Data Quarry–the first-ever ERW data sharing system–together with <b>10 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
 
             <section id="supporters">
                 <div id="supporters-container">
-                    <a href="https://www.alt-carbon.com/">
+                    <a href="https://www.alt-carbon.com/" target="_blank" rel="noopener">
                         <img src={altcarbon} alt="Alt Carbon" />
                     </a>
-                    <a href="https://www.andes.bio/">
+                    <a href="https://www.andes.bio/" target="_blank" rel="noopener">
                         <img src={andes} alt="Andes" />
                     </a>
-                    <a href="https://www.carbonaught.io/">
+                    <a href="https://www.carbonaught.io/" target="_blank" rel="noopener">
                         <img src={carbonaught} alt="Carbonaught" />
                     </a>
-                    <a href="https://eioncarbon.com/">
+                    <a href="https://eioncarbon.com/" target="_blank" rel="noopener">
                         <img src={eion} alt="Eion" />
                     </a>
-                    <a href="https://www.fluxcarbon.earth/">
+                    <a href="https://www.fluxcarbon.earth/" target="_blank" rel="noopener">
                         <img src={flux} alt="Flux" />
                     </a>
-                    <a href="https://inplanet.earth/">
+                    <a href="https://inplanet.earth/" target="_blank" rel="noopener">
                         <img src={inplanet} alt="InPlanet" />
                     </a>
-                    <a href="https://www.mati.earth/">
+                    <a href="https://www.mati.earth/" target="_blank" rel="noopener">
                         <img src={mati} alt="Mati" />
                     </a>
-                    <a href="https://terradot.earth/">
+                    <a href="https://terradot.earth/" target="_blank" rel="noopener">
                         <img src={terradot} alt="Terradot" />
                     </a>
-                    <a href="https://v6agronomy.ca/">
+                    <a href="https://v6agronomy.ca/" target="_blank" rel="noopener">
                         <img src={v6agronomy} alt="v6 Agronomyx" />
                     </a>
-                    <a href="https://zeroex.com/">
+                    <a href="https://zeroex.com/" target="_blank" rel="noopener">
                         <img src={zeroex} alt="ZeroEx" />
                     </a>
                 </div>
@@ -101,9 +102,10 @@
 
             <section id="supporters">
                 <div id="supporters-container">
-                    <a href="https://frontierclimate.com/">
+                    <a href="https://frontierclimate.com/" target="_blank" rel="noopener">
                         <img width="680" height="365" src={frontier} alt="Frontier" />
-                    <a href="https://www.milkywire.com/">
+                    </a>
+                    <a href="https://www.milkywire.com/" target="_blank" rel="noopener">
                         <img width="680" height="365" src={milkywire} alt="MilkyWire" />
                     </a>
                 </div>
@@ -111,10 +113,10 @@
             <p></p>
 
             <p>More specifically, these leading companies are committing to sharing data through the following system:</p>
+        </section>
 
-		</section>
 		<section id="the-data-quarry-solution">
-			<h1>The Data Quarry Solution</h1>
+			<h1>The ERW Data Quarry Solution</h1>
 			<p>
 				A data sharing system that protects commercial and farmer interests while accelerating scientific progress. Finding the right balance between transparency, speed, and commercial interests is a delicate balancing act. Through dozens of stakeholder listening sessions and iterative designs, Cascade has developed the ERW Data Quarry to navigate these tensions by building around the following core principles:
 			</p>
@@ -167,8 +169,9 @@
                 <li><strong>A Permissioned Data Catalog: </strong>Cascade will also host the ERW Data Quarry that provides a description of the datasets and variables available. Researchers will be able to request access to individual datasets by submitting a brief research proposal and a financial conflict of interest statement. Cascade will facilitate a neutral governing board to determine dataset release based on: a) if there are any credible conflicts of interest, and b) if the research proposal relates to advancing ERW science. Research proposals will be shared with the Data Quarry community to facilitate collaboration across research groups.</li>
                 </ol>
             <p>See Figure 1 for a summary of the data flow described above.</p>
-            <img src={DSSprocess} alt="Figure 1: Data Sharing System Process Schematic" />
+            <img src={DSSprocess} alt="Figure 1: Data Sharing System Process Schematic" style="width: 80%;" />
             <p><em>Figure 1:</em> How datasets and information will flow across organizations</p>
+
 <h2>Data Variables:</h2>
 <p>Whenever possible, datasets in the Data Quarry will share a common set of core variables, as listed in the pdf below. These variables were selected based on their importance to answering the highest priority research questions that overlap with data collected in commercial deployments.</p>
 <PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" variant="accent" style="display: block; text-align: left;">Data Quarry Variable List ↗</PDFLink>
