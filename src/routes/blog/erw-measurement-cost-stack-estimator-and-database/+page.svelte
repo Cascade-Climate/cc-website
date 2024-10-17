@@ -39,7 +39,9 @@
             <li>Part 1 covers what EMCE is and is not; and what cost components are covered.</li>
             <li>Part 2 provides a tab-by-tab user manual and walkthrough.</li>
             <li>Part 3 provides background on how we sourced the quotes in the cost database.</li>
-            <li>Part 4 is a detailed glossary of every variable in EMCE.</li>
+            <li>Part 4 is a call for practitioners to participate in total stacked cost case studies.</li>
+            <li>Part 5 lists the authors, coders and collaborators behind EMCE.</li>
+            <li>An Appendix is also included that provides a detailed glossary of every variable in EMCE.</li>
             </ul>
             <p><span>Some knowledge on ERW and its quantification does make it easier to be oriented and feel situated in EMCE. If you are still relatively new to ERW quantification, we recommend reading the </span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Technical Summary: Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗ </em></a><span> first.</span></p>
 		</section>
