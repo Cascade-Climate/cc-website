@@ -130,7 +130,7 @@
 			<PDFLink link="/CC_Appendix 1_ Anonymized Foundations Feedback.pdf" variant="accent" style="display: block; text-align: left;">Appendix 1: Responses to feedback collected during Foundations comment period↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Appendix 2_ Foundations R&D Priorities.pdf" variant="accent" style="display: block; text-align: left;">Appendix 2: Foundations research and development (R&D) priorities↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Appendix 3_ Working Group Summaries.pdf" variant="accent" style="display: block; text-align: left;">Appendix 3: Foundations Working Group summaries↗</PDFLink>
-			<PDFLink link="/Cascade Climate_Conformance Zones Illustration.pdf" variant="accent" style="display: block; text-align: left;">Figure 1: Conformance Zones↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Fig1_Conformance Zones.pdf" variant="accent" style="display: block; text-align: left;">Figure 1: Conformance Zones↗</PDFLink>
 			<PDFLink link="/CC_Table 1. Components of the NFZ term balance.pdf" variant="accent" style="display: block; text-align: left;">Table 1: Components of the Near Field Zone term balance↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Table 2. Considerations for the FFZ.pdf" variant="accent" style="display: block; text-align: left;">Table 2: Considerations for the Far Field Zone↗</PDFLink>
 		</div>
