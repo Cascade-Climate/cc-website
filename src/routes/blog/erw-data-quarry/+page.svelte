@@ -43,12 +43,12 @@
 		<section id="the-oppportunity">
 			<h1>The Opportunity</h1>
 			<p>
-				Unlocking commercial ERW datasets to answer the most pressing scientific questions facing the field can help to jumpstart a virtuous cycle of deployment-led learning. In a deployment-led learning scenario, real-world deployments help further scientific understanding, which builds trust in the process, unlocking more deployments, and more carbon and farmer benefits.
+				Unlocking commercial ERW datasets to answer the most pressing scientific questions facing the field can help to jumpstart a virtuous cycle of <a href="https://cascadeclimate.org/blog/foundations-for-a-healthy-erw-market-cycle" target="_blank" rel="noopener">deployment-led learning</a>. In a deployment-led learning scenario, real-world deployments help further scientific understanding, which builds trust in the process, unlocking more deployments, and more carbon and farmer benefits.
 			</p>
 
             <p style="margin: 0;"><em>Why tap into commercial datasets?&nbsp;</em></p>
             <ul style="margin: 0;">
-                <li>First, commercial datasets are <strong>big</strong>. The majority of academic research draws from just a handful of ERW trial locations. In contrast, commercial ERW deployments are expected to top 20 thousand hectares this year, representing over 200x more area than all academic field trials combined.<sup><a id="citation1" href="#footnote1">1</a></sup></li>
+                <li>First, commercial datasets are <strong>big</strong>. The majority of academic research draws from just a handful of ERW trial locations. In contrast, commercial ERW deployments are expected to top 20,000 hectares this year, representing over 200x more area than all academic field trials combined.<sup><a id="citation1" href="#footnote1">1</a></sup></li>
                 <li>Second, commercial datasets are <strong>diverse</strong>, set across a wide range of soil, climate, and feedstock types. This diversity is crucial to help understand ERW&rsquo;s effectiveness across a broad suite of contexts, and not just in the Global North where much of the academic research has taken place to date.&nbsp;</li>
                 <li>Third, commercial datasets are <strong>detailed</strong>. Many ERW project developers are robustly sampling their ERW deployments to characterize the netCDR of these projects. Maximizing learning from these datasets will unlock the scientific understanding needed to scale the field.</li>
                 </ul>
@@ -60,7 +60,7 @@
 
             <section id="the-action">
             <h1>The Action</h1>
-            <p>We are incredibly energized to announce the Data Quarry–the first-ever ERW data sharing system–together with <b>10 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
+            <p>We are incredibly energized to announce the ERW Data Quarry–the first-ever ERW data sharing system–together with <b>10 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
 
             <section id="supporters">
                 <div id="supporters-container">
@@ -141,12 +141,11 @@
             <ul style="margin: 0;">
                 <li><strong>ERW Companies:</strong> You&rsquo;d like to be part of the movement to build a healthy ERW market.</li>
                 <li><strong>Buyers:</strong> You are interested in playing a catalytic role in advancing the ERW field.</li>
-                <li><strong>Researchers:&nbsp;</strong></li>
+                <li><strong>Researchers:&nbsp;</strong>You are interested in accessing commercial ERW data and/or collaborating with leading ERW companies. Please share your ERW-related research interests and expertise, and we will reach out with opportunities to engage.</li>
                 <ul>
-                <li>You are interested in accessing commercial ERW data and/or collaborating with leading ERW companies. Please share your ERW-related research interests and expertise, and we will reach out with opportunities to engage.</li>
                 <li>Commercial datasets are just one part of the puzzle. More complete and accessible datasets from non-commercial field trials can also help advance the state of the field. If you have data from an ERW field trial and would like to be part of advancing the state of ERW science, please reach out.&nbsp;</li>
                 </ul>
-                <li><strong>For Anyone Else:</strong> You are interested in following along in this journey, sign up for our newsletter <a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1">here↗</a>.&nbsp;</li>
+                <li><strong>For Anyone Else:</strong> You are interested in following along in this journey, sign up for our newsletter <a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1" target="_blank" rel="noopener">here↗</a>.&nbsp;</li>
             </ul>
 
 			<p>
@@ -162,7 +161,7 @@
 		</section>
 
         <section id="post-script">
-			<h1>Post Script</h1>
+			<h1>Post Script: Additional Details</h1>
             <h2>Data Flow</h2>
             <p>The data system will be comprised of two components:</p>
                 <ol style="margin: 0;">
@@ -175,7 +174,7 @@
 
 <h2>Data Variables:</h2>
 <p>Whenever possible, datasets in the Data Quarry will share a common set of core variables, as listed in the pdf below. These variables were selected based on their importance to answering the highest priority research questions that overlap with data collected in commercial deployments.</p>
-<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" variant="accent" style="display: block; text-align: left;">Data Quarry Variable List ↗</PDFLink>
+<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" target="_blank" rel="noopener" variant="accent" style="display: block; text-align: left;">ERW Data Quarry Variable List ↗</PDFLink>
 <p></p>
 <p>Building on learnings from the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;↗ </em></a>  process, these research themes are:&nbsp;&nbsp;</p>
 <ol style="margin: 0;">
