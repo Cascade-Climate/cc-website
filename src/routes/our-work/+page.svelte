@@ -84,7 +84,8 @@
 					<p>
 						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
 					</p>
-					<b href="/our-work">Coming Soon</b>
+					<a href="/blog/erw-data-quarry"
+					>Learn More</a>
 				</div>
 				<div>
 					<img src={cost} alt="Cost Estimator" />
