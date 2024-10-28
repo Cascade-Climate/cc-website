@@ -89,11 +89,6 @@
 			<h1>Hara Wang</h1>
 			<span>Co-founder</span>
 		</a>
-		<a class="team-card" href="/people/jennifer-mills">
-			<img src={jenniferMills} alt="Jennifer Mills" />
-			<h1>Jennifer Mills</h1>
-			<span>Co-founder</span>
-		</a>
 		<a class="team-card" href="/people/john-sanchez">
 			<img src={johnSanchez} alt="John Sanchez" />
 			<h1>John Sanchez</h1>
@@ -104,13 +99,6 @@
 			<h1>Vilas Rao</h1>
 			<span>Co-founder</span>
 		</a>
-
-		<a class="team-card" href="/people/alex-price">
-			<img src={alexPrice} alt="Alex Price" />
-			<h1>Alex Price</h1>
-			<span>Fellow</span>
-		</a>
-
 		<a class="team-card" href="/people/alison-tune">
 			<img src={alisonTune} alt="Alison Tune" />
 			<h1>Alison Tune</h1>
@@ -132,12 +120,12 @@
 			<h1>Jamie Newman</h1>
 			<span>Recruiting & Operations Manager</span>
 		</a>
-		<a class="team-card" href="/team/noah-anderson">
+		<a class="team-card" href="/people/noah-anderson">
 			<img src={noahAnderson} alt="Noah Anderson" />
 			<h1>Noah Anderson</h1>
 			<span>ERW Scientist</span>
 		</a>
-		<a class="team-card" href="/team/noemma-olagaray">
+		<a class="team-card" href="/people/noemma-olagaray">
 			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
 			<h1>Noemma Olagaray</h1>
 			<span>Associate</span>
