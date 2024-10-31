@@ -45,11 +45,17 @@
 
         <p>We believe that this partnership model—in which researchers “piggyback” on existing deployments by carrying out measurements that go beyond what is already planned—will accelerate the collection of novel field datasets in ERW. It offers an attractive avenue for tackling high-priority research questions by decreasing the logistical and cost burden for researchers, while extracting even greater scientific learning value from the current wave of commercial ERW activity.</p>
         
-        <p>We expect that initial measurements characterizing the feedstock and initial soil conditions, as well as measurements of feedstock dissolution rates in surface soils, are already paid for in the deployment through some other means (e.g. commercial carbon credit sales). Thus, this RFP will not fund the collection of these <strong>Contextual Data</strong> variables as defined in Appendix A; it will fund only the collection of the ‘additional’ dataset (e.g., sample collection and lab analyses) along with associated research and analysis.</p>
+        <p>We expect that initial measurements characterizing the feedstock and initial soil conditions, as well as measurements of feedstock dissolution rates in surface soils, are already paid for in the deployment through some other means (e.g. commercial carbon credit sales). Thus, this RFP will not fund the collection of these <strong>Contextual Data</strong> variables; it will fund only the collection of the ‘additional’ dataset (e.g., sample collection and lab analyses) along with associated research and analysis.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+			<PDFLink link="/Cascade-Climate-Regranting-Solicitation.pdf" variant="accent">Link to Full RFP Solicitation PDF↗</PDFLink>
+		</div>
+
     </section>
 
     <section id="priority-topic-areas">
         <h1>Priority Topic Areas</h1>
+
         <p>We seek proposals that build upon the data typically collected in ERW commercial deployments, beyond the initial release and export of cations from the feedstock in surface soils. <strong>We welcome the creativity of the ERW community to propose the collection of any datasets that would advance the field.</strong> Below are some topic areas of particular interest:</p>
         <ul style="margin: 0;">
         <li>Measurement of secondary phases (e.g., silicates, carbonates, Fe- and Al-oxyhydroxides, amorphous phases) in deep soil cores (&gt;50 cm)</li>

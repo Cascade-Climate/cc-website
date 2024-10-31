@@ -7,6 +7,7 @@
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import data from '$lib/images/nature/data.webp';
 	import cost from '$lib/images/nature/cost.webp';
+	import grants from '$lib/images/nature/grants.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
 	import heroPhoto2 from '$lib/images/nature/heroPhoto2.webp';
 	import heroPhoto3 from '$lib/images/nature/heroPhoto3.webp';
@@ -59,12 +60,12 @@
 				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={data} alt="Data Sharing System" />
-				<h2>Data sharing system to advance scientific research</h2>
+				<img src={grants} alt="ERW Field Grants" />
+				<h2>ERW Field Data Partnership Grants</h2>
 				<p>
-					To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
+					We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. <strong>Deadline: December 20th, 2024.</strong>
 				</p>
-				<a href="/blog/erw-data-quarry"
+				<a href="/blog/erw-field-grants"
 				>Learn More</a>
 			</div>
 			<div class="spotlight">

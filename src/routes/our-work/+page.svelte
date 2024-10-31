@@ -71,6 +71,16 @@
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
+					<img src={grants} alt="ERW Field Data Partnership Grants" />
+					<h2>ERW Field Data Partnership Grants</h2>
+					<b>Deadline: Dec 20, 2024</b>
+					<p></p>
+					<p>
+						We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. 
+					</p>
+					<a href="/blog/erw-field-grants">Learn More</a>					
+				</div>
+				<div>
 					<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
 					<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 					<p>
@@ -103,16 +113,6 @@
 						We advance policies that support ERW innovation, provide early project financing support, and develop rules and regulations for responsible deployment in close coordination with industry and civil society organizations.
 					</p>
 					<a href="/blog/policy">Learn More</a>
-				</div>
-				<div>
-					<img src={grants} alt="ERW Field Data Partnership Grants" />
-					<h2>ERW Field Data Partnership Grants</h2>
-					<b>Deadline: Dec 20, 2024</b>
-					<p></p>
-					<p>
-						We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. 
-					</p>
-					<a href="/blog/erw-field-grants">Learn More</a>					
 				</div>
 			</div>
 		</section>
