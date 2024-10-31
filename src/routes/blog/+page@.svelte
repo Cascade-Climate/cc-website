@@ -9,6 +9,36 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/blog/erw-field-grants">
+					ERW Field Data Partnership Grants
+				</a>
+			</h1>
+			<p>
+				We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. <b>Deadline: Dec 20, 2024.</b>
+			</p>
+			<p class="details">
+				<span class="date">10/31/2024</span>
+				·
+				<span class="read-time">6 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
+				<a href="/blog/erw-data-quarry">
+					Introducing the ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering
+				</a>
+			</h1>
+			<p>
+				To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
+			</p>
+			<p class="details">
+				<span class="date">10/22/2024</span>
+				·
+				<span class="read-time">9 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">
 					Foundations for Carbon Dioxide Removal Quantification in ERW Deployments
 				</a>

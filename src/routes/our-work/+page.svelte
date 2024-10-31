@@ -6,6 +6,7 @@
 	import cost from '$lib/images/nature/cost.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
 	import policy from '$lib/images/nature/policy.webp';
+	import grants from '$lib/images/nature/grants.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -102,6 +103,16 @@
 						We advance policies that support ERW innovation, provide early project financing support, and develop rules and regulations for responsible deployment in close coordination with industry and civil society organizations.
 					</p>
 					<a href="/blog/policy">Learn More</a>
+				</div>
+				<div>
+					<img src={grants} alt="ERW Field Data Partnership Grants" />
+					<h2>ERW Field Data Partnership Grants</h2>
+					<b>Deadline: Dec 20, 2024</b>
+					<p></p>
+					<p>
+						We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. 
+					</p>
+					<a href="/blog/erw-field-grants">Learn More</a>					
 				</div>
 			</div>
 		</section>
