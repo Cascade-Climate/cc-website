@@ -91,5 +91,6 @@
 	</ol>
 </section>
 </main>
+<img style="width: 0%;" src={grants} alt="Enhanced Rock Weathering" />
 </div>
 
