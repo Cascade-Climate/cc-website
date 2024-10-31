@@ -18,7 +18,6 @@
 
                 <h5 style="color:white">Deadline: December 20th, 2024 at 11:59PM ET.</h5>
 			</div>
-            <img src={grants} alt="Enhanced Rock Weathering" />
 		</div>
         <div class="links">
             <PDFLink link="Cascade-Climate-Regranting-Solicitation.pdf">RFP Solicitation↗</PDFLink>
