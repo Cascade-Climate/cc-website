@@ -23,7 +23,7 @@
         <div class="links">
             <PDFLink target="_blank" rel="noopener" link="/Cascade-Climate-Regranting-Solicitation.pdf">RFP Solicitation↗</PDFLink>
             <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form">Proposal Application Form↗</a>
-            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://docs.google.com/spreadsheets/d/1_XhpE3uPg--twbdzrT9_ZA_Lms19dqBh_OA8xe4Q-DQ/edit?usp=sharing">Networking List↗</a>
+            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfBKrkh9e52YAT2R5z2rQ7_ZlqSWJiIzzIPIIOGKbB1qyOAsA/viewform">Networking List↗</a>
         </div>
 	</section>
 	<ScrollNav />
