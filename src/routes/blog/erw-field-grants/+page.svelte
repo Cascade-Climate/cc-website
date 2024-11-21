@@ -82,7 +82,58 @@
         <p>Applications should be no longer than four to eight pages (exclusive of supporting information), and should be submitted via <a href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form" target="_blank" rel="noopener">this form↗</a>.&nbsp; Applicants are welcome to include figures and references to papers, preprints, and similar as a part of the application; please have all citations at the end of the document. Applicants are advised to not share any information that is considered confidential or a trade secret.</p>
         <p>The Cascade team will also be hosting an open information and Q&A session on <strong>Thursday, November 14th, 2024 at 12:00PM ET.</strong> <a href="https://lu.ma/pjmx9xl1">Register Here↗</p>
         <p>For additional questions related to this RfP or the proposal process, please contact the Cascade Climate RFP Team at <a href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">grants@cascadeclimate.org↗</a>.&nbsp; Potential applicants are also encouraged to bring their questions to our webinar and Q&amp;A session for this RFP, scheduled for <strong>Thursday, November 14th at 12PM ET</strong>. This will be recorded and made available on the Cascade website.</p>
+    </section>  
 
+    <section id="rfp-qa">
+
+        <h1>Q&A</h1>
+        <p>On Thursday, November 14th at 12PM ET, Cascade Climate held a webinar to answer questions about this solicitation. The webinar began with a short presentation of these slides <a href="https://docs.google.com/presentation/d/1ncKOkLSXRDSerllKkqCw-J8otlXS8SHKl95CVATFjuM/edit#slide=id.g2ee758cb786_0_0" target="_blank" rel="noopener">RFP webinar↗</a>, and then transitioned to Q&amp;A. The <a href="https://zoom.us/rec/share/hEmJbUupbGIH6luB2HLNtP27uKIdudfeRyhJ1WdK_Kb9g3O4qOjkF8sk4CS2Yitz.Oj3P7Hg0lI_oGuU6" target="_blank" rel="noopener">recording↗</a> of the Q&amp;A is available via the link; please note that we erroneously stated that &ldquo;the Researcher could only be from an academic or non-profit institution.&rdquo; This was not consistent with the wording of the solicitation, and we&rsquo;ve addressed this in the FAQ below.</p>
+    
+        <h2>Partnership</h2>
+<h5>Can the Researcher be from a private company?</h5>
+<p>Yes. Any scientific researcher with the necessary expertise and instrumentation to carry out the collection, analysis, and publication of a proposed dataset may apply to this RFP. (Note: During the webinar, we erroneously stated that the Researcher could only be from an academic or non-profit institution. This was not consistent with the wording of the solicitation.)</p>
+
+<h5>Can the Research Partner and Deployment Partner be at the same Organization?</h5>
+<p>No. The Researcher and Deployment Partner cannot be from the same organization.</p>
+
+<h5>If the Deployment Partner is from outside Northern America and Europe, can the Researcher be from Northern America and Europe?</h5>
+<p>This solicitation has no limitations on the nationalities of either partner.&nbsp; There will be special consideration given to proposals that collect data on fields outside of Northern America and Europe. Please refer to the Selection Criteria section of the solicitation for full details on special considerations.</p>
+
+<h5>Are there limits on the number of grant applications per Deployment Partner, or institution?</h5>
+<p>No. There are no limits on the number of grant applications per institution.</p>
+
+<h2>Funding</h2>
+<h5>What is the anticipated funding size?</h5>
+<p>We welcome research proposals between $20,000 and $200,000.&nbsp;&nbsp;</p>
+
+<h5>Can the funding be used to support the salary of post-docs and students?</h5>
+<p>For staff and research scientists not in non-PI or co-PI roles, as well as postdoctoral, graduate and/or undergraduate research assistants, the grant can provide salary support and related benefits, including graduate student tuition.&nbsp; Please refer to the Allowable Expenses section of the solicitation for full details.</p>
+
+<h5>Researchers at universities are often required to submit proposals to RFPs through the institution at some agreed overhead rate. Will proposals be accepted through institutions and at what overhead rate?</h5>
+<p>Indirect costs may be included but must not exceed 10% of the total project budget. Please refer to the Indirect Costs section of the solicitation for full details.</p>
+
+<h5>Can a proposal include co-funding?</h5>
+<p>Applicants must include a proposed budget in their application. If this proposal includes other funding sources, the budget should explain how costs will be allocated between this proposal and other funding sources, and also include an explanation of the status of the other funding sources (i.e., funds received, awaiting funds, proposal submitted, etc.)</p>
+
+<h2>Data</h2>
+<h5>How will data be managed? And potential patents treated?</h5>
+<p>Please see the Data Sharing Requirements section of the solicitation for full details. Intellectual property will remain the property of the awardee, and we will work with awardees to define grant terms accordingly.</p>
+
+<h2>Scope</h2>
+<h5>Are ERW deployments in coastal environments, mine tailings, and other settings beyond soils in scope?&nbsp;</h5>
+<p>Only field data from ERW deployments on soils is in scope.</p>
+
+<h5>Does this solicitation support work on new field trials if the Deployment Partner is funding feedstock, spreading, and MRV?</h5>
+<p>Yes.</p>
+
+<h5>How do you handle Deployment Partners that do not plan to conduct MRV?</h5>
+<p>Measurements that are generally required for commercial MRV are not within the scope of this solicitation. For proposals where the Deployment Partner does not plan to conduct MRV, there should be an explanation for how relevant Contextual Data will be collected and the funding source for Contextual Data collection. Please refer to the Appendix A of the solicitation for a detailed description of Contextual Data.</p>
+
+<h5>Are additional proxies (e.g. stable isotopes, granulometry) within scope?</h5>
+<p>Yes. We welcome the creativity of the ERW community to propose the collection of any datasets that would advance the field.</p>
+</section>
+
+<section>
     <h3>Footnotes</h3>
 	<ol style="margin: 0;">
 		<li id="footnote1">
