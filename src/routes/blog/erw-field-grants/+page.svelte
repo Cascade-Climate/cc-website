@@ -18,7 +18,7 @@
                 <p>Questions? Email us at <a style="color:#00EDAE;" href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">grants@cascadeclimate.org</a>.</p>
 
                 <h5 style="color:white">Deadline: December 20th, 2024 at 11:59PM ET.</h5>
-                <h5 style="color:white">Information/Q&A Session: November 14th, 2024 at 12:00PM ET. (Link Below)</h5>
+                <h5 style="color:white">Information/Q&A Session: November 14th, 2024 at 12:00PM ET. Link to recording in Q&A section below.</h5>
 			</div>
 		</div>
         <div class="links">
@@ -27,7 +27,6 @@
             </div>
             <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form">Proposal Application Form↗</a>
             <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfBKrkh9e52YAT2R5z2rQ7_ZlqSWJiIzzIPIIOGKbB1qyOAsA/viewform">Networking List↗</a>
-            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://lu.ma/pjmx9xl1">November 14, 2024 | Information & Q&A Session↗</a>
         </div>
 	</section>
 	<ScrollNav />
