@@ -14,7 +14,7 @@
 	<main>
 		<p></p>
 			<p>
-				Since we released <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗ </em></a>(“Foundations” for short), a question we often hear from the ERW community is: knowing the complexity, heterogeneity, and spatiotemporal scale of quantifying CDR in an ERW deployment, is it possible to develop rigorous methodologies that guide deployments today?
+				Since we released <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in Enhanced Rock Weathering Deployments↗ </em></a> (“Foundations” for short), a question we often hear from the ERW community is: knowing the complexity, heterogeneity, and spatiotemporal scale of quantifying CDR in an ERW deployment, is it possible to develop rigorous methodologies that guide deployments today?
 			</p>
 			<p>The Cascade team believes the answer is yes.<em> </em> Rigorous measurement, reporting and verification (MRV) methodologies <span style="text-decoration: underline;"><strong>can</strong></span> be developed for ERW, provided that:&nbsp;</p>
 			<ol>
