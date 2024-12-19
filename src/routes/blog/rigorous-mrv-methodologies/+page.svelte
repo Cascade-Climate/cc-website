@@ -6,7 +6,8 @@
 				<p class="date">December 19, 2024</p>
 				<a href="/people/hara-wang" style="color: white;">Hara Wang</a>,
 				<a href="/people/alison-tune" style="color: white;">Alison Tune</a>,
-				<a href="/people/rachel-smith" style="color: white;">Rachel Smith</a>
+				<a href="/people/rachel-smith" style="color: white;">Rachel Smith</a>,
+				<a href="/people/tannis-thorlakson" style="color: white;">Tannis Thorlakson</a>
 				<hr>
 			</div>
 		</div>
