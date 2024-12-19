@@ -9,6 +9,21 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/blog/rigorous-mrv-methodologies">
+					We can and must set rigorous MRV methodologies for enhanced rock weathering now.
+				</a>
+			</h1>
+			<p>
+				A question we often hear from the ERW community is: knowing the complexity, heterogeneity, and spatiotemporal scale of quantifying CDR in an ERW deployment, is it possible to develop rigorous methodologies that guide deployments today? 
+			</p>
+			<p class="details">
+				<span class="date">12/19/2024</span>
+				·
+				<span class="read-time">2 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/erw-field-grants">
 					ERW Field Data Partnership Grants
 				</a>
