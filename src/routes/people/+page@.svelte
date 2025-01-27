@@ -7,6 +7,7 @@
 	import arielleLok from '$lib/images/people/arielle-lok.webp';
 	import alisonTune from '$lib/images/people/alison-tune.webp';
 	import bradRochlin from '$lib/images/people/brad-rochlin.webp';
+	import annaSophiaRoberts from '$lib/images/people/anna-sophia-roberts.webp';
 	import alexPrice from '$lib/images/people/alex-price.webp';
 	import jamieNewman from '$lib/images/people/jamie-newman.webp';
 	import noahAnderson from '$lib/images/people/noah-anderson.webp';
@@ -103,6 +104,11 @@
 			<img src={alisonTune} alt="Alison Tune" />
 			<h1>Alison Tune</h1>
 			<span>ERW Scientist</span>
+		</a>
+		<a class="team-card" href="/people/anna-sophia-roberts">
+			<img src={annaSophiaRoberts} alt="Anna Sophia Roberts" />
+			<h1>Anna Sophia Roberts</h1>
+			<span>Policy Associate</span>
 		</a>
 
 		<a class="team-card" href="/people/arielle-lok">

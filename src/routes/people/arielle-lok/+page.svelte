@@ -8,7 +8,7 @@
 	<title>Arielle Lok - Cascade Climate</title>
 	<meta
 		name="description"
-		content="Learn more about Arielle Look's role at Cascade Climate."
+		content="Learn more about Arielle Lok's role at Cascade Climate."
 	/>
 </svelte:head>
 <div class="team-member">
