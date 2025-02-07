@@ -114,7 +114,7 @@
 		<a class="team-card" href="/people/arielle-lok">
 			<img src={arielleLok} alt="Arielle Lok" />
 			<h1>Arielle Lok</h1>
-			<span>Associate</span>
+			<span>Program Manager</span>
 		</a>
 		<a class="team-card" href="/people/brad-rochlin">
 			<img src={bradRochlin} alt="Brad Rochlin" />
@@ -134,7 +134,7 @@
 		<a class="team-card" href="/people/noemma-olagaray">
 			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
 			<h1>Noemma Olagaray</h1>
-			<span>Associate</span>
+			<span>Program Manager</span>
 		</a>
 
 		<a class="team-card" href="/people/pritha-ghosh">
