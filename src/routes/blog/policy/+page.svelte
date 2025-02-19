@@ -27,9 +27,10 @@
 		<section id="policyPriorities">
 			<h1>Policy Priorities for Enhanced Rock Weathering</h1>
 			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering - Executive Summary" variant="accent" style="display: block; text-align: left;">[Executive Summary] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
+				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering - Executive Summary.pdf" variant="accent" style="display: block; text-align: left;">[Executive Summary] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
 				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering.pdf" variant="accent" style="display: block; text-align: left;">[Full] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
 			</div>
+			<br>
 			<p>
 				Enhanced rock weathering (ERW) is a promising durable carbon removal and land management solution that involves spreading finely crushed alkaline rocks onto fields. By speeding up the natural weathering process of rocks, ERW can absorb CO2 from the atmosphere and durably store it for millennia. ERW can also help counteract widespread soil acidification by providing a cost-effective soil pH management solution to farmers. To unlock ERW’s full carbon and agronomic potential, governments should:</p>
 			<ul style="display: flex; flex-direction: column; gap: 1rem;">

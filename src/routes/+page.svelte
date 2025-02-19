@@ -53,6 +53,14 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
+				<img src={policy} alt="Policy" />
+				<h2>Policy priorities for ERW</h2>
+				<p>
+					We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and increase confidence of carbon removal buyers and investors to enter the market.
+				</p>
+				<a href="/blog/policy">Learn More</a>
+			</div>
+			<div class="spotlight">
 				<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
 				<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 				<p>
@@ -68,14 +76,6 @@
 				</p>
 				<a href="/blog/erw-field-grants"
 				>Learn More</a>
-			</div>
-			<div class="spotlight">
-				<img src={policy} alt="Policy" />
-				<h2>Policy priorities for ERW</h2>
-				<p>
-					We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and increase confidence of carbon removal buyers and investors to enter the market.
-				</p>
-				<a href="/blog/policy">Learn More</a>
 			</div>
 		</div>
 	</section>
