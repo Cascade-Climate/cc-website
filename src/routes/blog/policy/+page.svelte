@@ -3,10 +3,11 @@
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import farm2 from '$lib/images/nature/farm2.webp';
+	import policy from '$lib/images/nature/policy.webp';
 </script>
 
 <svelte:head>
-    <title>Cascade’s Approach to Policy</title> 
+    <title>Policy Priorities</title> 
 </svelte:head>
 
 <div>
@@ -15,22 +16,26 @@
 			<div class="copy">
 				<h1>Cascade’s Approach to Policy</h1>
 				<p>
-					Our approach to public policy is evidence-driven, pragmatic, and non-partisan. We advance policy that will accelerate innovation, unlock new opportunities for project financing, and create regulatory frameworks needed to responsibly advance natural climate interventions.  
+					Our policy priorities are shaped by the specific considerations of each intervention that we work on, but our driving purpose remains to address obstacles and break down system-level bottlenecks to progress.  
 				</p>
 			</div>
+			<img src={policy} alt="Farm"/>
 		</div>
 	</section>
 	<ScrollNav />
 	<main>
 		<section id="policyPriorities">
-			<h1>Policy Priorities</h1>
+			<h1>Policy Priorities for Enhanced Rock Weathering</h1>
+			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering - Executive Summary" variant="accent" style="display: block; text-align: left;">[Executive Summary] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
+				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering.pdf" variant="accent" style="display: block; text-align: left;">[Full] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
+			</div>
 			<p>
-				Our policy priorities are shaped by the specific considerations of each intervention that we work on, but our driving purpose remains to address obstacles and break down system-level bottlenecks to progress. Several of our primary policy efforts across the U.S. and European Union include:</p>
+				Enhanced rock weathering (ERW) is a promising durable carbon removal and land management solution that involves spreading finely crushed alkaline rocks onto fields. By speeding up the natural weathering process of rocks, ERW can absorb CO2 from the atmosphere and durably store it for millennia. ERW can also help counteract widespread soil acidification by providing a cost-effective soil pH management solution to farmers. To unlock ERW’s full carbon and agronomic potential, governments should:</p>
 			<ul style="display: flex; flex-direction: column; gap: 1rem;">
-				<li><b>ERW RD&D:</b> We’re advocating for increased public funding for ERW research, development, and demonstration in annual funding and agricultural research legislation, including the U.S. Farm Bill.</li>
-				<li><b>Government CDR Procurement:</b> Governments will need to become one of the biggest buyers and supporters of CDR. We’re educating policymakers on how ERW and other carbon removal pathways can fit within government procurement programs.</li>
-				<li><b>ERW Pay-for-Practice:</b> We’re building a shared understanding of the role that government subsidies and pay-for-practice programs can support early-adopters of ERW, starting with USDA Conservation Practice Standards.</li>
-				<li><b>EU CRCF:</b> As a precedent-setting supply-side regulation, the EU Carbon Removals and Carbon Farming Regulation (CRCF) will help set standards for carbon quantification best-practices across CDR pathways. We’re working to ensure ERW is included in the EU CRCF process.</li>
+				<li><b>Invest in dedicated ERW research and development on carbon quantification, agronomic impacts, and environmental risks and co-benefits. </b> Publicly-funded R&D should target remaining uncertainties for ERW that the private sector is not well-positioned to address. In particular, long-term field trials and associated data collection and management will be critical to understand ERW’s carbon, agronomic, and environmental impact across a range of soil types, operational systems, and regional climates.</li>
+				<li><b>Provide financial assistance to address barriers to scale and support farmer adoption.:</b> Government financial assistance is needed to overcome barriers to scaling ERW—such as high measurement, reporting, and verification (MRV) costs—while supporting farmer adoption through new business models. This can take the form of funding for pilot projects, procurement policies, and direct compensation to farmers for ERW adoption.</li>
+				<li><b>Increase confidence of prospective carbon removal buyers and investors to enter the market through high-rigor standards and clear regulatory frameworks.</b> Uncertainty around the durability and credibility of carbon removal credits, a lack of regulatory clarity, and overall market immaturity have kept prospective CDR buyers and investors from entering the market. Governments can address these challenges through non-financial levers, including the development of high-rigor MRV standards, regulations with transparent timelines, and clear carbon accounting frameworks.</li>
 			</ul>
 			<p> </p>
 		</section>
@@ -58,6 +63,7 @@
 			<h1>Resources</h1>
 			<PDFLink link="/Cascade Climate_Enhanced Rock Weathering 101_vFinal.pdf" variant="accent">Enhanced Rock Weathering 101↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Dissolved Carbon in the Oceans_vFinal.pdf" variant="accent">Dissolved Carbon in the Oceans↗</PDFLink>
+			<PDFLink link="/Cascade Climate_ERW Value Chain Graphic_vF.pdf" variant="accent">ERW Value Chain Graphic↗</PDFLink>
 		</section>
 	</main>
 </div>

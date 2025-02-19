@@ -6,6 +6,7 @@
 	import ocean1 from '$lib/images/nature/ocean1.webp';
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import data from '$lib/images/nature/data.webp';
+	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
 	import grants from '$lib/images/nature/grants.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
@@ -69,12 +70,12 @@
 				>Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={cost} alt="Cost Estimator" />
-				<h2>ERW MRV cost estimator and database</h2>
+				<img src={policy} alt="Policy" />
+				<h2>Policy priorities for ERW</h2>
 				<p>
-					We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
+					We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and increase confidence of carbon removal buyers and investors to enter the market.
 				</p>
-				<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
+				<a href="/blog/policy">Learn More</a>
 			</div>
 		</div>
 	</section>
