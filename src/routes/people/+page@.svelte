@@ -7,6 +7,7 @@
 	import arielleLok from '$lib/images/people/arielle-lok.webp';
 	import alisonTune from '$lib/images/people/alison-tune.webp';
 	import bradRochlin from '$lib/images/people/brad-rochlin.webp';
+	import cathyLuo from '$lib/images/people/cathy-luo.webp';
 	import annaSophiaRoberts from '$lib/images/people/anna-sophia-roberts.webp';
 	import alexPrice from '$lib/images/people/alex-price.webp';
 	import jamieNewman from '$lib/images/people/jamie-newman.webp';
@@ -14,6 +15,7 @@
 	import noemmaOlagaray from '$lib/images/people/noemma-olagaray.webp';
 	import prithaGhosh from '$lib/images/people/pritha-ghosh.webp';
 	import rachelSmith from '$lib/images/people/rachel-smith.webp';
+	import richardMarinos from '$lib/images/people/richard-marinos.webp';
 	import tannisThorlakson from '$lib/images/people/tannis-thorlakson.webp';
 	import chrisReinhard from '$lib/images/people/chris-reinhard.webp';
 	import noahPlanavsky from '$lib/images/people/noah-planavsky.webp';
@@ -121,6 +123,11 @@
 			<h1>Brad Rochlin</h1>
 			<span>Program Manager</span>
 		</a>
+		<a class="team-card" href="/people/cathy-luo">
+			<img src={cathyLuo} alt="Cathy Luo" />
+			<h1>Cathy Luo</h1>
+			<span>Strategy and Research Associate</span>
+		</a>
 		<a class="team-card" href="/people/jamie-newman">
 			<img src={jamieNewman} alt="Jamie Newman" />
 			<h1>Jamie Newman</h1>
@@ -142,11 +149,15 @@
 			<h1>Pritha Ghosh</h1>
 			<span>Program Director</span>
 		</a>
-
 		<a class="team-card" href="/people/rachel-smith">
 			<img src={rachelSmith} alt="Rachel Smith" />
 			<h1>Rachel Smith</h1>
 			<span>Policy Manager</span>
+		</a>
+		<a class="team-card" href="/people/richard-marinos">
+			<img src={richardMarinos} alt="Richard Marinos" />
+			<h1>Richard Marinos</h1>
+			<span>ERW Scientist</span>
 		</a>
 		<a class="team-card" href="/people/tannis-thorlakson">
 			<img src={tannisThorlakson} alt="Tannis Thorlakson" />
