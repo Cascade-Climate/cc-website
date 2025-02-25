@@ -43,8 +43,8 @@
 		<section id="governmentEngagement">
 			<h1>Government Engagement</h1>
 			<div>Cascade provides policy support and advice through responses to formal calls for public comment across various jurisdictions.</div>
-			<PDFLink link="https://drive.google.com/file/d/1V9EhJkaZLCypa65FI2p-8UDmAxhEEGkP/view?usp=drive_link" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; U.S. Department of Agriculture (USDA) on Implementation of the Conservation Practices to Support Climate Change Mitigation and Adaptation↗</PDFLink>
-			<PDFLink link="https://drive.google.com/file/d/1U-xzjFeCWVA7vraXbfL407_5-KUfBB-c/view?usp=drive_link" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; USDA on the Greenhouse Gas Technical Assistance Provider and Third Party Verifier Program↗</PDFLink>
+			<PDFLink link="/Response to NRCS RFI on Climate-Smart Ag CPS.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; U.S. Department of Agriculture (USDA) on Implementation of the Conservation Practices to Support Climate Change Mitigation and Adaptation↗</PDFLink>
+			<PDFLink link="/GCSA RFI Response.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; USDA on the Greenhouse Gas Technical Assistance Provider and Third Party Verifier Program↗</PDFLink>
 			<br>
 			<div>Cascade also participates in formal government advisory groups and consortiums including:</div>
 			<ul>
