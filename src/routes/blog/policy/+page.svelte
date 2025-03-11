@@ -65,7 +65,7 @@
 			<PDFLink link="/Cascade Climate_Enhanced Rock Weathering 101_vFinal.pdf" variant="accent">Enhanced Rock Weathering 101↗</PDFLink>
 			<PDFLink link="/Cascade Climate_Dissolved Carbon in the Oceans_vFinal.pdf" variant="accent">Dissolved Carbon in the Oceans↗</PDFLink>
 			<PDFLink link="/Cascade Climate_ERW Value Chain Graphic_vF.pdf" variant="accent">ERW Value Chain Graphic↗</PDFLink>
-			<PDFLink link="/CRA0225_Enhanced_Rock_Weathering.pdf" variant="accent">Carbon Removal Alliance ERW R&D Priorities↗</PDFLink>
+			<PDFLink link="/CRA0225_Enhanced_Rock_Weathering.pdf" variant="accent">Enhanced Weathering Policy Working Group R&D Priorities↗</PDFLink>
 		</section>
 	</main>
 </div>
