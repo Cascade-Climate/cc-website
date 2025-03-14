@@ -1,6 +1,7 @@
 <script>
 	import headshot from '$lib/images/people/richard-marinos.webp';
 	import linkedinIcon from '$lib/images/linkedin-icon.webp';
+	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>
 
 <svelte:head>
@@ -18,6 +19,8 @@
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/richard-marinos-461b11177/">
 					<img src={linkedinIcon} alt="LinkedIn" />
+					<a target="_blank" href="https://x.com/richardmarinos">
+						<img src={twitterIcon} alt="Twitter" />
 				</a>
 			</div>
 		</div>
