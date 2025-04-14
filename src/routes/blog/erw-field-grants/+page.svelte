@@ -10,7 +10,11 @@
 		<div class="content">
 			<div class="copy">
 				<h1><strong>Request for Proposals:</strong> ERW Field Data Partnership Grants</h1>
+                <div class="links">
+                    <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="/blog/erw-field-grant-awardees">Now closed. Awardees announced here↗</a>
+                </div>
                 <p></p>
+                
                 <p>Cascade is excited to solicit research proposals between $20,000 and $200,000 that aim to collect high-quality ERW field datasets on existing deployments. Proposals will be awarded to scientific partnerships, in which Deployment Partners agree to open up an existing deployment site for additional monitoring and help coordinate logistics, and Researchers co-propose a study, collect and analyze the data, and publish the results.</p>
 
                 <p>We believe that this partnership model—in which researchers “piggyback” on existing deployments to carry out additional measurements—can accelerate the collection of novel field datasets in ERW. These partnerships can tackle high-priority research questions at decreased logistical and cost burden for researchers, and enable greater scientific learning from the current wave of commercial ERW activity.</p>

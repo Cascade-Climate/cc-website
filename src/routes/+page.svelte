@@ -69,12 +69,12 @@
 				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={grants} alt="ERW Field Grants" />
-				<h2>ERW Field Data Partnership Grants</h2>
+				<img src={grants} alt="ERW Field Grant" />
+				<h2>ERW Field Data Partnership Grant Awardees</h2>
 				<p>
-					We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. <strong>Deadline: December 20th, 2024.</strong>
+					In collaboration with the Grantham Foundation, Google, and Frontier, Cascade is excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
 				</p>
-				<a href="/blog/erw-field-grants"
+				<a href="/blog/erw-field-grant-awardees"
 				>Learn More</a>
 			</div>
 		</div>

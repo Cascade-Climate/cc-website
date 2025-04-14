@@ -71,6 +71,15 @@
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
+					<img src={grants} alt="ERW Field Data Partnership Grant Awardees" />
+					<h2>ERW Field Data Partnership Grant Awardees</h2>
+					<p></p>
+					<p>
+						In collaboration with the Grantham Foundation, Google, and Frontier, we are excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
+					</p>
+					<a href="/blog/erw-field-grant-awardees">Learn More</a>					
+				</div>
+				<div>
 					<img src={policy} alt="Policy" />
 					<h2>Policy priorities for ERW</h2>
 					<p>
@@ -105,12 +114,12 @@
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
 				<div>
-					<img src={grants} alt="ERW Field Data Partnership Grants" />
+					<img src={farm1} alt="ERW Field Data Partnership Grants" />
 					<h2>ERW Field Data Partnership Grants</h2>
-					<b>Deadline: Dec 20, 2024</b>
+					<a href="/blog/erw-field-grant-awardees" style="background-color: white; border: 2px solid #023C40; color: #023C40;">Awardees announced <u>here</u></a>
 					<p></p>
 					<p>
-						We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. 
+						<strong>Deadline passed in Dec 2024.</strong> We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. 
 					</p>
 					<a href="/blog/erw-field-grants">Learn More</a>					
 				</div>

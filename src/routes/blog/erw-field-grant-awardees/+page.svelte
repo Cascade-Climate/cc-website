@@ -10,15 +10,19 @@
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
-				<h1>ERW Field Data Partnership Grant Winners</h1>
+				<h1>ERW Field Data Partnership Grant Awardees</h1>
+                <div class="links">
+                    <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="/blog/erw-field-grants">Original Solicitation Page↗</a>
+                </div>
                 <p></p>
                 <p>In collaboration with the Grantham Foundation, Google, and Frontier, Cascade is excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects focused on addressing key research priorities in enhanced rock weathering (ERW).
                 </p>
 
                 <p>This funding initiative is intended to accelerate ERW science via a "piggybacking" model, where academic researchers layer scientific exploration onto existing ERW deployments. Together, these nine individual projects tackle several scientific priorities in ERW, including secondary phase formation, soil organic carbon stock changes, and the flow of weathering products. Each partnership also commits to making data available via the <a href="https://cascadeclimate.org/blog/erw-data-quarry"target="_blank" rel="noopener">ERW Data Quarry↗</a> and scientific publication, ensuring that more researchers have access to high quality ERW field data. The projects span multiple sites in nine different countries, covering a wide range of climate, soil, and crop types. 
                 </p>
-                
+
 			</div>
+            
 		</div>
 
 	</section>
@@ -52,7 +56,7 @@
             <li><strong style="color: #0502B1;">The flow of weathering products</strong>: The ultimate durable storage reservoir of carbon in ERW is deep groundwater systems and the ocean. There is still uncertainty in the timing of the movement of weathering products towards these durable reservoirs. Funded projects investigate hydrologically controlled research sites and multiple methods for tracking water and alkalinity flow through the deep vadose zone.             </li>
         </ul>
 
-        <p>For more information on research priorities in ERW, please refer to <a href="https://cascadeclimate.org/Cascade%20Climate_Appendix%202_%20Foundations%20R&D%20Priorities.pdf" target="_blank" rel="noopener">Appendix 2: Foundations research and development priorities↗</a>.</p>
+        <p>For more information on research priorities in ERW, please refer to <a href="https://cascadeclimate.org/Cascade%20Climate_Appendix%202_%20Foundations%20R&D%20Priorities.pdf" target="_blank" rel="noopener">Appendix 2: Foundations research and development priorities↗</a>, which was released alongside <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗</a> in October of 2024.</p>
 
     </section>
 
@@ -75,7 +79,7 @@
 
     <section id="process">
         <h1>Process</h1>
-        <p>In order to select these awardees, we followed a two-stage review process, conducting a preliminary internal review followed by an external expert review. The primary criteria for internal review included that the proposed dataset would a) be additional to practices typically used in commercial MRV, and b) meaningfully advance scientific knowledge of ERW carbon quantification. The external reviewers also evaluated proposals for appropriate method selection (e.g., data is collected at the sufficient spatiotemporal resolution to capture a signal) and by how the proposal's deployment site conditions matched the research question. External review was conducted by 11 academic experts from various relevant backgrounds (e.g. stable isotopes, agronomy, geophysics) who were screened for commercial and academic conflicts of interest. In addition to the reviewers, Kate Maher and Noah Planavsky served as our advisory board, providing input on process governance to ensure the proposal application wasn't overly burdensome, and that the reviewer pool included the relevant expertise.
+        <p>In order to select these awardees, we followed a two-stage review process, conducting a preliminary internal review followed by an external expert review. The primary criteria for internal review included that the proposed dataset would a) be additional to practices typically used in commercial MRV, and b) meaningfully advance scientific knowledge of ERW carbon quantification. The external reviewers also evaluated proposals for appropriate method selection (e.g., data is collected at the sufficient spatiotemporal resolution to capture a signal) and by how the proposal's deployment site conditions matched the research question. External review was conducted by 11 academic experts from various relevant backgrounds (e.g., stable isotopes, agronomy, geophysics) who were screened for commercial and academic conflicts of interest. In addition to the reviewers, Kate Maher and Noah Planavsky served as our advisory board, providing input on process governance to ensure the proposal application wasn't overly burdensome, and that the reviewer pool included the relevant expertise.
         </p>
     </section>  
 
