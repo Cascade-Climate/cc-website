@@ -56,7 +56,7 @@
             <li><strong style="color: #0502B1;">The flow of weathering products</strong>: The ultimate durable storage reservoir of carbon in ERW is deep groundwater systems and the ocean. There is still uncertainty in the timing of the movement of weathering products towards these durable reservoirs. Funded projects investigate hydrologically controlled research sites and multiple methods for tracking water and alkalinity flow through the deep vadose zone.             </li>
         </ul>
 
-        <p>For more information on research priorities in ERW, please refer to <a href="https://cascadeclimate.org/Cascade%20Climate_Appendix%202_%20Foundations%20R&D%20Priorities.pdf" target="_blank" rel="noopener">Appendix 2: Foundations research and development priorities↗</a>, which was released alongside <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗</a> in October of 2024.</p>
+        <p>For more information on research priorities in ERW, please refer to <a href="https://cascadeclimate.org/Cascade%20Climate_Appendix%202_%20Foundations%20R&D%20Priorities.pdf" target="_blank" rel="noopener">Appendix 2: Foundations research and development priorities↗</a>, which was released alongside <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener">Foundations for Carbon Dioxide Removal Quantification in ERW Deployments↗</a> in October of 2024.</p>
 
     </section>
 
