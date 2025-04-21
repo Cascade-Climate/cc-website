@@ -77,6 +77,14 @@
 		font-weight: 550;
 	}
 
+	:global(p) {
+		margin-bottom: 0;
+	}
+
+	:global(ol) {
+		margin: 0;
+	}
+
 	:global(.content) {
 		display: flex;
 		gap: 2rem;

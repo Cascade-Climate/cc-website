@@ -1,9 +1,12 @@
 <script>
-	import erw from '$lib/images/rock-weathering.webp';
-	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
-    import cost from '$lib/images/nature/cost.webp';
-    import metals from '$lib/images/nature/metals.webp';
+	import metals from '$lib/images/nature/metals.webp';
+    import apprate from '$lib/images/equations/Application-Rate-EQ.webp';
+    import massbalance from '$lib/images/equations/Basic-Mass-Balance-EQ.webp';
+    import feedstockconc from '$lib/images/equations/HM-Concentration-Feedstock-EQ.webp';
+    import soilconc from '$lib/images/equations/HM-Concentration-Soil-EQ.webp';
+    import soilbd from '$lib/images/equations/Soil-BD-EQ.webp';
+    import soildepth from '$lib/images/equations/Soil-Depth-EQ.webp';
 </script>
 
 <svelte:head>
@@ -13,6 +16,7 @@
 	content="Cascade Climate has developed a free-to-use maximally conservative mass-balance model."
 />
 </svelte:head>
+
 
 <div>
 	<section class="intro">
@@ -31,8 +35,8 @@
             <img src={metals} alt="Enhanced Rock Weathering" />
 		</div>
 		<div class="links">
-			<a href="https://emce.cascadeclimate.org/">Link to Model↗</a>
-            <a href="https://docs.google.com/spreadsheets/d/1mWgcD9wqkQpAhdb79h4AymDnmuCPAPM_mQFrN60RC2o/edit?gid=0#gid=0">Link to Database↗</a>
+			<a href="https://metals.cascadeclimate.org/">Link to Calculator↗</a>
+            <a href="https://cascadeclimate.org/Cascade-Climate_ERW-MAC%20preset%20model%20results%20slides.pdf">Link to Preset Model Results↗</a>
 		</div>
 	</section>
 	<ScrollNav />
@@ -48,337 +52,123 @@
             <p>Due to the relatively recent rise of ERW, there are no legislative soil regulations that have been created solely with the practice of ERW in mind. Currently, there are two types of regulations that are the most relevant to ERW deployments:&nbsp;</p>
             <ol>
             <li><strong>Feedstock Regulations:</strong> These regulations set limits on the concentration of metals allowed in feedstocks, such as the <a href="https://www.epa.gov/sites/default/files/2018-12/documents/plain-english-guide-part503-biosolids-rule.pdf" target="_blank" rel="noopener">EPA&rsquo;s 503c Biosolids Rule</a> or the <a href="https://eur-lex.europa.eu/eli/reg/2019/1009/oj/eng" target="_blank" rel="noopener">EU Fertilizer Products Regulation</a>. However, these regulations are generally unsuitable for ERW deployments for a few reasons. In the case of the biosolids legislation, the regulated feedstock (liquid waste sludge) is more soluble and releases metals more readily than ERW feedstocks. As a result, applying the same regulatory thresholds to ERW materials can significantly underestimate the amount of rock that can be safely applied to land, unnecessarily restricting the carbon removal potential of ERW projects while not accurately reflecting the actual environmental risk. In the case of the EU Fertilizer Products Regulation, there are no limits on application rates for the inorganic feedstocks that are regulated. This can be problematic for ERW deployments because even if the concentration of metals in each application meets regulatory standards, without limits on total application amounts, excessive quantities of metals could still accumulate in soil over time. The environmental impact depends on the total metal load added to soil, not merely the concentration in individual applications. Therefore, concentration limits alone are insufficient to protect soil health when application rates remain unrestricted.</li>
-            </ol>
-            <ol>
-            <li><strong>Soil Regulations: </strong>Metal threshold limits for soil concentrations regulate the concentration of metals present in soil. These regulations vary in their specificity: some are explicitly intended for industrial clean-up sites, others establish different thresholds based on soil pH ranges, and some are designated for specific land uses (residential, agricultural, etc). Soil concentrations also take into account background soil concentrations of metals, which in some cases could be elevated with respect to a given metal prior to an ERW deployment. In certain cases, baseline soil conditions can exceed soil regulatory thresholds, which could effectively prohibit ERW deployments with any trace levels of the offending metals.</li>
-            <ol>
-            <li>Globally, regulations include an assortment of soil thresholds for metals in an incomplete and uncoordinated way, and ERW practitioners are left to interpret these as guidelines for ecosystem safety at their deployment sites. Any one set of regulations only regulates some metals, and leaves out others that are also relevant to ERW &ndash; for example:&nbsp;</li>
-            </ol>
-            </ol>
-            <ul>
-            <li>The <a href="https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/fertilizantes/legislacao/in-05-_ingles.pdf" target="_blank" rel="noopener">Brazilian Normative Instruction for Remineralizers</a> only lists thresholds for 5 metals (As, Cd, Pb, Cr, Hg).</li>
-            <li>The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:01986L0278-20220101" target="_blank" rel="noopener">EU Limit Values for Concentrations of Heavy Metals in Soils</a> only list thresholds for 6 metals (Cd, Cu, Ni, Pb, Zn, Hg).&nbsp;</li>
-            <li>The <a href="https://www.finlex.fi/en/laki/kaannokset/2007/en20070214.pdf" target="_blank" rel="noopener">Ministry of the Environment Finland Assessment of Soil Contamination and Remediation Needs</a> is one of the most comprehensive, listing thresholds for 11 (Sb, As, Hg, Cd, Co, Cr, Cu, Pb, Ni, Zn, and V).</li>
-            </ul>
-            <p><span style="color: #666666;">Ideal Regulatory Landscape:&nbsp;</span></p>
+            <li><strong>Soil Regulations: </strong>Metal threshold limits for soil concentrations regulate the concentration of metals present in soil. These regulations vary in their specificity: some are explicitly intended for industrial clean-up sites, others establish different thresholds based on soil pH ranges, and some are designated for specific land uses (residential, agricultural, etc). Soil concentrations also take into account background soil concentrations of metals, which in some cases could be elevated with respect to a given metal prior to an ERW deployment. In certain cases, baseline soil conditions can exceed soil regulatory thresholds, which could effectivel`y prohibit ERW deployments with any trace levels of the offending metals.
+                <ul>
+                    <li style="margin-top: 10px;">Globally, regulations include an assortment of soil thresholds for metals in an incomplete and uncoordinated way, and ERW practitioners are left to interpret these as guidelines for ecosystem safety at their deployment sites. Any one set of regulations only regulates some metals, and leaves out others that are also relevant to ERW &ndash; for example:&nbsp;
+                        <ul>
+                            <li style="margin-top: 10px;">The <a href="https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/fertilizantes/legislacao/in-05-_ingles.pdf" target="_blank" rel="noopener">Brazilian Normative Instruction for Remineralizers</a> only lists thresholds for 5 metals (As, Cd, Pb, Cr, Hg).</li>
+                            <li style="margin-top: 10px;">The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:01986L0278-20220101" target="_blank" rel="noopener">EU Limit Values for Concentrations of Heavy Metals in Soils</a> only list thresholds for 6 metals (Cd, Cu, Ni, Pb, Zn, Hg).&nbsp;</li>
+                            <li style="margin-top: 10px;">The <a href="https://www.finlex.fi/en/laki/kaannokset/2007/en20070214.pdf" target="_blank" rel="noopener">Ministry of the Environment Finland Assessment of Soil Contamination and Remediation Needs</a> is one of the most comprehensive, listing thresholds for 11 (Sb, As, Hg, Cd, Co, Cr, Cu, Pb, Ni, Zn, and V).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+            <h3>Ideal Regulatory Landscape:&nbsp;</h3>
             <p>Ideally, there would be established thresholds for both feedstock and soil metal concentrations regulating the practice of applying rock powders. However, due to the early nature of the ERW field, this does not currently exist. Establishing such thresholds requires comprehensive datasets from diverse feedstocks applied across different soil conditions, monitored over extended time periods to understand long-term impacts and ecosystem responses that governments can then use to develop country-specific regulations. In lieu of these ERW-specific thresholds, practitioners are forced to rely on regulations that were not created with the intent of regulating rock powder applications.</p>
             <p>Given that we do not have ERW-specific thresholds that span both feedstock and soil concentrations, we decided to opt for a conservative approach in modeling metal accumulation in soils from ERW deployments to proactively identify potential metal accumulation risks from a deployment. We focused on soil concentrations because they reflect what the soil system is experiencing, and they provide a more direct measure of potential ecological and agricultural impacts than feedstock concentrations alone. Soil concentration thresholds account for the cumulative effects of metal additions, existing background levels, and local soil chemistry that influence metal bioavailability, making them more relevant for assessing actual environmental risk than feedstock-only regulations.</p>
 		</section>
-		<section id="is-and-isnt">
-			<h1>What EMCE Is/Isn't</h1>
-            <h3>1: What EMCE Is(n&rsquo;t) and What EMCE Does(n&rsquo;t) Cover</h3>
-            <p><span>EMCE comprises two major cost buckets: Rock, Hauling, and Spreading (RHS) and Measurement, Reporting and Verification (MRV). EMCE offers a detailed and comprehensive MRV cost estimator module, and a comparatively much more basic RHS module. MRV and RHS costs are the two primary direct cost components for an ERW project developer.&nbsp;</span></p>
-            <p><span>What EMCE doesn&rsquo;t cover are (a) capital expenditures associated with any equipment (e.g., spreader, storage shed, spectrometry equipment), (b) sales, general and administrative expenses, (c) any type of financing costs.</span></p>
-            <p><span>EMCE is primarily designed for practitioners to estimate the RHS and MRV costs for small-scale deployments, using a suite of direct empirical measurements, and paying for laboratory analyses on an &ldquo;&agrave; la carte&rdquo; basis. It can certainly be used by practitioners who have access to volume-discounted pricing, although it&rsquo;s advised that, in these cases, users input their own component cost data.&nbsp;</span></p>
-            <p><span>What EMCE is explicitly not:</span></p>
-            <ul>
-            <li><span>EMCE is explicitly not a tool to project the future trajectory of ERW MRV costs. How ERW MRV costs evolve over time depends on many factors: economies of scale, advances in landing on optimal quantification approaches, progressive shifts from measurement-heavy to model-heavy quantification schemes, etc. Many nonlinear developments could occur in the coming years that cannot be captured by EMCE in its current iteration.</span></li>
-            <li><span>EMCE should not be used to design sampling and measurement plans. Robust quantification and sample planning requires a strong understanding of the characteristics of a given deployment site (e.g., soil biogeochemistry, underlying baseline variability of key parameters, site hydrology, and cropping systems). Once the MRV plan is created, practitioners can use EMCE to estimate stacked cost based on desired measurement techniques and the spatial and temporal densities of the measurements.</span></li>
-            <li><span>We do not recommend that buyers use EMCE as their sole window in understanding the total $/tonne price of carbon removal via ERW deployments. In some areas, EMCE will produce an underestimate: for example, EMCE doesn&rsquo;t include business operating costs or profit margins. In other areas, EMCE will produce an overestimate: for example, EMCE&rsquo;s preset values won&rsquo;t take into account volume-based pricing, cost reductions from co-located or vertically integrated laboratory facilities, etc.</span></li>
-            </ul>
+		<section id="approach">
+			<h1>Approach</h1>
+            <p>To gain a better first-order understanding of the potential risks of metal accumulation in soils from ERW deployments, we developed a maximally conservative mass-balance model: the ERW-MAC (Enhanced Rock Weathering Metal Accumulation Calculator).&nbsp;</p>
+            <p>In this case, &ldquo;maximally conservative&rdquo; means that the model purposefully reflects the highest metal accumulation scenarios that an ERW deployment could encounter, including: 1) the feedstock dissolves completely and immediately into the soil, 2) no metals leave the soil system, and 3) metals are distributed homogeneously throughout the soil. We chose the maximally conservative approach to establish the lowest threshold for risk assessment. If a modeled deployment is shown to be within regulatory limits even under these deliberately exaggerated assumptions, users can be confident that the deployment should remain within regulatory limits under more realistic conditions. Essentially, by passing this 'stress test,' users can understand their metal accumulation risk from a deployment with a reliable margin.&nbsp;&nbsp;</p>
+            <p><strong>The ERW-MAC allows users to:&nbsp;</strong></p>
+            <ol>
+            <li>View preset scenarios using common feedstocks to visualize the risk of different metal accumulation in soils from a generic ERW deployment.</li>
+            <li>Input their own feedstock and soil concentrations of 16 different metals and obtain an understanding of how those metals could accumulate in the soil over one or many ERW deployments.&nbsp;</li>
+            <li>Gain insights into how resulting concentrations of metals in soil stack up against existing global soil regulations.&nbsp;</li>
+            </ol>
+
+            <h3>Methods &amp; Key Assumptions</h3>
+                <p>The model addresses three main questions:&nbsp;&nbsp;</p>
+                <ol>
+                <li>What are the ranges of concentrations of metals in common feedstocks such as basalt and peridotite (used as a proxy for olivine)?&nbsp;</li>
+                <li>What are the baseline concentrations of metals in agricultural soils?&nbsp;</li>
+                <li>What are soil threshold values for metals in global regulations?&nbsp;</li>
+                </ol>
+                <p>This model identifies which metals from commonly-used peridotite and basalt feedstocks might warrant deeper investigation due to their risk of potential accumulation from rock powder applications. The model employs the maximally conservative approach with the following simplifying assumptions:</p>
+                <ol>
+                <li>Full, instantaneous dissolution of the feedstock over one application event with no partial metal release from the feedstock or time component to dissolution.</li>
+                <li>No export of metals from soil after deposition (e.g., by plant uptake or transport through the soil column into the lower vadose zone).</li>
+                <li>Homogenous vertical and lateral soil metal concentrations throughout the deployment site.</li>
+                </ol>
+                <h5>Data Sources&nbsp;</h5>
+                <p>In the preset hypothetical scenarios presented in the ERW-MAC, the feedstock metal concentration data is being pulled from the <a href="https://georoc.eu/georoc/new-start.asp" target="_blank" rel="noopener">GEOROC</a> database (Geochemistry of Rocks of the Oceans and Continents) and the baseline agricultural soil metal concentration data is being pulled from the <a href="http://weppi.gtk.fi/publ/foregsatlas/" target="_blank" rel="noopener">FOREGS</a> (Geochemical Atlas of Europe) and <a href="https://mrdata.usgs.gov/metadata/ds-801.faq.html" target="_blank" rel="noopener">USGS</a> soil databases, as well as from several academic sources (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0045653518319210#appsec1" target="_blank" rel="noopener">Kumar et al., 2021</a>, <a href="https://www.researchgate.net/publication/230683184_Baseline_Concentration_of_Heavy_Metals_in_Brazilian_Latosols" target="_blank" rel="noopener">Campos et al., 2003</a>, and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0048969720325754?casa_token=vpmHiZBuFyIAAAAA:xwU_k3LVK6fEOyER7IorNpVX3iKXEVdMoBFWP-LVctILTWTTD9w9QwF4YQ-AZJZguvOO3ENc" target="_blank" rel="noopener">Wang et al., 2020</a>).&nbsp;</p>
+                <p>We also compiled a preliminary global list of relevant soil metal concentration regulations that are included <a href="https://docs.google.com/spreadsheets/d/1MQA8FdG9xLh37TuyZXS_2EN4HbsUekXze6bpIWSkMT8/edit?gid=1743959116#gid=1743959116" target="_blank" rel="noopener">here</a>. If you have any regulations to add, please reach out to us at <a href="mailto:metals@cascadeclimate.org" target="_blank" rel="noopener">metals@cascadeclimate.org</a> so that we can update the list to ensure that it remains a useful community resource.&nbsp;</p>
+                <h5>Maximally Conservative Mass Balance Function</h5>
+                <p>The basic mass-balance equation underlying the ERW-MAC is:&nbsp;</p>
+                <img src={massbalance} alt="Basic Mass-Balance Equation"/>
+                <p>The key variables in the function are defined as follows:&nbsp;</p>
+                <div>
+                    <table style="border-collapse: collapse; width: 100%; padding: 10px;">
+                    <tbody>
+                    <tr style="border-bottom: 1px solid #000;">
+                    <td style="padding: 10px;"><img src={feedstockconc} alt="Concentration of Metal Equation"/></td>
+                    <td style="padding: 10px;">= concentration of metal in feedstock;</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000;">
+                    <td style="padding: 10px;"><img src={apprate} alt="Feedstock Application Rate Equation"/></td>
+                    <td style="padding: 10px;">= application rate of the feedstock in a given ERW deployment;</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000;">
+                    <td style="padding: 10px;"><img src={soildepth} alt="Soil Depth Equation" style="width: 50%;"/></td>
+                    <td style="padding: 10px;">= the soil depth at which the feedstock will be incorporated;</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000;">
+                    <td style="padding: 10px;"><img src={soilbd} alt="Soil Bulk Density Equation"/></td>
+                    <td style="padding: 10px;">= the bulk density of the soil the feedstock is being deployed on;</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000;">
+                    <td style="padding: 10px;"><img src={soilconc} alt="Concentration of Feedstock Equation"/></td>
+                    <td style="padding: 10px;">= the calculated concentration of a metal after complete dissolution of the feedstock and accumulation into the soil.</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                <p>For each metal, a modeled distribution was fitted to the feedstock baseline values from GEOROC and to the collected global soil baseline values. A Monte Carlo simulation then randomly sampled 10,000 values from the modeled distributions of both soil and feedstock metal concentrations and used these as inputs to the mass balance model (see equations above).</p>
+                <p>While using the ERW-MAC tool, it is important to note that the line depicting no feedstock application (0 t/ha) will occasionally show a slightly higher metal concentration than the modeled scenarios with feedstock addition. This is because of the Monte Carlo simulation used to create the distributions shown in&nbsp; the preset deployment scenarios. A Monte Carlo simulation takes a variable that has uncertainty and assigns it a random value within the uncertainty bounds, and this randomness will sometimes cause the 0 t/ha line to show a slightly elevated concentration of the selected metal.&nbsp;</p>
+                <p>The Cascade team hopes that the ERW-MAC can help users build an informed picture of potential risks from metal accumulation in the soils of their deployment area. Users can access a more detailed description of the tool development methods <a href="https://docs.google.com/document/d/1aNBgdIHDXMeg_QYtfbsXSAB5AzD0Sjl95kmo2tldLN0/edit?tab=t.0" target="_blank" rel="noopener">here</a>.</p>
 		</section>
-		<section id="user-manual">
-			<h1>User Manual</h1>
-            <h3>2: Tab by Tab User Manual and Walkthrough</h3>
-            <h5>Field &amp; Plot Design</h5>
-            <p>The &ldquo;Field &amp; Plot Design&rdquo; tab allows users to input basic information about the deployment size and subplot set-up.</p>
-            <p>Under &ldquo;Field Design&rdquo;, users can input total hectarage, tonnes of rock deployed per hectare, total project period in years, potential CDR of the feedstock materials (the value is preset to represent typical mafic feedstock), and number of applications over the project period.</p>
-            <p>Under &ldquo;Plot Design&rdquo;, users can divide the total deployment area into four sub-plots by applying a percentage of total field to each of the plot areas.</p>
-            <ul>
-            <li><span><strong>Treatment Plot</strong></span><span>: a less densely monitored area of the deployment where ERW treatment is applied (the value is preset to 90%).</span></li>
-            <li><span><strong>Densely Monitored Plot</strong></span><span>: a more densely monitored area of the deployment where ERW treatment is applied (the value is preset to 5%).</span></li>
-            <li><span><strong>Control Plot</strong></span><span>: a monitored area of the deployment corresponding to business-as-usual counterfactual or negative controls (the value is preset to 5%).</span></li>
-            <li><span><strong>Research Plot</strong></span><span>: a densely monitored area used for advancing specific outstanding research priorities (the value is preset to 0%).</span></li>
-            </ul>
-            <p>Users can choose to input different analytical techniques, cost ranges, time frequencies, sampling density, and sampling depth for the different types of plots described above.&nbsp;</p>
-            <h5>Rock, Haul, and Spread</h5>
-            <p><span>The &ldquo;Rock, Haul, Spread&rdquo; tab computes the cost of the raw feedstock, grinding and milling required to adjust the feedback to its desired grain size, transportation of the feedstock to the deployment site, and spreading the feedstock on soils. Within the transportation category, the tab allows users to choose a subset of long-haul, last-mile trucking, and terminal options, and adjust distances and cost ranges for each.&nbsp;</span></p>
-            <h5>Feedstock Characterization</h5>
-            <p><span>The &ldquo;Feedstock Characterization&rdquo; tab computes the cost of pre-deployment feedstock measurements, which are critical in understanding elemental composition and mineralogy of the feedstock, assessing theoretical maximum CDR potential, and evaluating heavy metal-associated ecological and human health risks. Users can adjust cost inputs associated with conducting measurements for the following feedstock properties:</span></p>
+		<section id="intended-users">
+			<h1>Intended Users</h1>
+            <p>The ERW-MAC is designed to be used by many ERW stakeholders, including:</p>
             <div>
             <table style="border-collapse: collapse; width: 100%; padding: 10px;">
             <tbody>
             <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><strong>Feedstock property</strong></td>
-            <td style="padding: 10px;"><strong>Analytical technique</strong></td>
+            <td style="padding: 10px;">ERW Practitioners</td>
+            <td style="padding: 10px;">Project developers and researchers can use this tool for preliminary screening of feedstock-soil combinations before deployment, helping to identify potential regulatory concerns early in the planning process.</td>
             </tr>
             <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;">Mineralogy</td>
-            <td style="padding: 10px;">Identification of minerals, with ability to quantify their relative composition. Common analytical techniques include petrography (by analyzing thin sections with a light microscope), XRD (by analyzing X-ray Diffraction spectra), and SEM/EDS (by surface imaging under an electron microscope).</td>
+            <td style="padding: 10px;">Buyers</td>
+            <td style="padding: 10px;">Organizations investing in ERW offtakes can incorporate this tool into their diligence processes to assess if a project has the potential for metal accumulation in the soils of the project area, and if so, conduct follow-up diligence to understand these risks better.</td>
             </tr>
             <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;">Elemental composition</td>
-            <td style="padding: 10px;">Identifying composition of different elements in feedstock. Common analytical techniques include Inductively-Coupled Plasma Mass Spectroscopy (ICP-MS), Inductively Coupled Plasma Optical Emission Spectroscopy (ICP-OES), and X-ray Fluorescence (XRF).</td>
+            <td style="padding: 10px;">Policymakers and Regulators</td>
+            <td style="padding: 10px;">Those developing frameworks for ERW regulations can use this tool to better understand the relationship between various feedstocks, baseline soil metal concentrations, and existing soil regulations.</td>
             </tr>
             <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;">Geotechnical properties</td>
-            <td style="padding: 10px;">Characterizes the physical properties of the feedstock, including measurement of water content, specific gravity, particle density, bulk density and permeability.</td>
+            <td style="padding: 10px;">Farmers and Landowners</td>
+            <td style="padding: 10px;">For those considering hosting an ERW project on their land, this tool can help them understand potential metal accumulation impacts and evaluate whether a proposed feedstock could potentially impact soil metal concentrations in the immediate or long term.</td>
             </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;">Grain size</td>
-            <td style="padding: 10px;">Measurement of the particle size distribution of the grains or particles in the feedstock (e.g. distribution of particular diameter). Common analytical techniques include gravimetric sieving and laser particle size analysis.</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;">Surface area</td>
-            <td style="padding: 10px;">Measurement of the specific surface area of a mineral. Common analytical technique is Brunauer-Emmett-Teller (BET) surface area analysis.</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;">Radiation levels</td>
-            <td style="padding: 10px;">Measurement of the radiation level of a mineral. Common analytical technique is the gas flow proportional counter.</td>
-            </tr>
+            <tr>
+            <td style="padding: 10px;"><strong>Important Note for Users</strong></td>
+            <td style="padding: 10px;"><i>The ERW-MAC provides a conservative first assessment only. It is not a substitute for comprehensive site-specific analysis, expert review, or regulatory compliance verification. The simplified model intentionally excludes many factors that influence actual metal behavior in soils, and therefore should be used as one component of a broader safety assessment process, not as a definitive determination of deployment safety. This tool is not relevant for assessing risks from asbestiform minerals, silicosis, or radionuclides.</i></td>
             </tbody>
             </table>
             </div>
-            <p></p>
-            <h5>Weathering Curve&nbsp;</h5>
-            <p><span>In the &ldquo;Weathering Curve&rdquo; tab, users can adjust a logarithmic factor to generate a time-integrated estimate of feedstock weathering. This rudimentary simplification of how feedstock dissolves should only be used as a starting point.&nbsp;</span></p>
-            <p><span>In the case that users have input 2 or above for the &ldquo;Numbers of Applications&rdquo; field in the &ldquo;Field &amp; Plot Design&rdquo; tab, the &ldquo;Weathering Curve&rdquo; tab will display the option to adjust the weathering factor for each of the applications independently. This is to reflect the fact that reapplication of feedstocks on the same field, especially multiple reapplications, will likely not have the same CDR efficiency as the prior application(s).</span></p>
-            <p><span>In addition, when there are 2 or more applications, EMCE assumes that the first application takes place at </span><span><em>t</em></span><span> = 0, and any subsequent re-application is spread evenly across the project period (i.e.: specifying &ldquo;2&rdquo; under &ldquo;Number of Feedstock Applications&rdquo; when &ldquo;Project Period in Years&rdquo; is &ldquo;10&rdquo; would signify an application at </span><span><em>t</em></span><span> = 0 and </span><span><em>t</em></span><span> = 5.</span></p>
-            <p><span>We want to be super clear that the &ldquo;Weathering Curve&rdquo; tab is used to generate a numerical &ldquo;Potential CDR&rdquo; estimate describing the release of base cations into solution upon feedstock dissolution over time. This is not netCDR. Users should account for the reduction in netCDR as a result of transient and permanent alkalinity sinks within the NFZ, carbon and cation losses in the FFZ, and upstream and ongoing life cycle emissions in the &ldquo;Losses &amp; Discounts&rdquo; tab.</span></p>
-            <h5>Losses and Discounts&nbsp;</h5>
-            <p><span>Users can input estimates of loss terms, as a percentage reduction of &ldquo;Potential CDR&rdquo;. These loss terms include the following. Section 8 of &ldquo;</span><a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener">Foundations↗</a><span>&rdquo; provides an overview of the state of science and guidance for accounting these loss terms in near-term deployments. These loss terms include the following:</span></p>
-            <ul>
-            <li><span>Within the NFZ: pH/Non-Carbonic Acid Weathering, Cation Sorption, Secondary Carbonate Formation, Secondary Silicate Formation, Biomass Uptake of Base Cations&nbsp;</span></li>
-            <li><span>Within the FFZ: netCDR loss in rivers and in oceans</span></li>
-            <li><span>Upstream and ongoing lifecycle emissions</span></li>
-            <li><span>NetCDR in counterfactual scenarios</span></li>
-            </ul>
-            <p><span>These loss terms are additive, i.e. the percentages first are added together, and generated CDR in the deployment is reduced by the resulting sum.</span></p>
-            <p><span>In addition, users can also input an uncertainty discount, capturing the statistical error of the end-to-end quantification. This percentage is deducted from the generated CDR after the above loss terms are first taken into account (i.e., if losses total 20%, and the uncertainty discount is 10%, netCDR will be (1-20%) x (1-10%) = 72% of potential CDR.)</span></p>
-            <p><span>All of these loss and discount terms are user inputs and explicitly not computed from variables in other parts of the estimator.</span></p>
-            <h5>Sidebar: Quick Overview of Near-Field Zone MRV</h5>
-            <p><span>Before we deep-dive into the different tabs, it may be helpful to do a very quick recap of what we mean by Aqueous Phase Measurements and Solid Phase Measurements.</span></p>
-            <p><span><strong>Aqueous Phase Measurements </strong></span><span> involve collecting and analyzing water samples, including soil porewater (via lysimeters), drainage waters, or water from downstream catchments. They can provide a direct measurement of dissolved weathering products as they are generated in, and exported from, the NFZ.</span></p>
-            <p><span><strong>Solid Phase Measurements </strong></span><span> involve collecting and performing analyses on soil samples. In ERW deployments, CDR quantification can be performed by tracking cations released through feedstock dissolution in surface soils, with deductions then taken to account for the various carbon and cation loss pathways within the NFZ: pH/non-carbonic acid weathering, cation sorption, secondary mineral formation, and uptake of cations by biomass. Separately from the inorganic carbon fluxes, changes to soil organic carbon (SOC) stocks due to the ERW deployment can be tracked with solid-phase measurements as well.&nbsp;</span></p>
-            <h5>Solid Phase Measurements&nbsp;</h5>
-            <p><span>The Solid Phase Measurements tab computes the total stacked cost of an MRV plan using solid phase measurements.&nbsp;</span></p>
-            <p><span>Users can adjust the sampling and measurement plan&mdash;by choosing the frequency of sampling events, number of soil samples pooled for each analysis, which analytical techniques are used to measure different properties, and whether these analytical techniques are taken on shallow composite soil samples (&lt;~30 cm) or deeper composite soil samples (50-100 cm) or both. There are also options to input a cost range (including a &ldquo;low&rdquo; and &ldquo;high&rdquo; cost estimate) for taking soil samples and for each analytical technique, and to adjust the temporal and spatial density of samples taken.</span></p>
-            <p><span>The following table steps through what each of the solid-phase analytical techniques measures and how these techniques map to the fluxes that need to be constrained in the NFZ.</span></p>
-            <div>
-            <table style="border-collapse: collapse; width: 100%; padding: 10px;">
-            <tbody>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span><strong>Measurement</strong></span></td>
-            <td style="padding: 10px;"><span><strong>What does it measure?</strong></span></td>
-            <td style="padding: 10px;"><span><strong>How does it apply to ERW?</strong></span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Inductively-Coupled Plasma Mass Spectrometry (ICP-MS)</span></td>
-            <td style="padding: 10px;"><span>Feedstock/soil elemental composition</span></td>
-            <td style="padding: 10px;"><span>Used in mass balance calculations to capture the loss of base cations from feedstock-amended surface soils relative to an immobile tracer, a method used to quantify feedstock dissolution rate. Acid digestion is a common laboratory procedure to prepare samples for elemental composition analysis.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>pH by slurry probe</span></td>
-            <td style="padding: 10px;"><span>Soil pH</span></td>
-            <td style="padding: 10px;"><span>Soil pH affects feedstock dissolution rate, cation exchange capacity, bioavailability of nutrients, and the speciation of the carbonic acid system (which will influence netCDR).</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Cation extraction</span></td>
-            <td style="padding: 10px;"><span>Cation exchange capacity (CEC), base saturation, and exchangeable acidity</span></td>
-            <td style="padding: 10px;"><span>Cation exchange capacity (CEC), base saturation, and exchangeable acidity in soils collectively offer a picture of current and potential base cation sorption, which can transiently &ldquo;undo&rdquo; CDR in the NFZ.&nbsp;</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>X-ray Diffraction (XRD)</span></td>
-            <td style="padding: 10px;"><span>Mineralogical characterization</span></td>
-            <td style="padding: 10px;"><span>Used to identify clay (and other secondary) minerals in soil. The formation of clay minerals modifies soil hydrology, creates additional base cation sorption sites, and changes porewater composition.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Plant tissue analysis</span></td>
-            <td style="padding: 10px;"><span>Elemental composition (C, N, Ca</span><span><sup>2+</sup></span><span>, Mg</span><span><sup>2+</sup></span><span>, K</span><span><sup>+</sup></span><span>, and Na</span><span><sup>+</sup></span><span>) of plants</span></td>
-            <td style="padding: 10px;"><span>Measures the amount of biomass uptake of base cations; biomass uptake is a reduction in netCDR.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Calcimetry</span></td>
-            <td style="padding: 10px;"><span>Inorganic carbon</span></td>
-            <td style="padding: 10px;"><span>Measures the amount of inorganic carbon in soils (primarily in the form of calcium carbonate). Carbonates can be a stable CO</span><span>2 </span><span>reservoir (if non-carbonate feedstocks are applied) but represent a reduction in netCDR compared to export of bicarbonate.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Dry combustion</span></td>
-            <td style="padding: 10px;"><span>Organic carbon, total carbon, total sulfur</span></td>
-            <td style="padding: 10px;"><span>Measures changes in soil organic carbon stocks, an important carbon reservoir in agricultural settings.&nbsp;</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Fluid displacement test</span></td>
-            <td style="padding: 10px;"><span>Bulk density</span></td>
-            <td style="padding: 10px;"><span>Bulk density is an important agronomic indicator for soil texture, porosity, and compaction and can be used as a proxy for secondary phase formation. Also necessary to calculate soil-based concentration measurements, including soil total carbon, soil inorganic carbon, soil organic carbon, trace elements, etc.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Gravimetric sieving</span></td>
-            <td style="padding: 10px;"><span>Soil texture</span></td>
-            <td style="padding: 10px;"><span>Soil texture&ndash;or the relative proportions of clay, silt, and sand&ndash;will influence soil hydrology, CEC, secondary phase formation, and is an important indicator of agronomic health.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Oven drying</span></td>
-            <td style="padding: 10px;"><span>Soil moisture</span></td>
-            <td style="padding: 10px;"><span>Soil moisture affects secondary phase precipitation, feedstock dissolution rate, and is an indicator of agronomic health.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Falling-head permeability test</span></td>
-            <td style="padding: 10px;"><span>Permeability</span></td>
-            <td style="padding: 10px;"><span>Soil permeability influences the flow rate of water through the soil, which influences feedstock dissolution rate, transport of weathering products, and secondary phase precipitation.</span></td>
-            </tr>
-            </tbody>
-            </table>
-            </div>
-            <p></p>
-            <h5>Aqueous Phase Measurements&nbsp;</h5>
-            <p><span>The Aqueous Phase Measurements tab computes the total stacked cost of an MRV plan using an aqueous measurement approach.&nbsp;</span></p>
-            <p><span>Users can adjust the sampling and measurement plan by choosing the frequency of sampling events, number of porewater samples pooled for each analysis, and the analytical techniques used to measure different properties. There are also options to choose the cost ranges for Rhizons and lysimeters (equipment used for porewater sampling), the cost ranges for each analytical technique, and the temporal and spatial resolution required for analysis.</span></p>
-            <p><span>The following table steps through what each of the below aqueous phase analytical techniques can measure, and how they map to the fluxes that need constraining in the NFZ.</span></p>
-            <div>
-            <table style="border-collapse: collapse; width: 100%; padding: 10px;">
-            <tbody>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span><strong>Measurement</strong></span></td>
-            <td style="padding: 10px;"><span><strong>What does it measure?</strong></span></td>
-            <td style="padding: 10px;"><span><strong>How does it apply to ERW?</strong></span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>ICP-MS and ICP-OES</span></td>
-            <td style="padding: 10px;"><span>Cation concentrations</span></td>
-            <td style="padding: 10px;"><span>Cation, total alkalinity and DIC measurements can be used to estimate the amount of dissolved weathering products at the end of NFZ or in surface water or marine systems, the core component of the netCDR calculation for aqueous-based monitoring approaches.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Alkalinity titration</span></td>
-            <td style="padding: 10px;"><span>Total alkalinity (including bicarbonate, aqueous carbonate, and hydroxide)</span></td>
-            <td style="padding: 10px;"><span>Cation, total alkalinity and DIC measurements can be used to estimate the amount of dissolved weathering products at the end of NFZ or in surface water or marine systems, the core component of the netCDR calculation for aqueous-based monitoring approaches.</span></td>
-
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Dissolved Inorganic Carbon Analyzer</span></td>
-            <td style="padding: 10px;"><span>Dissolved inorganic carbon (DIC)</span></td>
-            <td style="padding: 10px;"><span>Cation, total alkalinity and DIC measurements can be used to estimate the amount of dissolved weathering products at the end of NFZ or in surface water or marine systems, the core component of the netCDR calculation for aqueous-based monitoring approaches.</span></td>
-
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span><em>p</em></span><span>CO</span><span>2</span><span> analyzers and sensors&nbsp;</span></td>
-            <td style="padding: 10px;"><span>Partial pressure of CO</span><span>2</span><span> (</span><span><em>p</em></span><span>CO</span><span>2</span><span>)</span></td>
-            <td style="padding: 10px;"><span>Partial pressure of CO</span><span>2</span><span> provides information on the carbonate equilibrium in the system and influences weathering rates.&nbsp;</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>pH probe</span></td>
-            <td style="padding: 10px;"><span>pH</span></td>
-            <td style="padding: 10px;"><span>Aqueous phase pH controls the speciation of carbon in the carbonic acid system, which affects netCDR. pH also affects nutrient availability and trace metal mobility.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Ion Chromatography</span></td>
-            <td style="padding: 10px;"><span>Dissolved anions</span></td>
-            <td style="padding: 10px;"><span>Measurement of dissolved anions (particularly nitrogen and sulfur species) can be used to constrain the amount of non-carbonic acid weathering and, along with measurements of cations, track alkalinity.</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #000;">
-            <td style="padding: 10px;"><span>Temperature probe</span></td>
-            <td style="padding: 10px;"><span>Temperature</span></td>
-            <td style="padding: 10px;"><span>Aqueous phase temperature influences the speciation of the carbonic acid system and the feedstock weathering rate.</span></td>
-            </tr>
-            </tbody>
-            </table>
-            </div>
-            <p></p>
-            <h5>Validation and Verification</h5>
-            <p><span>The "Validation and Verification" tab allows users to adjust the costs associated with third-party validation &amp; verification bodies.&nbsp;</span></p>
-            <p><strong>Some additional notes on costs and time of costs</strong></p>
-            <ul>
-            <li><span>All currency units are in USD unless otherwise specified.&nbsp;</span></li>
-            <li><span>Rock, Hauling, and Spreading costs, as well as Feedstock Characterization costs, are repeated for each application with the assumption that feedstocks are bought at the same pricing with the same transport route to the field. We opted for this option rather than a large upfront purchase (with storage), given that many current day ERW deployments optimize for short quarry-to-field distances and lean stores of feedstock on site.&nbsp;</span></li>
-            <li><span>Measurement and verification costs are spread over the entire project period.</span></li>
-            </ul>
         </section>
-        <section id="cost-database-call-to-action">
-			<h1>Cost Database/CTA</h1>
-            <h3>3: What is the cost database and how did we collect the cost information for it?</h3>
-            <p><span>Certain low and high unit cost ranges are set as preset inputs in the web app. Presets are provided if a significant number of cost quotes have been collected for that particular analytical approach (refer to the </span><a href="https://docs.google.com/spreadsheets/d/1mWgcD9wqkQpAhdb79h4AymDnmuCPAPM_mQFrN60RC2o/edit?gid=0#gid=0" target="_blank" rel="noopener">cost database </a><span> for the full set of cost quotes). Low and high unit cost presets represent the low and high values amongst the collected cost quotes, after outliers are excluded.</span></p>
-            <p><span>We gathered cost data through email inquiries, phone interviews, and web scraping in the process of building the cost database. We collected 100+ direct, non-public cost quotes from academic and commercial laboratories across three continents, and a further 1,000+ cost quotes from publicly available sources. We list the data source for all the quotes. This cost quote collection is still an ongoing process.</span></p>
-            <p><span>One limitation of this approach is that the available quotes in the cost database tend to be &ldquo;&agrave; la carte&rdquo; pricing, and do not account for volume-based discounts, or cost reduction as a result of vertically integrating or co-locating analytical laboratories close to the deployment site. The effect of such cost optimization warrants further exploration.</span></p>
-            <p><span>In order to produce more accurate cost information, we reached out to a cross-section of ERW project developers. However, at this time, given that the number of cost datasets obtained from project developers is still low, we have chosen not to publish any averaged or ranged data on measurement costs from ERW project developers.&nbsp;</span></p>
-            <p><span>We invite more project developers to submit their cost information via </span><a href="https://docs.google.com/forms/d/e/1FAIpQLSfnJOXOxRPMKUFO8YoORzMlZN4y8p9ZbECnbehm7avMdn_OPA/viewform" target="_blank" rel="noopener">this form</a><span>, and will seek to publish aggregate industry averages if and only if we are able to adequately protect confidentiality by gathering sufficient data for each analytical approach per geographic region.</span></p>
-            <h3>4: Call to action: cost case study using a real-world MRV scenario</h3>
-            <p>EMCE will be most useful when applied to real-world deployment scenarios, cost data, and sampling and measurement plans. It could be very valuable to use real-world data to paint a grounded and evidence-based picture about the current costs and future cost trajectories of ERW, and share this picture with policymakers, buyers and investors.</p>
-            <p>We need collaboration from you to make that happen! If you are a practitioner conducting ERW deployments, and you are open about the idea of jointly publishing a total stacked cost case study with Cascade, please reach out to us at <a href="mailto:emce@cascadeclimate.org" target="_blank" rel="noopener">emce@cascadeclimate.org</a>.</p>
+        <section id="erw-mac-tool">
+			<h1>ERW-MAC Tool</h1>
+            <div class="links">
+                <a href="https://metals.cascadeclimate.org/">Link to Calculator↗</a>
+                <a href="https://cascadeclimate.org/Cascade-Climate_ERW-MAC%20preset%20model%20results%20slides.pdf">Link to Preset Model Results↗</a>
+            </div>
 		</section>
-        <section id="credit-and-glossary">
-			<h1>Credits/Glossary</h1>
-            <h3>5: Credits</h3>
-            <p>Development of the web app, and an earlier spreadsheet-based version of EMCE, was led by <a href="https://cascadeclimate.org/team/arielle-lok" target="_blank" rel="noopener">Arielle Lok</a> under the support of <a href="https://cascadeclimate.org/team/hara-wang" target="_blank" rel="noopener">Hara Wang</a>. <a href="https://github.com/xxmichaellong" target="_blank" rel="noopener">Xiao Xiao Long</a> and Arielle Lok wrote the code for the web app. Hara Wang, <a href="https://cascadeclimate.org/team/noah-anderson" target="_blank" rel="noopener">Noah Anderson</a>, and Arielle Lok drafted the technical documentation of EMCE, and <a href="https://cascadeclimate.org/team/john-sanchez" target="_blank" rel="noopener">John Sanchez</a> edited sections of the document.&nbsp;</p>
-            <p>We want to also offer special gratitude to Benjamin M&ouml;ller, Tony Oehm, Kevin Sutherland, Ella Holme, Niklas Kluger, Tyler Kukla, Chris Tolles, Jonathan Lambert, Nate Beatty, Shane Scranton, Shrey Agarwal, Sparsh Agarwal, Maurice Bryson, Mohammad Madankan, Simon Manley, Alexander Rink, Phil Renforth, and Matt Villante who reviewed prior versions of EMCE and offered invaluable insights.</p>
-            <p>If you identify any errors or have any suggested updates to the web app and the accompanying technical documentation, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSccdBcMsAT4mnDh7c2x-Vq87QJtcHCL7EUXy1-RgfL2fAjBfg/viewform" target="_blank" rel="noopener">form here</a> or email <a href="mailto:emce@cascadeclimate.org" target="_blank" rel="noopener">emce@cascadeclimate.org</a>.</p>
-            <h3>6: Glossary:</h3>
-            <h5>&ldquo;Field &amp; Plot Design&rdquo; tab</h5>
-            <p><span><strong>Total Hectarage</strong></span><span>: Total hectares of the field that encompasses all treatment, control and research plots. Upper bound is set at 10,000 hectares.</span></p>
-            <p><span><strong>Tonne of Feedstock Deployed Per Hectare: </strong></span><span>Tonnes of feedstock deployed per hectare for each deployment.</span></p>
-            <p><span><strong>Project Period in Years:</strong></span><span> Total years of monitoring the field. The output table columns adjust to this input.</span></p>
-            <p><span><strong>Potential CDR:</strong></span><span> </span>Estimate of CDR, in tonne of CO<sub>2</sub> per tonne of feedstock, driven by feedstock dissolution in the Near-Field Zone, before accounting for any subsequent lags, losses, or inefficiencies.</p>
-            <p><span><strong>Number of Feedstock Applications:</strong></span><span> Number of feedstock applications over the project period. In EMCE, the same amount of feedstock per hectare is deployed per application. Initial application occurs in t = 0, and any subsequent application occurs evenly throughout the project period.</span></p>
-            <p><span><strong>Treatment Plot</strong></span><span>: Percentage of total area that is the less densely monitored area of the deployment where ERW treatment is applied.</span></p>
-            <p><span><strong>Densely Monitored Plot</strong></span><span>: Percentage of total area that is the densely monitored area of the deployment where ERW treatment is applied.</span></p>
-            <p><span><strong>Control Plot</strong></span><span>: Percentage of the total area that is the monitored area of the deployment corresponding to business as usual (counterfactual) plots or negative controls.</span></p>
-            <p><strong>Research Plot:</strong>  Percentage of the total area that is the densely monitored area used for advancing specific research priorities. Excluded from netCDR quantification.</p>
-            <h5>&ldquo;Losses &amp; Discount&rdquo; tab</h5>
-            <p><span><strong>Lifecycle Emissions (% of Potential CDR): </strong></span><span>Percent reduction in potential CDR due to upstream and ongoing life cycle emissions. This deduction is taken at initial application (t = 0) and at the time of subsequent reapplications.</span></p>
-            <p><span><strong>Control Losses:</strong></span><span> Percent reduction in potential CDR due to deductions from the counterfactual baseline netCDR. This deduction is taken over the project period, proportional to the potential CDR.&nbsp;</span></p>
-            <p><span><strong>Cation Sorption Losses: </strong></span><span>Percent reduction in potential CDR due to adsorption of cations onto soil particle surfaces. This deduction is taken over the project period, proportional to the potential CDR.&nbsp;</span></p>
-            <p><span><strong>pH/Non-Carbonic Acid Weathering Losses:</strong></span><span> Percent reduction in potential CDR due to </span>chemical weathering done by acids other than carbonic acid such as sulfuric, nitric, or organic acid, or in low pH soil. This deduction is taken over the project period, proportional to potential CDR<span>.&nbsp;</span></p>
-            <p><span><strong>Biomass Uptake Losses:</strong></span><span> Percent reduction in potential CDR due to plant uptake of base cations in the soil solution. This deduction is taken over the project period, proportional to potential CDR.</span></p>
-            <p><span><strong>Soil Organic Carbon Losses: </strong></span><span>Percent reduction in potential CDR due to soil organic carbon stock changes. This deduction is taken over the project period, proportional to potential CDR.&nbsp;</span></p>
-            <p><span><strong>Secondary Carbonate Losses:</strong></span><span> Percent reduction in potential CDR due to precipitation of carbonate minerals in soils. This deduction is taken over the project period, proportional to potential CDR.&nbsp;</span></p>
-            <p><span><strong>Secondary Silicate Losses: </strong></span><span>Percent reduction in potential CDR due to the formation of </span>secondary silicate minerals (e.g., clays), amorphous Si, and Fe/Al oxy-hydroxides in deployment sites. The deduction is taken over the project period, <span>proportional to potential CDR.</span></p>
-            <p><span><strong>River Losses:</strong></span><span> Percent reduction in potential CDR due to losses in rivers. </span>The deduction is taken over the project period, <span>proportional to potential CDR.</span></p>
-            <p><span><strong>Ocean Losses:</strong></span><span> Percent reduction in potential CDR due to losses in oceans. </span>The deduction is taken over the project period, <span>proportional to potential CDR.</span></p>
-            <p><span><strong>Uncertainty Discount:</strong></span><span> Captures the statistical error of the end-to-end quantification. This percentage is deducted from the generated CDR after the above loss terms are first taken into account (i.e., if losses total 20%, and the uncertainty discount is 10%, netCDR will be (1-20%) x (1-10%) = 72% of potential CDR.)</span></p>
-            <h5>&ldquo;Rock Haul Spread&rdquo; tab</h5>
-            <p><span><strong>Long Haul Transportation Distance: </strong></span><span>Distance of all rail, river barge, and ocean barge transport. Input value can be in any unit of distance as long as associated cost values use the same unit of distance.</span></p>
-            <p><span><strong>Last Mile Trucking Distance: </strong></span><span>Distance of last-mile trucking., Input value can be in any unit of distance as long as associated cost values use the same unit of distance.</span></p>
-            <p><strong>Raw Feedstock Cost Per Tonne: </strong>Unit cost of the feedstock material before any processing, in currency unit per tonne.</p>
-            <p><strong>Grinding &amp; Milling Cost Per Tonne</strong>: Unit cost of any processing to adjust the feedstock material to the desired grain size, in currency unit per tonne.</p>
-            <p><strong>Long Haul Transportation Unit Cost: </strong>Unit cost of long haul transportation in unit of currency per tonne of feedstock per unit of distance.</p>
-            <p><strong>Last Mile Trucking Unit Cost: </strong>Unit cost of last mile trucking in currency unit per tonne of feedstock per unit of distance.</p>
-            <p><strong>Terminal In/Out Costs:</strong> Sum of all port terminal handling costs for a deployment, in currency unit.</p>
-            <p><strong>Spreading Cost Per Hectare: </strong>The cost of labor and equipment to spread feedstock, in currency unit per hectare.</p>
-            <h5>&ldquo;Weathering Curve&rdquo; tab</h5>
-            <p><strong>Weathering Factors: </strong>The Y-axis is the percentage of feedstock that has been dissolved over the X-axis, the project period in years. The &ldquo;weathering factor&rdquo; is a logarithmic factor that adjusts the rate of feedstock dissolution.</p>
-            <h5>&ldquo;Solid Phase Measurements&rdquo; tab</h5>
-            <p><strong>Solid Phase Sampling Frequency:&nbsp;</strong>Occurrences of solid phase sampling events per year. (2 = biyearly, 1 = yearly, 0.5 = every 2 years, 0.25 = every 4 years, etc.)</p>
-            <p><strong>Number of Solid Samples Pooled Per Analysis:</strong> Pooling soil samples for more resource-intensive analyses (all of the below except for permeability), with a maximum of 10 samples pooled per analysis.&nbsp;</p>
-            <p><strong>Shallow Composite Soil Samples (15-20 cores):</strong> A composite soil sample of 15-20 soil cores with depths up to 30 cm. This unit cost term encompasses the cost of labor to take the sample, any equipment associated per soil core, and shipping costs of the sample. The unit cost is multiplied by the highest sampling density required by any shallow soil analytical techniques to compute the total cost of shallow composite soil samples.</p>
-            <p><strong>Deep Composite Soil Sample (5 cores):</strong> A composite soil sample of 5 soil cores with depths &gt;50 cm. This encompasses the cost of labor to take the sample, any equipment associated per core, and shipping costs of the sample. The unit cost is multiplied by the highest sampling density required by any deep soil analytical techniques to compute the total cost of deep composite soil samples.</p>
-            <p><strong>Soil Technician (Labor): </strong>Encompasses labor, travel, and other associated expenses for a technician to visit a deployment and take field samples. This unit cost is multiplied by the number of sampling events to compute the total cost of soil technicians.</p>
-            <p><strong>Inductively-Coupled Plasma Mass Spectroscopy (ICP-MS): </strong><span>Performing mass balance calculations using elemental analysis via ICP-MS can capture the loss of base cations from feedstock-amended surface soils relative to an immobile tracer, a method used to quantify feedstock dissolution rate. Also used to analyze cation uptake in biomass.</span></p>
-            <p><strong>pH by Slurry Probe:</strong> Measures soil pH, which affects f<span>eedstock dissolution rate, cation exchange capacity, bioavailability of nutrients, and the speciation of the carbonic acid system (which will influence netCDR).</span>Slurry pH probe (ISO 10390:2021), taken on shallow soil samples.</p>
-            <p><strong>Cation Extraction:</strong> Measures cation exchange capacity (CEC), base saturation, and exchangeable acidity, which collectively offer a picture of current and potential base cation sorption, a transient &ldquo;undoing&rdquo; of CDR.</p>
-            <p><span><strong>X-Ray Diffraction (XRD)</strong></span><span>: Identifies clay (and other secondary) minerals in soil. The formation of clay minerals modifies soil hydrology, creates additional base cation sorption sites, and changes porewater composition.</span></p>
-            <p><strong>Plant tissue analysis</strong>: Measures the amount of biomass uptake of base cations <span>(e.g.: Ca</span><span>2+</span><span>, Mg</span><span>2+</span><span>, K</span><span>+</span><span>, and Na</span><span>+</span><span>). Biomass uptake of base cations is a reduction in netCDR.</span></p>
-            <p><strong>Calcimetry</strong>: Measures the amount of <span>inorganic carbon in soils (primarily in the form of calcium carbonate). Carbonates can be a stable CO</span><span>2 </span><span>reservoir (if non-carbonate feedstocks are applied) but represent a reduction in netCDR compared to export of bicarbonate.</span></p>
-            <p><strong>Dry Combustion</strong><span>: Measures total carbon, total sulfur, and changes in soil organic carbon stocks an important carbon reservoir in agricultural settings.&nbsp;</span></p>
-            <p><strong>Fluid Displacement Test</strong>: Measures bulk density, which is an important agronomic indicator for soil texture, porosity, and compaction and can be used as a proxy for secondary phase formation. Also necessary to <span>calculate soil-based concentration measurements, including soil total carbon, soil inorganic carbon, soil organic carbon, trace elements, etc.</span></p>
-            <p><span><strong>Gravimetric sieving</strong></span><span>: Measures soil texture&mdash;or the relative proportions of clay, silt, and sand. Soil texture influences soil hydrology, CEC, secondary phase formation, and is an important indicator of agronomic health.</span></p>
-            <p><strong>Oven drying: </strong>Measures soil moisture. <span>Soil moisture affects secondary phase precipitation, feedstock dissolution rate, and is an indicator of agronomic health.</span></p>
-            <p><span><strong>Falling-head permeability test</strong></span><span>: Measures soil permeability. Soil permeability influences the flow rate of water through the soil, which influences feedstock dissolution rate, transport of weathering products, and secondary phase precipitation.</span></p>
-            <p><span><strong>Acid Digestion</strong></span><span>: Laboratory procedure used to prepare soil samples for elemental composition analysis.</span></p>
-            <h5>&ldquo;Aqueous Phase Measurements&rdquo; tab</h5>
-            <p><strong>Aqueous-Phase Sampling Frequency</strong>: Occurrences of aqueous phase sampling events per year. (52 = weekly, 26 = biweekly, 12 = monthly, 1 = yearly, 0.5 = every 2 years, and so on.) Note that aqueous sampling events usually occur multiple times a year.</p>
-            <p><strong>Porewater Technician (Labor): </strong>Encompasses labor, travel, and other associated expenses for a technician to visit a deployment and take field samples. This unit cost is multiplied by the number of sampling events to compute the total cost of technicians.</p>
-            <p><strong>Number of Aqueous Samples Pooled Per Analysis:</strong> Pooling aqueous samples for more resource-intensive analyses (ICP-MS and ion chromatography (only for non-DIC anions)), with a maximum of 10 samples pooled per analysis.&nbsp;</p>
-            <p><strong>Rhizon (Equipment):</strong> Soil water sampling device. Costs can vary depending on functionality and ease of reusability. Costs are per Rhizon sampler.</p>
-            <p><strong>Lysimeter (Equipment):</strong> Soil water sampling device. Costs can vary depending on functionality and ease of reusability. Costs are per lysimeter.</p>
-            <p><strong>ICP-MS and ICP-OES:</strong> Measures cation concentrations, core components in estimating the amount of dissolved weathering projects for aqueous-based monitoring approaches.</p>
-            <p><strong>Alkalinity titration:</strong> Measures total alkalinity (including bicarbonate, aqueous carbonate and hydroxide), core components in estimating the amount of dissolved weathering products for aqueous-based monitoring approaches.</p>
-            <p><strong>Dissolved Inorganic Carbon Analyzer: </strong>Measured dissolved inorganic carbon (DIC), core components in estimating the amount of dissolved weathering products for aqueous-based monitoring approaches.</p>
-            <p><strong>pCO</strong><strong>2</strong><strong> Devices:</strong> Measures partial pressure of <sub>CO2</sub>, which provides information on the carbonate equilibrium in the system and influences weathering rates.</p>
-            <p><strong>pH probe: </strong><span>Aqueous phase pH controls the speciation of carbon in the carbonic acid system, which affects netCDR. pH also affects nutrient availability and trace metal mobility.</span></p>
-            <p><strong>Ion Chromatography:</strong> Measures dissolved anions <span>(particularly nitrogen and sulfur species), which can be used to constrain the amount of non-carbonic acid weathering and, along with measurements of cations, track alkalinity.</span></p>
-            <p><span><strong>Temperature probe: </strong></span><span>Measures aqueous phase temperature, which influences the speciation of the carbonic acid system and the feedstock weathering rate.</span></p>
-            <h5>&ldquo;Feedstock Characterization&rdquo; tab</h5>
-            <p><strong>Samples Required per X Tonne Feedstock</strong>: input the number of samples taken per X tonnes of feedstock materials.&nbsp;</p>
-            <p><strong>Mineralogy:</strong> Identification of minerals, with ability to quantify their relative composition. Common analytical techniques include petrography (by analyzing thin sections with a light microscope), XRD (by analyzing X-ray Diffraction spectra), and SEM/EDS (by surface imaging under an electron microscope).&nbsp;</p>
-            <p><strong>Elemental composition:</strong> Identifying composition of different elements in feedstock. Common analytical techniques include Inductively-Coupled Plasma Mass Spectroscopy (ICP-MS), Inductively Coupled Plasma Optical Emission Spectroscopy (ICP-OES), and X-ray Fluorescence (XRF).</p>
-            <p><strong>Geotechnical properties: </strong>Characterizes the physical properties of the feedstock, including measurement of water content, specific gravity, particle density, bulk density and permeability.</p>
-            <p><strong>Grain size:</strong> Measurement of the particle size distribution of the grains or particles in the feedstock (e.g. distribution of particular diameter). Common analytical techniques include gravimetric sieving and laser particle size analysis.</p>
-            <p><strong>Surface area:</strong> Measurement of the specific surface area of a mineral. Common analytical technique is Brunauer-Emmett-Teller (BET) surface area analysis.</p>
-            <p><strong>Radiation levels:</strong> Measurement of the radiation level of a mineral. Common analytical technique is the gas flow proportional counter.&nbsp;</p>
-            <h5>&ldquo;Validation &amp; Verification&rdquo; tab:&nbsp;</h5>
-            <p><strong>Validation: </strong>Third-party assessment that determines whether a project meets the rules and requirements for carbon credit issuance. Typically occurs when the project is initialized (at t = 0) and at minimum once every 5 years during the project period.&nbsp;</p>
-            <p><strong>Multiplier: </strong>Occurrences of validation per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.</p>
-            <p><strong>Verification: </strong>Third-party assessment that reviews project developers&rsquo; monitoring, measurement and quantification data to confirm that the project is performing as planned and accurately computing the carbon removal volumes achieved. Typically occurs annually over the project period.</p>
-            <p><strong>Multiplier: </strong>Occurrences of verification per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.</p>
+        <section id="takeaways">
+			<h1>Takeaways</h1>
+           
 		</section>
 	</main>
 </div>
+
