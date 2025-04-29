@@ -14,7 +14,7 @@
     <title>ERW Metal Accumulation Calculator</title> 
     <meta
 	name="description"
-	content="Cascade Climate has developed a free-to-use maximally conservative mass-balance model."
+	content="Cascade Climate has developed a free-to-use maximally conservative mass-balance model for assessing the risk of metal accumulation in soils."
 />
 </svelte:head>
 

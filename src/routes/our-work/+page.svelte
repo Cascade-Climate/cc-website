@@ -7,6 +7,7 @@
 	import foundations from '$lib/images/nature/foundations.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import grants from '$lib/images/nature/grants.webp';
+	import metals from '$lib/images/nature/metals2.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -70,6 +71,16 @@
 			</p>
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
+				<div>
+					<img src={metals} alt="ERW Metal Accumulation Calculator" />
+					<h2>ERW Metal Accumulation Calculator</h2>
+					<p></p>
+					<p>
+						We developed a free-to-use maximally conservative mass-balance model for assessing the risk of metal accumulation in soils.
+					</p>
+					<div style="height: 0.5rem;"></div>
+					<a href="/blog/metal-accumulation-calculator">Learn More</a>					
+				</div>
 				<div>
 					<img src={grants} alt="ERW Field Data Partnership Grant Awardees" />
 					<h2>ERW Field Data Partnership Grant Awardees</h2>
