@@ -37,7 +37,7 @@
             <img src={metals} alt="Enhanced Rock Weathering" />
 		</div>
 		<div class="links">
-			<a href="https://metals.cascadeclimate.org/">Link to Calculator↗</a>
+			<a href="https://erw-mac.cascadeclimate.org/">Link to Calculator↗</a>
             <a href="https://cascadeclimate.org/Cascade-Climate_ERW-MAC%20preset%20model%20results%20slides.pdf">Link to Preset Model Results↗</a>
 		</div>
 	</section>
@@ -58,7 +58,6 @@
                 <ul>
                     <li style="margin-top: 10px;">Regulations around the world include soil thresholds for metals in an incomplete and uncoordinated way, and ERW practitioners are left to interpret these as guidelines for ecosystem safety at their deployment sites. Any one set of regulations only regulates some metals, and leaves out others that are also relevant to ERW. For example:
                         <ul>
-                            <li style="margin-top: 10px;">The <a href="https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/fertilizantes/legislacao/in-05-_ingles.pdf" target="_blank" rel="noopener">Brazilian Normative Instruction for Remineralizers</a> only lists thresholds for 5 metals (As, Cd, Pb, Cr, Hg).</li>
                             <li style="margin-top: 10px;">The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:01986L0278-20220101" target="_blank" rel="noopener">EU Limit Values for Concentrations of Heavy Metals in Soils</a> only list thresholds for 6 metals (Cd, Cu, Ni, Pb, Zn, Hg).&nbsp;</li>
                             <li style="margin-top: 10px;">The <a href="https://www.finlex.fi/en/laki/kaannokset/2007/en20070214.pdf" target="_blank" rel="noopener">Ministry of the Environment Finland Assessment of Soil Contamination and Remediation Needs</a> is one of the most comprehensive, listing thresholds for 11 (Sb, As, Hg, Cd, Co, Cr, Cu, Pb, Ni, Zn, and V), but does not include other metals that can be present in feedstocks such as Mn and Be.</li>
                         </ul>
@@ -94,12 +93,12 @@
                 <li>No export of metals from soil after deposition (e.g., by plant uptake or transport through the soil column into the lower vadose zone).</li>
                 <li>Homogenous vertical and lateral soil metal concentrations throughout the deployment site.</li>
                 </ol>
-                <h5>Data Sources&nbsp;</h5>
+                <h3>Data Sources&nbsp;</h3>
                 <p>In the pre-set hypothetical scenarios presented in the ERW-MAC, the feedstock metal concentration data is being pulled from the <a href="https://georoc.eu/georoc/new-start.asp" target="_blank" rel="noopener">GEOROC</a> database (Geochemistry of Rocks of the Oceans and Continents). The baseline agricultural soil metal concentration data is being pulled from the <a href="http://weppi.gtk.fi/publ/foregsatlas/" target="_blank" rel="noopener">FOREGS</a> (Geochemical Atlas of Europe) and <a href="https://mrdata.usgs.gov/metadata/ds-801.faq.html" target="_blank" rel="noopener">USGS</a> soil databases, as well as from several academic sources (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0045653518319210#appsec1" target="_blank" rel="noopener">Kumar et al., 2021</a>, <a href="https://www.researchgate.net/publication/230683184_Baseline_Concentration_of_Heavy_Metals_in_Brazilian_Latosols" target="_blank" rel="noopener">Campos et al., 2003</a>, and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0048969720325754?casa_token=vpmHiZBuFyIAAAAA:xwU_k3LVK6fEOyER7IorNpVX3iKXEVdMoBFWP-LVctILTWTTD9w9QwF4YQ-AZJZguvOO3ENc" target="_blank" rel="noopener">Wang et al., 2020</a>). Our search for baseline soil data revealed that there are fewer and more poorly-resolved soil datasets looking at metal concentrations in Global South countries when compared to Global North countries.&nbsp;</p>
 
                 <p>We also compiled a preliminary global list of relevant soil metal concentration regulations that are included <a href="https://docs.google.com/spreadsheets/d/1GRJaidyt-xwzSfo-EoP9OpVmLbWjOdUnkXe0MdrXehM/edit?usp=sharing" target="_blank" rel="noopener">here</a>. If you have any regulations to add, please reach out to us at <a href="mailto:metals@cascadeclimate.org" target="_blank" rel="noopener">metals@cascadeclimate.org</a> so that we can update the list to ensure that it remains a useful community resource.</p>
 
-                <h5>Maximally Conservative Mass Balance Function</h5>
+                <h3>Maximally Conservative Mass Balance Function</h3>
                 <p>The basic mass-balance equation underlying the ERW-MAC is:&nbsp;</p>
                 <img src={massbalance} alt="Basic Mass-Balance Equation"/>
                 <p>The key variables in the function are defined as follows:&nbsp;</p>
@@ -123,7 +122,7 @@
                     <td style="padding: 10px;">= the soil depth at which the feedstock will be incorporated;</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #000;">
-                    <td style="padding: 10px;"><img src={soilbd} alt="Soil Bulk Density Equation" style="width: 50%;"/></td>
+                    <td style="padding: 10px;"><img src={soilbd} alt="Soil Bulk Density Equation" style="width: 60%;"/></td>
                     <td style="padding: 10px;">= the bulk density of the soil the feedstock is being deployed on;</td>
                     </tr>
                     <tr>
@@ -155,7 +154,7 @@
         <section id="erw-mac-tool">
 			<h1>ERW-MAC Tool</h1>
             <div class="links">
-                <a href="https://metals.cascadeclimate.org/">Link to Calculator↗</a>
+                <a href="https://erw-mac.cascadeclimate.org/">Link to Calculator↗</a>
                 <a href="https://cascadeclimate.org/Cascade-Climate_ERW-MAC%20preset%20model%20results%20slides.pdf">Link to Preset Model Results↗</a>
             </div>
 		</section>
