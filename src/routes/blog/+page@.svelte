@@ -7,6 +7,7 @@
 </svelte:head>
 <div id="blog">
 	<div id="post-list">
+
 		<div class="post">
 			<h1>
 				<a href="/blog/metal-accumulation-calculator">
@@ -15,12 +16,14 @@
 			</h1>
 			<p>
 				As enhanced rock weathering gains momentum as a promising carbon removal approach, we need to ensure it remains environmentally sound. The ERW-MAC helps practitioners understand potential metal accumulation risks in soils from ERW deployments using intentionally conservative assumptions.
+			</p>
 				<p class="details">
 					<span class="date">04/30/2025</span>
 					·
 					<span class="read-time">18 MIN READ</span>
 				</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/erw-field-grant-awardees">
@@ -29,12 +32,14 @@
 			</h1>
 			<p>
 				In collaboration with the Grantham Foundation, Google, and Frontier, Cascade is excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects focused on addressing key research priorities in enhanced rock weathering (ERW).
+			</p>
 				<p class="details">
 				<span class="date">04/15/2025</span>
 				·
 				<span class="read-time">8 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="https://cascadeclimate.org/CRA0225_Enhanced_Rock_Weathering.pdf" target="_blank">
@@ -42,13 +47,15 @@
 				</a>
 			</h1>
 			<p>
-				The purpose of this report is to introduce policy stakeholders—particularly those in the U.S. and EU—to ERW, and to highlight opportunities to further support this promising carbon removal and agricultural land management practice through both new and existing policy levers.			</p>
+				The purpose of this report is to introduce policy stakeholders—particularly those in the U.S. and EU—to ERW, and to highlight opportunities to further support this promising carbon removal and agricultural land management practice through both new and existing policy levers.
+			</p>
 			<p class="details">
 				<span class="date">02/20/2025</span>
 				·
 				<span class="read-time">10 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/rigorous-mrv-methodologies">
@@ -64,6 +71,7 @@
 				<span class="read-time">2 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/erw-field-grants">
@@ -79,6 +87,7 @@
 				<span class="read-time">6 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/erw-data-quarry">
@@ -94,6 +103,7 @@
 				<span class="read-time">9 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">
@@ -109,6 +119,7 @@
 				<span class="read-time">7 MIN READ, 60+ MIN PDFs</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/erw-measurement-cost-stack-estimator-and-database">
@@ -124,6 +135,7 @@
 				<span class="read-time">27 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/foundations-for-a-healthy-erw-market-cycle">
@@ -142,6 +154,7 @@
 				<span class="read-time">11 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/core-principles">
@@ -161,6 +174,7 @@
 				<span class="read-time">2 MIN READ</span>
 			</p>
 		</div>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/introducing-the-cqs">
@@ -179,6 +193,7 @@
 				<span class="read-time">11 MIN READ</span>
 			</p>
 		</div>
+		
 	</div>
 </div>
 
