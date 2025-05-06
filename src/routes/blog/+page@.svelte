@@ -43,7 +43,7 @@
 		<div class="post">
 			<h1>
 				<a href="https://cascadeclimate.org/CRA0225_Enhanced_Rock_Weathering.pdf" target="_blank">
-					Farming with Rocks: Policy Priorities for Enhanced Rock Weathering 
+					Farming with Rocks: Research Priorities for Enhanced Weathering
 				</a>
 			</h1>
 			<p>

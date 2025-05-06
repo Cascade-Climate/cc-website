@@ -58,7 +58,7 @@
 				<p>
 					We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and increase confidence of carbon removal buyers and investors to enter the market.
 				</p>
-				<a href="/blog/policy">Learn More</a>
+				<a href="/blog/policy" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
@@ -66,7 +66,7 @@
 				<p>
 					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
 				</p>
-				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
+				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={grants} alt="ERW Field Grant" />
@@ -74,10 +74,69 @@
 				<p>
 					In collaboration with the Grantham Foundation, Google, and Frontier, Cascade is excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
 				</p>
-				<a href="/blog/erw-field-grant-awardees"
+				<a href="/blog/erw-field-grant-awardees" target="_blank"
 				>Learn More</a>
 			</div>
 		</div>
+
+		<hr style="margin: 64px;">
+
+		<h3>SPOTLIGHT ON <a href="/blog">OUR BLOG ↗</a></h3>
+		<div id="blog">
+	<div id="post-list">
+
+		<div class="post">
+			<h1>
+				<a href="/blog/metal-accumulation-calculator" target="_blank" style="color: var(--color-accent);">
+					ERW Metal Accumulation Calculator
+				</a>
+			</h1>
+			<p>
+				As enhanced rock weathering gains momentum as a promising carbon removal approach, we need to ensure it remains environmentally sound. The ERW-MAC helps practitioners understand potential metal accumulation risks in soils from ERW deployments using intentionally conservative assumptions.
+			</p>
+				<p class="details">
+					<span class="date">04/30/2025</span>
+					·
+					<span class="read-time">18 MIN READ</span>
+				</p>
+		</div>
+
+		<hr>
+
+		<div class="post">
+			<h1>
+				<a href="https://cascadeclimate.org/CRA0225_Enhanced_Rock_Weathering.pdf" target="_blank" style="color: var(--color-accent);">
+					Farming with Rocks: Research Priorities for Enhanced Weathering
+				</a>
+			</h1>
+			<p>
+				The purpose of this report is to introduce policy stakeholders—particularly those in the U.S. and EU—to ERW, and to highlight opportunities to further support this promising carbon removal and agricultural land management practice through both new and existing policy levers.
+			</p>
+			<p class="details">
+				<span class="date">02/20/2025</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
+
+		<div class="post">
+			<h1>
+				<a href="/blog/rigorous-mrv-methodologies" target="_blank" style="color: var(--color-accent);">
+					We can and must set rigorous MRV methodologies for enhanced rock weathering now.
+				</a>
+			</h1>
+			<p>
+				A question we often hear from the ERW community is: knowing the complexity, heterogeneity, and spatiotemporal scale of quantifying CDR in an ERW deployment, is it possible to develop rigorous methodologies that guide deployments today? 
+			</p>
+			<p class="details">
+				<span class="date">12/19/2024</span>
+				·
+				<span class="read-time">2 MIN READ</span>
+			</p>
+		</div>
+
 	</section>
 </div>
 
