@@ -13,10 +13,13 @@
 		{config.contactAddress}
 	</a>
 	<div class="hr"></div>
-	<a class="footer-logo" href="/">
-		<img width="24" height="24" src={cascadeLogo} alt="Cascade Logo" />
-		Cascade Climate
-	</a>
+	<div class="footer-bottom">
+		<a class="footer-logo" href="/">
+			<img width="24" height="24" src={cascadeLogo} alt="Cascade Logo" />
+			Cascade Climate
+		</a>
+		<a href="/privacy" class="privacy-link">Privacy Policy</a>
+	</div>
 </footer>
 
 <style>
@@ -75,6 +78,24 @@
 		height: 24px;
 		margin-right: 8px;
 		margin-left: 0;
+	}
+
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.privacy-link {
+		color: var(--color-light);
+		text-decoration: none;
+		transition: text-decoration-color 0.2s ease-out;
+		text-underline-offset: 4px;
+		font-weight: 100;
+	}
+
+	.privacy-link:hover {
+		text-decoration-color: var(--color-accent);
 	}
 
 	@media (max-width: 660px) {
