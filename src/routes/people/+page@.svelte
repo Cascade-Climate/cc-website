@@ -85,12 +85,12 @@
 		<a class="team-card" href="/people/dai-ellis">
 			<img src={daiEllis} alt="Dai Ellis" />
 			<h1>Dai Ellis</h1>
-			<span>Co-founder + CEO</span>
+			<span>Co-founder, CEO</span>
 		</a>
 		<a class="team-card" href="/people/hara-wang">
 			<img src={haraWang} alt="Hara Wang" />
 			<h1>Hara Wang</h1>
-			<span>Co-founder</span>
+			<span>Co-founder, CPO</span>
 		</a>
 		<a class="team-card" href="/people/john-sanchez">
 			<img src={johnSanchez} alt="John Sanchez" />
@@ -100,7 +100,7 @@
 		<a class="team-card" href="/people/vilas-rao">
 			<img src={vilasRao} alt="Vilas Rao" />
 			<h1>Vilas Rao</h1>
-			<span>Co-founder</span>
+			<span>Co-founder, COO</span>
 		</a>
 		<a class="team-card" href="/people/alison-tune">
 			<img src={alisonTune} alt="Alison Tune" />

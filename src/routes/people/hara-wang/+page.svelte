@@ -14,7 +14,7 @@
 	<div class="member-info">
 		<h1>Hara Wang</h1>
 		<div class="details">
-			<span>Founding Team</span>
+			<span>Founding Team, Chief Program Officer</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/harazxwang/">
 					<img src={linkedinIcon} alt="LinkedIn" />

@@ -15,7 +15,7 @@
 	<div class="member-info">
 		<h1>Dai Ellis</h1>
 		<div class="details">
-			<span>Founder & CEO</span>
+			<span>Founder, Chief Executive Officer</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/daiellis/">
 					<img src={linkedinIcon} alt="LinkedIn" />
