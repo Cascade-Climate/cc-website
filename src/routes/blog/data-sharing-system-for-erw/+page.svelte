@@ -37,7 +37,7 @@
                 </div>
                 <p></p>
 				<p>
-					Enhanced Rock Weathering (ERW) has the potential to deliver meaningful carbon removal alongside agriculture benefits. Yet there remains a number of open scientific questions related to <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em> carbon removal quantification↗ </em></a> and safety that will be critical to address to unlock this potential.
+					Enhanced Rock Weathering (ERW) has the potential to deliver meaningful carbon removal alongside agriculture benefits. Yet there remains a number of open scientific questions related to <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener" style="color: white; text-decoration: underline;"><em> carbon removal quantification↗ </em></a> and safety that will be critical to address to unlock this potential.
 				</p><br>
 				<p>
 					Without addressing these open questions, the ERW field risks being stuck in a limited-demand future: one in which substantial uncertainty discounting, expensive, measurement-intensive quantification, field heterogeneity, and an incomplete health and safety regulatory framework limits ERW’s ability to scale. We don’t want this future for ERW. We want to quickly, transparently, and collaboratively answer these open questions to help ERW reach its full climate and agronomic impact potential.
@@ -78,6 +78,7 @@
             <p>We are incredibly energized to launch the <a href="https://data.cascadeclimate.org" target="_blank" rel="noopener">ERW Data Quarry</a>–the first-ever ERW data sharing system–together with <b>10 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
 
             <h2>The 10 Flagship Data Quarry contributors include:</h2>
+            <br>
 
             <section id="supporters">
                 <div id="supporters-container">
@@ -113,8 +114,10 @@
                     </a>
                 </div>
             </section>
+            <br>
 
             <h2>New Data Quarry contributors include:</h2>
+            <br>
 
             <section id="supporters">
                 <div id="supporters-container">
@@ -155,7 +158,7 @@
             <p></p>
 
             <p>Leading catalytic buyers have also committed to community-wide data sharing, requiring dataset contributions to the Data Quarry as part of future ERW purchases. These buyers include: 
-            </p>
+            </p><br>
 
             <section id="supporters">
                 <div id="supporters-container">
@@ -167,7 +170,7 @@
                     </a>
                 </div>
             </section>
-            <p></p>
+            <p></p><br>
 
             <p>These leading companies are committing to sharing data through the following system:</p>
         </section>
