@@ -6,8 +6,8 @@
 				<p class="date">May 27, 2025</p>
 				<hr>
                 <div class="links">
-                    <a href="/blog/data-sharing-system-for-erw">Link to ERW Data Quarry Landing Page↗</a>
-                    <a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Link to ERW Data Quarry↗</a>
+                    <a href="/blog/data-sharing-system-for-erw">Learn more about the ERW Data Quarry↗</a>
+                    <a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Access the ERW Data Quarry↗</a>
                 </div>
 			</div>
             
@@ -45,7 +45,7 @@
 
         <div style="background-color: #173B3F; color: white; padding: 20px 20px 20px 20px; border-radius: 10px; margin-top: 20px;">
             <p><strong>Varaha</strong> and <strong>Silica</strong> have now joined the platform, each committing to share data from designated commercial ERW projects, joining the original ten launch partners.</p><br>
-            <p>In addition, all projects supported through <a href="/blog/erw-field-grant-awardees">Cascade&rsquo;s Field Data Partnership Grants program</a> will contribute datasets to the Data Quarry. This includes: <strong>Basic Dust</strong>, <strong>Carbon Drawdown Initiative</strong>*, <strong>Carbonaught</strong>*, <strong>Carbony</strong>, <strong>Eion</strong>*, <strong>Flux</strong>*, <strong>InPlanet</strong>*, <strong>Mati</strong>*, <strong>University of Illinois Urbana-Champaign</strong>, <strong>South East Asia Rainforest Research Partnership</strong>, <strong>UC Agriculture and Natural Resources Cooperative Extension</strong>, and <strong>UNDO</strong>.</p>
+            <p>In addition, all projects supported through <a href="/blog/erw-field-grant-awardees" style="color: white; text-decoration: underline;">Cascade&rsquo;s Field Data Partnership Grants Program</a> will contribute datasets to the Data Quarry. This includes: <strong>Basic Dust</strong>, <strong>Carbon Drawdown Initiative</strong>*, <strong>Carbonaught</strong>*, <strong>Carbony</strong>, <strong>Eion</strong>*, <strong>Flux</strong>*, <strong>InPlanet</strong>*, <strong>Mati</strong>*, <strong>University of Illinois Urbana-Champaign</strong>, <strong>South East Asia Rainforest Research Partnership</strong>, <strong>UC Agriculture and Natural Resources Cooperative Extension</strong>, and <strong>UNDO</strong>.</p>
         <p style="text-align: right; font-size: 0.5em;"><em>*&nbsp; These partners already having made contributions to the Data Quarry, are contributing additional datasets supported by these Field Data Grants</em></p></div><br>
         <p>Together, this brings the number of datasets in the Data Quarry pipeline to 26, representing a first-of-its-kind resource for the field.&nbsp;</p>
         
