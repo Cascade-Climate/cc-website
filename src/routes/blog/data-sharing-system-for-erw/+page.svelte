@@ -127,7 +127,7 @@
                     <a href="https://www.carbony.earth/" target="_blank" rel="noopener">
                         <img src={carbony} alt="Carbony" />
                     </a>
-                    <a href="https://illinois.edu/" target="_blank" rel="noopener">
+                    <a href="https://energyfarm.illinois.edu/" target="_blank" rel="noopener">
                         <img src={uiuc} alt="University of Illinois Urbana-Champaign" />
                     </a>
                     <a href="https://silica.earth/" target="_blank" rel="noopener">
@@ -136,7 +136,7 @@
                     <a href="https://www.searrp.org/" target="_blank" rel="noopener">
                         <img src={searrp} alt="South East Asia Rainforest Research Partnership" />
                     </a>
-                    <a href="https://ucanr.edu/" target="_blank" rel="noopener">
+                    <a href="https://ucanr.edu/research-and-extension-center/sierra-foothill-research-and-extension-center" target="_blank" rel="noopener">
                         <img src={ucanr} alt="UC Agriculture and Natural Resources Cooperative Extension" />
                     </a>
                     <a href="https://un-do.com/" target="_blank" rel="noopener">
