@@ -90,7 +90,7 @@
 
 		<div class="post">
 			<h1>
-				<a href="/blog/erw-data-quarry">
+				<a href="/blog/data-sharing-system-for-erw">
 					Introducing the ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering
 				</a>
 			</h1>
