@@ -24,6 +24,8 @@
 	import antoniusGagern from '$lib/images/people/antonius-gagern.webp';
 	import elaineHsieh from '$lib/images/people/elaine-hsieh.webp';
 	import elenaCavallero from '$lib/images/people/elena-cavallero.webp';
+	import saraBoettiger from '$lib/images/people/sara-boettiger.webp';
+	import etoshaCave from '$lib/images/people/etosha-cave.webp';
 
 	import { onMount } from 'svelte';
 
@@ -201,6 +203,16 @@
 			<img src={elenaCavallero} alt="Elena Cavallero" />
 			<h1>Elena Cavallero</h1>
 			<span>Grantham Foundation </span>
+		</a>
+		<a class="team-card" href="/people/sara-boettiger">
+			<img src={saraBoettiger} alt="Sara Boettiger" />
+			<h1>Sara Boettiger</h1>
+			<span>Gates Foundation</span>
+		</a>
+		<a class="team-card" href="/people/etosha-cave">
+			<img src={etoshaCave} alt="Etosha Cave" />
+			<h1>Etosha Cave</h1>
+			<span>Twelve</span>
 		</a>
 	</section>
 </div>

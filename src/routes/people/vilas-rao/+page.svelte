@@ -14,7 +14,7 @@
 	<div class="member-info">
 		<h1>Vilas Rao</h1>
 		<div class="details">
-			<span>Founding Team, Chief Operations Officer</span>
+			<span>Founding Team, Chief Operating Officer</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/vilasrao/">
 					<img src={linkedinIcon} alt="LinkedIn" />

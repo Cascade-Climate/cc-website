@@ -72,6 +72,15 @@
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
+					<img src={data} alt="Data Sharing System" />
+					<h2>Data sharing system to advance scientific research</h2>
+					<p>
+						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
+					</p>
+					<a href="/blog/data-sharing-system-for-erw"
+					>Learn More</a>
+				</div>
+				<div>
 					<img src={metals} alt="ERW Metal Accumulation Calculator" />
 					<h2>ERW Metal Accumulation Calculator</h2>
 					<p></p>
@@ -107,15 +116,6 @@
 					</p>
 					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments"
 						>Learn More</a>
-				</div>
-				<div>
-					<img src={data} alt="Data Sharing System" />
-					<h2>Data sharing system to advance scientific research</h2>
-					<p>
-						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
-					</p>
-					<a href="/blog/erw-data-quarry"
-					>Learn More</a>
 				</div>
 				<div>
 					<img src={cost} alt="Cost Estimator" />
