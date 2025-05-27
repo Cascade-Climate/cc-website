@@ -150,7 +150,7 @@
             <br>
 
 
-            <p>All projects supported through <a href="https://cascadeclimate.org/blog/erw-field-grant-awardees" target="_blank" rel="noopener">Cascade's Field Data Grant program</a> will contribute datasets to DQ.</p>
+            <p>All projects supported through <a href="/blog/erw-field-grant-awardees" target="_blank" rel="noopener">Cascade's Field Data Partnership Grants program</a> will contribute datasets to DQ.</p>
 
             <p></p>
 
@@ -175,7 +175,7 @@
 		<section id="the-data-quarry-solution">
 			<h1>The ERW Data Quarry Solution</h1>
 			<p>
-				A data sharing system that protects commercial and farmer interests while accelerating scientific progress. Finding the right balance between transparency, speed, and commercial interests is a delicate balancing act. Through dozens of stakeholder listening sessions and iterative designs, Cascade has developed the ERW Data Quarry to navigate these tensions by building around the following core principles:
+				Finding the right balance between transparency, speed, and commercial interests is a delicate balancing act. Through dozens of stakeholder listening sessions and iterative designs, Cascade has developed the ERW Data Quarry to navigate these tensions by building around the following core principles:
 			</p>
 
             <ol style="margin: 0;">
@@ -186,7 +186,7 @@
                 <li><strong>Complement to existing market infrastructure:</strong> The Data Quarry focuses on advancing the state of ERW science, and not on validating carbon claims. It is in no way a replacement for the critical role that registries, validation and verification bodies (VVBs), and other carbon market integrity initiatives play in the ecosystem.&nbsp;</li>
                 </ol>
 
-            <p>A detailed description of how we will be putting these principles into action is available in the post-script below. </p>
+            <p>A detailed description of how we are putting these principles into action is available in the post-script below.</p>
 
 		</section>
 		<section id="next-steps">
@@ -222,11 +222,11 @@
             <p>The data system is comprised of two components:</p>
                 <ol style="margin: 0;">
                 <li><strong>A Publicly Accessible Data Source: </strong>This includes: a) all health and safety data, and b) datasets that have been used for academic peer reviewed articles, released at the time of article publication. CarbonPlan has developed <a href="https://cdrxiv.org" target="_blank" rel="noopener">CDRXIV</a>, a new centralized hub for open academic and commercial CDR preprints and data, which is the public repository.</li>
-                <li><strong>A Permissioned Data Catalog: </strong>Cascade also hosts the ERW Data Quarry that provides a description of the datasets and variables available. Researchers are able to request access to individual datasets by submitting a brief research proposal and a conflict of interest statement. A neutral governing board determines dataset release based on: a) if there are any credible conflicts of interest, and b) if the research proposal relates to advancing ERW science. Research proposals will be shared with the Data Quarry community to facilitate collaboration across research groups. For more details, please visit data.cascadeclimate.org.</li>
+                <li><strong>A Permissioned Data Catalog: </strong>Cascade hosts the ERW Data Quarry that provides a description of the datasets and variables available. Researchers are able to request access to individual datasets by submitting a brief research proposal and a conflict of interest statement. A neutral governing board determines dataset release based on: a) if there are any credible conflicts of interest, and b) if the research proposal relates to advancing ERW science. Research proposals will be shared with the Data Quarry community to facilitate collaboration across research groups. For more details, please visit <a href="https://data.cascadeclimate.org" target="_blank" rel="noopener">data.cascadeclimate.org</a>.</li>
                 </ol>
             <p>See Figure 1 for a summary of the data flow described above.</p>
             <img src={DSSprocess} alt="Figure 1: Data Sharing System Process Schematic" style="width: 80%;" />
-            <p><em>Figure 1:</em> How datasets and information will flow across organizations</p>
+            <p><em>Figure 1:</em> How datasets and information flow across organizations</p>
 
 <h2>Data Variables:</h2>
 <p>Whenever possible, datasets in the Data Quarry will share a common set of core variables, as listed in the pdf below. These variables were selected based on their importance to answering the highest priority research questions that overlap with data collected in commercial deployments.</p>
