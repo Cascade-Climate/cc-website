@@ -1,3 +1,8 @@
+<script>
+	import dataquarryss from '$lib/images/blog/DQSS.webp';
+    import dataquarryss2 from '$lib/images/blog/DQSS2.webp';
+</script>
+
 <div>
 	<section class="intro">
 		<div class="content">
@@ -14,10 +19,20 @@
 		</div>
 	</section>
 	<main>
+        
         <br>
         <p>In October, alongside leading Enhanced Rock Weathering project developers and carbon removal buyers, we <a href="https://cascadeclimate.org/blog/erw-data-quarry" target="_blank" rel="noopener">announced</a> a shared vision and plan for unlocking data to accelerate ERW&rsquo;s scientific progress as a field. We&rsquo;re thrilled to announce that the Data Quarry is now live&mdash;with hard data, many more contributors, and major field momentum towards data transparency.</p><br>
         <p>ERW holds tremendous promise as a durable, scalable carbon removal pathway. However, its impact will only be realized if we can get &lsquo;over the hump&rsquo; in our understanding of some of the key dynamics that are driving uncertainty and cost. But this requires more and better data&mdash;data that is <strong>accessible</strong>&mdash;to build public confidence in the pathway and enable faster learning about what works. Data sharing requires trust, compliance with data privacy laws and norms, and common infrastructure and schemas.&nbsp;&nbsp;</p><br>
         <p>That&rsquo;s what the Data Quarry set out to deliver, and what we are launching today.&nbsp;&nbsp;</p>
+
+        <hr style="margin: 40px 0;">
+        
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <img src={dataquarryss} alt="Screenshot of the ERW Data Quarry" style="width: 48%;" />
+            <img src={dataquarryss2} alt="Screenshot of the ERW Data Quarry" style="width: 48%;" />
+        </div>
+
+        <p><em>Figure 1:</em> Screenshots of the ERW Data Quarry, once logged in</p>
 
         <hr style="margin: 40px 0;">
 
