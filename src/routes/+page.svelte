@@ -53,12 +53,12 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
-				<img src={policy} alt="Policy" />
-				<h2>Policy priorities for ERW</h2>
+				<img src={data} alt="Data Sharing System" />
+				<h2>Data sharing system to advance scientific research</h2>
 				<p>
-					We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and increase confidence of carbon removal buyers and investors to enter the market.
+					To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
 				</p>
-				<a href="/blog/policy" target="_blank">Learn More</a>
+				<a href="/blog/data-sharing-system-for-erw" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
