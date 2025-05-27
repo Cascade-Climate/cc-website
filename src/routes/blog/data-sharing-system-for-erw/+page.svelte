@@ -197,7 +197,7 @@
             <ul style="margin: 0;">
                 <li><strong>ERW Companies:</strong> You&rsquo;d like to be part of the movement to build a healthy ERW market.</li>
                 <li><strong>Buyers:</strong> You are interested in playing a catalytic role in advancing the ERW field.</li>
-                <li><strong>Researchers:&nbsp;</strong>If you are interested in accessing commercial ERW data and/or collaborating with leading ERW companies, go straight to <a href="http://data.cascadeclimate.org" target="_blank" rel="noopener">Data Quarry</a> and sign up for an account. You can also sign up for notifications when additional datasets are added <a href="https://groups.google.com/a/cascadeclimate.org/g/notifs-dataquarry" target="_blank" rel="noopener">here</a>.</li>
+                <li><strong>Researchers:&nbsp;</strong>If you are interested in accessing commercial ERW data and/or collaborating with leading ERW companies, go straight to <a href="http://data.cascadeclimate.org" target="_blank" rel="noopener">Data Quarry</a> and sign up for an account. You can also sign up for notifications when additional datasets are added by joining the Google Group <a href="https://groups.google.com/a/cascadeclimate.org/g/notifs-dataquarry" target="_blank" rel="noopener">here</a>.</li>
                 <ul>
                 <li>Commercial datasets are just one part of the puzzle. More complete and accessible datasets from non-commercial field trials can also help advance the state of the field. If you have data from an ERW field trial and would like to be part of advancing the state of ERW science, please reach out.&nbsp;</li>
                 </ul>
