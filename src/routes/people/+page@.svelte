@@ -207,7 +207,7 @@
 		<a class="team-card" href="/people/sara-boettiger">
 			<img src={saraBoettiger} alt="Sara Boettiger" />
 			<h1>Sara Boettiger</h1>
-			<span>Gates Foundation</span>
+			<span>Sustainability, climate change, and agrifood advisor</span>
 		</a>
 		<a class="team-card" href="/people/etosha-cave">
 			<img src={etoshaCave} alt="Etosha Cave" />

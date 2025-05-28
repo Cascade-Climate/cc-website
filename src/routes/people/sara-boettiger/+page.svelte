@@ -14,7 +14,7 @@
 	<div class="member-info">
 		<h1>Sara Boettiger</h1>
 		<div class="details">
-			<span>Gates Foundation</span>
+			<span>Sustainability, climate change, and agrifood advisor</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/saraboettiger/">
 					<img src={linkedinIcon} alt="LinkedIn" />
