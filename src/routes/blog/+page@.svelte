@@ -10,6 +10,21 @@
 
 		<div class="post">
 			<h1>
+				<a href="/blog/recommendations-from-foundations">
+					Recommendations from <em>Foundations</em> as the EU Explores Enhanced Rock Weathering
+				</a>
+			</h1>
+			<p>
+				As the EU explores enhanced rock weathering under the Carbon Removal and Carbon Farming (CRCF) we highlight four key recommendations from Foundations. A high quality methodology under the EU CRCF will send a clear signal to the market about minimum requirements for robust quantification and environmental health and safety.			</p>
+				<p class="details">
+					<span class="date">06/02/2025</span>
+					·
+					<span class="read-time">8 MIN READ</span>
+				</p>
+		</div>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/metal-accumulation-calculator">
 					ERW Metal Accumulation Calculator
 				</a>

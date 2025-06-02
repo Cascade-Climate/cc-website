@@ -87,6 +87,21 @@
 
 		<div class="post">
 			<h1>
+				<a href="/blog/recommendations-from-foundations">
+					Recommendations from <em>Foundations</em> as the EU Explores Enhanced Rock Weathering
+				</a>
+			</h1>
+			<p>
+				As the EU explores enhanced rock weathering under the Carbon Removal and Carbon Farming (CRCF) we highlight four key recommendations from Foundations. A high quality methodology under the EU CRCF will send a clear signal to the market about minimum requirements for robust quantification and environmental health and safety.			</p>
+				<p class="details">
+					<span class="date">06/02/2025</span>
+					·
+					<span class="read-time">8 MIN READ</span>
+				</p>
+		</div>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/metal-accumulation-calculator" target="_blank" style="color: var(--color-accent);">
 					ERW Metal Accumulation Calculator
 				</a>
@@ -120,22 +135,6 @@
 		</div>
 
 		<hr>
-
-		<div class="post">
-			<h1>
-				<a href="/blog/rigorous-mrv-methodologies" target="_blank" style="color: var(--color-accent);">
-					We can and must set rigorous MRV methodologies for enhanced rock weathering now.
-				</a>
-			</h1>
-			<p>
-				A question we often hear from the ERW community is: knowing the complexity, heterogeneity, and spatiotemporal scale of quantifying CDR in an ERW deployment, is it possible to develop rigorous methodologies that guide deployments today? 
-			</p>
-			<p class="details">
-				<span class="date">12/19/2024</span>
-				·
-				<span class="read-time">2 MIN READ</span>
-			</p>
-		</div>
 
 	</section>
 </div>
