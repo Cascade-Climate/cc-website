@@ -8,10 +8,6 @@
 				{
 					"label": "About Us",
 					"url": "/about-us"
-				},
-				{
-					"label": "FAQ",
-					"url": "/faq"
 				}
 			]
 		},
@@ -20,16 +16,12 @@
 			"url":"/our-work",
 			"children": [
 				{
-					"label": "Overview",
-					"url": "/our-work"
-				},
-				{
 					"label": "Enhanced Rock Weathering",
 					"url": "/our-work#erw"
 				},
 				{
-					"label": "Oceans and Rivers",
-					"url": "/our-work#oceansrivers"
+					"label": "Super Pollutant Mitigation",
+					"url": "/our-work#superpollutantmitigation"
 				},
 				{
 					"label": "Blog",

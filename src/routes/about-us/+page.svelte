@@ -13,44 +13,50 @@
     <title>About Us - Cascade Climate</title> 
     <meta
 	name="description"
-	content="Accelerating progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+	content="Propelling high-potential climate solutions from the margins to the mainstream."
 />
 </svelte:head>
 
 <section class="intro">
 	<h1>About Us</h1>
 	<p>
-		Cascade is a philanthropically-backed nonprofit organization working across industry, government and science to accelerate progress in natural system climate interventions. We help remove the biggest bottlenecks inhibiting progress by <b>coordinating</b> ambitious cross-sector initiatives, <b>building</b> tools and infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and policy work.	</p>
+		Cascade is a philanthropy-backed nonprofit helping mobilize a more comprehensive response to the climate crisis by advancing high-potential solutions that remain on the margins of mainstream climate action. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.</p>
 </section>
 <ScrollNav />
 <main>
 	<section id="motivation">
 		<h1>Our motivation</h1>
-		<h2>: the climate crisis and power of Earth's natural systems.</h2>
+		<h2>: the climate crisis needs a more holistic strategy.</h2>
 		<p>
-			As a species we are already—unintentionally and haphazardly—manipulating Earth’s climate system in ways that produce disastrous consequences for ourselves and the biosphere. Decarbonization must be our top priority, but on its own cannot solve the climate emergency. We must embrace the need to harness Earth’s natural systems in the service of avoiding deeper harm. This will mean intervening in soils, rivers, oceans, glaciers and more—but doing so with great deliberation and care.
+			The climate crisis has outpaced our response. While the world has rightly focused on rapid decarbonization in trying to limit warming to 1.5°C, we have now crossed that threshold. Earlier versions of our climate strategy are no longer sufficient in scope. We need dramatically expanded efforts on near-term warming mitigation, large-scale durable carbon removal for climate restoration, and measures to avoid triggering irreversible tipping points.
 		</p>
 		<p>
-			Accelerating humanity’s readiness to responsibly enhance or modulate natural cycles requires us to approach the endeavor with profound humility. At the core of our motivation behind Cascade is the awe and wonder that come with deeper learning about Earth systems, the biosphere, and humanity’s connected history with them—an unimaginably complex set of interactions that have played out over eons through mass extinctions and extraordinary shifts in the planet’s climate system.
+			Previously neglected approaches—from natural system climate interventions to super pollutant mitigation and more—must now be seriously pursued alongside urgent decarbonization. Many promising solutions remain sidelined not because they lack potential, but because they haven't gotten the push needed to overcome adoption bottlenecks. We founded Cascade to provide that push, accelerating high-potential solutions and catalyzing a full-spectrum response that matches the scale and urgency of the climate crisis.
+		</p>
+		<p>
+			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across economies, food systems, geopolitics, and ecosystems. Averting the worst of this demands coordinated preparation and response across industry, governments, and scientists. Cascade is catalyzing early market development and policy foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
 		</p>
 	</section>
 	<section id="work">
 		<h1>Our work</h1>
 		<h2>
-			: coordinating ambitious initiatives across science, industry, philanthropy, and government.
+			: orchestrating ambitious initiatives across markets, policy, and science.
 		</h2>
 		<p>
-			Enhanced rock weathering and most other natural-system climate intervention fields are in their infancy. Scientific uncertainties regarding efficacy, quantification, and ecological impacts loom large. Policy frameworks for government engagement remain on the drawing board. Immature markets in these fields—where they exist—struggle with “race-to-the-bottom” incentive problems, as well as underdeveloped institutional and regulatory architecture. In some cases, markets may be entirely ill-suited for specific intervention types, leaving non-commercial research and intergovernmental coordination as the primary avenues toward building public trust and responsible deployment. 
+			Cascade tackles the systemic bottlenecks that aren’t the “job” of any existing actor—challenges that markets, policy, and science can't solve in isolation. We coordinate across these spheres to overcome collective action problems, build novel tools and platforms that speed the pace of learning, and direct substantially more resources toward these critical emerging climate solutions. 
 		</p>
 		<p>
-			In these thorny contexts, Cascade coordinates ambitious initiatives across science, industry, philanthropy, and government to overcome the highest-priority bottlenecks hindering progress. Often this involves unlocking bigger flows of funding or talent, filling critical ecosystem gaps by incubating new systems and entities, or shaping the design of policies and markets. At Cascade, we make tackling system-level obstacles our job.
+			Over the past two years, we've demonstrated this approach in enhanced rock weathering (ERW)—accelerating high-priority R&D, creating deployment-driven learning cycles through early voluntary markets, and building policy momentum for the field. Learn more about our work in ERW <a href="/our-work#erw">here</a>.
+		</p>
+		<p>
+			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across economies, food systems, geopolitics, and ecosystems. Averting the worst of this demands coordinated preparation and response across industry, governments, and scientists. Cascade is catalyzing early market development and policy foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
 		</p>
 	</section>
 	<section id="approach">
 		<h1>Our approach</h1>
 		<h2>: building deep, trust-based relationships across the ecosystem.</h2>
 		<p>
-			The “how” in our approach is every bit as important as the “what.” We have to earn the right to play a system-engineer role, and do so by building deep, trust-based relationships across the ecosystem—while maintaining scrupulous neutrality and unimpeachably clean incentives. Philosophically, we put learning at the heart of our work, embracing uncertainty rather than wishing it away, and helping natural system climate intervention fields shift into virtuous learning-by-doing cycles. This enables us to plot the evidence-driven course we will need to chart if we hope to identify interventions that can be deployed safely, effectively, and responsibly at scale.
+			The “how” in our approach is every bit as important as the “what.” We orchestrate ambitious cross-sector initiatives that shape markets and policies. But first we have to earn the invitation to do this by building broad and deep relationships across any ecosystem we work in—establishing trust through humility, an independent voice, and always keeping climate impact as our north star. Philosophically, we put learning at the heart of our work, tackling complexity through learning-by-doing cycles rather than wishing it away.
 		</p>
 	</section>
 </main>

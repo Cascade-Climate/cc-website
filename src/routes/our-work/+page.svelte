@@ -12,7 +12,7 @@
 
 	const sections = [
 		{ id: 'erw', title: 'ERW' },
-		{ id: 'oceansrivers', title: 'Oceans & Rivers' },
+		{ id: 'superpollutantmitigation', title: 'Super Pollutant Mitigation' },
 	];
 
 	let activeSection = '';
@@ -45,7 +45,7 @@
     <title>Our Work - Cascade Climate</title> 
     <meta
 	name="description"
-	content="Accelerating progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+	content="Propelling high-potential climate solutions from the margins to the mainstream."
 />
 </svelte:head>
 
@@ -53,7 +53,8 @@
 	<section class="preamble">
 		<h1>Our Work</h1>
 		<p>
-			Cascade is a philanthropically-backed nonprofit organization working across industry, government and science to accelerate progress in natural system climate interventions. We help remove the biggest bottlenecks inhibiting progress by <b>coordinating</b> ambitious cross-sector initiatives, <b>building</b> tools and infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and policy work.		</p>
+			Cascade is a philanthropy-backed nonprofit helping mobilize a more comprehensive response to the climate crisis by advancing high-potential solutions that remain on the margins of mainstream climate action. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
+</p>
 	</section>
 	<nav>
 		{#each sections as section}
@@ -67,7 +68,7 @@
 		<section id="erw">
 			<h3>Enhanced Rock Weathering</h3>
 			<p>
-				Our initial focus is advancing the progress of enhanced rock weathering (ERW), underpinned by a strong scientific evidence base. We believe that ERW has great potential to play a part in both the world’s long-term durable carbon removal portfolio and sustainable agricultural practice toolkit. We are supporters of accelerated private and public investment in ERW, with an overriding focus on learning and evidence-building to refine our collective understanding of how to optimize the role that ERW could play over a long time horizon. Cascade is leading the following initiatives in ERW:
+				Enhanced Rock Weathering (ERW) is an agronomic practice that permanently removes atmospheric carbon dioxide and brings concrete benefits to farmers, with particular promise for livelihoods in the Global South. ERW has potential to play a key role in both the world’s long-term durable carbon removal portfolio and sustainable agricultural toolkit. We have worked to catalyze a deployment-driven learning cycle in ERW to steadily build a robust evidence base, public trust, and policy support as the field grows. Cascade has led the following initiatives in ERW:
 			</p>
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
@@ -125,25 +126,16 @@
 					</p>
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
-				<div>
-					<img src={farm1} alt="ERW Field Data Partnership Grants" />
-					<h2>ERW Field Data Partnership Grants</h2>
-					<a href="/blog/erw-field-grant-awardees" style="background-color: white; border: 2px solid #023C40; color: #023C40;">Awardees announced <u>here</u></a>
-					<p></p>
-					<p>
-						<strong>Deadline passed in Dec 2024.</strong> We launched an RFP process to fund the collection of ERW field datasets on existing deployment sites, aimed at answering priority R&D questions. 
-					</p>
-					<a href="/blog/erw-field-grants">Learn More</a>					
-				</div>
 			</div>
 		</section>
-		<section id="oceansrivers">
-			<h3>Oceans and Rivers</h3>
+
+		<section id="superpollutantmitigation">
+			<h3>Super Pollutant Mitigation</h3>
 			<p>
-				Cascade is expanding our work to help accelerate progress across the broader family of durable, natural system carbon removal pathways. We will have a particular, though not exclusive, focus on ocean and river alkalinity enhancement pathways that are the most immediately related ‘sibling’ pathways of ERW.
+				We are now expanding our work to address the urgent risks associated with near-term warming. Cascade is focused on accelerating super pollutant mitigation efforts by building a bridge from early, voluntary climate private finance toward a policy-driven end state that embeds accountability for super pollutant reductions within industry value chains and national greenhouse gas inventories.
 			</p>
 			<p>
-				Just as Cascade did in the early days of its work on ERW, we are beginning work in new areas by learning from—and building trusted relationships with—those who have been working in these domains for years. The particular bottlenecks facing durable ocean and river pathways have some commonality with, but also some sharp differences from, those in ERW. Cascade will help strengthen shared learnings amongst researchers and practitioners, and accelerate the pace of progress across these alkalinity enhancement pathways.
+				Cascade is beginning work in this area by learning from—and building trusted relationships with—those who have been doing great work in this domain for years. As highlighted in our initial blog post, we see opportunities for Cascade to play a complementary role and to bring to bear lessons from the analogous journey that durable CDR has begun in recent years.
 			</p>
 		</section>
 	</div>
