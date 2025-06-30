@@ -77,7 +77,7 @@
 
 		<div class="post">
 			<h1>
-				<a href="/blog/recommendations-from-foundations">
+				<a href="/blog/recommendations-from-foundations" target="_blank" style="color: var(--color-accent);">
 					Recommendations from <em>Foundations</em> as the EU Explores Enhanced Rock Weathering
 				</a>
 			</h1>
@@ -125,8 +125,6 @@
 				<span class="read-time">10 MIN READ</span>
 			</p>
 		</div>
-
-		<hr>
 
 	</section>
 </div>
