@@ -28,13 +28,10 @@
 		<h1>Our motivation</h1>
 		<h2>: the climate crisis needs a more holistic strategy.</h2>
 		<p>
-			The climate crisis has outpaced our response. While the world has rightly focused on rapid decarbonization in trying to limit warming to 1.5°C, we have now crossed that threshold. Earlier versions of our climate strategy are no longer sufficient in scope. We need dramatically expanded efforts on near-term warming mitigation, large-scale durable carbon removal for climate restoration, and measures to avoid triggering irreversible tipping points.
+			The climate crisis has outpaced our response. While the world has rightly focused on rapid decarbonization in trying to limit warming to 1.5°C, we are already crossing that threshold. Earlier versions of our climate strategy are no longer sufficient in scope. We need dramatically expanded efforts on near-term warming mitigation, large-scale durable carbon removal for climate restoration, and measures to avoid triggering irreversible tipping points.
 		</p>
 		<p>
 			Previously neglected approaches—from natural system climate interventions to super pollutant mitigation and more—must now be seriously pursued alongside urgent decarbonization. Many promising solutions remain sidelined not because they lack potential, but because they haven't gotten the push needed to overcome adoption bottlenecks. We founded Cascade to provide that push, accelerating high-potential solutions and catalyzing a full-spectrum response that matches the scale and urgency of the climate crisis.
-		</p>
-		<p>
-			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across economies, food systems, geopolitics, and ecosystems. Averting the worst of this demands coordinated preparation and response across industry, governments, and scientists. Cascade is catalyzing early market development and policy foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
 		</p>
 	</section>
 	<section id="work">

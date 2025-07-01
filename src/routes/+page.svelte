@@ -27,15 +27,18 @@
 	</section>
 	<section id="about">
 		<img src={heroPhoto4} alt="Cascade Climate" />
-
+		<div>
+			<p style="font-weight: 200;">
+				Worsening climate change demands a faster and smarter response. We must sustain focus on rapid decarbonization while pursuing a broader range of interventions to prevent and manage the worst effects of climate change. This holistic strategy encompasses near-term warming mitigation, large-scale durable carbon removal for climate restoration, and action to avoid triggering irreversible tipping points.
+			</p>
+			<hr style="margin: 64px;">
+		</div>
 	</section>
+
 	<section id="our-work">
 		<h3><a href="about-us">ABOUT US ↗</a></h3>
-		<div style="background: #023C40; color: #fff; border-radius: 1rem; padding: 2rem 2.5rem; margin: 2rem 0; font-size: 1.25rem; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07); font-weight: 100;">
-			Rapidly escalating global warming demands a <b style="font-weight: 400;">faster and smarter response</b>. We need to sustain focus on rapid decarbonization while pursuing a broader range of interventions to prevent and manage the worst effects of climate change. This holistic strategy must encompass <b style="font-weight: 400;">near-term warming mitigation, large-scale durable carbon removal for climate restoration,</b> and <b>urgent action to avoid triggering irreversible tipping points.</b>
-		</div>
 		<h4 style="text-align: center; margin: 18px; font-weight: 200; line-height: 1.4; font-size: 150%;">
-			Cascade is a philanthropy-backed nonprofit helping mobilize this comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
+			Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
 		</h4>
 
 		<hr style="margin: 48px;">
