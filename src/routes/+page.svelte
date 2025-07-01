@@ -16,7 +16,7 @@
 	<title>Cascade Climate</title>
 	<meta
 		name="description"
-		content="Cascade Climate accelerates progress in interventions that harness Earth's natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+		content="Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by accelerating high-potential solutions that remain on the margins of mainstream climate action."
 	/>
 </svelte:head>
 <div>
