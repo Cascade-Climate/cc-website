@@ -46,7 +46,10 @@
 			Over the past two years, we've demonstrated this approach in enhanced rock weathering (ERW)—accelerating high-priority R&D, creating deployment-driven learning cycles through early voluntary markets, and building policy momentum for the field. Learn more about our work in ERW <a href="/our-work#erw">here</a>.
 		</p>
 		<p>
-			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across economies, food systems, geopolitics, and ecosystems. Averting the worst of this demands coordinated preparation and response across industry, governments, and scientists. Cascade is catalyzing early market development and policy foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
+			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across societies and ecosystems. Averting the worst of this demands coordinated preparation and response that spans industry, governments, and scientists.
+		</p>
+		<p>
+			Super pollutants like methane and HFCs offer the fastest path to slowing this warming, given their outsized climate impact and shorter atmospheric lifespans. Cascade is contributing to early market development and policy foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
 		</p>
 	</section>
 	<section id="approach">

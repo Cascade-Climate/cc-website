@@ -30,19 +30,21 @@
 		<img src={heroPhoto4} alt="Cascade Climate" />
 		<div>
 			<p style="font-weight: 200;">
-				Worsening climate change demands a faster and smarter response. We must sustain focus on rapid decarbonization while pursuing a broader range of interventions to prevent and manage the worst effects of climate change. This holistic strategy encompasses near-term warming mitigation, large-scale durable carbon removal for climate restoration, and action to avoid triggering irreversible tipping points.
+				Intensifying global warming demands a faster and smarter response. We need to sustain focus on rapid decarbonization while pursuing a broader range of interventions to prevent and manage the worst effects of climate change. This holistic strategy must encompass near-term warming mitigation, large-scale durable carbon removal for climate restoration, and measures to avoid triggering irreversible tipping points.
+				<br><br>
+				Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
 			</p>
 			<hr style="margin: 64px;">
 		</div>
 	</section>
 
 	<section id="our-work">
-		<h3><a href="about-us">ABOUT US ↗</a></h3>
+		<!-- <h3><a href="about-us">ABOUT US ↗</a></h3>
 		<h4 style="text-align: center; margin: 18px; font-weight: 200; line-height: 1.4; font-size: 150%;">
 			Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
 		</h4>
 
-		<hr style="margin: 48px;">
+		<hr style="margin: 48px;"> -->
 
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
