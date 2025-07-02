@@ -23,35 +23,37 @@
 		{#if !navModalActive}
 			<nav>
 				{#each config.navItems as item, i}
-					<div
-						on:mouseover={() => {
-							opened = i;
-						}}
-						on:mouseleave={() => {
-							opened = undefined;
-						}}
-						role="button"
-						class="nav-item"
-						tabindex="0"
-						on:focus={() => {
-							opened = i;
-						}}
-					>
-						<a href={item.url}>
-							{item.label}
-						</a>
-						<div class="subnav" class:open={opened === i}>
-							{#each item.children as subitem}
-								<a
-									target={subitem.external ? '_blank' : '_self'}
-									href={subitem.url}
-									on:click={() => (navModalActive = false)}
-								>
-									{subitem.label}
-								</a>
-							{/each}
+					{#if item.children.length > 1}
+						<div
+							on:mouseover={() => { opened = i; }}
+							on:mouseleave={() => { opened = undefined; }}
+							role="button"
+							class="nav-item"
+							tabindex="0"
+							on:focus={() => { opened = i; }}
+						>
+							<a href={item.url}>
+								{item.label}
+							</a>
+							<div class="subnav" class:open={opened === i}>
+								{#each item.children as subitem}
+									<a
+										target={subitem.external ? '_blank' : '_self'}
+										href={subitem.url}
+										on:click={() => (navModalActive = false)}
+									>
+										{subitem.label}
+									</a>
+								{/each}
+							</div>
 						</div>
-					</div>
+					{:else}
+						<div class="nav-item">
+							<a href={item.children[0].url}>
+								{item.label}
+							</a>
+						</div>
+					{/if}
 				{/each}
 			</nav>
 		{/if}

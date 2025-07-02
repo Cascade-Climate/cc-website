@@ -1,57 +1,61 @@
 <script>
-	import heroPhoto from '$lib/images/hero.webp';
 	import erwPhoto from '$lib/images/nature/erw.webp';
 	import farm1 from '$lib/images/nature/farm1.webp';
 	import farm2 from '$lib/images/nature/farm2.webp';
 	import ocean1 from '$lib/images/nature/ocean1.webp';
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import data from '$lib/images/nature/data.webp';
+	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
 	import grants from '$lib/images/nature/grants.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
-	import heroPhoto2 from '$lib/images/nature/heroPhoto2.webp';
-	import heroPhoto3 from '$lib/images/nature/heroPhoto3.webp';
-	import heroPhoto4 from '$lib/images/nature/heroPhoto4.webp';
+	import heroPhoto4 from '$lib/images/hero.webp';
 </script>
 
 <svelte:head>
 	<title>Cascade Climate</title>
 	<meta
 		name="description"
-		content="Cascade Climate accelerates progress in interventions that harness Earth’s natural systems—from soils, to oceans, to glaciers—to help stabilize our climate."
+		content="Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by accelerating high-potential solutions that remain on the margins of mainstream climate action."
 	/>
 </svelte:head>
 <div>
-	<section id="headline">
+	<section id="headline" style="width: 100%;">
 		<h1>
-			Accelerating progress in interventions that harness Earth’s natural systems—from soils, to
-			oceans, to glaciers—to help stabilize our climate.
+			Propelling high-potential climate solutions from the margins to the mainstream.
 		</h1>
 	</section>
 	<section id="about">
 		<img src={heroPhoto4} alt="Cascade Climate" />
 		<div>
-			<h5 style="color: white;">WHY NATURAL-SYSTEM CLIMATE INTERVENTIONS?</h5>
-			<p>
-				We already depend on Earth’s natural systems to mitigate human-caused emissions and maintain planetary balance. Interventions that enhance natural systems can bring advantages of scale and cost that will often make them among our best—and sometimes only—options to avoid deep harms that decarbonization alone cannot address. We need to accelerate our learning about these options if we seek to curb near-term warming, restore a preindustrial atmosphere, or stave off catastrophic sea-level rise and planetary tipping points.
-			</p>
-			<p>
-				Realizing these opportunities involves overcoming complex systemic bottlenecks. Quantifying the full impact of natural system interventions can be particularly difficult, and uncertainty around potential ecosystem impacts can cause paralysis without adequate tools and governance frameworks. Natural system interventions can offer powerful climate benefits as well as co-benefits for local economies and ecosystems; yet these benefits are often public and intangible ones, requiring creative and bold new modes of financing and public support. These interlaced challenges can leave natural system interventions at an impasse, struggling to start the learn-by-doing flywheel.
+			<p style="font-weight: 200;">
+				Intensifying global warming demands a faster and smarter response. We need to sustain focus on rapid decarbonization while pursuing a broader range of interventions to prevent and manage the worst effects of climate change. This holistic strategy must encompass near-term warming mitigation, large-scale durable carbon removal for climate restoration, and measures to avoid triggering irreversible tipping points.
+				<br><br>
+				Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
 			</p>
 			<hr style="margin: 64px;">
 		</div>
 	</section>
+
 	<section id="our-work">
-		<h3><a href="about-us">ABOUT US ↗</a></h3>
-		<h4 style="text-align: center; margin: 18px; font-weight: 300; line-height: 1.4; font-size: 150%;">
-			Cascade is a philanthropically-backed nonprofit organization working across industry, government and science to accelerate progress in natural system climate interventions. We help remove the biggest bottlenecks inhibiting progress by <b>coordinating</b> ambitious cross-sector initiatives, <b>building</b> tools and infrastructure that unlock cycles of learning-by-doing, and <b>resourcing</b> high-leverage R&D and policy work.
+		<!-- <h3><a href="about-us">ABOUT US ↗</a></h3>
+		<h4 style="text-align: center; margin: 18px; font-weight: 200; line-height: 1.4; font-size: 150%;">
+			Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
 		</h4>
 
-		<hr style="margin: 64px;">
+		<hr style="margin: 48px;"> -->
 
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
+			<div class="spotlight">
+				<img src={slcp} alt="Super Pollutants" />
+				<h2>Cascade expands into super pollutant field building</h2>
+				<p>
+					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+				</p>
+				<a href="/blog/cascade-entry-into-slcp-mitigation" target="_blank">Learn More</a>
+			</div>
 			<div class="spotlight">
 				<img src={data} alt="Data Sharing System" />
 				<h2>Data sharing system to advance scientific research</h2>
@@ -64,7 +68,7 @@
 				<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
 				<h2>Foundations for CDR Quantification in ERW Deployments</h2>
 				<p>
-					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
+					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the "hows" of rigorous carbon removal quantification in an ERW deployment.
 				</p>
 				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank">Learn More</a>
 			</div>
@@ -77,6 +81,7 @@
 				<a href="/blog/erw-field-grant-awardees" target="_blank"
 				>Learn More</a>
 			</div>
+			
 		</div>
 
 		<hr style="margin: 64px;">
@@ -87,7 +92,7 @@
 
 		<div class="post">
 			<h1>
-				<a href="/blog/recommendations-from-foundations">
+				<a href="/blog/recommendations-from-foundations" target="_blank" style="color: var(--color-accent);">
 					Recommendations from <em>Foundations</em> as the EU Explores Enhanced Rock Weathering
 				</a>
 			</h1>
@@ -136,17 +141,15 @@
 			</p>
 		</div>
 
-		<hr>
-
 	</section>
 </div>
 
 <style>
 	#headline h1 {
-		max-width: 1100px;
 		padding: 4rem 4rem;
 		text-align: center;
-		margin: 1rem auto;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	a {

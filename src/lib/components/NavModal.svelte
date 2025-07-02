@@ -10,28 +10,38 @@
 <div id="nav-modal" class:active>
 	<nav>
 		{#each config.navItems as item, i}
-			<button
-				on:click={() => {
-					opened[i] = !opened[i];
-				}}
-				class="nav-item item{i}"
-				tabindex="0"
-			>
-				<span>
-					{item.label}
-				</span>
-				<div class="subnav" class:open={opened[i]}>
-					{#each item.children as subitem}
-						<a
-							target={subitem.external ? '_blank' : '_self'}
-							href={subitem.url}
-							on:click={callbackFn}
-						>
-							{subitem.label}
-						</a>
-					{/each}
-				</div>
-			</button>
+			{#if item.children.length > 1}
+				<button
+					on:click={() => { opened[i] = !opened[i]; }}
+					class="nav-item item{i}"
+					tabindex="0"
+				>
+					<span>
+						{item.label}
+					</span>
+					<div class="subnav" class:open={opened[i]}>
+						{#each item.children as subitem}
+							<a
+								target={subitem.external ? '_blank' : '_self'}
+								href={subitem.url}
+								on:click={callbackFn}
+							>
+								{subitem.label}
+							</a>
+						{/each}
+					</div>
+				</button>
+			{:else}
+				<button class="nav-item item{i}" tabindex="0">
+					<a
+						target={item.children[0].external ? '_blank' : '_self'}
+						href={item.children[0].url}
+						on:click={callbackFn}
+					>
+						{item.label}
+					</a>
+				</button>
+			{/if}
 		{/each}
 	</nav>
 </div>
