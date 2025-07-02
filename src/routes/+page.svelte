@@ -5,6 +5,7 @@
 	import ocean1 from '$lib/images/nature/ocean1.webp';
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import data from '$lib/images/nature/data.webp';
+	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
 	import grants from '$lib/images/nature/grants.webp';
@@ -46,6 +47,14 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
+				<img src={slcp} alt="Super Pollutants" />
+				<h2>Cascade expands into super pollutant field building</h2>
+				<p>
+					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+				</p>
+				<a href="/blog/cascade-entry-into-slcp-mitigation" target="_blank">Learn More</a>
+			</div>
+			<div class="spotlight">
 				<img src={data} alt="Data Sharing System" />
 				<h2>Data sharing system to advance scientific research</h2>
 				<p>
@@ -70,6 +79,7 @@
 				<a href="/blog/erw-field-grant-awardees" target="_blank"
 				>Learn More</a>
 			</div>
+			
 		</div>
 
 		<hr style="margin: 64px;">

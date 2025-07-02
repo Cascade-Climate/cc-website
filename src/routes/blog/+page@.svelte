@@ -10,6 +10,21 @@
 
 		<div class="post">
 			<h1>
+				<a href="/blog/cascade-entry-into-slcp-mitigation">
+					Super Pollutant Mitigation Needs a Bigger Push—And We're Joining the Effort
+				</a>
+			</h1>
+			<p>
+				Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.</p>
+				<p class="details">
+					<span class="date">07/03/2025</span>
+					·
+					<span class="read-time">9 MIN READ</span>
+				</p>
+		</div>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/recommendations-from-foundations">
 					Recommendations from <em>Foundations</em> as the EU Explores Enhanced Rock Weathering
 				</a>

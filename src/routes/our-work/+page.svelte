@@ -8,6 +8,7 @@
 	import policy from '$lib/images/nature/policy.webp';
 	import grants from '$lib/images/nature/grants.webp';
 	import metals from '$lib/images/nature/metals2.webp';
+	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -137,7 +138,19 @@
 			<p>
 				Cascade is beginning work in this area by learning from—and building trusted relationships with—those who have been doing great work in this domain for years. As highlighted in our initial blog post, we see opportunities for Cascade to play a complementary role and to bring to bear lessons from the analogous journey that durable CDR has begun in recent years.
 			</p>
-		</section>
+		<h5>HIGHLIGHTS</h5>
+		<div class="highlights">
+			<div>
+				<img src={slcp} alt="Super Pollutants" />
+				<h2>Super Pollutant Mitigation Needs a Bigger Push—And We're Joining the Effort</h2>
+				<p>
+					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+				</p>
+				<a href="/blog/cascade-entry-into-slcp-mitigation"
+				>Learn More</a>
+			</div>
+		</div>
+	</section>
 	</div>
 </div>
 
