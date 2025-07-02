@@ -76,6 +76,7 @@
     <li><strong>Building bridges between the GHG reduction and removal communities</strong> to advance a comprehensive &ldquo;all of the above&rdquo; climate strategy. This includes wrestling with complex system-level questions: How do we appropriately balance short-lived and long-lived climate pollutants within net-zero frameworks? How can reduction and removal efforts reinforce rather than compete with each other? By fostering dialogue and developing practical tools for integrated climate action, we can help move beyond false choices toward truly comprehensive solutions.</li>
     </ul>
     <p>We are in the midst of an extensive listening and learning tour to understand how we might help adapt this same approach to advance super pollutant mitigation. We start from a place of curiosity, humility, and a deep respect for the platforms and momentum that super pollutant pioneers have already established. Similar to our work in ERW, we hope to play a complementary role helping to catalyze the next chapter of progress and stitch together a comprehensive approach.&nbsp;</p>
+    <br>
     <p>We&rsquo;ll be back soon with more detail on what we&rsquo;re hearing and where we think there&rsquo;s momentum to build upon. Stay tuned.</p>
 
 	<h3>Footnotes</h3>
