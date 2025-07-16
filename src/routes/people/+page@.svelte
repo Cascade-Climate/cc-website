@@ -1,6 +1,7 @@
 <script>
 	import daiEllis from '$lib/images/people/dai-ellis.webp';
 	import jenniferMills from '$lib/images/people/jennifer-mills.webp';
+	import jonathanMoore from '$lib/images/people/jonathan-moore.webp';
 	import johnSanchez from '$lib/images/people/john-sanchez.webp';
 	import haraWang from '$lib/images/people/hara-wang.webp';
 	import vilasRao from '$lib/images/people/vilas-rao.webp';
@@ -134,6 +135,11 @@
 			<img src={jamieNewman} alt="Jamie Newman" />
 			<h1>Jamie Newman</h1>
 			<span>Recruiting & Operations Manager</span>
+		</a>
+		<a class="team-card" href="/people/jonathan-moore">
+			<img src={jonathanMoore} alt="Jon Jon Moore" />
+			<h1>Jon Jon Moore</h1>
+			<span>Communications Manager</span>
 		</a>
 		<a class="team-card" href="/people/noah-anderson">
 			<img src={noahAnderson} alt="Noah Anderson" />
