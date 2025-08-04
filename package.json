@@ -27,6 +27,7 @@
   },
   "type": "module",
   "dependencies": {
+    "chart.js": "^4.5.0",
     "jose": "^5.9.3",
     "svelte-markdown": "^0.4.1"
   }

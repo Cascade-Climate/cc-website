@@ -5,6 +5,7 @@
 	import heroPhoto3 from '$lib/images/nature/heroPhoto3.webp';
 	import heroPhoto4 from '$lib/images/nature/heroPhoto4.webp';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
+	import { onMount } from 'svelte';
 
 	// Import soils frames from both directories
 	// 2012-2020 frames (008-107)
@@ -46,6 +47,261 @@
 	// Reactive statements for current images
 	$: currentSoilsImage = allSoilsFrames[soilsFrameIndex];
 	$: currentTempImage = tempFrames[tempFrameIndex];
+
+	// Chart variables
+	let temperatureChart;
+	let phChart;
+	let Chart;
+
+	// Load and parse CSV data
+	async function loadCSVData(url) {
+		const response = await fetch(url);
+		const text = await response.text();
+		const lines = text.trim().split('\n');
+		const headers = lines[0].split(',');
+		const data = lines.slice(1).map(line => {
+			const values = line.split(',');
+			const row = {};
+			headers.forEach((header, index) => {
+				row[header.trim()] = parseFloat(values[index]) || values[index];
+			});
+			return row;
+		});
+		return data;
+	}
+
+	// Create temperature vs weathering rate chart
+	async function createTemperatureChart() {
+		const data = await loadCSVData('/weathering_intensity.csv');
+		
+		const ctx = document.getElementById('temperatureChart').getContext('2d');
+		temperatureChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				datasets: [{
+					label: 'Weathering Rate',
+					data: data.map(d => ({
+						x: d['temperature (C)'],
+						y: d['weathering intensity']
+					})),
+					borderColor: '#2563eb',
+					backgroundColor: 'rgba(37, 99, 235, 0.1)',
+					borderWidth: 2,
+					fill: false,
+					tension: 0.4,
+					pointRadius: 0,
+					pointHoverRadius: 6
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				interaction: {
+					mode: 'index',
+					intersect: false,
+				},
+				plugins: {
+					title: {
+						display: true,
+						text: 'Temperature Effect on Weathering Rate',
+						font: {
+							size: 16,
+							weight: 'bold'
+						},
+						padding: 20
+					},
+					legend: {
+						display: false
+					},
+					tooltip: {
+						callbacks: {
+							label: function(context) {
+								let label = context.dataset.label || '';
+								if (label) {
+									label += ': ';
+								}
+								label += context.parsed.y.toExponential(6);
+								return label;
+							}
+						}
+					}
+				},
+				scales: {
+					x: {
+						type: 'linear',
+						title: {
+							display: true,
+							text: 'Temperature (°C)',
+							font: { size: 14 }
+						},
+						min: -10,
+						max: 40,
+						grid: {
+							display: false
+						}
+					},
+					y: {
+						title: {
+							display: true,
+							text: 'Weathering Rate',
+							font: { size: 14 }
+						},
+						type: 'linear',
+						min: 0,
+						max: 8.0e-11,
+						grid: {
+							display: false
+						},
+						ticks: {
+							callback: function(value) {
+								return value.toExponential(1);
+							}
+						}
+					}
+				}
+			}
+		});
+	}
+
+	// Create pH vs CO2 uptake and weathering rate chart
+	async function createPhChart() {
+		const data = await loadCSVData('/weathering_intensity_removal_ph.csv');
+		
+		const ctx = document.getElementById('phChart').getContext('2d');
+		phChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: data.map(d => d.pH),
+				datasets: [
+					{
+						label: 'Relative CO2 Uptake',
+						data: data.map(d => d['carbon removal']),
+						borderColor: '#059669',
+						backgroundColor: 'rgba(5, 150, 105, 0.1)',
+						borderWidth: 2,
+						yAxisID: 'y',
+						tension: 0.4,
+						pointRadius: 0,
+						pointHoverRadius: 6
+					},
+					{
+						label: 'Relative Weathering Rate',
+						data: data.map(d => d['weathering rate']),
+						borderColor: '#dc2626',
+						backgroundColor: 'rgba(220, 38, 38, 0.1)',
+						borderWidth: 2,
+						yAxisID: 'y1',
+						tension: 0.4,
+						pointRadius: 0,
+						pointHoverRadius: 6
+					}
+				]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				interaction: {
+					mode: 'index',
+					intersect: false,
+				},
+				plugins: {
+					title: {
+						display: true,
+						text: 'Trade-off of pH effect on relative CO2 uptake and weathering rate',
+						font: {
+							size: 16,
+							weight: 'bold'
+						},
+						padding: 20
+					},
+					legend: {
+						position: 'bottom',
+						labels: {
+							usePointStyle: true,
+							pointStyle: 'line',
+							generateLabels: function(chart) {
+								const original = Chart.defaults.plugins.legend.labels.generateLabels;
+								const labels = original.call(this, chart);
+								
+								labels.forEach(function(label, index) {
+									label.fillStyle = label.strokeStyle;
+									label.lineWidth = 3;
+								});
+								
+								return labels;
+							}
+						}
+					},
+					tooltip: {
+						callbacks: {
+							label: function(context) {
+								let label = context.dataset.label || '';
+								if (label) {
+									label += ': ';
+								}
+								if (context.dataset.label === 'Relative Weathering Rate') {
+									label += context.parsed.y.toExponential(6);
+								} else {
+									label += context.parsed.y.toFixed(6);
+								}
+								return label;
+							}
+						}
+					}
+				},
+				scales: {
+					x: {
+						title: {
+							display: true,
+							text: 'Soil pH',
+							font: { size: 14 }
+						},
+						min: 4,
+						max: 8,
+						grid: {
+							display: false
+						}
+					},
+					y: {
+						type: 'linear',
+						display: true,
+						position: 'left',
+						title: {
+							display: true,
+							text: 'Relative CO2 Uptake',
+							font: { size: 14 }
+						},
+						grid: {
+							display: false
+						}
+					},
+					y1: {
+						type: 'linear',
+						display: true,
+						position: 'right',
+						title: {
+							display: true,
+							text: 'Relative Weathering Rate',
+							font: { size: 14 }
+						},
+						grid: {
+							display: false
+						},
+					}
+				}
+			}
+		});
+	}
+
+	onMount(async () => {
+		// Import Chart.js dynamically
+		const ChartModule = await import('chart.js/auto');
+		Chart = ChartModule.default;
+		
+		// Create the charts
+		await createTemperatureChart();
+		await createPhChart();
+	});
 </script>
 
 <svelte:head>
@@ -189,6 +445,18 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="graph-section">
+					<div class="chart-container">
+						<canvas id="temperatureChart"></canvas>
+					</div>
+				</div>
+
+				<div class="graph-section">
+					<div class="chart-container">
+						<canvas id="phChart"></canvas>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
@@ -222,6 +490,17 @@
 
 	.slider-container {
 		width: 100%;
+	}
+
+	.chart-container {
+		width: 100%;
+		height: 400px;
+		position: relative;
+	}
+
+	.chart-container canvas {
+		width: 100% !important;
+		height: 100% !important;
 	}
 
 	.css-1erfxqa {
