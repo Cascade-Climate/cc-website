@@ -127,6 +127,16 @@
 					</p>
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
+				<div>
+					<img src={farm1} alt="Weather Graphs" />
+					<h2>NEW WEATHER GRAPHS</h2>
+					<p></p>
+					<p>
+						Revolutionary interactive weather visualization tools that provide real-time climate data analysis for enhanced rock weathering deployment sites. These cutting-edge graphs help farmers and researchers track temperature, precipitation, and humidity patterns to optimize ERW effectiveness.
+					</p>
+					<div style="height: 0.5rem;"></div>
+					<a href="/blog/new-weather-graphs">Learn More</a>					
+				</div>
 			</div>
 		</section>
 
