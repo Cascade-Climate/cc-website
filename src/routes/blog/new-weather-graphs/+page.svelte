@@ -7,37 +7,18 @@
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import { onMount } from 'svelte';
 
-	// Import soils frames from both directories
-	// 2012-2020 frames (008-107)
-	const soils2012Frames = [];
-	for (let i = 8; i <= 107; i++) {
+	// Soils frames (2001-2020: frames 0-239)
+	const allSoilsFrames = [];
+	for (let i = 0; i <= 239; i++) {
 		const frameNum = i.toString().padStart(3, '0');
-		soils2012Frames.push({
-			src: `/weather-frames/frames_soils_2012_2020_2/frame_${frameNum}.png`,
-			frame: i
-		});
+		allSoilsFrames.push(`/weather-frames/frames_soils_2001_2020/frame_${frameNum}.webp`);
 	}
 
-	// 2001-2011 frames (032-131)
-	const soils2001Frames = [];
-	for (let i = 32; i <= 131; i++) {
-		const frameNum = i.toString().padStart(3, '0');
-		soils2001Frames.push({
-			src: `/weather-frames/frames_soils_2001_2011_2/frame_${frameNum}.png`,
-			frame: i
-		});
-	}
-
-	// Combine and sort soils frames chronologically
-	const allSoilsFrames = [...soils2012Frames, ...soils2001Frames]
-		.sort((a, b) => a.frame - b.frame)
-		.map(frame => frame.src);
-
-	// Temperature frames (140-239)
+	// Temperature frames (2001-2020: frames 0-239)
 	const tempFrames = [];
-	for (let i = 140; i <= 239; i++) {
+	for (let i = 0; i <= 239; i++) {
 		const frameNum = i.toString().padStart(3, '0');
-		tempFrames.push(`/weather-frames/frames_temp_all/frame_${frameNum}.png`);
+		tempFrames.push(`/weather-frames/frames_temp_2001-2020/frame_${frameNum}.webp`);
 	}
 
 	// Reactive variables for slider controls
