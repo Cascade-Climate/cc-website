@@ -37,7 +37,7 @@
 		color: #187373;
 	}
 
-	:global(a) {
+	:global(.intro a, main a) {
 		text-decoration: none;
 		color: var(--color-accent);
 		font-weight: 420;
@@ -77,7 +77,7 @@
 		font-weight: 550;
 	}
 
-	:global(p) {
+	:global(.intro p, main p) {
 		margin-bottom: 0;
 	}
 
