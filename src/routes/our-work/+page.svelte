@@ -89,7 +89,6 @@
 					<p>
 						We developed a free-to-use maximally conservative mass-balance model for assessing the risk of metal accumulation in soils.
 					</p>
-					<div style="height: 0.5rem;"></div>
 					<a href="/blog/metal-accumulation-calculator">Learn More</a>					
 				</div>
 				<div>
@@ -99,7 +98,6 @@
 					<p>
 						In collaboration with the Grantham Foundation, Google, and Frontier, we are excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
 					</p>
-					<div style="height: 0.5rem;"></div>
 					<a href="/blog/erw-field-grant-awardees">Learn More</a>					
 				</div>
 				<div>
