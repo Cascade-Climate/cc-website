@@ -43,6 +43,9 @@
 		<section id="governmentEngagement">
 			<h1>Government Engagement</h1>
 			<div>Cascade provides policy support and advice through responses to formal calls for public comment across various jurisdictions.</div>
+			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to EU ETS Review Consultation Integrating Carbon Removal with Safeguards↗</PDFLink>
+			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals↗</PDFLink>
+			<PDFLink link="/Response to UNFCCC Article 6.4 Removal Guidance.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Removal Guidance↗</PDFLink>
 			<PDFLink link="/Response to NRCS RFI on Climate-Smart Ag CPS.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; U.S. Department of Agriculture (USDA) on Implementation of the Conservation Practices to Support Climate Change Mitigation and Adaptation↗</PDFLink>
 			<PDFLink link="/GCSA RFI Response.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; USDA on the Greenhouse Gas Technical Assistance Provider and Third Party Verifier Program↗</PDFLink>
 			<br>
