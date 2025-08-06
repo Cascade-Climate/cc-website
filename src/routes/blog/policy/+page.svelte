@@ -25,7 +25,7 @@
 	<ScrollNav />
 	<main>
 		<section id="policyPriorities">
-			<h1>Policy Priorities for Enhanced Rock Weathering</h1>
+			<h1>Policy Priorities for ERW</h1>
 			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
 				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering - Executive Summary.pdf" variant="accent" style="display: block; text-align: left;">[Executive Summary] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
 				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering.pdf" variant="accent" style="display: block; text-align: left;">[Full] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
