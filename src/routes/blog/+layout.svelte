@@ -126,6 +126,8 @@
 	:global(main) {
 		padding: 1rem 4rem;
 		padding-bottom: 6rem;
+		margin-left: 7rem;
+		margin-right: 12rem;
 	}
 
 	:global(main section) {
@@ -153,6 +155,11 @@
 			width: 100%;
 			margin: 0;
 		}
+
+		:global(main) {
+			margin-left: 5rem;
+			margin-right: 8rem;
+		}
 	}
 
 	@media (max-width: 660px) {
@@ -162,6 +169,8 @@
 
 		:global(main) {
 			padding-bottom: 6rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
 		}
 	}
 </style>

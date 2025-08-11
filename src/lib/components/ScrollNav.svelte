@@ -39,7 +39,7 @@
   });
 </script>
 
-<nav>
+<nav class="scroll-nav">
   {#each sections as section}
     <a class:active={activeSection === section.id} href={`#${section.id}`}>
       {section.title}

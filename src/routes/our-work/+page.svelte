@@ -9,6 +9,7 @@
 	import grants from '$lib/images/nature/grants.webp';
 	import metals from '$lib/images/nature/metals2.webp';
 	import slcp from '$lib/images/nature/slcp-entry.webp';
+	import wpe from '$lib/images/nature/erwexplorer.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -126,14 +127,14 @@
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
 				</div>
 				<div>
-					<img src={farm1} alt="Weather Graphs" />
-					<h2>NEW WEATHER GRAPHS</h2>
+					<img src={wpe} alt="Weathering potential explorer screencap" />
+					<h2>Weathering Potential Explorer</h2>
 					<p></p>
 					<p>
-						Revolutionary interactive weather visualization tools that provide real-time climate data analysis for enhanced rock weathering deployment sites. These cutting-edge graphs help farmers and researchers track temperature, precipitation, and humidity patterns to optimize ERW effectiveness.
+						We built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
 					</p>
 					<div style="height: 0.5rem;"></div>
-					<a href="/blog/new-weather-graphs">Learn More</a>					
+					<a href="/blog/weathering-potential-explorer">Learn More</a>					
 				</div>
 			</div>
 		</section>
