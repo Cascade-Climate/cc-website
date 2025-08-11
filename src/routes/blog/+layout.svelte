@@ -127,7 +127,7 @@
 		padding: 1rem 4rem;
 		padding-bottom: 6rem;
 		margin-left: 7rem;
-		margin-right: 12rem;
+		margin-right: 7rem;
 	}
 
 	:global(main section) {
@@ -158,7 +158,7 @@
 
 		:global(main) {
 			margin-left: 5rem;
-			margin-right: 8rem;
+			margin-right: 5rem;
 		}
 	}
 

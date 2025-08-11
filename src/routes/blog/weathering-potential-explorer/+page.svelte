@@ -915,14 +915,14 @@
 	/* Page layout with margins for footnotes */
 	main {
 		margin-left: 7rem;
-		margin-right: 12rem;
+		margin-right: 7rem;
 	}
 
 	/* Responsive margins for smaller screens */
 	@media (max-width: 1200px) {
 		main {
 			margin-left: 5rem;
-			margin-right: 8rem;
+			margin-right: 5rem;
 		}
 	}
 
