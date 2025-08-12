@@ -315,7 +315,7 @@
 
 		<section id="overview">
 			<h2>User Guide</h2>
-			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%; padding-bottom: 1.5rem;">
 				<PDFLink link="/Draft Weathering Potential Explorer User Guide.pdf" variant="accent" style="display: block; text-align: left;">Weathering Potential Explorer User Guide.pdf↗</PDFLink>
 			</div>
 			<h1>Overview</h1>
@@ -375,15 +375,57 @@
 					border-collapse: collapse;
 					width: 100%;
 					max-width: 100%;
-					table-layout: fixed;
 					font-size: 0.75rem;
 					line-height: 1.2;
 				}
+				
+				@media (max-width: 768px) {
+					.wp-table,
+					.wp-table td,
+					.wp-table th,
+					.wp-table * {
+						font-size: 0.58rem !important;
+					}
+					.wp-table td, .wp-table th {
+						padding: 3px 4px;
+					}
+				}
+				
+				section {
+					margin-top: 0.5rem;
+					padding-top: 0.25rem;
+				}
+				
+				section h1 {
+					margin-top: 0.25rem;
+					margin-bottom: 0.75rem;
+				}
+				
+				section h2 {
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+				}
+				
+				main {
+					margin-top: 0;
+					padding-top: 0;
+				}
+				
+				main > section:first-child {
+					margin-top: 0;
+					padding-top: 0;
+				}
 				.wp-table td, .wp-table th {
 					border: 1px solid #222;
-					padding: 8px;
+					padding: 8px 12px !important;
+					padding-left: 12px !important;
+					padding-right: 12px !important;
+					padding-top: 8px !important;
+					padding-bottom: 8px !important;
 					word-wrap: break-word;
 					overflow-wrap: break-word;
+					box-sizing: border-box;
+					vertical-align: top;
 				}
 				.wp-table th, .wp-table .wp-header {
 					background: #023C40;
@@ -391,11 +433,11 @@
 					font-weight: bold;
 				}
 			</style>
-			<table class="wp-table">
+			<table class="wp-table" style="border-collapse: collapse; width: 100%;">
 			<tbody>
 			<tr class="wp-header">
-			<td><strong>Category</strong></td>
-			<td><strong>Capability&nbsp;</strong></td>
+			<td style="padding: 8px;"><strong>Category</strong></td>
+			<td style="padding: 8px;"><strong>Capability&nbsp;</strong></td>
 			</tr>
 			<tr>
 			<td><strong>Tool&rsquo;s Primary Output</strong></td>
@@ -694,61 +736,61 @@
 		<section id="data-inputs-and-spatial-resolutions">
 			<h1 id="dataresolutions">Data Inputs and Spatial Resolutions</h1>
 			<div>
-				<table class="wp-table">
+				<table class="wp-table" style="border-collapse: collapse; width: 100%;">
 				<tbody>
 				<tr class="wp-header">
-				<td><strong>Variable</strong></td>
-				<td><strong>Dataset</strong></td>
-				<td><strong>Resolution</strong></td>
-				<td><strong>Rationale</strong></td>
+				<td style="padding: 2px 0; width: 24%;"><strong>Variable</strong></td>
+				<td style="padding: 2px 0; width: 24%;"><strong>Dataset</strong></td>
+				<td style="padding: 2px 0; width: 22%; text-align: center;"><strong>Resolution</strong></td>
+				<td style="padding: 2px 0; width: 30%; text-align: center;"><strong>Rationale</strong></td>
 				</tr>
 				<tr>
-				<td>Soil pH</td>
-				<td>SoilGrids (ISRIC), H₂O pH mean at 0&ndash;200 cm depth (selectable)</td>
-				<td>250m</td>
-				<td>SoilGrids provides globally harmonized pH estimates at fine resolution, capturing surface soil chemistry relevant to weathering processes and crop root zones.</td>
+				<td style="padding: 8px; width: 24%;">Soil pH</td>
+				<td style="padding: 8px; width: 24%;">SoilGrids (ISRIC), H₂O pH mean at 0&ndash;200 cm depth (selectable)</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">250m</td>
+				<td style="padding: 8px; width: 30%;">SoilGrids provides globally harmonized pH estimates at fine resolution, capturing surface soil chemistry relevant to weathering processes and crop root zones.</td>
 				</tr>
 				<tr>
-				<td>Soil Organic Carbon</td>
-				<td>OpenLandMap, 0&ndash;5 cm depth</td>
-				<td>1km</td>
-				<td>OpenLandMap was selected for its global availability and consistency with GEE. While local datasets may offer finer resolution in some regions, OpenLandMap provides a harmonized global baseline for exploratory screening.</td>
+				<td style="padding: 8px; width: 24%;">Soil Organic Carbon</td>
+				<td style="padding: 8px; width: 24%;">OpenLandMap, 0&ndash;5 cm depth</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">1km</td>
+				<td style="padding: 8px; width: 30%;">OpenLandMap was selected for its global availability and consistency with GEE. While local datasets may offer finer resolution in some regions, OpenLandMap provides a harmonized global baseline for exploratory screening.</td>
 				</tr>
 				<tr>
-				<td>Soil Texture</td>
-				<td>OpenLandMap (USDA Soil Texture Classes), 0-5 cm depth</td>
-				<td>1km&nbsp;</td>
-				<td>OpenLandMap provides categorical classes (e.g., sandy loam, clay) at 1 km resolution, derived from harmonized soil profile data and machine learning models. While not directly used in the weathering potential calculation, this layer is useful for exploratory analysis, as texture can influence both soil moisture retention and reactive surface contact time.</td>
+				<td style="padding: 8px; width: 24%;">Soil Texture</td>
+				<td style="padding: 8px; width: 24%;">OpenLandMap (USDA Soil Texture Classes), 0-5 cm depth</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">1km&nbsp;</td>
+				<td style="padding: 8px; width: 30%;">OpenLandMap provides categorical classes (e.g., sandy loam, clay) at 1 km resolution, derived from harmonized soil profile data and machine learning models. While not directly used in the weathering potential calculation, this layer is useful for exploratory analysis, as texture can influence both soil moisture retention and reactive surface contact time.</td>
 				</tr>
 				<tr>
-				<td>Temperature</td>
-				<td>GSHTD v1.0 (Global Subseasonal to Seasonal Hindcast Temperature Dataset)</td>
-				<td>1km / 30 arc-seconds</td>
-				<td>We use mean annual air temperature from GSHTD v1.0, which provides daily temperature estimates at 1 km resolution from 2001 to 2020. To reduce interannual noise and match the climatological scale of other inputs, we calculate the mean annual temperature across this full 20-year period.</td>
+				<td style="padding: 8px; width: 24%;">Temperature</td>
+				<td style="padding: 8px; width: 24%;">GSHTD v1.0 (Global Subseasonal to Seasonal Hindcast Temperature Dataset)</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">1km / 30 arc-seconds</td>
+				<td style="padding: 8px; width: 30%;">We use mean annual air temperature from GSHTD v1.0, which provides daily temperature estimates at 1 km resolution from 2001 to 2020. To reduce interannual noise and match the climatological scale of other inputs, we calculate the mean annual temperature across this full 20-year period.</td>
 				</tr>
 				<tr>
-				<td>Soil Moisture</td>
-				<td>Han, Q., Zeng, Y., Zhang, L. et al. (2023), Climatological average for 2000&ndash;2020</td>
-				<td>1km</td>
-				<td>The GSSM1km dataset provides daily surface soil moisture (0&ndash;5 cm) at 1 km spatial resolution from 2000 to 2020. To align with the temporal scale of the other model inputs, we computed the mean annual value for each year and then averaged across all 21 years to produce a stable, globally consistent baseline.&nbsp;</td>
+				<td style="padding: 8px; width: 24%;">Soil Moisture</td>
+				<td style="padding: 8px; width: 24%;">Han, Q., Zeng, Y., Zhang, L. et al. (2023), Climatological average for 2000&ndash;2020</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">1km</td>
+				<td style="padding: 8px; width: 30%;">The GSSM1km dataset provides daily surface soil moisture (0&ndash;5 cm) at 1 km spatial resolution from 2000 to 2020. To align with the temporal scale of the other model inputs, we computed the mean annual value for each year and then averaged across all 21 years to produce a stable, globally consistent baseline.&nbsp;</td>
 				</tr>
 				<tr>
-				<td>Cropland Boundaries</td>
-				<td>ESA WorldCover 2020 and GFSAD1000</td>
-				<td>10 m (ESA), 1 km (GFSAD)</td>
-				<td>ESA WorldCover offers fine-scale land cover mapping, while GFSAD allows filtering for specific cropland types (e.g., irrigated, rainfed), making them complementary for mask-based queries.</td>
+				<td style="padding: 8px; width: 24%;">Cropland Boundaries</td>
+				<td style="padding: 8px; width: 24%;">ESA WorldCover 2020 and GFSAD1000</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">10 m (ESA), 1 km (GFSAD)</td>
+				<td style="padding: 8px; width: 30%;">ESA WorldCover offers fine-scale land cover mapping, while GFSAD allows filtering for specific cropland types (e.g., irrigated, rainfed), making them complementary for mask-based queries.</td>
 				</tr>
 				<tr>
-				<td>Administrative Boundaries</td>
-				<td>USDOS LSIB 2017 (countries) and FAO GAUL 2015 level 1 (states/provinces)</td>
-				<td>Vector</td>
-				<td>These standardized boundary datasets support region-based summaries and allow users to explore ERW potential at both national and subnational levels.</td>
+				<td style="padding: 8px; width: 24%;">Administrative Boundaries</td>
+				<td style="padding: 8px; width: 24%;">USDOS LSIB 2017 (countries) and FAO GAUL 2015 level 1 (states/provinces)</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">Vector</td>
+				<td style="padding: 8px; width: 30%;">These standardized boundary datasets support region-based summaries and allow users to explore ERW potential at both national and subnational levels.</td>
 				</tr>
 				<tr>
-				<td>Analysis Scale</td>
-				<td>N/A</td>
-				<td>1km</td>
-				<td>To ensure consistency across datasets and efficient processing within Google Earth Engine, we resample all layers to a common working resolution of 1 km. This enables global coverage and comparability but means that local heterogeneity&mdash;such as microclimates, farm-scale variations, or nearby feedstock sources&mdash;is not captured.</td>
+				<td style="padding: 8px; width: 24%;">Analysis Scale</td>
+				<td style="padding: 8px; width: 24%;">N/A</td>
+				<td style="padding: 8px; width: 22%; text-align: center;">1km</td>
+				<td style="padding: 8px; width: 30%;">To ensure consistency across datasets and efficient processing within Google Earth Engine, we resample all layers to a common working resolution of 1 km. This enables global coverage and comparability but means that local heterogeneity&mdash;such as microclimates, farm-scale variations, or nearby feedstock sources&mdash;is not captured.</td>
 				</tr>
 				</tbody>
 				</table>
