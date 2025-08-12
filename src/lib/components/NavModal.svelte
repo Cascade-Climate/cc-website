@@ -33,13 +33,15 @@
 				</button>
 			{:else}
 				<button class="nav-item item{i}" tabindex="0">
-					<a
-						target={item.children[0].external ? '_blank' : '_self'}
-						href={item.children[0].url}
-						on:click={callbackFn}
-					>
-						{item.label}
-					</a>
+					<span>
+						<a
+							target={item.children[0].external ? '_blank' : '_self'}
+							href={item.children[0].url}
+							on:click={callbackFn}
+						>
+							{item.label}
+						</a>
+					</span>
 				</button>
 			{/if}
 		{/each}
@@ -105,10 +107,15 @@
 		border-top: 1px solid var(--color-light);
 		font-size: 1.2rem;
 		background-color: var(--color-dark);
+		min-height: 4rem;
 	}
 
 	.nav-item span {
 		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
 	}
 
 	.nav-item:last-child {
@@ -133,6 +140,17 @@
 
 	nav a:hover {
 		text-decoration: underline;
+	}
+
+	@media (max-width: 660px) {
+		.nav-item {
+			min-height: 3rem;
+			font-size: 1rem;
+		}
+
+		.nav-item span {
+			padding: 0.75rem 0;
+		}
 	}
 
 	.item0 {

@@ -292,27 +292,26 @@
 />
 </svelte:head>
 
-<div>
-	<section class="intro">
-		<div class="content">
-			<div class="copy">
-				<h1><strong>Introducing the Weathering Potential Explorer:</strong> A Global Screening Tool for Weathering Potential</h1>
-				<p>
-					Enhanced rock weathering (ERW) is an emerging carbon dioxide removal (CDR) strategy that accelerates the natural breakdown of alkaline rocks and minerals to capture and store atmospheric CO₂. While ERW builds on farmers' centuries-old practice of applying ground rock to improve soil pH and fertility, it's optimized specifically for carbon removal. We know ERW works, but we need better tools to understand where environmental conditions &mdash; particularly temperature, soil moisture, and pH &mdash; create the highest potential for rapid rock dissolution. That's why we built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
-				</p>
-				<strong>
-					Ready to explore global weathering potential? Jump straight to the tool or continue reading to learn more about how it works and how to use it effectively.
-				</strong>
-				<p></p>
-				<div class="links">
-					<a href="https://cascade-erw-gis.projects.earthengine.app/view/erw-explorer" target="_blank" rel="noopener">Access the Weathering Potential Explorer Tool</a>
-				</div>
+<section class="intro">
+	<div class="content">
+		<div class="copy">
+			<h1><strong>Introducing the Weathering Potential Explorer:</strong> A Global Screening Tool for Weathering Potential</h1>
+			<p>
+				Enhanced rock weathering (ERW) is an emerging carbon dioxide removal (CDR) strategy that accelerates the natural breakdown of alkaline rocks and minerals to capture and store atmospheric CO₂. While ERW builds on farmers' centuries-old practice of applying ground rock to improve soil pH and fertility, it's optimized specifically for carbon removal. We know ERW works, but we need better tools to understand where environmental conditions &mdash; particularly temperature, soil moisture, and pH &mdash; create the highest potential for rapid rock dissolution. That's why we built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
+			</p>
+			<strong>
+				Ready to explore global weathering potential? Jump straight to the tool or continue reading to learn more about how it works and how to use it effectively.
+			</strong>
+			<p></p>
+			<div class="links">
+				<a href="https://cascade-erw-gis.projects.earthengine.app/view/erw-explorer" target="_blank" rel="noopener">Access the Weathering Potential Explorer Tool</a>
 			</div>
-			<img src={wpe} alt="Screencap of the Weathering Potential Explorer"/>
 		</div>
-	</section>
-	<ScrollNav />
-	<main>
+		<img src={wpe} alt="Screencap of the Weathering Potential Explorer"/>
+	</div>
+</section>
+<ScrollNav />
+<main>
 
 		<section id="overview">
 			<h2>User Guide</h2>
@@ -375,10 +374,16 @@
 				.wp-table {
 					border-collapse: collapse;
 					width: 100%;
+					max-width: 100%;
+					table-layout: fixed;
+					font-size: 0.75rem;
+					line-height: 1.2;
 				}
 				.wp-table td, .wp-table th {
 					border: 1px solid #222;
 					padding: 8px;
+					word-wrap: break-word;
+					overflow-wrap: break-word;
 				}
 				.wp-table th, .wp-table .wp-header {
 					background: #023C40;
@@ -655,10 +660,8 @@
 				<p>
 					Also note that this model assumes static environmental inputs, including pH. However, in reality, the application of alkaline rock can rapidly increase soil pH, sometimes within the first few weeks or months after spreading. This creates a feedback: while weathering initially proceeds quickly in acidic soils, the reaction itself tends to raise pH, which in turn slows further dissolution. As a result, the modeled weathering potentials are best interpreted as upper bounds that are most accurate in the early stages of rock application or at low doses. Long-term weathering trajectories are likely to differ as soil chemistry evolves.<sup>10</sup> Similarly, soil moisture and temperature may be impacted by ERW deployments.
 				</p>
-				<div style="width: 100%; margin-top: 0.75em;">
-					<div class="erw-note" style="margin-left: 0; left: 0; width: 150%; box-sizing: border-box;">
-						<strong>10</strong> See Maher & Chamberlain (2014) for further discussion of dynamic soil chemical environments and Lasaga (1984) or White & Brantley (2003) for classical derivations of mineral dissolution rate laws
-					</div>
+				<div class="erw-note">
+					<strong>10</strong> See Maher & Chamberlain (2014) for further discussion of dynamic soil chemical environments and Lasaga (1984) or White & Brantley (2003) for classical derivations of mineral dissolution rate laws
 				</div>
 			</div>
 		</section>
@@ -758,7 +761,6 @@
 				<p>External reviewers (thank u so much all): tyler kukla, benjamin moller, seth whiteaker</p>
 		</section>
 	</main>
-</div>
 
 <style>
 	.graph-container {
@@ -906,30 +908,35 @@
 		position: relative;
 	}
 
-	/* Make sure ScrollNav stays above content but below header dropdowns */
-	:global(nav.scroll-nav) {
-		z-index: 3;
-		position: sticky;
-	}
-
-	/* Page layout with margins for footnotes */
+	/* Use the exact same main styling as about-us page */
 	main {
-		margin-left: 7rem;
-		margin-right: 7rem;
+		padding: 1rem 4rem;
+		padding-bottom: 6rem;
 	}
 
-	/* Responsive margins for smaller screens */
-	@media (max-width: 1200px) {
-		main {
-			margin-left: 5rem;
-			margin-right: 5rem;
-		}
+	main section {
+		margin-top: -6rem;
+		padding-top: 9rem;
+		margin-bottom: -5rem;
+		padding-bottom: 1rem;
 	}
 
-	@media (max-width: 768px) {
+	/* Override blog layout's global styles that interfere with sticky nav */
+	:global(main) {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	:global(main section) {
+		border-bottom: none !important;
+		display: block !important;
+		gap: 0 !important;
+	}
+
+	@media (max-width: 660px) {
 		main {
-			margin-left: 1rem;
-			margin-right: 1rem;
+			padding: 2rem;
+			padding-bottom: 6rem;
 		}
 	}
 
