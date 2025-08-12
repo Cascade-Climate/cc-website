@@ -297,7 +297,7 @@
 		<div class="copy">
 			<h1><strong>Introducing the Weathering Potential Explorer:</strong> A Global Screening Tool for Weathering Potential</h1>
 			<p>
-				Enhanced rock weathering (ERW) is an emerging carbon dioxide removal (CDR) strategy that accelerates the natural breakdown of alkaline rocks and minerals to capture and store atmospheric CO₂. While ERW builds on farmers' centuries-old practice of applying ground rock to improve soil pH and fertility, it's optimized specifically for carbon removal. We know ERW works, but we need better tools to understand where environmental conditions &mdash; particularly temperature, soil moisture, and pH &mdash; create the highest potential for rapid rock dissolution. That's why we built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
+				Enhanced rock weathering (ERW) is an emerging carbon dioxide removal (CDR) strategy that accelerates the natural breakdown of alkaline rocks and minerals to capture and store atmospheric CO₂. While ERW builds on farmers' centuries-old practice of applying ground rock to improve soil pH and fertility, it's optimized specifically for carbon removal. We know ERW works, but we need better tools to understand where environmental conditions&mdash;particularly temperature, soil moisture, and pH&mdash;create the highest potential for rapid rock dissolution. That's why we built the Weathering Potential Explorer, an interactive global map that can support successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
 			</p>
 			<strong>
 				Ready to explore global weathering potential? Jump straight to the tool or continue reading to learn more about how it works and how to use it effectively.
@@ -362,12 +362,14 @@
 					}
 				}
 			</style>
-			<p>To visualize this, imagine a bucket of reactive rock powder submerged in water. If the water is warm and acidic, it will rapidly dissolve the rock, releasing cations that bind with dissolved CO₂. But if the water is cold, alkaline, or stagnant, the reactions slow down, and eventually reach equilibrium as the water becomes saturated. Real soils behave much like this bucket, but with added complexity: water moves, roots and microbes generate fresh acidity, and temperature shifts with the seasons. In dynamic soil environments, fast and sustained weathering depends on maintaining a flow of fresh, unsaturated water that can carry away weathering products and allow new CO2 to be captured. In other words, in order to continue the reaction happening in the bucket, we must dump the water out and refill with fresh, unreacted water to start the process over, and warmer, slightly more acidic waters will speed up the reaction that happens.</p>
-			<p>Temperature, soil moisture, and soil water pH control how quickly weathering occurs. <a href="#temperature">Temperature</a> speeds up chemical reactions, <a href="#tmoisture">moisture</a> enables them by dissolving and transporting reactants, and <a href="#ph">pH</a> influences both the rate at which minerals dissolve and how carbon is stored in solution. Importantly, these three variables are not independent of each other. Warmer climates, like the tropics, are often wetter, and wetter soils are often more acidic. As a result, by mapping where conditions are simultaneously warm, moist, and acidic, we can identify regions that are especially well-suited for ERW. Other factors like feedstock mineralogy, particle size, and local hydrology also influence carbon removal potential, but <strong>temperature, soil moisture, and soil water pH are the three most accessible and predictive variables </strong>available in global datasets.</p>
-			<p>While there are always local exceptions, this global pattern gives us a practical but powerful starting point for determining where ERW feedstocks have the highest potential to weather quickest. To help explore the variation of global weathering potential, we built the <strong>Weathering Potential Explorer</strong>, an interactive map that visualizes relative weathering potential across agricultural regions based on these three main inputs. We focused on weathering potential because, while they're just one piece of the ERW puzzle, they are also the crucial first step &mdash; we can&rsquo;t quantify carbon removal without knowing how much rock has weathered.</p>
+			<p>To visualize this, imagine a bucket of reactive rock powder submerged in water. If the water is warm and acidic, it will rapidly dissolve the rock, releasing cations that bind with dissolved CO₂. But if the water is cold, alkaline, or stagnant, the reactions slow down, and eventually reach equilibrium as the water becomes saturated. Real soils behave much like this bucket, but with added complexity: water moves, roots and microbes generate fresh acidity, and temperature shifts with the seasons. In dynamic soil environments, fast and sustained weathering depends on maintaining a flow of fresh, unsaturated water that can carry away weathering products and allow new CO₂ to be captured. In other words, in order to continue the reaction happening in the bucket, we must dump the water out and refill with fresh, unreacted water to start the process over, and warmer, slightly more acidic waters will speed up the reaction that happens.</p>
+			<p>Temperature, soil moisture, and soil water pH control how quickly weathering occurs. <a href="#temperature">Temperature</a> speeds up chemical reactions, <a href="#moisture">moisture</a> enables them by dissolving and transporting reactants, and <a href="#ph">pH</a> influences both the rate at which minerals dissolve and how carbon is stored in solution. Importantly, these three variables are not independent of each other. Warmer climates, like the tropics, are often wetter, and wetter soils are often more acidic. As a result, by mapping where conditions are simultaneously warm, moist, and acidic, we can identify regions that are especially well-suited for ERW. Other factors like feedstock mineralogy, particle size, and local hydrology also influence carbon removal potential, but <strong>temperature, soil moisture, and soil water pH are the three most accessible and predictive variables </strong>available in global datasets.</p>
+			<p>While there are always local exceptions, this global pattern gives us a practical but powerful starting point for determining where ERW feedstocks have the highest potential to weather quickest. To help explore the variation of global weathering potential, we built the <strong>Weathering Potential Explorer</strong>, an interactive map that visualizes relative weathering potential across agricultural regions based on these three main inputs. We focused on weathering potential because, while they're just one piece of the ERW puzzle, they are also the crucial first step&mdash;we can&rsquo;t quantify carbon removal without knowing how much rock has weathered.</p>
+			
+			<br>
 
 			<h2>Weathering Potential Explorer Capabilities&nbsp;</h2>
-			<p><strong>The Weathering Potential Explorer estimates where </strong><span style="text-decoration: underline;"><strong>silicate</strong></span><strong>&nbsp;weathering may hold the greatest potential, drawing on globally available datasets for land cover, temperature, soil organic carbon, soil moisture, and soil water pH. </strong>The tool outputs a normalized relative weathering potential index that returns percentile rankings across global agricultural soils, where the top percentiles indicate conditions more favorable to rapid rock dissolution. The WPE also offers cropland filtering and soil chemistry masks, and provides regional statistics for land area within each weathering potential range.</p>
+			<p><strong>The Weathering Potential Explorer estimates where silicate weathering may hold the greatest potential, drawing on globally available datasets for land cover, temperature, soil organic carbon, soil moisture, and soil water pH. </strong>The tool outputs a normalized relative weathering potential index that returns percentile rankings across global agricultural soils, where the top percentiles indicate conditions more favorable to rapid rock dissolution. The Weathering Potential Explorer also offers cropland filtering and soil chemistry masks, and provides regional statistics for land area within each weathering potential range.</p>
 			<p>The calculation is based on a simplified formulation commonly used in weathering models, where dissolution rate is proportional to hydrogen ion concentration, soil moisture (representing how much rock surface is in contact with water, assuming that water is refreshed before reaching equilibrium), and a temperature-dependent Arrhenius factor (e.g., White &amp; Brantley 2003; Maher &amp; Chamberlain 2014). This captures key environmental drivers of weathering without modeling specific mineral kinetics.</p>
 			<div>
 			<style>
@@ -441,7 +443,7 @@
 			</tr>
 			<tr>
 			<td><strong>Tool&rsquo;s Primary Output</strong></td>
-			<td>Estimated relative weathering potential across global agricultural landscapes, expressed as a normalized index (0&ndash;1). This reflects the comparative speed of silicate weathering based on soil water pH, moisture, and temperature conditions. Data sources can all be found in <a href="#dataresolutions">Section 5: Data Inputs and Spatial Resolutions</a>.</td>
+			<td>Estimated relative weathering potential across global agricultural landscapes, expressed as a normalized index (0&ndash;1). This reflects the comparative speed of silicate weathering based on soil water pH, moisture, and temperature conditions. Data sources can all be found in <a href="#dataresolutions">Data Inputs and Spatial Resolutions</a>.</td>
 			</tr>
 			<tr>
 			<td><strong>Visual Output</strong></td>
@@ -457,7 +459,7 @@
 			</tr>
 			<tr>
 			<td><strong>Cropland Filtering</strong></td>
-			<td>Users can apply land cover masks to limit the analysis to cropland areas. These datasets define cropland broadly as managed lands used primarily for the cultivation of food, fiber, and forage crops. While they effectively capture large-scale agriculture, they may miss smallholder farms and other mosaic systems. More detail can be found in <a href="https://docs.google.com/document/d/1gcX4__zGIoo76iHeGL-Cy0Z6jyYbXeWaMtkfTBSiHGw/edit?tab=t.0#heading=h.ydlenmd95hum" target="_blank" rel="noopener">Section 5</a>.</td>
+			<td>Users can apply land cover masks to limit the analysis to cropland areas. These datasets define cropland broadly as managed lands used primarily for the cultivation of food, fiber, and forage crops. While they effectively capture large-scale agriculture, they may miss smallholder farms and other mosaic systems. More detail can be found in <a href="#dataresolutions">Data Inputs and Spatial Resolutions</a>.</td>
 			</tr>
 			<tr>
 			<td><strong>Soil Chemistry Masks</strong></td>
@@ -465,12 +467,13 @@
 			</tr>
 			<tr>
 			<td><strong>Regional Summaries</strong></td>
-			<td>Clicking on any region opens a pop-up with land area statistics sorted by weathering rate categories, which the tool bins into five ranges based on the normalized output: Low, Low-Medium, Medium, Medium-High, and High potential. These summaries are shown for total land and cropland (if masked).</td>
+			<td>Clicking on any region opens a pop-up with land area statistics sorted by weathering potential categories, which the tool bins into five percentile ranges based on the normalized output. These summaries are shown for total land and cropland (if masked).</td>
 			</tr>
 			</tbody>
 			</table>
 			</div>
-			<h2 id="#limitations1">Limitations of the Weathering Potential Explorer&nbsp;</h2>
+			<br>
+			<h2 id="limitations1">Limitations of the Weathering Potential Explorer&nbsp;</h2>
 			<p>The Weathering Potential Explorer highlights promising regions for further investigation, but because it does not capture the full range of variables that ultimately determine where ERW can be most effective, it cannot provide definitive answers on site suitability or be used as a site selection tool.&nbsp;</p>
 			<div>
 			<table class="wp-table">
@@ -520,15 +523,15 @@
 		<section id="key-factors">
 			<h1>Key Factors</h1>
 			<h2>Key factors that influence weathering potential</h2>
-			<p>Enhanced rock weathering relies on the dissolution of minerals in soil environments. However, not all minerals dissolve equally fast, and not all environments promote the same reaction rates. While a range of rock types can be used in enhanced weathering, this tool models <strong>silicate mineral dissolution</strong><strong>1</strong><strong> only</strong>. Other materials, such as carbonates or fast-weathering minerals like wollastonite, may also be relevant in some contexts, but their reaction kinetics differ significantly, with lower activation energies and different temperature sensitivities than the silicates modeled here.&nbsp;</p>
-			<p>Several environmental factors influence how quickly silicates weather. The Weathering Potential Explorer models three of the most important and available variables: <strong>temperature, soil moisture, and soil pH.</strong> Warmer conditions accelerate reaction kinetics; soil acidity promotes dissolution, but excessive acidity limits the ability of soils to retain bicarbonate, so conditions of mild acidity are optimal for ERW; and soil moisture provides the solvent in which dissolution reactions occur. While these variables interact in complex ways, they offer a strong first-pass estimate of where<strong> weathering is likely to proceed more rapidly.&nbsp;</strong></p>
+			<p>Enhanced rock weathering relies on the dissolution of minerals in soil environments. However, not all minerals dissolve equally fast, and not all environments promote the same reaction rates. While a range of rock types can be used in enhanced weathering, this tool models <strong>silicate mineral dissolution only</strong>. Other materials, such as carbonates or fast-weathering minerals like wollastonite, may also be relevant in some contexts, but their reaction kinetics differ significantly, with lower activation energies and different temperature sensitivities than the silicates modeled here.&nbsp;</p>
+			<p>Several environmental factors influence how quickly silicates weather. The Weathering Potential Explorer models three of the most important and available variables: <strong>temperature, soil moisture, and soil pH.</strong> Warmer conditions accelerate reaction kinetics; soil acidity promotes dissolution, but excessive acidity limits the ability of soils to retain bicarbonate, so conditions of mild acidity are optimal for ERW; and soil moisture provides the solvent in which dissolution reactions occur. While these variables interact in complex ways, they offer a strong first-pass estimate of where<strong> &nbsp;weathering is likely to proceed more rapidly.&nbsp;</strong></p>
 
 
 			<div class="erw-explanation-block">
 				<p>
 					Other factors like mineralogy, particle size, and water flow dynamics also shape real-world weathering potential, but are held constant in this model because &ldquo;weathering potential&rdquo; here refers to a unitless, relative reaction rate per unit of reactive surface area, normalized across all land pixels<sup>2</sup>. In practice, the model assumes an average activation energy representative of common silicate feedstocks like basalt<sup>3</sup>. It does not account for application rate, surface area distribution, or actual CO₂ uptake.
 					<br><br>
-					The result is a dimensionless index of <strong>relative weathering reactivity</strong> &mdash; a measure of how favorable local conditions are for silicate weathering, all else equal. This is not a prediction of carbon removal flux, but rather a screening tool to highlight where environmental conditions may support faster dissolution and, in turn, more effective silicate ERW deployments.
+					The result is a dimensionless index of <strong>relative weathering reactivity</strong>&mdash;a measure of how favorable local conditions are for silicate weathering, all else equal. This is not a prediction of carbon removal flux, but rather a screening tool to highlight where environmental conditions may support faster dissolution and, in turn, more effective silicate ERW deployments.
 				</p>
 				<div class="erw-note">
 					<strong>2</strong> In this formulation, particle size and application rate do not affect results directly, while mineralogy could alter outcomes via the assumed activation energy, and water flow dynamics could influence whether the far-from-equilibrium assumption holds.
@@ -640,7 +643,7 @@
 
 				<div class="erw-explanation-block">
 					<p>
-						At high pH (above ~8), weathering potential slows significantly, and carbon is more likely to be stored in solid carbonate minerals, which can redissolve later and are harder to account for reliably.<sup>7</sup> Thus, there&rsquo;s a sweet spot for weathering-based carbon removal, which is typically in soils with a pH between about 5.5 and 7 &mdash; a range that also happens to be agronomically favorable for most crops, supporting nutrient availability and root health.<sup>8</sup>
+						At high pH (above ~8), weathering potential slows significantly, and carbon is more likely to be stored in solid carbonate minerals, which can redissolve later and are harder to account for reliably.<sup>7</sup> Thus, there&rsquo;s a sweet spot for weathering-based carbon removal, which is typically in soils with a pH between about 5.5 and 7&mdash;a range that also happens to be agronomically favorable for most crops, supporting nutrient availability and root health.<sup>8</sup>
 						<br><br>
 						This trade-off is illustrated in the figure below, based on representative soil chemistry conditions. The exact curve may vary depending on soil pCO₂, total alkalinity, and other carbonate system parameters.<sup>9</sup>
 					</p>
@@ -649,7 +652,7 @@
 						<br><br>
 						<strong>8</strong> USDA Natural Resources Conservation Service (NRCS). Soil pH: What It Means. Pennsylvania Envirothon. <a href="https://www.envirothonpa.org/documents/pH_guide.pdf" target="_blank" rel="noopener">[PDF]</a>
 						<br><br>
-						<strong>9</strong> For detailed modeling of pH–weathering–carbon dynamics, including the role of soil pCO₂ and carbonate equilibria, see Dietzen, B. & Rosing, M. (2024). Constraints on Enhanced Weathering as a Carbon Removal Strategy.
+						<strong>9</strong> For detailed modeling of pH–weathering–carbon dynamics, including the role of soil pCO₂ and carbonate equilibria, see <a href="https://doi.org/10.1016/j.ijggc.2023.103872" target="_blank" rel="noopener">Dietzen, B. &amp; Rosing, M. (2023)</a>.
 					</div>
 				</div>
 
@@ -658,7 +661,22 @@
 						<canvas id="phChart"></canvas>
 					</div>
 				</div>
-				<p style="font-size: 0.85em; line-height: 1.3; margin-top: 0.5em;"><em>Figure 1. Conceptual trade-off between relative weathering rate and relative carbon capture efficiency as a function of soil pH. Highly acidic soils tend to promote fast mineral dissolution but may limit stable carbon storage, while alkaline soils slow weathering and favor carbonate precipitation with uncertain permanence. The optimal range for ERW typically lies between pH ~5.5 and 7, where both reactivity and durability are reasonably balanced. </em><strong><em>This curve is illustrative and based on characteristic soil conditions. The exact shape will vary with factors such as soil pCO₂, alkalinity, and total carbonate system buffering. </em></strong><em>(Adapted from Bertagni &amp; Porporato 2022; Dietzen &amp; Rosing 2024; Levy et al. 2024.)</em></p>
+				<p style="font-size: 0.85em; line-height: 1.3; margin-top: 0.5em;">
+					<em>
+						Figure 1. Conceptual trade-off between relative weathering rate and relative carbon capture efficiency as a function of soil pH. Highly acidic soils tend to promote fast mineral dissolution but may limit stable carbon storage, while alkaline soils slow weathering and favor carbonate precipitation with uncertain permanence. The optimal range for ERW typically lies between pH ~5.5 and 7, where both reactivity and durability are reasonably balanced.
+					</em>
+					<strong>
+						<em>
+							This curve is illustrative and based on characteristic soil conditions. The exact shape will vary with factors such as soil pCO₂, alkalinity, and total carbonate system buffering.
+						</em>
+					</strong>
+					<em>
+						(Adapted from 
+						<a href="https://doi.org/10.1016/j.scitotenv.2022.156524" target="_blank" rel="noopener">Bertagni &amp; Porporato 2022</a>;
+						<a href="https://doi.org/10.1016/j.ijggc.2023.103872" target="_blank" rel="noopener">Dietzen &amp; Rosing 2023</a>;
+						<a href="https://pubs.acs.org/doi/10.1021/acs.est.4c02368" target="_blank" rel="noopener">Levy et al. 2024</a>.)
+					</em>
+				</p>
 				<p>The Weathering Potential Explorer includes an optional pH filter that allows users to exclude soils outside of a user-specified range (with 4.5&ndash;8 as the default range). These are regions where weathering is either too slow or is less likely to lead to durable carbon storage under current MRV frameworks.</p>
 				<p>The tool also offers a separate filter to exclude soils with high soil organic carbon (SOC) percentages. These regions often have abundant organic acids that can bind with cations like Ca&sup2;⁺ and Mg&sup2;⁺, reducing their ability to form stable bicarbonate. While these acid effects are reflected in the pH layer, the SOC mask provides an additional screen for areas where carbon removal efficiency may be suppressed.&nbsp;</p>
 				<p>Soils with both low pH and high SOC may be high-risk zones for ERW deployment. In <a href="https://cascadeclimate.org/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</em></a>, <strong>SOC &gt;5% </strong>soils are flagged as areas with substantial risk of SOC loss under amendment. Users should carefully consider both geochemical and biological context when evaluating these regions.</p>
@@ -703,7 +721,7 @@
 					Also note that this model assumes static environmental inputs, including pH. However, in reality, the application of alkaline rock can rapidly increase soil pH, sometimes within the first few weeks or months after spreading. This creates a feedback: while weathering initially proceeds quickly in acidic soils, the reaction itself tends to raise pH, which in turn slows further dissolution. As a result, the modeled weathering potentials are best interpreted as upper bounds that are most accurate in the early stages of rock application or at low doses. Long-term weathering trajectories are likely to differ as soil chemistry evolves.<sup>10</sup> Similarly, soil moisture and temperature may be impacted by ERW deployments.
 				</p>
 				<div class="erw-note">
-					<strong>10</strong> See Maher & Chamberlain (2014) for further discussion of dynamic soil chemical environments and Lasaga (1984) or White & Brantley (2003) for classical derivations of mineral dissolution rate laws
+					<strong>10</strong> See <a href="https://www.science.org/doi/10.1126/science.1250770" target="_blank" rel="noopener">Maher &amp; Chamberlain (2014)</a> for further discussion of dynamic soil chemical environments, and <a href="https://doi.org/10.1029/JB089iB06p04009" target="_blank" rel="noopener">Lasaga (1984)</a> or <a href="https://doi.org/10.1016/j.chemgeo.2003.03.001" target="_blank" rel="noopener">White &amp; Brantley (2003)</a> for classical derivations of mineral dissolution rate laws.
 				</div>
 			</div>
 		</section>
@@ -716,7 +734,7 @@
 			<h3>Resolution and Scale&nbsp;</h3>
 			<p>The map operates at a resolution of approximately 1 km&sup2; per grid cell, or about 100 hectares. This is consistent with many global-scale land surface models and biogeochemical tools such as WorldClim, SoilGrids, and TerraClimate. This supports macro-scale targeting, but masks local variation. Promising micro-regions may not appear in the analysis, just as small mafic rock sources may be overlooked in coarse global geology layers. Users should treat the tool as a way to narrow the search, not to make site-level decisions. Field-scale baselining remains essential.&nbsp;</p>
 			<h3>Temporal Resolution</h3>
-			<p>The tool uses long-term annual averages for environmental variables, which smooth out seasonal dynamics and ignore interannual variability. More information about the datasets and resolutions can be found in <a href="#dataresolutions">Section 5: Data Inputs and Spatial Resolutions</a>. While this makes global comparisons tractable, it may obscure short-term constraints or opportunities, such as monsoonal cycles or temporary droughts that influence when and how ERW can be applied.&nbsp;</p>
+			<p>The tool uses long-term annual averages for environmental variables, which smooth out seasonal dynamics and ignore interannual variability. More information about the datasets and resolutions can be found in <a href="#dataresolutions">Data Inputs and Spatial Resolutions</a>. While this makes global comparisons tractable, it may obscure short-term constraints or opportunities, such as monsoonal cycles or temporary droughts that influence when and how ERW can be applied.&nbsp;</p>
 			<h3>Feedstock Assumptions&nbsp;</h3>
 			<p>The model does not incorporate any information about feedstock properties, including amount applied, grain size, or mineral composition. All outputs are normalized to reflect <strong>a relative weathering potential per unit of reactive surface area</strong> under environmental conditions. That means variables like grain size or application rate do not influence the outputs directly, but would be required to translate the relative rate into a carbon removal flux.</p>
 			<p>To represent broad mineral weathering behavior, the model assumes a fixed activation energy (68.8 kJ/mol), consistent with fast-weathering silicate feedstocks like basaltic glass. In reality, this parameter and overall reactivity varies with feedstock mineralogy, particle size, and surface coatings. These factors are critical for downstream carbon accounting but are held constant in this simplified model.</p>
@@ -724,9 +742,10 @@
 			<p>Cropland filters in the Explorer rely on datasets which are reliable at global scale but may miss smallholder systems or mosaic landscapes, especially in the tropics. These limitations are especially relevant for identifying ERW potential in places where farming systems are less intensively mapped. Users should interpret cropland masks as indicative, not definitive.</p>
 			<h3>No Carbon Flux Estimation&nbsp;</h3>
 			<p>The tool does not estimate CO₂ removal, even indirectly. Its output reflects comparative weathering reactivity, not carbon stored or creditable under MRV frameworks. Translating weathering potential into carbon flux requires additional assumptions about feedstock supply, application logistics, monitoring protocols, and downstream carbonate stability, all of which lie outside the scope of this tool.</p>
+			<br>
 			<h2>Beyond the Model: Practical and Economic Context</h2>
 			<p>Successful ERW deployment depends on economic, logistical, and operational factors that vary widely from place to place and are not reflected in the Weathering Potential Explorer. For this reason, this tool is not a substitute for holistic planning at the site level.</p>
-			<p>In most cases, it is the economic and operational conditions, rather than weathering rate alone, that determine whether ERW is viable, fundable, and capable of delivering real-world impact. The tool is not a substitute for holistic planning at the site level.</p>
+			<p>In most cases, it is the economic and operational conditions, rather than weathering potential alone, that determine whether ERW is viable, fundable, and capable of delivering real-world impact. The tool is not a substitute for holistic planning at the site level.</p>
 			<p>One important consideration is <strong>proximity to</strong> <strong>suitable feedstocks</strong>. Most ERW projects today rely on mining byproducts, such as crushed basalt from aggregate production, rather than sourcing new rock solely for carbon removal. This approach minimizes environmental impact and leverages existing supply chains. Still, these materials are unevenly distributed. Large bodies of mafic and ultramafic rocks, including basalt and dunite (an olivine-rich rock), are geologically constrained to certain regions. Projects located near these formations and near active mines benefit from lower transportation costs, reduced emissions, and easier access to materials. Identifying optimal deployment zones requires balancing favorable weathering conditions with practical access to rock.</p>
 			<p><strong>Infrastructure</strong> also matters. ERW requires not just proximity to rock sources, but also access to low-emission transport, grinding and spreading equipment, and sometimes laboratory capacity for monitoring. While tropical regions often offer favorable weathering conditions, infrastructure is often more developed in countries with greater industrial capacity and logistical access. This greatly influences where ERW can scale most cost-effectively. To estimate the costs of rock, hauling, and spreading (RHS) and measurement, reporting, and verification (MRV) for small-scale deployments, see the <a href="https://cascadeclimate.org/blog/erw-measurement-cost-stack-estimator-and-database" target="_blank" rel="noopener">ERW MRV Cost Estimator and Database</a>.</p>
 			<p><strong>Energy and labor costs</strong> play a role as well. In parts of the Global South, lower costs may support deployment at scale, while in other regions, cleaner electricity grids may reduce lifecycle emissions during rock processing. These tradeoffs vary significantly by location and must be weighed against durability and monitoring needs.</p>
@@ -746,43 +765,49 @@
 				</tr>
 				<tr>
 				<td style="padding: 8px; width: 24%;">Soil pH</td>
-				<td style="padding: 8px; width: 24%;">SoilGrids (ISRIC), H₂O pH mean at 0&ndash;200 cm depth (selectable)</td>
+				<td style="padding: 8px; width: 24%;"><a href="https://www.isric.org/explore/soilgrids" target="_blank" rel="noopener">SoilGrids (ISRIC)</a>, H₂O pH mean at 0&ndash;200 cm depth (selectable)</td>
 				<td style="padding: 8px; width: 22%; text-align: center;">250m</td>
 				<td style="padding: 8px; width: 30%;">SoilGrids provides globally harmonized pH estimates at fine resolution, capturing surface soil chemistry relevant to weathering processes and crop root zones.</td>
 				</tr>
 				<tr>
 				<td style="padding: 8px; width: 24%;">Soil Organic Carbon</td>
-				<td style="padding: 8px; width: 24%;">OpenLandMap, 0&ndash;5 cm depth</td>
+				<td style="padding: 8px; width: 24%;"><a href="https://stac.openlandmap.org/organic.carbon_usda.6a1c/collection.json?.language=en" target="_blank" rel="noopener">OpenLandMap</a>, 0&ndash;5 cm depth</td>
 				<td style="padding: 8px; width: 22%; text-align: center;">1km</td>
 				<td style="padding: 8px; width: 30%;">OpenLandMap was selected for its global availability and consistency with GEE. While local datasets may offer finer resolution in some regions, OpenLandMap provides a harmonized global baseline for exploratory screening.</td>
 				</tr>
 				<tr>
 				<td style="padding: 8px; width: 24%;">Soil Texture</td>
-				<td style="padding: 8px; width: 24%;">OpenLandMap (USDA Soil Texture Classes), 0-5 cm depth</td>
+				<td style="padding: 8px; width: 24%;"><a href="https://stac.openlandmap.org/texture.class_usda.tt/collection.json?.language=en" target="_blank" rel="noopener">OpenLandMap (USDA Soil Texture Classes)</a>, 0-5 cm depth</td>
 				<td style="padding: 8px; width: 22%; text-align: center;">1km&nbsp;</td>
 				<td style="padding: 8px; width: 30%;">OpenLandMap provides categorical classes (e.g., sandy loam, clay) at 1 km resolution, derived from harmonized soil profile data and machine learning models. While not directly used in the weathering potential calculation, this layer is useful for exploratory analysis, as texture can influence both soil moisture retention and reactive surface contact time.</td>
 				</tr>
 				<tr>
 				<td style="padding: 8px; width: 24%;">Temperature</td>
-				<td style="padding: 8px; width: 24%;">GSHTD v1.0 (Global Subseasonal to Seasonal Hindcast Temperature Dataset)</td>
+				<td style="padding: 8px; width: 24%;"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0034425722005284" target="_blank" rel="noopener">GSHTD v1.0 (Global Subseasonal to Seasonal Hindcast Temperature Dataset)</a></td>
 				<td style="padding: 8px; width: 22%; text-align: center;">1km / 30 arc-seconds</td>
 				<td style="padding: 8px; width: 30%;">We use mean annual air temperature from GSHTD v1.0, which provides daily temperature estimates at 1 km resolution from 2001 to 2020. To reduce interannual noise and match the climatological scale of other inputs, we calculate the mean annual temperature across this full 20-year period.</td>
 				</tr>
 				<tr>
 				<td style="padding: 8px; width: 24%;">Soil Moisture</td>
-				<td style="padding: 8px; width: 24%;">Han, Q., Zeng, Y., Zhang, L. et al. (2023), Climatological average for 2000&ndash;2020</td>
+				<td style="padding: 8px; width: 24%;"><a href="https://www.nature.com/articles/s41597-023-02011-7" target="_blank" rel="noopener">GSSM1km, Han, Q., Zeng, Y., Zhang, L. et al. (2023)</a>, Climatological average for 2000&ndash;2020</td>
 				<td style="padding: 8px; width: 22%; text-align: center;">1km</td>
 				<td style="padding: 8px; width: 30%;">The GSSM1km dataset provides daily surface soil moisture (0&ndash;5 cm) at 1 km spatial resolution from 2000 to 2020. To align with the temporal scale of the other model inputs, we computed the mean annual value for each year and then averaged across all 21 years to produce a stable, globally consistent baseline.&nbsp;</td>
 				</tr>
 				<tr>
 				<td style="padding: 8px; width: 24%;">Cropland Boundaries</td>
-				<td style="padding: 8px; width: 24%;">ESA WorldCover 2020 and GFSAD1000</td>
+				<td style="padding: 8px; width: 24%;">
+					<a href="https://worldcover2020.esa.int/" target="_blank" rel="noopener">ESA WorldCover 2020</a> and 
+					<a href="https://www.usgs.gov/centers/western-geographic-science-center/science/global-food-and-water-security-support-analysis" target="_blank" rel="noopener">GFSAD1000</a>
+				</td>
 				<td style="padding: 8px; width: 22%; text-align: center;">10 m (ESA), 1 km (GFSAD)</td>
 				<td style="padding: 8px; width: 30%;">ESA WorldCover offers fine-scale land cover mapping, while GFSAD allows filtering for specific cropland types (e.g., irrigated, rainfed), making them complementary for mask-based queries.</td>
 				</tr>
 				<tr>
 				<td style="padding: 8px; width: 24%;">Administrative Boundaries</td>
-				<td style="padding: 8px; width: 24%;">USDOS LSIB 2017 (countries) and FAO GAUL 2015 level 1 (states/provinces)</td>
+				<td style="padding: 8px; width: 24%;">
+					<a href="https://developers.google.com/earth-engine/datasets/catalog/USDOS_LSIB_SIMPLE_2017" target="_blank" rel="noopener">USDOS LSIB 2017</a> (countries) and 
+					<a href="https://developers.google.com/earth-engine/datasets/catalog/FAO_GAUL_2015_level1" target="_blank" rel="noopener">FAO GAUL 2015 level 1</a> (states/provinces)
+				</td>
 				<td style="padding: 8px; width: 22%; text-align: center;">Vector</td>
 				<td style="padding: 8px; width: 30%;">These standardized boundary datasets support region-based summaries and allow users to explore ERW potential at both national and subnational levels.</td>
 				</tr>
