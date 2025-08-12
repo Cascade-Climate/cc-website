@@ -248,15 +248,21 @@
 
 	.areas h1 {
 		margin-top: 2rem;
-		margin-bottom: -7rem;
+		margin-bottom: 0.5rem;
 		color: var(--color-dark);
 	}
 
 	.areas section {
-		padding-top: 9rem;
+		margin-top: -6rem;
+		padding-top: 6rem;
 		border-bottom: 1px solid var(--color-text);
-		margin-bottom: -7rem;
-		padding-bottom: 4rem;
+		margin-bottom: -5rem;
+		padding-bottom: 1rem;
+	}
+
+	/* Remove divider line from the last section */
+	.areas section:last-child {
+		border-bottom: none;
 	}
 
 	.highlights {
