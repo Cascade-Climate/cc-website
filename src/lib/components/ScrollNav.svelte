@@ -72,6 +72,10 @@
     text-align: center;
     border: 1px solid var(--color-light);
 		font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
   }
 
   nav a:first-child {

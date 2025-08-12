@@ -13,7 +13,7 @@
 />
 </svelte:head>
 
-<div>
+ 
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
@@ -29,7 +29,7 @@
 		</div>
 	</section>
 	<ScrollNav />
-	<main>
+	<main class="emce">
 		<section id="about">
 			<h1>About</h1>
             <h3>0. About the ERW MRV Cost Estimator (EMCE):</h3>
@@ -364,4 +364,46 @@
             <p><strong>Multiplier: </strong>Occurrences of verification per year. 2 = twice a year, 1 = annually, 0.5 = every 2 years, 0.2 = every 5 years, and so on.</p>
 		</section>
 	</main>
-</div>
+
+<style>
+  /* Reduce horizontal padding for this page's main */
+  .emce {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .emce table,
+  .emce th,
+  .emce td {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  /* Remove horizontal padding completely on this page's tables */
+  .emce table {
+    padding: 0 !important;
+    border-collapse: separate !important;
+    border-spacing: 2px 0 !important; /* 2px between columns, no extra between rows */
+  }
+  .emce th,
+  .emce td {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Make first two columns wider */
+  .emce table th:nth-child(1),
+  .emce table td:nth-child(1) {
+    width: 30%;
+  }
+  .emce table th:nth-child(2),
+  .emce table td:nth-child(2) {
+    width: 35%;
+  }
+
+  /* Center the titles (first row) for second and third columns */
+  .emce table tbody tr:first-child td:nth-child(2),
+  .emce table tbody tr:first-child td:nth-child(3) {
+    text-align: center;
+  }
+</style>

@@ -19,6 +19,11 @@
 		font-size: 18px;
 	}
 
+	/* Use native smooth scroll so in-page anchors account for sticky elements correctly */
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
 	:global(body:has(#nav-modal.active)) {
 		overflow: hidden;
 	}

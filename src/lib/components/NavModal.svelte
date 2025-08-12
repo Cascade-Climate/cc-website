@@ -62,7 +62,7 @@
 		visibility: hidden;
 		justify-content: center;
 		align-items: center;
-		z-index: 2;
+		z-index: 900; /* Below header (1000), above page-level sticky navs */
 		transition:
 			visibility 0.2s,
 			opacity 0.3s;
@@ -95,7 +95,7 @@
 		width: 100%;
 	}
 
-	.nav-item {
+    .nav-item {
 		position: relative;
 		color: var(--color-light);
 		display: flex;
@@ -106,7 +106,8 @@
 		width: 100%;
 		border-top: 1px solid var(--color-light);
 		font-size: 1.2rem;
-		background-color: var(--color-dark);
+        /* Use primary accent for parent items */
+        background-color: var(--color-accent);
 		min-height: 4rem;
 	}
 
@@ -122,9 +123,10 @@
 		border-bottom: 1px solid var(--color-dark);
 	}
 
-	.subnav {
+    .subnav {
 		display: none;
-		background-color: var(--color-accent);
+        /* Lighter shade for subnav to differentiate from parent */
+        background-color: color-mix(in srgb, var(--color-accent) 85%, white 15%);
 		padding: 0.6rem 0.4rem;
 		gap: 1rem;
 		top: calc(100%);

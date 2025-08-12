@@ -73,7 +73,7 @@
 		align-items: center;
 		height: 4rem;
 		padding: 0 1rem;
-		z-index: 4;
+		z-index: 1000;
 		position: fixed;
 		top: 0;
 		width: 100vw;
