@@ -315,9 +315,12 @@
 
 		<section id="overview">
 			<h2>User Guide</h2>
+			<p>The following PDF is a practical guide to using the Weathering Potential Explorer. It explains what each button does, how to navigate the map, and what the different layers and filters will show. It also includes walkthroughs for key functions.</p>
 			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%; padding-bottom: 1.5rem;">
-				<PDFLink link="/Draft Weathering Potential Explorer User Guide.pdf" variant="accent" style="display: block; text-align: left;">Weathering Potential Explorer User Guide.pdf↗</PDFLink>
+				<PDFLink link="/Weathering Potential Explorer User Guide.pdf" variant="accent" style="display: block; text-align: left;">Weathering Potential Explorer User Guide.pdf↗</PDFLink>
 			</div>
+			<p>The following explainer (the rest of this page) details what the tool is for, how it works mechanistically, and its limitations.</p>
+			<br>
 			<h1>Overview</h1>
 			<p>Enhanced rock weathering (ERW) is an emerging carbon dioxide removal (CDR) strategy that accelerates the natural breakdown of alkaline rocks and minerals to capture and store atmospheric CO₂. Farmers around the world have long used finely ground rock like agricultural lime to adjust pH and improve soil fertility. ERW builds on these established practices but optimizes them for carbon removal on top of the existing benefits to soil and farming.&nbsp;</p>
 			<div class="erw-explanation-block">
@@ -687,7 +690,7 @@
 		<br>
 			<p>Even under ideal weathering conditions, ERW is only viable where the land itself supports deployment. That means exposed soils, equipment access, and systems where applying rock powder is logistically and agronomically feasible. To date, the vast majority of field trials and commercial efforts have focused on cropland, where several enabling factors converge: soils are regularly amended, application equipment already exists, and there's a long-standing precedent for interventions like agricultural liming.</p>
 			<p>The Weathering Potential Explorer centers on this logic by offering two optional cropland masks (ESA WorldCover (10 m) and GFSAD1000 (1 km)) to help users restrict analysis to actively managed agricultural areas. These filters narrow the focus to lands where ERW is most likely to be operationally viable and beneficial from a co-management perspective.</p>
-			<p>Different croplands may vary widely in their suitability based on farming practices, infrastructure, or microclimate. And in some regions&mdash;particularly in the tropics&mdash;land cover maps may miss smallholder mosaics or mixed-use fields. The Explorer does not currently support user-added land filters, but advanced users can apply their own masks externally using GIS tools or by modifying the code in Google Earth Engine. If you are interested in accessing our source code, please contact <a href="mailto:arielle@cascadeclimate.org" target="_blank" rel="noopener">arielle@cascadeclimate.org</a></p>
+			<p>Different croplands may vary widely in their suitability based on farming practices, infrastructure, or microclimate. And in some regions&mdash;particularly in the tropics&mdash;land cover maps may miss smallholder mosaics or mixed-use fields. The Explorer does not currently support user-added land filters, but advanced users can apply their own masks externally using GIS tools or by modifying the code in Google Earth Engine. If you are interested in accessing our source code, please contact arielle[at]cascadeclimate.org</p>
 		</details>
 <br>
 		</section>
@@ -820,12 +823,23 @@
 				</tbody>
 				</table>
 				</div>
-				<h2>Conclusion</h2>
+				</section>
+
+				<section id="conclusion">
+					<h1>Conclusion</h1>
 				<p>The Weathering Potential Explorer is the first global tool to map environmental suitability for ERW deployment. By combining publicly available datasets with a simplified mechanistic model, it helps identify regions where environmental conditions may be most conducive to effective weathering. This tool is only a directional guide and its outputs should be interpreted in context and paired with local knowledge, ground-truthing, and further baseline analyses. As momentum builds around ERW as a climate solution, we believe open-access tools like this can support private and public sector decision making to unlock the full potential of ERW.</p>
-				<p>Credits&nbsp;</p>
-				<p><span style="color: #ff0000;"><strong>Will write this later after everything is done lmao&nbsp;</strong></span></p>
-				<p>Primary authors: Arielle &amp; abigail</p>
-				<p>External reviewers (thank u so much all): tyler kukla, benjamin moller, seth whiteaker</p>
+				<br>
+				<h2>Credits&nbsp;</h2>
+				<p>Development of the Weathering Potential Explorer was led by <a href="https://cascadeclimate.org/people/arielle-lok" target="_blank" rel="noopener">Arielle Lok</a>, building on the intellectual foundation of <a href="https://www.linkedin.com/in/abigail-fitzgibbon-482520144/" target="_blank" rel="noopener">Abigail Fitzgibbon</a>’s senior thesis at SciencesPo. Abigail’s research informed the model design, variable selection, and framing of the tool. Arielle developed the web application and authored the documentation with adapted portions of Abigail’s thesis text. Abigail also created the charts and animations used in the explainer.</p>
+
+				<p>
+					We offer special gratitude to 
+					<a href="https://tylerkukla.com/" target="_blank" rel="noopener">Tyler Kukla</a> for major scientific feedback and model refinement, 
+					<a href="https://www.linkedin.com/in/benjamin-m%C3%B6ller/" target="_blank" rel="noopener">Benjamin Möller</a> for technical review, 
+					<a href="https://www.growingecology.com/" target="_blank" rel="noopener">Seth Whiteaker</a> for guidance on mapping best practices, and <a href="https://www.linkedin.com/in/xxmichaellong/" target="_blank" rel="noopener">Xiao Xiao Long</a> for website development support. Additional thanks to members of the Cascade Climate team who took the time to proofread and test the tool internally.
+				</p>
+
+				<p>If you identify any errors or have suggested updates to the web app or accompanying documentation, please contact arielle[at]cascadeclimate.org.</p>
 		</section>
 	</main>
 
