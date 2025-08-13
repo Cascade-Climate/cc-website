@@ -285,17 +285,17 @@
 </script>
 
 <svelte:head>
-    <title>Introducing the Weathering Potential Explorer:&nbsp;A Global Screening Tool for Weathering Potential</title> 
+    <title>Introducing the Weathering Potential Explorer:&nbsp;A Global Screening Tool for Enhanced Rock Weathering Potential</title> 
     <meta
-	name="Introducing the Weathering Potential Explorer: A Global Screening Tool for Weathering Potential"
-	content="Introducing the Weathering Potential Explorer: A Global Screening Tool for Weathering Potential"
+	name="Introducing the Weathering Potential Explorer: A Global Screening Tool for Enhanced Rock Weathering Potential"
+	content="Introducing the Weathering Potential Explorer: A Global Screening Tool for Enhanced Rock Weathering Potential"
 />
 </svelte:head>
 
 <section class="intro">
 	<div class="content">
 		<div class="copy">
-			<h1><strong>Introducing the Weathering Potential Explorer:</strong> A Global Screening Tool for Weathering Potential</h1>
+			<h1><strong>Introducing the Weathering Potential Explorer:</strong> A Global Screening Tool for Enhanced Rock Weathering Potential</h1>
 			<p>
 				Enhanced rock weathering (ERW) is an emerging carbon dioxide removal (CDR) strategy that accelerates the natural breakdown of alkaline rocks and minerals to capture and store atmospheric CO₂. While ERW builds on farmers' centuries-old practice of applying ground rock to improve soil pH and fertility, it's optimized specifically for carbon removal. We know ERW works, but we need better tools to understand where environmental conditions&mdash;particularly temperature, soil moisture, and pH&mdash;create the highest potential for rapid rock dissolution. That's why we built the Weathering Potential Explorer, an interactive global map that can support successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
 			</p>
@@ -325,7 +325,7 @@
 			<p>Enhanced rock weathering (ERW) is an emerging carbon dioxide removal (CDR) strategy that accelerates the natural breakdown of alkaline rocks and minerals to capture and store atmospheric CO₂. Farmers around the world have long used finely ground rock like agricultural lime to adjust pH and improve soil fertility. ERW builds on these established practices but optimizes them for carbon removal on top of the existing benefits to soil and farming.&nbsp;</p>
 			<div class="erw-explanation-block">
 				<p>
-					At the heart of ERW is a chemical reaction between rock particles and soil water. When reactive minerals dissolve, they consume acidity, release calcium and magnesium, and ultimately form bicarbonate ions or carbonate minerals, transported to and locked away in rivers and oceans for long-term carbon storage. The speed of this weathering process (i.e., how quickly rocks dissolve) depends on several environmental factors, especially <strong>temperature, soil moisture, and soil water pH</strong><sup>1</sup>. These factors determine how acidic, reactive, and mobile the soil solution is, and in turn, how effectively it can break down minerals.
+					At the heart of ERW is a chemical reaction between rock particles and soil water. When reactive minerals dissolve, they consume acidity, release calcium and magnesium, and ultimately form bicarbonate ions or carbonate minerals to be transported to and locked away in rivers and oceans for long-term carbon storage. The speed of this weathering process (i.e., how quickly rocks dissolve) depends on several environmental factors, especially <strong>temperature, soil moisture, and soil water pH</strong><sup>1</sup>. These factors determine how acidic, reactive, and mobile the soil solution is, and in turn, how effectively it can break down minerals.
 				</p>
 				<div class="erw-note">
 					<strong>1</strong> The model underlying our Explorer Tool uses soil pH in H₂O, based on laboratory measurements from the <a href="https://www.isric.org/explore/soilgrids" target="_blank" rel="noopener">SoilGrids dataset</a>. This standard method involves mixing dried soil with deionized water and measuring the resulting slurry pH. While this is not a direct measure of in situ soil water pH, it serves as a globally available proxy for the acidity of surface soils and is commonly used in large-scale models to approximate the chemical conditions relevant to silicate weathering.
@@ -373,7 +373,9 @@
 
 			<h2>Weathering Potential Explorer Capabilities&nbsp;</h2>
 			<p><strong>The Weathering Potential Explorer estimates where silicate weathering may hold the greatest potential, drawing on globally available datasets for land cover, temperature, soil organic carbon, soil moisture, and soil water pH. </strong>The tool outputs a normalized relative weathering potential index that returns percentile rankings across global agricultural soils, where the top percentiles indicate conditions more favorable to rapid rock dissolution. The Weathering Potential Explorer also offers cropland filtering and soil chemistry masks, and provides regional statistics for land area within each weathering potential range.</p>
-			<p>The calculation is based on a simplified formulation commonly used in weathering models, where dissolution rate is proportional to hydrogen ion concentration, soil moisture (representing how much rock surface is in contact with water, assuming that water is refreshed before reaching equilibrium), and a temperature-dependent Arrhenius factor (e.g., White &amp; Brantley 2003; Maher &amp; Chamberlain 2014). This captures key environmental drivers of weathering without modeling specific mineral kinetics.</p>
+			<p>
+				The calculation is based on a simplified formulation commonly used in weathering models, where dissolution rate is proportional to hydrogen ion concentration, soil moisture (representing how much rock surface is in contact with water, assuming that water is refreshed before reaching equilibrium), and a temperature-dependent Arrhenius factor (e.g., <a href="https://doi.org/10.1016/j.chemgeo.2003.03.001" target="_blank" rel="noopener">White &amp; Brantley 2003</a>; <a href="https://www.science.org/doi/10.1126/science.1250770" target="_blank" rel="noopener">Maher &amp; Chamberlain 2014</a>). This captures key environmental drivers of weathering without modeling specific mineral kinetics.
+			</p>
 			<div>
 			<style>
 				.wp-table {
@@ -526,7 +528,7 @@
 		<section id="key-factors">
 			<h1>Key Factors</h1>
 			<h2>Key factors that influence weathering potential</h2>
-			<p>Enhanced rock weathering relies on the dissolution of minerals in soil environments. However, not all minerals dissolve equally fast, and not all environments promote the same reaction rates. While a range of rock types can be used in enhanced weathering, this tool models <strong>silicate mineral dissolution only</strong>. Other materials, such as carbonates or fast-weathering minerals like wollastonite, may also be relevant in some contexts, but their reaction kinetics differ significantly, with lower activation energies and different temperature sensitivities than the silicates modeled here.&nbsp;</p>
+			<p>Enhanced rock weathering relies on the dissolution of minerals in soil environments. However, not all minerals dissolve equally fast, and not all environments promote the same reaction rates. While a range of rock types can be used in enhanced weathering, this tool models <strong>silicate mineral dissolution only</strong>. Other materials, such as carbonates or other fast-weathering minerals like wollastonite, may also be relevant in some contexts, but their reaction kinetics differ significantly, with lower activation energies and different temperature sensitivities than the silicates modeled here.&nbsp;</p>
 			<p>Several environmental factors influence how quickly silicates weather. The Weathering Potential Explorer models three of the most important and available variables: <strong>temperature, soil moisture, and soil pH.</strong> Warmer conditions accelerate reaction kinetics; soil acidity promotes dissolution, but excessive acidity limits the ability of soils to retain bicarbonate, so conditions of mild acidity are optimal for ERW; and soil moisture provides the solvent in which dissolution reactions occur. While these variables interact in complex ways, they offer a strong first-pass estimate of where<strong> &nbsp;weathering is likely to proceed more rapidly.&nbsp;</strong></p>
 
 
@@ -539,7 +541,7 @@
 				<div class="erw-note">
 					<strong>2</strong> In this formulation, particle size and application rate do not affect results directly, while mineralogy could alter outcomes via the assumed activation energy, and water flow dynamics could influence whether the far-from-equilibrium assumption holds.
 					<br><br>
-					<strong>3</strong> The model assumes a constant activation energy of 68.8 kJ/mol, representative of common silicate minerals such as basaltic glass or amorphous silica (White and Blum, 1995). This simplifies mineral-specific variability while preserving broad sensitivity to temperature-driven weathering rates. For a deeper discussion of how activation energies influence mineral dissolution across environments, see <a href="https://doi.org/10.1126/science.add2922" target="_blank" rel="noopener">(Brantley et al., 2024)</a>.
+					<strong>3</strong> The model assumes a constant activation energy of 68.8 kJ/mol, representative of common silicate minerals such as basaltic glass or amorphous silica (<a href="https://doi.org/10.1016/0016-7037(95)00078-E" target="_blank" rel="noopener">White and Blum, 1995</a>). This simplifies mineral-specific variability while preserving broad sensitivity to temperature-driven weathering rates. For a deeper discussion of how activation energies influence mineral dissolution across environments, see <a href="https://doi.org/10.1126/science.add2922" target="_blank" rel="noopener">(Brantley et al., 2024)</a>.
 				</div>
 			</div>
 
@@ -735,7 +737,7 @@
 			<p>The Weathering Potential Explorer is designed as a global screening tool to support early-stage prioritization of where weathering may be quickest. It offers directional insights, not deployment prescriptions. Many of the core limitations were introduced earlier in this explainer (see <a href="#limitations1">Limitations of the Weathering Potential Explorer 
 			</a>), but we expand on several key modeling assumptions and constraints here.</p>
 			<h3>Resolution and Scale&nbsp;</h3>
-			<p>The map operates at a resolution of approximately 1 km&sup2; per grid cell, or about 100 hectares. This is consistent with many global-scale land surface models and biogeochemical tools such as WorldClim, SoilGrids, and TerraClimate. This supports macro-scale targeting, but masks local variation. Promising micro-regions may not appear in the analysis, just as small mafic rock sources may be overlooked in coarse global geology layers. Users should treat the tool as a way to narrow the search, not to make site-level decisions. Field-scale baselining remains essential.&nbsp;</p>
+			<p>The map operates at a resolution of approximately 1 km&sup2; per grid cell, or about 100 hectares. This is consistent with many global-scale land surface models and biogeochemical tools such as WorldClim, SoilGrids, and TerraClimate. This supports macro-scale targeting, but masks local variation. Promising micro-regions may not appear in the analysis, just as small mafic rock sources may be overlooked in coarse global geology layers. Users should treat the tool as a way to narrow the search, not to make site-level decisions. Field-scale baselining and operational considerations remains essential.&nbsp;</p>
 			<h3>Temporal Resolution</h3>
 			<p>The tool uses long-term annual averages for environmental variables, which smooth out seasonal dynamics and ignore interannual variability. More information about the datasets and resolutions can be found in <a href="#dataresolutions">Data Inputs and Spatial Resolutions</a>. While this makes global comparisons tractable, it may obscure short-term constraints or opportunities, such as monsoonal cycles or temporary droughts that influence when and how ERW can be applied.&nbsp;</p>
 			<h3>Feedstock Assumptions&nbsp;</h3>
@@ -748,7 +750,7 @@
 			<br>
 			<h2>Beyond the Model: Practical and Economic Context</h2>
 			<p>Successful ERW deployment depends on economic, logistical, and operational factors that vary widely from place to place and are not reflected in the Weathering Potential Explorer. For this reason, this tool is not a substitute for holistic planning at the site level.</p>
-			<p>In most cases, it is the economic and operational conditions, rather than weathering potential alone, that determine whether ERW is viable, fundable, and capable of delivering real-world impact. The tool is not a substitute for holistic planning at the site level.</p>
+			<p>In most cases, it is the economic and operational conditions, rather than weathering potential alone, that determine whether ERW is viable, fundable, and capable of delivering real-world impact.</p>
 			<p>One important consideration is <strong>proximity to</strong> <strong>suitable feedstocks</strong>. Most ERW projects today rely on mining byproducts, such as crushed basalt from aggregate production, rather than sourcing new rock solely for carbon removal. This approach minimizes environmental impact and leverages existing supply chains. Still, these materials are unevenly distributed. Large bodies of mafic and ultramafic rocks, including basalt and dunite (an olivine-rich rock), are geologically constrained to certain regions. Projects located near these formations and near active mines benefit from lower transportation costs, reduced emissions, and easier access to materials. Identifying optimal deployment zones requires balancing favorable weathering conditions with practical access to rock.</p>
 			<p><strong>Infrastructure</strong> also matters. ERW requires not just proximity to rock sources, but also access to low-emission transport, grinding and spreading equipment, and sometimes laboratory capacity for monitoring. While tropical regions often offer favorable weathering conditions, infrastructure is often more developed in countries with greater industrial capacity and logistical access. This greatly influences where ERW can scale most cost-effectively. To estimate the costs of rock, hauling, and spreading (RHS) and measurement, reporting, and verification (MRV) for small-scale deployments, see the <a href="https://cascadeclimate.org/blog/erw-measurement-cost-stack-estimator-and-database" target="_blank" rel="noopener">ERW MRV Cost Estimator and Database</a>.</p>
 			<p><strong>Energy and labor costs</strong> play a role as well. In parts of the Global South, lower costs may support deployment at scale, while in other regions, cleaner electricity grids may reduce lifecycle emissions during rock processing. These tradeoffs vary significantly by location and must be weighed against durability and monitoring needs.</p>
@@ -830,7 +832,7 @@
 				<p>The Weathering Potential Explorer is the first global tool to map environmental suitability for ERW deployment. By combining publicly available datasets with a simplified mechanistic model, it helps identify regions where environmental conditions may be most conducive to effective weathering. This tool is only a directional guide and its outputs should be interpreted in context and paired with local knowledge, ground-truthing, and further baseline analyses. As momentum builds around ERW as a climate solution, we believe open-access tools like this can support private and public sector decision making to unlock the full potential of ERW.</p>
 				<br>
 				<h2>Credits&nbsp;</h2>
-				<p>Development of the Weathering Potential Explorer was led by <a href="https://cascadeclimate.org/people/arielle-lok" target="_blank" rel="noopener">Arielle Lok</a>, building on the intellectual foundation of <a href="https://www.linkedin.com/in/abigail-fitzgibbon-482520144/" target="_blank" rel="noopener">Abigail Fitzgibbon</a>’s senior thesis at SciencesPo. Abigail’s research informed the model design, variable selection, and framing of the tool. Arielle developed the web application and authored the documentation with adapted portions of Abigail’s thesis text. Abigail also created the charts and animations used in the explainer.</p>
+				<p>Development of the Weathering Potential Explorer was led by <a href="https://cascadeclimate.org/people/arielle-lok" target="_blank" rel="noopener">Arielle Lok</a>, building on the foundation of <a href="https://www.linkedin.com/in/abigail-fitzgibbon-482520144/" target="_blank" rel="noopener">Abigail Fitzgibbon</a>’s senior thesis at SciencesPo. Abigail’s research informed the model design, variable selection, and framing of the tool. Arielle developed the web application and authored the documentation with adapted portions of Abigail’s thesis text. Abigail also created the charts and animations used in the explainer.</p>
 
 				<p>
 					We offer special gratitude to 
