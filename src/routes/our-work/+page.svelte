@@ -75,6 +75,16 @@
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
+					<img src={wpe} alt="Weathering potential explorer screencap" />
+					<h2>Weathering Potential Explorer</h2>
+					<p></p>
+					<p>
+						We built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
+					</p>
+					<div style="height: 0.5rem;"></div>
+					<a href="/blog/weathering-potential-explorer">Learn More</a>					
+				</div>
+				<div>
 					<img src={data} alt="Data Sharing System" />
 					<h2>Data sharing system to advance scientific research</h2>
 					<p>
@@ -125,16 +135,6 @@
 						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
 					</p>
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
-				</div>
-				<div>
-					<img src={wpe} alt="Weathering potential explorer screencap" />
-					<h2>Weathering Potential Explorer</h2>
-					<p></p>
-					<p>
-						We built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
-					</p>
-					<div style="height: 0.5rem;"></div>
-					<a href="/blog/weathering-potential-explorer">Learn More</a>					
 				</div>
 			</div>
 		</section>
