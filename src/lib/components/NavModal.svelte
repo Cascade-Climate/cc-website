@@ -33,13 +33,15 @@
 				</button>
 			{:else}
 				<button class="nav-item item{i}" tabindex="0">
-					<a
-						target={item.children[0].external ? '_blank' : '_self'}
-						href={item.children[0].url}
-						on:click={callbackFn}
-					>
-						{item.label}
-					</a>
+					<span>
+						<a
+							target={item.children[0].external ? '_blank' : '_self'}
+							href={item.children[0].url}
+							on:click={callbackFn}
+						>
+							{item.label}
+						</a>
+					</span>
 				</button>
 			{/if}
 		{/each}
@@ -60,7 +62,7 @@
 		visibility: hidden;
 		justify-content: center;
 		align-items: center;
-		z-index: 2;
+		z-index: 900; /* Below header (1000), above page-level sticky navs */
 		transition:
 			visibility 0.2s,
 			opacity 0.3s;
@@ -93,7 +95,7 @@
 		width: 100%;
 	}
 
-	.nav-item {
+    .nav-item {
 		position: relative;
 		color: var(--color-light);
 		display: flex;
@@ -104,20 +106,27 @@
 		width: 100%;
 		border-top: 1px solid var(--color-light);
 		font-size: 1.2rem;
-		background-color: var(--color-dark);
+        /* Use primary accent for parent items */
+        background-color: var(--color-accent);
+		min-height: 4rem;
 	}
 
 	.nav-item span {
 		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
 	}
 
 	.nav-item:last-child {
 		border-bottom: 1px solid var(--color-dark);
 	}
 
-	.subnav {
+    .subnav {
 		display: none;
-		background-color: var(--color-accent);
+        /* Lighter shade for subnav to differentiate from parent */
+        background-color: color-mix(in srgb, var(--color-accent) 85%, white 15%);
 		padding: 0.6rem 0.4rem;
 		gap: 1rem;
 		top: calc(100%);
@@ -133,6 +142,17 @@
 
 	nav a:hover {
 		text-decoration: underline;
+	}
+
+	@media (max-width: 660px) {
+		.nav-item {
+			min-height: 3rem;
+			font-size: 1rem;
+		}
+
+		.nav-item span {
+			padding: 0.75rem 0;
+		}
 	}
 
 	.item0 {

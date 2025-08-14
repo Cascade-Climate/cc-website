@@ -39,7 +39,7 @@
   });
 </script>
 
-<nav>
+<nav class="scroll-nav">
   {#each sections as section}
     <a class:active={activeSection === section.id} href={`#${section.id}`}>
       {section.title}
@@ -56,13 +56,15 @@
     border-top: 1px solid var(--color-light);
     display: flex;
     flex-wrap: wrap;
+    z-index: 10;
+    width: 100%;
   }
 
   nav a {
-    padding: 0.8rem;
+    padding: 0.6rem;
     margin: -1px;
     margin-left: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-decoration: none;
     color: inherit;
     max-width: 256px;
@@ -70,6 +72,10 @@
     text-align: center;
     border: 1px solid var(--color-light);
 		font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
   }
 
   nav a:first-child {
@@ -79,5 +85,12 @@
   nav a.active {
     background-color: var(--color-light);
     color: var(--color-dark);
+  }
+
+  @media (max-width: 660px) {
+    nav a {
+      padding: 0.4rem;
+      font-size: 0.875rem;
+    }
   }
 </style>

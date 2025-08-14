@@ -37,7 +37,7 @@
 		color: #187373;
 	}
 
-	:global(a) {
+	:global(.intro a, main a) {
 		text-decoration: none;
 		color: var(--color-accent);
 		font-weight: 420;
@@ -77,7 +77,7 @@
 		font-weight: 550;
 	}
 
-	:global(p) {
+	:global(.intro p, main p) {
 		margin-bottom: 0;
 	}
 
@@ -123,10 +123,12 @@
 		color: var(--color-light);
 	}
 
-	:global(main) {
-		padding: 1rem 4rem;
-		padding-bottom: 6rem;
-	}
+    :global(main) {
+        padding: 1rem 16px;
+        padding-bottom: 6rem;
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
 
 	:global(main section) {
 		margin-top: -6rem;
@@ -143,6 +145,55 @@
 		border-bottom: none;
 	}
 
+	/* Responsive tables inside blog content */
+	:global(main table) {
+		width: 100%;
+		max-width: 100%;
+		border-collapse: collapse;
+		table-layout: fixed;
+		display: block;
+		overflow-x: auto;
+	}
+
+    :global(main th),
+    :global(main td) {
+        padding: 10px;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        white-space: normal;
+    }
+
+    /* Global blog table typography and spacing */
+    :global(main table),
+    :global(main th),
+    :global(main td) {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    /* Remove horizontal padding inside table cells */
+    :global(main th),
+    :global(main td) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Prefer wider first two columns on blog tables */
+    :global(main table th:nth-child(1)),
+    :global(main table td:nth-child(1)) {
+        width: 30%;
+    }
+    :global(main table th:nth-child(2)),
+    :global(main table td:nth-child(2)) {
+        width: 35%;
+    }
+
+    /* Center the header row texts for 2nd and 3rd columns when headers are in first body row */
+    :global(main table tbody tr:first-child td:nth-child(2)),
+    :global(main table tbody tr:first-child td:nth-child(3)) {
+        text-align: center;
+    }
+
 	@media (max-width: 960px) {
 		:global(.content) {
 			flex-direction: column;
@@ -153,6 +204,11 @@
 			width: 100%;
 			margin: 0;
 		}
+
+		:global(main) {
+			margin-left: 5rem;
+			margin-right: 5rem;
+		}
 	}
 
 	@media (max-width: 660px) {
@@ -162,6 +218,8 @@
 
 		:global(main) {
 			padding-bottom: 6rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
 		}
 	}
 </style>

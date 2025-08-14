@@ -9,6 +9,7 @@
 	import grants from '$lib/images/nature/grants.webp';
 	import metals from '$lib/images/nature/metals2.webp';
 	import slcp from '$lib/images/nature/slcp-entry.webp';
+	import wpe from '$lib/images/nature/erwexplorer.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -89,7 +90,6 @@
 					<p>
 						We developed a free-to-use maximally conservative mass-balance model for assessing the risk of metal accumulation in soils.
 					</p>
-					<div style="height: 0.5rem;"></div>
 					<a href="/blog/metal-accumulation-calculator">Learn More</a>					
 				</div>
 				<div>
@@ -99,7 +99,6 @@
 					<p>
 						In collaboration with the Grantham Foundation, Google, and Frontier, we are excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
 					</p>
-					<div style="height: 0.5rem;"></div>
 					<a href="/blog/erw-field-grant-awardees">Learn More</a>					
 				</div>
 				<div>
@@ -126,6 +125,16 @@
 						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
 					</p>
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
+				</div>
+				<div>
+					<img src={wpe} alt="Weathering potential explorer screencap" />
+					<h2>Weathering Potential Explorer</h2>
+					<p></p>
+					<p>
+						We built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
+					</p>
+					<div style="height: 0.5rem;"></div>
+					<a href="/blog/weathering-potential-explorer">Learn More</a>					
 				</div>
 			</div>
 		</section>
@@ -198,10 +207,10 @@
 	}
 
 	nav a {
-		padding: 0.8rem;
+		padding: 0.6rem;
 		margin: -1px;
 		margin-left: 0;
-		font-size: 1.25rem;
+		font-size: 1rem;
 		text-decoration: none;
 		color: inherit;
 		max-width: 256px;
@@ -219,6 +228,13 @@
 		color: var(--color-dark);
 	}
 
+	@media (max-width: 660px) {
+		nav a {
+			padding: 0.4rem;
+			font-size: 0.875rem;
+		}
+	}
+
 	.preamble {
 		padding: 1rem 4rem;
 		background-color: var(--color-dark);
@@ -232,15 +248,21 @@
 
 	.areas h1 {
 		margin-top: 2rem;
-		margin-bottom: -7rem;
+		margin-bottom: 0.5rem;
 		color: var(--color-dark);
 	}
 
 	.areas section {
-		padding-top: 9rem;
+		margin-top: -6rem;
+		padding-top: 6rem;
 		border-bottom: 1px solid var(--color-text);
-		margin-bottom: -7rem;
-		padding-bottom: 4rem;
+		margin-bottom: -5rem;
+		padding-bottom: 1rem;
+	}
+
+	/* Remove divider line from the last section */
+	.areas section:last-child {
+		border-bottom: none;
 	}
 
 	.highlights {
