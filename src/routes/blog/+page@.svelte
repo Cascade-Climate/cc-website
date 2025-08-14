@@ -10,6 +10,21 @@
 
 		<div class="post">
 			<h1>
+				<a href="/blog/weathering-potential-explorer">
+					Introducing the Weathering Potential Explorer: A Global Screening Tool for Enhanced Rock Weathering Potential
+				</a>
+			</h1>
+			<p>
+				We built the Weathering Potential Explorer, an interactive global map that can support successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.</p>
+				<p class="details">
+					<span class="date">08/14/2025</span>
+					·
+					<span class="read-time">2 TO 20 MIN READ</span>
+				</p>
+		</div>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/cascade-entry-into-slcp-mitigation">
 					Super Pollutant Mitigation Needs a Bigger Push—And We're Joining the Effort
 				</a>

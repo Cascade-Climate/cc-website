@@ -92,6 +92,24 @@
 
 		<div class="post">
 			<h1>
+				<a href="/blog/weathering-potential-explorer" target="_blank" style="color: var(--color-accent);">
+					Introducing the Weathering Potential Explorer: A Global Screening Tool for Enhanced Rock Weathering Potential
+				</a>
+			</h1>
+			<p>
+				We built the Weathering Potential Explorer, an interactive global map that can support successful ERW deployments by pinpointing regions where relative environmental conditions could favor rapid silicate weathering.
+			</p>
+				<p class="details">
+					<span class="date">08/14/2025</span>
+					·
+					<span class="read-time">2 TO 20 MIN READ</span>
+				</p>
+		</div>
+
+		<hr>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/recommendations-from-foundations" target="_blank" style="color: var(--color-accent);">
 					Recommendations from <em>Foundations</em> as the EU Explores Enhanced Rock Weathering
 				</a>
