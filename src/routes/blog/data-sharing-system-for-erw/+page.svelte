@@ -25,6 +25,7 @@
     import uiuc from '$lib/images/logos/UIUC.webp';
     import undo from '$lib/images/logos/undo.webp';
     import varaha from '$lib/images/logos/varaha.webp';
+    import terrasols from '$lib/images/logos/terrasols.webp';
 </script>
 
 <div>
@@ -138,6 +139,9 @@
                     </a>
                     <a href="https://www.searrp.org/" target="_blank" rel="noopener">
                         <img src={searrp} alt="South East Asia Rainforest Research Partnership" />
+                    </a>
+                    <a href="https://www.terrasols.earth/" target="_blank" rel="noopener">
+                        <img src={terrasols} alt="Terrasols" />
                     </a>
                     <a href="https://ucanr.edu/research-and-extension-center/sierra-foothill-research-and-extension-center" target="_blank" rel="noopener">
                         <img src={ucanr} alt="UC Agriculture and Natural Resources Cooperative Extension" />
