@@ -14,7 +14,7 @@
 	<div class="member-info">
 		<h1>Etosha Cave</h1>
 		<div class="details">
-			<span>Twelve</span>
+			<span>Co-founder and Chief Scientific Officer at Twelve</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/etoshac/">
 					<img src={linkedinIcon} alt="LinkedIn" />

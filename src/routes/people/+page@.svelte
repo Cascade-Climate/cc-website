@@ -95,11 +95,6 @@
 			<h1>Hara Wang</h1>
 			<span>Co-founder, Chief Programs Officer</span>
 		</a>
-		<a class="team-card" href="/people/john-sanchez">
-			<img src={johnSanchez} alt="John Sanchez" />
-			<h1>John Sanchez</h1>
-			<span>Co-founder</span>
-		</a>
 		<a class="team-card" href="/people/vilas-rao">
 			<img src={vilasRao} alt="Vilas Rao" />
 			<h1>Vilas Rao</h1>
@@ -126,11 +121,6 @@
 			<h1>Brad Rochlin</h1>
 			<span>Program Manager</span>
 		</a>
-		<a class="team-card" href="/people/cathy-luo">
-			<img src={cathyLuo} alt="Cathy Luo" />
-			<h1>Cathy Luo</h1>
-			<span>Strategy and Research Associate</span>
-		</a>
 		<a class="team-card" href="/people/jamie-newman">
 			<img src={jamieNewman} alt="Jamie Newman" />
 			<h1>Jamie Newman</h1>
@@ -151,12 +141,6 @@
 			<h1>Noemma Olagaray</h1>
 			<span>Program Manager</span>
 		</a>
-
-		<a class="team-card" href="/people/pritha-ghosh">
-			<img src={prithaGhosh} alt="Pritha Ghosh" />
-			<h1>Pritha Ghosh</h1>
-			<span>Program Director</span>
-		</a>
 		<a class="team-card" href="/people/rachel-smith">
 			<img src={rachelSmith} alt="Rachel Smith" />
 			<h1>Rachel Smith</h1>
@@ -173,19 +157,7 @@
 			<span>Program Director</span>
 		</a>
 	</section>
-	<section id="contributors">
-		<h1>Contributors</h1>
-		<a class="team-card" href="/people/chris-reinhard">
-			<img src={chrisReinhard} alt="Chris Reinhard" />
-			<h1>Chris Reinhard</h1>
-			<span>Senior Contributing Scientist</span>
-		</a>
-		<a class="team-card" href="/people/noah-planavsky">
-			<img src={noahPlanavsky} alt="Noah Planavsky" />
-			<h1>Noah Planavsky</h1>
-			<span>Senior Contributing Scientist</span>
-		</a>
-	</section>
+
 	<section id="board">
 		<h1 id="board">Our Board</h1>
 		<a class="team-card" href="/people/anil-soni">
@@ -202,7 +174,7 @@
 			<img src={elaineHsieh} alt="Elaine Hsieh" />
 			<h1>Elaine Hsieh</h1>
 			<span
-				>Senior Advisor to the Under Secretary for Infrastructure - U.S. Department of Energy</span
+				>COO and Partner at VoLo Earth Ventures</span
 			>
 		</a>
 		<a class="team-card" href="/people/elena-cavallero">
@@ -218,7 +190,7 @@
 		<a class="team-card" href="/people/etosha-cave">
 			<img src={etoshaCave} alt="Etosha Cave" />
 			<h1>Etosha Cave</h1>
-			<span>Twelve</span>
+			<span>Co-founder and Chief Scientific Officer at Twelve</span>
 		</a>
 	</section>
 </div>
