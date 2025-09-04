@@ -14,7 +14,7 @@
 		<h1>Elaine Hsieh</h1>
 		<div class="details">
 			<span
-				>Senior Advisor to the Under Secretary for Infrastructure - U.S. Department of Energy
+				>COO and Partner at VoLo Earth Ventures
 			</span>
 			<div class="socials"></div>
 		</div>
