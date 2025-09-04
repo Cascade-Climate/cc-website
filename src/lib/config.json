@@ -38,10 +38,6 @@
 					"url": "/people#team"
 				},
 				{
-					"label": "Contributors",
-					"url": "/people#contributors"
-				},
-				{
 					"label": "Board of Directors",
 					"url": "/people#board"
 				}
