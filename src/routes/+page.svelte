@@ -8,7 +8,7 @@
 	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
-	import grants from '$lib/images/nature/grants.webp';
+	import bridge from '$lib/images/nature/bridge.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
 	import heroPhoto4 from '$lib/images/hero.webp';
 </script>
@@ -49,6 +49,16 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
+				<img src={bridge} alt="Crossing The Bridge"/>
+				<h2>Voluntary climate financing as a bridge
+				</h2>
+				<p>
+					Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate technologies, while closing three critical gaps to scale up: building the evidence base, driving down costs, and resolving real-world deployment risks.
+
+				</p>
+				<a href="/blog/crossing-the-bridge" target="_blank">Learn More</a>
+			</div>
+			<div class="spotlight">
 				<img src={slcp} alt="Super Pollutants" />
 				<h2>Cascade expands into super pollutant field building</h2>
 				<p>
@@ -71,15 +81,6 @@
 					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the "hows" of rigorous carbon removal quantification in an ERW deployment.
 				</p>
 				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank">Learn More</a>
-			</div>
-			<div class="spotlight">
-				<img src={grants} alt="ERW Field Grant" />
-				<h2>ERW Field Data Partnership Grant Awardees</h2>
-				<p>
-					In collaboration with the Grantham Foundation, Google, and Frontier, Cascade is excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
-				</p>
-				<a href="/blog/erw-field-grant-awardees" target="_blank"
-				>Learn More</a>
 			</div>
 			
 		</div>

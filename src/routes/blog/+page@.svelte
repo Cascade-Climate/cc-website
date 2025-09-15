@@ -10,6 +10,21 @@
 
 		<div class="post">
 			<h1>
+				<a href="/blog/crossing-the-bridge">
+					Crossing the Bridge: How Voluntary Climate Finance Can Accelerate Sustained Policy and Industry Adoption
+				</a>
+			</h1>
+			<p>
+				Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate technologies, while closing three critical gaps to scale up: building the evidence base, driving down costs, and resolving real-world deployment risks.</p>
+				<p class="details">
+					<span class="date">09/15/2025</span>
+					·
+					<span class="read-time">14 MIN READ</span>
+				</p>
+		</div>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/weathering-potential-explorer">
 					Introducing the Weathering Potential Explorer: A Global Screening Tool for Enhanced Rock Weathering Potential
 				</a>

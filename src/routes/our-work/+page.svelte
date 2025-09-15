@@ -10,6 +10,7 @@
 	import metals from '$lib/images/nature/metals2.webp';
 	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import wpe from '$lib/images/nature/erwexplorer.webp';
+	import bridge from '$lib/images/nature/bridge.webp';
 	import { onMount } from 'svelte';
 
 	const sections = [
@@ -149,6 +150,18 @@
 			</p>
 		<h5>HIGHLIGHTS</h5>
 		<div class="highlights">
+
+			<div>
+				<img src={bridge} alt="Crossing The Bridge"/>
+				<h2>Voluntary climate financing as a bridge
+				</h2>
+				<p>
+					Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate technologies, while closing three critical gaps to scale up: building the evidence base, driving down costs, and resolving real-world deployment risks.
+
+				</p>
+				<a href="/blog/crossing-the-bridge" target="_blank">Learn More</a>
+			</div>
+
 			<div>
 				<img src={slcp} alt="Super Pollutants" />
 				<h2>Super Pollutant Mitigation Needs a Bigger Push—And We're Joining the Effort</h2>
