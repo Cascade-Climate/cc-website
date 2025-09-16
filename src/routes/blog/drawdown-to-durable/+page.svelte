@@ -24,7 +24,7 @@
                 <p>This blog bridges the gap between introductory ERW explainers and technical documents, offering an in-depth yet accessible look at ERW’s attributes as a high-integrity carbon removal pathway. While ERW has clear strengths relative to the criteria, realizing its significant potential for carbon removal and co-benefits requires addressing distinct challenges.
                 </p>
 			</div>
-            <img src={basalteu} alt="Basalt" />
+
 		</div>
 
 	</section>
