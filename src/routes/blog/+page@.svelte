@@ -7,6 +7,21 @@
 </svelte:head>
 <div id="blog">
 	<div id="post-list">
+		
+		
+		<div class="post">
+			<h1>
+				<a href="/blog/crossing-the-bridge">
+					Drawdown to Durable Storage: Understanding ERW in EU Carbon Removal Policy
+				</a>
+			</h1>
+			<p>Briding the gap between introductory ERW explainers and technical documents, this blog offers an in-depth look at ERW’s attributes as a high-integrity carbon removal pathway. While ERW has clear strengths relative to the criteria, realizing its significant potential for carbon removal and co-benefits requires addressing distinct challenges.</p>
+				<p class="details">
+					<span class="date">09/17/2025</span>
+					·
+					<span class="read-time">12 MIN READ</span>
+				</p>
+		</div>
 
 		<div class="post">
 			<h1>
