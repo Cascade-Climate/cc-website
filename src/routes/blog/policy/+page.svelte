@@ -18,6 +18,11 @@
 				<p>
 					Our policy priorities are shaped by the specific considerations of each intervention that we work on, but our driving purpose remains to address obstacles and break down system-level bottlenecks to progress.  
 				</p>
+				<h4>Latest blogs:</h4>
+				<div class="links">
+					<a href="/blog/drawdown-to-durable">Sep 17, 2025: Drawdown to Durable Storage: Understanding ERW in EU Carbon Removal Policy↗</a>
+					<a href="/blog/recommendations-from-foundations">Jun 2, 2025: Recommendations from Foundations as the EU Explores Enhanced Rock Weathering↗</a>
+				</div>
 			</div>
 			<img src={policy} alt="Farm"/>
 		</div>
