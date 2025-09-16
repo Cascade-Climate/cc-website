@@ -107,6 +107,8 @@
 			</p>
 		</div>
 
+		<hr>
+
 		<div class="post">
 			<h1>
 				<a href="/blog/weathering-potential-explorer" target="_blank" style="color: var(--color-accent);">

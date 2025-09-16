@@ -11,7 +11,7 @@
 		
 		<div class="post">
 			<h1>
-				<a href="/blog/crossing-the-bridge">
+				<a href="/blog/drawdown-to-durable">
 					Drawdown to Durable Storage: Understanding ERW in EU Carbon Removal Policy
 				</a>
 			</h1>
