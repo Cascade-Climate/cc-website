@@ -3,7 +3,6 @@
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
     import grants from '$lib/images/nature/grants.webp';
     import landfill from '$lib/images/blog/landfill-gas-projects.webp';
-    import basalteu from '$lib/images/nature/basalteu.webp';
     import NFZ from '$lib/images/nature/NFZ.webp';
     
 </script>
@@ -24,7 +23,6 @@
                 <p>This blog bridges the gap between introductory ERW explainers and technical documents, offering an in-depth yet accessible look at ERW’s attributes as a high-integrity carbon removal pathway. While ERW has clear strengths relative to the criteria, realizing its significant potential for carbon removal and co-benefits requires addressing distinct challenges.
                 </p>
 			</div>
-
 		</div>
 
 	</section>
