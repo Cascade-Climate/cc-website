@@ -66,9 +66,10 @@
 
     <section id="dtd-quantification">
         <h1>Quantification</h1>
-
+        <br>
        <p>ERW accelerates the natural process of rock weathering that has regulated Earth&rsquo;s climate for billions of years. Finely crushed alkaline rock is applied to fields, where it dissolves in water from rain or irrigation. Alkaline rocks include both carbonates and silicates; here we focus primarily on silicate ERW. The dissolved rock interacts with carbon dioxide in the atmosphere, converting it into a dissolved form that is transported through the soil and eventually to the ocean (or, in some cases, groundwater) where it is stored for tens of thousands of years.&nbsp;</p>
-<p><a href="https://cascadeclimate.org/CC_Foundations%20for%20CDR%20Quantification%20in%20ERW%20Deployments.pdf" target="_blank" rel="noopener">Quantification</a> of total carbon removed, sometimes called <em>net CDR</em>, occurs by:</p>
+       <br>
+       <p><a href="https://cascadeclimate.org/CC_Foundations%20for%20CDR%20Quantification%20in%20ERW%20Deployments.pdf" target="_blank" rel="noopener">Quantification</a> of total carbon removed, sometimes called <em>net CDR</em>, occurs by:</p>
 <ol>
 <li>Measuring total drawdown (sometimes called <em>potential CDR</em>)</li>
 <li>Deducting losses that occur between drawdown and storage, including:</li>
