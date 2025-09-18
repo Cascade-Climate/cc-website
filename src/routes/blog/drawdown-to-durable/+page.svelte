@@ -45,20 +45,20 @@
 	<section id="dtd-definitions">
         <h1>Definitions</h1>
     
-      <p>Here we define several terms used in this blog. While consensus is building, these terms are not universally agreed upon across the carbon removal sector. Where possible we align with CRCF usage.&nbsp;</p>
-<ul>
-<li><strong>Carbon removal </strong>(also referred to as carbon dioxide removal, or CDR)<strong>: </strong>the anthropogenic removal of carbon dioxide from the atmosphere and its durable storage in geological, terrestrial, groundwater, or ocean reservoirs. For the purposes of ERW, we find it useful to break the process of carbon removal down into two steps:&nbsp;</li>
-</ul>
-<ol>
-<li><strong>Drawdown: </strong>the transfer of carbon dioxide from the atmosphere to the soil system through the chemical processes of rock weathering.</li>
-<li><strong>Storage: </strong>the addition of carbon to the durable reservoir of the ocean or groundwater, where it is stored in the form of dissolved bicarbonate or carbonate ions on the order of <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016RG000533" target="_blank" rel="noopener">10,000 years</a> or more.</li>
-</ol>
-<p>Note that ERW results in carbon removal, but the two steps of this process &ndash; drawdown and storage &ndash; do not happen simultaneously. Because ERW interacts with complex natural systems, carbon-containing molecules take time to move from the atmosphere, through soil and water systems, to the durable reservoir.&nbsp;</p>
-<ul>
-<li><strong>Reservoir: </strong>the durable storage location, typically the ocean (though sometimes groundwater).</li>
-<li><strong>Loss</strong>: carbon that has been drawn down by reacting with applied rock, but that is lost before making it to the durable reservoir. Loss can occur through a variety of pathways in terrestrial and hydrological systems. While loss is not defined in the CRCF, we find it important to introduce this term to distinguish it from reversal.</li>
-<li><strong>Reversal</strong>: the release of carbon from the durable reservoir back into the atmosphere. Reversal, therefore, can only occur after both carbon drawdown and durable storage have occurred.</li>
-</ul>
+        <p>Here we define several terms used in this blog. While consensus is building, these terms are not universally agreed upon across the carbon removal sector. Where possible we align with CRCF usage.&nbsp;</p>
+        <ul>
+        <li><strong>Carbon removal </strong>(also referred to as carbon dioxide removal, or CDR)<strong>: </strong>the anthropogenic removal of carbon dioxide from the atmosphere and its durable storage in geological, terrestrial, groundwater, or ocean reservoirs. For the purposes of ERW, we find it useful to break the process of carbon removal down into two steps:&nbsp;</li>
+        </ul>
+        <ol>
+        <li><strong>Drawdown: </strong>the transfer of carbon dioxide from the atmosphere to the soil system through the chemical processes of rock weathering.</li>
+        <li><strong>Storage: </strong>the addition of carbon to the durable reservoir of the ocean or groundwater, where it is stored in the form of dissolved bicarbonate or carbonate ions on the order of <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016RG000533" target="_blank" rel="noopener">10,000 years</a> or more.</li>
+        </ol>
+        <p>Note that ERW results in carbon removal, but the two steps of this process &ndash; drawdown and storage &ndash; do not happen simultaneously. Because ERW interacts with complex natural systems, carbon-containing molecules take time to move from the atmosphere, through soil and water systems, to the durable reservoir.&nbsp;</p>
+        <ul>
+        <li><strong>Reservoir: </strong>the durable storage location, typically the ocean (though sometimes groundwater).</li>
+        <li><strong>Loss</strong>: carbon that has been drawn down by reacting with applied rock, but that is lost before making it to the durable reservoir. Loss can occur through a variety of pathways in terrestrial and hydrological systems. While loss is not defined in the CRCF, we find it important to introduce this term to distinguish it from reversal.</li>
+        <li><strong>Reversal</strong>: the release of carbon from the durable reservoir back into the atmosphere. Reversal, therefore, can only occur after both carbon drawdown and durable storage have occurred.</li>
+        </ul>
     
     </section>
 
@@ -70,7 +70,7 @@
        <p><a href="https://cascadeclimate.org/CC_Foundations%20for%20CDR%20Quantification%20in%20ERW%20Deployments.pdf" target="_blank" rel="noopener">Quantification</a> of total carbon removed, sometimes called <em>net CDR</em>, occurs by:</p>
 <ol>
 <li>Measuring total drawdown (sometimes called <em>potential CDR</em>)</li>
-<li>Deducting losses that occur between drawdown and storage, including:</li>
+<li>Deducting the following:</li>
 </ol>
 <ul>
 <li><strong>Near-field zone losses:</strong> carbon losses that occur in the upper portion of the soil. These losses can be directly measured.</li>
@@ -118,7 +118,7 @@
 <p>As described above, carbon removal has two stages: the initial carbon drawdown and durable storage. The risk of reversal&mdash;carbon lost from the durable reservoir&mdash;is generally low to negligible for ERW projects due to the inherent stability of bicarbonate ions in the reservoir after initial equilibration with the atmosphere-ocean system. Losses, by contrast, occur before storage and must be explicitly accounted for in net carbon dioxide quantification, as described in the quantification section.</p>
 <br>
 <p><strong>Crediting Durable Removal</strong></p>
-<p>Consider a hypothetical ERW project that initially draws down 10 tons of CO2 from the atmosphere, but loses two tons along the path to durable storage. Eight tons of CO2 are ultimately removed, with no tons reversed. By accurately measuring the initial 10 tons and conservatively deducting two or more tons of anticipated losses, we can ensure conservative crediting. In addition, there will be an estimate of uncertainty in the CDR quantification due to possible analytical error and inherent variability in the soil system. Another layer of conservatism can be added by considering the larger error in the estimate. In this simple example, if the uncertainty is +/- 1 ton of CO2, a conservative approach would credit seven units of CO2.</p>
+<p>Consider a hypothetical ERW project that initially draws down 10 tons of CO₂ from the atmosphere, but loses two tons along the path to durable storage. Eight tons of CO2 are ultimately removed, with no tons reversed. By accurately measuring the initial 10 tons and conservatively deducting two or more tons of anticipated losses, we can ensure conservative crediting. In addition, there will be an estimate of uncertainty in the CDR quantification due to possible analytical error and inherent variability in the soil system. Another layer of conservatism can be added by considering the larger error in the estimate. In this simple example, if the uncertainty is +/- 1 ton of CO₂, a conservative approach would credit seven units of CO₂.</p>
 
 
 
