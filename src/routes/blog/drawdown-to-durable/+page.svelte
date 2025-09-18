@@ -104,7 +104,7 @@
 <li><strong>Not accounting for likely carbon gains</strong>: disregarding additional carbon removal that happens outside of the measurement zone, even if there is a reasonable certainty that these gains are occurring as indicated by modeling.&nbsp;</li>
 </ol>
 <p>In summary, there are several layers of conservative accounting choices that protect the integrity of ERW quantification. ERW operates within complex natural systems, making it impossible to track every atom of carbon from the atmosphere to the storage reservoir.</p>
-<p><strong>This inherent uncertainty does not make ERW unquantifiable; rather, it underscores the need for fit-for-purpose quantification approaches, relying on what </strong><strong><em>can </em></strong><strong>be measured along with conservative accounting choices.</strong></p>
+<p><strong>This inherent uncertainty does not make ERW unquantifiable; rather, it underscores the need for fit-for-purpose quantification approaches, relying on what can effectively be measured along with conservative accounting choices.</strong></p>
 
 
     </section>  
