@@ -48,11 +48,11 @@
         <p>Here we define several terms used in this blog. While consensus is building, these terms are not universally agreed upon across the carbon removal sector. Where possible we align with CRCF usage.&nbsp;</p>
         <ul>
         <li><strong>Carbon removal </strong>(also referred to as carbon dioxide removal, or CDR)<strong>: </strong>the anthropogenic removal of carbon dioxide from the atmosphere and its durable storage in geological, terrestrial, groundwater, or ocean reservoirs. For the purposes of ERW, we find it useful to break the process of carbon removal down into two steps:&nbsp;</li>
-        </ul>
         <ol>
         <li><strong>Drawdown: </strong>the transfer of carbon dioxide from the atmosphere to the soil system through the chemical processes of rock weathering.</li>
         <li><strong>Storage: </strong>the addition of carbon to the durable reservoir of the ocean or groundwater, where it is stored in the form of dissolved bicarbonate or carbonate ions on the order of <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016RG000533" target="_blank" rel="noopener">10,000 years</a> or more.</li>
         </ol>
+    </ul>
         <p>Note that ERW results in carbon removal, but the two steps of this process &ndash; drawdown and storage &ndash; do not happen simultaneously. Because ERW interacts with complex natural systems, carbon-containing molecules take time to move from the atmosphere, through soil and water systems, to the durable reservoir.&nbsp;</p>
         <ul>
         <li><strong>Reservoir: </strong>the durable storage location, typically the ocean (though sometimes groundwater).</li>
@@ -71,13 +71,13 @@
 <ol>
 <li>Measuring total drawdown (sometimes called <em>potential CDR</em>)</li>
 <li>Deducting the following:</li>
-</ol>
 <ul>
 <li><strong>Near-field zone losses:</strong> carbon losses that occur in the upper portion of the soil. These losses can be directly measured.</li>
 <li><strong>Far-field zone losses: </strong>losses that occur between the upper soil region and the durable carbon storage reservoir. At current deployment scale, these losses are difficult or impossible to measure and in most cases should be modeled.</li>
 <li><strong>Life cycle emissions: </strong>greenhouse gas emissions associated with the production, transport, handling, and spreading of ERW feedstock materials.</li>
 <li><strong>Counterfactual carbon removal:</strong> carbon removal (anthropogenic or natural) that would have occurred in the absence of an ERW project.&nbsp;</li>
 </ul>
+</ol>
 <p><em>For a more complete inventory of possible losses in each of these areas, see our recent </em><a href="https://cascadeclimate.org/blog/recommendations-from-foundations" target="_blank" rel="noopener"><em>blog post</em></a><em>.</em></p>
 
        <img
