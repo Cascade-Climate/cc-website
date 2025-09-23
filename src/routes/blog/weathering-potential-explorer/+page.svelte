@@ -699,7 +699,9 @@
 
 			<section id="rate-estimation">
 			<h1>Relative Weathering Potential Estimation</h1>
-			<p>The Weathering Potential Explorer calculates a relative weathering potential based on a simplified expression drawn from geochemical kinetics. The underlying idea is that weathering speed is influenced by three key environmental factors:</p>
+			<p>
+				The Weathering Potential Explorer calculates a relative weathering potential based on a simplified expression drawn from geochemical kinetics, specifically building on the normalized weathering flux potential framework developed by <a href="https://doi.org/10.1016/j.scitotenv.2022.156524" target="_blank" rel="noopener">Bertagni and Porporato (2022)</a>. The underlying idea is that weathering speed is influenced by three key environmental factors:
+			</p>
 			<ul>
 			<li>Soil moisture (s) &ndash; representing the availability of water to facilitate reactions</li>
 			<li>Proton concentration ([H⁺]) &ndash; derived from pH, which drives acid-promoted dissolution</li>
