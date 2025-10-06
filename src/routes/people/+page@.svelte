@@ -14,6 +14,7 @@
 	import jamieNewman from '$lib/images/people/jamie-newman.webp';
 	import noahAnderson from '$lib/images/people/noah-anderson.webp';
 	import noemmaOlagaray from '$lib/images/people/noemma-olagaray.webp';
+	import nicGubbins from '$lib/images/people/nic-gubbins.webp';
 	import prithaGhosh from '$lib/images/people/pritha-ghosh.webp';
 	import rachelSmith from '$lib/images/people/rachel-smith.webp';
 	import richardMarinos from '$lib/images/people/richard-marinos.webp';
@@ -130,6 +131,11 @@
 			<img src={jonathanMoore} alt="Jon Jon Moore" />
 			<h1>Jon Jon Moore</h1>
 			<span>Communications Manager</span>
+		</a>
+		<a class="team-card" href="/people/nic-gubbins">
+			<img src={nicGubbins} alt="Nic Gubbins" />
+			<h1>Nic Gubbins</h1>
+			<span>Geochemical Data Science Fellow</span>
 		</a>
 		<a class="team-card" href="/people/noah-anderson">
 			<img src={noahAnderson} alt="Noah Anderson" />
