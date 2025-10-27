@@ -39,6 +39,7 @@
 		<div class="links">
 			<a href="https://erw-mac.cascadeclimate.org/">Link to Calculator↗</a>
             <a href="https://cascadeclimate.org/Cascade-Climate_ERW-MAC%20preset%20model%20results%20slides.pdf">Link to Preset Model Results↗</a>
+            <a href="https://docs.google.com/spreadsheets/d/1GRJaidyt-xwzSfo-EoP9OpVmLbWjOdUnkXe0MdrXehM/edit?usp=sharing">Link to Global Soil Metal Concentration Regulation Database↗</a>
 		</div>
 	</section>
 	<ScrollNav />
