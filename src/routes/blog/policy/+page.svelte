@@ -48,6 +48,7 @@
 		<section id="governmentEngagement">
 			<h1>Government Engagement</h1>
 			<div>Cascade provides policy support and advice through responses to formal calls for public comment across various jurisdictions.</div>
+			<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Feedback on EU CRCF Review Paper on Carbon Removal through ERW↗</PDFLink>
 			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to EU ETS Review Consultation Integrating Carbon Removal with Safeguards↗</PDFLink>
 			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals↗</PDFLink>
 			<PDFLink link="/Response to UNFCCC Article 6.4 Removal Guidance.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Removal Guidance↗</PDFLink>
