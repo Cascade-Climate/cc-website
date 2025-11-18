@@ -12,7 +12,7 @@
 	<div class="member-info">
 		<h1>Brad Rochlin</h1>
 		<div class="details">
-			<span>Program Manager</span>
+			<span>Program Director, Carbon Markets</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/brad-rochlin-a8a637121/">
 					<img src={linkedinIcon} alt="LinkedIn" />

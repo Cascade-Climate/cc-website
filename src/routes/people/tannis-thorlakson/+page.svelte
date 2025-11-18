@@ -14,7 +14,7 @@
 	<div class="member-info">
 		<h1>Tannis Thorlakson</h1>
 		<div class="details">
-			<span></span>
+			<span>Senior Program Director, ERW</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/tannisthorlakson/">
 					<img src={linkedinIcon} alt="LinkedIn" />

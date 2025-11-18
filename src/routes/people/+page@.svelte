@@ -120,7 +120,7 @@
 		<a class="team-card" href="/people/brad-rochlin">
 			<img src={bradRochlin} alt="Brad Rochlin" />
 			<h1>Brad Rochlin</h1>
-			<span>Program Manager</span>
+			<span>Program Director, Carbon Markets</span>
 		</a>
 		<a class="team-card" href="/people/jamie-newman">
 			<img src={jamieNewman} alt="Jamie Newman" />
@@ -135,7 +135,7 @@
 		<a class="team-card" href="/people/leah-bridle">
 			<img src={leahBridle} alt="Leah Bridle" />
 			<h1>Leah Bridle</h1>
-			<span>ERW Operations Manager, ERW</span>
+			<span>Operations Manager, ERW</span>
 			</a>
 		<a class="team-card" href="/people/nic-gubbins">
 			<img src={nicGubbins} alt="Nic Gubbins" />
@@ -165,7 +165,7 @@
 		<a class="team-card" href="/people/tannis-thorlakson">
 			<img src={tannisThorlakson} alt="Tannis Thorlakson" />
 			<h1>Tannis Thorlakson</h1>
-			<span>Senior Program Director</span>
+			<span>Senior Program Director, ERW</span>
 		</a>
 		
 	</section>
