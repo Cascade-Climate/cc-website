@@ -135,7 +135,7 @@
 		<a class="team-card" href="/people/leah-bridle">
 			<img src={leahBridle} alt="Leah Bridle" />
 			<h1>Leah Bridle</h1>
-			<span>Operations Manager, ERW</span>
+			<span>ERW Operations Manager</span>
 			</a>
 		<a class="team-card" href="/people/nic-gubbins">
 			<img src={nicGubbins} alt="Nic Gubbins" />
