@@ -112,7 +112,6 @@
 			<h1>Anna Sophia Roberts</h1>
 			<span>Policy Associate</span>
 		</a>
-
 		<a class="team-card" href="/people/arielle-lok">
 			<img src={arielleLok} alt="Arielle Lok" />
 			<h1>Arielle Lok</h1>
