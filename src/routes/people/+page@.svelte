@@ -19,6 +19,7 @@
 	import rachelSmith from '$lib/images/people/rachel-smith.webp';
 	import richardMarinos from '$lib/images/people/richard-marinos.webp';
 	import tannisThorlakson from '$lib/images/people/tannis-thorlakson.webp';
+	import leahBridle from '$lib/images/people/leah-bridle.webp';
 	import chrisReinhard from '$lib/images/people/chris-reinhard.webp';
 	import noahPlanavsky from '$lib/images/people/noah-planavsky.webp';
 
@@ -162,6 +163,10 @@
 			<h1>Tannis Thorlakson</h1>
 			<span>Senior Program Director</span>
 		</a>
+		<a class="team-card" href="/people/leah-bridle">
+			<img src={leahBridle} alt="Leah Bridle" />
+			<h1>Leah Bridle</h1>
+			<span>Operations Manager, ERW</span>
 	</section>
 
 	<section id="board">

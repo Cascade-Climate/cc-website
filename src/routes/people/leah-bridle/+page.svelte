@@ -15,7 +15,7 @@
 		<div class="details">
 			<span>Operations Manager, ERW</span> <!-- Update this line -->
 			<div class="socials">																					
-				<a target="_blank" href="www.linkedin.com/in/leah-bridle-6526a244/"> <!--                              -->
+				<a target="_blank" href="https://www.linkedin.com/in/leah-bridle-6526a244/"> <!--                              -->
 					<img src={linkedinIcon} alt="LinkedIn" />											 <!--                              -->
 				</a>																														 <!--                              -->
 	                       <!--                              -->																											 <!--                              -->
