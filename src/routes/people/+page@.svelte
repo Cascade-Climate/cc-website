@@ -133,6 +133,11 @@
 			<h1>Jon Jon Moore</h1>
 			<span>Communications Manager</span>
 		</a>
+		<a class="team-card" href="/people/leah-bridle">
+			<img src={leahBridle} alt="Leah Bridle" />
+			<h1>Leah Bridle</h1>
+			<span>Operations Manager, ERW</span>
+			<a/>
 		<a class="team-card" href="/people/nic-gubbins">
 			<img src={nicGubbins} alt="Nic Gubbins" />
 			<h1>Nic Gubbins</h1>
@@ -163,10 +168,7 @@
 			<h1>Tannis Thorlakson</h1>
 			<span>Senior Program Director</span>
 		</a>
-		<a class="team-card" href="/people/leah-bridle">
-			<img src={leahBridle} alt="Leah Bridle" />
-			<h1>Leah Bridle</h1>
-			<span>Operations Manager, ERW</span>
+		
 	</section>
 
 	<section id="board">
