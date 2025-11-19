@@ -23,10 +23,10 @@
 			</div>
 		</div>
 		<p>
-			A marketing leader for frontier technology. Most recently, Jon managed cross-channel content strategy at Rewiring America,  the nation's leading residential electrification organization. <br><br>
+			A marketing leader for frontier technology. Most recently, Jon Jon managed cross-channel content strategy at Rewiring America,  the nation's leading residential electrification organization. <br><br>
 			Prior to joining Rewiring America, he worked as an educator, speechwriter, and brand strategist shaping internal and external messaging for Fortune 500 C-suites, innovative funds, and nonprofits across software and energy spheres.<br><br>
-			Jonathan is Founding Director at Black in Climate, a research venture documenting experiences and needs of Black people working in climate, environment, and sustainability.<br><br>
-			An avid essayist and reader of poetry, Jonathan loves trail running and standup comedy. He holds a BA in American Studies and Africana Studies from Tufts University and a MA in African-American and African Diaspora Studies from University of California, Berkeley. Jonathan was born and raised on Waawiyatanong in Detroit. Jonathan lives on Lenapehoking in Brooklyn, New York City. 
+			Jon Jon is Founding Director at Black in Climate, a research venture documenting experiences and needs of Black people working in climate, environment, and sustainability.<br><br>
+			An avid essayist and reader of poetry, Jon Jon loves trail running and standup comedy. He holds a BA in American Studies and Africana Studies from Tufts University and a MA in African-American and African Diaspora Studies from University of California, Berkeley. Jon Jon was born and raised on Waawiyatanong in Detroit and lives on Lenapehoking in Brooklyn, New York City. 
 
 		</p>
 	</div>
