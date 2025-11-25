@@ -80,7 +80,7 @@
 		<a href="https://kissickfamilyfoundation.org/">
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 		</a>
-		<a href="https://www.navigationfund.org/">
+		<a href="https://www.navigation.org/">
 			<img width="680" height="365" src={navigationLogo} alt="Navigation Fund Logo" />
 		<a href="https://www.mcgovern.org/">
 			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
