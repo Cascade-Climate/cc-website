@@ -68,7 +68,6 @@
 		<a href="https://astera.org">
 			<img width="680" height="365" src={asteraLogo} alt="Astera Institute Logo" />
 		</a>
-		<a href="https://www.bernardandannespitzers.org/">
 			<img width="680" height="365" src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
 		</a>
 		<a href="https://chanzuckerberg.com/">
@@ -77,6 +76,7 @@
 		<a href="https://www.granthamfoundation.org/">
 			<img width="680" height="365" src={granthamLogo} alt="Grantham Foundation Logo" />
 		</a>
+		<a href="https://www.kingphilanthropies.org/">
 		<a href="https://kissickfamilyfoundation.org/">
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 		</a>
@@ -84,7 +84,8 @@
 			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
 		</a>
 		<a href="https://qc.foundation/">
-			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
+			<img width="680" height="365" src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
+		</a>
 		</a>
 		<a href="https://qc.foundation/">
 			<img width="680" height="365" src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
