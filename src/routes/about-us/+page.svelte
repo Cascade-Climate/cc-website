@@ -74,6 +74,9 @@
 		<a href="https://www.granthamfoundation.org/">
 			<img width="680" height="365" src={granthamLogo} alt="Grantham Foundation Logo" />
 		</a>
+		<a href="https://www.kingphilanthropies.org/">
+			<img width="680" height="365" src={kingLogo} alt="King Philanthropies Logo" />
+		</a>
 		<a href="https://kissickfamilyfoundation.org/"
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 		</a>
