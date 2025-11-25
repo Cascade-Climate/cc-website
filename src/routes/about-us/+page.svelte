@@ -68,33 +68,28 @@
 		<a href="https://astera.org">
 			<img width="680" height="365" src={asteraLogo} alt="Astera Institute Logo" />
 		</a>
+		<a href="https://www.bernardandannespitzers.org/">
+			<img width="680" height="365" src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
+		</a>
 		<a href="https://chanzuckerberg.com/">
 			<img width="680" height="365" src={czLogo} alt="Chan Zuckerberg Initiative Logo" />
 		</a>
 		<a href="https://www.granthamfoundation.org/">
 			<img width="680" height="365" src={granthamLogo} alt="Grantham Foundation Logo" />
 		</a>
-		<a href="https://www.kingphilanthropies.org/">
-			<img width="680" height="365" src={kingLogo} alt="King Philanthropies Logo" />
-		</a>
 		<a href="https://kissickfamilyfoundation.org/">
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 		</a>
-		<a href="https://www.navigation.org/">
-			<img width="680" height="365" src={navigationLogo} alt="Navigation Fund Logo" />
 		<a href="https://www.mcgovern.org/">
+			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
+		</a>
+		<a href="https://qc.foundation/">
 			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
 		</a>
 		<a href="https://qc.foundation/">
 			<img width="680" height="365" src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
 		</a>
-		<span>
-			<img
-				width="680"
-				height="365"
-				src={spitzerLogo}
-				alt="Bernard and Anne Spitzer Charitable Trust Logo"
-			/>
+		
 		</span>
 	</div>
 </section>
