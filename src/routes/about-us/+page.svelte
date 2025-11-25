@@ -77,18 +77,13 @@
 			<img width="680" height="365" src={granthamLogo} alt="Grantham Foundation Logo" />
 		</a>
 		<a href="https://www.kingphilanthropies.org/">
-		<a href="https://kissickfamilyfoundation.org/">
+			<img width="680" height="365" src={kingLogo} alt="King Philanthropies Logo" />
+		</a>
+		<a href="https://kissickfamilyfoundation.org/"
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 		</a>
 		<a href="https://www.mcgovern.org/">
 			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
-		</a>
-		<a href="https://qc.foundation/">
-			<img width="680" height="365" src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
-		</a>
-		</a>
-		<a href="https://qc.foundation/">
-			<img width="680" height="365" src={quadratureLogo} alt="Quadrature Climate Foundation Logo" />
 		</a>
 		
 		</span>
