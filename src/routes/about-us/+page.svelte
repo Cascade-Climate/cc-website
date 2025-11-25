@@ -3,8 +3,10 @@
 	import asteraLogo from '$lib/images/supporters/astera.webp';
 	import czLogo from '$lib/images/supporters/chan-zuckerberg.webp';
 	import granthamLogo from '$lib/images/supporters/grantham.webp';
+	import kingLogo from '$lib/images/supporters/king.webp';
 	import kissickLogo from '$lib/images/supporters/kissick.webp';
 	import mcgovernLogo from '$lib/images/supporters/mcgovern.webp';
+	import navigationLogo from '$lib/images/supporters/navigationfund.webp';
 	import quadratureLogo from '$lib/images/supporters/quadrature.webp';
 	import spitzerLogo from '$lib/images/supporters/spitzer.webp';
 </script>
@@ -72,9 +74,9 @@
 		<a href="https://www.granthamfoundation.org/">
 			<img width="680" height="365" src={granthamLogo} alt="Grantham Foundation Logo" />
 		</a>
-		<span>
+		<a href="https://kissickfamilyfoundation.org/"
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
-		</span>
+		</a>
 		<a href="https://www.mcgovern.org/">
 			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
 		</a>
