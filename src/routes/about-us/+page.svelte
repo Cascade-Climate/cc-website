@@ -77,7 +77,7 @@
 		<a href="https://www.kingphilanthropies.org/">
 			<img width="680" height="365" src={kingLogo} alt="King Philanthropies Logo" />
 		</a>
-		<a href="https://kissickfamilyfoundation.org/"
+		<a href="https://kissickfamilyfoundation.org/">
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 		</a>
 		<a href="https://www.mcgovern.org/">
