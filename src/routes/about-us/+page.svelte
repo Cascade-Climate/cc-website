@@ -68,6 +68,7 @@
 		<a href="https://astera.org">
 			<img width="680" height="365" src={asteraLogo} alt="Astera Institute Logo" />
 		</a>
+		<a href="https://spitzertrust.org/">
 			<img width="680" height="365" src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
 		</a>
 		<a href="https://chanzuckerberg.com/">
@@ -79,14 +80,12 @@
 		<a href="https://www.kingphilanthropies.org/">
 			<img width="680" height="365" src={kingLogo} alt="King Philanthropies Logo" />
 		</a>
+		<!-- svelte-ignore a11y-missing-content -->
 		<a href="https://kissickfamilyfoundation.org/"
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
-		</a>
 		<a href="https://www.mcgovern.org/">
 			<img width="680" height="365" src={mcgovernLogo} alt="Patrick J McGovern Foundation Logo" />
 		</a>
-		
-		</span>
 	</div>
 </section>
 
