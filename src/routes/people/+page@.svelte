@@ -247,7 +247,7 @@
 		color: var(--color-accent);
 	}
 
-	#team, #contributors, #board {
+	#team, #board {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem 2%;
