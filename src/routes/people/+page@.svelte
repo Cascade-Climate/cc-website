@@ -29,6 +29,7 @@
 	import elenaCavallero from '$lib/images/people/elena-cavallero.webp';
 	import saraBoettiger from '$lib/images/people/sara-boettiger.webp';
 	import etoshaCave from '$lib/images/people/etosha-cave.webp';
+	import aliWhite from '$lib/images/people/ali-white.webp';
 
 	import { onMount } from 'svelte';
 
