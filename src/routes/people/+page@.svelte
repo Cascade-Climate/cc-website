@@ -107,6 +107,11 @@
 			<h1>Alison Tune</h1>
 			<span>ERW Scientist</span>
 		</a>
+		<a class="team-card" href="/people/ali-white">
+			<img src={aliWhite} alt="Ali White" />
+			<h1>Ali White</h1>
+			<span>Program Manager</span>
+		</a>
 		<a class="team-card" href="/people/anna-sophia-roberts">
 			<img src={annaSophiaRoberts} alt="Anna Sophia Roberts" />
 			<h1>Anna Sophia Roberts</h1>
