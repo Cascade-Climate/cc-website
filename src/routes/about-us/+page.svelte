@@ -89,7 +89,7 @@
 		<a href="https://www.navigation.org/">
 			<img width="680" height="365" src={navigationLogo} alt="Navigation Fund Logo" />
 		</a>
-		<a href="https://www.quadrature.com/">
+		<a href="https://www.qc.foundation.com/">
 			<img width="680" height="365" src={quadratureLogo} alt="Quadrature Capital Logo" />
 		</a>
 	</div>
