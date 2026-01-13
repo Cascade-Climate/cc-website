@@ -68,9 +68,7 @@
 		<a href="https://astera.org">
 			<img width="680" height="365" src={asteraLogo} alt="Astera Institute Logo" />
 		</a>
-		<a href="https://spitzertrust.org/">
-			<img width="680" height="365" src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
-		</a>
+		<img width="680" height="365" src={spitzerLogo} alt="Bernard and Anne Spitzer Charitable Trust Logo" />
 		<a href="https://chanzuckerberg.com/">
 			<img width="680" height="365" src={czLogo} alt="Chan Zuckerberg Initiative Logo" />
 		</a>
