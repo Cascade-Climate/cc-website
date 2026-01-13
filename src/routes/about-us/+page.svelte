@@ -80,7 +80,8 @@
 		<a href="https://www.kingphilanthropies.org/">
 			<img width="680" height="365" src={kingLogo} alt="King Philanthropies Logo" />
 		</a>
-		<a href="https://kissickfamilyfoundation.org/">
+		<!-- svelte-ignore a11y-missing-content -->
+		<a href="https://kissickfamilyfoundation.org/"
 			<img width="680" height="365" src={kissickLogo} alt="Kissick Family Foundation Logo" />
 		</a>
 		<a href="https://www.mcgovern.org/">
@@ -89,7 +90,7 @@
 		<a href="https://www.navigation.org/">
 			<img width="680" height="365" src={navigationLogo} alt="Navigation Fund Logo" />
 		</a>
-		<a href="https://www.qc.foundation/"></a>
+		<a href="https://www.qc.foundation/">
 			<img width="680" height="365" src={quadratureLogo} alt="Quadrature Capital Logo" />
 		</a>
 	</div>
