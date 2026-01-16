@@ -15,7 +15,7 @@
 				<h1>Accounting and Claims for Short-Lived and Long-Lived Climate Pollutants 
 				</h1>
 				<p>
-					Long-lived (CO2) and short-lived climate pollutant (SLCP) mitigation address two related but distinct goals: CO2 mitigation limits long-term warming and stabilizes temperatures, while SLCP mitigation reduces the risk of overshooting temperature thresholds with irreversible impacts in the near term. Achieving both goals requires treating CO2 and SLCP mitigation as complementary rather than interchangeable, and applying consistent, rigorous accounting across all greenhouse gases 
+					Long-lived (CO2) and short-lived climate pollutant (SLCP) mitigation address two related but distinct goals: CO2 mitigation limits long-term warming and stabilizes temperatures, while SLCP mitigation reduces the risk of overshooting temperature thresholds with irreversible impacts in the near term. Achieving both goals requires treating CO2 and SLCP mitigation as complementary rather than interchangeable, and applying consistent, rigorous accounting across all greenhouse gases. 
 				</p>
 			</div>
 			<img src={asiasmoke} alt="Kon Tum, Vietnam" class="large-image" />
