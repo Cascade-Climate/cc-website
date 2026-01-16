@@ -23,13 +23,13 @@
 				<h4>Latest updates</h4>
 				<div class="links">
 					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
-					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
+					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[APPENDIX: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
 				</div>
 			</section>
 			<ScrollNav />
 			<main>
 				<section id="short-lived-climate-pollutants">
-					<h1>Short-Lived Climate Pollutants</h1>
+			<h1>Short-Lived Climate Pollutants</h1>
 			<br>
 			<p>
 				<a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener noreferrer">Super pollutants</a> are atmospheric pollutants — including methane, tropospheric ozone, tropospheric ozone precursors, fluorinated gases, nitrous oxide, and black carbon — that have greater impacts on atmospheric warming than carbon dioxide per tonne. These pollutants contribute to roughly half of current warming and often pose additional risks to human health and the environment. Many super pollutants remain in the atmosphere for only years to several decades, compared to centuries for carbon dioxide. Because of their short residence time, mitigation of these short-lived climate pollutants (SLCPs) presents perhaps the most effective tool for meaningfully reducing <a href="https://atmosphere.copernicus.eu/climate-forcing" target="_blank" rel="noopener noreferrer">radiative forcing</a> in the near-term. To avert the accelerating risks of near-term warming and the overshoot of temperature goals, today's climate actions <b>must go beyond mitigation of CO2 to also prioritize activities that can substantially reduce near-term warming in the coming decades.</b>
@@ -48,14 +48,29 @@
 				It is critical for the climate community to evaluate accounting and metrics choices in the context of whether they are serving their intended goals, and both goals — limiting warming in the long term and reducing the risk of overshooting temperature thresholds with irreversible impacts in the near term — matter for climate stability. Ideally, we should be working toward a system of impact measurement that accurately reflects the effects an intervention has on the climate, the duration of that impact, and when that impact occurs.
 			</p>
 		</section>
-		<section id="Climate Week Workshop">
-			<h1>Climate Week Workshop</h1>
+		<section id="Climate Week 2025 Workshop">
+			<h1>Climate Week 2025 Workshop</h1>
 			<br>
-			<p> At Climate Week in September 2025, Cascade Climate hosted a workshop convening key climate and carbon market stakeholders across academia, civil society, and the private sector to discuss how to ensure consistent and rigorous accounting and claims-making for both short-lived and long-lived mitigation activities in a net-zero framework. The resources below were developed for and from this workshop.</p>
-			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP PRIMER] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
-			<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
-			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">[RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
-			<br>
+			<p> At Climate Week in September 2025, Cascade Climate hosted a workshop convening key climate and carbon market stakeholders across academia, civil society, and the private sector to discuss how to ensure consistent and rigorous accounting and claims-making for both short-lived and long-lived mitigation activities in a net-zero framework. The workshop addressed several key questions, epsecially in corporate greenhouse gas accounting and voluntary carbon markets, including:
+				<ul>
+					<li>
+						<p>
+							Should companies and voluntary market participants consider transitioning to accounting approaches that better value near term warming</p>
+					</li>
+					<li>
+						<p>Should we continue to allow compensation of remaining CO2 emissions with short-lived climate pollutant mitigation actions?</p>
+					</li>
+					<li>
+						<p>Can super pollutant reduction credits play a role in achieving net zero targets? If so, how? </p>
+					</li>
+				</ul>
+				<p>
+					The resources below were developed for and from the workshop.
+				</p>
+				<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
+				<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
+				<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX: Workshop Primer] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
+				<br>
 		</section>
 		<section id="nexthorizons">
 			<h1>Next Horizons</h1>
@@ -68,6 +83,6 @@
 
 <style>
 	:global(.content .large-image) {
-		width: 80% !important;
+		width: 60% !important;
 	}
 </style>
