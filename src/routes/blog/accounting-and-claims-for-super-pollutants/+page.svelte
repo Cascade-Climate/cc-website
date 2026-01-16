@@ -65,20 +65,22 @@
 					</li>
 				</ul>
 				<p>
-					The resources below were developed for and from the workshop.
-				<br>
-				</p>
-				<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
-				<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
-				<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX: WORKSHOP PRIMER] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
-				<br>
+					The resources below were developed for and from the workshop.<p>
+	<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+			<br>
+			<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
+			<br>
+			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
+			<br>
+			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX: WORKSHOP PRIMER] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
+			<br>
 		</section>
 		<section id="nexthorizons">
 			<h1>Next Horizons</h1>
 			<br>
-			<p> For Cascade, a key goal of this accounting and claims effort is to drive towards strong community alignment on the credibility of corporate and international credit claims. In turn, this will enable higher overall participation in <a href="https://cascadeclimate.org/blog/crossing-the-bridge" target="_blank" rel="noopener noreferrer">climate finance efforts</a> directed towards high impact mitigation approaches across the public and private sectors — with strong guardrails in place against perverse incentives. 
+			<p> For Cascade, a key goal of this accounting and claims effort is to drive towards strong community alignment on the credibility of corporate and international credit claims. In turn, this will enable higher overall participation in <a href="https://cascadeclimate.org/blog/crossing-the-bridge" target="_blank" rel="noopener noreferrer">climate finance efforts</a> directed towards high impact mitigation approaches across the public and private sectors — with strong guardrails in place against perverse incentives.<p> 
 				
-			Another goal of this work is to help create the enabling conditions for promising emerging GHG accounting approaches to be tested, refined, and eventually scaled. In addition to the workshop, Cascade is in the process of exploring which market and policy mechanisms can serve as testing grounds for high potential accounting approaches — helping to address the gap between early pilots and integration into market and government standards.</p>		</section>
+			<p>Another goal of this work is to help create the enabling conditions for promising emerging GHG accounting approaches to be tested, refined, and eventually scaled. In addition to the workshop, Cascade is in the process of exploring which market and policy mechanisms can serve as testing grounds for high potential accounting approaches — helping to address the gap between early pilots and integration into market and government standards.</p>		</section>
 	</main>
 </div>
 
