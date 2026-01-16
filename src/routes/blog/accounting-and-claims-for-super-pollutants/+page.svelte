@@ -19,7 +19,7 @@
 				</p>
 				<h4>Latest updates:</h4>
 				<div class="links">
-					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">Read "Beyond GWP100," the workshop summary and recommendations from the 2025 Climate Week NYC workshop↗</PDFLink>
+					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
 	
 				</div>
 			</div>
