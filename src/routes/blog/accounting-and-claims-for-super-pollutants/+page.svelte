@@ -1,5 +1,5 @@
 <script>
-	import oil.refinery from '$lib/images/blog/oil-refinery.webp';
+	import oilRefinery from '$lib/images/blog/oil-refinery.webp';
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import policy from '$lib/images/nature/policy.webp';
@@ -24,7 +24,7 @@
 	
 				</div>
 			</div>
-			<img src={oil.refinery} alt="Oil Refinery"/>
+			<img src={oilRefinery} alt="Oil Refinery"/>
 		</div>
 	</section>
 	<ScrollNav />
