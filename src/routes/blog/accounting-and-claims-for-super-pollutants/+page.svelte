@@ -66,6 +66,7 @@
 				</ul>
 				<p>
 					The resources below were developed for and from the workshop.
+				<br>
 				</p>
 				<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
 				<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
