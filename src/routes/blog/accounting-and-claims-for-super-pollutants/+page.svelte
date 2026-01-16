@@ -1,7 +1,7 @@
 <script>
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
-	import policy from '$lib/images/nature/policy.webp';
+	import asiasmoke from '$lib/images/blog/asiasmoke.webp'
 </script>
 
 <svelte:head>
@@ -17,18 +17,19 @@
 				<p>
 					Long-lived (CO2) and short-lived climate pollutant (SLCP) mitigation serve to address two separate-but-related goals: limiting warming (e.g., temperature stabilization) in the long term by the former, and reducing the risk of overshooting temperature thresholds with irreversible impacts in the near term by the latter. Achieving both goals will require treating CO2 and SLCP mitigation as complementary rather than interchangeable, and applying consistent, rigorous accounting across short- and long-lived greenhouse gases.
 				</p>
-				<h4>Latest updates:</h4>
+			</div>
+			<img src={asiasmoke} alt="Kon Tum, Vietnam" class="large-image" />
+		</div>
+				<h4>Latest updates</h4>
 				<div class="links">
 					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
-	
+					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
 				</div>
-			</div>
-		</div>
-	</section>
-	<ScrollNav />
-	<main>
-		<section id="short-lived-climate-pollutants">
-			<h1>Short-Lived Climate Poillutants</h1>
+			</section>
+			<ScrollNav />
+			<main>
+				<section id="short-lived-climate-pollutants">
+					<h1>Short-Lived Climate Pollutants</h1>
 			<br>
 			<p>
 				<a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener noreferrer">Super pollutants</a> are atmospheric pollutants — including methane, tropospheric ozone, tropospheric ozone precursors, fluorinated gases, nitrous oxide, and black carbon — that have greater impacts on atmospheric warming than carbon dioxide per tonne. These pollutants contribute to roughly half of current warming and often pose additional risks to human health and the environment. Many super pollutants remain in the atmosphere for only years to several decades, compared to centuries for carbon dioxide. Because of their short residence time, mitigation of these short-lived climate pollutants (SLCPs) presents perhaps the most effective tool for meaningfully reducing <a href="https://atmosphere.copernicus.eu/climate-forcing" target="_blank" rel="noopener noreferrer">radiative forcing</a> in the near-term. To avert the accelerating risks of near-term warming and the overshoot of temperature goals, today's climate actions <b>must go beyond mitigation of CO2 to also prioritize activities that can substantially reduce near-term warming in the coming decades.</b>
@@ -50,29 +51,23 @@
 		<section id="Climate Week Workshop">
 			<h1>Climate Week Workshop</h1>
 			<br>
-			<p> At Climate Week in September 2025, Cascade Climate hosted a workshop convening key climate and carbon market stakeholders across academia, civil society, and the private sector to discuss how to ensure consistent and rigorous accounting and claims-making for both short-lived and long-lived mitigation activities in a net-zero framework. The resources below were developed for and from trhis workshop.</p>
+			<p> At Climate Week in September 2025, Cascade Climate hosted a workshop convening key climate and carbon market stakeholders across academia, civil society, and the private sector to discuss how to ensure consistent and rigorous accounting and claims-making for both short-lived and long-lived mitigation activities in a net-zero framework. The resources below were developed for and from this workshop.</p>
+			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP PRIMER] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
 			<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
 			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">[RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
-			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP PRIMER] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
 			<br>
-			<div>Cascade also participates in formal government advisory groups and consortiums including:</div>
-			<ul>
-				<li>U.S. National Institute of Standards and Technology Carbon Dioxide Removal (CDR) Consortium</li>
-				<li>U.S. Pacific Northwest National Laboratory Mineralization CDR Measurement, Reporting, and Verification Collaborative</li>
-				<li>U.S. National Renewable Energy Laboratory Standardized Carbon Removal Offtake Agreement Advisory Board</li>
-			</ul>
 		</section>
 		<section id="nexthorizons">
 			<h1>Next Horizons</h1>
 			<br>
-			<p> For Cascade, a key goal of this accounting and claims effort is to drive towards strong community alignment on the credibility of corporate and international credit claims. In turn, this will enable higher overall participation in <a href="https://cascadeclimate.org/blog/crossing-the-bridge" target="_blank" rel="noopener noreferrer">climate finance efforts</a> directed towards high impact mitigation approaches across the public and private sectors—with strong guardrails in place against perverse incentives. 
+			<p> For Cascade, a key goal of this accounting and claims effort is to drive towards strong community alignment on the credibility of corporate and international credit claims. In turn, this will enable higher overall participation in <a href="https://cascadeclimate.org/blog/crossing-the-bridge" target="_blank" rel="noopener noreferrer">climate finance efforts</a> directed towards high impact mitigation approaches across the public and private sectors — with strong guardrails in place against perverse incentives. 
 				
-				Another goal of this work is to help create the enabling conditions for promising emerging GHG accounting approaches to be tested, refined, and eventually scaled. In addition to the workshop, Cascade is in the process of exploring which market and policy mechanisms can serve as testing grounds for high potential accounting approaches—helping to address the gap between early pilots and integration into market and government standards.
-				.</p>
-		</section>
-		<section id="resources">
-			<h1>Resources</h1>
-			<PDFLink link="/CRA0225_Enhanced_Rock_Weathering.pdf" variant="accent">Enhanced Weathering Policy Working Group R&amp;D Priorities↗</PDFLink>
-		</section>
+			Another goal of this work is to help create the enabling conditions for promising emerging GHG accounting approaches to be tested, refined, and eventually scaled. In addition to the workshop, Cascade is in the process of exploring which market and policy mechanisms can serve as testing grounds for high potential accounting approaches — helping to address the gap between early pilots and integration into market and government standards.</p>		</section>
 	</main>
 </div>
+
+<style>
+	:global(.content .large-image) {
+		width: 80% !important;
+	}
+</style>
