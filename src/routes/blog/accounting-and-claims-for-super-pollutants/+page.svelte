@@ -1,5 +1,5 @@
 <script>
-	import pipes from '$lib/images/blog/pipes.webp';
+	import oil.refinery from '$lib/images/blog/oil-refinery.webp';
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import policy from '$lib/images/nature/policy.webp';
@@ -13,16 +13,18 @@
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
-				<h1>Accounting and Claims for Super Pollutants</h1>
+				<h1>Accounting and Claims for Short-Lived and Long-Lived Climate Pollutants 
+				</h1>
 				<p>
-					As carbon markets shift from voluntary finance to policy-driven accountability, a critical challenge emerges: ensuring consistent, rigorous accounting of both short- and long-lived greenhouse gases.
+					Long-lived (CO2) and short-lived climate pollutant (SLCP) mitigation serve to address two separate-but-related goals: limiting warming (e.g., temperature stabilization) in the long term by the former, and reducing the risk of overshooting temperature thresholds with irreversible impacts in the near term by the latter. Achieving both goals will require treating CO2 and SLCP mitigation as complementary rather than interchangeable, and applying consistent, rigorous accounting across short- and long-lived greenhouse gases.
 				</p>
 				<h4>Latest updates:</h4>
 				<div class="links">
-					<a href="/blog/crosssing-the-bridge">Sep 16, 2025: Crossing the Bridge: How Voluntary Climate Finance Can Accelerate Sustained Policy and Industry Adoption↗</a>
+					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">Read "Beyond GWP100," the workshop summary and recommendations from the 2025 Climate Week NYC workshop↗</PDFLink>
+	
 				</div>
 			</div>
-			<img src={pipes} alt="Pipes"/>
+			<img src={oil.refinery} alt="Oil Refinery"/>
 		</div>
 	</section>
 	<ScrollNav />
