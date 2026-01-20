@@ -86,6 +86,6 @@
 
 <style>
 	:global(.content .large-image) {
-		width: 60% !important;
+		width: 45% !important;
 	}
 </style>
