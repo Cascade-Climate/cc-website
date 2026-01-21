@@ -22,7 +22,7 @@
 		</div>
 				<h4>Latest updates</h4>
 				<div class="links">
-					<PDFLink link="/Cascade Climate - Beyond GWP100 (Workshop Summary and Recommendations).pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
+					<PDFLink link="/Cascade%20Climate%20-%20Beyond%20GWP100%20%28Workshop%20Summary%20and%20Recommendations%29.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
 					<PDFLink link="/Cascade Climate - Appendix I (Accounting and Claims Workshop Recommendations Only).pdf">[APPENDIX I] Cascade Recommendations for SLCP Accounting and Claims↗</PDFLink>
 				</div>
 			</section>
@@ -68,7 +68,7 @@
 					The resources below were developed for and from the workshop.<p>
 	<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
 			<br>
-			<PDFLink link="/Cascade Climate - Beyond GWP100 (Workshop Summary and Recommendations).pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
+			<PDFLink link="/Cascade%20Climate%20-%20Beyond%20GWP100%20%28Workshop%20Summary%20and%20Recommendations%29.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
 			<br>
 			<PDFLink link="/Cascade Climate - Appendix I (Accounting and Claims Workshop Recommendations Only).pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX I] Cascade Recommendations for SLCP Accounting and Claims↗</PDFLink>
 			<br>
