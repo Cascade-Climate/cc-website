@@ -86,6 +86,8 @@
 
 <style>
 	:global(.content .large-image) {
-		width: 136% !important;
+		width: 60%;
+		max-width: 600px;
+		flex-shrink: 0;
 	}
 </style>
