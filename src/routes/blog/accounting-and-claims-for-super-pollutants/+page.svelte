@@ -48,10 +48,10 @@
 				It is critical for the climate community to evaluate accounting and metrics choices in the context of whether they are serving their intended goals, and both goals — limiting warming in the long term and reducing the risk of overshooting temperature thresholds with irreversible impacts in the near term — matter for climate stability. Ideally, we should be working toward a system of impact measurement that accurately reflects the effects an intervention has on the climate, the duration of that impact, and when that impact occurs.
 			</p>
 		</section>
-		<section id="Climate Week 2025 Workshop">
-			<h1>Climate Week 2025 Workshop</h1>
+		<section id="Climate Week NYC 2025 Workshop">
+			<h1>Climate Week NYC 2025 Workshop</h1>
 			<br>
-			<p> At Climate Week in September 2025, Cascade Climate hosted a workshop convening key climate and carbon market stakeholders across academia, civil society, and the private sector to discuss how to ensure consistent and rigorous accounting and claims-making for both short-lived and long-lived mitigation activities in a net-zero framework. The workshop addressed several key questions, epsecially in corporate greenhouse gas accounting and voluntary carbon markets, including:
+			<p> At Climate Week NYC in September 2025, Cascade Climate hosted a workshop convening key climate and carbon market stakeholders across academia, civil society, and the private sector to discuss how to ensure consistent and rigorous accounting and claims-making for both short-lived and long-lived mitigation activities in a net-zero framework. The workshop addressed several key questions, epsecially in corporate greenhouse gas accounting and voluntary carbon markets, including:
 				<ul>
 					<li>
 						<p>
