@@ -72,7 +72,7 @@
 			<br>
 			<PDFLink link="/Cascade Climate - Appendix I (Accounting and Claims Workshop Recommendations Only).pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX I] Cascade Recommendations for SLCP Accounting and Claims↗</PDFLink>
 			<br>
-			<PDFLink link="/Cascade Climate - Appendix II (Claims and Accounting Workshop Primer).pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX II: WORKSHOP PRIMER] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
+			<PDFLink link="/Cascade Climate - Appendix II (Claims and Accounting Workshop Primer).pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX II] Workshop Primer: Balancing Short-Lived and Long-Lived Climate Pollutants Within Net-Zero Frameworks↗</PDFLink>
 			<br>
 		</section>
 		<section id="nexthorizons">
