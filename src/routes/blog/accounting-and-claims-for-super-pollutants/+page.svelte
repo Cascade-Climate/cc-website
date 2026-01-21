@@ -22,8 +22,8 @@
 		</div>
 				<h4>Latest updates</h4>
 				<div class="links">
-					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
-					<PDFLink link="/CC_Foundations for CDR Quantification in ERW Deployments.pdf">[APPENDIX I: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
+					<PDFLink link="/Cascade Climate - Beyond GWP100 (Workshop Summary and Recommendations)-1.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
+					<PDFLink link="/Cascade Climate - Appendix I (Accounting and Claims Workshop Recommendations Only).pdf">[APPENDIX I: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
 				</div>
 			</section>
 			<ScrollNav />
@@ -68,9 +68,9 @@
 					The resources below were developed for and from the workshop.<p>
 	<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
 			<br>
-			<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
+			<PDFLink link="/Cascade Climate - Beyond GWP100 (Workshop Summary and Recommendations)-1.pdf" variant="accent" style="display: block; text-align: left;">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
 			<br>
-			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX I: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
+			<PDFLink link="/Cascade Climate - Appendix I (Accounting and Claims Workshop Recommendations Only).pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX I: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
 			<br>
 			<PDFLink link="/Cascade Climate - Appendix II (Claims and Accounting Workshop Primer).pdf" variant="accent" style="display: block; text-align: left;">[APPENDIX II: WORKSHOP PRIMER] Balancing short-lived and long-lived climate pollutants within net-zero frameworks↗</PDFLink>
 			<br>
