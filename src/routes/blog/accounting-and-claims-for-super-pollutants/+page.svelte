@@ -22,7 +22,7 @@
 		</div>
 				<h4>Latest updates</h4>
 				<div class="links">
-					<PDFLink link="/Cascade Climate - Beyond GWP100 (Workshop Summary and Recommendations)-1.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
+					<PDFLink link="/Cascade Climate - Beyond GWP100 (Workshop Summary and Recommendations.pdf">[WORKSHOP SUMMARY AND RECOMMENDATIONS] "Beyond GWP100: Accounting and Claims for Short-Lived Climate Pollutants"↗</PDFLink>
 					<PDFLink link="/Cascade Climate - Appendix I (Accounting and Claims Workshop Recommendations Only).pdf">[APPENDIX I: RECOMMENDATIONS ONLY] Accounting and Claims for SLCPs↗</PDFLink>
 				</div>
 			</section>
