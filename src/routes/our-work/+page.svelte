@@ -12,6 +12,7 @@
 	import wpe from '$lib/images/nature/erwexplorer.webp';
 	import bridge from '$lib/images/nature/bridge.webp';
 	import { onMount } from 'svelte';
+	import asiasmoke from '$lib/images/blog/asiasmoke.webp'
 
 	const sections = [
 		{ id: 'erw', title: 'ERW' },
@@ -150,7 +151,13 @@
 			</p>
 		<h5>HIGHLIGHTS</h5>
 		<div class="highlights">
-
+<img src={asiasmoke} alt="Asia Smoke" />
+				<h2>Accounting and claims for short-lived and long-lived pollutants</h2>
+				<p>
+					Learn how Cascade is driving strong community alignment on the credibility of corporate and international credit claims, and read our latest report.
+				</p>
+				<a href="/blog/accounting-and-claims-for-super-pollutants"
+				>Learn More</a>
 			<div>
 				<img src={bridge} alt="Crossing The Bridge"/>
 				<h2>Voluntary climate financing as a bridge
@@ -164,13 +171,12 @@
 
 			<div>
 				<img src={slcp} alt="Super Pollutants" />
-				<h2>Super Pollutant Mitigation Needs a Bigger Push—And We're Joining the Effort</h2>
+				<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
 				<p>
 					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
 				</p>
 				<a href="/blog/cascade-entry-into-slcp-mitigation"
 				>Learn More</a>
-			</div>
 		</div>
 	</section>
 	</div>
@@ -298,18 +304,6 @@
 		padding: 0.5rem 1.2rem;
 		text-decoration: none;
 		color: var(--color-light);
-	}
-
-	.highlights b {
-		background-color: white;
-		color: var(--color-accent);
-		border: 1px solid var(--color-accent);
-		padding: 0.5rem 1rem;
-		border-radius: 2rem;
-		margin-bottom: 1rem;
-		font-size: 1rem;
-		font-weight: normal;
-		width: 100%;
 	}
 
 	@media (max-width: 660px) {

@@ -8,7 +8,19 @@
 <div id="blog">
 	<div id="post-list">
 		
-		
+		<div class="post">
+			<h1>
+				<a href="/blog/accounting-and-claims-for-super-pollutants">
+					Beyond GWP100: Accounting and Claims for Short-Lived and Long-Lived Climate Pollutants
+				</a>
+			</h1>
+			<p>Learn how Cascade is driving strong community alignment on the credibility of corporate and international credit claims, and read our latest report.</p>
+				<p class="details">
+					<span class="date">01/21/2026</span>
+					·
+					<span class="read-time">4 MIN READ</span>
+				</p>
+		</div>
 		<div class="post">
 			<h1>
 				<a href="/blog/drawdown-to-durable">
