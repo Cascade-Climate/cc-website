@@ -149,35 +149,35 @@
 			<p>
 				Cascade is beginning work in this area by learning from—and building trusted relationships with—those who have been doing great work in this domain for years. As highlighted in our initial blog post, we see opportunities for Cascade to play a complementary role and to bring to bear lessons from the analogous journey that durable CDR has begun in recent years.
 			</p>
-		<h5>HIGHLIGHTS</h5>
-		<div class="highlights">
-<img src={asiasmoke} alt="Asia Smoke" />
-				<h2>Accounting and claims for short-lived and long-lived pollutants</h2>
-				<p>
-					Learn how Cascade is driving strong community alignment on the credibility of corporate and international credit claims, and read our latest report.
-				</p>
-				<a href="/blog/accounting-and-claims-for-super-pollutants"
-				>Learn More</a>
-			<div>
-				<img src={bridge} alt="Crossing The Bridge"/>
-				<h2>Voluntary climate financing as a bridge
-				</h2>
-				<p>
-					Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate technologies, while closing three critical gaps to scale up: building the evidence base, driving down costs, and resolving real-world deployment risks.
+			<h5>HIGHLIGHTS</h5>
+			<div class="highlights">
+				<div>
+					<img src={asiasmoke} alt="Asia Smoke" />
+					<h2>Accounting and claims for short-lived and long-lived pollutants</h2>
+					<p>
+						Learn how Cascade is driving strong community alignment on the credibility of corporate and international credit claims, and read our latest report.
+					</p>
+					<a href="/blog/accounting-and-claims-for-super-pollutants">Learn More</a>
+				</div>
 
-				</p>
-				<a href="/blog/crossing-the-bridge" target="_blank">Learn More</a>
+				<div>
+					<img src={bridge} alt="Crossing The Bridge" />
+					<h2>Voluntary climate financing as a bridge</h2>
+					<p>
+						Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate technologies, while closing three critical gaps to scale up: building the evidence base, driving down costs, and resolving real-world deployment risks.
+					</p>
+					<a href="/blog/crossing-the-bridge" target="_blank" rel="noopener noreferrer">Learn More</a>
+				</div>
+
+				<div>
+					<img src={slcp} alt="Super Pollutants" />
+					<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
+					<p>
+						Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+					</p>
+					<a href="/blog/cascade-entry-into-slcp-mitigation">Learn More</a>
+				</div>
 			</div>
-
-			<div>
-				<img src={slcp} alt="Super Pollutants" />
-				<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
-				<p>
-					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
-				</p>
-				<a href="/blog/cascade-entry-into-slcp-mitigation"
-				>Learn More</a>
-		</div>
 	</section>
 	</div>
 </div>
@@ -290,6 +290,12 @@
 		grid-gap: 2rem;
 	}
 
+	.highlights > div {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
 	.highlights img {
 		width: 100%;
 		height: 250px;
@@ -298,6 +304,7 @@
 	}
 
 	.highlights a {
+		display: inline-block;
 		border-radius: 2rem;
 		background-color: var(--color-accent);
 		text-align: center;
