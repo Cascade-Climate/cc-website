@@ -153,7 +153,7 @@
 			<div class="highlights">
 				<div>
 					<img src={asiasmoke} alt="Asia Smoke" />
-					<h2>Accounting and claims for short-lived and long-lived pollutants</h2>
+					<h2>Accounting and claims for short-lived and long-lived climate pollutants</h2>
 					<p>
 						Learn how Cascade is driving strong community alignment on the credibility of corporate and international credit claims, and read our latest report.
 					</p>
