@@ -2,6 +2,7 @@
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
     import grants from '$lib/images/nature/grants.webp';
+    import CRNblock from '$lib/images/blog/CRNblock.webp';
     
 </script>
 
@@ -9,31 +10,62 @@
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
-				<h1><strong>Request for Expressions of Interest:</strong> Coordinated Research Network for ERW </h1>
+				<h1>
+					<strong>Request for Expressions of Interest:</strong> Coordinated Research Network for ERW
+				</h1>
 
-                <p> Cascade is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN) for enhanced rock weathering. Host institutions will receive funding for site operations, lead authorship opportunities on site-specific publications, co-authorship on network-wide studies, and access to a global community of ERW researchers and expert working groups. </p>
-                
-                <p> We believe this coordinated research model — in which sites deploy standardized protocols, measurement strategies, and designs across diverse geographies — can generate the field-wide learning needed to answer critical questions about carbon removal potential, measurement strategies, agricultural benefits, and deep soil dynamics. By enabling meaningful cross-site comparison and synthesis, the CRN can produce the kinds of global analyses that isolated studies cannot support, accelerating progress for the entire field. </p>
-
-
-
-Cascade is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN) for enhanced rock weathering (ERW). We aim to establish up to 15 highly standardized ERW field sites in high-priority geographies, beginning with one to two pilot sites in 2026 and scaling to 12-15 sites by 2029.</p>
-
-                <p>We believe this coordinated network model — in which sites deploy standardized protocols, measurement strategies, and designs across diverse geographies — will generate the field-wide learning needed to answer critical questions about carbon removal potential, measurement strategies, agricultural benefits, and deep soil dynamics. By enabling meaningful cross-site comparison and synthesis, the CRN will produce the kinds of global analyses that isolated studies cannot support, accelerating progress for the entire ERW field.</p>
-                
-                <p>Questions? Email us at <a style="color:#00EDAE;" href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">grants@cascadeclimate.org</a>.</p>
-
-                <h5 style="color:white">Deadline: December 20th, 2024 at 11:59PM ET.</h5>
-                <h5 style="color:white">Information/Q&A Session: November 14th, 2024 at 12:00PM ET. Link to recording in Q&A section below.</h5>
+				<p>
+					Cascade is seeking expressions of interest to host and operate field sites as part of a global
+					Coordinated Research Network (CRN) for enhanced rock weathering (ERW). Host sites will receive
+					funding for operations, authorship opportunities on site-specific and network-wide studies, and
+					access to a global community of ERW researchers and expert working groups. This coordinated
+					approach — deploying standardized protocols, measurement strategies, and experimental designs
+					across diverse geographies — will answer critical science questions and enable global analyses
+					that accelerate progress for the entire field.
+				</p>
 			</div>
+
+			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
 		</div>
-        <div class="links">
-            <div style="text-align: center;">
-                <PDFLink target="_blank" rel="noopener" link="/Cascade-Climate-Regranting-Solicitation.pdf">RFP Solicitation↗</PDFLink>
-            </div>
-            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form">Proposal Application Form↗</a>
-            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfBKrkh9e52YAT2R5z2rQ7_ZlqSWJiIzzIPIIOGKbB1qyOAsA/viewform">Networking List↗</a>
-        </div>
+
+		<p>
+			Questions? Email us at
+			<a
+				style="color:#00EDAE;"
+				href="mailto:grants@cascadeclimate.org"
+				target="_blank"
+				rel="noopener"
+				>grants@cascadeclimate.org</a
+			>.
+		</p>
+
+		<h5 style="color:white">Deadline: December 20th, 2024 at 11:59PM ET.</h5>
+		<h5 style="color:white">
+			Information/Q&amp;A Session: November 14th, 2024 at 12:00PM ET. Link to recording in Q&amp;A section
+			below.
+		</h5>
+
+		<div class="links">
+			<div style="text-align: center;">
+				<PDFLink
+					target="_blank"
+					rel="noopener"
+					link="/Cascade-Climate-Regranting-Solicitation.pdf">RFP Solicitation↗</PDFLink
+				>
+			</div>
+			<a
+				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
+				target="_blank"
+				href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form">Proposal Application
+				Form↗</a
+			>
+			<a
+				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
+				target="_blank"
+				href="https://docs.google.com/forms/d/e/1FAIpQLSfBKrkh9e52YAT2R5z2rQ7_ZlqSWJiIzzIPIIOGKbB1qyOAsA/viewform">Networking
+				List↗</a
+			>
+		</div>
 	</section>
 	<ScrollNav />
 	<main>
@@ -85,7 +117,7 @@ Cascade is seeking expressions of interest from institutions to host and operate
         <h1>Important Dates</h1>
         <p>The proposals will be due on <strong>December 20th, 2024 at 11:59pm ET</strong>,<strong> </strong> and <strong> </strong>funding decisions will be made by no later than <strong>February 6th, 2025</strong>. For proposals that have a start date in Spring 2025, Cascade can provide a letter that specifies our intent to fund the project upon selection.</p>
         <p>Applications should be no longer than four to eight pages (exclusive of supporting information), and should be submitted via <a href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form" target="_blank" rel="noopener">this form↗</a>.&nbsp; Applicants are welcome to include figures and references to papers, preprints, and similar as a part of the application; please have all citations at the end of the document. Applicants are advised to not share any information that is considered confidential or a trade secret.</p>
-        <p>The Cascade team will also be hosting an open information and Q&A session on <strong>Thursday, November 14th, 2024 at 12:00PM ET.</strong> <a href="https://lu.ma/pjmx9xl1">Register Here↗</p>
+        <p>The Cascade team will also be hosting an open information and Q&A session on <strong>Thursday, November 14th, 2024 at 12:00PM ET.</strong> <a href="https://lu.ma/pjmx9xl1" target="_blank" rel="noopener">Register Here↗</a></p>
         <p>For additional questions related to this RfP or the proposal process, please contact the Cascade Climate RFP Team at <a href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">grants@cascadeclimate.org↗</a>.&nbsp; Potential applicants are also encouraged to bring their questions to our webinar and Q&amp;A session for this RFP, scheduled for <strong>Thursday, November 14th at 12PM ET</strong>. This will be recorded and made available on the Cascade website.</p>
     </section>  
 
@@ -259,5 +291,10 @@ Cascade is seeking expressions of interest from institutions to host and operate
 		outline: 2px solid rgba(0, 237, 174, 0.9);
 		outline-offset: 2px;
 		border-radius: 10px;
+	}
+
+	.large-image {
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		border-radius: 8px;
 	}
 </style>
