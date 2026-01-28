@@ -17,6 +17,7 @@
 	const sections = [
 		{ id: 'erw', title: 'ERW' },
 		{ id: 'superpollutantmitigation', title: 'Super Pollutant Mitigation' },
+		{ id: 'refrigerantmanagementandtransition', title: 'Refrigerant Management and Transition' },
 	];
 
 	let activeSection = '';
@@ -178,7 +179,18 @@
 					<a href="/blog/cascade-entry-into-slcp-mitigation">Learn More</a>
 				</div>
 			</div>
-	</section>
+		</section>
+
+		<section id="refrigerantmanagementandtransition">
+			<h3>Refrigerant Management and Transition</h3>
+			<p>
+				Refrigerant management and transition is a critical component of super pollutant mitigation, addressing the significant climate impact of hydrofluorocarbons (HFCs) and other refrigerants with high global warming potential. Effective refrigerant management can prevent substantial near-term warming while supporting the transition to more sustainable cooling technologies.
+			</p>
+			<h5>HIGHLIGHTS</h5>
+			<div class="highlights">
+				<!-- Add highlight items here as needed -->
+			</div>
+		</section>
 	</div>
 </div>
 
