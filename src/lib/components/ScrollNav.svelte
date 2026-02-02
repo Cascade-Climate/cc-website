@@ -67,8 +67,8 @@
     font-size: 1rem;
     text-decoration: none;
     color: inherit;
-    max-width: 256px;
-    flex-grow: 1;
+    flex: 1 1 0;
+    min-width: 0;
     text-align: center;
     border: 1px solid var(--color-light);
 		font-weight: 300;
