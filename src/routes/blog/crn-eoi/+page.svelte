@@ -119,7 +119,7 @@
             </div>
         </details>
 
-        <details class="faq" id="eligibility-who-should-submit">
+        <details class="faq" id="eligibility">
             <summary><span>Eligibility: Who should submit an EOI form?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
