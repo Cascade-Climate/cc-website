@@ -102,7 +102,7 @@
         <h1>EOI FAQ</h1>
       
     
-        <details class="faq" id="why-participate">
+        <details class="faq" id="participation">
             <summary><span>Participation: Why participate in the CRN?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
@@ -135,7 +135,7 @@
             </div>
         </details>
 
-        <details class="faq" id="process-deadline">
+        <details class="faq" id="process">
             <summary><span>Process: What is the EOI deadline and next steps?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
@@ -148,7 +148,7 @@
             </div>
         </details>
 
-        <details class="faq" id="preperation-before-submitting">
+        <details class="faq" id="preparation">
             <summary><span>Preparation: What should I know before submitting the EOI form?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
@@ -163,7 +163,7 @@
 
             </div>
         </details>
-        <details class="faq" id="funding-management">
+        <details class="faq" id="funding">
             <summary><span>Funding: How will site management be budgeted and supported?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
@@ -181,7 +181,7 @@
             </div>
         </details>
 
-        <details class="faq" id="crn-governance">
+        <details class="faq" id="governance">
             <summary><span>CRN governance: How will the global network coordinate?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
@@ -205,7 +205,7 @@
             </div>
         </details>
 
-        <details class="faq" id="data-sharing">
+        <details class="faq" id="data">
             <summary><span>Data sharing: What are the expectations and requirements?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
