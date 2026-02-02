@@ -274,7 +274,7 @@
 	}
 
 	details.faq > summary > span {
-		font-size: 1.05rem;
+		font-size: 1.35rem;
 		font-weight: 600;
 	}
 
