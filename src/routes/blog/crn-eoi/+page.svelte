@@ -302,6 +302,10 @@
 	.large-image {
 		border: 1px solid rgba(255, 255, 255, 0.8);
 		border-radius: 8px;
+		max-width: 480px;
+		width: 40%;
+		height: auto;
+		object-fit: cover;
 	}
 
 	/* Intro links: equal-height buttons */
@@ -339,6 +343,7 @@
 	}
 	:global(.intro .content img) {
 		margin-bottom: 0.5rem;
+		max-width: 480px;
 	}
 	:global(.intro h5:first-of-type) {
 		margin-top: 1.5rem;
