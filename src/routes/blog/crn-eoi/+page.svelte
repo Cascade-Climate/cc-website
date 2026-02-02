@@ -1,5 +1,4 @@
 <script>
-	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
     import grants from '$lib/images/nature/grants.webp';
     import CRNblock from '$lib/images/blog/CRNblock.webp';
@@ -17,7 +16,7 @@
 					Cascade Climate is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN), through standardized field trials across diverse global geographies. We aim to establish up to 15 standardized sites in high-priority geographies, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
 				<p class="intro-second">
 					By deploying standardized protocols, measurement strategies, and experimental designs across diverse geographies, the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of enhanced rock weathering (ERW) researchers.</p>
-				<p class="intro-continue">Continue reading below to learn more about the CRN and how to submit an Expression of Interest.</p>
+				<p class="intro-continue">Continue reading to learn more about the CRN and how to submit an Expression of Interest.</p>
 			</div>
 
 			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
@@ -37,15 +36,17 @@
 					href="https://forms.gle/WRgTqeFRHa8mBooJ7">Submit: Expression of Interest↗</a
 				>
 			</div>
-			<PDFLink
+			<a
+				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				link="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf">Document A: Site Selection Criteria↗</PDFLink
+				href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf">Document A: Site Selection Criteria↗</a
 			>
-			<PDFLink
+			<a
+				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				link="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf">Document B: Conflict of Interest Policy↗</PDFLink
+				href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf">Document B: Conflict of Interest Policy↗</a
 			>
 		</div>
 	</section>
