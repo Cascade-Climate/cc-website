@@ -195,7 +195,7 @@
                     <li><strong>Local Operating Teams</strong> — typically a <strong>Principal Investigator (PI)</strong> and a dedicated <strong>Site Manager</strong> with associated <strong>Field and Lab Technicians</strong> — that execute the experiments at each field site with guidance from the Working Groups and SAB.</li>
                     <li><strong>Cascade Climate</strong>, which plans to provide coordination across global sites. This includes helping develop standardized protocols and training, data management infrastructure, and managing connections across these groups.</li>
                 </ul>
-                <li>Cross-site collaboration is central to the CRN model. </li>
+                <li>Cross-site collaboration is central to the CRN model and will include the following elements: </li>
                 <ul style="margin: 0;">
                 <li>Site PIs will participate in regular Working Group meetings, share experiences and lessons learned, and contribute to network-wide synthesis efforts. Working Group meetings will be conducted in English. We will address translation support as needed. </li>
                 <li>The Science Advisory Board has final approval over experimental protocols to ensure scientific rigor and cross-site consistency. However, Local Operating Teams will have input throughout the process and can propose locally relevant questions within, or in addition to (budget permitting) the standardized framework.
