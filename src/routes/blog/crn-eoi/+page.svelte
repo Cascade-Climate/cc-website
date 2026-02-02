@@ -106,29 +106,28 @@
         <h1>EOI FAQ</h1>
         <p>On Thursday, November 14th at 12PM ET, Cascade Climate held a webinar to answer questions about this solicitation. The webinar began with a short presentation of these slides <a href="https://docs.google.com/presentation/d/1ncKOkLSXRDSerllKkqCw-J8otlXS8SHKl95CVATFjuM/edit#slide=id.g2ee758cb786_0_0" target="_blank" rel="noopener">RFP webinar↗</a>, and then transitioned to Q&amp;A. The <a href="https://zoom.us/rec/share/hEmJbUupbGIH6luB2HLNtP27uKIdudfeRyhJ1WdK_Kb9g3O4qOjkF8sk4CS2Yitz.Oj3P7Hg0lI_oGuU6" target="_blank" rel="noopener">recording↗</a> of the Q&amp;A is available via the link (passcode: ae0ND@Yd); please note that we erroneously stated that &ldquo;the Researcher could only be from an academic or non-profit institution.&rdquo; This was not consistent with the wording of the solicitation, and we&rsquo;ve addressed this in the FAQ below.</p>
     
-        <h2>Partnership</h2>
-        <details class="faq">
+        <details class="faq" id="researcher-from-private-company">
             <summary><span>Can the Researcher be from a private company?</span></summary>
             <div class="answer">
                 <p>Yes. Any scientific researcher with the necessary expertise and instrumentation to carry out the collection, analysis, and publication of a proposed dataset may apply to this RFP. (Note: During the webinar, we erroneously stated that the Researcher could only be from an academic or non-profit institution. This was not consistent with the wording of the solicitation.)</p>
             </div>
         </details>
 
-        <details class="faq">
-            <summary><span>Can the Research Partner and Deployment Partner be at the same Organization?</span></summary>
+        <details class="faq" id="eligibility-who-should-submit">
+            <summary><span>Eligibility: Who should submit an EOI form?</span></summary>
             <div class="answer">
                 <p>No. The Researcher and Deployment Partner cannot be from the same organization.</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="researcher-from-northern-america-europe">
             <summary><span>If the Deployment Partner is from outside Northern America and Europe, can the Researcher be from Northern America and Europe?</span></summary>
             <div class="answer">
                 <p>This solicitation has no limitations on the nationalities of either partner.&nbsp; There will be special consideration given to proposals that collect data on fields outside of Northern America and Europe. Please refer to the Selection Criteria section of the solicitation for full details on special considerations.</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="limits-grant-applications">
             <summary><span>Are there limits on the number of grant applications per Deployment Partner, or institution?</span></summary>
             <div class="answer">
                 <p>No. There are no limits on the number of grant applications per institution.</p>
@@ -136,28 +135,28 @@
         </details>
 
 <h2>Funding</h2>
-        <details class="faq">
+        <details class="faq" id="anticipated-funding-size">
             <summary><span>What is the anticipated funding size?</span></summary>
             <div class="answer">
                 <p>We welcome research proposals between $20,000 and $200,000.&nbsp;&nbsp;</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="funding-postdocs-students">
             <summary><span>Can the funding be used to support the salary of post-docs and students?</span></summary>
             <div class="answer">
                 <p>For staff and research scientists not in non-PI or co-PI roles, as well as postdoctoral, graduate and/or undergraduate research assistants, the grant can provide salary support and related benefits, including graduate student tuition.&nbsp; Please refer to the Allowable Expenses section of the solicitation for full details.</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="proposals-through-institutions-overhead">
             <summary><span>Researchers at universities are often required to submit proposals to RFPs through the institution at some agreed overhead rate. Will proposals be accepted through institutions and at what overhead rate?</span></summary>
             <div class="answer">
                 <p>Indirect costs may be included but must not exceed 10% of the total project budget. Please refer to the Indirect Costs section of the solicitation for full details.</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="proposal-co-funding">
             <summary><span>Can a proposal include co-funding?</span></summary>
             <div class="answer">
                 <p>Applicants must include a proposed budget in their application. If this proposal includes other funding sources, the budget should explain how costs will be allocated between this proposal and other funding sources, and also include an explanation of the status of the other funding sources (i.e., funds received, awaiting funds, proposal submitted, etc.)</p>
@@ -165,7 +164,7 @@
         </details>
 
 <h2>Data</h2>
-        <details class="faq">
+        <details class="faq" id="data-management-patents">
             <summary><span>How will data be managed? And potential patents treated?</span></summary>
             <div class="answer">
                 <p>Please see the Data Sharing Requirements section of the solicitation for full details. Intellectual property will remain the property of the awardee, and we will work with awardees to define grant terms accordingly.</p>
@@ -173,28 +172,28 @@
         </details>
 
 <h2>Scope</h2>
-        <details class="faq">
+        <details class="faq" id="erw-coastal-mine-tailings-scope">
             <summary><span>Are ERW deployments in coastal environments, mine tailings, and other settings beyond soils in scope?&nbsp;</span></summary>
             <div class="answer">
                 <p>Only field data from ERW deployments on soils is in scope.</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="new-field-trials-deployment-partner-funding">
             <summary><span>Does this solicitation support work on new field trials if the Deployment Partner is funding feedstock, spreading, and MRV?</span></summary>
             <div class="answer">
                 <p>Yes.</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="deployment-partners-no-mrv">
             <summary><span>How do you handle Deployment Partners that do not plan to conduct MRV?</span></summary>
             <div class="answer">
                 <p>Measurements that are generally required for commercial MRV are not within the scope of this solicitation. For proposals where the Deployment Partner does not plan to conduct MRV, there should be an explanation for how relevant Contextual Data will be collected and the funding source for Contextual Data collection. Please refer to the Appendix A of the solicitation for a detailed description of Contextual Data.</p>
             </div>
         </details>
 
-        <details class="faq">
+        <details class="faq" id="additional-proxies-scope">
             <summary><span>Are additional proxies (e.g. stable isotopes, granulometry) within scope?</span></summary>
             <div class="answer">
                 <p>Yes. We welcome the creativity of the ERW community to propose the collection of any datasets that would advance the field.</p>
