@@ -14,8 +14,9 @@
 				</h1>
 
 				<p>
-					Cascade Climate is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN), through standardized field trials across diverse global geographies. We aim to establish up to 15 standardized sites in high-priority geographies, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years. By deploying standardized protocols, measurement strategies, and experimental designs across diverse geographies, the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of enhanced rock weathering (ERW) researchers.
-				</p>
+					Cascade Climate is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN), through standardized field trials across diverse global geographies. We aim to establish up to 15 standardized sites in high-priority geographies, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
+                    
+                    <p>By deploying standardized protocols, measurement strategies, and experimental designs across diverse geographies, the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of enhanced rock weathering (ERW) researchers.</p>
 			</div>
 
 			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
@@ -70,13 +71,13 @@
             <li>How can different CDR quantification strategies (e.g., measuring changes in soil chemistry, measuring changes in porewater chemistry, using ion exchange resins) help us understand the full picture of feedstock weathering and transport of carbon? Deploying these methods side-by-side will help clarify the complexities of the weathering process and compare between different measurement methods.</li>
             <li>What are the agricultural benefits of ERW, and what factors drive them? Reported yield impacts<sup>1,5,6</sup> range from negligible to dramatic, but studies often lack proper controls or statistical power to isolate the mechanisms underpinning these effects.</li>
             <li>What happens to weathering products in deeper soils? Reactions below the commonly measured depths may reverse carbon removal, but these dynamics are difficult to observe and poorly represented in models.</li>
-        <p> Across these sites, the network will attempt to reconcile different measurement strategies — solid phase, aqueous phase, and ion exchange resins — and to track the fate of cations in deeper (~1m) soils, where significant uncertainty remains. Agronomic parameters will also be measured on all sites in order to better understand what mechanisms lead to observed crop yield improvements.  Measurements will be geared toward sufficiently constraining the variability of key soil parameters to support the development, calibration, validation and intercomparison of geochemical models. <p>
+        <p>Across these sites, the network will attempt to reconcile different measurement strategies — solid phase, aqueous phase, and ion exchange resins — and to track the fate of cations in deeper (~1m) soils, where significant uncertainty remains. Agronomic parameters will also be measured on all sites in order to better understand what mechanisms lead to observed crop yield improvements. Measurements will be geared toward sufficiently constraining the variability of key soil parameters to support the development, calibration, validation and intercomparison of geochemical models.</p>
         </ol>
 
     </section>
 
-    <section id="our-approach">
-        <h1>Our Approach</h1>
+    <section id="the-opportunity">
+        <h1>The Opportunity</h1>
 
         <p>We are seeking expressions of interest from institutions that can host and operate a CRN field site. Strong candidates will have:</p>
         <ul style="margin: 0;">
@@ -92,7 +93,7 @@
 
     
 
-    <section id="eoi-faq">
+    <section id="faq">
 
         <h1>EOI FAQ</h1>
       
@@ -120,12 +121,12 @@
                 <ul style="margin: 0;">
                 <li>Any person who has a field site that aligns with the site characteristics described in the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> should submit an EOI.</li>
                 <li>See our <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">Conflict of Interest Policy</a> details for more information on who is eligible to host or manage a CRN site, including how ERW Project Developers can engage with the CRN</li>
-                <li><strong>If you are a researcher (PI) who is interested in engaging with the CRN, but do not have a site to propose for a field trial, please email us at grants@cascadeclimate.org.<strong>Include your name, institution/organization, public profile (professional webpage, Google Scholar, ResearchGate, or similar), the specific geographies where you work, and a brief description of your interest in the CRN.</li>
-                <li><strong>Please submit one EOI form per specific site.<strong> If you have identified multiple potentially eligible sites, you are encouraged to submit multiple EOIs so you can share information on each site individually. </li>
+                <li><strong>If you are a researcher (PI) who is interested in engaging with the CRN, but do not have a site to propose for a field trial, please email us at grants@cascadeclimate.org.</strong> Include your name, institution/organization, public profile (professional webpage, Google Scholar, ResearchGate, or similar), the specific geographies where you work, and a brief description of your interest in the CRN.</li>
+                <li><strong>Please submit one EOI form per specific site.</strong> If you have identified multiple potentially eligible sites, you are encouraged to submit multiple EOIs so you can share information on each site individually. </li>
                 <li>We prefer submissions in English and welcome materials translated from other languages. </li>
-                <li><strong>We encourage you to submit an EOI form even if your site does not meet every preferred criterion.<strong>  The Site Selection Criteria  distinguishes between required and preferred characteristics. Sites that meet the required criteria but lack some preferred criteria will still be considered. For example, if your site is not within the preferred pH range, you should still apply, as there are other factors (such as soil buffer capacity) that may allow a lower pH soil to be accommodated.
+                <li><strong>We encourage you to submit an EOI form even if your site does not meet every preferred criterion.</strong> The Site Selection Criteria distinguishes between required and preferred characteristics. Sites that meet the required criteria but lack some preferred criteria will still be considered. For example, if your site is not within the preferred pH range, you should still apply, as there are other factors (such as soil buffer capacity) that may allow a lower pH soil to be accommodated.
                 </li>
-                <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process.<strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong> Please see the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail. 
+                <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong> Please see the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail. 
                 </li>
             </div>
         </details>
@@ -144,16 +145,17 @@
         </details>
 
         <details class="faq" id="preperation-before-submitting">
-            <summary><span>Preperation: What should I know before submitting the EOI form?</span></summary>
+            <summary><span>Preparation: What should I know before submitting the EOI form?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>We hope and expect that most applicants will not need to spend more than 30 minutes completing the form, assuming you have the information below readily available. Please note the guidance in the form about refraining from sharing long paragraphs of text; simply listing information is expected and preferred where suitable to respond to a given prompt.</li>
-                <li>Gathering information on the following will be useful in filling out the <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">EOI form</a> for specific prompts and which information are required versus preferred to share):</li>
+                <li>Gathering information on the following will be useful in filling out the <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">EOI form</a> for specific prompts and which information is required versus preferred to share):</li>
                 <ul style="margin: 0;">
                     <li>Basic site characteristics (location, area, soil type, soil characteristics, etc.) </li>
                     <li>Information about land access and ownership/management arrangements</li>
                     <li>Your institution’s capacity and relevant expertise to manage such a research trial</li>
-                    <li>Any existing infrastructure or instrumentation at the site</li> <ul>
+                    <li>Any existing infrastructure or instrumentation at the site</li>
+                </ul>
 
             </div>
         </details>
@@ -161,8 +163,8 @@
             <summary><span>Funding: How will site management be budgeted and supported?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
-                <li>This call for Expressions of Interest aims to select one to two CRN sites to support their deployment in 2026 – with philanthropic funding secured to fully support site operations for these sites over a five-year period.<li>
-                <li>Cascade will continue to lead fundraising efforts to expand the CRN over time. We anticipate reaching out to additional site partners sourced via this EOI that may be suited to launch sites in 2027-2030 as the program grows toward 12–15 sites over the coming years. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.<strong><li>
+                <li>This call for Expressions of Interest aims to select one to two CRN sites to support their deployment in 2026 – with philanthropic funding secured to fully support site operations for these sites over a five-year period.</li>
+                <li>Cascade will continue to lead fundraising efforts to expand the CRN over time. We anticipate reaching out to additional site partners sourced via this EOI that may be suited to launch sites in 2027-2030 as the program grows toward 12–15 sites over the coming years. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong></li>
                 <li>Funding is intended to cover the costs of operating a CRN field site, including:</li>
                 <ul style="margin: 0;">
                     <li>Personnel (including partial Principal Investigator time and a full-time Site Manager)</li>
@@ -183,12 +185,11 @@
                 <li>CRN governance roles include:</li>
                 <ul style="margin: 0;">
                     <li><strong>A Steering Committee</strong>, which has decision-making authority over funding and the annual operating plan of the CRN. </li>
-                    <li><strong>A Science Advisory Board (SAB)<strong> of leading researchers that provides scientific oversight, reviewing objectives, experimental protocols, and site designs.</li>
+                    <li><strong>A Science Advisory Board (SAB)</strong> of leading researchers that provides scientific oversight, reviewing objectives, experimental protocols, and site designs.</li>
                     <li><strong>Working Groups</strong> which bring together disciplinary experts to ensure standardization across sites and support experimental design and data analysis. Principal Investigators (PIs) of each site will also be members of the Working Group.
                     </li>
                     <li><strong>Local Operating Teams</strong> — typically a <strong>Principal Investigator (PI)</strong> and a dedicated <strong>Site Manager</strong> with associated <strong>Field and Lab Technicians</strong> — that execute the experiments at each field site with guidance from the Working Groups and SAB.</li>
-                    <li><strong>Cascade Climate</strong>, which plans to provide coordination across global sites. This includes helping develop standardized protocols and training, data management infrastructure, and managing connections across these groups.<strong>
-                    </li>
+                    <li><strong>Cascade Climate</strong>, which plans to provide coordination across global sites. This includes helping develop standardized protocols and training, data management infrastructure, and managing connections across these groups.</li>
                 </ul>
                 <li>Cross-site collaboration is central to the CRN model. </li>
                 <ul style="margin: 0;">
@@ -205,7 +206,7 @@
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>Data produced by this collaboration will be shared in pre-defined pathways to accelerate speed to learning, while ensuring farmer privacy and respecting academic publishing rights and norms. </li>
-                <li>Cascade Climate will provide global data management infrastructure. The CRN is designed to generate field-wide learning in addition to site-specific results. By deploying standardized protocols, measurement strategies, and site designs across diverse geographies, the network will produce datasets that can be meaningfully compared and synthesized — enabling the kind of global analysis that isolated studies cannot support</li>
+                <li>Cascade Climate will provide global data management infrastructure. The CRN is designed to generate field-wide learning in addition to site-specific results. By deploying standardized protocols, measurement strategies, and site designs across diverse geographies, the network will produce datasets that can be meaningfully compared and synthesized — enabling the kind of global analysis that isolated studies cannot support.</li>
                 <li>We expect all Site Host Institutions, PIs, and all other partners involved in data collection will review and sign off on data license agreements, which are required to receive funding. Data license agreements will elaborate on data sharing requirements with expectations along the following lines:
                 </li>
                 <ul style="margin: 0;">
@@ -213,7 +214,7 @@
                     <li>Quality-controlled data will be made accessible to a community of academic geochemical modelers Cascade plans to convene as part of this initiative, for the purpose of calibrating and validating these models.</li>
                     <li>Full datasets at the sample-level will be made publicly available upon preprint submission (required).</li>
                     <li>Complete datasets will be made publicly available if preprint submission has not resulted in full dataset sharing within a reasonable time following initial rock spread.</li>
-                    <li>We may offer an option to apply for a 6 month extension to these policies to protect early career professionals’ publication timelines.</li>
+                    <li>We may offer an option to apply for a 6-month extension to these policies to protect early career professionals’ publication timelines.</li>
                     <li>All data will be shared under a non-commercial use license.</li>
                 </ul>
             </div>
