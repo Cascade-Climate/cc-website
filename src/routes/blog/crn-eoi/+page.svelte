@@ -11,38 +11,20 @@
 		<div class="content">
 			<div class="copy">
 				<h1>
-					<strong>Request for Expressions of Interest:</strong> Coordinated Research Network for ERW
+					<strong>Call for Expressions of Interest:</strong> Coordinated Research Network for Enhanced Rock Weathering
 				</h1>
 
 				<p>
-					Cascade is seeking expressions of interest to host and operate field sites as part of a global
-					Coordinated Research Network (CRN) for enhanced rock weathering (ERW). Host sites will receive
-					funding for operations, authorship opportunities on site-specific and network-wide studies, and
-					access to a global community of ERW researchers and expert working groups. This coordinated
-					approach — deploying standardized protocols, measurement strategies, and experimental designs
-					across diverse geographies — will answer critical science questions and enable global analyses
-					that accelerate progress for the entire field.
+					Cascade Climate is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN), through standardized field trials across diverse global geographies. We aim to establish up to 15 standardized sites in high-priority geographies, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years. By deploying standardized protocols, measurement strategies, and experimental designs across diverse geographies, the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of enhanced rock weathering (ERW) researchers.
 				</p>
 			</div>
 
 			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
 		</div>
 
-		<p>
-			Questions? Email us at
-			<a
-				style="color:#00EDAE;"
-				href="mailto:grants@cascadeclimate.org"
-				target="_blank"
-				rel="noopener"
-				>grants@cascadeclimate.org</a
-			>.
-		</p>
-
-		<h5 style="color:white">Deadline: December 20th, 2024 at 11:59PM ET.</h5>
+		<h5 style="color:white">Deadline: March 10, 2026 at 11:59PM ET.</h5>
 		<h5 style="color:white">
-			Information/Q&amp;A Session: November 14th, 2024 at 12:00PM ET. Link to recording in Q&amp;A section
-			below.
+			Information Session: TBD
 		</h5>
 
 		<div class="links">
@@ -72,21 +54,25 @@
     
     <section id="the-challenge">
         <h1>The Challenge</h1>
-        <p>Enhanced rock weathering (ERW) is a carbon dioxide removal (CDR) strategy that involves the spreading of alkaline feedstocks (e.g., silicates, carbonates, or other alkaline materials) on agricultural soils. In the last few years, there has been a dramatic increase in the number of commercial ERW deployments globally driven by voluntary carbon market demand. The quantification of carbon removal in an ERW deployment is complex, and involves a range of biogeochemical fluxes that can impact the net carbon balance across soil systems, groundwater, surface water systems, and the ocean. (See Cascade’s recently published, <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>‘Foundations for Carbon Dioxide Removal Quantification in ERW Deployments’↗ </em></a>).</p>
+        <p>Enhanced rock weathering (ERW) is a carbon dioxide removal (CDR) strategy that involves the spreading of alkaline crushed rock feedstocks (including silicates, carbonates, or other alkaline materials) on agricultural soils. The quantification of carbon removal in an ERW deployment is complex, and involves a range of biogeochemical fluxes that can impact the net carbon balance across soil systems, groundwater, surface water systems, and the ocean. A brief explainer on enhanced rock weathering can be found <a href="https://cascadeclimate.org/Cascade%20Climate_Enhanced%20Rock%20Weathering%20101_vFinal.pdf" target="_blank" rel="noopener">here</a>.</p>
 
-        <p>For ERW deployments to be economically feasible at scale, it is highly likely that quantification of CDR will need to shift from “measurement-driven” to being increasingly reliant on biogeochemical models. Currently, models cannot reliably predict and quantify the net carbon balance resulting from ERW deployments, particularly across heterogeneous environments.</p>
+        <p>Rigorous work across an expanding ecosystem of stakeholders and approaches is driving real progress in ERW. Yet there remains a necessity for coordinated research across a range of site characteristics with consistent, mutually comparable site designs and measurement strategies to efficiently answer the key questions faced by the field.</p>
 
-        <p>In the context of commercial ERW deployments, common quantification practice today<sup><a id="citation1" href="#footnote1">1</a></sup> is to directly measure the release of base cations from the feedstock and subsequent cation or dissolved inorganic carbon (DIC) export within the top 20-30 cm of the soil profile<sup><a id="citation2" href="#footnote2">2</a></sup>.  A key bottleneck for present modeling efforts, and for our broader understanding of rock weathering and solute transport dynamics, is a lack of high-quality measurements of biogeochemical processes in ERW deployments beyond the initial dissolution of the feedstock in surface soils. While not typically measured at high resolution in commercial deployments, these processes are still critical to constraining the net climate impact of an ERW project, and so field data is needed to better calibrate and validate future models.</p>
 
     </section>
 
 	<section id="the-objective">
         <h1>The Objective</h1>
-        <p>We welcome <strong>research proposals between $20,000 and $200,000 that aim to collect and publish high-quality ERW field datasets on existing or planned deployments, that go beyond typical commercial expectations for CDR quantification (e.g., beyond feedstock dissolution measurements in shallow soils).</strong> In these scientific partnerships, <strong>Deployment Partners</strong> agree to open up an existing or upcoming deployment site for additional monitoring and help coordinate logistics, and <strong>Researchers</strong> co-propose a study, collect and analyze the data, and publish the results.</p>
+        <p>The Coordinated Research Network (CRN) is our response to this challenge. It aims to establish up to 15 highly standardized ERW field sites in high-priority geographies (i.e. sub-tropical or tropical climates). We are targeting 1-2 sites for a 2026 deployment for which we have secured philanthropic funding to support over a five year period.</p>
 
-        <p>We believe that this partnership model—in which researchers “piggyback” on existing deployments by carrying out measurements that go beyond what is already planned—will accelerate the collection of novel field datasets in ERW. It offers an attractive avenue for tackling high-priority research questions by decreasing the logistical and cost burden for researchers, while extracting even greater scientific learning value from the current wave of commercial ERW activity.</p>
-        
-        <p>We expect that initial measurements characterizing the feedstock and initial soil conditions, as well as measurements of feedstock dissolution rates in surface soils, are already paid for in the deployment through some other means (e.g. commercial carbon credit sales). Thus, this RFP will not fund the collection of these <strong>Contextual Data</strong> variables; it will fund only the collection of the ‘additional’ dataset (e.g., sample collection and lab analyses) along with associated research and analysis.</p>
+        <p>The Coordinated Research Network (CRN) intends to answer these questions:</p>
+        <ol style="margin: 0;">
+            <li>Across a range of soils and climates, what is the carbon removal potential of ERW and on what timescales? Field studies have produced divergent estimates<sup>1,2,3,4,7,8</sup>, and differences in measurement strategies, objectives, data reporting, and site conditions make it difficult to draw broad conclusions.</li>
+            <li>How can different CDR quantification strategies (e.g., measuring changes in soil chemistry, measuring changes in porewater chemistry, using ion exchange resins) help us understand the full picture of feedstock weathering and transport of carbon? Deploying these methods side-by-side will help clarify the complexities of the weathering process and compare between different measurement methods.</li>
+            <li>What are the agricultural benefits of ERW, and what factors drive them? Reported yield impacts<sup>1,5,6</sup> range from negligible to dramatic, but studies often lack proper controls or statistical power to isolate the mechanisms underpinning these effects.</li>
+            <li>What happens to weathering products in deeper soils? Reactions below the commonly measured depths may reverse carbon removal, but these dynamics are difficult to observe and poorly represented in models.</li>
+        <p> Across these sites, the network will attempt to reconcile different measurement strategies — solid phase, aqueous phase, and ion exchange resins — and to track the fate of cations in deeper (~1m) soils, where significant uncertainty remains. Agronomic parameters will also be measured on all sites in order to better understand what mechanisms lead to observed crop yield improvements.  Measurements will be geared toward sufficiently constraining the variability of key soil parameters to support the development, calibration, validation and intercomparison of geochemical models. <p>
+        </ol>
 
         <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
 			<PDFLink link="/Cascade-Climate-Regranting-Solicitation.pdf" variant="accent">Link to Full RFP Solicitation PDF↗</PDFLink>
@@ -94,23 +80,17 @@
 
     </section>
 
-    <section id="priority-topic-areas">
-        <h1>Priority Topic Areas</h1>
+    <section id="our-approach">
+        <h1>Our Approach</h1>
 
-        <p>We seek proposals that build upon the data typically collected in ERW commercial deployments, beyond the initial release and export of cations from the feedstock in surface soils. <strong>We welcome the creativity of the ERW community to propose the collection of any datasets that would advance the field.</strong> Below are some topic areas of particular interest:</p>
+        <p>We are seeking expressions of interest from institutions that can host and operate a CRN field site. Strong candidates will have:</p>
         <ul style="margin: 0;">
-        <li>Measurement of secondary phases (e.g., silicates, carbonates, Fe- and Al-oxyhydroxides, amorphous phases) in deep soil cores (&gt;50 cm)</li>
-        <li>Measurement of the components of the carbonate system and/or cations in waters that drain ERW deployments (e.g., groundwater/porewater, tile drains, or low-order streams)</li>
-        <li>Measurement of greenhouse gas fluxes (N2O, CH4, CO2)</li>
-        <li>Cation sorption in deep soil cores</li>
-        <li>Soil organic carbon stock monitoring</li>
+        <li>Long-term, secure access to suitable agricultural research sites in areas with high weathering potential</li>
+        <li>Institutional capacity to host, operate, and manage a multi-year field trial</li>
+        <li>Relevant expertise in soil science, biogeochemistry, hydrology, agronomy, or other fields closely related to ERW science</li>
+        <li>Willingness to collaborate in a global collaborative research network, follow standardized protocols and site design, and contribute to a global network-wide synthesis</li>
         </ul>
-        <p>Research proposals focused on collecting field data to inform health and safety impacts of ERW (e.g., the transport and speciation of trace metals) will also be considered.</p>
-        <p>The following are <strong> not </strong>in scope for this RFP:</p>
-        <ul style="margin: 0;">
-        <li>Direct funding of new ERW deployments or field trials (e.g. feedstock transportation, logistics, spreading)</li>
-        <li>Measurements that are often required for commercial MRV &mdash; see Appendix A for full list of Contextual Data expected at the deployment site. In some circumstances, if additional measurements of one or more of the Contextual Data variables is needed in order to increase the resolution of data collection already planned by the Deployment Partner, this request can be included in the proposal and funding will be considered on a case-by-case basis.</li>
-        </ul>
+        <p>For information on site selection criteria (required and preferred), personnel and partner requirements, trial design specifications, and additional details, <strong><a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">please review Document A: Site Selection Criteria.</a></strong></p>
     </section>
 
     <section id="important-dates">
@@ -296,5 +276,16 @@
 	.large-image {
 		border: 1px solid rgba(255, 255, 255, 0.8);
 		border-radius: 8px;
+	}
+
+	/* Tighter gap between intro description and Deadline/buttons */
+	:global(.intro .content) {
+		margin-bottom: 0;
+	}
+	:global(.intro .content img) {
+		margin-bottom: 0.5rem;
+	}
+	:global(.intro h5:first-of-type) {
+		margin-top: 0.25rem;
 	}
 </style>
