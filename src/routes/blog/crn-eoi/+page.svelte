@@ -13,39 +13,39 @@
 					<strong>Call for Expressions of Interest:</strong> Coordinated Research Network for Enhanced Rock Weathering
 				</h1>
 
-				<p>
+				<p class="intro-first">
 					Cascade Climate is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN), through standardized field trials across diverse global geographies. We aim to establish up to 15 standardized sites in high-priority geographies, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
-				<p>
+				<p class="intro-second">
 					By deploying standardized protocols, measurement strategies, and experimental designs across diverse geographies, the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of enhanced rock weathering (ERW) researchers.</p>
+				<p class="intro-continue">Continue reading below to learn more about the CRN and how to submit an Expression of Interest.</p>
 			</div>
 
 			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
 		</div>
 
-		<h5 style="color:white">Deadline: March 10, 2026 at 11:59PM ET.</h5>
+		<h5 style="color:white">Deadline: March 10, 2026 at 11:59PM ET</h5>
 		<h5 style="color:white">
 			Information Session: TBD
 		</h5>
 
 		<div class="links">
 			<div style="text-align: center;">
-				<PDFLink
+				<a
+					style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 					target="_blank"
 					rel="noopener"
-					link="/Cascade-Climate-Regranting-Solicitation.pdf">RFP Solicitation↗</PDFLink
+					href="https://forms.gle/WRgTqeFRHa8mBooJ7">Submit: Expression of Interest↗</a
 				>
 			</div>
-			<a
-				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
+			<PDFLink
 				target="_blank"
-				href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form">Proposal Application
-				Form↗</a
+				rel="noopener"
+				link="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf">Document A: Site Selection Criteria↗</PDFLink
 			>
-			<a
-				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
+			<PDFLink
 				target="_blank"
-				href="https://docs.google.com/forms/d/e/1FAIpQLSfBKrkh9e52YAT2R5z2rQ7_ZlqSWJiIzzIPIIOGKbB1qyOAsA/viewform">Networking
-				List↗</a
+				rel="noopener"
+				link="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf">Document B: Conflict of Interest Policy↗</PDFLink
 			>
 		</div>
 	</section>
@@ -299,14 +299,43 @@
 		border-radius: 8px;
 	}
 
-	/* Tighter gap between intro description and Deadline/buttons */
+	/* Intro links: equal-height buttons */
+	:global(.intro .links) {
+		align-items: stretch;
+	}
+	:global(.intro .links > div) {
+		display: flex;
+		flex-grow: 1;
+		min-width: 0;
+	}
+	:global(.intro .links > div a) {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	/* Intro spacing: equal gap between title/paragraphs and paragraphs/Deadline */
+	:global(.intro .copy h1) {
+		margin-bottom: 0.6rem;
+	}
+	:global(.intro .copy .intro-second) {
+		margin-top: 1.25rem;
+	}
+	:global(.intro .copy .intro-continue) {
+		margin-top: 1.25rem;
+	}
 	:global(.intro .content) {
+		margin-bottom: 0;
+	}
+	:global(.intro .copy) {
 		margin-bottom: 0;
 	}
 	:global(.intro .content img) {
 		margin-bottom: 0.5rem;
 	}
 	:global(.intro h5:first-of-type) {
-		margin-top: 0.25rem;
+		margin-top: 1.5rem;
 	}
 </style>
