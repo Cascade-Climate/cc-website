@@ -317,6 +317,7 @@
 
 	.highlights a {
 		display: inline-block;
+		margin-top: auto;
 		border-radius: 2rem;
 		background-color: var(--color-accent);
 		text-align: center;
