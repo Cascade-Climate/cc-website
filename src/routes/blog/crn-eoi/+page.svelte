@@ -95,44 +95,73 @@
         <p><strong>If you are potentially interested in hosting a CRN site</strong>, <strong><a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">please complete the Expression of Interest form</a></strong> by the deadline: March 10, 2026.</p>
     </section>
 
-    <section id="important-dates">
-        <h1>Important Dates</h1>
-        <p>The proposals will be due on <strong>December 20th, 2024 at 11:59pm ET</strong>,<strong> </strong> and <strong> </strong>funding decisions will be made by no later than <strong>February 6th, 2025</strong>. For proposals that have a start date in Spring 2025, Cascade can provide a letter that specifies our intent to fund the project upon selection.</p>
-        <p>Applications should be no longer than four to eight pages (exclusive of supporting information), and should be submitted via <a href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form" target="_blank" rel="noopener">this form↗</a>.&nbsp; Applicants are welcome to include figures and references to papers, preprints, and similar as a part of the application; please have all citations at the end of the document. Applicants are advised to not share any information that is considered confidential or a trade secret.</p>
-        <p>The Cascade team will also be hosting an open information and Q&A session on <strong>Thursday, November 14th, 2024 at 12:00PM ET.</strong> <a href="https://lu.ma/pjmx9xl1" target="_blank" rel="noopener">Register Here↗</a></p>
-        <p>For additional questions related to this RfP or the proposal process, please contact the Cascade Climate RFP Team at <a href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">grants@cascadeclimate.org↗</a>.&nbsp; Potential applicants are also encouraged to bring their questions to our webinar and Q&amp;A session for this RFP, scheduled for <strong>Thursday, November 14th at 12PM ET</strong>. This will be recorded and made available on the Cascade website.</p>
-    </section>  
+    
 
     <section id="eoi-faq">
 
         <h1>EOI FAQ</h1>
-        <p>On Thursday, November 14th at 12PM ET, Cascade Climate held a webinar to answer questions about this solicitation. The webinar began with a short presentation of these slides <a href="https://docs.google.com/presentation/d/1ncKOkLSXRDSerllKkqCw-J8otlXS8SHKl95CVATFjuM/edit#slide=id.g2ee758cb786_0_0" target="_blank" rel="noopener">RFP webinar↗</a>, and then transitioned to Q&amp;A. The <a href="https://zoom.us/rec/share/hEmJbUupbGIH6luB2HLNtP27uKIdudfeRyhJ1WdK_Kb9g3O4qOjkF8sk4CS2Yitz.Oj3P7Hg0lI_oGuU6" target="_blank" rel="noopener">recording↗</a> of the Q&amp;A is available via the link (passcode: ae0ND@Yd); please note that we erroneously stated that &ldquo;the Researcher could only be from an academic or non-profit institution.&rdquo; This was not consistent with the wording of the solicitation, and we&rsquo;ve addressed this in the FAQ below.</p>
+      
     
-        <details class="faq" id="researcher-from-private-company">
-            <summary><span>Can the Researcher be from a private company?</span></summary>
+        <details class="faq" id="why-participate">
+            <summary><span>Participation: Why participate in the CRN?</span></summary>
             <div class="answer">
-                <p>Yes. Any scientific researcher with the necessary expertise and instrumentation to carry out the collection, analysis, and publication of a proposed dataset may apply to this RFP. (Note: During the webinar, we erroneously stated that the Researcher could only be from an academic or non-profit institution. This was not consistent with the wording of the solicitation.)</p>
+                <ul style="margin: 0;">
+                    <li>Help advance science on the potential carbon dioxide removal (CDR) and agricultural benefits of enhanced rock weathering (ERW) globally.</li>
+                    <li>Participating institutions and researchers will receive:
+                        <ul style="margin: 0;">
+                            <li>Funding to support site operations, personnel, and equipment. See the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail on the anticipated personnel roles and level of effort.</li>
+                            <li>Lead or senior authorship on publications arising from their site</li>
+                            <li>Co-authorship opportunities on global synthesis studies</li>
+                            <li>Access to a global network of ERW researchers and support from Cascade Climate. This includes help developing standardized protocols and training; data management infrastructure; and connections to an international research community. Teams should anticipate that openness and collaboration are core to the CRN model as indicated by the Global Scientific Collaboration and Data Sharing and Publication statements that conclude the EOI form.</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </details>
 
         <details class="faq" id="eligibility-who-should-submit">
             <summary><span>Eligibility: Who should submit an EOI form?</span></summary>
             <div class="answer">
-                <p>No. The Researcher and Deployment Partner cannot be from the same organization.</p>
+                <ul style="margin: 0;">
+                <li>Any person who has a field site that aligns with the site characteristics described in the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> should submit an EOI.</li>
+                <li>See our <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">Conflict of Interest Policy</a> details for more information on who is eligible to host or manage a CRN site, including how ERW Project Developers can engage with the CRN</li>
+                <li><strong>If you are a researcher (PI) who is interested in engaging with the CRN, but do not have a site to propose for a field trial, please email us at grants@cascadeclimate.org.<strong>Include your name, institution/organization, public profile (professional webpage, Google Scholar, ResearchGate, or similar), the specific geographies where you work, and a brief description of your interest in the CRN.</li>
+                <li><strong>Please submit one EOI form per specific site.<strong> If you have identified multiple potentially eligible sites, you are encouraged to submit multiple EOIs so you can share information on each site individually. </li>
+                <li>We prefer submissions in English and welcome materials translated from other languages. </li>
+                <li><strong>We encourage you to submit an EOI form even if your site does not meet every preferred criterion.<strong>  The Site Selection Criteria  distinguishes between required and preferred characteristics. Sites that meet the required criteria but lack some preferred criteria will still be considered. For example, if your site is not within the preferred pH range, you should still apply, as there are other factors (such as soil buffer capacity) that may allow a lower pH soil to be accommodated.
+                </li>
+                <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process.<strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong> Please see the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail. 
+                </li>
             </div>
         </details>
 
-        <details class="faq" id="researcher-from-northern-america-europe">
-            <summary><span>If the Deployment Partner is from outside Northern America and Europe, can the Researcher be from Northern America and Europe?</span></summary>
+        <details class="faq" id="process-deadline">
+            <summary><span>Process: What is the EOI deadline and next steps?</span></summary>
             <div class="answer">
-                <p>This solicitation has no limitations on the nationalities of either partner.&nbsp; There will be special consideration given to proposals that collect data on fields outside of Northern America and Europe. Please refer to the Selection Criteria section of the solicitation for full details on special considerations.</p>
+                <ul style="margin: 0;">
+                    <li>The deadline for <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">EOI submissions</a> is March 10, 2026.</li>
+                    <li>We plan to only share submitted information among Cascade Climate staff and academics who are members of our global Scientific Advisory Board and Working Group as needed for review. Information submitted will not be otherwise shared or circulated unless with prior permission by the Primary Contact indicated in the form submission.</li>
+                    <li>EOI forms will be reviewed by the Cascade team throughout the month of March 2026.</li>
+                    <li>Submissions that best match the Site Selection Criteria will be contacted to discuss next steps in April and May of 2026.</li>
+                    <li>While we intend to explore partnerships with all sites that sufficiently meet the criteria, we will need to prioritize formalizing partnerships, developing budgets and pursuing contracting with 1–2 sites that demonstrate a realistic path to full launch before a Fall 2026 or Spring 2027 planting period. A full launch requires a contract in place, onboarded personnel, baseline soil sampling, instrumentation installations, and rock spread before a locally relevant planting season that will happen ideally by March 2027.</li>
+                </ul>
             </div>
         </details>
 
-        <details class="faq" id="limits-grant-applications">
-            <summary><span>Are there limits on the number of grant applications per Deployment Partner, or institution?</span></summary>
+        <details class="faq" id="preperation-before-submitting">
+            <summary><span>Preperation: What should I know before submitting the EOI form/?</span></summary>
             <div class="answer">
-                <p>No. There are no limits on the number of grant applications per institution.</p>
+                <ul style="margin: 0;">
+                <li>We hope and expect that most applicants will not need to spend more than 30 minutes completing the form, assuming you have the information below readily available. Please note the guidance in the form about refraining from sharing long paragraphs of text; simply listing information is expected and preferred where suitable to respond to a given prompt.</li>
+                <li>Gathering information on the following will be useful in filling out the <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">EOI form</a> for specific prompts and which information are required versus preferred to share):</li>
+                <ul style="margin: 0;">
+                    <li>Basic site characteristics (location, area, soil type, soil characteristics, etc.) </li>
+                    <li>Information about land access and ownership/management arrangements</li>
+                    <li>Your institution’s capacity and relevant expertise to manage such a research trial</li>
+                    <li>Any existing infrastructure or instrumentation at the site</li>
+
+
+
             </div>
         </details>
 
