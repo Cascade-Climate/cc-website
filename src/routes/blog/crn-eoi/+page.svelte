@@ -221,6 +221,7 @@
 <style>
 	/* Simple, accessible FAQ dropdowns */
 	details.faq {
+		scroll-margin-top: 8rem; /* Keep anchor targets visible below fixed header + sticky nav */
 		margin: 0.75rem 0;
 		border: 1px solid rgba(255, 255, 255, 0.18);
 		border-radius: 12px;
