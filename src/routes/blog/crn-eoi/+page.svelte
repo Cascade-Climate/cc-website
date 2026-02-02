@@ -6,10 +6,9 @@
     
 </script>
 
-<div>
-	<section class="intro">
-		<div class="content">
-			<div class="copy">
+<section class="intro">
+	<div class="content">
+		<div class="copy">
 				<h1>
 					<strong>Call for Expressions of Interest:</strong> Coordinated Research Network for Enhanced Rock Weathering
 				</h1>
@@ -73,10 +72,6 @@
             <li>What happens to weathering products in deeper soils? Reactions below the commonly measured depths may reverse carbon removal, but these dynamics are difficult to observe and poorly represented in models.</li>
         <p> Across these sites, the network will attempt to reconcile different measurement strategies — solid phase, aqueous phase, and ion exchange resins — and to track the fate of cations in deeper (~1m) soils, where significant uncertainty remains. Agronomic parameters will also be measured on all sites in order to better understand what mechanisms lead to observed crop yield improvements.  Measurements will be geared toward sufficiently constraining the variability of key soil parameters to support the development, calibration, validation and intercomparison of geochemical models. <p>
         </ol>
-
-        <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-			<PDFLink link="/Cascade-Climate-Regranting-Solicitation.pdf" variant="accent">Link to Full RFP Solicitation PDF↗</PDFLink>
-		</div>
 
     </section>
 
@@ -149,7 +144,7 @@
         </details>
 
         <details class="faq" id="preperation-before-submitting">
-            <summary><span>Preperation: What should I know before submitting the EOI form/?</span></summary>
+            <summary><span>Preperation: What should I know before submitting the EOI form?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>We hope and expect that most applicants will not need to spend more than 30 minutes completing the form, assuming you have the information below readily available. Please note the guidance in the form about refraining from sharing long paragraphs of text; simply listing information is expected and preferred where suitable to respond to a given prompt.</li>
@@ -158,96 +153,87 @@
                     <li>Basic site characteristics (location, area, soil type, soil characteristics, etc.) </li>
                     <li>Information about land access and ownership/management arrangements</li>
                     <li>Your institution’s capacity and relevant expertise to manage such a research trial</li>
-                    <li>Any existing infrastructure or instrumentation at the site</li>
-
-
+                    <li>Any existing infrastructure or instrumentation at the site</li> <ul>
 
             </div>
         </details>
-
-<h2>Funding</h2>
-        <details class="faq" id="anticipated-funding-size">
-            <summary><span>What is the anticipated funding size?</span></summary>
+        <details class="faq" id="funding-management">
+            <summary><span>Funding: How will site management be budgeted and supported?</span></summary>
             <div class="answer">
-                <p>We welcome research proposals between $20,000 and $200,000.&nbsp;&nbsp;</p>
+                <ul style="margin: 0;">
+                <li>This call for Expressions of Interest aims to select one to two CRN sites to support their deployment in 2026 – with philanthropic funding secured to fully support site operations for these sites over a five-year period.<li>
+                <li>Cascade will continue to lead fundraising efforts to expand the CRN over time. We anticipate reaching out to additional site partners sourced via this EOI that may be suited to launch sites in 2027-2030 as the program grows toward 12–15 sites over the coming years. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.<strong><li>
+                <li>Funding is intended to cover the costs of operating a CRN field site, including:</li>
+                <ul style="margin: 0;">
+                    <li>Personnel (including partial Principal Investigator time and a full-time Site Manager)</li>
+                    <li>Instrumentation</li>
+                    <li>Sample collection and laboratory analyses</li>
+                    <li>Field operations and logistics</li>
+                </ul>
+                <li>Site-level budgets will be developed by the Local Operating Team (the collection of partners and personnel managing the trial site) in coordination with Cascade and will be subject to final approval by the Steering Committee.</li>
+                <li>Institutional cost-sharing or matching is not required, but is welcomed where sites can effectively serve multiple purposes. We encourage applicants to leverage other funding sources where appropriate — if your site has existing or pending funding from other grants, please describe this in your EOI.</li>
             </div>
         </details>
 
-        <details class="faq" id="funding-postdocs-students">
-            <summary><span>Can the funding be used to support the salary of post-docs and students?</span></summary>
+        <details class="faq" id="crn-governance">
+            <summary><span>CRN governance: How will the global network coordinate?</span></summary>
             <div class="answer">
-                <p>For staff and research scientists not in non-PI or co-PI roles, as well as postdoctoral, graduate and/or undergraduate research assistants, the grant can provide salary support and related benefits, including graduate student tuition.&nbsp; Please refer to the Allowable Expenses section of the solicitation for full details.</p>
+                <ul style="margin: 0;">
+                <li>All partners must be willing to collaborate on finalizing the site trial design, defining and deploying standardized measurements and field procedures, and establishing and managing data infrastructure, analysis, and eventual publication.</li>
+                <li>CRN governance roles include:</li>
+                <ul style="margin: 0;">
+                    <li><strong>A Steering Committee</strong>, which has decision-making authority over funding and the annual operating plan of the CRN. </li>
+                    <li><strong>A Science Advisory Board (SAB)<strong> of leading researchers that provides scientific oversight, reviewing objectives, experimental protocols, and site designs.</li>
+                    <li><strong>Working Groups</strong> which bring together disciplinary experts to ensure standardization across sites and support experimental design and data analysis. Principal Investigators (PIs) of each site will also be members of the Working Group.
+                    </li>
+                    <li><strong>Local Operating Teams</strong> — typically a <strong>Principal Investigator (PI)</strong> and a dedicated <strong>Site Manager</strong> with associated <strong>Field and Lab Technicians</strong> — that execute the experiments at each field site with guidance from the Working Groups and SAB.</li>
+                    <li><strong>Cascade Climate</strong>, which plans to provide coordination across global sites. This includes helping develop standardized protocols and training, data management infrastructure, and managing connections across these groups.<strong>
+                    </li>
+                </ul>
+                <li>Cross-site collaboration is central to the CRN model. </li>
+                <ul style="margin: 0;">
+                <li>Site PIs will participate in regular Working Group meetings, share experiences and lessons learned, and contribute to network-wide synthesis efforts. Working Group meetings will be conducted in English. We will address translation support as needed. </li>
+                <li>The Science Advisory Board has final approval over experimental protocols to ensure scientific rigor and cross-site consistency. However, Local Operating Teams will have input throughout the process and can propose locally relevant questions within, or in addition to (budget permitting) the standardized framework.
+                </li>
+                <li>Local Operating Teams (particularly PIs and Site Managers) are expected to lead site-specific manuscript preparation and publication of results in collaboration with Working Group members, and must also agree to coordinate with the global Scientific Advisory Board for cross-site analysis. We anticipate opportunities for future joint publications from cross-site analyses. </li>
+
             </div>
         </details>
 
-        <details class="faq" id="proposals-through-institutions-overhead">
-            <summary><span>Researchers at universities are often required to submit proposals to RFPs through the institution at some agreed overhead rate. Will proposals be accepted through institutions and at what overhead rate?</span></summary>
+        <details class="faq" id="data-sharing">
+            <summary><span>Data sharing: What are the expectations and requirements?</span></summary>
             <div class="answer">
-                <p>Indirect costs may be included but must not exceed 10% of the total project budget. Please refer to the Indirect Costs section of the solicitation for full details.</p>
+                <ul style="margin: 0;">
+                <li>Data produced by this collaboration will be shared in pre-defined pathways to accelerate speed to learning, while ensuring farmer privacy and respecting academic publishing rights and norms. </li>
+                <li>Cascade Climate will provide global data management infrastructure. The CRN is designed to generate field-wide learning in addition to site-specific results. By deploying standardized protocols, measurement strategies, and site designs across diverse geographies, the network will produce datasets that can be meaningfully compared and synthesized — enabling the kind of global analysis that isolated studies cannot support</li>
+                <li>We expect all Site Host Institutions, PIs, and all other partners involved in data collection will review and sign off on data license agreements, which are required to receive funding. Data license agreements will elaborate on data sharing requirements with expectations along the following lines:
+                </li>
+                <ul style="margin: 0;">
+                    <li>Data will stream directly into a central repository accessible to Working Group and Scientific Advisory Board members for the purpose of supporting the coordinated nature of the research network.</li>
+                    <li>Quality-controlled data will be made accessible to a community of academic geochemical modelers Cascade plans to convene as part of this initiative, for the purpose of calibrating and validating these models.</li>
+                    <li>Full datasets at the sample-level will be made publicly available upon preprint submission (required).</li>
+                    <li>Complete datasets will be made publicly available if preprint submission has not resulted in full dataset sharing within a reasonable time following initial rock spread.</li>
+                    <li>We may offer an option to apply for a 6 month extension to these policies to protect early career professionals’ publication timelines.</li>
+                    <li>All data will be shared under a non-commercial use license.</li>
+                </ul>
             </div>
         </details>
 
-        <details class="faq" id="proposal-co-funding">
-            <summary><span>Can a proposal include co-funding?</span></summary>
-            <div class="answer">
-                <p>Applicants must include a proposed budget in their application. If this proposal includes other funding sources, the budget should explain how costs will be allocated between this proposal and other funding sources, and also include an explanation of the status of the other funding sources (i.e., funds received, awaiting funds, proposal submitted, etc.)</p>
-            </div>
-        </details>
-
-<h2>Data</h2>
-        <details class="faq" id="data-management-patents">
-            <summary><span>How will data be managed? And potential patents treated?</span></summary>
-            <div class="answer">
-                <p>Please see the Data Sharing Requirements section of the solicitation for full details. Intellectual property will remain the property of the awardee, and we will work with awardees to define grant terms accordingly.</p>
-            </div>
-        </details>
-
-<h2>Scope</h2>
-        <details class="faq" id="erw-coastal-mine-tailings-scope">
-            <summary><span>Are ERW deployments in coastal environments, mine tailings, and other settings beyond soils in scope?&nbsp;</span></summary>
-            <div class="answer">
-                <p>Only field data from ERW deployments on soils is in scope.</p>
-            </div>
-        </details>
-
-        <details class="faq" id="new-field-trials-deployment-partner-funding">
-            <summary><span>Does this solicitation support work on new field trials if the Deployment Partner is funding feedstock, spreading, and MRV?</span></summary>
-            <div class="answer">
-                <p>Yes.</p>
-            </div>
-        </details>
-
-        <details class="faq" id="deployment-partners-no-mrv">
-            <summary><span>How do you handle Deployment Partners that do not plan to conduct MRV?</span></summary>
-            <div class="answer">
-                <p>Measurements that are generally required for commercial MRV are not within the scope of this solicitation. For proposals where the Deployment Partner does not plan to conduct MRV, there should be an explanation for how relevant Contextual Data will be collected and the funding source for Contextual Data collection. Please refer to the Appendix A of the solicitation for a detailed description of Contextual Data.</p>
-            </div>
-        </details>
-
-        <details class="faq" id="additional-proxies-scope">
-            <summary><span>Are additional proxies (e.g. stable isotopes, granulometry) within scope?</span></summary>
-            <div class="answer">
-                <p>Yes. We welcome the creativity of the ERW community to propose the collection of any datasets that would advance the field.</p>
-            </div>
-        </details>
-</section>
-
-<section>
-    <h3>Footnotes</h3>
+<section id="footnotes">
+    <h1>Footnotes</h1>
 	<ol style="margin: 0;">
-		<li id="footnote1">
-            For example, see <a href="https://registry.isometric.com/protocol/enhanced-weathering-agriculture/1.0" target="_blank" rel="noopener">Isometric&rsquo;s EW protocol</a> or <a href="https://7518557.fs1.hubspotusercontent-na1.net/hubfs/7518557/ERW%20Standards/Enhanced_Rock_Weathering_2022_2.pdf" target="_blank" rel="noopener">Puro&rsquo;s ERW methodology</a>.
-			<a href="#citation1">↩</a>
-		</li>
-        <li id="footnote2">
-            In addition to these “Near-Field Zone” measurements, models or geochemical calculations are frequently used to calculate conservative loss estimates associated with downstream loss processes in surface water and marine systems.
-			<a href="#citation2">↩</a>
-		</li>
+		<li id="footnote1">Kantola, Ilsa B., Michael D. Masters, David J. Beerling, Stephen P. Long, and Evan H. DeLucia. &ldquo;Potential of Global Croplands and Bioenergy Crops for Climate Change Mitigation through Deployment for Enhanced Weathering.&rdquo; <em>Biology Letters</em> 13, no. 4 (2017): 20160714. <a href="https://doi.org/10.1098/rsbl.2016.0714" target="_blank" rel="noopener">https://doi.org/10.1098/rsbl.2016.0714</a>.</li>
+		<li id="footnote2">Holden, Fredrick J., Kalu Davies, Michael I. Bird, et al. &ldquo;In-Field Carbon Dioxide Removal via Weathering of Crushed Basalt Applied to Acidic Tropical Agricultural Soil.&rdquo; <em>Science of The Total Environment</em> 955 (December 2024): 176568. <a href="https://doi.org/10.1016/j.scitotenv.2024.176568" target="_blank" rel="noopener">https://doi.org/10.1016/j.scitotenv.2024.176568</a>.</li>
+		<li id="footnote3">Vienne, Arthur, Silvia Poblador, Miguel Portillo-Estrada, et al. &ldquo;Enhanced Weathering Using Basalt Rock Powder: Carbon Sequestration, Co-Benefits and Risks in a Mesocosm Study With Solanum Tuberosum.&rdquo; <em>Frontiers in Climate</em> 4 (May 2022): 869456. <a href="https://doi.org/10.3389/fclim.2022.869456" target="_blank" rel="noopener">https://doi.org/10.3389/fclim.2022.869456</a>.</li>
+		<li id="footnote4">Te Pas, Emily E. E. M., Mathilde Hagens, and Rob N. J. Comans. &ldquo;Assessment of the Enhanced Weathering Potential of Different Silicate Minerals to Improve Soil Quality and Sequester CO<sub>2</sub>.&rdquo; <em>Frontiers in Climate</em> 4 (January 2023): 954064. <a href="https://doi.org/10.3389/fclim.2022.954064" target="_blank" rel="noopener">https://doi.org/10.3389/fclim.2022.954064</a>.</li>
+		<li id="footnote5">Beerling, David J., Dimitar Z. Epihov, Ilsa B. Kantola, et al. &ldquo;Enhanced Weathering in the US Corn Belt Delivers Carbon Removal with Agronomic Benefits.&rdquo; <em>Proceedings of the National Academy of Sciences</em> 121, no. 9 (2024): e2319436121. <a href="https://doi.org/10.1073/pnas.2319436121" target="_blank" rel="noopener">https://doi.org/10.1073/pnas.2319436121</a>.</li>
+		<li id="footnote6">Haque, Fatima, Rafael M. Santos, Animesh Dutta, Mahendra Thimmanagari, and Yi Wai Chiang. &ldquo;Co-Benefits of Wollastonite Weathering in Agriculture: CO<sub>2</sub> Sequestration and Promoted Plant Growth.&rdquo; <em>ACS Omega</em> 4, no. 1 (2019): 1425&ndash;33. <a href="https://doi.org/10.1021/acsomega.8b02477" target="_blank" rel="noopener">https://doi.org/10.1021/acsomega.8b02477</a>.</li>
+		<li id="footnote7">Castro, G.S.A., and C.A.C. Crusciol. &ldquo;Effects of Superficial Liming and Silicate Application on Soil Fertility and Crop Yield under Rotation.&rdquo; <em>Geoderma</em> 195&ndash;196 (March 2013): 234&ndash;42.</li>
+		<li id="footnote8">Krahl, Luise Lottici, Leonardo Fonseca Valadares, Jos&eacute; Carlos Sousa-Silva, Giuliano Marchi, and &Eacute;der De Souza Martins. &ldquo;Dissolution of Silicate Minerals and Nutrient Availability for Corn Grown Successively.&rdquo; <em>Pesquisa Agropecu&aacute;ria Brasileira</em> 57 (2022): e01467.</li>
 	</ol>
 </section>
 </main>
 <img style="width: 0%;" src={grants} alt="Enhanced Rock Weathering" />
-</div>
 
 <style>
 	/* Simple, accessible FAQ dropdowns */
