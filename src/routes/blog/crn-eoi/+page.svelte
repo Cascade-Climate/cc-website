@@ -5,6 +5,10 @@
     
 </script>
 
+<svelte:head>
+	<title>CRN Expression of Interest - Cascade Climate</title>
+</svelte:head>
+
 <section class="intro">
 	<div class="content">
 		<div class="copy">
