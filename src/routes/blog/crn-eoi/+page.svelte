@@ -253,6 +253,8 @@
 		border-radius: 12px;
 		background: rgba(255, 255, 255, 0.04);
 		overflow: clip;
+		position: relative;
+		z-index: 1;
 	}
 
 	details.faq > summary {
@@ -263,6 +265,8 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
+		position: relative;
+		z-index: 2;
 	}
 
 	details.faq > summary::-webkit-details-marker {
