@@ -105,13 +105,14 @@
         <p><strong>For information on site selection criteria</strong> (required and preferred), personnel and partner requirements, trial design specifications, and additional details, <strong><a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">please review Document A: Site Selection Criteria.</a></strong></p>
 
         <p><strong>For more information on our conflict of interest policy</strong>, <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">please review Document B: Conflict of Interest Policy.</a></p>
-        <p><strong>
 
         <p><strong>For questions on eligibility and the CRN EOI process</strong>, and to learn more about CRN governance and data sharing, please see the FAQ provided below.</p>
 
-        <p>For additional questions, please contact grants@cascadeclimate.org.</p>
+        <p><strong>For additional questions</strong>, please contact grants@cascadeclimate.org.</p>
 
-		<p><strong>If you are potentially interested in hosting a CRN site, please complete the Expression of Interest form by the deadline: March 10, 2026.<strong></p>
+		<p><strong>If you are potentially interested in hosting a CRN site</strong>, please complete the Expression of Interest form by March 10, 2026.</p>
+
+		<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest↗</a>
 
 			
     </section>
@@ -267,6 +268,24 @@
 		font-size: 0.95rem;
 		opacity: 0.85;
 		margin: 0 0 0.5rem 0;
+	}
+	.eoi-submit-button {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		text-align: left;
+		padding: 0.5rem 1.2rem;
+		margin-top: 1rem;
+		border: none;
+		border-radius: 2rem;
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		font-size: 1.2rem;
+		font-weight: 420;
+		text-decoration: none;
+	}
+	.eoi-submit-button:hover {
+		opacity: 0.92;
 	}
 	details.faq {
 		scroll-margin-top: 8rem; /* Keep anchor targets visible below fixed header + sticky nav */
