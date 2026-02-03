@@ -20,7 +20,7 @@
 				<p class="intro-first">
 					Cascade Climate is seeking expressions of interest from institutions to host and operate globally-coordinated enhanced rock weathering (ERW) research sites. We are standing up a global Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies. We aim to establish up to 15 standardized sites, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
 				<p class="intro-second">
-					By deploying standardized protocols, measurement strategies, and experimental designs , the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets across global contexts. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of ERW researchers..</p>
+					By deploying standardized protocols, measurement strategies, and experimental designs , the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets across global contexts. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of ERW researchers.</p>
 				<p class="intro-continue">Continue reading to learn more about the CRN and how to submit an Expression of Interest.</p>
 			</div>
 
