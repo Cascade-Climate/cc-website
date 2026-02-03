@@ -10,12 +10,12 @@
 </svelte:head>
 
 <section class="intro">
-	<span class="long-button">Em breve: chamada para manifestações de interesse em português</span>
 	<div class="content">
 		<div class="copy">
 				<h1>
 					<strong>Call for Expressions of Interest:</strong> Coordinated Research Network for Enhanced Rock Weathering
 				</h1>
+				<span class="long-button">Em breve: chamada para manifestações de interesse em português</span>
 
 				<p class="intro-first">
 					Cascade Climate is seeking expressions of interest from institutions to host and operate globally-coordinated enhanced rock weathering (ERW) research sites. We are standing up a global Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies. We aim to establish up to 15 standardized sites, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
@@ -30,7 +30,7 @@
 		<h5 class="intro-highlight" style="color:white">Deadline</h5>
 		<p>March 10, 2026 at 11:59PM ET</p>
 		<h5 class="intro-highlight" style="color:white">
-			Information Sessions
+			VIRTUAL Information Sessions
 		</h5>
 
 			<p class="session-row">
@@ -329,6 +329,7 @@
 		max-width: 100%;
 		text-align: center;
 		padding: 0.4rem 1.2rem;
+		margin-top: 0.5rem;
 		margin-bottom: 1rem;
 		border: none;
 		border-radius: 2rem;
@@ -396,8 +397,12 @@
 	.session-row {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
+		gap: 1.25rem;
 		flex-wrap: wrap;
+		margin-bottom: 0.75rem;
+	}
+	.session-row:last-of-type {
+		margin-bottom: 0;
 	}
 	.session-register {
 		display: inline-block;
