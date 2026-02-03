@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "update-pdf-metadata": "node scripts/update-crn-pdf-metadata.mjs",
     "preview": "npm run build && wrangler pages dev .svelte-kit/cloudflare",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
@@ -29,7 +28,6 @@
   "type": "module",
   "dependencies": {
     "chart.js": "^4.5.0",
-    "pdf-lib": "^1.17.1",
     "jose": "^5.9.3",
     "svelte-markdown": "^0.4.1"
   }
