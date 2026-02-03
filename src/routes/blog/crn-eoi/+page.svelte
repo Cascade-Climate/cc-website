@@ -10,6 +10,7 @@
 </svelte:head>
 
 <section class="intro">
+	<span class="long-button">Em breve: chamada para manifestações de interesse em português</span>
 	<div class="content">
 		<div class="copy">
 				<h1>
@@ -17,9 +18,9 @@
 				</h1>
 
 				<p class="intro-first">
-					Cascade Climate is seeking expressions of interest from institutions to host and operate field sites as part of a global Coordinated Research Network (CRN), through standardized field trials across diverse global geographies. We aim to establish up to 15 standardized sites in high-priority geographies, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
+					Cascade Climate is seeking expressions of interest from institutions to host and operate globally-coordinated enhanced rock weathering (ERW) research sites. We are standing up a global Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies. We aim to establish up to 15 standardized sites, beginning with 1-2 pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
 				<p class="intro-second">
-					By deploying standardized protocols, measurement strategies, and experimental designs across diverse geographies, the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of enhanced rock weathering (ERW) researchers.</p>
+					By deploying standardized protocols, measurement strategies, and experimental designs , the CRN will achieve what isolated studies cannot: field-wide learning enabled by comparable datasets across global contexts. Host sites will receive operational funding, authorship opportunities on site-specific and network-wide publications, and access to a global community of ERW researchers..</p>
 				<p class="intro-continue">Continue reading to learn more about the CRN and how to submit an Expression of Interest.</p>
 			</div>
 
@@ -44,13 +45,13 @@
 				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf">Document A: Site Selection Criteria↗</a
+				href="/blog/crn-eoi/document-a">Document A: Site Selection Criteria↗</a
 			>
 			<a
 				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf">Document B: Conflict of Interest Policy↗</a
+				href="/blog/crn-eoi/document-b">Document B: Conflict of Interest Policy↗</a
 			>
 		</div>
 	</section>
@@ -61,14 +62,14 @@
         <h1>The Challenge</h1>
         <p>Enhanced rock weathering (ERW) is a carbon dioxide removal (CDR) strategy that involves the spreading of alkaline crushed rock feedstocks (including silicates, carbonates, or other alkaline materials) on agricultural soils. The quantification of carbon removal in an ERW deployment is complex, and involves a range of biogeochemical fluxes that can impact the net carbon balance across soil systems, groundwater, surface water systems, and the ocean. A brief explainer on enhanced rock weathering can be found <a href="https://cascadeclimate.org/Cascade%20Climate_Enhanced%20Rock%20Weathering%20101_vFinal.pdf" target="_blank" rel="noopener">here</a>.</p>
 
-        <p>Rigorous work across an expanding ecosystem of stakeholders and approaches is driving real progress in ERW. Yet there remains a necessity for coordinated research across a range of site characteristics with consistent, mutually comparable site designs and measurement strategies to efficiently answer the key questions faced by the field.</p>
+        <p>Rigorous work across an expanding ecosystem of stakeholders and approaches is driving real progress on ERW. Yet there remains a necessity for coordinated research across a range of site characteristics with consistent, mutually comparable site designs and measurement strategies to efficiently answer the key questions faced by the field.</p>
 
 
     </section>
 
 	<section id="the-objective">
         <h1>The Objective</h1>
-        <p>The Coordinated Research Network (CRN) is our response to this challenge. It aims to establish up to 15 highly standardized ERW field sites in high-priority geographies (i.e. sub-tropical or tropical climates). We are targeting 1-2 sites for a 2026 deployment for which we have secured philanthropic funding to support over a five year period.</p>
+        <p>The Coordinated Research Network (CRN) is our response to this challenge. It aims to establish up to 15 highly-standardized ERW field sites in sub-tropical or tropical climates. We are targeting 1-2 sites for a 2026 deployment for which we have secured philanthropic funding to support over a five year period.</p>
 
         <p>The Coordinated Research Network (CRN) intends to answer these questions:</p>
         <ol style="margin: 0;">
@@ -91,8 +92,8 @@
         <li>Relevant expertise in soil science, biogeochemistry, hydrology, agronomy, or other fields closely related to ERW science</li>
         <li>Willingness to collaborate in a global collaborative research network, follow standardized protocols and site design, and contribute to a global network-wide synthesis</li>
         </ul>
-        <p><strong>For information on site selection criteria</strong> (required and preferred), personnel and partner requirements, trial design specifications, and additional details, <strong><a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">please review Document A: Site Selection Criteria.</a></strong></p>
-        <p><strong>For more information on our conflict of interest policy</strong>, <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">please review Document B: Conflict of Interest Policy.</a></p>
+        <p><strong>For information on site selection criteria</strong> (required and preferred), personnel and partner requirements, trial design specifications, and additional details, <strong><a href="/blog/crn-eoi/document-a" target="_blank" rel="noopener">please review Document A: Site Selection Criteria.</a></strong></p>
+        <p><strong>For more information on our conflict of interest policy</strong>, <a href="/blog/crn-eoi/document-b" target="_blank" rel="noopener">please review Document B: Conflict of Interest Policy.</a></p>
         <p><strong>If you are potentially interested in hosting a CRN site</strong>, <strong><a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">please complete the Expression of Interest form</a></strong> by the deadline: March 10, 2026.</p>
         <p>For questions on eligibility and the CRN EOI process, and to learn more about CRN governance and data sharing, <strong>please see the FAQ provided below</strong>.</p>
 
@@ -113,7 +114,7 @@
                     <li>Help advance science on the potential carbon dioxide removal (CDR) and agricultural benefits of enhanced rock weathering (ERW) globally.</li>
                     <li>Participating institutions and researchers will receive:
                         <ul style="margin: 0;">
-                            <li>Funding to support site operations, personnel, and equipment. See the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail on the anticipated personnel roles and level of effort.</li>
+                            <li>Funding to support site operations, personnel, and equipment. See the <a href="/blog/crn-eoi/document-a" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail on the anticipated personnel roles and level of effort.</li>
                             <li>Lead or senior authorship on publications arising from their site</li>
                             <li>Co-authorship opportunities on global synthesis studies</li>
                             <li>Access to a global network of ERW researchers and support from Cascade Climate. This includes help developing standardized protocols and training; data management infrastructure; and connections to an international research community. Teams should anticipate that openness and collaboration are core to the CRN model as indicated by the Global Scientific Collaboration and Data Sharing and Publication statements that conclude the EOI form.</li>
@@ -127,14 +128,14 @@
             <summary><span>Eligibility: Who should submit an EOI form?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
-                <li>Any person who has a field site that aligns with the site characteristics described in the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> should submit an EOI.</li>
-                <li>See our <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">Conflict of Interest Policy</a> details for more information on who is eligible to host or manage a CRN site, including how ERW Project Developers can engage with the CRN</li>
+                <li>Any person who has a field site that aligns with the site characteristics described in the <a href="/blog/crn-eoi/document-a" target="_blank" rel="noopener">Site Selection Criteria</a> should submit an EOI.</li>
+                <li>See our <a href="/blog/crn-eoi/document-b" target="_blank" rel="noopener">Conflict of Interest Policy</a> details for more information on who is eligible to host or manage a CRN site, including how ERW Project Developers can engage with the CRN</li>
                 <li><strong>If you are a researcher (PI) who is interested in engaging with the CRN, but do not have a site to propose for a field trial, please email us at grants@cascadeclimate.org.</strong> Include your name, institution/organization, public profile (professional webpage, Google Scholar, ResearchGate, or similar), the specific geographies where you work, and a brief description of your interest in the CRN.</li>
                 <li><strong>Please submit one EOI form per specific site.</strong> If you have identified multiple potentially eligible sites, you are encouraged to submit multiple EOIs so you can share information on each site individually. </li>
                 <li>We prefer submissions in English and welcome materials translated from other languages. </li>
                 <li><strong>We encourage you to submit an EOI form even if your site does not meet every preferred criterion.</strong> The Site Selection Criteria distinguishes between required and preferred characteristics. Sites that meet the required criteria but lack some preferred criteria will still be considered. For example, if your site is not within the preferred pH range, you should still apply, as there are other factors (such as soil buffer capacity) that may allow a lower pH soil to be accommodated.
                 </li>
-                <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong> Please see the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail. 
+                <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong> Please see the <a href="/blog/crn-eoi/document-a" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail. 
                 </li>
             </div>
         </details>
@@ -310,6 +311,26 @@
 		width: 40%;
 		height: auto;
 		object-fit: cover;
+	}
+
+	.long-button {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+		padding: 0.4rem 1.2rem;
+		margin-bottom: 1rem;
+		border: none;
+		border-radius: 2rem;
+		background-color: var(--color-light);
+		color: var(--color-dark);
+		font-size: 1.2rem;
+		font-weight: 420;
+		text-decoration: none;
+		cursor: default;
+	}
+	.long-button:hover {
+		opacity: 0.92;
 	}
 
 	/* Intro links: equal-height buttons */
