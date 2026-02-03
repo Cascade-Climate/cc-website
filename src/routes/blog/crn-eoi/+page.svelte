@@ -43,15 +43,15 @@
 			</div>
 			<a
 				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
-				href="/blog/crn-eoi/document-a"
 				target="_blank"
-				rel="noopener">Document A: Site Selection Criteria↗</a
+				rel="noopener"
+				href="/blog/crn-eoi/document-a">Document A: Site Selection Criteria↗</a
 			>
 			<a
 				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
-				href="/blog/crn-eoi/document-b"
 				target="_blank"
-				rel="noopener">Document B: Conflict of Interest Policy↗</a
+				rel="noopener"
+				href="/blog/crn-eoi/document-b">Document B: Conflict of Interest Policy↗</a
 			>
 		</div>
 	</section>
