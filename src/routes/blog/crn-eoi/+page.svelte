@@ -27,10 +27,20 @@
 			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
 		</div>
 
-		<h5 style="color:white">Deadline: March 10, 2026 at 11:59PM ET</h5>
-		<h5 style="color:white">
-			Information Session: TBD
+		<h5 class="intro-highlight" style="color:white">Deadline</h5>
+		<p>March 10, 2026 at 11:59PM ET</p>
+		<h5 class="intro-highlight" style="color:white">
+			Information Sessions
 		</h5>
+
+			<p class="session-row">
+				Wednesday, Feb 18, 8:30 AM Mumbai / 6:00 AM Nairobi
+				<a class="session-register" href="https://zoom.us/meeting/register/dCnko_rEQ4aiGaFNsbpq9g" target="_blank" rel="noopener">Register</a>
+			</p>
+			<p class="session-row">
+				Tuesday, Feb 24, 12:00 PM São Paulo / 6:00 PM Nairobi
+				<a class="session-register" href="https://zoom.us/meeting/register/7-kBfCgaQ8qWtftKRMux6A" target="_blank" rel="noopener">Register</a>
+			</p>			
 
 		<div class="links">
 			<div style="text-align: center;">
@@ -336,6 +346,7 @@
 	/* Intro links: equal-height buttons */
 	:global(.intro .links) {
 		align-items: stretch;
+		margin-top: 1.5rem;
 	}
 	:global(.intro .links > div) {
 		display: flex;
@@ -372,5 +383,34 @@
 	}
 	:global(.intro h5:first-of-type) {
 		margin-top: 1.5rem;
+	}
+	.intro-highlight {
+		font-size: 1.2em;
+		margin-bottom: 0.25rem;
+	}
+	:global(.intro .intro-highlight + p),
+	:global(.intro .intro-highlight + .intro-highlight) {
+		margin-top: 0.25rem;
+	}
+
+	.session-row {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+	.session-register {
+		display: inline-block;
+		padding: 0.35rem 0.9rem;
+		border-radius: 1.5rem;
+		background-color: var(--color-light);
+		color: var(--color-dark);
+		font-size: 0.95rem;
+		font-weight: 500;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	.session-register:hover {
+		opacity: 0.92;
 	}
 </style>
