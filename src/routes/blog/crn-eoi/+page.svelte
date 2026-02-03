@@ -103,21 +103,27 @@
         <li>Willingness to collaborate in a global collaborative research network, follow standardized protocols and site design, and contribute to a global network-wide synthesis</li>
         </ul>
         <p><strong>For information on site selection criteria</strong> (required and preferred), personnel and partner requirements, trial design specifications, and additional details, <strong><a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">please review Document A: Site Selection Criteria.</a></strong></p>
+
         <p><strong>For more information on our conflict of interest policy</strong>, <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">please review Document B: Conflict of Interest Policy.</a></p>
-        <p><strong>If you are potentially interested in hosting a CRN site</strong>, <strong><a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">please complete the Expression of Interest form</a></strong> by the deadline: March 10, 2026.</p>
-        <p>For questions on eligibility and the CRN EOI process, and to learn more about CRN governance and data sharing, <strong>please see the FAQ provided below</strong>.</p>
+        <p><strong>
+
+        <p><strong>For questions on eligibility and the CRN EOI process</strong>, and to learn more about CRN governance and data sharing, please see the FAQ provided below.</p>
 
         <p>For additional questions, please contact grants@cascadeclimate.org.</p>
+
+		<p><strong>If you are potentially interested in hosting a CRN site, please complete the Expression of Interest form by the deadline: March 10, 2026.<strong></p>
+
+			
     </section>
 
     
 
     <section id="faq">
 
-        <h1>EOI FAQ</h1>
-      
-    
-        <details class="faq" id="participation">
+        <h1>EOI Frequently Asked Questions</h1>
+        <p class="faq-instruction">Click to expand questions</p>
+
+        <details class="faq" id="participation" open>
             <summary><span>Participation: Why participate in the CRN?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
@@ -257,6 +263,11 @@
 
 <style>
 	/* Simple, accessible FAQ dropdowns */
+	.faq-instruction {
+		font-size: 0.95rem;
+		opacity: 0.85;
+		margin: 0 0 0.5rem 0;
+	}
 	details.faq {
 		scroll-margin-top: 8rem; /* Keep anchor targets visible below fixed header + sticky nav */
 		margin: 0.75rem 0;
