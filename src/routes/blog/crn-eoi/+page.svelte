@@ -165,10 +165,15 @@
                 <li><strong>If you are a researcher (PI) who is interested in engaging with the CRN, but do not have a site to propose for a field trial, please email us at grants@cascadeclimate.org.</strong> Include your name, institution/organization, public profile (professional webpage, Google Scholar, ResearchGate, or similar), the specific geographies where you work, and a brief description of your interest in the CRN.</li>
                 <li><strong>Please submit one EOI form per specific site.</strong> If you have identified multiple potentially eligible sites, you are encouraged to submit multiple EOIs so you can share information on each site individually. </li>
                 <li>We prefer submissions in English and welcome materials translated from other languages. </li>
-                <li><strong>We encourage you to submit an EOI form even if your site does not meet every preferred criterion.</strong> The Site Selection Criteria distinguishes between required and preferred characteristics. Sites that meet the required criteria but lack some preferred criteria will still be considered. For example, if your site is not within the preferred pH range, you should still apply, as there are other factors (such as soil buffer capacity) that may allow a lower pH soil to be accommodated.
+                <li>The Site Selection Criteria distinguishes between required and preferred characteristics. Sites that meet the required criteria but lack some preferred criteria will still be considered. For example, if your site is not within the preferred pH range, you should still apply, as there are other factors (such as soil buffer capacity) that may allow a lower pH soil to be accommodated.
                 </li>
-                <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong> Please see the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail. 
-                </li>
+                <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process. 
+				<li><strong>We encourage you to submit even if:</strong></li>
+					<ul style="margin: 0;">
+					<li>your site doesn’t meet every <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">preferred criterion</a></li>
+					<li>not all of the required roles are filled</li>
+						<li>2026 launch may not be possible, since the network will scale over time</li>
+					</ul>
             </div>
         </details>
 
@@ -369,8 +374,8 @@
 	.large-image {
 		border: 1px solid rgba(255, 255, 255, 0.8);
 		border-radius: 8px;
-		max-width: 480px;
-		width: 40%;
+		width: 480px;
+		max-width: none;
 		height: auto;
 		object-fit: cover;
 	}
@@ -432,7 +437,8 @@
 	}
 	:global(.intro .content img) {
 		margin-bottom: 0.5rem;
-		max-width: 480px;
+		width: 480px;
+		max-width: none;
 	}
 	:global(.intro h5:first-of-type) {
 		margin-top: 1.5rem;
