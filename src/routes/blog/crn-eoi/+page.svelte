@@ -1,7 +1,7 @@
 <script>
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
     import grants from '$lib/images/nature/grants.webp';
-    import CRNblock from '$lib/images/blog/CRNblock.webp';
+    import CRNblock from '$lib/images/blog/newblock-1.webp';
     
 </script>
 
@@ -248,14 +248,14 @@
             <summary><span>Data sharing: What are the expectations and requirements?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
-                <li>Data produced by this collaboration will be shared in pre-defined pathways to accelerate speed to learning, while ensuring farmer privacy and respecting academic publishing rights and norms. </li>
+                <li>Data produced by this collaboration will be shared in pre-defined pathways to accelerate speed to learning, while respecting academic publishing rights and norms. </li>
                 <li>Cascade Climate will provide global data management infrastructure. The CRN is designed to generate field-wide learning in addition to site-specific results. By deploying standardized protocols, measurement strategies, and site designs across diverse geographies, the network will produce datasets that can be meaningfully compared and synthesized — enabling the kind of global analysis that isolated studies cannot support.</li>
-                <li>We expect all Site Host Institutions, PIs, and all other partners involved in data collection will review and sign off on data license agreements, which are required to receive funding. Data license agreements will elaborate on data sharing requirements with expectations along the following lines:
+                <li>We expect all Site Host Institutions, PIs, and all other partners involved in data collection will review and sign off on data license agreements, which are required to receive funding. Data license agreements will elaborate on data sharing requirements with expectations such as the following:
                 </li>
                 <ul style="margin: 0;">
                     <li>Data will stream directly into a central repository accessible to Working Group and Scientific Advisory Board members for the purpose of supporting the coordinated nature of the research network.</li>
                     <li>Quality-controlled data will be made accessible to a community of academic geochemical modelers Cascade plans to convene as part of this initiative, for the purpose of calibrating and validating these models.</li>
-                    <li>Full datasets at the sample-level will be made publicly available upon preprint submission (required).</li>
+                    <li>Full datasets at the sample-level will be made publicly available upon preprint submission.</li>
                     <li>Complete datasets will be made publicly available if preprint submission has not resulted in full dataset sharing within a reasonable time following initial rock spread.</li>
                     <li>We may offer an option to apply for a 6-month extension to these policies to protect early career professionals’ publication timelines.</li>
                     <li>All data will be shared under a non-commercial use license.</li>
