@@ -442,6 +442,10 @@
 		margin-top: 0.25rem;
 	}
 
+	#virtual-information-sessions {
+		scroll-margin-top: 6rem;
+	}
+
 	.session-row {
 		display: flex;
 		align-items: center;
