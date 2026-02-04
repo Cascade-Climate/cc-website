@@ -136,7 +136,7 @@
 
     <section id="faq">
 
-        <h1>EOI Frequently Asked Questions</h1>
+        <h1>EOI Frequently Asked Questions (FAQ)</h1>
         <p class="faq-instruction">Click a question to view the answer</p>
 
         <details class="faq" id="participation" open>
