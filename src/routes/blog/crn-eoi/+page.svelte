@@ -169,9 +169,9 @@
                 <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process. 
 				<li><strong>We encourage you to submit even if:</strong>
 					<ul style="margin: 0;">
-					<li>your site doesn’t meet every <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">preferred criterion.</a></li>
-					<li>not all of the required roles are filled.</li>
-						<li>2026 launch may not be possible, since the network will scale over time.</li>
+					<li>Your site doesn’t meet every <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">preferred criterion</a></li>
+					<li>Not all of the required roles are filled</li>
+						<li>Launch may not be possible in 2026, since the network will scale over time</li>
 					</ul>
 				</li>
 					<li><strong>If you are a researcher (PI) who is interested in engaging with the CRN, but do not have a site to propose for a field trial, please email us at grants@cascadeclimate.org.</strong> Include your name, institution/organization, public profile (professional webpage, Google Scholar, ResearchGate, or similar), the specific geographies where you work, and a brief description of your interest in the CRN.</li>
