@@ -161,7 +161,7 @@
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>Any person who has a field site that aligns with the site characteristics described in the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> should submit an EOI.</li>
-                <li>See our <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">Conflict of Interest Policy</a> details for more information on who is eligible to host or manage a CRN site, including how ERW Project Developers can engage with the CRN</li>
+                <li>See our <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">Conflict of Interest Policy</a> details for more information on who is eligible to host or manage a CRN site, including how ERW Project Developers can engage with the CRN.</li>
                 <li><strong>Please submit one EOI form per specific site.</strong> If you have identified multiple potentially eligible sites, you are encouraged to submit multiple EOIs so you can share information on each site individually. </li>
                 <li>We prefer submissions in English and welcome materials translated from other languages. </li>
                 <li>The Site Selection Criteria distinguishes between required and preferred characteristics. Sites that meet the required criteria but lack some preferred criteria will still be considered. For example, if your site is not within the preferred pH range, you should still apply, as there are other factors (such as soil buffer capacity) that may allow a lower pH soil to be accommodated.
