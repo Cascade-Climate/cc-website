@@ -306,6 +306,9 @@
 	.eoi-submit-button:hover {
 		opacity: 0.92;
 	}
+	:global(#the-objective sup) {
+		font-size: 0.75em; /* 25% smaller */
+	}
 	details.faq {
 		scroll-margin-top: 8rem; /* Keep anchor targets visible below fixed header + sticky nav */
 		margin: 0.75rem 0;
