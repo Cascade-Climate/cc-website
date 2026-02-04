@@ -382,11 +382,9 @@
 		border: 1px solid rgba(255, 255, 255, 0.8);
 		border-radius: 8px;
 		width: 480px;
-		min-width: 480px;
-		max-width: 480px;
+		max-width: min(480px, 100%);
 		height: auto;
 		object-fit: cover;
-		flex-shrink: 0;
 	}
 
 	.long-button {
@@ -447,9 +445,7 @@
 	:global(.intro .content img) {
 		margin-bottom: 0.5rem;
 		width: 480px;
-		min-width: 480px;
-		max-width: 480px;
-		flex-shrink: 0;
+		max-width: min(480px, 100%);
 	}
 	:global(.intro h5:first-of-type) {
 		margin-top: 1.5rem;
