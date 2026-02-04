@@ -1,7 +1,7 @@
 <script>
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
     import grants from '$lib/images/nature/grants.webp';
-    import CRNblock from '$lib/images/blog/newblock-1.webp';
+    import CRNblock from '$lib/images/supporters/newblock-1.webp';
     
 </script>
 
