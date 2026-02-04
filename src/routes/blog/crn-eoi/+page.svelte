@@ -111,19 +111,19 @@
 		<p>For more information on:</p>
 		<ul>
 			<li>
-				Site selection criteria (required and preferred), personnel and partner requirements, and trial specifications:
+				Site selection criteria (required and preferred), personnel and partner requirements, and trial specifications,
 				<a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">
 					<strong>please review Document A: Site Selection Criteria.</strong>
 				</a>
 			</li>
 			<li>
-				Our conflict of interest policy:
+				Our conflict of interest policy,
 				<a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">
 					<strong>please review Document B: Conflict of Interest Policy.</strong>
 				</a>
 			</li>
 			<li>
-				Eligibility and the CRN EOI process, and to learn more about CRN governance and data sharing: please see the FAQ provided below.
+				Eligibility and the CRN EOI process, and to learn more about CRN governance and data sharing, please see the FAQ provided below.
 			</li>
 		</ul>
 		<p>
@@ -292,7 +292,7 @@
 		display: block;
 		width: 100%;
 		box-sizing: border-box;
-		text-align: center;
+		text-align: left;
 		padding: 0.75rem 1.5rem;
 		margin: 0;
 		border: none;
