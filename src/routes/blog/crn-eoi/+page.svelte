@@ -34,7 +34,7 @@
 		</h5>
 
 			<p class="session-row">
-				Wednesday, Feb 18, 8:30 AM IST / 6:00 AM EAT / 10:00 PM ET
+				Wednesday, Feb 18, 6:00 AM EAT / 8:30 AM IST / 10:00 PM ET / 11:00 AM SGT (Feb 19)
 				<a class="session-register" href="https://zoom.us/meeting/register/dCnko_rEQ4aiGaFNsbpq9g" target="_blank" rel="noopener">Register</a>
 			</p>
 			<p class="session-row">
