@@ -146,7 +146,7 @@
                     <li>Help advance science on the potential carbon dioxide removal (CDR) and agricultural benefits of enhanced rock weathering (ERW) globally.</li>
                     <li>Participating institutions and researchers will receive:
                         <ul style="margin: 0;">
-                            <li>Funding to support site operations, personnel, and equipment. See the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail on the anticipated personnel roles and level of effort.</li>
+                            <li>Funding to support site operations, personnel, and equipment (see the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail on the anticipated personnel roles and level of effort).</li>
                             <li>Lead or senior authorship on publications arising from their site.</li>
                             <li>Co-authorship opportunities on global synthesis studies.</li>
                             <li>Access to a global network of ERW researchers and support from Cascade Climate. This includes help developing standardized protocols and training; data management infrastructure; and connections to an international research community. Teams should anticipate that openness and collaboration are core to the CRN model as indicated by the Global Scientific Collaboration and Data Sharing and Publication statements that conclude the EOI form.</li>
@@ -169,9 +169,9 @@
                 <li>For the initial pilot phase, we are prioritizing sites in areas that combine high weathering potential, benefits to farmers, and signals of commercial activity (e.g. Brazil, India, Kenya, countries in Southeast Asia, etc.). As the network scales, we anticipate expanding to additional geographies, and will use submissions to this EOI to also identify sites that may be a fit later in our process. 
 				<li><strong>We encourage you to submit even if:</strong>
 					<ul style="margin: 0;">
-					<li>your site doesn’t meet every <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">preferred criterion</a></li>
-					<li>not all of the required roles are filled</li>
-						<li>2026 launch may not be possible, since the network will scale over time</li>
+					<li>your site doesn’t meet every <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">preferred criterion.</a></li>
+					<li>not all of the required roles are filled.</li>
+						<li>2026 launch may not be possible, since the network will scale over time.</li>
 					</ul>
 				</li>
 					<li><strong>If you are a researcher (PI) who is interested in engaging with the CRN, but do not have a site to propose for a field trial, please email us at grants@cascadeclimate.org.</strong> Include your name, institution/organization, public profile (professional webpage, Google Scholar, ResearchGate, or similar), the specific geographies where you work, and a brief description of your interest in the CRN.</li>
