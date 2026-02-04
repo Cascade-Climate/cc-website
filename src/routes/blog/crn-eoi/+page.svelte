@@ -34,11 +34,11 @@
 		</h5>
 
 			<p class="session-row">
-				Wednesday, Feb 18, 8:30 AM Mumbai / 6:00 AM Nairobi
+				Wednesday, Feb 18, 8:30 AM IST / 6:00 AM EAT / 10:00 PM ET
 				<a class="session-register" href="https://zoom.us/meeting/register/dCnko_rEQ4aiGaFNsbpq9g" target="_blank" rel="noopener">Register</a>
 			</p>
 			<p class="session-row">
-				Tuesday, Feb 24, 12:00 PM São Paulo / 6:00 PM Nairobi
+				Tuesday, Feb 24, 12:00 PM BRT / 6:00 PM EAT / 10:00 AM ET
 				<a class="session-register" href="https://zoom.us/meeting/register/7-kBfCgaQ8qWtftKRMux6A" target="_blank" rel="noopener">Register</a>
 			</p>			
 
@@ -70,9 +70,9 @@
     
     <section id="the-challenge">
         <h1>The Challenge</h1>
-        <p>Enhanced rock weathering (ERW) is a carbon dioxide removal (CDR) strategy that involves the spreading of alkaline crushed rock feedstocks (including silicates, carbonates, or other alkaline materials) on agricultural soils. The quantification of carbon removal in an ERW deployment is complex, and involves a range of biogeochemical fluxes that can impact the net carbon balance across soil systems, groundwater, surface water systems, and the ocean. A brief explainer on enhanced rock weathering can be found <a href="https://cascadeclimate.org/Cascade%20Climate_Enhanced%20Rock%20Weathering%20101_vFinal.pdf" target="_blank" rel="noopener">here</a>.</p>
+        <p>Enhanced rock weathering (ERW) is a carbon dioxide removal (CDR) strategy that involves the spreading of alkaline crushed rock feedstocks (including silicates, carbonates, or other alkaline materials) on agricultural soils. The quantification of carbon removal in an ERW deployment is complex, and involves a range of biogeochemical fluxes. A brief explainer on enhanced rock weathering can be found <a href="https://cascadeclimate.org/Cascade%20Climate_Enhanced%20Rock%20Weathering%20101_vFinal.pdf" target="_blank" rel="noopener">here</a>.</p>
 
-        <p>Rigorous work across an expanding ecosystem of stakeholders and approaches is driving real progress on ERW. Yet there remains a necessity for coordinated research across a range of site characteristics with consistent, mutually comparable site designs and measurement strategies to efficiently answer the key questions faced by the field.</p>
+        <p>Rigorous work across an expanding ecosystem of stakeholders and approaches is driving real progress on ERW. Yet there remains a need for coordinated research across a range of site characteristics with consistent, mutually comparable experimental designs and measurement strategies to efficiently answer the key questions faced by the field.</p>
 
 
     </section>
@@ -87,7 +87,7 @@
             <li>How can different CDR quantification strategies (e.g., measuring changes in soil chemistry, measuring changes in porewater chemistry, using ion exchange resins) help us understand the full picture of feedstock weathering and transport of carbon? Deploying these methods side-by-side will help clarify the complexities of the weathering process and compare between different measurement methods.</li>
             <li>What are the agricultural benefits of ERW, and what factors drive them? Reported yield impacts<sup>1,5,6</sup> range from negligible to dramatic, but studies often lack proper controls or statistical power to isolate the mechanisms underpinning these effects.</li>
             <li>What happens to weathering products in deeper soils? Reactions below the commonly measured depths may reverse carbon removal, but these dynamics are difficult to observe and poorly represented in models.</li>
-        <p>Across these sites, the network will attempt to reconcile different measurement strategies — solid phase, aqueous phase, and ion exchange resins — and to track the fate of cations in deeper (~1m) soils, where significant uncertainty remains. Agronomic parameters will also be measured on all sites in order to better understand what mechanisms lead to observed crop yield improvements. Measurements will be geared toward sufficiently constraining the variability of key soil parameters to support the development, calibration, validation and intercomparison of geochemical models.</p>
+        <p>Across these sites, the network will attempt to reconcile different measurement strategies — solid phase, aqueous phase, and ion exchange resins — and to track the fate of cations in deeper (~1m) soils, where significant uncertainty remains. Agronomic parameters will also be measured on all sites in order to better understand what mechanisms lead to observed crop yield improvements. Measurements will also help to constrain the variability of key soil parameters to support the development, calibration, validation and intercomparison of geochemical models.</p>
         </ol>
 
     </section>
@@ -108,7 +108,7 @@
 
         <p><strong>For questions on eligibility and the CRN EOI process</strong>, and to learn more about CRN governance and data sharing, please see the FAQ provided below.</p>
 
-        <p><strong>For additional questions</strong>, please contact grants@cascadeclimate.org.</p>
+        <p><strong>For additional questions</strong>, please attend one of the virtual information sessions listed above or contact grants@cascadeclimate.org.</p>
 
 		<p><strong>If you are potentially interested in hosting a CRN site</strong>, please complete the Expression of Interest form by March 10, 2026.</p>
 
@@ -122,7 +122,7 @@
     <section id="faq">
 
         <h1>EOI Frequently Asked Questions</h1>
-        <p class="faq-instruction">Click to expand questions</p>
+        <p class="faq-instruction">Click a question to view the answer</p>
 
         <details class="faq" id="participation" open>
             <summary><span>Participation: Why participate in the CRN?</span></summary>
@@ -132,8 +132,8 @@
                     <li>Participating institutions and researchers will receive:
                         <ul style="margin: 0;">
                             <li>Funding to support site operations, personnel, and equipment. See the <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Site Selection Criteria</a> for more detail on the anticipated personnel roles and level of effort.</li>
-                            <li>Lead or senior authorship on publications arising from their site</li>
-                            <li>Co-authorship opportunities on global synthesis studies</li>
+                            <li>Lead or senior authorship on publications arising from their site.</li>
+                            <li>Co-authorship opportunities on global synthesis studies.</li>
                             <li>Access to a global network of ERW researchers and support from Cascade Climate. This includes help developing standardized protocols and training; data management infrastructure; and connections to an international research community. Teams should anticipate that openness and collaboration are core to the CRN model as indicated by the Global Scientific Collaboration and Data Sharing and Publication statements that conclude the EOI form.</li>
                         </ul>
                     </li>
@@ -175,7 +175,7 @@
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>We hope and expect that most applicants will not need to spend more than 30 minutes completing the form, assuming you have the information below readily available. Please note the guidance in the form about refraining from sharing long paragraphs of text; simply listing information is expected and preferred where suitable to respond to a given prompt.</li>
-                <li>Gathering information on the following will be useful in filling out the <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">EOI form</a> for specific prompts and which information is required versus preferred to share):</li>
+                <li>Gathering information on the following will be useful in filling out the <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">EOI form:</a></li>
                 <ul style="margin: 0;">
                     <li>Basic site characteristics (location, area, soil type, soil characteristics, etc.) </li>
                     <li>Information about land access and ownership/management arrangements</li>
