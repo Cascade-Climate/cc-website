@@ -130,8 +130,8 @@
 			Register <a href="#virtual-information-sessions">here</a> for one of two scheduled information sessions about the CRN and EOI process, at which we’ll host Q&amp;A sessions on Zoom for different timezones.
 		</p>
 
-		<p>For additional questions, please contact grants@cascadeclimate.org.</p>
-			
+		<p style="margin-top: 1.5em;">For additional questions, please contact grants@cascadeclimate.org.</p>
+
     </section>
 
     <section id="faq">
