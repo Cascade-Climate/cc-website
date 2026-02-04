@@ -81,7 +81,7 @@
         <h1>The Objective</h1>
         <p>The Coordinated Research Network (CRN) is our response to this challenge. It aims to establish up to 15 highly-standardized ERW field sites in sub-tropical or tropical climates. We are targeting 1-2 sites for a 2026 deployment for which we have secured philanthropic funding to support over a five year period.</p>
 
-        <p>The Coordinated Research Network (CRN) intends to answer these questions:</p>
+        <p>The CRN intends to answer these questions:</p>
         <ol style="margin: 0;">
             <li>Across a range of soils and climates, what is the carbon removal potential of ERW and on what timescales? Field studies have produced divergent estimates<sup>1,2,3,4,7,8</sup>, and differences in measurement strategies, objectives, data reporting, and site conditions make it difficult to draw broad conclusions.</li>
             <li>How can different CDR quantification strategies (e.g., measuring changes in soil chemistry, measuring changes in porewater chemistry, using ion exchange resins) help us understand the full picture of feedstock weathering and transport of carbon? Deploying these methods side-by-side will help clarify the complexities of the weathering process and compare between different measurement methods.</li>
@@ -103,6 +103,8 @@
         <li>Willingness to collaborate in a global collaborative research network, follow standardized protocols and site design, and contribute to a global network-wide synthesis</li>
         </ul>
 		<p class="eoi-deadline"><strong>If you are potentially interested in hosting a CRN site</strong>, please complete the Expression of Interest form by March 10, 2026.</p>
+		
+		<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest↗</a>
 		
 		<p>For more information on:</p>
 		<ul>
@@ -127,10 +129,6 @@
 		</p>
 
 		<p>For additional questions, please contact grants@cascadeclimate.org.</p>
-
-
-		<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest↗</a>
-
 			
     </section>
 
