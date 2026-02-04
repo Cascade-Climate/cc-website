@@ -29,8 +29,8 @@
 
 		<h5 class="intro-highlight" style="color:white">Deadline</h5>
 		<p>March 10, 2026 at 11:59PM ET</p>
-		<h5 class="intro-highlight" style="color:white">
-			VIRTUAL Information Sessions
+		<h5 class="intro-highlight" style="color:white" id="virtual-information-sessions">
+			Virtual Information Sessions
 		</h5>
 
 			<p class="session-row">
@@ -102,15 +102,32 @@
         <li>Relevant expertise in soil science, biogeochemistry, hydrology, agronomy, or other fields closely related to ERW science</li>
         <li>Willingness to collaborate in a global collaborative research network, follow standardized protocols and site design, and contribute to a global network-wide synthesis</li>
         </ul>
-        <p><strong>For information on site selection criteria</strong> (required and preferred), personnel and partner requirements, trial design specifications, and additional details, <strong><a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">please review Document A: Site Selection Criteria.</a></strong></p>
+		<p class="eoi-deadline"><strong>If you are potentially interested in hosting a CRN site</strong>, please complete the Expression of Interest form by March 10, 2026.</p>
+		
+		<p>For more information on:</p>
+		<ul>
+			<li>
+				Site selection criteria (required and preferred), personnel and partner requirements, and trial specifications:
+				<a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">
+					<strong>please review Document A: Site Selection Criteria.</strong>
+				</a>
+			</li>
+			<li>
+				Our conflict of interest policy:
+				<a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">
+					<strong>please review Document B: Conflict of Interest Policy.</strong>
+				</a>
+			</li>
+			<li>
+				Eligibility and the CRN EOI process, and to learn more about CRN governance and data sharing, please see the FAQ provided below.
+			</li>
+		</ul>
+		<p>
+			Register <a href="#virtual-information-sessions">here</a> for one of two scheduled information sessions about the CRN and EOI process, at which we’ll host Q&amp;A sessions on Zoom for different timezones.
+		</p>
 
-        <p><strong>For more information on our conflict of interest policy</strong>, <a href="/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf" target="_blank" rel="noopener">please review Document B: Conflict of Interest Policy.</a></p>
+		<p>For additional questions, please contact grants@cascadeclimate.org.</p>
 
-        <p><strong>For questions on eligibility and the CRN EOI process</strong>, and to learn more about CRN governance and data sharing, please see the FAQ provided below.</p>
-
-        <p><strong>For additional questions</strong>, please attend one of the virtual information sessions listed above or contact grants@cascadeclimate.org.</p>
-
-		<p><strong>If you are potentially interested in hosting a CRN site</strong>, please complete the Expression of Interest form by March 10, 2026.</p>
 
 		<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest↗</a>
 
@@ -418,6 +435,9 @@
 	.intro-highlight {
 		font-size: 1.2em;
 		margin-bottom: 0.25rem;
+	}
+	.eoi-deadline {
+		font-size: 1.25em;
 	}
 	:global(.intro .intro-highlight + p),
 	:global(.intro .intro-highlight + .intro-highlight) {
