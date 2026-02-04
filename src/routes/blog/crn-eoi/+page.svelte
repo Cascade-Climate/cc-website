@@ -121,7 +121,7 @@
 				</a>
 			</li>
 			<li>
-				Eligibility and the CRN EOI process, and to learn more about CRN governance and data sharing, please see the FAQ provided below.
+				Eligibility and the CRN EOI process, and to learn more about CRN governance and data sharing: please see the FAQ provided below.
 			</li>
 		</ul>
 		<p>
