@@ -321,6 +321,12 @@
 	:global(#the-objective sup) {
 		font-size: 0.75em; /* 25% smaller */
 	}
+	:global(#footnotes) {
+		font-size: 0.9rem;
+	}
+	:global(#footnotes h1) {
+		font-size: 2rem;
+	}
 	details.faq {
 		scroll-margin-top: 8rem; /* Keep anchor targets visible below fixed header + sticky nav */
 		margin: 0.75rem 0;

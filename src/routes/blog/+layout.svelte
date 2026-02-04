@@ -214,12 +214,18 @@
 	@media (max-width: 660px) {
 		:global(main, .intro) {
 			padding: 1rem 2rem;
+			max-width: 100%;
 		}
 
 		:global(main) {
 			padding-bottom: 6rem;
 			margin-left: 1rem;
 			margin-right: 1rem;
+		}
+
+		:global(.intro .content img) {
+			max-width: 100%;
+			width: 100%;
 		}
 	}
 </style>
