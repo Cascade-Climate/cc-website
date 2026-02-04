@@ -103,9 +103,11 @@
         <li>Willingness to collaborate in a global collaborative research network, follow standardized protocols and site design, and contribute to a global network-wide synthesis</li>
         </ul>
 		<p class="eoi-deadline"><strong>If you are potentially interested in hosting a CRN site</strong>, please complete the Expression of Interest form by March 10, 2026.</p>
-		
-		<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest↗</a>
-		
+
+		<div class="eoi-submit-wrap">
+			<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest↗</a>
+		</div>
+
 		<p>For more information on:</p>
 		<ul>
 			<li>
@@ -131,8 +133,6 @@
 		<p>For additional questions, please contact grants@cascadeclimate.org.</p>
 			
     </section>
-
-    
 
     <section id="faq">
 
@@ -284,13 +284,17 @@
 		opacity: 0.85;
 		margin: 0 0 0.5rem 0;
 	}
+	.eoi-submit-wrap {
+		margin: 1rem 0 1.5rem 0;
+		width: 100%;
+	}
 	.eoi-submit-button {
 		display: block;
 		width: 100%;
 		box-sizing: border-box;
-		text-align: left;
-		padding: 0.5rem 1.2rem;
-		margin-top: 1rem;
+		text-align: center;
+		padding: 0.75rem 1.5rem;
+		margin: 0;
 		border: none;
 		border-radius: 2rem;
 		background-color: var(--color-accent);
