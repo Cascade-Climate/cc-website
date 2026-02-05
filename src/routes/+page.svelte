@@ -11,6 +11,8 @@
 	import bridge from '$lib/images/nature/bridge.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
 	import heroPhoto4 from '$lib/images/hero.webp';
+	import newblock1 from '$lib/images/supporters/newblock-1.webp';
+	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 </script>
 
 <svelte:head>
@@ -47,6 +49,28 @@
 		<hr style="margin: 48px;"> -->
 
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
+		<div class="spotlights">
+			<div class="spotlight">
+				<img src={newblock1} alt="CRN EOI"/>
+				<h2>A new global network for coordinated ERW research
+				</h2>
+				<p>
+					To answer the key questions faced by the field, Cascade is standing up a Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies.
+
+				</p>
+				<a href="/blog/crn-eoi" target="_blank">Learn More</a>
+			</div>
+			<div class="spotlight">
+				<img src={asiasmoke} alt="Asia Smoke"/>
+					<h2>Accounting and claims for climate pollutants
+					</h2>
+					<p>
+						CO2 mitigation stabilizes long-term warming while SLCP mitigation reduces near-term temperature overshoot risks, requiring both to be treated as complementary strategies with consistent accounting across all greenhouse gases. Continue reading to learn more about Cascade's work on this front, including our latest report.
+	
+					</p>
+				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
+			</div>
+		</div>
 		<div class="spotlights">
 			<div class="spotlight">
 				<img src={bridge} alt="Crossing The Bridge"/>
@@ -200,19 +224,6 @@
 		line-height: 1.4;
 	}
 
-	h4 {
-		margin-top: 2rem;
-		margin-bottom:2rem;
-		font-weight: 300;
-		line-height: 1.4;
-		font-size: 120%;
-	}
-
-
-	h5 {
-		font-weight: 550;
-	}
-
 	#about div {
 		background-color: var(--color-dark);
 		padding: 1rem 4rem;
@@ -222,18 +233,6 @@
 	#about img {
 		margin: 0;
 		display: block;
-	}
-
-	#about a {
-		background-color: var(--color-light);
-		color: var(--color-dark);
-		padding: 0.25rem;
-		border-radius: 2rem;
-		margin-bottom: 1rem;
-		font-size: 1rem;
-		width: 100%;
-		display: block;
-		text-align: center;
 	}
 
 	#about {
@@ -285,17 +284,6 @@
 		border-radius: 2rem;
 		margin-bottom: 1rem;
 		font-size: 1rem;
-		width: 100%;
-	}
-	.spotlight b {
-		background-color: white;
-		color: var(--color-accent);
-		border: 1px solid var(--color-accent);
-		padding: 0.5rem 1rem;
-		border-radius: 2rem;
-		margin-bottom: 1rem;
-		font-size: 1rem;
-		font-weight: normal;
 		width: 100%;
 	}
 
