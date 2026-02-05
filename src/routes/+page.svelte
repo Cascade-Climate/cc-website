@@ -11,7 +11,7 @@
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
-	import herophoto3 from '$lib/images/herophoto3.webp';
+	import herophoto3 from '$lib/images/nature/heroPhoto3.webp';
 </script>
 
 <svelte:head>
