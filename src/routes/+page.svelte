@@ -51,7 +51,7 @@
 		<div class="spotlights">
 			<div class="spotlight">
 				<img src={herophoto3} alt="CRN EOI"/>
-				<h2>Seeking host institutions for coordinated ERW research
+				<h2>Seeking hosts for coordinated ERW research
 				</h2>
 				<p>
 					To answer critical field questions, Cascade is standing up a new global network of standardized ERW experimental field trials and seeking partners to host and operate sites.
