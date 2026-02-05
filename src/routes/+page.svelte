@@ -63,7 +63,7 @@
 					<h2>Accounting and claims for short-lived and long-lived pollutants
 					</h2>
 					<p>
-						Why must today's climate actions go beyond CO2 and prioritize activities that can reduce near-term warming in the coming decades?
+						Learn more about why today's climate actions must go beyond CO2 mitigation and prioritize activities that can reduce near-term warming in the coming decades.
 	
 					</p>
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
