@@ -50,41 +50,39 @@
 		<div class="spotlights">
 			<div class="spotlight">
 				<img src={newblock1} alt="CRN EOI"/>
-				<h2>A new global network for coordinated ERW research
+				<h2>A new network for coordinated ERW research
 				</h2>
 				<p>
-					To answer the key questions faced by the field, Cascade is standing up a Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies.
+					To answer key field-wide questions, Cascade is standing up a Coordinated Research Network of standardized experimental field trials across global geographies.
 
 				</p>
 				<a href="/blog/crn-eoi" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={asiasmoke} alt="Asia Smoke"/>
-					<h2>Accounting and claims for climate pollutants
+					<h2>Accounting and claims for short-lived and long-lived pollutants
 					</h2>
 					<p>
-						To avert the accelerating risks of near-term warming and the overshoot of temperature goals, today's climate actions must go beyond mitigation of CO2 and prioritize activities that can reduce near-term warming in the coming decades.
+						Learn more about why today's climate actions must go beyond mitigation of CO2 and prioritize activities that can reduce near-term warming in the coming decades.
 	
 					</p>
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
 			</div>
-		</div>
-		<div class="spotlights">
 			<div class="spotlight">
 				<img src={bridge} alt="Crossing The Bridge"/>
-				<h2>Voluntary climate financing as a bridge
+				<h2>Voluntary climate financing as a bridge to scale
 				</h2>
 				<p>
-					Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate technologies, while closing three critical gaps to scale up: building the evidence base, driving down costs, and resolving real-world deployment risks.
+					Voluntary finance is one of the few tools we can deploy at speed to de-risk climate technologies and close gaps to scale. Here's how we're thinking about it.
 
 				</p>
 				<a href="/blog/crossing-the-bridge" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={data} alt="Data Sharing System" />
-				<h2>Data sharing system to advance scientific research</h2>
+				<h2>A data sharing system to advance ERW research</h2>
 				<p>
-					To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
+					Learn how the ERW Data Quarry is connecting researchers to data from commercial ERW deployments and unlocking a virtuous cycle of deployment-led learning.
 				</p>
 				<a href="/blog/data-sharing-system-for-erw" target="_blank">Learn More</a>
 			</div>
@@ -95,6 +93,42 @@
 		<h3>SPOTLIGHT ON <a href="/blog">OUR BLOG ↗</a></h3>
 		<div id="blog">
 	<div id="post-list">
+
+		<div class="post">
+			<h1>
+				<a href="/blog/crn-eoi" target="_blank" style="color: var(--color-accent);">
+					Call for Expressions of Interest: Coordinated Research Network for Enhanced Rock Weathering
+				</a>
+			</h1>
+			<p>
+				Cascade is standing up a global Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies.
+			</p>
+			<p class="details">
+				<span class="date">02/05/2026</span>
+				·
+				<span class="read-time">5 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
+
+		<div class="post">
+			<h1>
+				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank" style="color: var(--color-accent);">
+					Beyond GWP100: Accounting and Claims for Short-Lived and Long-Lived Climate Pollutants
+				</a>
+			</h1>
+			<p>
+				Learn how Cascade is driving strong community alignment on the credibility of corporate and international credit claims, and read our latest report.
+			</p>
+			<p class="details">
+				<span class="date">01/21/2026</span>
+				·
+				<span class="read-time">4 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
 
 		<div class="post">
 			<h1>
