@@ -63,7 +63,7 @@
 					<h2>Accounting and claims for climate pollutants
 					</h2>
 					<p>
-						CO2 mitigation stabilizes long-term warming while SLCP mitigation reduces near-term temperature overshoot risks, requiring both to be treated as complementary strategies with consistent accounting across all greenhouse gases. Continue reading to learn more about Cascade's work on this front, including our latest report.
+						To avert the accelerating risks of near-term warming and the overshoot of temperature goals, today's climate actions must go beyond mitigation of CO2 and prioritize activities that can reduce near-term warming in the coming decades.
 	
 					</p>
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
