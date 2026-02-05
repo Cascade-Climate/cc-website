@@ -54,7 +54,7 @@
 				<h2>Seeking host institutions for coordinated ERW research
 				</h2>
 				<p>
-					To answer critical field questions, Cascade is standing up a new global network of standardized experimental field trials and seeking partners to host and operate sites.
+					To answer critical field questions, Cascade is standing up a new global network of standardized ERW experimental field trials and seeking partners to host and operate sites.
 
 				</p>
 				<a href="/blog/crn-eoi" target="_blank">Learn More</a>
