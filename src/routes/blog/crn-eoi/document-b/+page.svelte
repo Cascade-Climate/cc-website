@@ -1,5 +1,5 @@
 <script>
-	const pdfUrl = '/Cascade%20Climate_CRN_EOI_Conflict%20of%20Interest_Policy.pdf';
+	const pdfUrl = encodeURI('/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf');
 </script>
 
 <svelte:head>
