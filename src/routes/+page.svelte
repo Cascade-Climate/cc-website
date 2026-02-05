@@ -5,11 +5,9 @@
 	import ocean1 from '$lib/images/nature/ocean1.webp';
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import data from '$lib/images/nature/data.webp';
-	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
 	import bridge from '$lib/images/nature/bridge.webp';
-	import foundations from '$lib/images/nature/foundations.webp';
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
@@ -83,14 +81,6 @@
 				<a href="/blog/crossing-the-bridge" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={slcp} alt="Super Pollutants" />
-				<h2>Cascade expands into super pollutant field building</h2>
-				<p>
-					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
-				</p>
-				<a href="/blog/cascade-entry-into-slcp-mitigation" target="_blank">Learn More</a>
-			</div>
-			<div class="spotlight">
 				<img src={data} alt="Data Sharing System" />
 				<h2>Data sharing system to advance scientific research</h2>
 				<p>
@@ -98,15 +88,6 @@
 				</p>
 				<a href="/blog/data-sharing-system-for-erw" target="_blank">Learn More</a>
 			</div>
-			<div class="spotlight">
-				<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
-				<h2>Foundations for CDR Quantification in ERW Deployments</h2>
-				<p>
-					After a year-long process involving over 100 stakeholders, we produced a comprehensive technical reference on the "hows" of rigorous carbon removal quantification in an ERW deployment.
-				</p>
-				<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank">Learn More</a>
-			</div>
-			
 		</div>
 
 		<hr style="margin: 64px;">
