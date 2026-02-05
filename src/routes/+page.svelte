@@ -11,6 +11,7 @@
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
+	import herophoto3 from '$lib/images/herophoto3.webp';
 </script>
 
 <svelte:head>
@@ -49,7 +50,7 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
-				<img src={newblock1} alt="CRN EOI"/>
+				<img src={herophoto3} alt="CRN EOI"/>
 				<h2>A new network for coordinated ERW research
 				</h2>
 				<p>
