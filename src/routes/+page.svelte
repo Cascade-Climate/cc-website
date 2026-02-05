@@ -53,7 +53,7 @@
 				<h2>A new network for coordinated ERW research
 				</h2>
 				<p>
-					To answer key field-wide questions, Cascade is standing up a Coordinated Research Network of standardized experimental field trials across global geographies.
+					To answer critical field questions, Cascade is standing up a Coordinated Research Network of standardized experimental field trials across global geographies.
 
 				</p>
 				<a href="/blog/crn-eoi" target="_blank">Learn More</a>
