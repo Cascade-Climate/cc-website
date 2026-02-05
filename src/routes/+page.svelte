@@ -63,7 +63,7 @@
 					<h2>Accounting and claims for short-lived and long-lived pollutants
 					</h2>
 					<p>
-						Learn more about why today's climate actions must go beyond mitigation of CO2 and prioritize activities that can reduce near-term warming in the coming decades.
+						Why must today's climate actions go beyond CO2 and prioritize activities that can reduce near-term warming in the coming decades?
 	
 					</p>
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
@@ -82,7 +82,7 @@
 				<img src={data} alt="Data Sharing System" />
 				<h2>A data sharing system to advance ERW research</h2>
 				<p>
-					Learn how the ERW Data Quarry is connecting researchers to data from commercial ERW deployments and unlocking a virtuous cycle of deployment-led learning.
+					Learn how the ERW Data Quarry is connecting researchers to data from commercial ERW deployments and unlocking deployment-led learning.
 				</p>
 				<a href="/blog/data-sharing-system-for-erw" target="_blank">Learn More</a>
 			</div>
@@ -278,6 +278,8 @@
 	.spotlight {
 		width: 25%;
 		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.spotlight img {
@@ -297,6 +299,7 @@
 		color: var(--color-light);
 		padding: 0.5rem 1rem;
 		border-radius: 2rem;
+		margin-top: auto;
 		margin-bottom: 1rem;
 		font-size: 1rem;
 		width: 100%;
