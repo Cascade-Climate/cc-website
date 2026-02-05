@@ -12,7 +12,8 @@
 	import wpe from '$lib/images/nature/erwexplorer.webp';
 	import bridge from '$lib/images/nature/bridge.webp';
 	import { onMount } from 'svelte';
-	import asiasmoke from '$lib/images/blog/asiasmoke.webp'
+	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
+	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 
 	const sections = [
 		{ id: 'erw', title: 'ERW' },
@@ -76,6 +77,14 @@
 			</p>
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
+				<div>
+					<img src={newblock1} alt="CRN EOI" />
+					<h2>A new global network for coordinated ERW research</h2>
+					<p>
+						To answer the key questions faced by the field, Cascade is standing up a Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies.
+					</p>
+					<a href="/blog/crn-eoi">Learn More</a>
+				</div>
 				<div>
 					<img src={wpe} alt="Weathering potential explorer screencap" />
 					<h2>Weathering Potential Explorer</h2>
