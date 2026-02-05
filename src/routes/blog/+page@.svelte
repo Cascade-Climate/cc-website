@@ -14,7 +14,7 @@
 					Call for Expressions of Interest: Coordinated Research Network for Enhanced Rock Weathering
 				</a>
 			</h1>
-			<p>Cascade is standing up a global Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies.</p>
+			<p>Cascade is standing up a global Coordinated Research Network (CRN) of standardized ERW experimental field trials across diverse global geographies.</p>
 				<p class="details">
 					<span class="date">02/05/2026</span>
 					·

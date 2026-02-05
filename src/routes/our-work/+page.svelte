@@ -81,7 +81,7 @@
 					<img src={newblock1} alt="CRN EOI" />
 					<h2>A new global network for coordinated ERW research</h2>
 					<p>
-						To answer the key questions faced by the field, Cascade is standing up a Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies.
+						To answer the key questions faced by the field, Cascade is standing up a Coordinated Research Network (CRN) of standardized ERW experimental field trials across diverse global geographies.
 					</p>
 					<a href="/blog/crn-eoi">Learn More</a>
 				</div>
