@@ -249,19 +249,19 @@
                 <li>Todos os parceiros devem estar dispostos a colaborar na finalização do projeto de ensaio de campo, na definição e implementação de medições e procedimentos de campo padronizados, e no estabelecimento e gestão da infraestrutura de dados, análise e eventual publicação.</li>
                 <li> As funções de governança da CRN incluem:
                 <ul style="margin: 0;">
-                    <li><strong>Um Steering Committee (Comitê Gestor) </strong>, que tem autoridade de tomada de decisão sobre financiamento e o plano operacional anual da CRN.
+                    <li><strong>Um Steering Committee (Comitê Gestor)</strong>, que tem autoridade de tomada de decisão sobre financiamento e o plano operacional anual da CRN.
                     </li>
                     <li><strong>A Science Advisory Board (SAB) (Conselho Consultivo Científico)</strong>  de pesquisadores líderes que fornece supervisão científica, revisão de objetivos, protocolos experimentais e designs de locais.</li>
                     <li><strong>Working Groups (Grupos de Trabalho)</strong> que reúnem especialistas disciplinares para garantir a padronização entre os locais e apoiar o design experimental e a análise de dados. Investigadores Principais (PIs) de cada local também serão integrantes do Working Group.
                     </li>
-                    <li><strong>Local Operating Teams (Equipes Operacionais Locais)</strong> — normalmente um <strong>Principal Investigator/PI (Investigador Principal)</strong> e um <strong>Site Manager (Gestor de Local)</strong> dedicado com <strong>Field and Lab Technicians (Técnicos de Campo e Laboratório associados)</strong> — que executam os experimentos em cada local de campo com orientação dos Working Groups e do SAB.
+                    <li><strong>Local Operating Teams (Equipes Operacionais Locais)</strong> — normalmente um <strong>Principal Investigator/PI (Investigador Principal)</strong> e um <strong>Site Manager (Gestor de Local)</strong> dedicado com <strong>Field and Lab Technicians (Técnicos de Campo e Laboratório)</strong> — que executam os experimentos em cada local de campo com orientação dos Working Groups e do SAB.
                     </li>
                     <li><strong>A Cascade Climate</strong>, que planeja fornecer coordenação em todos os locais globais. Isso inclui ajudar a desenvolver protocolos e capacitação padronizados, infraestrutura de gestão de dados e gestão de conexões entre esses grupos.</li>
                 </ul>
                 </li>
                 <li>A colaboração entre locais é fundamental para o modelo da CRN.
                 <ul style="margin: 0;">
-                <li>Os PIs dos locais participarão de reuniões regulares do Working Group, compartilharão experiências e lições aprendidas e contribuirão para os esforços de síntese com toda a rede. As reuniões do Working Group serão conduzidas em inglês. Forneceremos suporte com tradução conforme necessário.</li>
+                <li>Os Principal Investigators dos locais participarão de reuniões regulares do Working Group, compartilharão experiências e lições aprendidas e contribuirão para os esforços de síntese com toda a rede. As reuniões do Working Group serão conduzidas em inglês. Forneceremos suporte com tradução conforme necessário.</li>
                 <li>O Science Advisory Board tem aprovação final sobre os protocolos para garantir o rigor científico e a consistência entre locais. Porém, as Local Operating Teams terão contribuições ao longo do processo e poderão propor perguntas localmente relevantes dentro ou além (se o orçamento permitir) da estrutura padronizada.
                 </li>
                 <li>Espera-se que as Local Operating Teams (particularmente PIs e Site Managers) liderem a preparação do manuscrito específico do local e a publicação dos resultados em colaboração com os membros do Working Group, e também devem concordar na coordenação com o Scientific Advisory Board para análise entre locais. Prevemos oportunidades para futuras publicações conjuntas a partir de análises entre locais.</li>
@@ -279,7 +279,7 @@
                 <li>A Cascade Climate fornecerá a infraestrutura global de gerenciamento de dados. A CRN foi projetada para gerar aprendizado em toda a área de pesquisa, além de resultados específicos de cada local. Ao implementar protocolos, estratégias de medição e projetos de locais padronizados em diversas regiões geográficas, a rede produzirá conjuntos de dados que podem ser comparados e sintetizados de forma significativa, possibilitando o tipo de análise global que estudos isolados não conseguem suportar.</li>
                 <li>Esperamos que todas as instituições anfitriãs dos locais de pesquisa, os pesquisadores principais e todos os outros parceiros envolvidos na coleta de dados revisem e assinem os acordos de licenciamento de dados, que são necessários para o recebimento do financiamento. Os acordos de licenciamento de dados detalharão os requisitos de compartilhamento de dados, com expectativas como as seguintes:
                 <ul style="margin: 0;">
-                    <li>Os dados serão transmitidos diretamente para um repositório central acessível aos membros do Grupo de Trabalho e do Conselho Consultivo Científico, com o objetivo de apoiar a natureza coordenada da rede de pesquisa.</li>
+                    <li>Os dados serão transmitidos diretamente para um repositório central acessível aos membros do Working Groups e do Science Advisory Board, com o objetivo de apoiar a natureza coordenada da rede de pesquisa.</li>
                     <li>Dados com controle de qualidade serão disponibilizados para uma comunidade de modeladores geoquímicos acadêmicos que a Cascade planeja reunir como parte desta iniciativa, com o objetivo de calibrar e validar esses modelos.</li>
                     <li>Conjuntos de dados completos em nível de amostra serão disponibilizados publicamente após a submissão do pré-print.</li>
                     <li>Conjuntos de dados completos serão disponibilizados publicamente caso a submissão do pré-print não resulte no compartilhamento completo dos dados dentro de um prazo razoável após a dispersão inicial das rochas.</li>
