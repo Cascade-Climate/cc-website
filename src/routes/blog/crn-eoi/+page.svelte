@@ -79,7 +79,7 @@
 
 	<section id="the-objective">
         <h1>The Objective</h1>
-        <p>The Coordinated Research Network (CRN) is our response to this challenge. It aims to establish up to 15 highly-standardized ERW field sites in sub-tropical or tropical climates. We are targeting one or two sites for a 2026 deployment for which we have secured philanthropic funding to support over a five year period.</p>
+        <p>The Coordinated Research Network (CRN) is our response to this challenge. It aims to establish up to 15 highly-standardized ERW field sites in sub-humid or wetter climates. We are targeting one or two sites for a 2026 deployment for which we have secured philanthropic funding to support over a five year period.</p>
 
         <p>The CRN intends to answer these questions:</p>
         <ol style="margin: 0;">
