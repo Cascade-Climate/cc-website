@@ -18,7 +18,7 @@
 				<a class="long-button" href="https://cascadeclimate.org/blog/crn-eoi">Click here for Call for Expressions of Interest in English</a>
 
 				<p class="intro-first">
-                 A Cascade Climate está buscando manifestações de interesse (Expressions of Interest ou EOI) de instituições para hospedar e operar locais de pesquisa de ERW (enhanced rock weathering) coordenados globalmente. Estamos criando uma Rede de Pesquisa Coordenada (Coordinated Research Network ou CRN) global de ensaios de campo experimentais padronizados em diversas regiões geográficas do mundo. Nosso objetivo é estabelecer até 15 locais padronizados, começando com um ou dois locais-piloto a serem lançados em 2026, com financiamento filantrópico garantido por cinco anos.
+                 A Cascade Climate está buscando manifestações de interesse (<em>expressions of interest</em>/<em>EOI</em>) de instituições para hospedar e operar locais de pesquisa de ERW (<em></em>enhanced rock weathering</em>) coordenados globalmente. Estamos criando uma Coordinated Research Network (Rede de Pesquisa Coordenada ou <em>CRN</em>) global de ensaios de campo experimentais padronizados em diversas regiões geográficas do mundo. Nosso objetivo é estabelecer até 15 locais padronizados, começando com um ou dois locais-piloto a serem lançados em 2026, com financiamento filantrópico garantido por cinco anos.
                     </p>
 				<p class="intro-second">
 					Ao implantar protocolos, estratégias de medição e projetos experimentais padronizados, a CRN alcançará o que estudos isolados não conseguem: aprendizado em larga escala, possibilitado por conjuntos de dados comparáveis ​​em contextos globais. Os locais anfitriões receberão financiamento operacional, oportunidades de autoria em publicações específicas de local e de toda a rede, além de acesso a uma comunidade global de pesquisadores de ERW.</p>
@@ -85,13 +85,13 @@
 
 	<section id="objetivo">
         <h1>O Objetivo</h1>
-        <p>A Rede de Pesquisa Coordenada (CRN) é a nossa resposta a esse desafio. O objetivo é estabelecer até 15 locais de pesquisa de campo altamente padronizados para o estudo de resíduos de explosivos de guerra em climas subúmidos ou mais úmidos. Estamos planejando a implementação de um ou dois desses locais em 2026, para os quais já garantimos financiamento filantrópico para um período de cinco anos.</p>
+        <p>A Coordinated Research Network é a nossa resposta a esse desafio. O objetivo é estabelecer até 15 locais de pesquisa de campo altamente padronizados para o estudo de resíduos de explosivos de guerra em climas subúmidos ou mais úmidos. Estamos planejando a implementação de um ou dois desses locais em 2026, para os quais já garantimos financiamento filantrópico para um período de cinco anos.</p>
 
         <p>A CRN pretende responder às seguintes perguntas:</p>
         <ol style="margin: 0;">
             <li>Em uma variedade de solos e climas, qual é o potencial de remoção de carbono pelo ERW e em quais escalas de tempo? Estudos de campo produziram estimativas divergentes<sup>1,2,3,4,7,8</sup>, e as diferenças nas estratégias de medição, objetivos, relatórios de dados e condições dos locais dificultam a obtenção de conclusões amplas.
             </li>
-            <li>Como diferentes estratégias de quantificação de CDR (por exemplo, medição de mudanças na química do solo, medição de mudanças na química da água porosa, uso de resinas de troca iônica) podem nos ajudar a entender o panorama completo do intemperismo da matéria-prima e do transporte de carbono? A implantação desses métodos lado a lado ajudará a esclarecer as complexidades do processo de intemperismo e a comparar diferentes métodos de medição.
+            <li>Como diferentes estratégias de quantificação de remoção de dióxido de carbono (por exemplo, medição de mudanças na química do solo, medição de mudanças na química da água porosa, uso de resinas de troca iônica) podem nos ajudar a entender o panorama completo do intemperismo da matéria-prima e do transporte de carbono? A implantação desses métodos lado a lado ajudará a esclarecer as complexidades do processo de intemperismo e a comparar diferentes métodos de medição.
             </li>
             <li>Quais são os benefícios agrícolas do ERW e quais fatores os impulsionam? Os impactos de produtividade relatados<sup>1,5,6</sup> variam de insignificantes a drásticos, mas os estudos muitas vezes carecem de controles adequados ou poder estatístico para isolar os mecanismos subjacentes a esses efeitos.</li>
             <li>O que acontece com os produtos do intemperismo em solos mais profundos? Reações abaixo das profundidades comumente medidas podem reverter a remoção de carbono, mas essas dinâmicas são difíceis de se observar e mal representadas nos modelos.</li>
@@ -145,14 +145,14 @@
 
     <section id="faq">
 
-        <h1>Pregunats Frequentes (FAQ)</h1>
+        <h1>Preguntas Frequentes (FAQ)</h1>
         <p class="faq-instruction">Clique em uma pergunta para ver a resposta</p>
 
         <details class="faq" id="participacao" open>
             <summary><span>Participação: por que participar da CRN?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
-                    <li>Ajude a avançar a ciência sobre o potencial de remoção de dióxido de carbono (CDR) e os benefícios agrícolas do intemperismo rochoso acelerado (ERW) ao nível global.</li>
+                    <li>Ajude a avançar a ciência sobre o potencial de remoção de dióxido de carbono e os benefícios agrícolas do ERW ao nível global.</li>
                     <li>As instituições e pesquisadores participantes receberão:
                         <ul style="margin: 0;">
                             <li>Financiamento para apoiar as operações, equipe e equipamentos do local (consulte o <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Documento A: Critérios de Seleção de Local</a> para obter mais detalhes sobre as funções da equipe previstas e o nível de esforço.
@@ -194,7 +194,7 @@
             <div class="answer">
                 <ul style="margin: 0;">
                     <li>O prazo para <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">envios da EOI</a> é 10 de março de 2026.</li>
-                    <li>	Planejamos compartilhar apenas as informações enviadas entre a equipe da Cascade Climate e os acadêmicos que sejam membros de nosso Conselho Consultivo Científico global e Grupo de Trabalho, conforme necessário para revisão. As informações enviadas não serão compartilhadas ou divulgadas de outra forma, a menos que com permissão prévia do Contato Principal indicado no envio do formulário.</li>
+                    <li>Planejamos compartilhar apenas as informações enviadas entre a equipe da Cascade Climate e os acadêmicos que sejam membros de nosso Conselho Consultivo Científico global e Grupo de Trabalho, conforme necessário para revisão. As informações enviadas não serão compartilhadas ou divulgadas de outra forma, a menos que com permissão prévia do Contato Principal indicado no envio do formulário.</li>
                     <li>Os formulários da EOI serão revisados pela equipe da Cascade durante todo o mês de março de 2026.</li>
                     <li>Os envios que melhor corresponderem aos Critérios de Seleção de Local serão contatados para discutir as próximas etapas em abril e maio de 2026.</li>
                     <li>Embora pretendamos explorar parcerias com todos os locais que atendam adequadamente aos critérios, precisaremos priorizar a formalização de parcerias, o desenvolvimento de orçamentos e a busca de contratos com 1 a 2 locais que demonstrem uma trajetória realista para o lançamento completo antes do período de plantio do outono de 2026 ou da primavera de 2027. Um lançamento completo requer um contrato em vigor, equipe integrada, amostragem de solo de linha de base, instalações de instrumentação e disseminação de rochas antes de uma temporada de plantio com relevância local que acontecerá idealmente até março de 2027.</li>
@@ -234,8 +234,8 @@
                     <li>Operações de campo e logística</li>
                 </ul>
                 </li>
-                <li>Os orçamentos ao nível do local serão desenvolvidos pela Equipe Operacional Local (o conjunto de parceiros e equipe que gerencia o local de teste) em coordenação com a Cascade e estarão sujeitos à aprovação final do Comitê Gestor.</li>
-                <li>	O compartilhamento ou correspondência de custos institucionais não são obrigatórios, mas são bem-vindos onde os locais possam efetivamente servir a vários propósitos. Incentivamos os candidatos a usar outras fontes de financiamento, quando apropriado — se o seu local tiver financiamento existente ou pendente de outros subsídios, descreva isso em sua EOI.</li>
+                <li>Os orçamentos ao nível do local serão desenvolvidos pela Local Operating Team (Equipe Operacional Local) o conjunto de parceiros e equipe que gerencia o local de teste) em coordenação com a Cascade e estarão sujeitos à aprovação final do Steering Committee (Comitê Gestor).</li>
+                <li>O compartilhamento ou correspondência de custos institucionais não são obrigatórios, mas são bem-vindos onde os locais possam efetivamente servir a vários propósitos. Incentivamos os candidatos a usar outras fontes de financiamento, quando apropriado — se o seu local tiver financiamento existente ou pendente de outros subsídios, descreva isso em sua EOI.</li>
             </div>
         </details>
 
@@ -246,12 +246,12 @@
                 <li>Todos os parceiros devem estar dispostos a colaborar na finalização do projeto de ensaio de campo, na definição e implementação de medições e procedimentos de campo padronizados, e no estabelecimento e gestão da infraestrutura de dados, análise e eventual publicação.</li>
                 <li> As funções de governança da CRN incluem:
                 <ul style="margin: 0;">
-                    <li><strong>Um Steering Committee (ou Comitê Gestor) </strong>, que tem autoridade de tomada de decisão sobre financiamento e o plano operacional anual da CRN.
+                    <li><strong>Um Steering Committee (Comitê Gestor) </strong>, que tem autoridade de tomada de decisão sobre financiamento e o plano operacional anual da CRN.
                     </li>
-                    <li><strong>A Science Advisory Board (ou SAB, Conselho Consultivo Científico)</strong>  de pesquisadores líderes que fornece supervisão científica, revisão de objetivos, protocolos experimentais e designs de locais.</li>
-                    <li><strong>Working Groups (ou Grupos de Trabalho)</strong> que reúnem especialistas disciplinares para garantir a padronização entre os locais e apoiar o design experimental e a análise de dados. Investigadores Principais (PIs) de cada local também serão integrantes do Working Group.
+                    <li><strong>A Science Advisory Board (SAB) (Conselho Consultivo Científico)</strong>  de pesquisadores líderes que fornece supervisão científica, revisão de objetivos, protocolos experimentais e designs de locais.</li>
+                    <li><strong>Working Groups (Grupos de Trabalho)</strong> que reúnem especialistas disciplinares para garantir a padronização entre os locais e apoiar o design experimental e a análise de dados. Investigadores Principais (PIs) de cada local também serão integrantes do Working Group.
                     </li>
-                    <li><strong>Local Operating Teams (ou Equipes Operacionais Locais)</strong> — normalmente um <strong>Investigador Principal (PI)</strong> e um <strong>Site Manager (ou Gestor de Local)</strong> dedicado com <strong>Field and Lab Technicians (ou Técnicos de Campo e Laboratório associados)</strong> — que executam os experimentos em cada local de campo com orientação dos Working Groups e do SAB.
+                    <li><strong>Local Operating Teams (Equipes Operacionais Locais)</strong> — normalmente um <strong>Principal Investigator/PI (Investigador Principal)</strong> e um <strong>Site Manager (Gestor de Local)</strong> dedicado com <strong>Field and Lab Technicians (Técnicos de Campo e Laboratório associados)</strong> — que executam os experimentos em cada local de campo com orientação dos Working Groups e do SAB.
                     </li>
                     <li><strong>A Cascade Climate</strong>, que planeja fornecer coordenação em todos os locais globais. Isso inclui ajudar a desenvolver protocolos e capacitação padronizados, infraestrutura de gestão de dados e gestão de conexões entre esses grupos.</li>
                 </ul>
