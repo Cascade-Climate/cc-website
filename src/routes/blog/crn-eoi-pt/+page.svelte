@@ -15,7 +15,7 @@
 				<h1>
 					<strong>Chamada para Manifestações de Interesse:</strong> Rede de Pesquisa Coordenada para ERW
 				</h1>
-				<span class="long-button">Click here for Call for Expressions of Interest in English</span>
+				<a class="long-button" href="https://cascadeclimate.org/blog/crn-eoi">Click here for Call for Expressions of Interest in English</a>
 
 				<p class="intro-first">
                  A Cascade Climate está buscando manifestações de interesse (Expressions of Interest ou EOI) de instituições para hospedar e operar locais de pesquisa de ERW (enhanced rock weathering) coordenados globalmente. Estamos criando uma Rede de Pesquisa Coordenada (Coordinated Research Network ou CRN) global de ensaios de campo experimentais padronizados em diversas regiões geográficas do mundo. Nosso objetivo é estabelecer até 15 locais padronizados, começando com um ou dois locais-piloto a serem lançados em 2026, com financiamento filantrópico garantido por cinco anos.
@@ -28,7 +28,7 @@
 			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
 		</div>
 
-		<h5 class="intro-highlight" style="color:white">Deadline</h5>
+		<h5 class="intro-highlight" style="color:white">PRAZO FINAL</h5>
 		<p>01:59 de quarta-feira, 11 de março (horário de Brasília)</p>
 		<h5 class="intro-highlight" style="color:white" id="virtual-information-sessions">
 			Sessões de Informação Virtuais
@@ -39,27 +39,30 @@
 				<a class="session-register" href="https://zoom.us/meeting/register/dCnko_rEQ4aiGaFNsbpq9g" target="_blank" rel="noopener">Inscreva-se</a>
 			</p>
 			<p class="session-row">
-				00:00 de terça-feira, 24 de fevereiro (horário de Brasília)
+				12:00 de terça-feira, 24 de fevereiro (horário de Brasília)
 				<a class="session-register" href="https://zoom.us/meeting/register/7-kBfCgaQ8qWtftKRMux6A" target="_blank" rel="noopener">Inscreva-se</a>
 			</p>			
 
 		<div class="links">
 			<div style="text-align: center;">
 				<a
-					style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
+					class="link-btn"
+					style="border: none; cursor: pointer; border-radius: 30px; flex-grow: 1; font-weight: 400;"
 					target="_blank"
 					rel="noopener"
 					href="https://forms.gle/WRgTqeFRHa8mBooJ7">Enviar: Manifestação de Interesse↗</a
 				>
 			</div>
 			<a
-				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
+				class="link-btn"
+				style="border: none; cursor: pointer; border-radius: 30px; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
 				href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf">Documento A: Critérios de Seleção de Local↗</a
 			>
 			<a
-				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
+				class="link-btn"
+				style="border: none; cursor: pointer; border-radius: 30px; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
 				href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf">Documento B: Política de Conflito de Interesses↗</a
@@ -81,7 +84,7 @@
     </section>
 
 	<section id="objetivo">
-        <h1>Objetivo</h1>
+        <h1>O Objetivo</h1>
         <p>A Rede de Pesquisa Coordenada (CRN) é a nossa resposta a esse desafio. O objetivo é estabelecer até 15 locais de pesquisa de campo altamente padronizados para o estudo de resíduos de explosivos de guerra em climas subúmidos ou mais úmidos. Estamos planejando a implementação de um ou dois desses locais em 2026, para os quais já garantimos financiamento filantrópico para um período de cinco anos.</p>
 
         <p>A CRN pretende responder às seguintes perguntas:</p>
@@ -421,16 +424,17 @@
 		font-size: 1.2rem;
 		font-weight: 420;
 		text-decoration: none;
-		cursor: default;
+		cursor: pointer;
 	}
 	.long-button:hover {
 		opacity: 0.92;
 	}
 
-	/* Intro links: equal-height buttons */
+	/* Intro links: equal-height buttons, one row */
 	:global(.intro .links) {
 		align-items: stretch;
 		margin-top: 1.5rem;
+		flex-wrap: nowrap;
 	}
 	:global(.intro .links > div) {
 		display: flex;
@@ -443,6 +447,15 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
+	}
+	.link-btn {
+		padding: 8px 14px;
+		font-size: 0.9rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		min-width: 0;
 	}
 
 	/* Intro spacing: equal gap between title/paragraphs and paragraphs/Deadline */
