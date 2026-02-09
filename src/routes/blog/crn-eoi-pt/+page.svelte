@@ -88,7 +88,7 @@
 
 	<section id="objetivo">
         <h1>O Objetivo</h1>
-        <p>A Coordinated Research Network é a nossa resposta a esse desafio. O objetivo é estabelecer até 15 locais de pesquisa de campo altamente padronizados para o estudo de resíduos de explosivos de guerra em climas subúmidos ou mais úmidos. Estamos planejando a implementação de um ou dois desses locais em 2026, para os quais já garantimos financiamento filantrópico para um período de cinco anos.</p>
+        <p>A Coordinated Research Network é a nossa resposta a esse desafio. O objetivo é estabelecer até 15 locais de pesquisa de campo altamente padronizados para o estudo de ERW em climas subúmidos ou mais úmidos. Estamos planejando a implementação de um ou dois desses locais em 2026, para os quais já garantimos financiamento filantrópico para um período de cinco anos.</p>
 
         <p>A CRN pretende responder às seguintes perguntas:</p>
         <ol style="margin: 0;">
@@ -112,7 +112,7 @@
         <li>Capacidade institucional para hospedar, operar e gerenciar um teste de campo plurianual
         </li>
         <li>Experiência relevante em ciência do solo, biogeoquímica, hidrologia, agronomia ou outros campos intimamente relacionados à ciência de ERW</li>
-        <li>Sposição para colaborar em uma rede global de pesquisa colaborativa, seguir protocolos padronizados e design do local e contribuir para uma síntese global com toda a rede</li>
+        <li>Disposição para colaborar em uma rede global de pesquisa colaborativa, seguir protocolos padronizados e design do local e contribuir para uma síntese global com toda a rede</li>
         </ul>
 		<p class="eoi-deadline"><strong>Se você tiver interesse em sediar um site da CRN</strong>, enviar o formulário de Manifestação de Interesse até 10 de março de 2026.</p>
 
@@ -148,7 +148,7 @@
 
     <section id="faq">
 
-        <h1>Preguntas Frequentes (FAQ)</h1>
+        <h1>Perguntas Frequentes (FAQ)</h1>
         <p class="faq-instruction">Clique em uma pergunta para ver a resposta</p>
 
         <details class="faq" id="participacao" open>
@@ -174,13 +174,13 @@
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>	Qualquer pessoa que tenha um local de campo que se alinhe às características de local estipuladas no <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">Documento A: Critérios de Seleção de Local</a> pode apresentar um EOI.</li>
-                <li>Consulte os detalhes da nossa <a href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf" target="_blank" rel="noopener">Política de Conflito de Interesses </a> ara obter mais informações sobre quem é elegível para hospedar ou gerenciar um local da CRN, incluindo como os Desenvolvedores de Projetos de ERW podem se envolver com a CRN.
+                <li>Consulte os detalhes da nossa <a href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf" target="_blank" rel="noopener">Política de Conflito de Interesses </a> para obter mais informações sobre quem é elegível para hospedar ou gerenciar um local da CRN, incluindo como os Desenvolvedores de Projetos de ERW podem se envolver com a CRN.
                 </li>
                 <li><strong>Por favor, envie um formulário de manifestação de interesse para cada local específico.</strong> Se você identificou vários locais potencialmente elegíveis, recomendamos que envie vários formulários de EOI para que possa compartilhar informações sobre cada local individualmente.</li>
                 <li>Preferimos inscrições em inglês e aceitamos materiais traduzidos de outros idiomas.</li>
                 <li>Os Critérios de Seleção de Locais distinguem entre características obrigatórias e preferenciais. Locais que atendem aos critérios obrigatórios, mas não a alguns critérios preferenciais, ainda serão considerados. Por exemplo, se o seu local não estiver dentro da faixa de pH preferencial, você ainda deve se inscrever, pois existem outros fatores (como a capacidade tampão do solo) que podem permitir a utilização de um solo com pH mais baixo.
                 </li>
-                <li>Para a fase piloto inicial, estamos priorizando locais em áreas que combinam alto potencial de intemperismo, benefícios para os agricultores e sinais de atividade comercial (por exemplo, Brasil, Índia, Quênia, países do Sudeste Asiático, etc.). À medida que a rede se expandir, prevemos incluir novas regiões geográficas e utilizaremos as candidaturas recebidas durante este processo de manifestação de interesse para identificar locais que possam ser adequados em fases posteriores do nosso processo.o. 
+                <li>Para a fase piloto inicial, estamos priorizando locais em áreas que combinam alto potencial de intemperismo, benefícios para os agricultores e sinais de atividade comercial (por exemplo, Brasil, Índia, Quênia, países do Sudeste Asiático, etc.). À medida que a rede se expandir, prevemos incluir novas regiões geográficas e utilizaremos as candidaturas recebidas durante este processo de manifestação de interesse para identificar locais que possam ser adequados em fases posteriores do nosso processo. 
 				<li><strong>Incentivamos você a se inscrever mesmo que:</strong>
 					<ul style="margin: 0;">
 					<li>Seu local não atenda a todos os <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">critérios preferenciais</a></li>
@@ -210,7 +210,7 @@
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>Esperamos que a maioria dos candidatos não precise gastar mais de 30 minutos preenchendo o formulário, supondo que você tenha as informações abaixo prontamente disponíveis. Observe as orientações no formulário sobre a desnecessidade de compartilhar longos parágrafos de texto; espera-se e é preferível que você simplesmente liste informações quando for adequado para responder a uma determinada solicitação.</li>
-                <li>Reunir informações sobre os seguintes pontos será útil para o<a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">formulário de EOI:</a>
+                <li>Reunir informações sobre os seguintes pontos será útil para o <a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">formulário de EOI:</a>
                 <ul style="margin: 0;">
                     <li>Características básicas do local (localização, área, tipo de solo, características do solo, etc.)
                     </li>
@@ -227,7 +227,7 @@
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>Esta chamada para manifestações de interesse visa selecionar um a dois locais da CRN para apoiar sua implementação em 2026 – com financiamento filantrópico garantido para apoiar totalmente as operações desses locais durante um período de cinco anos.</li>
-                <li>A Cascade continuará a liderar os esforços de captação de recursos para expandir a CRN ao longo do tempo. Prevemos entrar em contato com parceiros de locais adicionais, obtidos por meio desta EOI, que podem ser adequados para lançar locais em 2027-2030, à medida que o programa cresça em direção a 12–15 locais nos próximos anos. <strong>ncentivamos os parceiros interessados a apresentar uma EOI para qualquer local de teste com potencial de elegibilidade, mesmo que todas as parcerias ainda não estejam em vigor. 
+                <li>A Cascade continuará a liderar os esforços de captação de recursos para expandir a CRN ao longo do tempo. Prevemos entrar em contato com parceiros de locais adicionais, obtidos por meio desta EOI, que podem ser adequados para lançar locais em 2027-2030, à medida que o programa cresça em direção a 12–15 locais nos próximos anos. <strong>incentivamos os parceiros interessados a apresentar uma EOI para qualquer local de teste com potencial de elegibilidade, mesmo que todas as parcerias ainda não estejam em vigor. 
                 </strong></li>
                 <li>O financiamento destina-se a cobrir os custos de operação de um local de campo da CRN, incluindo:
                 <ul style="margin: 0;">
