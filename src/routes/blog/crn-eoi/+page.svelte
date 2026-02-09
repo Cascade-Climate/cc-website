@@ -211,7 +211,7 @@
             <summary><span>Funding: How will site management be budgeted and supported?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
-                <li>This call for Expressions of Interest aims to select one to two CRN sites to support their deployment in 2026 – with philanthropic funding secured to fully support site operations for these sites over a five-year period.</li>
+                <li>This call for expressions of interest aims to select one to two CRN sites to support their deployment in 2026 – with philanthropic funding secured to fully support site operations for these sites over a five-year period.</li>
                 <li>Cascade will continue to lead fundraising efforts to expand the CRN over time. We anticipate reaching out to additional site partners sourced via this EOI that may be suited to launch sites in 2027-2030 as the program grows toward 12–15 sites over the coming years. <strong>Therefore we encourage interested partners to submit an EOI for any potentially eligible trial site even if all partnerships are not yet in place.</strong></li>
                 <li>Funding is intended to cover the costs of operating a CRN field site, including:
                 <ul style="margin: 0;">

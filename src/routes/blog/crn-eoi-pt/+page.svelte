@@ -177,10 +177,10 @@
                 <li>Preferimos inscrições em inglês e aceitamos materiais traduzidos de outros idiomas.</li>
                 <li>Os Critérios de Seleção de Locais distinguem entre características obrigatórias e preferenciais. Locais que atendem aos critérios obrigatórios, mas não a alguns critérios preferenciais, ainda serão considerados. Por exemplo, se o seu local não estiver dentro da faixa de pH preferencial, você ainda deve se inscrever, pois existem outros fatores (como a capacidade tampão do solo) que podem permitir a utilização de um solo com pH mais baixo.
                 </li>
-                <li>Para a fase piloto inicial, estamos priorizando locais em áreas que combinam alto potencial de intemperismo, benefícios para os agricultores e sinais de atividade comercial (por exemplo, Brasil, Índia, Quênia, países do Sudeste Asiático, etc.). À medida que a rede se expandir, prevemos a inclusão de novas regiões geográficas e usaremos as inscrições para esta Manifestação de Interesse para identificar locais que possam ser adequados em etapas posteriores do nosso processo. 
-				<li><strong>Incentivamos você a se inscrever mesmo que:
+                <li>Para a fase piloto inicial, estamos priorizando locais em áreas que combinam alto potencial de intemperismo, benefícios para os agricultores e sinais de atividade comercial (por exemplo, Brasil, Índia, Quênia, países do Sudeste Asiático, etc.). À medida que a rede se expandir, prevemos incluir novas regiões geográficas e utilizaremos as candidaturas recebidas durante este processo de manifestação de interesse para identificar locais que possam ser adequados em fases posteriores do nosso processo.o. 
+				<li><strong>Incentivamos você a se inscrever mesmo que:<strong>
 					<ul style="margin: 0;">
-					<li>Seu local não atenda a todos os<a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">critérios preferenciais</a></li>
+					<li>Seu local não atenda a todos os <a href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf" target="_blank" rel="noopener">critérios preferenciais</a></li>
 					<li>Nem todos os cargos necessários estejam preenchidos</li>
 						<li>O lançamento não seja possível em 2026, visto que a rede se expandirá ao longo do tempo</li>
 					</ul>
@@ -206,8 +206,7 @@
             <summary><span>Preparação: o que devo saber antes de enviar o formulário de EOI?</span></summary>
             <div class="answer">
                 <ul style="margin: 0;">
-                <li>
-                    ●	Esperamos que a maioria dos candidatos não precise gastar mais de 30 minutos preenchendo o formulário, supondo que você tenha as informações abaixo prontamente disponíveis. Observe as orientações no formulário sobre a desnecessidade de compartilhar longos parágrafos de texto; espera-se e é preferível que você simplesmente liste informações quando for adequado para responder a uma determinada solicitação.</li>
+                <li>Esperamos que a maioria dos candidatos não precise gastar mais de 30 minutos preenchendo o formulário, supondo que você tenha as informações abaixo prontamente disponíveis. Observe as orientações no formulário sobre a desnecessidade de compartilhar longos parágrafos de texto; espera-se e é preferível que você simplesmente liste informações quando for adequado para responder a uma determinada solicitação.</li>
                 <li>Reunir informações sobre os seguintes pontos será útil para o<a href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">formulário de EOI:</a>
                 <ul style="margin: 0;">
                     <li>Características básicas do local (localização, área, tipo de solo, características do solo, etc.)
