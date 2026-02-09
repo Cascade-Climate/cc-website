@@ -18,11 +18,14 @@
 				<a class="long-button" href="https://cascadeclimate.org/blog/crn-eoi">Click here for Call for Expressions of Interest in English</a>
 
 				<p class="intro-first">
-                 A Cascade Climate está buscando manifestações de interesse (<em>expressions of interest</em>/<em>EOI</em>) de instituições para hospedar e operar locais de pesquisa de ERW (<em></em>enhanced rock weathering</em>) coordenados globalmente. Estamos criando uma Coordinated Research Network (Rede de Pesquisa Coordenada ou <em>CRN</em>) global de ensaios de campo experimentais padronizados em diversas regiões geográficas do mundo. Nosso objetivo é estabelecer até 15 locais padronizados, começando com um ou dois locais-piloto a serem lançados em 2026, com financiamento filantrópico garantido por cinco anos.
-                    </p>
+					A Cascade Climate está buscando manifestações de interesse (<em>expressions of interest</em> / <em>EOI</em>) de instituições para hospedar e operar locais de pesquisa de ERW (<em>enhanced rock weathering</em>) coordenados globalmente. Estamos criando uma Coordinated Research Network (Rede de Pesquisa Coordenada ou <em>CRN</em>) global de ensaios de campo experimentais padronizados em diversas regiões geográficas do mundo. Nosso objetivo é estabelecer até 15 locais padronizados, começando com um ou dois locais-piloto a serem lançados em 2026, com financiamento filantrópico garantido por cinco anos.
+				</p>
 				<p class="intro-second">
-					Ao implantar protocolos, estratégias de medição e projetos experimentais padronizados, a CRN alcançará o que estudos isolados não conseguem: aprendizado em larga escala, possibilitado por conjuntos de dados comparáveis ​​em contextos globais. Os locais anfitriões receberão financiamento operacional, oportunidades de autoria em publicações específicas de local e de toda a rede, além de acesso a uma comunidade global de pesquisadores de ERW.</p>
-				<p class="intro-continue">Continue lendo para saber mais sobre a CRN e como enviar uma manifestação de interesse.</p>
+					Ao implantar protocolos, estratégias de medição e projetos experimentais padronizados, a CRN alcançará o que estudos isolados não conseguem: aprendizado em larga escala, possibilitado por conjuntos de dados comparáveis ​​em contextos globais. Os locais anfitriões receberão financiamento operacional, oportunidades de autoria em publicações específicas de local e de toda a rede, além de acesso a uma comunidade global de pesquisadores de ERW.
+				</p>
+				<p class="intro-continue">
+					Continue lendo para saber mais sobre a CRN e como enviar uma manifestação de interesse.
+				</p>
 			</div>
 
 			<img src={CRNblock} alt="Example CRN block design" class="large-image" />
