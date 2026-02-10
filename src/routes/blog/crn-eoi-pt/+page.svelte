@@ -6,14 +6,14 @@
 </script>
 
 <svelte:head>
-	<title>Chamada para Manifestações de Interesse: ERW Coordinated Research Network - Cascade Climate</title>
+	<title>Chamada para Manifestações de Interesse: Coordinated Research Network for Enhanced Rock Weathering - Cascade Climate</title>
 </svelte:head>
 
 <section class="intro">
 	<div class="content">
 		<div class="copy">
 				<h1>
-					<strong>Chamada para Manifestações de Interesse:</strong> ERW Coordinated Research Network
+					<strong>Chamada para Manifestações de Interesse:</strong> Coordinated Research Network for Enhanced Rock Weathering
 				</h1>
 				<a class="long-button" href="https://cascadeclimate.org/blog/crn-eoi">Click here for Call for Expressions of Interest in English</a>
 
