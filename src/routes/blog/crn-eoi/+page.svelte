@@ -15,7 +15,7 @@
 				<h1>
 					<strong>Call for Expressions of Interest:</strong> Coordinated Research Network for Enhanced Rock Weathering
 				</h1>
-				<a class="long-button" href="https://cascadeclimate.org/blog/crn-eoi-pt">Em breve: chamada para manifestações de interesse em português</a>
+				<a class="long-button" href="https://cascadeclimate.org/blog/crn-eoi-pt">Em breve: Chamada para Manifestações de Interesse em português</a>
 
 				<p class="intro-first">
 					Cascade Climate is seeking expressions of interest from institutions to host and operate globally-coordinated enhanced rock weathering (ERW) research sites. We are standing up a global Coordinated Research Network (CRN) of standardized experimental field trials across diverse global geographies. We aim to establish up to 15 standardized sites, beginning with one or two pilot sites launching in 2026 with secured philanthropic funding for five years.</p>
