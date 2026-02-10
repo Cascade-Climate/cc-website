@@ -114,7 +114,7 @@
         <li>Experiência relevante em ciência do solo, biogeoquímica, hidrologia, agronomia ou outros campos intimamente relacionados à ciência de ERW</li>
         <li>Disposição para colaborar em uma rede global de pesquisa colaborativa, seguir protocolos padronizados e delineamento do local e contribuir para uma síntese global com toda a rede</li>
         </ul>
-		<p class="eoi-deadline"><strong>Se você tiver interesse em sediar um site da CRN</strong>, enviar o formulário de Manifestação de Interesse até 10 de março de 2026.</p>
+		<p class="eoi-deadline"><strong>Se você tiver interesse em sediar um local de campo</strong>, enviar o formulário de Manifestação de Interesse até 10 de março de 2026.</p>
 
 		<div class="eoi-submit-wrap">
 			<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Enviar: Manifestação de Interesse↗</a>
