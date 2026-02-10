@@ -392,6 +392,16 @@
 		height: auto;
 		object-fit: cover;
 	}
+	@media (min-width: 961px) {
+		.large-image {
+			min-width: 480px;
+			flex: 0 0 480px;
+		}
+		:global(.intro .content img) {
+			min-width: 480px;
+			flex: 0 0 480px;
+		}
+	}
 
 	.long-button {
 		display: block;

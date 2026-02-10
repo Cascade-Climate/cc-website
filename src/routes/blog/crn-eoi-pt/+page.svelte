@@ -6,19 +6,19 @@
 </script>
 
 <svelte:head>
-	<title>Chamada para Manifestações de Interesse: Rede de Pesquisa Coordenada para ERW - Cascade Climate</title>
+	<title>Chamada para Manifestações de Interesse: ERW Coordinated Research Network - Cascade Climate</title>
 </svelte:head>
 
 <section class="intro">
 	<div class="content">
 		<div class="copy">
 				<h1>
-					<strong>Chamada para Manifestações de Interesse:</strong> Rede de Pesquisa Coordenada para ERW
+					<strong>Chamada para Manifestações de Interesse:</strong> ERW Coordinated Research Network
 				</h1>
 				<a class="long-button" href="https://cascadeclimate.org/blog/crn-eoi">Click here for Call for Expressions of Interest in English</a>
 
 				<p class="intro-first">
-					A Cascade Climate está buscando manifestações de interesse (<em>expressions of interest/EOI</em>) de instituições para hospedar e operar locais de pesquisa de ERW (<em>enhanced rock weathering</em>) coordenados globalmente. Estamos criando uma Rede de Pesquisa Coordenada (<em>Coordinated Research Network/CRN<em>) global de ensaios de campo experimentais padronizados em diversas regiões geográficas do mundo. Nosso objetivo é estabelecer até 15 locais padronizados, começando com um ou dois locais-piloto a serem lançados em 2026, com financiamento filantrópico garantido por cinco anos.
+					A Cascade Climate está buscando manifestações de interesse <em>(expressions of interest/EOI)</em> de instituições para hospedar e operar locais de pesquisa de ERW <em>(enhanced rock weathering)</em> coordenados globalmente. Estamos criando uma Rede de Pesquisa Coordenada <em>(Coordinated Research Network/CRN)</em> global de ensaios de campo experimentais padronizados em diversas regiões geográficas do mundo. Nosso objetivo é estabelecer até 15 locais padronizados, começando com um ou dois locais-piloto a serem lançados em 2026, com financiamento filantrópico garantido por cinco anos.
 				</p>
 				<p class="intro-second">
 					Ao implantar protocolos, estratégias de medição e projetos experimentais padronizados, a CRN alcançará o que estudos isolados não conseguem: aprendizado em larga escala, possibilitado por conjuntos de dados comparáveis ​​em contextos globais. Os locais anfitriões receberão financiamento operacional, oportunidades de autoria em publicações específicas de local e de toda a rede, além de acesso a uma comunidade global de pesquisadores de ERW.
@@ -409,6 +409,16 @@
 		max-width: min(480px, 100%);
 		height: auto;
 		object-fit: cover;
+	}
+	@media (min-width: 961px) {
+		.large-image {
+			min-width: 480px;
+			flex: 0 0 480px;
+		}
+		:global(.intro .content img) {
+			min-width: 480px;
+			flex: 0 0 480px;
+		}
 	}
 
 	.long-button {
