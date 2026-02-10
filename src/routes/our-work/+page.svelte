@@ -73,7 +73,7 @@
 		<section id="erw">
 			<h3>Enhanced Rock Weathering</h3>
 			<p>
-				Enhanced Rock Weathering (ERW) is an agronomic practice that permanently removes atmospheric carbon dioxide and brings concrete benefits to farmers, with particular promise for livelihoods in the Global South. ERW has potential to play a key role in both the world’s long-term durable carbon removal portfolio and sustainable agricultural toolkit. We have worked to catalyze a deployment-driven learning cycle in ERW to steadily build a robust evidence base, public trust, and policy support as the field grows. Cascade has led the following initiatives in ERW:
+				Enhanced Rock Weathering (ERW) is an agronomic practice that permanently removes atmospheric carbon dioxide and brings concrete benefits to farmers, with particular promise for livelihoods in the Global South. ERW has potential to play a key role in both the world’s long-term durable carbon removal portfolio and sustainable agricultural toolkit. We have worked to catalyze a deployment-driven learning cycle in ERW to steadily build a robust evidence base, public trust, and policy support as the field grows.
 			</p>
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
