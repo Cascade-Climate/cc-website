@@ -68,7 +68,7 @@
 				style="border: none; cursor: pointer; border-radius: 30px; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf">Documento B: Política de Conflito de Interesses↗</a
+				href="/Cascade%20Climate_CRN_EOI_PT_Documento_B.pdf">Documento B: Política de Conflito de Interesses↗</a
 			>
 		</div>
 	</section>
@@ -130,7 +130,7 @@
 			</li>
 			<li>
 				Nossa política de conflito de interesses, 
-				<a href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf" target="_blank" rel="noopener">
+				<a href="/Cascade%20Climate_CRN_EOI_PT_Documento_B.pdf" target="_blank" rel="noopener">
 					<strong> consulte o Documento B: Política de Conflito de Interesses</strong>
 				</a>
 			</li>
@@ -174,7 +174,7 @@
             <div class="answer">
                 <ul style="margin: 0;">
                 <li>	Qualquer pessoa que tenha um local de campo que se alinhe às características de local estipuladas no <a href="/Cascade%20Climate_CRN_EOI_PT_Documento_A.pdf" target="_blank" rel="noopener">Documento A: Critérios de Seleção de Locais</a> pode apresentar um EOI.</li>
-                <li>Consulte os detalhes da nossa <a href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf" target="_blank" rel="noopener">Política de Conflito de Interesses </a> para obter mais informações sobre quem é elegível para hospedar ou gerenciar um local da CRN, incluindo como os Desenvolvedores de Projetos de ERW podem se envolver com a CRN.
+                <li>Consulte os detalhes da nossa <a href="/Cascade%20Climate_CRN_EOI_PT_Documento_B.pdf" target="_blank" rel="noopener">Política de Conflito de Interesses </a> para obter mais informações sobre quem é elegível para hospedar ou gerenciar um local da CRN, incluindo como os Desenvolvedores de Projetos de ERW podem se envolver com a CRN.
                 </li>
                 <li><strong>Por favor, envie um formulário de manifestação de interesse para cada local específico.</strong> Se você identificou vários locais potencialmente elegíveis, recomendamos que envie vários formulários de EOI para que possa compartilhar informações sobre cada local individualmente.</li>
                 <li>Preferimos inscrições em inglês e aceitamos materiais traduzidos de outros idiomas.</li>
