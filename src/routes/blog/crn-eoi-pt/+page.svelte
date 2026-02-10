@@ -188,7 +188,7 @@
 						<li>O lançamento não seja possível em 2026, visto que a rede se expandirá ao longo do tempo</li>
 					</ul>
 				</li>
-					<li><strong>Se você é um pesquisador (Pesquisador Principal) interessado em colaborar com a CRN, mas não possui um local para propor para um ensaio de campo, envie um e-mail para grants@cascadeclimate.org.</strong> Inclua seu nome, instituição/organização, perfil público (página da web profissional, Google Scholar, ResearchGate ou similar), as regiões geográficas específicas onde você trabalha e uma breve descrição do seu interesse na CRN.</li>
+					<li><strong>Se você é um Principal Investigator (Investigador Principal) interessado em colaborar com a CRN, mas não possui um local para propor para um ensaio de campo, envie um e-mail para grants@cascadeclimate.org.</strong> Inclua seu nome, instituição/organização, perfil público (página da web profissional, Google Scholar, ResearchGate ou similar), as regiões geográficas específicas onde você trabalha e uma breve descrição do seu interesse na CRN.</li>
             </div>
         </details>
 
@@ -231,7 +231,7 @@
                 </strong></li>
                 <li>O financiamento destina-se a cobrir os custos de operação de um local de campo da CRN, incluindo:
                 <ul style="margin: 0;">
-                    <li>Equipe (incluindo Investigador Principal em meio-período e um Gestor do Local em tempo integral)</li>
+                    <li>Equipe (incluindo Principal Investigator em meio-período e um Site Manager (Gestor do Local) em tempo integral)</li>
                     <li>Instrumentação</li>
                     <li>Coleta de amostras e análises laboratoriais</li>
                     <li>Operações de campo e logística</li>
@@ -252,7 +252,7 @@
                     <li><strong>Um Steering Committee (Comitê Gestor)</strong>, que tem autoridade de tomada de decisão sobre financiamento e o plano operacional anual da CRN.
                     </li>
                     <li><strong>A Science Advisory Board (SAB) (Conselho Consultivo Científico)</strong>  de pesquisadores líderes que fornece supervisão científica, revisão de objetivos, protocolos experimentais e delineamentos de locais.</li>
-                    <li><strong>Working Groups (Grupos de Trabalho)</strong> que reúnem especialistas disciplinares para garantir a padronização entre os locais e apoiar o delineamento experimental e a análise de dados. Investigadores Principais (PIs) de cada local também serão integrantes do Working Group.
+                    <li><strong>Working Groups (Grupos de Trabalho)</strong> que reúnem especialistas disciplinares para garantir a padronização entre os locais e apoiar o delineamento experimental e a análise de dados. Principal Investigators de cada local também serão integrantes do Working Group.
                     </li>
                     <li><strong>Local Operating Teams (Equipes Operacionais Locais)</strong> — normalmente um <strong>Principal Investigator/PI (Investigador Principal)</strong> e um <strong>Site Manager (Gestor de Local)</strong> dedicado com <strong>Field and Lab Technicians (Técnicos de Campo e Laboratório)</strong> — que executam os experimentos em cada local de campo com orientação dos Working Groups e do SAB.
                     </li>
@@ -277,7 +277,7 @@
                 <ul style="margin: 0;">
                 <li>Os dados produzidos por esta colaboração serão compartilhados por meio de canais predefinidos para acelerar o aprendizado, respeitando os direitos e normas de publicação acadêmica.</li>
                 <li>A Cascade Climate fornecerá a infraestrutura global de gerenciamento de dados. A CRN foi projetada para gerar aprendizado em toda a área de pesquisa, além de resultados específicos de cada local. Ao implementar protocolos, estratégias de medição e projetos de locais padronizados em diversas regiões geográficas, a rede produzirá conjuntos de dados que podem ser comparados e sintetizados de forma significativa, possibilitando o tipo de análise global que estudos isolados não conseguem suportar.</li>
-                <li>Esperamos que todas as instituições anfitriãs dos locais de pesquisa, os pesquisadores principais e todos os outros parceiros envolvidos na coleta de dados revisem e assinem os acordos de licenciamento de dados, que são necessários para o recebimento do financiamento. Os acordos de licenciamento de dados detalharão os requisitos de compartilhamento de dados, com expectativas como as seguintes:
+                <li>Esperamos que todas as instituições anfitriãs dos locais de pesquisa, os Principal Investigators e todos os outros parceiros envolvidos na coleta de dados revisem e assinem os acordos de licenciamento de dados, que são necessários para o recebimento do financiamento. Os acordos de licenciamento de dados detalharão os requisitos de compartilhamento de dados, com expectativas como as seguintes:
                 <ul style="margin: 0;">
                     <li>Os dados serão transmitidos diretamente para um repositório central acessível aos membros do Working Groups e do Science Advisory Board, com o objetivo de apoiar a natureza coordenada da rede de pesquisa.</li>
                     <li>Dados com controle de qualidade serão disponibilizados para uma comunidade de modeladores geoquímicos acadêmicos que a Cascade planeja reunir como parte desta iniciativa, com o objetivo de calibrar e validar esses modelos.</li>
