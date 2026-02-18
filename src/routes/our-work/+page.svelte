@@ -163,7 +163,7 @@
 
 				<p>Lifecycle refrigerant management (LRM) reduces avoidable emissions from the installed base of refrigerants through improved leak management, recovery at servicing and end-of-life, reclamation, and destruction where reuse is not feasible. Refrigerant transition lowers the emissions impact of new equipment entering the market by ensuring it uses lower-GWP alternatives and more efficient cooling technologies. Together, these strategies help countries meet their commitments to phase down high-GWP refrigerants while making refrigerant supply more secure and affordable — particularly in markets that depend on imports.</p>
 
-				<p>Cascade is working to close the finance, incentive, and infrastructure gaps that hold back LRM implementation. We're supporting first-of-their-kind demonstrations, learning what works on the ground, and working with regulators and industry to shape compliance and policy frameworks that reflect on-the-ground realities in the Global South.</p>
+				<p>Cascade is working to close the finance, incentive, and infrastructure gaps that hold back LRM implementation. We're supporting first-of-their-kind demonstrations, learning what works on the ground, and working with regulators and industry to shape compliance and policy frameworks that reflect the diverse realities of the Global South.</p>
 
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
