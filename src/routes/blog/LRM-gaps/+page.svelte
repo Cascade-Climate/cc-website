@@ -117,7 +117,7 @@
             <p>While LRM cannot solve the full range of refrigerant transition barriers, it can help smooth critical economic aspects of the shift. Both reclamation and destruction help manage the existing HFC stock while accelerating the shift to low-GWP alternatives—reclamation by creating transition flexibility and resilience, and destruction by creating market pull for new refrigerants.</p>
 
 			<p>Domestic reclamation capacity can help Article 5 countries mitigate the bumpy transition path by maintaining a buffer supply of HFCs to service existing equipment. Under Kigali, reclaimed refrigerants don't count toward consumption caps. This provides an avenue for countries to establish more self-reliance and resilience during a long stretch of accelerating domestic demand and foreign supply prone to disruption and price instability. Reclaimed HFCs can absorb demand while reducing exposure to international spot prices, dependence on a small set of foreign producers, and incentives to buy low-quality product via gray markets—all without eating into tightening import quotas. 
-                
+
             <p>However, there is a real risk of over-investing in reclamation: establishing highly profitable systems around declining HFCs could create perverse incentives to prolong their use. HFC reclamation works best as a time-limited buffer during technology transition, not as a dominant refrigerant supply strategy.</p>
                 
 			<p>Meanwhile, destroying HFCs recovered from end-of-life equipment will gradually increase the market demand for low-GWP alternatives in new and replacement systems as the HFC production phase down progresses. This demand signal will motivate equipment and chemical manufacturers to scale up existing low-GWP technologies and develop new ones where necessary, expanding access to consumers in Article 5 countries. At the same time, it's important that destruction efforts are ramped up gradually over time to prevent HFC refrigerant price shocks that could restrict access to critical cooling equipment.</p>
@@ -134,7 +134,7 @@
 			<h2>From Opportunity to Action</h2>
 			<p>Lifecycle refrigerant management represents a rare convergence: a climate intervention that is highly cost-effective and immediately deployable, while also strengthening economic resilience and enabling the rapid, equitable expansion of cooling in a warming world.</p>
                 
-			<p>As we build our refrigerant program at Cascade, we're focusing on strategic interventions that can catalyze systemic change—particularly in import-dependent developing countries experiencing fast-growing demand and acute transition challenges. In our next blog post, we'll share how Cascade is approaching this work: our focus on engagement in particular Article 5 countries, our strategy for unlocking catalytic finance, and the design principles that ensure early projects lead to lasting policy and industry action.</p>
+			<p>As we build our refrigerant program at Cascade, we're focusing on strategic interventions that can catalyze systemic change — particularly in import-dependent developing countries experiencing fast-growing demand and acute transition challenges. In our next blog post, we'll share how Cascade is approaching this work: our focus on engagement in particular Article 5 countries, our strategy for unlocking catalytic finance, and the design principles that ensure early projects lead to lasting policy and industry action.</p>
 		</section>
 
 		<section class="acknowledgments">
