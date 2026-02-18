@@ -1,8 +1,10 @@
 <script>
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
-    import hfcEmissions from '$lib/images/blog/hfcemissions.webp';
+	import hfcEmissions from '$lib/images/blog/hfcemissions.webp';
 	import lrmJourney from '$lib/images/blog/LRMjourney.webp';
+
+	const scrollNavExcludeIds = ['gap-installed-bank', 'gap-implementation-risks'];
 </script>
 
 <div class="lrm-gaps-page">
@@ -18,12 +20,12 @@
 
 				<hr>
 
-				<p>As Cascade <a href="https://cascadeclimate.org/blog/cascade-entry-into-slcp-mitigation" target="_blank" rel="noopener noreferrer" style="color: #01ecb1;">expands</a> into super pollutant mitigation, our initial program will focus on refrigerants — encompassing both lifecycle refrigerant management and the transition to next-generation alternatives. This post explores lifecycle refrigerant management: why it matters, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.</p><br>
+				<p>As Cascade <a href="https://cascadeclimate.org/blog/cascade-entry-into-slcp-mitigation" target="_blank" rel="noopener noreferrer" style="color: #01ecb1;">expands</a> into super pollutant mitigation, our initial program will focus on refrigerants — encompassing both lifecycle refrigerant management and the transition to next-generation alternatives. This post explores lifecycle refrigerant management: why it matters, what&apos;s blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.</p><br>
 			</div>
 			<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
 		</div>
 	</section>
-	<ScrollNav excludeIds={['gap-installed-bank', 'gap-implementation-risks']} fixedUnderIntro />
+	<ScrollNav excludeIds={scrollNavExcludeIds} fixedUnderIntro />
 	<main>
 		<section id="introduction">
 			<h1>Introduction</h1>
@@ -116,7 +118,7 @@
             <h2>Addressing Gap 2: LRM as the Solution to the Transition to Alternative Refrigerants</h2>
             <p>While LRM cannot solve the full range of refrigerant transition barriers, it can help smooth critical economic aspects of the shift. Both reclamation and destruction help manage the existing HFC stock while accelerating the shift to low-GWP alternatives—reclamation by creating transition flexibility and resilience, and destruction by creating market pull for new refrigerants.</p>
 
-			<p>Domestic reclamation capacity can help Article 5 countries mitigate the bumpy transition path by maintaining a buffer supply of HFCs to service existing equipment. Under Kigali, reclaimed refrigerants don't count toward consumption caps. This provides an avenue for countries to establish more self-reliance and resilience during a long stretch of accelerating domestic demand and foreign supply prone to disruption and price instability. Reclaimed HFCs can absorb demand while reducing exposure to international spot prices, dependence on a small set of foreign producers, and incentives to buy low-quality product via gray markets—all without eating into tightening import quotas. 
+			<p>Domestic reclamation capacity can help Article 5 countries mitigate the bumpy transition path by maintaining a buffer supply of HFCs to service existing equipment. Under Kigali, reclaimed refrigerants don't count toward consumption caps. This provides an avenue for countries to establish more self-reliance and resilience during a long stretch of accelerating domestic demand and foreign supply prone to disruption and price instability. Reclaimed HFCs can absorb demand while reducing exposure to international spot prices, dependence on a small set of foreign producers, and incentives to buy low-quality product via gray markets—all without eating into tightening import quotas.</p>
 
             <p>However, there is a real risk of over-investing in reclamation: establishing highly profitable systems around declining HFCs could create perverse incentives to prolong their use. HFC reclamation works best as a time-limited buffer during technology transition, not as a dominant refrigerant supply strategy.</p>
                 
