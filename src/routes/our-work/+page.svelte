@@ -15,9 +15,10 @@
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 
-	const sections = [
+	let sections = [
 		{ id: 'erw', title: 'ERW' },
-		{ id: 'superpollutantmitigation', title: 'Super Pollutant Mitigation' },
+		{ id: 'superpollutantmitigation', title: 'Refrigerant Management and Transition' },
+		{ id: 'marketdevelopment', title: 'Market Development and Policy Engagement' },
 	];
 
 	let activeSection = '';
@@ -73,9 +74,12 @@
 		<section id="erw">
 			<h3>Enhanced Rock Weathering</h3>
 			<p>
-				Enhanced Rock Weathering (ERW) is an agronomic practice that permanently removes atmospheric carbon dioxide and brings concrete benefits to farmers, with particular promise for livelihoods in the Global South. ERW has potential to play a key role in both the world’s long-term durable carbon removal portfolio and sustainable agricultural toolkit. We have worked to catalyze a deployment-driven learning cycle in ERW to steadily build a robust evidence base, public trust, and policy support as the field grows.
+				To stabilize our climate, the world must expand its capacity to affordably remove carbon dioxide from the atmosphere alongside deep emissions cuts. Enhanced rock weathering (ERW) is a carbon removal approach grounded in the centuries-old soil management practice of liming. It accelerates natural weathering processes to durably remove CO₂ while benefiting agricultural productivity. ERW has the potential to become an important pathway for carbon removal with agricultural benefits if key scientific and cost uncertainties are addressed.
 			</p>
-			<h5>HIGHLIGHTS</h5>
+			<p>
+				Cascade is working to clear the path forward by coordinating inter-comparable field research and developing open-science tools. We're also engaging policymakers, buyers, and standard bodies to ensure the markets and policies shaping ERW's future evolve with science.
+			</p>
+’<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
 					<img src={newblock1} alt="CRN EOI" />
@@ -151,12 +155,36 @@
 		</section>
 
 		<section id="superpollutantmitigation">
-			<h3>Super Pollutant Mitigation</h3>
+			<h3>Refrigerant Management and Transition</h3>
 			<p>
-				We are now expanding our work to address the urgent risks associated with near-term warming. Cascade is focused on accelerating super pollutant mitigation efforts by building a bridge from early, voluntary climate private finance toward a policy-driven end state that embeds accountability for super pollutant reductions within industry value chains and national greenhouse gas inventories.
+				Reducing super pollutant emissions — including refrigerants with high global warming potential (GWP) — is one of the most immediate opportunities we have to limit near-term warming. Yet as cooling demand surges, particularly in the Global South, high-GWP refrigerant emissions risk rising in lockstep.
 			</p>
 			<p>
-				Cascade is beginning work in this area by learning from—and building trusted relationships with—those who have been doing great work in this domain for years. As highlighted in our initial blog post, we see opportunities for Cascade to play a complementary role and to bring to bear lessons from the analogous journey that durable CDR has begun in recent years.
+				Lifecycle refrigerant management (LRM) reduces avoidable emissions from the installed base of refrigerants through improved leak management, recovery at servicing and end-of-life, reclamation, and destruction where reuse is not feasible. Refrigerant transition lowers the emissions impact of new equipment entering the market by ensuring it uses lower-GWP alternatives and more efficient cooling technologies. Together, these strategies help countries meet their commitments to phase down high-GWP refrigerants while making refrigerant supply more secure and affordable — particularly in markets that depend on imports. 
+			</p>
+			<p>
+				Cascade is working to close the finance, incentive, and infrastructure gaps that hold back LRM implementation. We're supporting first-of-their-kind demonstrations, learning what works on the ground, and working with regulators and industry to shape compliance and policy frameworks that reflect on-the-ground realities in the Global South.
+			</p>
+			<h5>HIGHLIGHTS</h5>
+			<div class="highlights">
+				<div>
+					<img src={slcp} alt="Super Pollutants" />
+					<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
+					<p>
+						Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+					</p>
+					<a href="/blog/cascade-entry-into-slcp-mitigation">Learn More</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="marketdevelopment">
+			<h3>Market Development and Policy Engagement</h3>
+			<p>
+				High-potential climate solutions can stall at the starting line, fragment fast, and remain reliant on a few early champions without the policy and market infrastructure required to mature. Moving from early signals to enduring climate impact takes coordinated action from industry leaders who take early bets, policymakers who cultivate the conditions for adoption, financial institutions that unlock capital, civil society that demands integrity, and more.
+			</p>
+			<p>
+				Cascade partners with these leading policy and market actors to put the necessary foundations in place — from credible measurement and verification methodologies to incentive structures and policy frameworks that responsibly scale adoption.
 			</p>
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
@@ -179,12 +207,12 @@
 				</div>
 
 				<div>
-					<img src={slcp} alt="Super Pollutants" />
-					<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
+					<img src={policy} alt="Drawdown to Durable Storage" />
+					<h2>Drawdown to Durable Storage: Understanding ERW in EU Carbon Removal Policy</h2>
 					<p>
-						Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+						An in-depth look at how ERW fits within the EU Carbon Removal and Carbon Farming regulation and carbon market frameworks.
 					</p>
-					<a href="/blog/cascade-entry-into-slcp-mitigation">Learn More</a>
+					<a href="/blog/drawdown-to-durable">Learn More</a>
 				</div>
 			</div>
 		</section>
