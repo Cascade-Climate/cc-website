@@ -151,8 +151,8 @@
 			</div>
 		</section>
 
-		<section id="superpollutantmitigation">
-			<h3>Super Pollutant Mitigation</h3>
+		<section id="refrigerantmanagementandtransition">
+			<h3>Refrigerant Management and Transition</h3>
 			<p>
 				We are now expanding our work to address the urgent risks associated with near-term warming. Cascade is focused on accelerating super pollutant mitigation efforts by building a bridge from early, voluntary climate private finance toward a policy-driven end state that embeds accountability for super pollutant reductions within industry value chains and national greenhouse gas inventories.
 			</p>
