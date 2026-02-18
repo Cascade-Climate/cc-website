@@ -31,8 +31,9 @@
 		<p>Cascade is far from the first to call attention to the importance of lifecycle refrigerant management in tackling climate change. A range of organizations — such as Carbon Containment Lab, Climate and Clean Air Coalition, Environmental Investigation Agency, Institute for Governance and Sustainable Development, Natural Resources Defense Council, and numerous others — have been doing great work in this space for many years. Yet beyond this dedicated community, the scale and urgency of refrigerant emissions remain underappreciated in mainstream climate discourse.</p>
 
 		<p>Cascade aims to complement the work of partner organizations by engaging deeply in a subset of developing countries with the potential to get lifecycle refrigerant management on a much stronger trajectory in the coming years. We see an opportunity to mobilize catalytic private and public finance to deliver immediate mitigation while building a bridge toward large-scale policy and industry action needed to embed lasting accountability for refrigerant emissions reductions.</p>
-                
-            <section id="role-of-refrigerants">
+		</section>
+
+		<section id="role-of-refrigerants">
 			<h1>The Role of Refrigerants in Climate Change</h1>
 
 			<p>Refrigerants are the chemicals used in cooling systems that absorb heat from a space and release it elsewhere through continuous phase changes. These working fluids are used in all heat pump systems, from your car&rsquo;s air conditioner and your supermarket&rsquo;s refrigerated cases, to your home&rsquo;s heat pumps that provide both cooling and heating.</p>
@@ -59,18 +60,18 @@
 
 			<p>The installed bank problem will intensify as rising temperatures and economic growth drive unprecedented cooling demand. Southeast Asia alone is projected to see a <a href="https://www.iea.org/commentaries/staying-cool-without-overheating-the-energy-system" target="_blank" rel="noopener noreferrer">ninefold increase in air conditioners</a> between 2020 and 2040. In the near-term, the refrigerants used in new equipment installations will be predominantly HFCs, especially in developing countries (referred to as <a href="https://ozone.unep.org/classification-parties" target="_blank" rel="noopener noreferrer">Article 5 countries</a> under Kigali) where phase down schedules allow more time for technology transition. Each HFC system installed today locks in decades of potential emissions.</p>
 
-			<figure style="margin: 2rem 0; text-align: center;">
+			<figure style="margin: 1.5rem 0; text-align: center;">
 				<img src={hfcEmissions} alt="HFC emissions projections" style="width: 25%; height: auto;" />
-				<figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text);">Source: Velders et al. (2022)</figcaption>
+				<figcaption style="margin-top: 0.375rem; font-size: 0.9rem; color: var(--color-text);">Source: Velders et al. (2022)</figcaption>
 			</figure>
             <p>Currently, there is little to no incentive for equipment owners and service technicians to prevent refrigerant leaks during equipment use or venting at end-of-life. Leakage from existing, in-use equipment is widespread, as refrigerants escape through deteriorating seals, gaskets, joints, and micro-cracks in tubing. Although venting of ODS and HFCs is explicitly illegal in many countries during servicing and at end-of-life, compliance has proven difficult to monitor and enforce. From an economic standpoint, recovering refrigerant typically poses a net cost to technicians: it can be time-consuming, requires specialized equipment, and there are limited markets for recovered refrigerants. </p>
 		</section>
 
         <section id="gap-implementation-risks">
 			<h2>Gap 2: Implementation Risks in the Transition to Alternative Refrigerants</h2>
-            <p>Secondly, countries may struggle to meet their Kigali HFC phase-down obligations primarily due to a lack of available, scalable low-GWP alternatives across a wide range of use cases. The Montreal Protocol succeeded in part because replacement was straightforward — HFCs could substitute for CFCs and HCFCs across most applications without significant system modifications. 
+            <p>Secondly, countries may struggle to meet their Kigali HFC phase-down obligations primarily due to a lack of available, scalable low-GWP alternatives across a wide range of use cases. The Montreal Protocol succeeded in part because replacement was straightforward — HFCs could substitute for CFCs and HCFCs across most applications without significant system modifications.</p>
 
-            <p>Today's transition away from HFCs is structurally different, creating a much bumpier road with ongoing risk of setbacks and delays. While low-GWP refrigerants have proven technically viable in specific use cases, they have not yet achieved the broad and immediate usability that made HFCs effective universal replacements. Adoption of low-GWP alternatives across residential and commercial sectors faces technical, economic, and capacity barriers — issues that are particularly acute in Article 5 countries that are dependent on foreign supply of refrigerants and equipment.</p>
+			<p>Today's transition away from HFCs is structurally different, creating a much bumpier road with ongoing risk of setbacks and delays. While low-GWP refrigerants have proven technically viable in specific use cases, they have not yet achieved the broad and immediate usability that made HFCs effective universal replacements. Adoption of low-GWP alternatives across residential and commercial sectors faces technical, economic, and capacity barriers — issues that are particularly acute in Article 5 countries that are dependent on foreign supply of refrigerants and equipment.</p>
 
             <p>These barriers include:</p>
 			<ul>
@@ -104,11 +105,43 @@
 
             <p>By managing refrigerants across the complete equipment lifecycle LRM prevents the vast majority of installed bank emissions that would otherwise escape during routine use, maintenance, and eventual retirement.</p>
 
-			<figure style="margin: 2rem 0; text-align: center;">
-				<img src={lrmJourney} alt="LRM journey" style="width: 25%; height: auto;" />
-				<figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text);">Figure 1: Refrigerant management value chain</figcaption>
+			<figure style="margin: 1.5rem 0; text-align: center;">
+				<img src={lrmJourney} alt="LRM journey" style="width: 75%; height: auto;" />
+				<figcaption style="margin-top: 0.375rem; font-size: 0.9rem; color: var(--color-text);">Figure 1: Refrigerant management value chain</figcaption>
 			</figure>
 
+			<div class="text-box" style="margin: 2rem 0; padding: 1.25rem 1.5rem; background-color: #023c40; border-radius: 4px; color: white;">
+				<p style="margin: 0 0 0.75rem 0; font-weight: 600; color: white;">Refrigerant Recovery: The Foundation for Successful LRM</p>
+				<p style="margin: 0; color: white;">Efficient, cost-effective recovery of refrigerants during servicing and at end-of-life is the foundation of lifecycle refrigerant management. Recovery infrastructure—trained technicians, specialized equipment, collection networks, and logistics systems—enables all downstream LRM strategies. Whether recovered refrigerants are reclaimed or destroyed, recovery capacity must be built first. Investment in this infrastructure today is therefore critical for scaling LRM in the years to come.</p>
+			</div>
+
+            <h2>Addressing Gap 2: LRM as the Solution to the Transition to Alternative Refrigerants</h2>
+            <p>While LRM cannot solve the full range of refrigerant transition barriers, it can help smooth critical economic aspects of the shift. Both reclamation and destruction help manage the existing HFC stock while accelerating the shift to low-GWP alternatives—reclamation by creating transition flexibility and resilience, and destruction by creating market pull for new refrigerants.
+
+                Domestic reclamation capacity can help Article 5 countries mitigate the bumpy transition path by maintaining a buffer supply of HFCs to service existing equipment. Under Kigali, reclaimed refrigerants don't count toward consumption caps. This provides an avenue for countries to establish more self-reliance and resilience during a long stretch of accelerating domestic demand and foreign supply prone to disruption and price instability. Reclaimed HFCs can absorb demand while reducing exposure to international spot prices, dependence on a small set of foreign producers, and incentives to buy low-quality product via gray markets—all without eating into tightening import quotas. However, there is a real risk of over-investing in reclamation: establishing highly profitable systems around declining HFCs could create perverse incentives to prolong their use. HFC reclamation works best as a time-limited buffer during technology transition, not as a dominant refrigerant supply strategy.
+                
+                Meanwhile, destroying HFCs recovered from end-of-life equipment will gradually increase the market demand for low-GWP alternatives in new and replacement systems as the HFC production phase down progresses. This demand signal will motivate equipment and chemical manufacturers to scale up existing low-GWP technologies and develop new ones where necessary, expanding access to consumers in Article 5 countries. At the same time, it’s important that destruction efforts are ramped up gradually over time to prevent HFC refrigerant price shocks that could restrict access to critical cooling equipment.
+                
+                Faster phase-down may be less costly long-term by accelerating equipment turnover to efficient low-GWP systems. This is why recovery infrastructure must ultimately prioritize HFC destruction as the end state, with reclamation serving as a time-limited bridge.
+                </p>
+
+            <section id="current-state-path-forward">
+
+            <h1>Current State and Path Forward</h1>
+            <p>Global leaders in LRM illustrate both the promise and limits of existing policy approaches. Japan and Australia rank among the strongest performers globally, achieving recovery rates of over 40% and 35-61%, respectively, respectively, through comparatively robust regulations and infrastructure development support. Yet, even in these best-in-class jurisdictions, where comprehensive LRM policy frameworks exist, refrigerant recovery has not become the default behavior for all equipment operators and technicians. Even these leaders have meaningful headroom to drive recovery rates higher.
+
+             Leading countries remain the exception rather than the rule. The global baseline is far lower—meaning recovery is severely under-incentivized nearly everywhere. The result is a significant and largely untapped climate opportunity: globally, the vast majority of high-GWP refrigerants continue to be leaked, vented, or lost during equipment disposal rather than responsbily recovered.</p>
+
+             <h2>From Opportunity to Action</h2>
+             <p>The Path Forward: From Opportunity to Action
+                Lifecycle refrigerant management represents a rare convergence: a climate intervention that is highly cost-effective and immediately deployable, while also strengthening economic resilience and enabling the rapid, equitable expansion of cooling in a warming world.
+                
+                As we build our refrigerant program at Cascade, we're focusing on strategic interventions that can catalyze systemic change—particularly in import-dependent developing countries experiencing fast-growing demand and acute transition challenges. In our next blog post, we'll share how Cascade is approaching this work: our focus on engagement in particular Article 5 countries, our strategy for unlocking catalytic finance, and the design principles that ensure early projects lead to lasting policy and industry action.</p>
+
+                <p><em>We are deeply grateful to Gabrielle Dreyfus (Institute for Governance & Sustainable Development) and Anastasia O'Rourke (Carbon Containment Lab) for generously sharing their time and expertise in reviewing this blog, and to Eric Ripley (A-Gas) and Louis Potok (Recoolit) for contributing practitioner insights on the refrigerant management value chain figure. Their feedback does not constitute endorsement of the views expressed herein.</em></p>
+
+
+            </section>
 		</section>
 
 		<section class="footnotes" style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--color-text); font-size: 0.9rem; color: var(--color-text);">
@@ -125,5 +158,21 @@
 		margin-bottom: 0;
 		padding-top: 0;
 		padding-bottom: 1rem;
+	}
+	:global(main section h1) {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+	:global(main section h2) {
+		margin-top: 1.5rem;
+		margin-bottom: 0.75rem;
+	}
+	:global(main section p) {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+	:global(main section ul) {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
 	}
 </style>
