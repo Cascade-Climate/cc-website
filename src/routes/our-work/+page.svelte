@@ -190,10 +190,10 @@
 		<section id="marketdevelopment">
 			<h3>Market Development and Policy Engagement</h3>
 			<p>
-				High-potential climate solutions can stall at the starting line, fragment fast, and remain reliant on a few early champions without the policy and market infrastructure required to mature. Moving from early signals to enduring climate impact takes coordinated action from industry leaders who take early bets, policymakers who cultivate the conditions for adoption, financial institutions that unlock capital, civil society that demands integrity, and more.
-			</p>
-			<p>
-				Cascade partners with these leading policy and market actors to put the necessary foundations in place — from credible measurement and verification frameworks to incentive structures and policy frameworks that responsibly scale adoption.
+				High-potential climate solutions can stall at the starting line, fragment rapidly, and remain reliant on a few early champions without the policy and market infrastructure required to build, maintain, and accelerate progress.</p>
+				<p>Moving from early, catalytic market signals to enduring, policy-driven climate impact takes coordinated action from industry leaders who take early bets, policymakers and standards setters who cultivate the conditions for adoption, financial institutions that unlock capital, civil society that demands integrity, and more.</p>
+				
+				<p>Cascade partners with these leading policy and market actors to build and shape the necessary foundations these solutions require— from advancing credible measurement and verification frameworks to putting forward incentive structures, market infrastructure improvements, and policy frameworks that responsibly scale adoption.
 			</p>
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
