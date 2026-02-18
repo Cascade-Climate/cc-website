@@ -129,7 +129,7 @@
 					<a href="/blog/erw-field-grant-awardees">Learn More</a>					
 				</div>
 				<div>
-					<img src={policy} alt="Policy" />
+					<img src={farm1} alt="Policy priorities for ERW" />
 					<h2>Policy priorities for ERW</h2>
 					<p>
 						We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and increase confidence of carbon removal buyers and investors to enter the market.
@@ -217,11 +217,20 @@
 
 				<div>
 					<img src={policy} alt="Drawdown to Durable Storage" />
-					<h2>From Drawdown to Durable Storage: Understanding ERW in EU Carbon Removal Policy</h2>
+					<h2>ERW in EU carbon removal policy</h2>
 					<p>
 						An in-depth look at how ERW fits within the EU Carbon Removal and Carbon Farming regulation and carbon market frameworks.
 					</p>
 					<a href="/blog/drawdown-to-durable">Learn More</a>
+				</div>
+
+				<div>
+					<img src={farm1} alt="Policy priorities for ERW" />
+					<h2>Policy priorities for ERW</h2>
+					<p>
+						We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and increase confidence of carbon removal buyers and investors to enter the market.
+					</p>
+					<a href="/blog/policy">Learn More</a>
 				</div>
 			</div>
 		</section>
