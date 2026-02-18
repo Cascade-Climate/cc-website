@@ -16,7 +16,7 @@
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 
 	const sections = [
-		{ id: 'erw', title: 'ERW' },
+		{ id: 'erw', title: 'Enhanced Rock Weathering' },
 		{ id: 'superpollutantmitigation', title: 'Refrigerant Management and Transition' },
 		{ id: 'marketdevelopment', title: 'Market Development and Policy Engagement' },
 	];
@@ -274,6 +274,7 @@
 	h3 {
 		font-weight: 500;
 		font-size: 1.6rem;
+		margin-top: 1rem;
 		margin-bottom: 1rem;
 		color: var(--color-dark);
 	}
@@ -291,6 +292,7 @@
 		font-weight: 300;
 		font-size: 1.2rem;
 		color: var(--color-dark);
+		margin-top: 1.25rem;
 		margin-bottom: 1rem;
 	}
 
@@ -355,12 +357,12 @@
 	}
 
 	.areas {
-		padding: 1rem 4rem;
+		padding: 1.5rem 4rem;
 		padding-bottom: 6rem;
 	}
 
 	.areas h1 {
-		margin-top: 2rem;
+		margin-top: 2.5rem;
 		margin-bottom: 0.5rem;
 		color: var(--color-dark);
 	}
@@ -370,7 +372,7 @@
 		padding-top: 6rem;
 		border-bottom: 1px solid var(--color-text);
 		margin-bottom: -5rem;
-		padding-bottom: 1rem;
+		padding-bottom: 1.5rem;
 	}
 
 	/* Remove divider line from the last section */
