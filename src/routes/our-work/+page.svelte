@@ -22,18 +22,39 @@
 	];
 
 	let activeSection = '';
+	let navWrapper;
+	let pinned = false;
+	const headerOffset = 64; // 4rem – nav sticks just below site header
 
 	function handleScroll() {
-		const scrollPosition = window.scrollY;
+		// Viewport-relative active section (same as blog ScrollNav)
+		const activeThreshold = 200;
 		activeSection = '';
 		for (const section of sections) {
 			const element = document.getElementById(section.id);
 			if (element) {
-				const { offsetTop, offsetHeight } = element;
-				if (scrollPosition >= offsetTop - 10 && scrollPosition < offsetTop + offsetHeight - 10) {
+				const rect = element.getBoundingClientRect();
+				if (rect.top <= activeThreshold && rect.bottom > activeThreshold) {
 					activeSection = section.id;
+					break;
 				}
 			}
+		}
+		if (!activeSection) {
+			for (const section of sections) {
+				const element = document.getElementById(section.id);
+				if (element) {
+					const rect = element.getBoundingClientRect();
+					if (rect.top < window.innerHeight && rect.bottom > 0) {
+						activeSection = section.id;
+						break;
+					}
+				}
+			}
+		}
+		// Pin nav below header once user has scrolled past it
+		if (navWrapper) {
+			pinned = navWrapper.getBoundingClientRect().top <= headerOffset;
 		}
 	}
 
@@ -63,13 +84,16 @@
 			Cascade is a philanthropy-backed nonprofit helping mobilize a more comprehensive response to the climate crisis by advancing high-potential solutions that remain on the margins of mainstream climate action. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
 </p>
 	</section>
-	<nav>
-		{#each sections as section}
-			<a class:active={activeSection === section.id} href="/our-work#{section.id}">
-				{section.title}
-			</a>
-		{/each}
-	</nav>
+	<div class="scroll-nav-wrapper" class:pinned bind:this={navWrapper}>
+		<div class="scroll-nav-spacer" aria-hidden="true"></div>
+		<nav class="scroll-nav">
+			{#each sections as section}
+				<a class:active={activeSection === section.id} href="/our-work#{section.id}">
+					{section.title}
+				</a>
+			{/each}
+		</nav>
+	</div>
 	<div class="areas">
 		<h1>Programmatic Areas</h1>
 		<section id="erw">
@@ -156,7 +180,7 @@
 			</div>
 		</section>
 
-		<section id="refrigerantmanagementandtransition">
+		<section id="superpollutantmitigation">
 			<h3>Refrigerant Management and Transition</h3>
 			<p>
 				Reducing super pollutant emissions — including refrigerants with high global warming potential (GWP) — is one of the most immediate opportunities we have to limit near-term warming. Yet as cooling demand surges, particularly in the Global South, high-GWP refrigerant emissions risk rising in lockstep.
@@ -270,17 +294,32 @@
 		margin-bottom: 1rem;
 	}
 
-	nav {
+	/* Same pattern as blog ScrollNav: wrapper + spacer so fixed nav doesn't collapse layout */
+	.scroll-nav-wrapper.pinned .scroll-nav-spacer {
+		min-height: 2.75rem;
+	}
+
+	.scroll-nav-wrapper.pinned .scroll-nav {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: calc(4rem - 1px);
+		width: 100%;
+	}
+
+	nav.scroll-nav {
 		position: sticky;
 		top: calc(4rem - 1px);
+		z-index: 10;
 		background-color: var(--color-dark);
 		color: var(--color-light);
 		border-top: 1px solid var(--color-light);
 		display: flex;
 		flex-wrap: wrap;
+		width: 100%;
 	}
 
-	nav a {
+	nav.scroll-nav a {
 		flex: 1 1 0;
 		min-width: 0;
 		padding: 0.6rem;
@@ -293,17 +332,17 @@
 		border: 1px solid var(--color-light);
 	}
 
-	nav a:first-child {
+	nav.scroll-nav a:first-child {
 		border-left: none;
 	}
 
-	nav a.active {
+	nav.scroll-nav a.active {
 		background-color: var(--color-light);
 		color: var(--color-dark);
 	}
 
 	@media (max-width: 660px) {
-		nav a {
+		nav.scroll-nav a {
 			padding: 0.4rem;
 			font-size: 0.875rem;
 		}
