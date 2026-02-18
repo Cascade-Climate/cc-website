@@ -79,6 +79,7 @@
 			<p>
 				Cascade is working to clear the path forward by coordinating inter-comparable field research and developing open-science tools. We're also engaging policymakers, buyers, and standard bodies to ensure the markets and policies shaping ERW's future evolve with science.
 			</p>
+
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
