@@ -263,14 +263,14 @@
 	}
 
 	nav a {
+		flex: 1 1 0;
+		min-width: 0;
 		padding: 0.6rem;
 		margin: -1px;
 		margin-left: 0;
 		font-size: 1rem;
 		text-decoration: none;
 		color: inherit;
-		max-width: 256px;
-		flex-grow: 1;
 		text-align: center;
 		border: 1px solid var(--color-light);
 	}
