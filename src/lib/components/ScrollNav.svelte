@@ -4,8 +4,17 @@
   /** Optional list of section IDs to exclude from the nav (e.g. ['gap-installed-bank', 'gap-implementation-risks']) */
   export let excludeIds = [];
 
+  /** When true, nav stays fixed at the top of the viewport while scrolling (always visible) */
+  export let fixed = false;
+
+  /** When true, nav is in the flow under the intro and becomes fixed only after you scroll past it */
+  export let fixedUnderIntro = false;
+
   let sections = [];
   let activeSection = '';
+  let wrapper;
+  let pinned = false;
+  const headerOffset = 64; // 4rem – nav sticks just below site header
 
   function generateSections() {
     const headings = document.body.querySelector('main').querySelectorAll('h1');
@@ -18,17 +27,36 @@
   }
 
   function handleScroll() {
-    const scrollPosition = window.scrollY;
+    // Use viewport-relative position so active state works regardless of layout/offsetParent.
+    // Consider the section "being read" when a point near the top of the viewport (below fixed nav) is inside it.
+    const activeThreshold = 200; // px from top of viewport – below header + scroll nav
     activeSection = '';
     for (const section of sections) {
       const element = document.getElementById(section.id);
       if (element) {
-        const { offsetTop, offsetHeight } = element;
-        if (scrollPosition >= offsetTop - 100 && scrollPosition < offsetTop + offsetHeight - 100) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= activeThreshold && rect.bottom > activeThreshold) {
           activeSection = section.id;
           break;
         }
       }
+    }
+    // If no section contains the threshold line (e.g. at top of page), highlight the first section that's in view.
+    if (!activeSection) {
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            activeSection = section.id;
+            break;
+          }
+        }
+      }
+    }
+    // Pin nav below header once user has scrolled past it (when using fixedUnderIntro).
+    if (fixedUnderIntro && wrapper) {
+      pinned = wrapper.getBoundingClientRect().top <= headerOffset;
     }
   }
 
@@ -43,16 +71,33 @@
   });
 </script>
 
-<nav class="scroll-nav">
-  {#each sections as section}
-    <a class:active={activeSection === section.id} href={`#${section.id}`}>
-      {section.title}
-    </a>
-  {/each}
-</nav>
+<div class="scroll-nav-wrapper" class:fixed class:pinned={fixedUnderIntro && pinned} bind:this={wrapper}>
+  <div class="scroll-nav-spacer" aria-hidden="true"></div>
+  <nav class="scroll-nav">
+    {#each sections as section}
+      <a class:active={activeSection === section.id} href={`#${section.id}`}>
+        {section.title}
+      </a>
+    {/each}
+  </nav>
+</div>
 
 <style>
-  nav {
+  .scroll-nav-wrapper.fixed .scroll-nav-spacer,
+  .scroll-nav-wrapper.pinned .scroll-nav-spacer {
+    min-height: 2.75rem;
+  }
+
+  .scroll-nav-wrapper.fixed .scroll-nav,
+  .scroll-nav-wrapper.pinned .scroll-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: calc(4rem - 1px);
+    width: 100%;
+  }
+
+  nav.scroll-nav {
     position: sticky;
     top: calc(4rem - 1px);
     background-color: var(--color-dark);

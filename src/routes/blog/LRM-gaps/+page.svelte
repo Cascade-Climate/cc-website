@@ -1,12 +1,11 @@
 <script>
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
-	import grants from '$lib/images/nature/grants.webp';
-    import hfcEmissions from '$lib/images/blog/hfc.emissions.webp';
-	import lrmJourney from '$lib/images/blog/LRM.journey.webp';
+    import hfcEmissions from '$lib/images/blog/hfcemissions.webp';
+	import lrmJourney from '$lib/images/blog/LRMjourney.webp';
 </script>
 
-<div>
+<div class="lrm-gaps-page">
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
@@ -24,9 +23,9 @@
 			<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
 		</div>
 	</section>
-	<ScrollNav excludeIds={['gap-installed-bank', 'gap-implementation-risks']} />
+	<ScrollNav excludeIds={['gap-installed-bank', 'gap-implementation-risks']} fixedUnderIntro />
 	<main>
-        <section id="intro">
+		<section id="intro">
 			<h1>Introduction</h1>
 		<p>Cascade is far from the first to call attention to the importance of lifecycle refrigerant management in tackling climate change. A range of organizations — such as Carbon Containment Lab, Climate and Clean Air Coalition, Environmental Investigation Agency, Institute for Governance and Sustainable Development, Natural Resources Defense Council, and numerous others — have been doing great work in this space for many years. Yet beyond this dedicated community, the scale and urgency of refrigerant emissions remain underappreciated in mainstream climate discourse.</p>
 
@@ -67,7 +66,7 @@
             <p>Currently, there is little to no incentive for equipment owners and service technicians to prevent refrigerant leaks during equipment use or venting at end-of-life. Leakage from existing, in-use equipment is widespread, as refrigerants escape through deteriorating seals, gaskets, joints, and micro-cracks in tubing. Although venting of ODS and HFCs is explicitly illegal in many countries during servicing and at end-of-life, compliance has proven difficult to monitor and enforce. From an economic standpoint, recovering refrigerant typically poses a net cost to technicians: it can be time-consuming, requires specialized equipment, and there are limited markets for recovered refrigerants. </p>
 		</section>
 
-        <section id="gap-implementation-risks">
+		<section id="gap-implementation-risks">
 			<h2>Gap 2: Implementation Risks in the Transition to Alternative Refrigerants</h2>
             <p>Secondly, countries may struggle to meet their Kigali HFC phase-down obligations primarily due to a lack of available, scalable low-GWP alternatives across a wide range of use cases. The Montreal Protocol succeeded in part because replacement was straightforward — HFCs could substitute for CFCs and HCFCs across most applications without significant system modifications.</p>
 
@@ -85,13 +84,12 @@
             <p>The Kigali Amendment established thoughtful phase-down schedules with strong global buy-in that will yield significant HFC emissions reductions; yet implementation risks remain. The complexity of the HFC transition requires a wide array of solutions to address the barriers outlined above. Significant financial investment by governments, manufacturers, technicians, and other stakeholders is required to enable full Kigali adoption. With limited transition finance from sources like the Multilateral Fund and World Bank relative to required investment scale, these challenges create concrete risks of delayed implementation and prolonged HFC reliance.</p>
 		</section>
 
-        <section id="addressing-the-gaps">
+		<section id="addressing-the-gaps">
 			<h1>How Lifecycle Refrigerant Management Addresses Gaps</h1>
 
             <p>Lifecycle refrigerant management (LRM) —the systematic mitigation of refrigerant emissions across equipment lifecycles — addresses aspects of both gaps in the Kigali Amendment's scope. The potential for impact is substantial: LRM could mitigate 39 Gt of CO2e HFC and ODS emissions between 2025 and 2050. At roughly 1.5 Gt CO2e annually, this is comparable in scale to other high-priority superpollutant interventions such as methane capture at landfills. </p>
 
-            <h2>Addressing Gap 1: LRM as the Solution to the Installed Refrigerant Bank
-            </h2>
+            <h2>Addressing Gap 1: LRM as the Solution to the Installed Refrigerant Bank</h2>
 
             <p>LRM is the only viable approach to address the existing installed bank of refrigerants. Without proper LRM, virtually all HFC and ODS refrigerants currently in use, or yet to be deployed, will eventually leak or be vented to the atmosphere.</p>
 
@@ -124,35 +122,31 @@
                 
                 Faster phase-down may be less costly long-term by accelerating equipment turnover to efficient low-GWP systems. This is why recovery infrastructure must ultimately prioritize HFC destruction as the end state, with reclamation serving as a time-limited bridge.
                 </p>
+			</section>
 
-            <section id="current-state-path-forward">
+		<section id="current-state-path-forward">
+			<h1>Current State and Path Forward</h1>
+			<p>Global leaders in LRM illustrate both the promise and limits of existing policy approaches. Japan and Australia rank among the strongest performers globally, achieving recovery rates of over 40% and 35-61%, respectively, through comparatively robust regulations and infrastructure development support. Yet, even in these best-in-class jurisdictions, where comprehensive LRM policy frameworks exist, refrigerant recovery has not become the default behavior for all equipment operators and technicians. Even these leaders have meaningful headroom to drive recovery rates higher.</p>
 
-            <h1>Current State and Path Forward</h1>
-            <p>Global leaders in LRM illustrate both the promise and limits of existing policy approaches. Japan and Australia rank among the strongest performers globally, achieving recovery rates of over 40% and 35-61%, respectively, respectively, through comparatively robust regulations and infrastructure development support. Yet, even in these best-in-class jurisdictions, where comprehensive LRM policy frameworks exist, refrigerant recovery has not become the default behavior for all equipment operators and technicians. Even these leaders have meaningful headroom to drive recovery rates higher.
+			<p>Leading countries remain the exception rather than the rule. The global baseline is far lower — meaning recovery is severely under-incentivized nearly everywhere. The result is a significant and largely untapped climate opportunity: globally, the vast majority of high-GWP refrigerants continue to be leaked, vented, or lost during equipment disposal rather than responsibly recovered.</p>
 
-             Leading countries remain the exception rather than the rule. The global baseline is far lower—meaning recovery is severely under-incentivized nearly everywhere. The result is a significant and largely untapped climate opportunity: globally, the vast majority of high-GWP refrigerants continue to be leaked, vented, or lost during equipment disposal rather than responsbily recovered.</p>
-
-             <h2>From Opportunity to Action</h2>
-             <p>The Path Forward: From Opportunity to Action
-                Lifecycle refrigerant management represents a rare convergence: a climate intervention that is highly cost-effective and immediately deployable, while also strengthening economic resilience and enabling the rapid, equitable expansion of cooling in a warming world.
+			<h2>From Opportunity to Action</h2>
+			<p>Lifecycle refrigerant management represents a rare convergence: a climate intervention that is highly cost-effective and immediately deployable, while also strengthening economic resilience and enabling the rapid, equitable expansion of cooling in a warming world.
                 
-                As we build our refrigerant program at Cascade, we're focusing on strategic interventions that can catalyze systemic change—particularly in import-dependent developing countries experiencing fast-growing demand and acute transition challenges. In our next blog post, we'll share how Cascade is approaching this work: our focus on engagement in particular Article 5 countries, our strategy for unlocking catalytic finance, and the design principles that ensure early projects lead to lasting policy and industry action.</p>
+				As we build our refrigerant program at Cascade, we're focusing on strategic interventions that can catalyze systemic change—particularly in import-dependent developing countries experiencing fast-growing demand and acute transition challenges. In our next blog post, we'll share how Cascade is approaching this work: our focus on engagement in particular Article 5 countries, our strategy for unlocking catalytic finance, and the design principles that ensure early projects lead to lasting policy and industry action.</p>
 
-                <p><em>We are deeply grateful to Gabrielle Dreyfus (Institute for Governance & Sustainable Development) and Anastasia O'Rourke (Carbon Containment Lab) for generously sharing their time and expertise in reviewing this blog, and to Eric Ripley (A-Gas) and Louis Potok (Recoolit) for contributing practitioner insights on the refrigerant management value chain figure. Their feedback does not constitute endorsement of the views expressed herein.</em></p>
-
-
-            </section>
+			<p><em>We are deeply grateful to Gabrielle Dreyfus (Institute for Governance & Sustainable Development) and Anastasia O'Rourke (Carbon Containment Lab) for generously sharing their time and expertise in reviewing this blog, and to Eric Ripley (A-Gas) and Louis Potok (Recoolit) for contributing practitioner insights on the refrigerant management value chain figure. Their feedback does not constitute endorsement of the views expressed herein.</em></p>
 		</section>
 
 		<section class="footnotes" style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--color-text); font-size: 0.9rem; color: var(--color-text);">
 			<p><strong><sup>1</sup></strong> In 2024, global coal power generation grew by nearly 1% to 10,700 TWh, a new high (IEA). Coal power typically emits ~1 tonne CO2/MWh. 10,700 TWh = 10,700,000 GWh = 10,700 million MWh. At ~0.9 tonnes CO2/MWh for coal power = ~9.6 Gt CO2 from coal power.</p>
 		</section>
 	</main>
-	<img style="width: 0%;" src={grants} alt="LRM" />
-</div>
+	</div>
 
 <style>
 	:global(main section) {
+		scroll-margin-top: 7rem;
 		border-bottom: none !important;
 		margin-top: 2rem;
 		margin-bottom: 0;
