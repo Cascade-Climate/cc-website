@@ -185,7 +185,7 @@
 		text-align: center;
 	}
 	:global(.blog-figure-img-sm) {
-		width: 75%;
+		width: 37.5%;
 		height: auto;
 	}
 	:global(.blog-figure-img-lg) {
