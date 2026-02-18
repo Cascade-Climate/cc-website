@@ -1,16 +1,20 @@
 <script>
   import { onMount } from 'svelte';
 
+  /** Optional list of section IDs to exclude from the nav (e.g. ['gap-installed-bank', 'gap-implementation-risks']) */
+  export let excludeIds = [];
+
   let sections = [];
   let activeSection = '';
 
   function generateSections() {
-
     const headings = document.body.querySelector('main').querySelectorAll('h1');
-    sections = Array.from(headings).map(heading => ({
-      id: heading.parentNode.id,
-      title: heading.innerText
-    }));
+    sections = Array.from(headings)
+      .map(heading => ({
+        id: heading.parentNode.id,
+        title: heading.innerText
+      }))
+      .filter(s => s.id && !excludeIds.includes(s.id));
   }
 
   function handleScroll() {
