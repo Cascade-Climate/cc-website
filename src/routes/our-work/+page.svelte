@@ -19,6 +19,7 @@
 		{ id: 'erw', title: 'ERW' },
 		{ id: 'superpollutantmitigation', title: 'Refrigerant Management and Transition' },
 		{ id: 'marketdevelopment', title: 'Market Development and Policy Engagement' },
+		{ id: 'research', title: 'Research & Science' },
 	];
 
 	let activeSection = '';
@@ -215,6 +216,16 @@
 					</p>
 					<a href="/blog/drawdown-to-durable">Learn More</a>
 				</div>
+			</div>
+		</section>
+
+		<section id="research">
+			<h3>Research & Science</h3>
+			<p>
+				Cascade supports rigorous, open science to build the evidence base for high-potential climate solutions. This section will be expanded with future initiatives.
+			</p>
+			<h5>HIGHLIGHTS</h5>
+			<div class="highlights">
 			</div>
 		</section>
 	</div>
