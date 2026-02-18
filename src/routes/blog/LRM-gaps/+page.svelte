@@ -110,7 +110,7 @@
 
 			<div class="text-box">
 				<p class="text-box-title">Refrigerant Recovery: The Foundation for Successful LRM</p>
-				<p class="text-box-body">Efficient, cost-effective recovery of refrigerants during servicing and at end-of-life is the foundation of lifecycle refrigerant management. Recovery infrastructure—trained technicians, specialized equipment, collection networks, and logistics systems—enables all downstream LRM strategies. Whether recovered refrigerants are reclaimed or destroyed, recovery capacity must be built first. Investment in this infrastructure today is therefore critical for scaling LRM in the years to come.</p>
+				<p class="text-box-body">Efficient, cost-effective recovery of refrigerants during servicing and at end-of-life is the foundation of lifecycle refrigerant management. Recovery infrastructure — trained technicians, specialized equipment, collection networks, and logistics systems — enables all downstream LRM strategies. Whether recovered refrigerants are reclaimed or destroyed, recovery capacity must be built first. Investment in this infrastructure today is therefore critical for scaling LRM in the years to come.</p>
 			</div>
 
             <h2>Addressing Gap 2: LRM as the Solution to the Transition to Alternative Refrigerants</h2>
@@ -148,9 +148,9 @@
 </div>
 
 <style>
-	/* Match intro hero image size to crossing-the-bridge blog */
+	/* LRM intro hero image */
 	:global(.lrm-gaps-page .intro .content img) {
-		width: 40%;
+		width: 45%;
 		object-fit: cover;
 	}
 
