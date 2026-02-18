@@ -18,7 +18,7 @@
 
 				<hr>
 
-				<p>As Cascade <a href="https://cascadeclimate.org/blog/cascade-entry-into-slcp-mitigation" target="_blank" rel="noopener noreferrer">expands</a> into super pollutant mitigation, our initial program will focus on refrigerants — encompassing both lifecycle refrigerant management and the transition to next-generation alternatives. This post explores lifecycle refrigerant management: why it matters, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.</p><br>
+				<p>As Cascade <a href="https://cascadeclimate.org/blog/cascade-entry-into-slcp-mitigation" target="_blank" rel="noopener noreferrer" style="color: #01ecb1;">expands</a> into super pollutant mitigation, our initial program will focus on refrigerants — encompassing both lifecycle refrigerant management and the transition to next-generation alternatives. This post explores lifecycle refrigerant management: why it matters, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.</p><br>
 			</div>
 			<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
 		</div>
@@ -146,6 +146,12 @@
 </div>
 
 <style>
+	/* Match intro hero image size to crossing-the-bridge blog */
+	:global(.lrm-gaps-page .intro .content img) {
+		width: 40%;
+		object-fit: cover;
+	}
+
 	:global(main section) {
 		scroll-margin-top: 7rem;
 		border-bottom: none !important;
