@@ -1,5 +1,4 @@
 <script>
-	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 	import grants from '$lib/images/nature/grants.webp';
@@ -86,8 +85,7 @@
 		</section>
 
         <section id="addressing-the-gaps">
-			<h1><section id="gap-implementation-risks">
-			<h1>How Lifecycle Refrigerant Management Addresses Gaps</h1></h1>
+			<h1>How Lifecycle Refrigerant Management Addresses Gaps</h1>
 
             <p>Lifecycle refrigerant management (LRM) —the systematic mitigation of refrigerant emissions across equipment lifecycles — addresses aspects of both gaps in the Kigali Amendment's scope. The potential for impact is substantial: LRM could mitigate 39 Gt of CO2e HFC and ODS emissions between 2025 and 2050. At roughly 1.5 Gt CO2e annually, this is comparable in scale to other high-priority superpollutant interventions such as methane capture at landfills. </p>
 
@@ -110,6 +108,8 @@
 				<img src={lrmJourney} alt="LRM journey" style="width: 25%; height: auto;" />
 				<figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text);">Figure 1: Refrigerant management value chain</figcaption>
 			</figure>
+
+		</section>
 
 		<section class="footnotes" style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--color-text); font-size: 0.9rem; color: var(--color-text);">
 			<p><strong><sup>1</sup></strong> In 2024, global coal power generation grew by nearly 1% to 10,700 TWh, a new high (IEA). Coal power typically emits ~1 tonne CO2/MWh. 10,700 TWh = 10,700,000 GWh = 10,700 million MWh. At ~0.9 tonnes CO2/MWh for coal power = ~9.6 Gt CO2 from coal power.</p>
