@@ -148,9 +148,10 @@
 </div>
 
 <style>
-	/* LRM intro hero image */
+	/* LRM intro hero image - fixed size, no shrink with viewport */
 	:global(.lrm-gaps-page .intro .content img) {
 		width: 45%;
+		min-width: 400px;
 		object-fit: cover;
 	}
 
