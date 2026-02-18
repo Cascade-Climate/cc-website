@@ -18,7 +18,7 @@
 	const sections = [
 		{ id: 'erw', title: 'ERW' },
 		{ id: 'superpollutantmitigation', title: 'Refrigerant Management and Transition' },
-		{ id: 'marketdevelopment', title: 'Market Development and Policy' },
+		{ id: 'marketdevelopment', title: 'Market Development and Policy Engagement' },
 	];
 
 	let activeSection = '';
