@@ -23,7 +23,7 @@
 			<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
 		</div>
 	</section>
-	<ScrollNav excludeIds={["gap-installed-bank", "gap-implementation-risks"]} fixedUnderIntro />
+	<ScrollNav excludeIds={["gap-installed-bank", "gap-implementation-risks", "footnotes"]} fixedUnderIntro />
 	<main>
 		<section id="introduction">
 			<h1>Introduction</h1>
@@ -51,7 +51,7 @@
 
 			<p>In 2016, the Kigali Amendment to the Montreal Protocol was adopted to phase down the production and consumption of HFCs due to their contribution to climate change. The Kigali Amendment will drive a transition from HFCs to next-generation refrigerants with much lower GWPs.</p>
 
-			<p>Full implementation of the Kigali Amendment is projected to avoid between <a href="https://www.ccacoalition.org/short-lived-climate-pollutants/hydrofluorocarbons-hfcs" target="_blank" rel="noopener noreferrer">33 and 47 GtCO<sub>2</sub>e</a> emissions cumulatively by 2050. For comparison, this is equivalent to <a href="https://www.iea.org/reports/global-energy-review-2025" target="_blank" rel="noopener noreferrer">shutting down every coal-fired power plant</a> in the world for 3.5 to 5 years<sup>1</sup>. This represents a major win for climate. However, two critical challenges remain unaddressed: 1) the &ldquo;installed refrigerant bank&rdquo; problem and 2) implementation risks in the transition to alternative refrigerants.</p>
+			<p>Full implementation of the Kigali Amendment is projected to avoid between <a href="https://www.ccacoalition.org/short-lived-climate-pollutants/hydrofluorocarbons-hfcs" target="_blank" rel="noopener noreferrer">33 and 47 GtCO<sub>2</sub>e</a> emissions cumulatively by 2050. For comparison, this is equivalent to <a href="https://www.iea.org/reports/global-energy-review-2025" target="_blank" rel="noopener noreferrer">shutting down every coal-fired power plant</a> in the world for 3.5 to 5 years<sup><a href="#footnote1" id="ref1">1</a></sup>. This represents a major win for climate. However, two critical challenges remain unaddressed: 1) the &ldquo;installed refrigerant bank&rdquo; problem and 2) implementation risks in the transition to alternative refrigerants.</p>
 		</section>
 
 		<section id="gap-installed-bank">
@@ -143,8 +143,11 @@
 			<p><em>We are deeply grateful to Gabrielle Dreyfus (Institute for Governance & Sustainable Development) and Anastasia O&apos;Rourke (Carbon Containment Lab) for generously sharing their time and expertise in reviewing this blog, and to Eric Ripley (A-Gas) and Louis Potok (Recoolit) for contributing practitioner insights on the refrigerant management value chain figure. Their feedback does not constitute endorsement of the views expressed herein.</em></p>
 		</section>
 
-		<section class="footnotes">
-			<p><strong><sup>1</sup></strong> In 2024, global coal power generation grew by nearly 1% to 10,700 TWh, a new high (IEA). Coal power typically emits ~1 tonne CO<sub>2</sub>/MWh. 10,700 TWh = 10,700,000 GWh = 10,700 million MWh. At ~0.9 tonnes CO<sub>2</sub>/MWh for coal power = ~9.6 Gt CO<sub>2</sub> from coal power.</p>
+		<section id="footnotes" class="footnotes">
+			<h1>Footnotes</h1>
+			<ol style="margin: 0;">
+				<li id="footnote1">In 2024, global coal power generation grew by nearly 1% to 10,700 TWh, a new high (IEA). Coal power typically emits ~1 tonne CO<sub>2</sub>/MWh. 10,700 TWh = 10,700,000 GWh = 10,700 million MWh. At ~0.9 tonnes CO<sub>2</sub>/MWh for coal power = ~9.6 Gt CO<sub>2</sub> from coal power.</li>
+			</ol>
 		</section>
 	</main>
 </div>
@@ -219,12 +222,14 @@
 		color: white;
 	}
 
-	/* Footnotes */
-	:global(.footnotes) {
+	/* Footnotes (match crn-eoi format) */
+	:global(#footnotes) {
 		margin-top: 3rem;
 		padding-top: 1rem;
-		border-top: 1px solid var(--color-text);
 		font-size: 0.9rem;
 		color: var(--color-text);
+	}
+	:global(#footnotes h1) {
+		font-size: 2rem;
 	}
 </style>
