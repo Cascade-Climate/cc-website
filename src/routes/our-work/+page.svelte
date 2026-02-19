@@ -14,10 +14,11 @@
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
+	import dataImg from '$lib/images/nature/data.webp';
 
 	const sections = [
 		{ id: 'erw', title: 'Enhanced Rock Weathering' },
-		{ id: 'superpollutantmitigation', title: 'Refrigerant Management and Transition' },
+		{ id: 'refrigerantmanagement', title: 'Refrigerant Management and Transition' },
 		{ id: 'marketdevelopment', title: 'Market Development and Policy Engagement' },
 	];
 
@@ -166,6 +167,14 @@
 						We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
 					</p>
 					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
+				</div>
+				<div>
+					<img src={dataImg} alt="ERW Data Quarry" />
+					<h2>ERW Data Quarry</h2>
+					<p>
+						Learn about the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments to unlock deployment-led learning.
+					</p>
+					<a href="/blog/data-sharing-system-for-erw">Learn More</a>
 				</div>
 			</div>
 		</section>
