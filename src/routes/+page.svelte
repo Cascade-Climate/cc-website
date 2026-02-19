@@ -11,6 +11,7 @@
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
+	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 	import herophoto3 from '$lib/images/nature/heroPhoto3.webp';
 </script>
 
@@ -49,6 +50,14 @@
 
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
+			<div class="spotlight">
+				<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
+				<h2>Why lifecycle refrigerant management matters</h2>
+				<p>
+					Learn about the benefits, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.
+				</p>
+				<a href="/blog/LRM-gaps" target="_blank">Learn More</a>
+			</div>
 			<div class="spotlight">
 				<img src={herophoto3} alt="CRN EOI"/>
 				<h2>Seeking hosts for coordinated ERW research
@@ -94,6 +103,24 @@
 		<h3>SPOTLIGHT ON <a href="/blog">OUR BLOG ↗</a></h3>
 		<div id="blog">
 	<div id="post-list">
+
+		<div class="post">
+			<h1>
+				<a href="/blog/LRM-gaps" target="_blank" style="color: var(--color-accent);">
+					Lifecycle Refrigerant Management: Closing Critical Gaps in Global Climate Policy
+				</a>
+			</h1>
+			<p>
+				Why LRM matters, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.
+			</p>
+			<p class="details">
+				<span class="date">02/19/2026</span>
+				·
+				<span class="read-time">8 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
 
 		<div class="post">
 			<h1>

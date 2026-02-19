@@ -10,6 +10,19 @@
 		
 		<div class="post">
 			<h1>
+				<a href="/blog/LRM-gaps">
+					Lifecycle Refrigerant Management: Closing Critical Gaps in Global Climate Policy
+				</a>
+			</h1>
+			<p>Why LRM matters, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.</p>
+				<p class="details">
+					<span class="date">02/19/2026</span>
+					·
+					<span class="read-time">8 MIN READ</span>
+				</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/crn-eoi">
 					Call for Expressions of Interest: Coordinated Research Network for Enhanced Rock Weathering
 				</a>

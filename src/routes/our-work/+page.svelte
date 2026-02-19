@@ -1,5 +1,4 @@
 <script>
-	import data from '$lib/images/nature/data.webp';
 	import erw from '$lib/images/nature/erw.webp';
 	import farm1 from '$lib/images/nature/farm1.webp';
 	import farm2 from '$lib/images/nature/farm2.webp';
@@ -13,6 +12,7 @@
 	import bridge from '$lib/images/nature/bridge.webp';
 	import { onMount } from 'svelte';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
+	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 
 	const sections = [
@@ -125,15 +125,6 @@
 					<a href="/blog/weathering-potential-explorer">Learn More</a>					
 				</div>
 				<div>
-					<img src={data} alt="Data Sharing System" />
-					<h2>Data sharing system to advance scientific research</h2>
-					<p>
-						To unlock a virtuous cycle of deployment-led learning, we are piloting the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to data from commercial ERW deployments.
-					</p>
-					<a href="/blog/data-sharing-system-for-erw"
-					>Learn More</a>
-				</div>
-				<div>
 					<img src={metals} alt="ERW Metal Accumulation Calculator" />
 					<h2>ERW Metal Accumulation Calculator</h2>
 					<p></p>
@@ -179,7 +170,7 @@
 			</div>
 		</section>
 
-		<section id="superpollutantmitigation">
+		<section id="refrigerantmanagement">
 			<h3>Refrigerant Management and Transition</h3>
 			<p>
 				Reducing super pollutant emissions — including refrigerants with high global warming potential (GWP) — is one of the most immediate opportunities we have to limit near-term warming. Yet as cooling demand surges, particularly in the Global South, high-GWP refrigerant emissions risk rising in lockstep.
@@ -190,6 +181,14 @@
 
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
+				<div>
+					<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
+					<h2>Why lifecycle refrigerant management matters</h2>
+					<p>
+						Learn about the benefits, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.
+					</p>
+					<a href="/blog/LRM-gaps">Learn More</a>
+				</div>
 				<div>
 					<img src={slcp} alt="Super Pollutants" />
 					<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
