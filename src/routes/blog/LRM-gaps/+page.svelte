@@ -43,7 +43,7 @@
 
 			<p>Unfortunately, the refrigerants that replaced the ozone-depleting substances (ODS) perpetuated another environmental challenge: climate change. Both the legacy ozone-depleting substances and the primary replacement refrigerants, hydrofluorocarbons (HFCs), are potent greenhouse gases considered to be &ldquo;<a href="https://www.ccacoalition.org/sites/default/files/resources/files/Super%20Pollutant%20Factsheet_0.pdf" target="_blank" rel="noopener noreferrer">super pollutants</a>.&rdquo; On a ton-for-ton basis, HFCs have global warming potentials (GWPs) hundreds to thousands of times greater than carbon dioxide (CO<sub>2</sub>), meaning even small quantities leaked into the atmosphere create outsized climate impacts.</p>
 
-			<p>HFCs also have a relatively short atmospheric lifetime compared to CO<sub>2</sub> — <a href="https://www.ccacoalition.org/short-lived-climate-pollutants/hydrofluorocarbons-hfcs" target="_blank" rel="noopener noreferrer">15 years on average</a> versus centuries for CO<sub>2</sub>. This means their warming impact is concentrated over a shorter period, while CO<sub>2</sub> accumulates and persists in the atmosphere for much longer. Mitigating HFC emissions now therefore delivers rapid climate benefits within decades, complementing the CO<sub>2</sub> reduction and removal strategies essential for limiting long-term warming.</p>
+			<p>HFCs also have a relatively short atmospheric lifetime compared to CO<sub>2</sub> — <a href="https://www.ccacoalition.org/short-lived-climate-pollutants/hydrofluorocarbons-hfcs" target="_blank" rel="noopener noreferrer">15 years on average</a> versus centuries for CO<sub>2</sub>. This means their warming impact is concentrated over a shorter period, while CO<sub>2</sub> accumulates and persists in the atmosphere for much longer. Mitigating HFC emissions now, therefore, delivers rapid climate benefits within decades, complementing the CO<sub>2</sub> reduction and removal strategies essential for limiting long-term warming.</p>
 		</section>
 
 		<section id="kigali-amendment">
@@ -146,7 +146,7 @@
 		<section id="footnotes" class="footnotes">
 			<h1>Footnotes</h1>
 			<ol style="margin: 0;">
-				<li id="footnote1">In 2024, global coal generation reached 10,700 TWh. Coal power typically emits ~1 tonne CO2/MWh meaning total emissions from coal power was ~10.7 GtCO<sub>2</sub> that year.
+				<li id="footnote1">In 2024, global coal generation reached 10,700 TWh. Coal power typically emits ~1 tonne CO<sub>2</sub>/MWh meaning total emissions from coal power was ~10.7 GtCO<sub>2</sub> that year.
                 </li>
 			</ol>
 		</section>
