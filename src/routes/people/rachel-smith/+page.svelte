@@ -12,7 +12,7 @@
 	<div class="member-info">
 		<h1>Rachel Smith</h1>
 		<div class="details">
-			<span>Policy Manager</span>
+			<span>Policy Director</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/rachel-smith20/">
 					<img src={linkedinIcon} alt="LinkedIn" />

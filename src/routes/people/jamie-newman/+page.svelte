@@ -12,7 +12,7 @@
 	<div class="member-info">
 		<h1>Jamie Newman</h1>
 		<div class="details">
-			<span>Recruiting & Operations Manager</span>
+			<span>People and Operations Director</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/jamienewm/">
 					<img src={linkedinIcon} alt="LinkedIn" />

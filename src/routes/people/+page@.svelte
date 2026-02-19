@@ -131,7 +131,7 @@
 		<a class="team-card" href="/people/jamie-newman">
 			<img src={jamieNewman} alt="Jamie Newman" />
 			<h1>Jamie Newman</h1>
-			<span>Recruiting & Operations Manager</span>
+			<span>People and Operations Director</span>
 		</a>
 		<a class="team-card" href="/people/jonathan-moore">
 			<img src={jonathanMoore} alt="Jon Jon Moore" />
