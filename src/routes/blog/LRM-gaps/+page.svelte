@@ -140,8 +140,8 @@
 		</section>
 
 		<section class="acknowledgments">
-			<p><em>We are deeply grateful to Gabrielle Dreyfus (Institute for Governance & Sustainable Development) and Anastasia O&apos;Rourke (Carbon Containment Lab) for generously sharing their time and expertise in reviewing this blog, and to Eric Ripley (A-Gas) and Louis Potok (Recoolit) for contributing practitioner insights on the refrigerant management value chain figure. Their feedback does not constitute endorsement of the views expressed herein.</em></p>
-		</section>
+			<p><em>We are deeply grateful to Gabrielle Dreyfus (Institute for Governance & Sustainable Development) and Anastasia O&apos;Rourke (Carbon Containment Lab) for generously sharing their time and expertise in reviewing this blog, and to Eric Ripley (A-Gas) and Louis Potok (Recoolit) for contributing practitioner insights on the refrigerant management value chain figure. Their feedback does not constitute endorsement of the views expressed herein.</em></p> 
+		</section> 
 
 		<section id="footnotes" class="footnotes">
 			<h1>Footnotes</h1>
@@ -185,6 +185,9 @@
 		margin-top: 0.5rem;
 		margin-bottom: 1rem;
 	}
+	:global(main section.acknowledgments) {
+		margin-bottom: 1rem;
+	}
 
 	/* Blog figures */
 	:global(.blog-figure) {
@@ -226,7 +229,8 @@
 	/* Footnotes (match crn-eoi format) */
 	:global(#footnotes) {
 		margin-top: 3rem;
-		padding-top: 1rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--color-text, #333);
 		font-size: 0.9rem;
 		color: var(--color-text);
 	}
