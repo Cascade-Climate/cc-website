@@ -77,7 +77,7 @@
 				</p>
 				<ul>
 					<li>
-						Durably removing CO2 from the atmosphere, through approaches like enhanced rock weathering or ocean alkalinity enhancement.
+						Durably removing CO<sub>2</sub> from the atmosphere, through approaches like enhanced rock weathering or ocean alkalinity enhancement.
 					</li>
 					<li>
 						Reducing near-term warming, by focusing on short lived climate pollutants and albedo management.
@@ -95,7 +95,7 @@
 						unlock a virtuous cycle of deployment-driven learning and growing policy support.
 					</li>
 				</ul>
-				<p>Cascade’s first focus is in Enhanced Rock Weathering (ERW). ERW takes advantage of an existing natural process: the weathering of certain rocks (e.g., basalt, olivine) wherein the interaction of water, CO2 from the atmosphere, and minerals from the rock react to form dissolved pairings in water (e.g., calcium ions and bicarbonate), removing atmospheric carbon for thousands of years. These chemical weathering reactions already naturally remove over 1 gigaton (Gt) of CO2 from the atmosphere every year (<a href="https://www.nature.com/articles/s41586-020-2448-9">Beerling et al., 2020</a>). ERW accelerates this process by grinding the rocks into fine particles and spreading them, often on agricultural fields, so that the reaction is dramatically accelerated. These minerals provide a powerful benefit to farmers managing those fields – adding critical nutrients and countering the broad-based acidification of soils from fertilizers. This intervention thus has potential for both large-scale climate and farmer benefit.</p>
+				<p>Cascade’s first focus is in Enhanced Rock Weathering (ERW). ERW takes advantage of an existing natural process: the weathering of certain rocks (e.g., basalt, olivine) wherein the interaction of water, CO<sub>2</sub> from the atmosphere, and minerals from the rock react to form dissolved pairings in water (e.g., calcium ions and bicarbonate), removing atmospheric carbon for thousands of years. These chemical weathering reactions already naturally remove over 1 gigaton (Gt) of CO<sub>2</sub> from the atmosphere every year (<a href="https://www.nature.com/articles/s41586-020-2448-9">Beerling et al., 2020</a>). ERW accelerates this process by grinding the rocks into fine particles and spreading them, often on agricultural fields, so that the reaction is dramatically accelerated. These minerals provide a powerful benefit to farmers managing those fields – adding critical nutrients and countering the broad-based acidification of soils from fertilizers. This intervention thus has potential for both large-scale climate and farmer benefit.</p>
 
 				<p>For more detail on natural system climate interventions and some of the key challenges that must be navigated as these nascent fields develop, you can read more <a href="https://greatunwind.substack.com/p/leveling-the-playing-field-for-open">here</a>.</p>
 			</div>

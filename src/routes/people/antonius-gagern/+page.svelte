@@ -18,7 +18,7 @@
 		</div>
 		<p>
 			Antonius is the Executive Director of Carbon to Sea, the leading initiative to evaluate
-			whether ocean alkalinity enhancement can safely remove and store billions of tons of CO2.
+			whether ocean alkalinity enhancement can safely remove and store billions of tons of CO<sub>2</sub>.
 			Carbon to Sea spun out of Additional Ventures in 2022, where Antonius directed the ocean
 			carbon dioxide removal program.
 		</p>

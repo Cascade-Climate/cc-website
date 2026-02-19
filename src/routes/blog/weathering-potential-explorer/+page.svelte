@@ -143,7 +143,7 @@
 		});
 	}
 
-	// Create pH vs CO2 uptake and weathering rate chart
+	// Create pH vs CO₂ uptake and weathering rate chart
 	async function createPhChart() {
 		const data = await loadCSVData('/weathering_intensity_removal_ph.csv');
 		
@@ -154,7 +154,7 @@
 				labels: data.map(d => d.pH),
 				datasets: [
 					{
-						label: 'Relative CO2 Uptake',
+						label: 'Relative CO₂ Uptake',
 						data: data.map(d => d['carbon removal']),
 						borderColor: '#059669',
 						backgroundColor: 'rgba(5, 150, 105, 0.1)',
@@ -187,7 +187,7 @@
 				plugins: {
 					title: {
 						display: true,
-						text: 'Trade-off of pH effect on relative CO2 uptake and weathering rate',
+						text: 'Trade-off of pH effect on relative CO₂ uptake and weathering rate',
 						font: {
 							size: 16,
 							weight: 'bold'
@@ -248,7 +248,7 @@
 						position: 'left',
 						title: {
 							display: true,
-							text: 'Relative CO2 Uptake',
+							text: 'Relative CO₂ Uptake',
 							font: { size: 14 }
 						},
 						grid: {

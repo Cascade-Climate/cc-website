@@ -15,7 +15,7 @@
 				<h1>Accounting and Claims for Short-Lived and Long-Lived Climate Pollutants 
 				</h1>
 				<p>
-					Long-lived (CO2) and short-lived climate pollutant (SLCP) mitigation address two related but distinct goals: CO2 mitigation limits long-term warming and stabilizes temperatures, while SLCP mitigation reduces the risk of overshooting temperature thresholds with irreversible impacts in the near term. Achieving both goals requires treating CO2 and SLCP mitigation as complementary rather than interchangeable, and applying consistent, rigorous accounting across all greenhouse gases. 
+					Long-lived (CO<sub>2</sub>) and short-lived climate pollutant (SLCP) mitigation address two related but distinct goals: CO<sub>2</sub> mitigation limits long-term warming and stabilizes temperatures, while SLCP mitigation reduces the risk of overshooting temperature thresholds with irreversible impacts in the near term. Achieving both goals requires treating CO<sub>2</sub> and SLCP mitigation as complementary rather than interchangeable, and applying consistent, rigorous accounting across all greenhouse gases. 
 				</p>
 			</div>
 			<img src={asiasmoke} alt="Kon Tum, Vietnam" class="large-image" />
@@ -32,7 +32,7 @@
 			<h1>Short-Lived Climate Pollutants</h1>
 			<br>
 			<p>
-				<a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener noreferrer">Super pollutants</a> are atmospheric pollutants — including methane, tropospheric ozone, tropospheric ozone precursors, fluorinated gases, nitrous oxide, and black carbon — that have greater impacts on atmospheric warming than carbon dioxide per tonne. These pollutants contribute to roughly half of current warming and often pose additional risks to human health and the environment. Many super pollutants remain in the atmosphere for only years to several decades, compared to centuries for carbon dioxide. Because of their short residence time, mitigation of these short-lived climate pollutants (SLCPs) presents perhaps the most effective tool for meaningfully reducing <a href="https://atmosphere.copernicus.eu/climate-forcing" target="_blank" rel="noopener noreferrer">radiative forcing</a> in the near-term. To avert the accelerating risks of near-term warming and the overshoot of temperature goals, today's climate actions <b>must go beyond mitigation of CO2 to also prioritize activities that can substantially reduce near-term warming in the coming decades.</b>
+				<a href="https://www.ccacoalition.org/news/super-pollutants" target="_blank" rel="noopener noreferrer">Super pollutants</a> are atmospheric pollutants — including methane, tropospheric ozone, tropospheric ozone precursors, fluorinated gases, nitrous oxide, and black carbon — that have greater impacts on atmospheric warming than carbon dioxide per tonne. These pollutants contribute to roughly half of current warming and often pose additional risks to human health and the environment. Many super pollutants remain in the atmosphere for only years to several decades, compared to centuries for carbon dioxide. Because of their short residence time, mitigation of these short-lived climate pollutants (SLCPs) presents perhaps the most effective tool for meaningfully reducing <a href="https://atmosphere.copernicus.eu/climate-forcing" target="_blank" rel="noopener noreferrer">radiative forcing</a> in the near-term. To avert the accelerating risks of near-term warming and the overshoot of temperature goals, today's climate actions <b>must go beyond mitigation of CO<sub>2</sub> to also prioritize activities that can substantially reduce near-term warming in the coming decades.</b>
 			</p>
 		</section>
 		<section id="ghg-accounting-and-metrics">
@@ -58,7 +58,7 @@
 							Should companies and voluntary market participants consider transitioning to accounting approaches that better value near term warming</p>
 					</li>
 					<li>
-						<p>Should we continue to allow compensation of remaining CO2 emissions with short-lived climate pollutant mitigation actions?</p>
+						<p>Should we continue to allow compensation of remaining CO<sub>2</sub> emissions with short-lived climate pollutant mitigation actions?</p>
 					</li>
 					<li>
 						<p>Can super pollutant reduction credits play a role in achieving net zero targets? If so, how? </p>

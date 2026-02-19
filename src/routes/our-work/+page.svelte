@@ -95,7 +95,6 @@
 		</nav>
 	</div>
 	<div class="areas">
-		<h1>Programmatic Areas</h1>
 		<section id="erw">
 			<h3>Enhanced Rock Weathering</h3>
 			<p>
@@ -185,9 +184,9 @@
 			<p>
 				Reducing super pollutant emissions — including refrigerants with high global warming potential (GWP) — is one of the most immediate opportunities we have to limit near-term warming. Yet as cooling demand surges, particularly in the Global South, high-GWP refrigerant emissions risk rising in lockstep.
 
-				<p>Lifecycle refrigerant management (LRM) reduces avoidable emissions from the installed base of refrigerants through improved leak management, recovery at servicing and end-of-life, reclamation, and destruction where reuse is not feasible. Refrigerant transition lowers the emissions impact of new equipment entering the market by ensuring it uses lower-GWP alternatives and more efficient cooling technologies. Together, these strategies help countries meet their commitments to phase down high-GWP refrigerants while making refrigerant supply more secure and affordable — particularly in markets that depend on imports.</p>
+				<p>Lifecycle refrigerant management (LRM) reduces avoidable emissions from the installed base of refrigerants through improved leak management, recovery at servicing and end-of-life, reclamation, and destruction where reuse is not feasible. Refrigerant transition lowers the emissions impact of new equipment entering the market by promoting the use of lower-GWP alternatives and more efficient cooling technologies. Together, these strategies help countries meet their commitments to phase down high-GWP refrigerants while making refrigerant supply more secure and affordable — particularly in markets that depend on imports.</p>
 
-				<p>Cascade is working to close the finance, incentive, and infrastructure gaps that hold back LRM implementation. We're supporting first-of-their-kind demonstrations, learning what works on the ground, and working with regulators and industry to shape compliance and policy frameworks that reflect the diverse realities of the Global South.</p>
+				<p>Cascade is working to close the finance, incentive, and infrastructure gaps that hold back LRM implementation. We're supporting first-of-their-kind demonstrations, learning what works on the ground, and collaborating with policymakers and industry to build the institutional frameworks that reflect the diverse operating realities of the Global South.</p>
 
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
@@ -198,15 +197,6 @@
 						Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
 					</p>
 					<a href="/blog/cascade-entry-into-slcp-mitigation">Learn More</a>
-				</div>
-
-				<div>
-					<img src={bridge} alt="Crossing The Bridge" />
-					<h2>Voluntary climate financing as a bridge</h2>
-					<p>
-						Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate technologies, while closing three critical gaps to scale up: building the evidence base, driving down costs, and resolving real-world deployment risks.
-					</p>
-					<a href="/blog/crossing-the-bridge" target="_blank" rel="noopener noreferrer">Learn More</a>
 				</div>
 			</div>
 		</section>
@@ -361,23 +351,12 @@
 		padding-bottom: 6rem;
 	}
 
-	.areas h1 {
-		margin-top: 2.5rem;
-		margin-bottom: 0.5rem;
-		color: var(--color-dark);
-	}
-
 	.areas section {
-		margin-top: -6rem;
-		padding-top: 6rem;
-		border-bottom: 1px solid var(--color-text);
+		margin-top: -7rem;
+		padding-top: 8rem;
+		scroll-margin-top: 7rem;
 		margin-bottom: -5rem;
 		padding-bottom: 1.5rem;
-	}
-
-	/* Remove divider line from the last section */
-	.areas section:last-child {
-		border-bottom: none;
 	}
 
 	.highlights {

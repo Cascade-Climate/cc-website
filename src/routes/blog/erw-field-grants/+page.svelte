@@ -67,7 +67,7 @@
         <ul style="margin: 0;">
         <li>Measurement of secondary phases (e.g., silicates, carbonates, Fe- and Al-oxyhydroxides, amorphous phases) in deep soil cores (&gt;50 cm)</li>
         <li>Measurement of the components of the carbonate system and/or cations in waters that drain ERW deployments (e.g., groundwater/porewater, tile drains, or low-order streams)</li>
-        <li>Measurement of greenhouse gas fluxes (N2O, CH4, CO2)</li>
+        <li>Measurement of greenhouse gas fluxes (N2O, CH4, CO<sub>2</sub>)</li>
         <li>Cation sorption in deep soil cores</li>
         <li>Soil organic carbon stock monitoring</li>
         </ul>

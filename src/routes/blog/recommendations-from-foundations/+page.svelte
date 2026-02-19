@@ -28,7 +28,7 @@
     <br>
     <p>We believe that <a href="https://cascadeclimate.org/blog/rigorous-mrv-methodologies" target="_blank" rel="noopener">rigorous MRV methodologies can and must be developed</a> for ERW and that a high quality methodology under the EU CRCF will send a clear signal to the market about minimum requirements for robust quantification and environmental health and safety.&nbsp;</p>
     <h2>What is enhanced rock weathering?</h2>
-    <p>ERW involves spreading finely crushed silicate or carbonate rock&mdash;such as basalt, olivine, and limestone&ndash;onto fields, which speeds up the natural process of breaking down or &ldquo;weathering&rdquo; rocks by increasing their reactive surface area. Under many conditions, this weathering absorbs CO2 from the atmosphere, durably storing the carbon as bicarbonate in the ocean on the timescale of tens of thousands of years. ERW also has the potential to deliver agronomic benefits to farmers, such as <a href="https://www.mdpi.com/2073-445X/13/11/1839" target="_blank" rel="noopener">pH control</a>, <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295031" target="_blank" rel="noopener">improved nutrient availability</a>, and&mdash;through these benefits&mdash;increased crop yield.</p>
+    <p>ERW involves spreading finely crushed silicate or carbonate rock&mdash;such as basalt, olivine, and limestone&ndash;onto fields, which speeds up the natural process of breaking down or &ldquo;weathering&rdquo; rocks by increasing their reactive surface area. Under many conditions, this weathering absorbs CO<sub>2</sub> from the atmosphere, durably storing the carbon as bicarbonate in the ocean on the timescale of tens of thousands of years. ERW also has the potential to deliver agronomic benefits to farmers, such as <a href="https://www.mdpi.com/2073-445X/13/11/1839" target="_blank" rel="noopener">pH control</a>, <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295031" target="_blank" rel="noopener">improved nutrient availability</a>, and&mdash;through these benefits&mdash;increased crop yield.</p>
 
 
     <h5><strong>Figure 1. Overview of ERW carbon removal process.</strong></h5>
@@ -82,7 +82,7 @@
                 </td>
                 <td colspan="1" rowspan="1" style="padding: 8px; border: 1px solid black;">
                     <p>Weathering</p>
-                    <p>by non-carbonic (i.e., non-CO2) acids and in low pH soils</p>
+                    <p>by non-carbonic (i.e., non-CO<sub>2</sub>) acids and in low pH soils</p>
                 </td>
                 <td colspan="1" rowspan="1" style="padding: 8px; border: 1px solid black;">
                     <p>Rock weathering that does not result in carbon sequestration (e.g., in very acidic soils or by non-carbonic acids)</p>
@@ -157,7 +157,7 @@
     <br>
     <h3>2. Allow measurement flexibility for robust quantification</h3>
 
-    <p>In many ERW deployments, multiple quantification methods&mdash;including measurements of the solid, liquid, and gas phases in the soil&mdash;are used to provide viewpoints into various aspects of the system. Current CDR quantification methodologies in the voluntary carbon market primarily allow for either soil core (solid phase) or porewater sampling (liquid phase) approaches. Additional measurement techniques, such as ion exchange resins and soil CO2 sensors, are currently under development. Regardless of measurement type, sampling density should be determined via a baseline site variability assessment with measurement uncertainty transparently accounted for in carbon credit calculations.</p>
+    <p>In many ERW deployments, multiple quantification methods&mdash;including measurements of the solid, liquid, and gas phases in the soil&mdash;are used to provide viewpoints into various aspects of the system. Current CDR quantification methodologies in the voluntary carbon market primarily allow for either soil core (solid phase) or porewater sampling (liquid phase) approaches. Additional measurement techniques, such as ion exchange resins and soil CO<sub>2</sub> sensors, are currently under development. Regardless of measurement type, sampling density should be determined via a baseline site variability assessment with measurement uncertainty transparently accounted for in carbon credit calculations.</p>
     <br><p>Each method comes with its own technical and operational strengths and challenges, which are discussed in detail in <em>Foundations, </em>as well as <a href="https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2024.1345224/full" target="_blank" rel="noopener">Clarkson et al. (2023)</a>. The optimal measurement approach for accurately quantifying CDR depends on site-specific factors including soil type, regional climate, and agronomic management practices. <strong>We recommend that an EU CRCF methodology allow flexibility in measurement techniques to ensure robust CDR quantification across varying deployment conditions.&nbsp;</strong></p>
     <br>
     <h3>3. Safeguard against heavy metal accumulation</h3>
