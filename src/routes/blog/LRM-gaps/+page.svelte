@@ -18,7 +18,7 @@
 
 				<hr>
 
-				<p>Hydrofluorocarbons — now the dominant refrigerants in billions of cooling systems worldwide — are super pollutants with global warming potentials hundreds to thousands of times greater than CO<sub>2</sub>. While the Kigali Amendment has set the world on a path to phase down their production and consumption, two critical gaps remain: the massive stockpile of refrigerants already in use, and the uneven road ahead in transitioning to cleaner alternatives. This post explores how lifecycle refrigerant management can help close those gaps — and why it represents one of the most immediate, cost-effective climate wins available today.</p><br>
+				<p>Hydrofluorocarbons — now the dominant refrigerants in billions of cooling systems worldwide — are super pollutants with global warming potentials hundreds to thousands of times greater than CO<sub>2</sub>. While the Kigali Amendment has set the world on a path to phase down their production and consumption, two critical gaps remain: the massive stockpile of refrigerants already in use, and the uneven road ahead in transitioning to lower-impact alternatives. This post explores how lifecycle refrigerant management can help close those gaps — and why it represents one of the most immediate, cost-effective climate wins available today.</p><br>
 			</div>
 			<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
 		</div>

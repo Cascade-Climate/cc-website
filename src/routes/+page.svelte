@@ -6,7 +6,7 @@
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
-	import bridge from '$lib/images/nature/bridge.webp';
+	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
@@ -78,14 +78,12 @@
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={bridge} alt="Crossing The Bridge"/>
-				<h2>Voluntary climate financing as a bridge to scale
-				</h2>
+				<img src={slcp} alt="Super Pollutants" />
+				<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
 				<p>
-					Voluntary finance is one of the few tools we can deploy at speed to de-risk climate technologies and close gaps to scale. Here's how we're thinking about it.
-
+					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
 				</p>
-				<a href="/blog/crossing-the-bridge" target="_blank">Learn More</a>
+				<a href="/blog/cascade-entry-into-slcp-mitigation" target="_blank">Learn More</a>
 			</div>
 		</div>
 
