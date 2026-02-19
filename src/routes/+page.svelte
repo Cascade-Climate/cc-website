@@ -4,7 +4,6 @@
 	import farm2 from '$lib/images/nature/farm2.webp';
 	import ocean1 from '$lib/images/nature/ocean1.webp';
 	import ocean2 from '$lib/images/nature/ocean2.webp';
-	import data from '$lib/images/nature/data.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
 	import bridge from '$lib/images/nature/bridge.webp';
@@ -87,14 +86,6 @@
 
 				</p>
 				<a href="/blog/crossing-the-bridge" target="_blank">Learn More</a>
-			</div>
-			<div class="spotlight">
-				<img src={data} alt="Data Sharing System" />
-				<h2>A data sharing system to advance ERW research</h2>
-				<p>
-					Learn how the ERW Data Quarry is connecting researchers to data from commercial ERW deployments and unlocking deployment-led learning.
-				</p>
-				<a href="/blog/data-sharing-system-for-erw" target="_blank">Learn More</a>
 			</div>
 		</div>
 

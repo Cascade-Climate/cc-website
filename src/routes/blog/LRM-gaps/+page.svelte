@@ -27,7 +27,7 @@
 	<main>
 		<section id="introduction">
 			<h1>Introduction</h1>
-			<p>As Cascade <a href="https://cascadeclimate.org/blog/cascade-entry-into-slcp-mitigation" target="_blank" rel="noopener noreferrer">expands</a> into super pollutant mitigation, our initial program will focus on refrigerants — encompassing both lifecycle refrigerant management and the transition to next-generation alternatives. This first blog in a series explores lifecycle refrigerant management: why it matters, what&apos;s blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.
+			<p>As Cascade <a href="https://cascadeclimate.org/blog/cascade-entry-into-slcp-mitigation" target="_blank" rel="noopener noreferrer">expands</a> into super pollutant mitigation, our initial program will focus on refrigerants — encompassing both lifecycle refrigerant management and the transition to next-generation alternatives. This first blog in a series explores lifecycle refrigerant management — why it matters, what&apos;s blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.
 
             <p>Cascade is far from the first to call attention to the importance of lifecycle refrigerant management in tackling climate change. A range of organizations — such as Carbon Containment Lab, Climate and Clean Air Coalition, Environmental Investigation Agency, Institute for Governance and Sustainable Development, Natural Resources Defense Council, and numerous others — have been doing great work in this space for many years. Yet beyond this dedicated community, the scale and urgency of refrigerant emissions remain underappreciated in mainstream climate discourse.</p>
             
@@ -212,7 +212,7 @@
 	:global(.text-box) {
 		margin: 2rem 0;
 		padding: 1.25rem 1.5rem;
-		background-color: #023c40;
+		background-color: rgb(2, 60, 64);
 		border-radius: 4px;
 		color: white;
 	}
@@ -227,14 +227,14 @@
 	}
 
 	/* Footnotes (match crn-eoi format) */
-	:global(#footnotes) {
+	:global([id='footnotes']) {
 		margin-top: 3rem;
 		padding-top: 1.5rem;
-		border-top: 1px solid var(--color-text, #333);
+		border-top: 1px solid var(--color-text, rgb(51, 51, 51));
 		font-size: 0.9rem;
 		color: var(--color-text);
 	}
-	:global(#footnotes h1) {
+	:global([id='footnotes'] h1) {
 		font-size: 2rem;
 	}
 </style>
