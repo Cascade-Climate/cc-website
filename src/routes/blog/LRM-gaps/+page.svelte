@@ -146,7 +146,8 @@
 		<section id="footnotes" class="footnotes">
 			<h1>Footnotes</h1>
 			<ol style="margin: 0;">
-				<li id="footnote1">In 2024, global coal power generation grew by nearly 1% to 10,700 TWh, a new high (IEA). Coal power typically emits ~1 tonne CO<sub>2</sub>/MWh. 10,700 TWh = 10,700,000 GWh = 10,700 million MWh. At ~0.9 tonnes CO<sub>2</sub>/MWh for coal power = ~9.6 Gt CO<sub>2</sub> from coal power.</li>
+				<li id="footnote1">In 2024, global coal generation reached 10,700 TWh. Coal power typically emits ~1 tonne CO2/MWh meaning total emissions from coal power was ~10.7 GtCO<sub>2</sub> that year.
+                </li>
 			</ol>
 		</section>
 	</main>
