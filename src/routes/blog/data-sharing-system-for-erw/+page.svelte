@@ -75,9 +75,9 @@
 
             <section id="the-action">
             <h1>The Action</h1>
-            <p>We are incredibly energized to launch the <a href="https://data.cascadeclimate.org" target="_blank" rel="noopener">ERW Data Quarry</a>–the first-ever ERW data sharing system–together with <b>10 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
+            <p>We are incredibly energized to launch the <a href="https://data.cascadeclimate.org" target="_blank" rel="noopener">ERW Data Quarry</a>–the first-ever ERW data sharing system–together with <b>9 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
 
-            <h2>The 10 Flagship Data Quarry contributors include:</h2>
+            <h2>The 9 Flagship Data Quarry contributors include:</h2>
             <br>
 
             <section id="supporters">
