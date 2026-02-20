@@ -2,7 +2,6 @@
 	import erw from '$lib/images/rock-weathering.webp';
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
-	import altcarbon from '$lib/images/logos/altcarbon.webp';
 	import andes from '$lib/images/logos/andes.webp';
     import carbonaught from '$lib/images/logos/carbonaught.webp';
     import eion from '$lib/images/logos/eion.webp';
@@ -67,9 +66,6 @@
 
             <section id="supporters">
                 <div id="supporters-container">
-                    <a href="https://www.alt-carbon.com/" target="_blank" rel="noopener">
-                        <img src={altcarbon} alt="Alt Carbon" />
-                    </a>
                     <a href="https://www.andes.bio/" target="_blank" rel="noopener">
                         <img src={andes} alt="Andes" />
                     </a>
