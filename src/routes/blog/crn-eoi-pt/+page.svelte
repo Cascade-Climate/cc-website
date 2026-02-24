@@ -33,14 +33,7 @@
 
 		<h5 class="intro-highlight" style="color:white">PRAZO FINAL</h5>
 		<p>01:59 de quarta-feira, 11 de março (horário de Brasília)</p>
-		<h5 class="intro-highlight" style="color:white" id="virtual-information-sessions">
-			Sessões de Informação Virtuais
-		</h5>
-
-			<p class="session-row">
-				12:00 - 13:00 de terça-feira, 24 de fevereiro (horário de Brasília)
-				<a class="session-register" href="https://zoom.us/meeting/register/7-kBfCgaQ8qWtftKRMux6A" target="_blank" rel="noopener">Inscreva-se</a>
-			</p>			
+				
 
 		<div class="links">
 			<div style="text-align: center;">
