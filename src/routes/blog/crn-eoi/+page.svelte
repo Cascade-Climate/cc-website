@@ -29,14 +29,7 @@
 
 		<h5 class="intro-highlight" style="color:white">Deadline</h5>
 		<p>March 10, 2026 at 11:59PM ET</p>
-		<h5 class="intro-highlight" style="color:white" id="virtual-information-sessions">
-			Virtual Information Sessions
-		</h5>
-
-			<p class="session-row">
-				Tuesday, Feb 24 10:00 AM ET - 11:00 AM ET (3:00 PM GMT - 4:00 PM GMT)
-				<a class="session-register" href="https://zoom.us/meeting/register/7-kBfCgaQ8qWtftKRMux6A" target="_blank" rel="noopener">Register</a>
-			</p>			
+					
 
 		<div class="links">
 			<div style="text-align: center;">
