@@ -38,11 +38,7 @@
 		</h5>
 
 			<p class="session-row">
-                00:00 de quinta-feira, 19 de fevereiro (horário de Brasília)
-				<a class="session-register" href="https://zoom.us/meeting/register/dCnko_rEQ4aiGaFNsbpq9g" target="_blank" rel="noopener">Inscreva-se</a>
-			</p>
-			<p class="session-row">
-				12:00 de terça-feira, 24 de fevereiro (horário de Brasília)
+				12:00 - 13:00 de terça-feira, 24 de fevereiro (horário de Brasília)
 				<a class="session-register" href="https://zoom.us/meeting/register/7-kBfCgaQ8qWtftKRMux6A" target="_blank" rel="noopener">Inscreva-se</a>
 			</p>			
 

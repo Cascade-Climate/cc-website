@@ -34,11 +34,7 @@
 		</h5>
 
 			<p class="session-row">
-				Wednesday, Feb 18 10:00 PM ET (3:00 AM GMT+1)
-				<a class="session-register" href="https://zoom.us/meeting/register/dCnko_rEQ4aiGaFNsbpq9g" target="_blank" rel="noopener">Register</a>
-			</p>
-			<p class="session-row">
-				Tuesday, Feb 24 10:00 AM ET (3:00 PM GMT)
+				Tuesday, Feb 24 10:00 AM ET - 11:00 AM ET (3:00 PM GMT - 4:00 PM GMT)
 				<a class="session-register" href="https://zoom.us/meeting/register/7-kBfCgaQ8qWtftKRMux6A" target="_blank" rel="noopener">Register</a>
 			</p>			
 
