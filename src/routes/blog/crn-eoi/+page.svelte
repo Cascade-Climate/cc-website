@@ -264,7 +264,7 @@
 
 <section id="additional-questions">
     <h1>Additional Questions Received</h1>
-    <p>For answers to additional questions received during the EOI info sessions, please see <a href="https://cascadeclimate.org/Cascade%20Climate_CRN_EOI_Additional_Questions_Received.pdf" target="_blank" rel="noopener">this document</a>.</p>
+    <p>For answers to additional questions received during the EOI info sessions, please see <a class="additional-questions-doc-link" href="https://cascadeclimate.org/Cascade%20Climate_CRN_EOI_Additional_Questions_Received.pdf" target="_blank" rel="noopener">this document</a>.</p>
 </section>
 
 <section id="footnotes">
@@ -321,6 +321,8 @@
 	}
 	:global(#additional-questions) {
 		margin-bottom: 1.25rem;
+	}
+	.additional-questions-doc-link {
 		position: relative;
 		z-index: 11;
 	}
