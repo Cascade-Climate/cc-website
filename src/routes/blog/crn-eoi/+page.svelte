@@ -262,6 +262,11 @@
             </div>
         </details>
 
+<section id="additional-questions">
+    <h1>Additional Questions Received</h1>
+    <p>For answers to additional questions received during the EOI info sessions, please see <a href="https://cascadeclimate.org/Cascade%20Climate_CRN_EOI_Additional%20Questions%20Received.pdf" target="_blank" rel="noopener">this document</a>.</p>
+</section>
+
 <section id="footnotes">
     <h1>Footnotes</h1>
 	<ol style="margin: 0;">
@@ -310,10 +315,15 @@
 	:global(#the-objective sup) {
 		font-size: 0.75em; /* 25% smaller */
 	}
-	:global(#footnotes) {
+	:global(#footnotes),
+	:global(#additional-questions) {
 		font-size: 0.9rem;
 	}
-	:global(#footnotes h1) {
+	:global(#additional-questions) {
+		margin-bottom: 1.25rem;
+	}
+	:global(#footnotes h1),
+	:global(#additional-questions h1) {
 		font-size: 2rem;
 	}
 	details.faq {
@@ -465,34 +475,5 @@
 	:global(.intro .intro-highlight + p),
 	:global(.intro .intro-highlight + .intro-highlight) {
 		margin-top: 0.25rem;
-	}
-
-	#virtual-information-sessions {
-		scroll-margin-top: 6rem;
-	}
-
-	.session-row {
-		display: flex;
-		align-items: center;
-		gap: 1.25rem;
-		flex-wrap: wrap;
-		margin-bottom: 0.75rem;
-	}
-	.session-row:last-of-type {
-		margin-bottom: 0;
-	}
-	.session-register {
-		display: inline-block;
-		padding: 0.35rem 0.9rem;
-		border-radius: 1.5rem;
-		background-color: var(--color-light);
-		color: var(--color-dark);
-		font-size: 0.95rem;
-		font-weight: 500;
-		text-decoration: none;
-		white-space: nowrap;
-	}
-	.session-register:hover {
-		opacity: 0.92;
 	}
 </style>

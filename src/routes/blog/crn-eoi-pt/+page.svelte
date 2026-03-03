@@ -494,33 +494,4 @@
 	:global(.intro .intro-highlight + .intro-highlight) {
 		margin-top: 0.25rem;
 	}
-
-	#virtual-information-sessions {
-		scroll-margin-top: 6rem;
-	}
-
-	.session-row {
-		display: flex;
-		align-items: center;
-		gap: 1.25rem;
-		flex-wrap: wrap;
-		margin-bottom: 0.75rem;
-	}
-	.session-row:last-of-type {
-		margin-bottom: 0;
-	}
-	.session-register {
-		display: inline-block;
-		padding: 0.35rem 0.9rem;
-		border-radius: 1.5rem;
-		background-color: var(--color-light);
-		color: var(--color-dark);
-		font-size: 0.95rem;
-		font-weight: 500;
-		text-decoration: none;
-		white-space: nowrap;
-	}
-	.session-register:hover {
-		opacity: 0.92;
-	}
 </style>
