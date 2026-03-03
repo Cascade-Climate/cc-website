@@ -63,7 +63,7 @@
 
 			<figure class="blog-figure">
 				<img src={hfcEmissions} alt="HFC emissions projections" class="blog-figure-img-sm" />
-				<figcaption class="blog-figcaption">Source: <a href="https://doi.org/10.1073/pnas.2200230119" target="_blank" rel="noopener noreferrer">Velders et al. (2022)</a></figcaption>
+				<figcaption class="blog-figcaption">Source: <a href="https://acp.copernicus.org/articles/22/6087/2022/acp-22-6087-2022.pdf" target="_blank" rel="noopener noreferrer">Velders et al. (2022)</a></figcaption>
 			</figure>
             <p>Currently, there is little to no incentive for equipment owners and service technicians to prevent refrigerant leaks during equipment use or venting at end-of-life. Leakage from existing, in-use equipment is widespread, as refrigerants escape through deteriorating seals, gaskets, joints, and micro-cracks in tubing. Although venting of ODS and HFCs is explicitly illegal in many countries during servicing and at end-of-life, compliance has proven difficult to monitor and enforce. From an economic standpoint, recovering refrigerant typically poses a net cost to technicians: it can be time-consuming, requires specialized equipment, and there are limited markets for recovered refrigerants. </p>
 		</section>
