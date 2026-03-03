@@ -321,6 +321,8 @@
 	}
 	:global(#additional-questions) {
 		margin-bottom: 1.25rem;
+		position: relative;
+		z-index: 11;
 	}
 	:global(#footnotes h1),
 	:global(#additional-questions h1) {
