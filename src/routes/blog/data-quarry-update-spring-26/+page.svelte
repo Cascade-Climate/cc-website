@@ -105,7 +105,7 @@
 			Data from a 1,200 ton deployment, performed between August of 2022 and January of 2023, using Eifelgold
 			basanite across multiple farmers’ fields in Germany, with samples from October and November of 2024. The
 			dataset also includes some greenhouse data, comparing a control and ERW amended samples from the same soils.
-			This dataset is fully publicly available <a href="https://cdrxiv.org/preprint/487" target="_blank" rel="noopener">here</a> (no request needed to access).
+			This dataset is publicly available <a href="https://cdrxiv.org/preprint/487" target="_blank" rel="noopener">here</a> (no request needed to access).
 		</p>
 		<p class="why-it-matters-lead"><strong>Why it matters:</strong></p>
 		<ul>
