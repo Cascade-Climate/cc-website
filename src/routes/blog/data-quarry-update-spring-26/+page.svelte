@@ -26,7 +26,7 @@
 	</section>
 	<main>
 		<h2 class="spaced-h2">Introducing 3 New Datasets</h2>
-		<p>
+		<p class="datasets-intro">
 			The three new datasets span three countries and deployment types, and they are available for non-commercial use
 			— just submit a brief access request to get started.
 		</p>
@@ -266,6 +266,11 @@
 
 	.together-paragraph {
 		margin-top: 1rem;
+	}
+
+	.datasets-intro {
+		/* Overrides global main p { margin-bottom: 0 } to create a visible line of space */
+		margin-bottom: 1rem;
 	}
 
 	.logo-row {
