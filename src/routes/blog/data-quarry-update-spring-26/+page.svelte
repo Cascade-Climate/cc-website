@@ -72,18 +72,18 @@
 		<p>
 			Data from InPlanet’s Project Araçari in São Paulo state, an ERW project on ~360 ha of citrus plantation using
 			locally sourced Serra Geral Basalt rock powder. Covers July 2024 - May 2025 and includes soil, soil porewater,
-			and biomass alongside climatic, weather, and feedstock data.
+			and biomass alongside climatic, weather, and feedstock data
 		</p>
 		<p class="why-it-matters-lead"><strong>Why it matters:</strong></p>
 		<ul>
 			<li>Brazil represents another high-potential region for ERW scale</li>
 			<li>
 				Likely the first publicly available ERW dataset from a perennial crop system — expanding the field&apos;s
-				knowledge beyond the annual crops that have dominated research to date.
+				knowledge beyond the annual crops that have dominated research to date
 			</li>
 			<li>
 				This dataset is part of an ERW Field Data Partnership grant from Cascade, with more research on this site to
-				come — so stay tuned for more exciting research “piggybacking” on this commercial deployment!
+				come — so stay tuned for more exciting research “piggybacking” on this commercial deployment
 			</li>
 		</ul>
 
@@ -119,7 +119,7 @@
 				<a href="https://cascadeclimate.org/blog/erw-field-grant-awardees" target="_blank" rel="noopener"
 					>ERW Field Data Partnership</a
 				>
-				grant from Cascade, with exciting additional research forthcoming.
+				grant from Cascade, with exciting additional research forthcoming
 			</li>
 		</ul>
 
