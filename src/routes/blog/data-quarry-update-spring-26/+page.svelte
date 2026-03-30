@@ -153,7 +153,7 @@
 		<p>
 			Because rock takes time to weather, datasets will be uploaded on a rolling basis as they become available. To
 			further support data transparency, all health and safety data — as well as datasets that have been used for peer
-			reviewed articles — are made publicly available via <a href="https://cdrxiv.org/" target="_blank" rel="noopener">CDRXIV</a>,
+			reviewed articles — are made publicly available via <a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener">CDRXIV</a>,
 			where we’ve launched a designated <strong>ERW Data Quarry Channel</strong>.
 		</p>
 		<p class="after-channel-paragraph">
@@ -259,10 +259,6 @@
 
 	.spaced-h2 {
 		margin-bottom: 1.5rem;
-	}
-
-	.together-paragraph {
-		margin-top: 1rem;
 	}
 
 	.datasets-intro {
