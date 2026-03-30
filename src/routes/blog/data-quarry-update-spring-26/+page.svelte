@@ -109,7 +109,7 @@
 		</p>
 		<p class="why-it-matters-lead"><strong>Why it matters:</strong></p>
 		<ul>
-			<li>Represents deployment over multiple years - rare in ERW.</li>
+			<li>Represents deployment over multiple years - rare in ERW</li>
 			<li>
 				Tests the same feedstock across field and greenhouse conditions, allowing researchers to isolate soil and
 				weather effects on weathering rates
