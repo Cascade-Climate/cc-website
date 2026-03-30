@@ -10,6 +10,21 @@
 		
 		<div class="post">
 			<h1>
+				<a href="/blog/data-quarry-update-spring-26">
+					Rock On: The ERW Data Quarry Just Doubled Its Data
+				</a>
+			</h1>
+			<p>
+				Three new datasets are now available, and two more project developers have joined the effort, doubling the data available on the platform and bringing the total pipeline to 26 commitments.
+			</p>
+			<p class="details">
+				<span class="date">03/31/2026</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/LRM-gaps">
 					Lifecycle Refrigerant Management: Closing Critical Gaps in Global Climate Policy
 				</a>

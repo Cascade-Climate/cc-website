@@ -11,7 +11,6 @@
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
-	import herophoto3 from '$lib/images/nature/heroPhoto3.webp';
 </script>
 
 <svelte:head>
@@ -58,14 +57,13 @@
 				<a href="/blog/LRM-gaps" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={herophoto3} alt="CRN EOI"/>
-				<h2>Seeking hosts for coordinated ERW research
-				</h2>
+				<img src={erwPhoto} alt="Enhanced rock weathering" />
+				<h2>Spring quarry update: more data, more partners</h2>
 				<p>
-					To answer critical field questions, Cascade is standing up a new global network of standardized ERW experimental field trials and seeking partners to host and operate sites.
-
+					Three new datasets are now available in the ERW Data Quarry — and two new project developers have
+					joined the effort.
 				</p>
-				<a href="/blog/crn-eoi" target="_blank">Learn More</a>
+				<a href="/blog/data-quarry-update-spring-26" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={asiasmoke} alt="Asia Smoke"/>
@@ -92,6 +90,24 @@
 		<h3>SPOTLIGHT ON <a href="/blog">OUR BLOG ↗</a></h3>
 		<div id="blog">
 	<div id="post-list">
+
+		<div class="post">
+			<h1>
+				<a href="/blog/data-quarry-update-spring-26" target="_blank" style="color: var(--color-accent);">
+					Rock On: The ERW Data Quarry Just Doubled Its Data
+				</a>
+			</h1>
+			<p>
+				Three new datasets are now available, and two more project developers have joined the effort, doubling the data available on the platform and bringing the total pipeline to 26 commitments.
+			</p>
+			<p class="details">
+				<span class="date">03/31/2026</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
 
 		<div class="post">
 			<h1>
