@@ -139,10 +139,7 @@
 			and
 			<strong><a href="https://www.rockflour.co/" target="_blank" rel="noopener noreferrer">The Rock Flour Company</a></strong>
 			have now joined the platform
-			— each voluntarily committing to share data from designated commercial ERW projects to advance ERW science.
-		</p>
-		<p class="together-paragraph">
-			Together, this brings the total Data Quarry pipeline to 26 datasets and counting.
+			— each voluntarily committing to share data from designated commercial ERW projects to advance ERW science. Together, this brings the total Data Quarry pipeline to 26 datasets and counting.
 		</p>
 
 		<div class="logo-row">
