@@ -153,7 +153,7 @@
 		<p>
 			Because rock takes time to weather, datasets will be uploaded on a rolling basis as they become available. To
 			further support data transparency, all health and safety data — as well as datasets that have been used for peer
-			reviewed articles — are made publicly available via <a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener">CDRXIV</a>,
+			reviewed articles — are made publicly available via CDRXIV<,
 			where we’ve launched a designated <strong>ERW Data Quarry Channel</strong>.
 		</p>
 		<p class="after-channel-paragraph">
@@ -166,11 +166,11 @@
 				<a href="https://groups.google.com/a/cascadeclimate.org/g/notifs-dataquarry" target="_blank" rel="noopener">here</a>
 			</li>
 			<li>
-				Researchers: Browse datasets and submit a non-commercial use data access request
+				Researchers can browse datasets and submit a non-commercial use data access request
 				<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">here</a>
 			</li>
 			<li>
-				Project developers, buyers, or just curious to learn more: Reach us at
+				Project developer, buyer, or just curious to learn more? Reach us at
 				<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a> or sign up for Cascade&apos;s newsletter
 				<a
 					href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1"
