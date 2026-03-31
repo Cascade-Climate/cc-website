@@ -153,8 +153,7 @@
 		<p>
 			Because rock takes time to weather, datasets will be uploaded on a rolling basis as they become available. To
 			further support data transparency, all health and safety data — as well as datasets that have been used for peer
-			reviewed articles — are made publicly available via CDRXIV<,
-			where we’ve launched a designated <strong>ERW Data Quarry Channel</strong>.
+			reviewed articles — are made publicly available via CDRXIV, where we’ve launched a designated <strong><a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener noreferrer">ERW Data Quarry Channel</a></strong>.
 		</p>
 		<p class="after-channel-paragraph">
 			At Cascade, we’re committed to advancing ERW science and progress, together. Here’s how you can get
