@@ -25,6 +25,8 @@
     import undo from '$lib/images/logos/undo.webp';
     import varaha from '$lib/images/logos/varaha.webp';
     import terrasols from '$lib/images/logos/terrasols.webp';
+
+	const rockFlourLogo = '/images/logos/rock-flour-transparent.png';
 </script>
 
 <div>
@@ -136,9 +138,14 @@
                     <a href="https://www.searrp.org/" target="_blank" rel="noopener">
                         <img src={searrp} alt="South East Asia Rainforest Research Partnership" />
                     </a>
-                    <a href="https://www.terrasols.earth/" target="_blank" rel="noopener">
-                        <img src={terrasols} alt="Terrasols" />
-                    </a>
+                    <div class="contributor-logo-stack">
+                        <a href="https://www.terrasols.earth/" target="_blank" rel="noopener">
+                            <img src={terrasols} alt="Terrasols" />
+                        </a>
+                        <a href="https://www.rockflour.co/" target="_blank" rel="noopener noreferrer">
+                            <img class="rock-flour-logo" src={rockFlourLogo} alt="Rock Flour Company" />
+                        </a>
+                    </div>
                     <a href="https://ucanr.edu/research-and-extension-center/sierra-foothill-research-and-extension-center" target="_blank" rel="noopener">
                         <img src={ucanr} alt="UC Agriculture and Natural Resources Cooperative Extension" />
                     </a>
@@ -278,6 +285,13 @@
 		flex-wrap: wrap;
 		margin-top: 1rem;
 		width: 100%;
+	}
+
+	.contributor-logo-stack {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
 	}
 
 	#supporters img {
