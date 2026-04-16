@@ -21,7 +21,7 @@
     sections = Array.from(headings)
       .map(heading => ({
         id: heading.parentNode.id,
-        title: heading.innerText
+        title: heading.dataset.navTitle || heading.innerText
       }))
       .filter(s => s.id && !excludeIds.includes(s.id));
   }
