@@ -7,7 +7,7 @@
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
-				<h1>Financing the Recovery Economy: First Step Towards Scaled Lifecycle Refrigerant Management</h1>
+				<h1>Financing the Recovery Economy: The First Step Towards Scaled Lifecycle Refrigerant Management</h1>
 				<hr />
 				<p>
 					The <a href="https://cascadeclimate.org/blog/LRM-gaps" target="_blank" rel="noopener noreferrer" style="color: #e1fcf7;">first post</a> in Cascade’s refrigerant management and transition blog series laid out the many reasons why
