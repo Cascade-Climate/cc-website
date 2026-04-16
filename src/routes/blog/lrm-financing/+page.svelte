@@ -10,7 +10,7 @@
 				<h1>Financing the Recovery Economy: The First Step Towards Scaled Lifecycle Refrigerant Management</h1>
 				<hr />
 				<p>
-					The <a href="https://cascadeclimate.org/blog/LRM-gaps" target="_blank" rel="noopener noreferrer" style="color: #e1fcf7;">first post</a> in Cascade’s refrigerant management and transition blog series laid out the many reasons why
+					The <a href="https://cascadeclimate.org/blog/LRM-gaps" target="_blank" rel="noopener noreferrer" style="color: #e1fcf7;">first post</a> in our refrigerant management and transition blog series laid out the many reasons why
 					lifecycle refrigerant management (LRM) matters. Hydrofluorocarbons (HFCs) are among the most potent
 					greenhouse gases, the cooling equipment that contains them will remain in use for decades, and the capacity
 					needed to recover and destroy or reclaim those refrigerants at end-of-life is missing in much of the world.
