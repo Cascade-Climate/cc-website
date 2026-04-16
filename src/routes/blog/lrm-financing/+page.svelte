@@ -230,6 +230,7 @@
 	:global(.lrm-financing-page .intro .content img) {
 		width: 45%;
 		min-width: 400px;
+		aspect-ratio: 3 / 2;
 		object-fit: cover;
 	}
 
