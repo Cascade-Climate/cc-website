@@ -1,6 +1,5 @@
 <script>
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
-	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 </script>
 
 <div class="lrm-financing-page">
@@ -18,7 +17,7 @@
 					in practice.
 				</p>
 			</div>
-			<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
+			<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="Lifecycle Refrigerant Management" />
 		</div>
 	</section>
 	<ScrollNav fixedUnderIntro />
