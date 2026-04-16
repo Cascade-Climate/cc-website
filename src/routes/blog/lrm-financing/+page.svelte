@@ -61,6 +61,9 @@
 				venting refrigerant during equipment servicing and at end-of-life decommissioning is the most common practice
 				in these countries.
 			</p>
+		</section>
+
+		<section id="what-are-we-actually-building-toward">
 			<h1>What Are We Building Toward?</h1>
 			<p>
 				The <a href="https://ozone.unep.org/kigali-amendment-overview" target="_blank" rel="noopener noreferrer">Kigali Amendment to the Montreal Protocol</a> sets a clear directional trajectory: HFCs are phased down over
@@ -117,7 +120,7 @@
 				and no country can anchor a national LRM system on voluntary demand from private corporations alone.
 			</p>
 			<figure class="inserted-photo">
-				<img src="/images/blog/jcm-f-gas-recovery-vietnam.png" alt="LRM case study visual" />
+				<img src="/images/blog/recoolit-indonesia.png" alt="Recoolit Indonesia case study visual" />
 			</figure>
 		</section>
 
@@ -134,7 +137,7 @@
 				more predictable demand, and a stronger and more bankable signal to industry actors.
 			</p>
 			<figure class="inserted-photo">
-				<img src="/images/blog/jcm-f-gas-recovery-vietnam.png" alt="LRM case study visual" />
+				<img src="/images/blog/jcm-f-gas-recovery-vietnam.png" alt="JCM F-Gas Recovery Project Vietnam case study visual" />
 			</figure>
 		</section>
 
@@ -153,7 +156,7 @@
 				technician initiative or carbon credit prices.
 			</p>
 			<figure class="inserted-photo">
-				<img src="/images/blog/jcm-f-gas-recovery-vietnam.png" alt="LRM case study visual" />
+				<img src="/images/blog/a-gas-singapore.png" alt="A-Gas Singapore case study visual" />
 			</figure>
 		</section>
 
@@ -174,7 +177,7 @@
 				and establishes LRM as a durable part of national cooling infrastructure.
 			</p>
 			<figure class="inserted-photo">
-				<img src="/images/blog/jcm-f-gas-recovery-vietnam.png" alt="LRM case study visual" />
+				<img src="/images/blog/rra-australia.png" alt="Refrigerant Reclaim Australia case study visual" />
 			</figure>
 		</section>
 
