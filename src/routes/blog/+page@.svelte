@@ -14,7 +14,7 @@
 				</a>
 			</h1>
 			<p>
-				HFC refrigerants threaten climate goals. Learn how Cascade is sequencing finance and policy to build sustainable recovery markets in Southeast Asia
+				HFC refrigerants threaten climate goals. Learn how Cascade is sequencing finance and policy to build sustainable recovery markets in Southeast Asia.
 			</p>
 			<p class="details">
 				<span class="date">04/17/26</span>

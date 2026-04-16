@@ -52,7 +52,7 @@
 				<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="Lifecycle Refrigerant Management" />
 				<h2>LRM: Sequencing finance and policy to build market scale</h2>
 				<p>
-					HFC refrigerants threaten climate goals. Learn how Cascade is sequencing finance and policy to build sustainable recovery markets in Southeast Asia
+					HFC refrigerants threaten climate goals. Learn how Cascade is sequencing finance and policy to build sustainable recovery markets in Southeast Asia.
 				</p>
 				<a href="/blog/lrm-financing" target="_blank">Learn More</a>
 			</div>
