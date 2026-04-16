@@ -10,11 +10,11 @@
 		<div class="post">
 			<h1>
 				<a href="/blog/lrm-financing">
-					LRM: Sequencing finance and policy to build market scale
+					Financing the Recovery Economy: The First Step Towards Scaled Lifecycle Refrigerant Management
 				</a>
 			</h1>
 			<p>
-				HFC refrigerants threaten climate goals. Learn how Cascade is sequencing finance and policy to build sustainable recovery markets in Southeast Asia.
+				How short- and long-term financing mechanisms can be sequenced to build durable lifecycle refrigerant management ecosystems and accelerate scale in Southeast Asia.
 			</p>
 			<p class="details">
 				<span class="date">04/17/26</span>
