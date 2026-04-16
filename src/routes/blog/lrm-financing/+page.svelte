@@ -182,7 +182,7 @@
 		</section>
 
 		<section id="roadmap-2026">
-			<h1 data-nav-title="Cascade's 2026 Roadmap">Cascade&apos;s 2026 Roadmap: Testing the Theory In Practice</h1>
+			<h1 data-nav-title="Cascade's 2026 Roadmap">Cascade&apos;s 2026 Roadmap: Testing the Theory in Practice</h1>
 			<h2>Ensuring a Foundation of High-Quality, Fit-for-Purpose Voluntary LRM Methodologies</h2>
 			<p>
 				As methodologies for HFC destruction in Article 5 countries evolve, the field faces a foundational challenge:
