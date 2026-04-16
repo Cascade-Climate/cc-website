@@ -7,6 +7,21 @@
 </svelte:head>
 <div id="blog">
 	<div id="post-list">
+		<div class="post">
+			<h1>
+				<a href="/blog/lrm-financing">
+					Financing the Recovery Economy: First Step Towards Scaled Lifecycle Refrigerant Management
+				</a>
+			</h1>
+			<p>
+				How short- and long-term financing mechanisms can be sequenced to build durable lifecycle refrigerant management ecosystems and accelerate scale in Southeast Asia.
+			</p>
+			<p class="details">
+				<span class="date">04/17/26</span>
+				·
+				<span class="read-time">15 MIN READ</span>
+			</p>
+		</div>
 		
 		<div class="post">
 			<h1>
