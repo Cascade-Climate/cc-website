@@ -49,12 +49,12 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
-				<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="Lifecycle Refrigerant Management" />
-				<h2>LRM: Sequencing finance and policy to build market scale</h2>
+				<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
+				<h2>Why lifecycle refrigerant management matters</h2>
 				<p>
-					HFC refrigerants threaten climate goals. Learn how Cascade is sequencing finance and policy to build sustainable recovery markets in Southeast Asia.
+					Learn about the benefits, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.
 				</p>
-				<a href="/blog/lrm-financing" target="_blank">Learn More</a>
+				<a href="/blog/LRM-gaps" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={erwPhoto} alt="Enhanced rock weathering" />
