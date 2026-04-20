@@ -5,7 +5,7 @@ import { error } from '@sveltejs/kit';
  * Set to `true` when you want `/blog/lrm-financing` live again.
  * The `+page.svelte` file stays in the repo unchanged.
  */
-const LRM_FINANCING_PUBLISHED = false;
+const LRM_FINANCING_PUBLISHED = true;
 
 /** @type {import('./$types').PageServerLoad} */
 export function load() {
