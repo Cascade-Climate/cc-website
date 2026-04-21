@@ -9,6 +9,21 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/blog/lrm-financing">
+					Financing the Recovery Economy: The First Step Towards Scaled Lifecycle Refrigerant Management
+				</a>
+			</h1>
+			<p>
+				How voluntary carbon finance, compliance markets, industry participation, and policy can be sequenced to build durable lifecycle refrigerant management systems in Southeast Asia.
+			</p>
+			<p class="details">
+				<span class="date">04/21/2026</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/data-quarry-update-spring-26">
 					Rock On: The ERW Data Quarry Just Doubled Its Data
 				</a>

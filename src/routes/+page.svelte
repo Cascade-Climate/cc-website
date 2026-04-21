@@ -10,7 +10,6 @@
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
-	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 </script>
 
 <svelte:head>
@@ -49,12 +48,12 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
-				<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
-				<h2>Why lifecycle refrigerant management matters</h2>
+				<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="Lifecycle Refrigerant Management" />
+				<h2>Can the right sequence unlock refrigerant recovery at scale?</h2>
 				<p>
-					Learn about the benefits, what's blocking progress, and how strategic interventions can unlock immediate climate wins and build economic resilience.
+					Learn how Cascade is sequencing financing, policy, and markets to build practical refrigerant recovery systems in Southeast Asia.
 				</p>
-				<a href="/blog/LRM-gaps" target="_blank">Learn More</a>
+				<a href="/blog/lrm-financing" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={erwPhoto} alt="Enhanced rock weathering" />
