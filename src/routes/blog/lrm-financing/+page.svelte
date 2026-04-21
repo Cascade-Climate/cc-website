@@ -9,6 +9,11 @@
 		<div class="content">
 			<div class="copy">
 				<h1>Financing the Recovery Economy: The First Step Towards Scaled Lifecycle Refrigerant Management</h1>
+				By: <a href="/people/ali-white" style="color: #e1fcf7;">Ali White</a>,
+				<a href="/people/brad-rochlin" style="color: #e1fcf7;">Brad Rochlin</a>,
+				<a href="/people/rachel-smith" style="color: #e1fcf7;">Rachel Smith</a>,
+				<a href="/people/hara-wang" style="color: #e1fcf7;">Hara Wang</a>
+				<p class="date" style="font-weight: 200;">Apr 21, 2026</p>
 				<hr />
 				<p>
 					The <a href="/blog/LRM-gaps" style="color: #e1fcf7;">first post</a> in Cascade's refrigerant management and transition blog series laid out the many reasons why

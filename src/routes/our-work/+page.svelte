@@ -191,6 +191,14 @@
 			<h5>HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
+					<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="Lifecycle Refrigerant Management" />
+					<h2>Can the right sequence unlock refrigerant recovery at scale?</h2>
+					<p>
+						Learn how Cascade is sequencing financing, policy, and markets to build practical refrigerant recovery systems in Southeast Asia.
+					</p>
+					<a href="/blog/lrm-financing">Learn More</a>
+				</div>
+				<div>
 					<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
 					<h2>Why lifecycle refrigerant management matters</h2>
 					<p>
