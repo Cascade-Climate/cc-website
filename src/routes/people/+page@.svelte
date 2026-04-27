@@ -103,6 +103,71 @@
 			<h1>Vilas Rao</h1>
 			<span>Co-founder, Chief Operating Officer</span>
 		</a>
+		<a class="team-card" href="/people/noah-anderson">
+			<img src={noahAnderson} alt="Noah Anderson" />
+			<h1>Noah Anderson</h1>
+			<span>ERW Scientist</span>
+		</a>
+		<a class="team-card" href="/people/leah-bridle">
+			<img src={leahBridle} alt="Leah Bridle" />
+			<h1>Leah Bridle</h1>
+			<span>Operations Manager, ERW</span>
+		</a>
+		<a class="team-card" href="/people/nic-gubbins">
+			<img src={nicGubbins} alt="Nic Gubbins" />
+			<h1>Nic Gubbins</h1>
+			<span>Geochemical Data Science Fellow</span>
+		</a>
+		<a class="team-card" href="/people/arielle-lok">
+			<img src={arielleLok} alt="Arielle Lok" />
+			<h1>Arielle Lok</h1>
+			<span>Program Manager</span>
+		</a>
+		<a class="team-card" href="/people/richard-marinos">
+			<img src={richardMarinos} alt="Richard Marinos" />
+			<h1>Richard Marinos</h1>
+			<span>ERW Scientist</span>
+		</a>
+		<a class="team-card" href="/people/jonathan-moore">
+			<img src={jonathanMoore} alt="Jon Jon Moore" />
+			<h1>Jon Jon Moore</h1>
+			<span>Communications Manager</span>
+		</a>
+		<a class="team-card" href="/people/jamie-newman">
+			<img src={jamieNewman} alt="Jamie Newman" />
+			<h1>Jamie Newman</h1>
+			<span>People and Operations Director</span>
+		</a>
+		<a class="team-card" href="/people/noemma-olagaray">
+			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
+			<h1>Noemma Olagaray</h1>
+			<span>Program Manager</span>
+		</a>
+		<a class="team-card" href="/people/asabi-rawlins">
+			<img src="/images/people/asabi-rawlins.png" alt="Asabi Rawlins" />
+			<h1>Asabi Rawlins</h1>
+			<span>International Policy Manager</span>
+		</a>
+		<a class="team-card" href="/people/anna-sophia-roberts">
+			<img src={annaSophiaRoberts} alt="Anna Sophia Roberts" />
+			<h1>Anna Sophia Roberts</h1>
+			<span>Policy Associate</span>
+		</a>
+		<a class="team-card" href="/people/brad-rochlin">
+			<img src={bradRochlin} alt="Brad Rochlin" />
+			<h1>Brad Rochlin</h1>
+			<span>Program Director, Carbon Markets</span>
+		</a>
+		<a class="team-card" href="/people/rachel-smith">
+			<img src={rachelSmith} alt="Rachel Smith" />
+			<h1>Rachel Smith</h1>
+			<span>Policy Director</span>
+		</a>
+		<a class="team-card" href="/people/tannis-thorlakson">
+			<img src={tannisThorlakson} alt="Tannis Thorlakson" />
+			<h1>Tannis Thorlakson</h1>
+			<span>Senior Program Director, ERW</span>
+		</a>
 		<a class="team-card" href="/people/alison-tune">
 			<img src={alisonTune} alt="Alison Tune" />
 			<h1>Alison Tune</h1>
@@ -112,71 +177,6 @@
 			<img src={aliWhite} alt="Ali White" />
 			<h1>Ali White</h1>
 			<span>Program Manager</span>
-		</a>
-		<a class="team-card" href="/people/anna-sophia-roberts">
-			<img src={annaSophiaRoberts} alt="Anna Sophia Roberts" />
-			<h1>Anna Sophia Roberts</h1>
-			<span>Policy Associate</span>
-		</a>
-		<a class="team-card" href="/people/arielle-lok">
-			<img src={arielleLok} alt="Arielle Lok" />
-			<h1>Arielle Lok</h1>
-			<span>Program Manager</span>
-		</a>
-		<a class="team-card" href="/people/asabi-rawlins">
-			<img src="/images/people/asabi-rawlins.png" alt="Asabi Rawlins" />
-			<h1>Asabi Rawlins</h1>
-			<span>Team Member</span>
-		</a>
-		<a class="team-card" href="/people/brad-rochlin">
-			<img src={bradRochlin} alt="Brad Rochlin" />
-			<h1>Brad Rochlin</h1>
-			<span>Program Director, Carbon Markets</span>
-		</a>
-		<a class="team-card" href="/people/jamie-newman">
-			<img src={jamieNewman} alt="Jamie Newman" />
-			<h1>Jamie Newman</h1>
-			<span>People and Operations Director</span>
-		</a>
-		<a class="team-card" href="/people/jonathan-moore">
-			<img src={jonathanMoore} alt="Jon Jon Moore" />
-			<h1>Jon Jon Moore</h1>
-			<span>Communications Manager</span>
-		</a>
-		<a class="team-card" href="/people/leah-bridle">
-			<img src={leahBridle} alt="Leah Bridle" />
-			<h1>Leah Bridle</h1>
-			<span>Operations Manager, ERW</span>
-			</a>
-		<a class="team-card" href="/people/nic-gubbins">
-			<img src={nicGubbins} alt="Nic Gubbins" />
-			<h1>Nic Gubbins</h1>
-			<span>Geochemical Data Science Fellow</span>
-		</a>
-		<a class="team-card" href="/people/noah-anderson">
-			<img src={noahAnderson} alt="Noah Anderson" />
-			<h1>Noah Anderson</h1>
-			<span>ERW Scientist</span>
-		</a>
-		<a class="team-card" href="/people/noemma-olagaray">
-			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
-			<h1>Noemma Olagaray</h1>
-			<span>Program Manager</span>
-		</a>
-		<a class="team-card" href="/people/rachel-smith">
-			<img src={rachelSmith} alt="Rachel Smith" />
-			<h1>Rachel Smith</h1>
-			<span>Policy Director</span>
-		</a>
-		<a class="team-card" href="/people/richard-marinos">
-			<img src={richardMarinos} alt="Richard Marinos" />
-			<h1>Richard Marinos</h1>
-			<span>ERW Scientist</span>
-		</a>
-		<a class="team-card" href="/people/tannis-thorlakson">
-			<img src={tannisThorlakson} alt="Tannis Thorlakson" />
-			<h1>Tannis Thorlakson</h1>
-			<span>Senior Program Director, ERW</span>
 		</a>
 		
 	</section>
