@@ -279,7 +279,8 @@
 	.team-card img {
 		border-radius: 2rem;
 		width: 100%;
-		height: auto;
+		aspect-ratio: 4 / 5;
+		object-fit: cover;
 	}
 
 	.team-card h1 {
