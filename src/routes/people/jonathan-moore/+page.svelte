@@ -1,6 +1,5 @@
 <script>
-	import headshot from '$lib/images/people/jonathan-moore.webp';
-	import linkedinIcon from '$lib/images/linkedin-icon.webp';
+		import linkedinIcon from '$lib/images/linkedin-icon.webp';
 	import twitterIcon from '$lib/images/twitter-icon.webp';
 </script>
 
@@ -31,6 +30,6 @@
 		</p>
 	</div>
 	<div class="headshot">
-		<img src={headshot} alt="Jonathan Moore" />
+		<img src="/images/people/jonathan-moore.png" alt="Jonathan Moore" />
 	</div>
 </div>
