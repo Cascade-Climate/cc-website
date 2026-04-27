@@ -1,8 +1,7 @@
 <script>
 	import daiEllis from '$lib/images/people/dai-ellis.webp';
 	import jenniferMills from '$lib/images/people/jennifer-mills.webp';
-	import jonathanMoore from '$lib/images/people/jonathan-moore.webp';
-	import johnSanchez from '$lib/images/people/john-sanchez.webp';
+		import johnSanchez from '$lib/images/people/john-sanchez.webp';
 	import haraWang from '$lib/images/people/hara-wang.webp';
 	import vilasRao from '$lib/images/people/vilas-rao.webp';
 	import arielleLok from '$lib/images/people/arielle-lok.webp';
@@ -129,7 +128,7 @@
 			<span>ERW Scientist</span>
 		</a>
 		<a class="team-card" href="/people/jonathan-moore">
-			<img src={jonathanMoore} alt="Jon Jon Moore" />
+			<img src="/images/people/jonathan-moore.png" alt="Jon Jon Moore" />
 			<h1>Jon Jon Moore</h1>
 			<span>Communications Manager</span>
 		</a>
