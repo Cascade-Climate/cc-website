@@ -1,7 +1,8 @@
 <script>
-	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import farm1 from '$lib/images/nature/farm1.webp';
+	import foundations from '$lib/images/nature/foundations.webp';
 	import heroImg from '$lib/images/nature/policy-hero-2.png';
+	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 	import policyImg from '$lib/images/nature/policy.webp';
 </script>
 
@@ -17,10 +18,8 @@
 	<section class="hero">
 		<img src={heroImg} alt="" class="hero-img" width="1024" height="684" decoding="async" fetchpriority="high" />
 	</section>
-	<section class="preamble">
-		<h1>Policy</h1>
-	</section>
 	<section class="body">
+		<h1>Policy</h1>
 		<p>
 			Without the policy infrastructure required to build, sustain, and accelerate progress, high-potential climate
 			solutions are likely to stall. Cascade partners with leading policy actors to build and shape the incentive
@@ -34,17 +33,17 @@
 			alternatives.
 		</p>
 
-		<section aria-labelledby="highlights-h">
-			<h5 id="highlights-h">HIGHLIGHTS</h5>
+		<section aria-labelledby="erw-highlights-h">
+			<h5 id="erw-highlights-h">ERW POLICY HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
-					<img src={asiasmoke} alt="Accounting and claims for climate pollutants" />
-					<h2>Accounting and claims for short-lived and long-lived climate pollutants</h2>
+					<img src={policyImg} alt="ERW in EU carbon removal policy" />
+					<h2>ERW in EU carbon removal policy</h2>
 					<p>
-						Learn how Cascade is driving strong community alignment on the credibility of corporate and international
-						credit claims, and read our latest report.
+						An in-depth look at how ERW fits within the EU Carbon Removal and Carbon Farming regulation and carbon
+						market frameworks.
 					</p>
-					<a href="/blog/accounting-and-claims-for-super-pollutants">Learn More</a>
+					<a href="/blog/drawdown-to-durable">Learn More</a>
 				</div>
 				<div>
 					<img src={farm1} alt="Policy priorities for ERW" />
@@ -56,13 +55,28 @@
 					<a href="/blog/policy">Learn More</a>
 				</div>
 				<div>
-					<img src={policyImg} alt="ERW in EU carbon removal policy" />
-					<h2>ERW in EU carbon removal policy</h2>
+					<img src={foundations} alt="Foundations for Carbon Dioxide Removal Quantification in ERW Deployments" />
+					<h2>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</h2>
 					<p>
-						An in-depth look at how ERW fits within the EU Carbon Removal and Carbon Farming regulation and carbon
-						market frameworks.
+						A comprehensive technical reference on rigorous carbon removal quantification in ERW deployments developed
+						through a year-long process with over 100 stakeholders.
 					</p>
-					<a href="/blog/drawdown-to-durable">Learn More</a>
+					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
+				</div>
+			</div>
+		</section>
+
+		<section aria-labelledby="rmt-highlights-h">
+			<h5 id="rmt-highlights-h">RMT POLICY HIGHLIGHTS</h5>
+			<div class="highlights">
+				<div>
+					<img src={LRMblog1} alt="Why lifecycle refrigerant management matters" />
+					<h2>Why lifecycle refrigerant management matters</h2>
+					<p>
+						Learn about the benefits, what blocks progress, and how strategic interventions can unlock immediate
+						climate wins while building economic resilience.
+					</p>
+					<a href="/blog/LRM-gaps">Learn More</a>
 				</div>
 			</div>
 		</section>
@@ -71,16 +85,13 @@
 			<h5 id="recent-blogs-h" class="recent-title">RECENT BLOGS</h5>
 			<div class="blog-list">
 				<article>
-					<h4><a href="/blog/accounting-and-claims-for-super-pollutants">Beyond GWP100: Accounting and Claims for Short-Lived and Long-Lived Climate Pollutants</a></h4>
-				</article>
-				<article>
 					<h4><a href="/blog/LRM-gaps">Lifecycle Refrigerant Management: Closing Critical Gaps in Global Climate Policy</a></h4>
 				</article>
 				<article>
 					<h4><a href="/blog/policy">Policy priorities for ERW</a></h4>
 				</article>
 				<article>
-					<h4><a href="/blog/crossing-the-bridge">Voluntary climate financing as a bridge</a></h4>
+					<h4><a href="/blog/recommendations-from-foundations">Recommendations from Foundations as the EU Explores Enhanced Rock Weathering</a></h4>
 				</article>
 			</div>
 		</section>
@@ -102,20 +113,14 @@
 		display: block;
 	}
 
-	.preamble {
-		padding: 1rem 4rem;
-		background-color: var(--color-dark);
-		color: var(--color-light);
-	}
-
 	h1 {
 		font-weight: 300;
 		font-size: 2rem;
 	}
 
 	.body {
-		padding: 1.5rem 4rem 4rem;
-		max-width: 900px;
+		padding: 2rem 4rem 4rem;
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 
@@ -215,7 +220,6 @@
 			grid-template-columns: 1fr;
 		}
 
-		.preamble,
 		.body {
 			padding-left: 2rem;
 			padding-right: 2rem;

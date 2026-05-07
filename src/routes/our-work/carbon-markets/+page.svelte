@@ -37,13 +37,13 @@
 			<h5 id="highlights-h">HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
-					<img src={bridge} alt="Voluntary climate financing as a bridge" />
-					<h2>Voluntary climate financing as a bridge</h2>
+					<img src={asiasmoke} alt="Accounting and claims for short-lived and long-lived pollutants" />
+					<h2>Accounting and claims for short-lived and long-lived pollutants</h2>
 					<p>
-						Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate
-						technologies, while closing critical gaps to scale up.
+						Learn how Cascade is driving strong community alignment on the credibility of corporate and international
+						credit claims, and read our latest report.
 					</p>
-					<a href="/blog/crossing-the-bridge">Learn More</a>
+					<a href="/blog/accounting-and-claims-for-super-pollutants">Learn More</a>
 				</div>
 				<div>
 					<img src={beyondGwp100Preview} alt="Beyond GWP100 workshop summary cover" />
@@ -55,13 +55,13 @@
 					<a href="https://cascadeclimate.org/Cascade%20Climate%20-%20Beyond%20GWP100%20(Workshop%20Summary%20+%20Recommendations).pdf" target="_blank" rel="noopener">Learn More</a>
 				</div>
 				<div>
-					<img src={asiasmoke} alt="Accounting and claims for short-lived and long-lived pollutants" />
-					<h2>Accounting and claims for short-lived and long-lived pollutants</h2>
+					<img src={bridge} alt="Voluntary climate financing as a bridge" />
+					<h2>Voluntary climate financing as a bridge</h2>
 					<p>
-						Learn how Cascade is driving strong community alignment on the credibility of corporate and international
-						credit claims, and read our latest report.
+						Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate
+						technologies, while closing critical gaps to scale up.
 					</p>
-					<a href="/blog/accounting-and-claims-for-super-pollutants">Learn More</a>
+					<a href="/blog/crossing-the-bridge">Learn More</a>
 				</div>
 			</div>
 		</section>

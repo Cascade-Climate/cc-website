@@ -40,7 +40,7 @@
 				<a href="https://cascadeclimate.org/blog/crn-eoi" target="_blank" rel="noopener noreferrer">Learn More</a>
 			</article>
 		</section>
-		<p><a class="back" href="/bedrock-initiative">← Back to Bedrock overview</a></p>
+		<p class="back-row"><a class="back" href="/bedrock-initiative">← Back to Bedrock overview</a></p>
 	</section>
 </div>
 
@@ -117,6 +117,9 @@
 	.back {
 		color: var(--color-accent);
 		text-decoration: none;
+	}
+	.back-row {
+		margin-top: 2rem;
 	}
 	@media (max-width: 660px) {
 		.preamble,
