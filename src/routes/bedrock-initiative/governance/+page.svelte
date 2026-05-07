@@ -2,6 +2,7 @@
 	import zekeHeadshot from '$lib/images/people/zeke-hausfather.png';
 	import daiHeadshot from '$lib/images/people/dai-ellis.png';
 	import elenaHeadshot from '$lib/images/people/elena-cavallero.png';
+	import isabelMontanezHeadshot from '$lib/images/people/isabel-montanez.png';
 	import placeholderHeadshot from '$lib/images/people/person-placeholder.svg';
 </script>
 
@@ -62,7 +63,7 @@
 				</article>
 
 				<article class="person-card">
-					<img src={placeholderHeadshot} alt="Placeholder portrait for Isabel Montañez" />
+					<img src={isabelMontanezHeadshot} alt="Isabel Montañez" />
 					<h3>Isabel Montañez</h3>
 					<p>Scientific Advisory Board Member</p>
 				</article>
