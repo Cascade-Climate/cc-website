@@ -1,7 +1,7 @@
 <script>
 	import farm1 from '$lib/images/nature/farm1.webp';
 	import foundations from '$lib/images/nature/foundations.webp';
-	import heroImg from '$lib/images/nature/policy-hero-2.png';
+	import heroImg from '$lib/images/nature/policy-hero-3.png';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
 	import policyImg from '$lib/images/nature/policy.webp';
 </script>
