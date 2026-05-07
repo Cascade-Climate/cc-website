@@ -14,7 +14,7 @@
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
-				<h1>Cascade’s Approach to Policy</h1>
+				<h1>ERW Policy Priorities</h1>
 				<p>
 					Our policy priorities are shaped by the specific considerations of each intervention that we work on, but our driving purpose remains to address obstacles and break down system-level bottlenecks to progress..  
 				</p>

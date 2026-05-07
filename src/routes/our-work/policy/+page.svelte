@@ -49,8 +49,8 @@
 					<img src={farm1} alt="Policy priorities for ERW" />
 					<h2>Policy priorities for ERW</h2>
 					<p>
-						We advance policies that support ERW innovation, provide financial assistance for responsible scale-up,
-						and increase confidence of carbon removal buyers and investors to enter the market.
+						We need policies that support ERW research, lower costs, and build confidence in the durability of carbon
+						removal.
 					</p>
 					<a href="/blog/policy">Learn More</a>
 				</div>
@@ -58,8 +58,7 @@
 					<img src={foundations} alt="Foundations for Carbon Dioxide Removal Quantification in ERW Deployments" />
 					<h2>Enhanced Rock Weathering 101</h2>
 					<p>
-						An introductory guide to enhanced rock weathering covering core concepts, pathways, and practical context
-						for policymakers and stakeholders.
+						An introductory explainer to enhanced rock weathering.
 					</p>
 					<a href="https://cascadeclimate.org/Cascade%20Climate_Enhanced%20Rock%20Weathering%20101_vFinal.pdf" target="_blank" rel="noopener noreferrer">Learn More</a>
 				</div>
