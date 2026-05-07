@@ -56,12 +56,12 @@
 				</div>
 				<div>
 					<img src={foundations} alt="Foundations for Carbon Dioxide Removal Quantification in ERW Deployments" />
-					<h2>Foundations for Carbon Dioxide Removal Quantification in ERW Deployments</h2>
+					<h2>Enhanced Rock Weathering 101</h2>
 					<p>
-						A comprehensive technical reference on rigorous carbon removal quantification in ERW deployments developed
-						through a year-long process with over 100 stakeholders.
+						An introductory guide to enhanced rock weathering covering core concepts, pathways, and practical context
+						for policymakers and stakeholders.
 					</p>
-					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
+					<a href="https://cascadeclimate.org/Cascade%20Climate_Enhanced%20Rock%20Weathering%20101_vFinal.pdf" target="_blank" rel="noopener noreferrer">Learn More</a>
 				</div>
 			</div>
 		</section>
