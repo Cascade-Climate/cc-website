@@ -156,15 +156,18 @@
 
 	<section id="get-involved" class="band alt">
 		<h2>Get Involved</h2>
+		<h3>Researchers</h3>
 		<p>
-			For researchers: Bedrock Initiative is built to serve the scientific community working on ERW and we welcome partners. Email
+			Bedrock Initiative is built to serve the scientific community working on ERW and we welcome partners. Email
 			<a href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">grants@cascadeclimate.org</a>
 			to learn how you can get involved.
 		</p>
+		<h3>Policymakers</h3>
 		<p>
-			For policymakers: Government agricultural programs, compliance carbon markets, and national GHG inventories all need the same thing from ERW: a reliable and independently validated evidence base. If you are developing policy frameworks where ERW could play a role, we’d welcome a chance to learn more about your needs — and look forward to building toward it. Email our Policy team at
+			Government agricultural programs, compliance carbon markets, and national GHG inventories all need the same thing from ERW: a reliable and independently validated evidence base. If you are developing policy frameworks where ERW could play a role, we’d welcome a chance to learn more about your needs — and look forward to building toward it. Email our Policy team at
 			<a href="mailto:policy@cascadeclimate.org" target="_blank" rel="noopener">policy@cascadeclimate.org</a>.
 		</p>
+		<h3>Other Inquiries</h3>
 		<p>
 			For all other inquiries — whether funding, partnerships, or something we haven't thought of yet — please email
 			<a href="mailto:hello@cascadeclimate.org" target="_blank" rel="noopener">hello@cascadeclimate.org</a>.
@@ -415,6 +418,14 @@
 		margin: 0 auto 1.25rem;
 		letter-spacing: -0.02em;
 		line-height: 1.25;
+	}
+
+	.band > h3 {
+		max-width: 52rem;
+		margin: 1.45rem auto 0.65rem;
+		font-weight: 500;
+		font-size: 1.12rem;
+		color: var(--color-dark);
 	}
 
 	.band > p {

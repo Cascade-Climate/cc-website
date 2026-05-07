@@ -36,21 +36,18 @@
 					<img src={elenaHeadshot} alt="Elena Cavallero" />
 					<h3>Elena Cavallero</h3>
 					<p>Venture Advisor, The Grantham Foundation for the Protection of the Environment and Board Member, Cascade Climate</p>
-					<blockquote>"Quote coming soon."</blockquote>
 				</article>
 
 				<article class="person-card">
 					<img src={daiHeadshot} alt="Dai Ellis" />
 					<h3>Dai Ellis</h3>
 					<p>CEO, Co-Founder, Cascade Climate</p>
-					<blockquote>"Quote coming soon."</blockquote>
 				</article>
 
 				<article class="person-card">
 					<img src={zekeHeadshot} alt="Zeke Hausfather" />
 					<h3>Zeke Hausfather</h3>
 					<p>Climate Research Lead, Frontier</p>
-					<blockquote>"Bedrock Initiative will help us take the types of comprehensive long-term measurements needed to reduce uncertainties and build confidence for the broader field."</blockquote>
 				</article>
 			</div>
 		</section>

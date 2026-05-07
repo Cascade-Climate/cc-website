@@ -1,5 +1,5 @@
 <script>
-	import heroImg from '$lib/images/nature/carbon-markets-hero.png';
+	import heroImg from '$lib/images/nature/carbon-markets-hero-2.png';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import bridge from '$lib/images/nature/bridge.webp';
 	import beyondGwp100Preview from '$lib/images/nature/beyond-gwp100-preview.png';
@@ -90,7 +90,7 @@
 			</div>
 		</section>
 
-		<p><a class="back" href="/our-work/market-development-and-policy">← Back to Market Development and Policy</a></p>
+		<p class="back-row"><a class="back" href="/our-work/market-development-and-policy">Back to Market Development and Policy</a></p>
 	</section>
 </div>
 
@@ -190,8 +190,23 @@
 	}
 
 	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 1.05rem;
+		font-weight: 500;
 		color: var(--color-accent);
 		text-decoration: none;
+	}
+
+	.back::before {
+		content: '\2190';
+		font-size: 1.35em;
+		line-height: 1;
+	}
+
+	.back-row {
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 660px) {

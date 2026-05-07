@@ -16,11 +16,6 @@ import erwHero from '$lib/images/nature/erw-hero-2.png';
 	<section class="hero">
 		<img src={erwHero} alt="" class="hero-img" width="1024" height="684" />
 	</section>
-	<nav class="scroll-nav" aria-label="Enhanced Rock Weathering sections">
-		<a href="#bedrock-initiative">Bedrock Initiative</a>
-		<a href="#initiatives-and-tools">Initiatives and Tools</a>
-		<a href="#recent-blogs">Recent Blogs</a>
-	</nav>
 
 	<section class="body">
 		<h1>Enhanced Rock Weathering</h1>
@@ -33,6 +28,11 @@ import erwHero from '$lib/images/nature/erw-hero-2.png';
 		<p>
 			Cascade is working to clear the path forward by coordinating inter-comparable field research and developing open-science tools. We're also engaging policymakers, buyers, and standard bodies to ensure the markets and policies shaping ERW's future evolve with science.
 		</p>
+		<nav class="scroll-nav" aria-label="Enhanced Rock Weathering sections">
+			<a href="#bedrock-initiative">Bedrock Initiative</a>
+			<a href="#initiatives-and-tools">Initiatives and Tools</a>
+			<a href="#recent-blogs">Recent Blogs</a>
+		</nav>
 		<section id="bedrock-initiative" class="bedrock-panel" aria-labelledby="bedrock-h">
 			<h2 id="bedrock-h">Bedrock Initiative</h2>
 			<p>

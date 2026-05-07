@@ -15,12 +15,7 @@
 	<section class="hero">
 		<img src={heroImg} alt="" class="hero-img" width="1024" height="684" decoding="async" fetchpriority="high" />
 	</section>
-	<nav class="scroll-nav" aria-label="Refrigerant Management and Transition sections">
-		<a href="#overview">Overview</a>
-		<a href="#highlights">Highlights</a>
-		<a href="#recent-blogs">Recent Blogs</a>
-	</nav>
-	<section id="overview" class="body">
+	<section class="body">
 		<h1>Refrigerant Management and Transition</h1>
 		<p>
 			Reducing super pollutant emissions — including refrigerants with high global warming potential (GWP) — is one of
@@ -40,6 +35,10 @@
 			supporting first-of-their-kind demonstrations, learning what works on the ground, and collaborating with policymakers
 			and industry to build the institutional frameworks that reflect the diverse operating realities of the Global South.
 		</p>
+		<nav class="scroll-nav" aria-label="Refrigerant Management and Transition sections">
+			<a href="#highlights">Highlights</a>
+			<a href="#recent-blogs">Recent Blogs</a>
+		</nav>
 		<section id="highlights" class="section-anchor">
 			<RefrigerantHighlights />
 		</section>

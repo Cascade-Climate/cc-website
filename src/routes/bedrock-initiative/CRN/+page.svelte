@@ -28,10 +28,18 @@
 			Host sites will receive operational funding, authorship opportunities on site-specific and network-wide
 			publications, and access to a global community of ERW researchers.
 		</p>
-		<p>
-			To learn more about the CRN, visit
-			<a href="https://cascadeclimate.org/blog/crn-eoi" target="_blank" rel="noopener noreferrer">CRN Expression of Interest</a>.
-		</p>
+		<section class="highlights" aria-labelledby="highlights-h">
+			<h2 id="highlights-h">HIGHLIGHTS</h2>
+			<article class="highlight-card">
+				<img src={heroImg} alt="Coordinated Research Network pilot site landscape" />
+				<h3>Call for Expressions of Interest: Coordinated Research Network for Enhanced Rock Weathering</h3>
+				<p>
+					Learn more about the CRN design, pilot site selection process, timelines, and how institutions can submit an
+					expression of interest.
+				</p>
+				<a href="https://cascadeclimate.org/blog/crn-eoi" target="_blank" rel="noopener noreferrer">Learn More</a>
+			</article>
+		</section>
 		<p><a class="back" href="/bedrock-initiative">← Back to Bedrock overview</a></p>
 	</section>
 </div>
@@ -64,6 +72,47 @@
 	.body {
 		padding: 1.75rem 4rem;
 		max-width: 720px;
+	}
+	.highlights {
+		margin-top: 1.5rem;
+	}
+	.highlights h2 {
+		font-weight: 300;
+		font-size: 1.2rem;
+		margin: 0 0 1rem;
+		color: var(--color-dark);
+	}
+	.highlight-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	.highlight-card img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		border-radius: 1rem;
+	}
+	.highlight-card h3 {
+		margin: 0;
+		font-weight: 500;
+		font-size: 1.25rem;
+		line-height: 1.35;
+		color: var(--color-dark);
+	}
+	.highlight-card p {
+		margin: 0;
+		line-height: 1.5;
+	}
+	.highlight-card a {
+		display: inline-block;
+		margin-top: 0.25rem;
+		border-radius: 2rem;
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		text-decoration: none;
+		padding: 0.5rem 1.2rem;
+		align-self: flex-start;
 	}
 	.back {
 		color: var(--color-accent);

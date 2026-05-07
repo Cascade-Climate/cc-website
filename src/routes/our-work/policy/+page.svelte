@@ -1,6 +1,7 @@
 <script>
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import farm1 from '$lib/images/nature/farm1.webp';
+	import heroImg from '$lib/images/nature/policy-hero-2.png';
 	import policyImg from '$lib/images/nature/policy.webp';
 </script>
 
@@ -13,6 +14,9 @@
 </svelte:head>
 
 <div class="page">
+	<section class="hero">
+		<img src={heroImg} alt="" class="hero-img" width="1024" height="684" decoding="async" fetchpriority="high" />
+	</section>
 	<section class="preamble">
 		<h1>Policy</h1>
 	</section>
@@ -81,7 +85,7 @@
 			</div>
 		</section>
 
-		<p><a class="back" href="/our-work/market-development-and-policy">← Back to Market Development and Policy</a></p>
+		<p class="back-row"><a class="back" href="/our-work/market-development-and-policy">Back to Market Development and Policy</a></p>
 	</section>
 </div>
 
@@ -89,6 +93,13 @@
 	.page {
 		font-size: 1rem;
 		padding-bottom: 4rem;
+	}
+
+	.hero-img {
+		width: 100%;
+		max-height: 420px;
+		object-fit: cover;
+		display: block;
 	}
 
 	.preamble {
@@ -180,8 +191,23 @@
 	}
 
 	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 1.05rem;
+		font-weight: 500;
 		color: var(--color-accent);
 		text-decoration: none;
+	}
+
+	.back::before {
+		content: '\2190';
+		font-size: 1.35em;
+		line-height: 1;
+	}
+
+	.back-row {
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 660px) {
