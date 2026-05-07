@@ -1,33 +1,61 @@
 <script>
 	export let active;
 	export let callbackFn;
+	export let navItems = undefined;
 
 	import config from '$lib/config.json';
 
-	let opened = config.navItems.map(() => false);
+	$: items = navItems ?? config.navItems;
+
+	let opened = [];
+	$: if (opened.length !== items.length) {
+		opened = items.map(() => false);
+	}
+
+	function toggle(i) {
+		opened = opened.map((v, idx) => (idx === i ? !v : v));
+	}
 </script>
 
 <div id="nav-modal" class:active>
 	<nav>
-		{#each config.navItems as item, i}
+		{#each items as item, i}
 			{#if item.children.length > 1}
-				<button
-					on:click={() => { opened[i] = !opened[i]; }}
-					class="nav-item item{i}"
-					tabindex="0"
-				>
+				<button on:click={() => toggle(i)} class="nav-item item{i}" tabindex="0">
 					<span>
 						{item.label}
 					</span>
 					<div class="subnav" class:open={opened[i]}>
 						{#each item.children as subitem}
-							<a
-								target={subitem.external ? '_blank' : '_self'}
-								href={subitem.url}
-								on:click={callbackFn}
-							>
-								{subitem.label}
-							</a>
+							{#if subitem.children && subitem.children.length}
+								<div class="subnav-group">
+									<a
+										target={subitem.external ? '_blank' : '_self'}
+										href={subitem.url}
+										on:click={callbackFn}
+									>
+										{subitem.label}
+									</a>
+									{#each subitem.children as nested}
+										<a
+											class="subnav-nested"
+											target={nested.external ? '_blank' : '_self'}
+											href={nested.url}
+											on:click={callbackFn}
+										>
+											{nested.label}
+										</a>
+									{/each}
+								</div>
+							{:else}
+								<a
+									target={subitem.external ? '_blank' : '_self'}
+									href={subitem.url}
+									on:click={callbackFn}
+								>
+									{subitem.label}
+								</a>
+							{/if}
 						{/each}
 					</div>
 				</button>
@@ -95,7 +123,7 @@
 		width: 100%;
 	}
 
-    .nav-item {
+	.nav-item {
 		position: relative;
 		color: var(--color-light);
 		display: flex;
@@ -106,8 +134,8 @@
 		width: 100%;
 		border-top: 1px solid var(--color-light);
 		font-size: 1.2rem;
-        /* Use primary accent for parent items */
-        background-color: var(--color-accent);
+		/* Use primary accent for parent items */
+		background-color: var(--color-accent);
 		min-height: 4rem;
 	}
 
@@ -123,10 +151,10 @@
 		border-bottom: 1px solid var(--color-dark);
 	}
 
-    .subnav {
+	.subnav {
 		display: none;
-        /* Lighter shade for subnav to differentiate from parent */
-        background-color: color-mix(in srgb, var(--color-accent) 85%, white 15%);
+		/* Lighter shade for subnav to differentiate from parent */
+		background-color: color-mix(in srgb, var(--color-accent) 85%, white 15%);
 		padding: 0.6rem 0.4rem;
 		gap: 1rem;
 		top: calc(100%);
@@ -138,6 +166,26 @@
 	}
 	.subnav.open {
 		display: flex;
+	}
+
+	.subnav-group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.35rem;
+		width: 100%;
+		padding: 0.35rem 0;
+		border-bottom: 1px solid color-mix(in srgb, var(--color-light) 20%, transparent);
+	}
+
+	.subnav-group:last-child {
+		border-bottom: none;
+	}
+
+	.subnav-nested {
+		font-size: 0.95rem;
+		color: var(--color-highlight);
+		padding: 0.15rem 0;
 	}
 
 	nav a:hover {

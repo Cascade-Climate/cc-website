@@ -1,0 +1,456 @@
+<script>
+	import farm1 from '$lib/images/nature/farm1.webp';
+	import cost from '$lib/images/nature/cost.webp';
+	import foundations from '$lib/images/nature/foundations.webp';
+	import policy from '$lib/images/nature/policy.webp';
+	import grants from '$lib/images/nature/grants.webp';
+	import metals from '$lib/images/nature/metals2.webp';
+	import slcp from '$lib/images/nature/slcp-entry.webp';
+	import wpe from '$lib/images/nature/erwexplorer.webp';
+	import bridge from '$lib/images/nature/bridge.webp';
+	import { onMount } from 'svelte';
+	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
+	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
+	import newblock1 from '$lib/images/supporters/newblock-1.webp';
+	import dataImg from '$lib/images/nature/data.webp';
+
+	const sections = [
+		{ id: 'erw', title: 'Enhanced Rock Weathering' },
+		{ id: 'refrigerantmanagement', title: 'Refrigerant Management and Transition' },
+		{ id: 'marketdevelopment', title: 'Market Development and Policy Engagement' }
+	];
+
+	let activeSection = '';
+	let navWrapper;
+	let pinned = false;
+	const headerOffset = 64; // 4rem – nav sticks just below site header
+
+	function handleScroll() {
+		const activeThreshold = 200;
+		activeSection = '';
+		for (const section of sections) {
+			const element = document.getElementById(section.id);
+			if (element) {
+				const rect = element.getBoundingClientRect();
+				if (rect.top <= activeThreshold && rect.bottom > activeThreshold) {
+					activeSection = section.id;
+					break;
+				}
+			}
+		}
+		if (!activeSection) {
+			for (const section of sections) {
+				const element = document.getElementById(section.id);
+				if (element) {
+					const rect = element.getBoundingClientRect();
+					if (rect.top < window.innerHeight && rect.bottom > 0) {
+						activeSection = section.id;
+						break;
+					}
+				}
+			}
+		}
+		if (navWrapper) {
+			pinned = navWrapper.getBoundingClientRect().top <= headerOffset;
+		}
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', handleScroll);
+		handleScroll();
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
+</script>
+
+<svelte:head>
+	<title>Our Work - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Propelling high-potential climate solutions from the margins to the mainstream."
+	/>
+</svelte:head>
+
+<div class="container">
+	<section class="preamble">
+		<h1>Our Work</h1>
+		<p>
+			Cascade is a philanthropy-backed nonprofit helping mobilize a more comprehensive response to the climate
+			crisis by advancing high-potential solutions that remain on the margins of mainstream climate action. We do
+			this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest
+			bottlenecks to progress.
+		</p>
+	</section>
+	<div class="scroll-nav-wrapper" class:pinned bind:this={navWrapper}>
+		<div class="scroll-nav-spacer" aria-hidden="true"></div>
+		<nav class="scroll-nav">
+			{#each sections as section}
+				<a class:active={activeSection === section.id} href="/our-work#{section.id}">
+					{section.title}
+				</a>
+			{/each}
+		</nav>
+	</div>
+	<div class="areas">
+		<section id="erw">
+			<h3>Enhanced Rock Weathering</h3>
+			<p>
+				Advancing the science, tools, and policy needed to make ERW a credible, scalable pathway for carbon removal
+				and agricultural benefit
+			</p>
+
+			<p>
+				ERW has the potential to become an important pathway for carbon removal with agricultural benefits if key
+				scientific and cost uncertainties are addressed.
+			</p>
+
+			<p>
+				Cascade is working to clear the path forward by coordinating inter-comparable field research and developing
+				open-science tools. We're also engaging policymakers, buyers, and standard bodies to ensure the markets and
+				policies shaping ERW's future evolve with science.
+			</p>
+
+			<h5>HIGHLIGHTS</h5>
+			<div class="highlights">
+				<div>
+					<img src={newblock1} alt="CRN EOI" />
+					<h2>A new global network for coordinated ERW research</h2>
+					<p>
+						To answer the key questions faced by the field, Cascade is standing up a Coordinated Research Network
+						(CRN) of standardized ERW experimental field trials across diverse global geographies.
+					</p>
+					<a href="/blog/crn-eoi">Learn More</a>
+				</div>
+				<div>
+					<img src={wpe} alt="Weathering potential explorer screencap" />
+					<h2>Weathering Potential Explorer</h2>
+					<p></p>
+					<p>
+						We built the Weathering Potential Explorer, an interactive global map that can accelerate successful ERW
+						deployments by pinpointing regions where relative environmental conditions could favor rapid silicate
+						weathering.
+					</p>
+					<div style="height: 0.5rem;"></div>
+					<a href="/blog/weathering-potential-explorer">Learn More</a>
+				</div>
+				<div>
+					<img src={metals} alt="ERW Metal Accumulation Calculator" />
+					<h2>ERW Metal Accumulation Calculator</h2>
+					<p></p>
+					<p>
+						We developed a free-to-use maximally conservative mass-balance model for assessing the risk of metal
+						accumulation in soils.
+					</p>
+					<a href="/blog/metal-accumulation-calculator">Learn More</a>
+				</div>
+				<div>
+					<img src={grants} alt="ERW Field Data Partnership Grant Awardees" />
+					<h2>ERW Field Data Partnership Grant Awardees</h2>
+					<p></p>
+					<p>
+						In collaboration with the Grantham Foundation, Google, and Frontier, we are excited to announce the
+						awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
+					</p>
+					<a href="/blog/erw-field-grant-awardees">Learn More</a>
+				</div>
+				<div>
+					<img src={farm1} alt="Policy priorities for ERW" />
+					<h2>Policy priorities for ERW</h2>
+					<p>
+						We advance policies that support ERW innovation, provide financial assistance for responsible scale-up,
+						and increase confidence of carbon removal buyers and investors to enter the market.
+					</p>
+					<a href="/blog/policy">Learn More</a>
+				</div>
+				<div>
+					<img src={foundations} alt="Foundations for CDR Quantification in Enhanced Rock Weathering" />
+					<h2>Foundations for CDR Quantification in ERW Deployments</h2>
+					<p>
+						After a year-long process involving over 100 stakeholders, we produced a comprehensive technical
+						reference on the “hows” of rigorous carbon removal quantification in an ERW deployment.
+					</p>
+					<a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments">Learn More</a>
+				</div>
+				<div>
+					<img src={cost} alt="Cost Estimator" />
+					<h2>ERW MRV cost estimator and database</h2>
+					<p>
+						We built a tool to help inform practitioners of the stacked costs of different analytical measurement
+						choices in an ERW deployment, as well as a database of cost quotes to help practitioners compare costs for
+						leverage.
+					</p>
+					<a href="/blog/erw-measurement-cost-stack-estimator-and-database">Learn More</a>
+				</div>
+				<div>
+					<img src={dataImg} alt="ERW Data Quarry" />
+					<h2>ERW Data Quarry</h2>
+					<p>
+						Learn about the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to
+						data from commercial ERW deployments to unlock deployment-led learning.
+					</p>
+					<a href="/blog/data-sharing-system-for-erw">Learn More</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="refrigerantmanagement">
+			<h3>Refrigerant Management and Transition</h3>
+			<p>
+				Narrowing the finance, policy, and infrastructure gaps preventing effective refrigerant management — one of the
+				fastest ways to slow near-term warming
+			</p>
+
+			<p>
+				Cascade is working to close the finance, incentive, and infrastructure gaps that hold back LRM
+				implementation. We're supporting first-of-their-kind demonstrations, learning what works on the ground, and
+				collaborating with policymakers and industry to build the institutional frameworks that reflect the diverse
+				operating realities of the Global South.
+			</p>
+
+			<h5>HIGHLIGHTS</h5>
+			<div class="highlights">
+				<div>
+					<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="Lifecycle Refrigerant Management" />
+					<h2>Can the right sequence unlock refrigerant recovery at scale?</h2>
+					<p>
+						Learn how Cascade is sequencing financing, policy, and markets to build practical refrigerant recovery
+						systems in Southeast Asia.
+					</p>
+					<a href="/blog/lrm-financing">Learn More</a>
+				</div>
+				<div>
+					<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
+					<h2>Why lifecycle refrigerant management matters</h2>
+					<p>
+						Learn about the benefits, what's blocking progress, and how strategic interventions can unlock immediate
+						climate wins and build economic resilience.
+					</p>
+					<a href="/blog/LRM-gaps">Learn More</a>
+				</div>
+				<div>
+					<img src={slcp} alt="Super Pollutants" />
+					<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
+					<p>
+						Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon
+						removal for the long term. Cascade is expanding its work to advance this dual strategy.
+					</p>
+					<a href="/blog/cascade-entry-into-slcp-mitigation">Learn More</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="marketdevelopment">
+			<h3>Market Development and Policy Engagement</h3>
+			<p>
+				High-potential climate solutions can stall at the starting line, fragment rapidly, and remain reliant on a few
+				early champions without the policy and market infrastructure required to build, maintain, and accelerate
+				progress.
+			</p>
+			<p>
+				Moving from early, catalytic market signals to enduring, policy-driven climate impact takes coordinated action
+				from industry leaders who take early bets, policymakers and standards setters who cultivate the conditions for
+				adoption, financial institutions that unlock capital, civil society that demands integrity, and more.
+			</p>
+
+			<p>
+				Cascade partners with these leading policy and market actors to build and shape the necessary foundations these
+				solutions require — from advancing credible measurement and verification frameworks to putting forward incentive
+				structures, market infrastructure improvements, and policy frameworks that responsibly scale adoption.
+			</p>
+			<h5>HIGHLIGHTS</h5>
+			<div class="highlights">
+				<div>
+					<img src={asiasmoke} alt="Asia Smoke" />
+					<h2>Accounting and claims for short-lived and long-lived climate pollutants</h2>
+					<p>
+						Learn how Cascade is driving strong community alignment on the credibility of corporate and international
+						credit claims, and read our latest report.
+					</p>
+					<a href="/blog/accounting-and-claims-for-super-pollutants">Learn More</a>
+				</div>
+
+				<div>
+					<img src={bridge} alt="Crossing The Bridge" />
+					<h2>Voluntary climate financing as a bridge</h2>
+					<p>
+						Voluntary climate finance is one of the few tools we can deploy at speed to test and de-risk climate
+						technologies, while closing three critical gaps to scale up: building the evidence base, driving down
+						costs, and resolving real-world deployment risks.
+					</p>
+					<a href="/blog/crossing-the-bridge" target="_blank" rel="noopener noreferrer">Learn More</a>
+				</div>
+
+				<div>
+					<img src={policy} alt="Drawdown to Durable Storage" />
+					<h2>ERW in EU carbon removal policy</h2>
+					<p>
+						An in-depth look at how ERW fits within the EU Carbon Removal and Carbon Farming regulation and carbon
+						market frameworks.
+					</p>
+					<a href="/blog/drawdown-to-durable">Learn More</a>
+				</div>
+
+				<div>
+					<img src={farm1} alt="Policy priorities for ERW" />
+					<h2>Policy priorities for ERW</h2>
+					<p>
+						We advance policies that support ERW innovation, provide financial assistance for responsible scale-up, and
+						increase confidence of carbon removal buyers and investors to enter the market.
+					</p>
+					<a href="/blog/policy">Learn More</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<style>
+	.container {
+		font-size: 1rem;
+	}
+
+	h1 {
+		font-weight: 300;
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-weight: 500;
+		font-size: 1.6rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		color: var(--color-dark);
+	}
+
+	h2 {
+		font-weight: 300;
+		font-size: 1.8rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		line-height: 2.2rem;
+		color: var(--color-dark);
+	}
+
+	h5 {
+		font-weight: 300;
+		font-size: 1.2rem;
+		color: var(--color-dark);
+		margin-top: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.scroll-nav-wrapper.pinned .scroll-nav-spacer {
+		min-height: 2.75rem;
+	}
+
+	.scroll-nav-wrapper.pinned .scroll-nav {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: calc(4rem - 1px);
+		width: 100%;
+	}
+
+	nav.scroll-nav {
+		position: sticky;
+		top: calc(4rem - 1px);
+		z-index: 10;
+		background-color: var(--color-dark);
+		color: var(--color-light);
+		border-top: 1px solid var(--color-light);
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	nav.scroll-nav a {
+		flex: 1 1 0;
+		min-width: 0;
+		padding: 0.6rem;
+		margin: -1px;
+		margin-left: 0;
+		font-size: 1rem;
+		text-decoration: none;
+		color: inherit;
+		text-align: center;
+		border: 1px solid var(--color-light);
+	}
+
+	nav.scroll-nav a:first-child {
+		border-left: none;
+	}
+
+	nav.scroll-nav a.active {
+		background-color: var(--color-light);
+		color: var(--color-dark);
+	}
+
+	@media (max-width: 660px) {
+		nav.scroll-nav a {
+			padding: 0.4rem;
+			font-size: 0.875rem;
+		}
+	}
+
+	.preamble {
+		padding: 1rem 4rem;
+		background-color: var(--color-dark);
+		color: var(--color-light);
+	}
+
+	.areas {
+		padding: 1.5rem 4rem;
+		padding-bottom: 6rem;
+	}
+
+	.areas section {
+		margin-top: -7rem;
+		padding-top: 8rem;
+		scroll-margin-top: 7rem;
+		margin-bottom: -5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	.highlights {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.highlights > div {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.highlights img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		border-radius: 1rem;
+	}
+
+	.highlights a {
+		display: inline-block;
+		margin-top: auto;
+		border-radius: 2rem;
+		background-color: var(--color-accent);
+		text-align: center;
+		padding: 0.5rem 1.2rem;
+		text-decoration: none;
+		color: var(--color-light);
+	}
+
+	@media (max-width: 660px) {
+		.areas,
+		.preamble {
+			padding: 1rem 2rem;
+		}
+
+		.areas {
+			padding-bottom: 6rem;
+		}
+	}
+</style>

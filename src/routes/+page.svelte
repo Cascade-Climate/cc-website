@@ -20,6 +20,9 @@
 	/>
 </svelte:head>
 <div>
+	<a class="bedrock-topbar" href="/bedrock-initiative">
+		<span>Introducing Bedrock Initiative, a coordinated global research program to unlock the climate and agricultural potential of ERW</span>
+	</a>
 	<section id="headline" style="width: 100%;">
 		<h1>
 			Propelling high-potential climate solutions from the margins to the mainstream.
@@ -301,6 +304,46 @@
 		padding: 2rem 4rem;
 	}
 
+	.bedrock-topbar {
+		display: block;
+		width: calc(100% - 2rem);
+		margin: 0.6rem auto 0;
+		padding: 0.95rem 1.1rem;
+		background: color-mix(in srgb, var(--color-dark) 88%, var(--color-accent));
+		color: var(--color-light);
+		font-weight: 400;
+		line-height: 1.45;
+		text-decoration: none;
+		text-align: center;
+		border: 1px solid color-mix(in srgb, var(--color-light) 26%, transparent);
+		border-radius: 0.95rem;
+		box-shadow:
+			0 6px 18px color-mix(in srgb, var(--color-dark) 18%, transparent),
+			inset 0 1px 0 color-mix(in srgb, var(--color-light) 12%, transparent);
+		cursor: pointer;
+		transition:
+			background-color 0.15s ease,
+			box-shadow 0.15s ease,
+			transform 0.15s ease;
+	}
+
+	.bedrock-topbar:hover {
+		background: color-mix(in srgb, var(--color-dark) 84%, var(--color-accent));
+		box-shadow:
+			0 10px 24px color-mix(in srgb, var(--color-dark) 24%, transparent),
+			inset 0 1px 0 color-mix(in srgb, var(--color-light) 16%, transparent);
+		transform: translateY(-1px);
+	}
+
+	.bedrock-topbar:focus-visible {
+		outline: 2px solid color-mix(in srgb, var(--color-highlight) 86%, transparent);
+		outline-offset: -2px;
+	}
+
+	.bedrock-topbar:active {
+		background: color-mix(in srgb, var(--color-dark) 80%, var(--color-accent));
+	}
+
 	.spotlights {
 		display: flex;
 		gap: 1.5rem;
@@ -348,8 +391,15 @@
 
 		#our-work,
 		#headline h1,
-		#about div {
+		#about div,
+		.bedrock-topbar {
 			padding: 1rem 2rem;
+		}
+
+		.bedrock-topbar {
+			width: calc(100% - 1rem);
+			margin-top: 0.5rem;
+			text-align: center;
 		}
 	}
 </style>

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
+    "dev:fresh": "sh scripts/dev-fresh.sh",
     "build": "vite build",
     "preview": "npm run build && wrangler pages dev .svelte-kit/cloudflare",
     "lint": "prettier --check . && eslint .",

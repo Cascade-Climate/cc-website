@@ -4,6 +4,10 @@
 	import NavModal from '$lib/components/NavModal.svelte';
 	import config from '$lib/config.json';
 
+	export let navItems = undefined;
+
+	$: items = navItems ?? config.navItems;
+
 	let navModalActive = false;
 	function toggleNavModal() {
 		navModalActive = !navModalActive;
@@ -22,7 +26,7 @@
 		</div>
 		{#if !navModalActive}
 			<nav>
-				{#each config.navItems as item, i}
+				{#each items as item, i}
 					{#if item.children.length > 1}
 						<div
 							on:mouseover={() => { opened = i; }}
@@ -37,13 +41,35 @@
 							</a>
 							<div class="subnav" class:open={opened === i}>
 								{#each item.children as subitem}
-									<a
-										target={subitem.external ? '_blank' : '_self'}
-										href={subitem.url}
-										on:click={() => (navModalActive = false)}
-									>
-										{subitem.label}
-									</a>
+									{#if subitem.children && subitem.children.length}
+										<div class="subnav-group">
+											<a
+												target={subitem.external ? '_blank' : '_self'}
+												href={subitem.url}
+												on:click={() => (navModalActive = false)}
+											>
+												{subitem.label}
+											</a>
+											{#each subitem.children as nested}
+												<a
+													class="subnav-nested"
+													target={nested.external ? '_blank' : '_self'}
+													href={nested.url}
+													on:click={() => (navModalActive = false)}
+												>
+													{nested.label}
+												</a>
+											{/each}
+										</div>
+									{:else}
+										<a
+											target={subitem.external ? '_blank' : '_self'}
+											href={subitem.url}
+											on:click={() => (navModalActive = false)}
+										>
+											{subitem.label}
+										</a>
+									{/if}
 								{/each}
 							</div>
 						</div>
@@ -59,7 +85,7 @@
 		{/if}
 		<HamburgerMenu mobileOnly={true} callbackFn={toggleNavModal} active={navModalActive} />
 	</div>
-	<NavModal active={navModalActive} callbackFn={toggleNavModal} />
+	<NavModal active={navModalActive} callbackFn={toggleNavModal} navItems={items} />
 </header>
 
 <style>
@@ -140,6 +166,31 @@
 	}
 	.subnav.open {
 		display: flex;
+	}
+
+	.subnav-group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.35rem;
+		width: 100%;
+		padding: 0.15rem 0;
+		border-bottom: 1px solid color-mix(in srgb, var(--color-light) 25%, transparent);
+	}
+
+	.subnav-group:last-child {
+		border-bottom: none;
+	}
+
+	.subnav-group > a:first-child {
+		font-weight: 500;
+	}
+
+	.subnav-nested {
+		font-size: 11px !important;
+		line-height: 14px !important;
+		color: var(--color-highlight) !important;
+		padding: 2px 8px !important;
 	}
 
 	@media (max-width: 660px) {

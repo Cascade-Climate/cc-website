@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
     import grants from '$lib/images/nature/grants.webp';
@@ -20,7 +21,7 @@
 
                 <hr>
                 
-                <p>Cascade <a href="https://cascadeclimate.org/our-work#superpollutantmitigation">recently announced</a> the expansion of our work into the world of super pollutant mitigation to address the urgent risks associated with near-term warming. In the piece, we outline a theory of change in which catalytic voluntary climate finance kickstarts action that helps bridge to a policy-driven end state, where super pollutant reductions are embedded in industry value chains and national climate policies.
+                <p>Cascade <a href={$page.data.previewBedrockOurWork ? '/our-work/refrigerant-management-and-transition' : 'https://cascadeclimate.org/our-work#superpollutantmitigation'}>recently announced</a> the expansion of our work into the world of super pollutant mitigation to address the urgent risks associated with near-term warming. In the piece, we outline a theory of change in which catalytic voluntary climate finance kickstarts action that helps bridge to a policy-driven end state, where super pollutant reductions are embedded in industry value chains and national climate policies.
                 </p><br>
 
                 <p>This policy-driven end state—the “far side” of the bridge—is the ultimate goal. Early projects funded through voluntary climate finance can help make that end state possible by addressing gaps faced when scaling climate solutions and pulling forward engagement by policymakers and industrial actors.
