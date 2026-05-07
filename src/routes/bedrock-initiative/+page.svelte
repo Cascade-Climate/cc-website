@@ -75,7 +75,6 @@
 				aria-hidden="true"
 			>
 				<source src="/videos/basalt-iceland-video-bedrock.mp4" type="video/mp4" />
-				<source src="/videos/basalt-iceland-video-bedrock.mov" type="video/quicktime" />
 			</video>
 		</div>
 		<div class="hero-inner">
