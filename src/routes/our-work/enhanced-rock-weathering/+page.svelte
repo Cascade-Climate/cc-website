@@ -14,7 +14,7 @@ import erwHero from '$lib/images/nature/erw-hero-2.png';
 
 <div class="page">
 	<section class="hero">
-		<img src={erwHero} alt="" class="hero-img" width="1024" height="684" />
+		<img src={erwHero} alt="" class="hero-img" width="1024" height="588" />
 	</section>
 
 	<section class="body">
@@ -30,19 +30,19 @@ import erwHero from '$lib/images/nature/erw-hero-2.png';
 		</p>
 		<nav class="scroll-nav" aria-label="Enhanced Rock Weathering sections">
 			<a href="#bedrock-initiative">Bedrock Initiative</a>
-			<a href="#initiatives-and-tools">Initiatives and Tools</a>
+			<a href="#tools-and-initiatives">Tools and Initiatives</a>
 			<a href="#recent-blogs">Recent Blogs</a>
 		</nav>
 		<section id="bedrock-initiative" class="bedrock-panel" aria-labelledby="bedrock-h">
 			<h2 id="bedrock-h">Bedrock Initiative</h2>
 			<p>
-				Bedrock Initiative is a coordinated research program generating the agronomic and carbon removal evidence needed to bring enhanced rock weathering into compliance carbon markets and government agricultural programs — where it can deliver the most value for farmers and the climate.
+				Bedrock Initiative is a coordinated research program generating the agronomic and carbon removal evidence needed to bring enhanced rock weathering into compliance carbon markets and government agricultural programs — where it can deliver value for farmers and the climate at scale.
 			</p>
 			<a class="cta" href="/bedrock-initiative">Learn more</a>
 		</section>
 
 
-		<section id="initiatives-and-tools" class="section-anchor">
+		<section id="tools-and-initiatives" class="section-anchor">
 			<ErwHighlights />
 		</section>
 

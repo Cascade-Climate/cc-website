@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Modeling Acceleration - Bedrock Initiative - Cascade Climate</title>
+	<title>Model Acceleration - Bedrock Initiative - Cascade Climate</title>
 	<meta name="description" content="Comparable modeling frameworks for ERW deployment insights." />
 </svelte:head>
 
@@ -13,7 +13,7 @@
 	</section>
 	<section class="preamble">
 		<p class="crumb"><a href="/bedrock-initiative">Bedrock Initiative</a></p>
-		<h1>Modeling Acceleration</h1>
+		<h1>Model Acceleration</h1>
 	</section>
 	<section class="body">
 		<p>
@@ -21,8 +21,9 @@
 			multi-model ensembles.
 		</p>
 		<p>
-			These efforts will identify critical data gaps for field research to address, creating an iterative cycle between
-			modeling and field experimentation — with the first community workshop in May 2026.
+			These efforts — beginning with a comprehensive mapping of current model capabilities and process representations — will identify critical data gaps for field research to address, creating an iterative cycle between modeling and field experimentation — with the first community workshop in May 2026.
+
+			Stay tuned for more details.
 		</p>
 		<p><a class="back" href="/bedrock-initiative">← Back to Bedrock overview</a></p>
 	</section>
@@ -44,9 +45,12 @@
 		display: block;
 	}
 	.crumb a {
-		color: var(--color-highlight);
+		color: #fff;
 		text-decoration: none;
 		font-size: 0.9rem;
+	}
+	.crumb a:hover {
+		opacity: 0.92;
 	}
 	h1 {
 		font-weight: 300;

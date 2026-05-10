@@ -7,7 +7,7 @@
 	import dataImg from '$lib/images/nature/data.webp';
 </script>
 
-<h5>INITIATIVES AND TOOLS</h5>
+<h5>TOOLS AND INITIATIVES</h5>
 <div class="highlights">
 	<div>
 		<img src={dataImg} alt="ERW Data Quarry" />
@@ -37,8 +37,8 @@
 		<a href="/blog/metal-accumulation-calculator">Learn More</a>
 	</div>
 	<div>
-		<img src={cost} alt="MRV Calculator" />
-		<h2>MRV Calculator</h2>
+		<img src={cost} alt="MRV Cost Calculator" />
+		<h2>MRV Cost Calculator</h2>
 		<p>
 			We built a tool to help inform practitioners of the stacked costs of different analytical measurement choices in an
 			ERW deployment, as well as a database of cost quotes to help practitioners compare costs for leverage.
@@ -49,8 +49,8 @@
 		<img src={grants} alt="ERW Field Data Partnership Grant Awardees" />
 		<h2>ERW Field Data Partnership Grant Awardees</h2>
 		<p>
-			In collaboration with the Grantham Foundation, Google, and Frontier, we are excited to announce the awardees for
-			our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects.
+			In collaboration with the Grantham Foundation, Google, and Frontier, Cascade awarded ERW Field Data Partnership Grants
+			totaling over $1.2M in funding across 9 projects.
 		</p>
 		<a href="/blog/erw-field-grant-awardees">Learn More</a>
 	</div>

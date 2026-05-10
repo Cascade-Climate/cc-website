@@ -21,7 +21,7 @@
 	</section>
 	<section class="body">
 		<p>
-			Bedrock is governed through a structure convened and supported by Cascade Climate. A Steering Committee holds
+			Bedrock Initiative is governed through a structure convened and supported by Cascade Climate. A Steering Committee holds
 			decision-making authority over funding and annual operating priorities, and a Scientific Advisory Board provides
 			scientific oversight and independent guidance.
 		</p>
@@ -36,7 +36,7 @@
 				<article class="person-card">
 					<img src={elenaHeadshot} alt="Elena Cavallero" />
 					<h3>Elena Cavallero</h3>
-					<p>Venture Advisor, The Grantham Foundation for the Protection of the Environment</p>
+					<p>Venture Advisor, The Grantham Foundation</p>
 				</article>
 
 				<article class="person-card">
@@ -59,7 +59,10 @@
 				<article class="person-card">
 					<img src={kateMaherHeadshot} alt="Kate Maher" />
 					<h3>Kate Maher</h3>
-					<p>Scientific Advisory Board Member</p>
+					<p>
+						Senior Fellow at the Woods Institute for the Environment and Professor of Earth System Science, Stanford
+						University
+					</p>
 				</article>
 
 				<article class="person-card">
@@ -87,9 +90,12 @@
 		color: var(--color-light);
 	}
 	.crumb a {
-		color: var(--color-highlight);
+		color: #fff;
 		text-decoration: none;
 		font-size: 0.9rem;
+	}
+	.crumb a:hover {
+		opacity: 0.92;
 	}
 	h1 {
 		font-weight: 300;

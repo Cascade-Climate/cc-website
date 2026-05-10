@@ -82,7 +82,7 @@
 				<p class="eyebrow">ERW Science Acceleration</p>
 				<h1>Bedrock Initiative</h1>
 				<p class="lede">
-					Generating the agronomic and carbon removal evidence needed to bring enhanced rock weathering into compliance carbon markets and government agricultural programs — where it can deliver the most value for farmers and the climate.
+					Generating the agronomic and carbon removal evidence needed to bring enhanced rock weathering into compliance carbon markets and government agricultural programs — where it can deliver value for farmers and the climate at scale.
 				</p>
 			</div>
 		</div>
@@ -100,27 +100,26 @@
 	<section id="challenge" class="band">
 		<h2>The Challenge</h2>
 		<p>
-			ERW has enormous promise. But to conclusively determine its processes and benefits, ambitious and coordinated
-			research across diverse geographies is needed. Enhanced Rock Weathering (ERW) builds on a centuries-old agricultural
-			practice — applying agricultural lime to manage soil acidity — by using alternative minerals or improved application
+			Enhanced rock weathering (ERW) has enormous promise. But to conclusively determine its benefits, ambitious and coordinated
+			research across diverse geographies is needed. ERW builds on a centuries-old agricultural
+			practice — applying agricultural lime to manage soil acidity — by using alternative minerals or application
 			strategies that maximize the permanent removal of atmospheric carbon. The potential benefits are three-fold:
 			healthier soils, higher crop yields, and accelerated carbon removal.
 		</p>
 		<p>
-			But critical evidence gaps remain, and if ERW is going to earn the trust of policymakers, markets, and farming
+			But evidence gaps remain, and if ERW is going to earn the trust of policymakers, markets, and farming
 			communities, those gaps need to close at the speed the climate demands.
 		</p>
 		<ul class="challenge-bullets">
 			<li>
-				Agronomic evidence is thin — farmers need to know whether ERW will reliably improve their soil or their harvests
+				Agronomic evidence is thin — farmers need to know whether ERW will reliably improve their soil and harvest
 			</li>
 			<li>
-				Carbon removal through ERW depends on local conditions — scientists need to better understand when it happens
-				and how it differs across soils, climates, and farming systems.
+				The speed of carbon removal through ERW depends on multiple factors — scientists need to better understand when it happens and how it differs across soils, climates, and farming systems
 			</li>
 			<li>
 				Measurement is expensive — proving carbon removal at scale is too expensive today, and we need to build and
-				validate the models needed to bring these costs down
+				validate the methods needed to bring these costs down
 			</li>
 		</ul>
 	</section>
@@ -128,11 +127,8 @@
 	<section id="efforts" class="band alt">
 		<h2>The Initiative</h2>
 		<p>
-			Bedrock Initiative fills a gap in the evidence base for ERW — generating research more transparent than
-			commercial projects, more coordinated than individual studies, and built to complement both. Across three efforts,
-			Bedrock focuses on the questions that individual actors are structurally least able to tackle — longer time
-			horizons, broader geographic coverage, and rigorous assessment of agronomic outcomes, with research designs built to
-			surface null or inconclusive results alongside positive ones.
+			Bedrock Initiative critically strengthens the evidence base for ERW — generating research more transparent than
+			commercial projects, more coordinated than individual studies, and built to complement both. Across three efforts, Bedrock focuses on the questions that individual actors are structurally least able to tackle — longer time horizons, broader geographic coverage, and rigorous assessment of agronomic outcomes. Research designs are built to surface null or inconclusive results alongside positive ones.
 		</p>
 		<p>
 			The goal is to generate the scientific and economic case for ERW spanning the climates, soils, and farming systems
@@ -162,7 +158,7 @@
 
 	<section id="funding-and-governance" class="band">
 		<h2>Funding and Governance</h2>
-		<p>Bedrock Initiative draws founding support from Frontier, Google, Chan Zuckerberg Initiative, Grantham Foundation, Patrick J. McGovern Foundation, King Philanthropies, Kissick Family Foundation, and Cascade Climate. These catalytic funders will crowd in additional sources of support as the program scales.</p>
+		<p>The Bedrock Initiative draws founding support from Cascade Climate, Chan Zuckerberg Initiative, Frontier, Google, Grantham Foundation, King Philanthropies, Kissick Family Foundation, and Patrick J. McGovern Foundation. These catalytic funders will crowd in additional sources of support as the program scales.</p>
 		
 		<p>
 			Bedrock is governed through a Steering Committee for strategic planning and investment decision-making, a
@@ -176,9 +172,9 @@
 		<h2>Get Involved</h2>
 		<h3>Researchers</h3>
 		<p>
-			Bedrock Initiative is built to serve the scientific community working on ERW and we welcome partners. Email
-			<a href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">grants@cascadeclimate.org</a>
-			to learn how you can get involved.
+			Bedrock Initiative is built to serve the scientific community working on ERW and we welcome partners. To learn how
+			you can get involved,
+			<a href="mailto:grants@cascadeclimate.org" target="_blank" rel="noopener">email us</a>.
 		</p>
 		<h3>Policymakers</h3>
 		<p>
@@ -201,8 +197,7 @@
 			<div class="answer">
 				<p>
 					ERW builds on a centuries-old agricultural practice — applying crushed minerals to farmland — to permanently
-					remove CO<sub>2</sub> from the atmosphere while improving soil health and crop yields. It has particular potential in
-					the Global South, where it can sequester carbon and strengthen farmer livelihoods at the same time.
+					remove CO<sub>2</sub> from the atmosphere while improving soil health and crop yields.
 				</p>
 			</div>
 		</details>
@@ -211,10 +206,10 @@
 			<summary><span>What is Bedrock Initiative?</span></summary>
 			<div class="answer">
 				<p>
-					Bedrock Initiative is a coordinated research program generating the agronomic and carbon removal evidence that
+					Bedrock Initiative is a coordinated research program generating agronomic and carbon removal evidence that
 					ERW needs to enter compliance carbon markets and government agricultural programs. It works across three fronts:
 					a coordinated field research network, a model acceleration effort, and studies designed to produce answers
-					that only emerge at scale.
+					that only emerge at scale. These efforts complement work taking place across the field. 
 				</p>
 			</div>
 		</details>
@@ -223,20 +218,20 @@
 			<summary><span>What is Bedrock Initiative not?</span></summary>
 			<div class="answer">
 				<p>
-					Bedrock isn't trying to answer every open question in ERW science, and it isn't a substitute for the important
-					work already happening across academic labs and commercial deployments. It fills a specific gap — coordinating
-					standardized, transparent research across many geographies at a scale that no single actor is structured to do
+					Bedrock isn't trying to answer every open question in ERW science, and it isn't a substitute for
+					work already underway across academic labs and commercial deployments. It fills a specific gap — coordinating
+					standardized, transparent research across many geographies at a scale that no single actor is positioned to do
 					alone.
 				</p>
 			</div>
 		</details>
 
 		<details class="faq">
-			<summary><span>Where will CRN sites be located?</span></summary>
+			<summary><span>Where will Coordinated Research Network sites be located?</span></summary>
 			<div class="answer">
 				<p>
-					The Coordinated Research Network is prioritizing pilot sites in regions that combine high weathering potential,
-					meaningful benefits to farmers, and signals of commercial activity — such as but not limited to Brazil, India,
+					The Coordinated Research Network (CRN) is prioritizing pilot sites in regions that combine high weathering potential and
+					meaningful benefits to farmers — such as but not limited to Brazil, India,
 					Kenya, and parts of the United States. The first pilot sites will be selected in 2026, scaling toward a larger
 					network of sites over the coming years.
 				</p>
@@ -273,9 +268,7 @@
 			<summary><span>Who funds Bedrock Initiative?</span></summary>
 			<div class="answer">
 				<p>
-					Bedrock Initiative draws founding support from Frontier, Google, Chan Zuckerberg Initiative, Grantham
-					Foundation, Patrick J. McGovern Foundation, King Philanthropies, Kissick Family Foundation, and Cascade
-					Climate. These catalytic funders will crowd in additional sources of support as the program scales.
+					Bedrock Initiative draws founding support from Frontier, Google, Chan Zuckerberg Initiative, Grantham Foundation, Patrick J. McGovern Foundation, King Philanthropies, Kissick Family Foundation, and Cascade Climate. These catalytic funders will crowd in additional sources of support as the program scales.
 				</p>
 			</div>
 		</details>
@@ -502,15 +495,15 @@
 		scroll-margin-top: 7rem;
 		color: var(--color-dark);
 		border-radius: 1rem;
-		border: 1px solid color-mix(in srgb, var(--color-dark) 14%, transparent);
-		background: color-mix(in srgb, var(--color-light) 88%, var(--color-accent) 12%);
-		box-shadow: 0 1px 0 color-mix(in srgb, var(--color-dark) 6%, transparent);
+		border: 1px solid color-mix(in srgb, #023c40 14%, transparent);
+		background: #e1fcf7;
+		box-shadow: 0 1px 0 color-mix(in srgb, #023c40 8%, transparent);
 	}
 
 	.effort-pullquote blockquote {
 		margin: 0;
 		padding: 0 0 0 1.05rem;
-		border-left: 3px solid color-mix(in srgb, var(--color-accent) 72%, var(--color-dark));
+		border-left: 3px solid #023c40;
 	}
 
 	.effort-pullquote blockquote p {
@@ -533,7 +526,7 @@
 	.pullquote-name {
 		font-weight: 600;
 		font-size: 1rem;
-		color: var(--color-dark);
+		color: #023c40;
 	}
 
 	.pullquote-role {
