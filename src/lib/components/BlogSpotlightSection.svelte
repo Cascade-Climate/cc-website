@@ -4,7 +4,7 @@
 
 <section class="blog-spotlight">
 	<hr class="rule" />
-	<h3>SPOTLIGHT ON <a href="/blog">OUR BLOG ↗</a></h3>
+	<h3>RECENT <a href="/blog">BLOGS ↗</a></h3>
 	<div class="posts">
 		{#each blogTeaserPosts as post, i}
 			<article class="post">

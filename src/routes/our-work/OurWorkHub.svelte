@@ -49,7 +49,7 @@
 			<img class="supporting-img" src={mdp.image} alt={mdp.imageAlt} />
 			<div class="supporting-copy">
 				<p class="supporting-teaser">{mdp.teaser}</p>
-				<a class="cta cta-secondary" href={mdp.href}>Learn more</a>
+				<a class="cta" href={mdp.href}>Learn more</a>
 			</div>
 		</div>
 	</section>
@@ -128,11 +128,6 @@
 		padding: 0.5rem 1.25rem;
 		text-decoration: none;
 		font-size: 0.95rem;
-	}
-
-	.cta-secondary {
-		background-color: var(--color-dark);
-		margin-top: 0.5rem;
 	}
 
 	.supporting {
