@@ -14,7 +14,7 @@ import erwHero from '$lib/images/nature/erw-hero-2.png';
 
 <div class="page">
 	<section class="hero">
-		<img src={erwHero} alt="" class="hero-img" width="1024" height="588" />
+		<img src={erwHero} alt="" class="hero-img" width="1024" height="767" />
 	</section>
 
 	<section class="body">
