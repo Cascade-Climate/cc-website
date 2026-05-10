@@ -12,7 +12,7 @@ const ourWorkPreviewChildren = [
 		url: '/our-work/refrigerant-management-and-transition'
 	},
 	{
-		label: 'Market Development and Policy',
+		label: 'Policy and Market Development',
 		url: '/our-work/market-development-and-policy'
 	},
 	{ label: 'Blog', url: '/blog' }

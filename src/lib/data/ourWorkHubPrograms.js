@@ -28,7 +28,7 @@ export const ourWorkHubPillarPrograms = [
  */
 export const ourWorkHubSupportingProgram = {
 	eyebrow: 'Cross-cutting',
-	title: 'Market Development and Policy',
+	title: 'Policy and Market Development',
 	href: '/our-work/market-development-and-policy',
 	image: policy,
 	imageAlt: 'Policy and markets',

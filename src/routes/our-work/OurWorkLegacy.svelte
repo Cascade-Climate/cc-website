@@ -17,7 +17,7 @@
 	const sections = [
 		{ id: 'erw', title: 'Enhanced Rock Weathering' },
 		{ id: 'refrigerantmanagement', title: 'Refrigerant Management and Transition' },
-		{ id: 'marketdevelopment', title: 'Market Development and Policy Engagement' }
+		{ id: 'marketdevelopment', title: 'Policy and Market Development Engagement' }
 	];
 
 	let activeSection = '';
@@ -242,7 +242,7 @@
 		</section>
 
 		<section id="marketdevelopment">
-			<h3>Market Development and Policy Engagement</h3>
+			<h3>Policy and Market Development Engagement</h3>
 			<p>
 				High-potential climate solutions can stall at the starting line, fragment rapidly, and remain reliant on a few
 				early champions without the policy and market infrastructure required to build, maintain, and accelerate

@@ -52,7 +52,7 @@
 			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across societies and ecosystems. Averting the worst of this demands coordinated preparation and response that spans industry, governments, and scientists.
 		</p>
 		<p>
-			Super pollutants like methane and HFCs offer the fastest path to slowing this warming, given their outsized climate impact and shorter atmospheric lifespans. Cascade is contributing to early market development and policy foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
+			Super pollutants like methane and HFCs offer the fastest path to slowing this warming, given their outsized climate impact and shorter atmospheric lifespans. Cascade is contributing to early policy and market development foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
 		</p>
 	</section>
 	<section id="approach">
