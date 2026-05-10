@@ -121,7 +121,7 @@
 				</div>
 				<div>
 					<img src={LRMblog1} alt="" />
-					<h2>Why LRM Matters</h2>
+					<h2>Why lifecycle refrigerant management matters</h2>
 					<p>
 						Learn about the benefits, what blocks progress, and how strategic interventions can unlock immediate climate
 						wins while building economic resilience.
