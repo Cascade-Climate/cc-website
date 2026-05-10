@@ -140,6 +140,24 @@
 			markets and government agricultural programs — that can drive durable adoption.
 		</p>
 		<BedrockWorkstreamCards />
+
+		<figure
+			id="bedrock-initiative-quote"
+			class="effort-pullquote"
+			aria-label="Quote from Zeke Hausfather, Frontier"
+		>
+			<blockquote>
+				<p>
+					“Enhanced rock weathering is a promising carbon removal pathway, yet its open-system nature presents real
+					challenges for monitoring, reporting, and verification. The Bedrock Initiative will enable the rigorous,
+					long-term measurement needed to narrow uncertainties and strengthen confidence across the field.”
+				</p>
+			</blockquote>
+			<figcaption>
+				<span class="pullquote-name">Zeke Hausfather</span>
+				<span class="pullquote-role">Climate Research Lead, Frontier</span>
+			</figcaption>
+		</figure>
 	</section>
 
 	<section id="funding-and-governance" class="band">
@@ -475,6 +493,52 @@
 
 	.challenge-bullets li:last-child {
 		margin-bottom: 0;
+	}
+
+	.effort-pullquote {
+		max-width: 52rem;
+		margin: 2.75rem auto 0;
+		padding: 1.75rem 1.35rem 1.65rem;
+		scroll-margin-top: 7rem;
+		color: var(--color-dark);
+		border-radius: 1rem;
+		border: 1px solid color-mix(in srgb, var(--color-dark) 14%, transparent);
+		background: color-mix(in srgb, var(--color-light) 88%, var(--color-accent) 12%);
+		box-shadow: 0 1px 0 color-mix(in srgb, var(--color-dark) 6%, transparent);
+	}
+
+	.effort-pullquote blockquote {
+		margin: 0;
+		padding: 0 0 0 1.05rem;
+		border-left: 3px solid color-mix(in srgb, var(--color-accent) 72%, var(--color-dark));
+	}
+
+	.effort-pullquote blockquote p {
+		margin: 0;
+		font-size: 1.125rem;
+		line-height: 1.58;
+		font-style: italic;
+		color: color-mix(in srgb, var(--color-dark) 90%, var(--color-text));
+	}
+
+	.effort-pullquote figcaption {
+		margin-top: 1.1rem;
+		padding-left: 1.15rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+		font-style: normal;
+	}
+
+	.pullquote-name {
+		font-weight: 600;
+		font-size: 1rem;
+		color: var(--color-dark);
+	}
+
+	.pullquote-role {
+		font-size: 0.95rem;
+		color: color-mix(in srgb, var(--color-dark) 58%, transparent);
 	}
 
 	section#faq > h2,
