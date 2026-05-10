@@ -140,18 +140,21 @@
 		<figure
 			id="bedrock-initiative-quote"
 			class="effort-pullquote"
-			aria-label="Quote from Zeke Hausfather, Frontier"
+			aria-label="Quote from Kate Maher, Stanford University"
 		>
 			<blockquote>
 				<p>
-					“Enhanced rock weathering is a promising carbon removal pathway, yet its open-system nature presents real
-					challenges for monitoring, reporting, and verification. The Bedrock Initiative will enable the rigorous,
-					long-term measurement needed to narrow uncertainties and strengthen confidence across the field.”
+					“Cascade Climate's commitment to enhanced weathering research comes at a critical moment. Building the
+					scientific foundation — from mechanistic understanding to rigorous monitoring and modeling tools — is
+					essential for determining whether and how this approach can scale as a meaningful climate solution.”
 				</p>
 			</blockquote>
 			<figcaption>
-				<span class="pullquote-name">Zeke Hausfather</span>
-				<span class="pullquote-role">Climate Research Lead, Frontier</span>
+				<span class="pullquote-name">Kate Maher</span>
+				<span class="pullquote-role">
+					Senior Fellow at the Woods Institute for the Environment and Professor of Earth System Science, Stanford
+					University
+				</span>
 			</figcaption>
 		</figure>
 	</section>
@@ -186,6 +189,24 @@
 			For all other inquiries — whether funding, partnerships, or something we haven't thought of yet — please email
 			<a href="mailto:hello@cascadeclimate.org" target="_blank" rel="noopener">hello@cascadeclimate.org</a>.
 		</p>
+
+		<figure
+			id="get-involved-zeke-hausfather-quote"
+			class="effort-pullquote"
+			aria-label="Quote from Zeke Hausfather, Frontier"
+		>
+			<blockquote>
+				<p>
+					“Enhanced rock weathering is a promising carbon removal pathway, yet its open-system nature presents real
+					challenges for monitoring, reporting, and verification. The Bedrock Initiative will enable the rigorous,
+					long-term measurement needed to narrow uncertainties and strengthen confidence across the field.”
+				</p>
+			</blockquote>
+			<figcaption>
+				<span class="pullquote-name">Zeke Hausfather</span>
+				<span class="pullquote-role">Climate Research Lead, Frontier</span>
+			</figcaption>
+		</figure>
 	</section>
 
 	<section id="faq" class="band">
@@ -268,7 +289,7 @@
 			<summary><span>Who funds Bedrock Initiative?</span></summary>
 			<div class="answer">
 				<p>
-					Bedrock Initiative draws founding support from Frontier, Google, Chan Zuckerberg Initiative, Grantham Foundation, Patrick J. McGovern Foundation, King Philanthropies, Kissick Family Foundation, and Cascade Climate. These catalytic funders will crowd in additional sources of support as the program scales.
+					Bedrock Initiative draws founding support from Cascade Climate, Chan Zuckerberg Initiative, Frontier, Google, Grantham Foundation, King Philanthropies, Kissick Family Foundation, and Patrick J. McGovern Foundation. These catalytic funders will crowd in additional sources of support as the program scales.
 				</p>
 			</div>
 		</details>
