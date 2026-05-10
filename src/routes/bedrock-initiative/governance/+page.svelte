@@ -3,7 +3,7 @@
 	import daiHeadshot from '$lib/images/people/dai-ellis.png';
 	import elenaHeadshot from '$lib/images/people/elena-cavallero.png';
 	import isabelMontanezHeadshot from '$lib/images/people/isabel-montanez.png';
-	import placeholderHeadshot from '$lib/images/people/person-placeholder.svg';
+	import kateMaherHeadshot from '$lib/images/people/kate-maher.png';
 </script>
 
 <svelte:head>
@@ -36,7 +36,7 @@
 				<article class="person-card">
 					<img src={elenaHeadshot} alt="Elena Cavallero" />
 					<h3>Elena Cavallero</h3>
-					<p>Venture Advisor, The Grantham Foundation for the Protection of the Environment and Board Member, Cascade Climate</p>
+					<p>Venture Advisor, The Grantham Foundation for the Protection of the Environment</p>
 				</article>
 
 				<article class="person-card">
@@ -57,7 +57,7 @@
 			<h2 id="sab-h" class="team-heading">Science Advisory Board</h2>
 			<div class="team-grid">
 				<article class="person-card">
-					<img src={placeholderHeadshot} alt="Placeholder portrait for Kate Maher" />
+					<img src={kateMaherHeadshot} alt="Kate Maher" />
 					<h3>Kate Maher</h3>
 					<p>Scientific Advisory Board Member</p>
 				</article>
@@ -65,7 +65,10 @@
 				<article class="person-card">
 					<img src={isabelMontanezHeadshot} alt="Isabel Montañez" />
 					<h3>Isabel Montañez</h3>
-					<p>Scientific Advisory Board Member</p>
+					<p>
+						Distinguished Professor and Chancellor’s Leadership Professor in the Department of Earth and Planetary
+						Sciences, University of California, Davis
+					</p>
 				</article>
 			</div>
 		</section>
