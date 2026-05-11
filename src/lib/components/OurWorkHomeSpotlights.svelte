@@ -1,7 +1,7 @@
 <script>
 	import erwPhoto from '$lib/images/nature/erw.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
-	import slcp from '$lib/images/nature/slcp-entry.webp';
+	import bedrockInitiativeHero from '$lib/images/nature/bedrock-initiative-hero.png';
 	import SpotlightGrid from '$lib/components/SpotlightGrid.svelte';
 
 	const items = [
@@ -33,13 +33,12 @@
 			linkTarget: '_blank'
 		},
 		{
-			image: slcp,
-			imageAlt: 'Super Pollutants',
-			title: "Super pollutant mitigation needs a bigger push — and we're joining the effort",
+			image: bedrockInitiativeHero,
+			imageAlt: 'Bedrock Initiative',
+			title: 'Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering',
 			excerpt:
-				'Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.',
-			href: '/blog/cascade-entry-into-slcp-mitigation',
-			linkTarget: '_blank'
+				'Learn how the Bedrock Initiative will critically strengthen the evidence base for ERW',
+			href: '/bedrock-initiative'
 		}
 	];
 </script>

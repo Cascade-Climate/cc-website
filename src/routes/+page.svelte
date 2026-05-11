@@ -6,7 +6,7 @@
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
-	import slcp from '$lib/images/nature/slcp-entry.webp';
+	import bedrockInitiativeHero from '$lib/images/nature/bedrock-initiative-hero.png';
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
@@ -78,12 +78,12 @@
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={slcp} alt="Super Pollutants" />
-				<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
+				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
+				<h2>Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering</h2>
 				<p>
-					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+					Learn how the Bedrock Initiative will critically strengthen the evidence base for ERW
 				</p>
-				<a href="/blog/cascade-entry-into-slcp-mitigation" target="_blank">Learn More</a>
+				<a href="/bedrock-initiative">Learn More</a>
 			</div>
 		</div>
 
