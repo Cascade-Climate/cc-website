@@ -39,13 +39,13 @@
 		</p>
 
 		<nav class="scroll-nav" aria-label="Policy and Market Development sections">
-			<a href="#highlights">Highlights</a>
+			<a href="#highlights">Multi-Sector</a>
 			<a href="#spotlight-erw">ERW</a>
 			<a href="#spotlight-refrigerant-management">Refrigerant Management</a>
 		</nav>
 
 		<section id="highlights" class="highlights-section section-anchor" aria-labelledby="highlights-h">
-			<h5 id="highlights-h">CROSS-CUTTING HIGHLIGHTS</h5>
+			<h5 id="highlights-h">Multi-Sector Policy and Market Development</h5>
 			<div class="highlights">
 				<div>
 					<img src={asiasmoke} alt="" />
@@ -176,6 +176,9 @@
 		background: var(--color-dark);
 		display: flex;
 		border-top: 1px solid color-mix(in srgb, var(--color-light) 65%, transparent);
+		margin: 0.85rem 1.75rem 1rem;
+		border-radius: 0.5rem;
+		overflow: hidden;
 	}
 
 	.scroll-nav a {
@@ -286,6 +289,11 @@
 
 		.body {
 			padding: 1.5rem 2rem 4rem;
+		}
+
+		.scroll-nav {
+			margin-left: 1rem;
+			margin-right: 1rem;
 		}
 	}
 

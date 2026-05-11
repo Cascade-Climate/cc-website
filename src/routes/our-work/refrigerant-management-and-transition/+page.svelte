@@ -80,6 +80,9 @@
 		background: var(--color-dark);
 		display: flex;
 		border-top: 1px solid color-mix(in srgb, var(--color-light) 65%, transparent);
+		margin: 0.85rem 1.75rem 1rem;
+		border-radius: 0.5rem;
+		overflow: hidden;
 	}
 
 	.scroll-nav a {
@@ -161,6 +164,11 @@
 	@media (max-width: 660px) {
 		.body {
 			padding: 1.5rem 2rem 4rem;
+		}
+
+		.scroll-nav {
+			margin-left: 1rem;
+			margin-right: 1rem;
 		}
 	}
 </style>
