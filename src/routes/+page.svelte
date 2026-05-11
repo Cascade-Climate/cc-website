@@ -89,7 +89,7 @@
 
 		<hr style="margin: 64px;">
 
-		<h3>SPOTLIGHT ON <a href="/blog">OUR BLOG ↗</a></h3>
+		<h3>RECENT <a href="/blog">BLOGS ↗</a></h3>
 		<div id="blog">
 	<div id="post-list">
 
