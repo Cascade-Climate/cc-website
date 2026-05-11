@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import asteraLogo from '$lib/images/supporters/astera.webp';
 	import czLogo from '$lib/images/supporters/chan-zuckerberg.webp';
@@ -45,13 +46,13 @@
 			Cascade tackles the systemic bottlenecks that aren’t the “job” of any existing actor—challenges that markets, policy, and science can't solve in isolation. We coordinate across these spheres to overcome collective action problems, build novel tools and platforms that speed the pace of learning, and direct substantially more resources toward these critical emerging climate solutions. 
 		</p>
 		<p>
-			Over the past two years, we've demonstrated this approach in enhanced rock weathering (ERW)—accelerating high-priority R&D, creating deployment-driven learning cycles through early voluntary markets, and building policy momentum for the field. Learn more about our work in ERW <a href="/our-work#erw">here</a>.
+			Over the past two years, we've demonstrated this approach in enhanced rock weathering (ERW)—accelerating high-priority R&D, creating deployment-driven learning cycles through early voluntary markets, and building policy momentum for the field. Learn more about our work in ERW <a href={$page.data.previewBedrockOurWork ? '/our-work/enhanced-rock-weathering' : '/our-work#erw'}>here</a>.
 		</p>
 		<p>
 			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across societies and ecosystems. Averting the worst of this demands coordinated preparation and response that spans industry, governments, and scientists.
 		</p>
 		<p>
-			Super pollutants like methane and HFCs offer the fastest path to slowing this warming, given their outsized climate impact and shorter atmospheric lifespans. Cascade is contributing to early market development and policy foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
+			Super pollutants like methane and HFCs offer the fastest path to slowing this warming, given their outsized climate impact and shorter atmospheric lifespans. Cascade is contributing to early policy and market development foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
 		</p>
 	</section>
 	<section id="approach">

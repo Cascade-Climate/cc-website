@@ -6,7 +6,7 @@
 	import ocean2 from '$lib/images/nature/ocean2.webp';
 	import policy from '$lib/images/nature/policy.webp';
 	import cost from '$lib/images/nature/cost.webp';
-	import slcp from '$lib/images/nature/slcp-entry.webp';
+	import bedrockInitiativeHero from '$lib/images/nature/bedrock-initiative-hero.png';
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
@@ -20,6 +20,9 @@
 	/>
 </svelte:head>
 <div>
+	<a class="bedrock-topbar" href="/bedrock-initiative">
+		<span>Introducing Bedrock Initiative, a coordinated global research program to unlock the climate and agricultural potential of ERW</span>
+	</a>
 	<section id="headline" style="width: 100%;">
 		<h1>
 			Propelling high-potential climate solutions from the margins to the mainstream.
@@ -75,18 +78,18 @@
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={slcp} alt="Super Pollutants" />
-				<h2>Super pollutant mitigation needs a bigger push — and we're joining the effort</h2>
+				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
+				<h2>Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering</h2>
 				<p>
-					Meeting the climate challenge requires cutting super pollutants for near-term impact while scaling carbon removal for the long term. Cascade is expanding its work to advance this dual strategy.
+					Learn how the Bedrock Initiative will critically strengthen the evidence base for ERW
 				</p>
-				<a href="/blog/cascade-entry-into-slcp-mitigation" target="_blank">Learn More</a>
+				<a href="/bedrock-initiative">Learn More</a>
 			</div>
 		</div>
 
 		<hr style="margin: 64px;">
 
-		<h3>SPOTLIGHT ON <a href="/blog">OUR BLOG ↗</a></h3>
+		<h3>RECENT <a href="/blog">BLOGS ↗</a></h3>
 		<div id="blog">
 	<div id="post-list">
 
@@ -301,6 +304,46 @@
 		padding: 2rem 4rem;
 	}
 
+	.bedrock-topbar {
+		display: block;
+		width: calc(100% - 2rem);
+		margin: 0.6rem auto 0;
+		padding: 0.95rem 1.1rem;
+		background: color-mix(in srgb, var(--color-dark) 88%, var(--color-accent));
+		color: var(--color-light);
+		font-weight: 400;
+		line-height: 1.45;
+		text-decoration: none;
+		text-align: center;
+		border: 1px solid color-mix(in srgb, var(--color-light) 26%, transparent);
+		border-radius: 0.95rem;
+		box-shadow:
+			0 6px 18px color-mix(in srgb, var(--color-dark) 18%, transparent),
+			inset 0 1px 0 color-mix(in srgb, var(--color-light) 12%, transparent);
+		cursor: pointer;
+		transition:
+			background-color 0.15s ease,
+			box-shadow 0.15s ease,
+			transform 0.15s ease;
+	}
+
+	.bedrock-topbar:hover {
+		background: color-mix(in srgb, var(--color-dark) 84%, var(--color-accent));
+		box-shadow:
+			0 10px 24px color-mix(in srgb, var(--color-dark) 24%, transparent),
+			inset 0 1px 0 color-mix(in srgb, var(--color-light) 16%, transparent);
+		transform: translateY(-1px);
+	}
+
+	.bedrock-topbar:focus-visible {
+		outline: 2px solid color-mix(in srgb, var(--color-highlight) 86%, transparent);
+		outline-offset: -2px;
+	}
+
+	.bedrock-topbar:active {
+		background: color-mix(in srgb, var(--color-dark) 80%, var(--color-accent));
+	}
+
 	.spotlights {
 		display: flex;
 		gap: 1.5rem;
@@ -348,8 +391,15 @@
 
 		#our-work,
 		#headline h1,
-		#about div {
+		#about div,
+		.bedrock-topbar {
 			padding: 1rem 2rem;
+		}
+
+		.bedrock-topbar {
+			width: calc(100% - 1rem);
+			margin-top: 0.5rem;
+			text-align: center;
 		}
 	}
 </style>
