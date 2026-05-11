@@ -84,6 +84,7 @@
 				<p class="lede">
 					Generating the agronomic and carbon removal evidence needed to bring enhanced rock weathering into compliance carbon markets and government agricultural programs — where it can deliver value for farmers and the climate at scale.
 				</p>
+				<a class="hero-press-link" href="/bedrock-initiative/pressrelease.pdf">Read press release</a>
 			</div>
 		</div>
 	</section>
@@ -376,6 +377,23 @@
 		margin: 0;
 		line-height: 1.62;
 		opacity: 0.96;
+	}
+
+	.hero-press-link {
+		display: inline-block;
+		margin-top: 1.25rem;
+		padding: 0.55rem 1.35rem;
+		border-radius: 2rem;
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1rem;
+		transition: opacity 0.15s ease;
+	}
+
+	.hero-press-link:hover {
+		opacity: 0.92;
 	}
 
 	.scroll-nav-wrapper.pinned .scroll-nav-spacer {
