@@ -45,7 +45,7 @@
 		</nav>
 
 		<section id="highlights" class="highlights-section section-anchor" aria-labelledby="highlights-h">
-			<h5 id="highlights-h">Highlights</h5>
+			<h5 id="highlights-h">CROSS-CUTTING HIGHLIGHTS</h5>
 			<div class="highlights">
 				<div>
 					<img src={asiasmoke} alt="" />
@@ -81,7 +81,7 @@
 		</section>
 
 		<section id="spotlight-erw" class="highlights-section section-anchor" aria-labelledby="erw-h">
-			<h5 id="erw-h">Spotlight on ERW</h5>
+			<h5 id="erw-h">ERW POLICY AND MARKET DEVELOPMENT</h5>
 			<div class="highlights">
 				<div>
 					<img src={policyImg} alt="" />
@@ -118,7 +118,7 @@
 			class="highlights-section section-anchor"
 			aria-labelledby="rmt-h"
 		>
-			<h5 id="rmt-h">Spotlight on Refrigerant Management</h5>
+			<h5 id="rmt-h">REFRIGERANT MANAGEMENT POLICY AND MARKET DEVELOPMENT</h5>
 			<div class="highlights highlights--two">
 				<div>
 					<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="" />
