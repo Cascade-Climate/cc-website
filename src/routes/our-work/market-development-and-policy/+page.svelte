@@ -38,8 +38,14 @@
 			structures, business models, and policy frameworks that responsibly scale adoption.
 		</p>
 
-		<section class="highlights-section" aria-labelledby="cross-cutting-h">
-			<h5 id="cross-cutting-h">CROSS-CUTTING HIGHLIGHTS</h5>
+		<nav class="scroll-nav" aria-label="Policy and Market Development sections">
+			<a href="#highlights">Highlights</a>
+			<a href="#spotlight-erw">ERW</a>
+			<a href="#spotlight-refrigerant-management">Refrigerant Management</a>
+		</nav>
+
+		<section id="highlights" class="highlights-section section-anchor" aria-labelledby="highlights-h">
+			<h5 id="highlights-h">Highlights</h5>
 			<div class="highlights">
 				<div>
 					<img src={asiasmoke} alt="" />
@@ -74,8 +80,8 @@
 			</div>
 		</section>
 
-		<section class="highlights-section" aria-labelledby="erw-h">
-			<h5 id="erw-h">ERW HIGHLIGHTS</h5>
+		<section id="spotlight-erw" class="highlights-section section-anchor" aria-labelledby="erw-h">
+			<h5 id="erw-h">Spotlight on ERW</h5>
 			<div class="highlights">
 				<div>
 					<img src={policyImg} alt="" />
@@ -107,8 +113,12 @@
 			</div>
 		</section>
 
-		<section class="highlights-section" aria-labelledby="rmt-h">
-			<h5 id="rmt-h">REFRIGERANT MANAGEMENT AND TRANSITION HIGHLIGHTS</h5>
+		<section
+			id="spotlight-refrigerant-management"
+			class="highlights-section section-anchor"
+			aria-labelledby="rmt-h"
+		>
+			<h5 id="rmt-h">Spotlight on Refrigerant Management</h5>
 			<div class="highlights highlights--two">
 				<div>
 					<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="" />
@@ -157,6 +167,30 @@
 		padding: 2rem 4rem 4rem;
 		max-width: 1100px;
 		margin: 0 auto;
+	}
+
+	.scroll-nav {
+		position: sticky;
+		top: calc(4rem - 1px);
+		z-index: 10;
+		background: var(--color-dark);
+		display: flex;
+		border-top: 1px solid color-mix(in srgb, var(--color-light) 65%, transparent);
+	}
+
+	.scroll-nav a {
+		flex: 1 1 0;
+		padding: 0.72rem 0.6rem;
+		text-align: center;
+		text-decoration: none;
+		color: var(--color-light);
+		border: 1px solid color-mix(in srgb, var(--color-light) 55%, transparent);
+		margin: -1px 0 0 -1px;
+		font-size: 0.98rem;
+	}
+
+	.section-anchor {
+		scroll-margin-top: 6rem;
 	}
 
 	.highlights-section {
