@@ -45,7 +45,7 @@
 		</nav>
 
 		<section id="highlights" class="highlights-section section-anchor" aria-labelledby="highlights-h">
-			<h5 id="highlights-h">Multi-Sector Policy and Market Development</h5>
+			<h5 id="highlights-h">MULTI-SECTOR POLICY AND MARKET DEVELOPMENT</h5>
 			<div class="highlights">
 				<div>
 					<img src={asiasmoke} alt="" />
@@ -175,10 +175,11 @@
 		z-index: 10;
 		background: var(--color-dark);
 		display: flex;
-		border-top: 1px solid color-mix(in srgb, var(--color-light) 65%, transparent);
+		border: 4px solid var(--color-light);
 		margin: 0.85rem 1.75rem 1rem;
 		border-radius: 0.5rem;
 		overflow: hidden;
+		box-sizing: border-box;
 	}
 
 	.scroll-nav a {

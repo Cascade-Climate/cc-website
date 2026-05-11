@@ -83,10 +83,11 @@ import erwHero from '$lib/images/nature/erw-hero-2.png';
 		z-index: 10;
 		background: var(--color-dark);
 		display: flex;
-		border-top: 1px solid color-mix(in srgb, var(--color-light) 65%, transparent);
+		border: 4px solid var(--color-light);
 		margin: 0.85rem 1.75rem 1rem;
 		border-radius: 0.5rem;
 		overflow: hidden;
+		box-sizing: border-box;
 	}
 
 	.scroll-nav a {
