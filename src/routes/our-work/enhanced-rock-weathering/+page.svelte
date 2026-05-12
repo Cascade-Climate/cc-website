@@ -1,5 +1,5 @@
 <script>
-import erwHero from '$lib/images/nature/erw-hero-2.png';
+import erwHero from '$lib/images/nature/erw-hero-program.jpg';
 	import BedrockWorkstreamCards from '$lib/components/bedrock/BedrockWorkstreamCards.svelte';
 	import ErwHighlights from '$lib/components/our-work/ErwHighlights.svelte';
 </script>
@@ -14,7 +14,7 @@ import erwHero from '$lib/images/nature/erw-hero-2.png';
 
 <div class="page">
 	<section class="hero">
-		<img src={erwHero} alt="" class="hero-img" width="1024" height="767" />
+		<img src={erwHero} alt="" class="hero-img" width="1024" height="588" />
 	</section>
 
 	<section class="body">
