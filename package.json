@@ -9,7 +9,7 @@
     "preview": "npm run build && wrangler pages dev .svelte-kit/cloudflare",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
-    "deploy": "npm run build && wrangler pages deploy .svelte-kit/cloudflare"
+    "deploy": "npm run build && wrangler pages deploy .svelte-kit/cloudflare --project-name=cc-website"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",
