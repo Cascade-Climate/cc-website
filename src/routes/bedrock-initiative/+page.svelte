@@ -84,7 +84,13 @@
 				<p class="lede">
 					Generating the agronomic and carbon removal evidence needed to bring enhanced rock weathering into compliance carbon markets and government agricultural programs — where it can deliver value for farmers and the climate at scale.
 				</p>
-				<a class="hero-press-link" href="/Cascade_Climate_Bedrock_Initiative_Press_Release.pdf">Read press release</a>
+				<a
+					class="hero-press-link"
+					href="/Cascade_Climate_Bedrock_Initiative_Press_Release.pdf"
+					data-sveltekit-reload
+					target="_blank"
+					rel="noopener noreferrer"
+				>Read press release</a>
 			</div>
 		</div>
 	</section>
