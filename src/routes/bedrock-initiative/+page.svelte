@@ -86,10 +86,10 @@
 				</p>
 				<a
 					class="hero-press-link"
-					href="/Cascade_Climate_Bedrock_Initiative_Press_Release.pdf"
+					href="/Bedrock.PressRelease.pdf"
 					data-sveltekit-reload
+					rel="external noopener noreferrer"
 					target="_blank"
-					rel="noopener noreferrer"
 				>Read press release</a>
 			</div>
 		</div>
@@ -360,6 +360,8 @@
 	.hero-copy {
 		max-width: 52rem;
 		margin: 0 auto;
+		position: relative;
+		z-index: 2;
 	}
 
 	.eyebrow {
