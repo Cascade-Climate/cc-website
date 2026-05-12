@@ -19,11 +19,9 @@ const ourWorkPreviewChildren = [
 ];
 
 /**
- * @param {boolean} preview
  * @returns {typeof base.navItems}
  */
-export function getNavItems(preview) {
-	if (!preview) return base.navItems;
+export function getNavItems() {
 	return base.navItems.map((item) => {
 		if (item.label !== 'Our Work') return item;
 		return { ...item, url: '/our-work', children: ourWorkPreviewChildren };
