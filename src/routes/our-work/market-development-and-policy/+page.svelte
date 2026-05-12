@@ -1,5 +1,5 @@
 <script>
-	import heroImg from '$lib/images/nature/market-development-policy-hero-3.png';
+	import heroImg from '$lib/images/nature/market-development-policy-hero-pmd.jpg';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import bridge from '$lib/images/nature/bridge.webp';
 	import beyondGwp100Preview from '$lib/images/nature/beyond-gwp100-preview.png';
@@ -19,7 +19,7 @@
 
 <div class="page">
 	<section class="hero">
-		<img src={heroImg} alt="" class="hero-img" width="1024" height="684" decoding="async" fetchpriority="high" />
+		<img src={heroImg} alt="" class="hero-img" width="1024" height="682" decoding="async" fetchpriority="high" />
 	</section>
 	<section class="body">
 		<h1>Policy and Market Development</h1>
