@@ -29,6 +29,7 @@
 	import saraBoettiger from '$lib/images/people/sara-boettiger.webp';
 	import etoshaCave from '$lib/images/people/etosha-cave.webp';
 	import aliWhite from '$lib/images/people/ali-white.webp';
+	import abhaNirula from '$lib/images/people/abha-nirula.png';
 
 	import { onMount } from 'svelte';
 
@@ -136,6 +137,11 @@
 			<img src={jamieNewman} alt="Jamie Newman" />
 			<h1>Jamie Newman</h1>
 			<span>People and Operations Director</span>
+		</a>
+		<a class="team-card" href="/people/abha-nirula">
+			<img src={abhaNirula} alt="Abha Nirula" />
+			<h1>Abha Nirula</h1>
+			<span>Carbon Markets Program Manager</span>
 		</a>
 		<a class="team-card" href="/people/noemma-olagaray">
 			<img src={noemmaOlagaray} alt="Noemma Olagaray" />
