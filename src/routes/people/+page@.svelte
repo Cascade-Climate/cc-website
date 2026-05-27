@@ -30,6 +30,7 @@
 	import etoshaCave from '$lib/images/people/etosha-cave.webp';
 	import aliWhite from '$lib/images/people/ali-white.webp';
 	import abhaNirula from '$lib/images/people/abha-nirula.png';
+	import titusLoh from '$lib/images/people/titus-loh.png';
 
 	import { onMount } from 'svelte';
 
@@ -117,6 +118,11 @@
 			<img src={nicGubbins} alt="Nic Gubbins" />
 			<h1>Nic Gubbins</h1>
 			<span>Geochemical Data Science Fellow</span>
+		</a>
+		<a class="team-card" href="/people/titus-loh">
+			<img src={titusLoh} alt="Titus Loh" />
+			<h1>Titus Loh</h1>
+			<span>Program Manager</span>
 		</a>
 		<a class="team-card" href="/people/arielle-lok">
 			<img src={arielleLok} alt="Arielle Lok" />
