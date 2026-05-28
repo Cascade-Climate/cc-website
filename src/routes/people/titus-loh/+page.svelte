@@ -10,7 +10,7 @@
 	<div class="member-info">
 		<h1>Titus Loh</h1>
 		<div class="details">
-			<span>Program Manager</span>
+			<span>APAC Research Lead - Cooling and Refrigerant Industry</span>
 			<div class="socials"></div>
 		</div>
 		<p>

@@ -122,7 +122,7 @@
 		<a class="team-card" href="/people/titus-loh">
 			<img src={titusLoh} alt="Titus Loh" />
 			<h1>Titus Loh</h1>
-			<span>Program Manager</span>
+			<span>APAC Research Lead - Cooling and Refrigerant Industry</span>
 		</a>
 		<a class="team-card" href="/people/arielle-lok">
 			<img src={arielleLok} alt="Arielle Lok" />
