@@ -27,7 +27,7 @@
 					whole field can rely on.
 				</p>
 			</div>
-			<img src="/images/blog/why-bedrock-hero.png" alt="Columnar basalt rock formation" />
+			<img src="/images/blog/why-bedrock-hero.png" alt="Tractor spreading rock dust on an agricultural field" />
 		</div>
 	</section>
 	<ScrollNav fixedUnderIntro />
