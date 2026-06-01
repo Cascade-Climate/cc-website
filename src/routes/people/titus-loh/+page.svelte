@@ -1,5 +1,6 @@
 <script>
 	import headshot from '$lib/images/people/titus-loh.png';
+	import linkedinIcon from '$lib/images/linkedin-icon.webp';
 </script>
 
 <svelte:head>
@@ -11,7 +12,11 @@
 		<h1>Titus Loh</h1>
 		<div class="details">
 			<span>APAC Research Lead - Cooling and Refrigerant Industry</span>
-			<div class="socials"></div>
+			<div class="socials">
+				<a target="_blank" href="https://www.linkedin.com/in/titus-loh-87467477/">
+					<img src={linkedinIcon} alt="LinkedIn" />
+				</a>
+			</div>
 		</div>
 		<p>
 			A climate and environmental professional with experience leading regional programmatic portfolios across Asia Pacific. Prior to joining Cascade, Titus led multi-year circular economy programmes and research initiatives with SecondMuse, with an emphasis on scaling innovative solutions to address local waste management and recycling gaps. Titus has also practised both top-down and bottom-up approaches to environmental challenges through his work in corporate sustainability within the private sector, as well as managing national-level climate programmes as an Environment Analyst with the United Nations Development Programme (UNDP) of Malaysia, including Stage 2 of the HCFC Phase-Out Management Plan (HPMP) as part of Malaysia’s compliance to the Montreal Protocol.
