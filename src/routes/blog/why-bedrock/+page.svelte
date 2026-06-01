@@ -165,7 +165,10 @@
 				> of early companies.
 			</p>
 			<p>
-				To complement commercial deployment-driven learning, the field needs independent research infrastructure that can
+				To complement commercial
+				<a href="https://cascadeclimate.org/blog/foundations-for-a-healthy-erw-market-cycle"
+					>deployment-driven learning</a
+				>, the field needs independent research infrastructure that can
 				persist beyond individual companies and answer questions private entities are least able to address.
 			</p>
 			<p>
