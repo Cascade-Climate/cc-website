@@ -157,8 +157,12 @@
 			</p>
 			<p>
 				Recently, several high-profile carbon removal startups in other fields have shut down or scaled back operations,
-				underscoring the need for multi-year scientific research programs that outlive the uncertain trajectories of early
-				companies.
+				underscoring the need for multi-year scientific research programs that outlive the
+				<a
+					href="https://carbonherald.com/running-tide-shuts-down-citing-lack-of-demand-from-the-voluntary-market/"
+					target="_blank"
+					rel="noopener noreferrer">uncertain trajectories</a
+				> of early companies.
 			</p>
 			<p>
 				To complement commercial deployment-driven learning, the field needs independent research infrastructure that can
