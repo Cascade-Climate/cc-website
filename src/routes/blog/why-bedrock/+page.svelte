@@ -125,7 +125,8 @@
 				Commercial deployment plays an important role in advancing the evidence base for ERW. These deployments
 				generate valuable real-world data, and the companies leading these efforts have meaningfully advanced
 				measurement, monitoring and verification approaches. Data sharing efforts such as our
-				<a href="/blog/erw-data-quarry">ERW Data Quarry</a> initiative aim to ensure that insights from commercial
+				<a href="https://cascadeclimate.org/blog/data-sharing-system-for-erw">ERW Data Quarry</a> initiative aim to
+				ensure that insights from commercial
 				deployments contribute to the broader scientific understanding of ERW.
 			</p>
 			<p>
