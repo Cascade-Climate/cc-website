@@ -15,7 +15,9 @@
 		<div class="content">
 			<div class="copy">
 				<h1>Why Bedrock? The Case for Coordinated ERW Research Now</h1>
-				<p class="date" style="font-weight: 200;">Jun 1, 2026</p>
+				By: <a href="/people/tannis-thorlakson" style="color: #e1fcf7;">Tannis Thorlakson</a> and
+				<a href="/people/hara-wang" style="color: #e1fcf7;">Hara Wang</a>
+				<p class="date" style="font-weight: 200;">Jun 2, 2026</p>
 				<hr />
 				<p>
 					Enhanced rock weathering has the potential to remove carbon at scale while improving soils and farmer
@@ -51,7 +53,8 @@
 				regions in the Global South, especially where soil nutrient depletion is chronic and climate stress is growing
 				— making the link between carbon removal, productivity, and farmer livelihood especially compelling. As
 				Cascade's
-				<a href="/blog/weathering-potential-explorer">Weathering Potential Explorer</a> highlights, weathering rates and
+				<a href="https://cascadeclimate.org/blog/weathering-potential-explorer">Weathering Potential Explorer</a>
+				highlights, weathering rates and
 				agricultural benefits align strongly in many of these regions.
 			</p>
 			<p>But alongside this promise, some questions remain that limit ERW's growth:</p>
