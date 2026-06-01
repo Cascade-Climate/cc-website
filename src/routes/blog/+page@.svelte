@@ -9,6 +9,21 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/blog/why-bedrock">
+					Why Bedrock? The Case for Coordinated ERW Research Now
+				</a>
+			</h1>
+			<p>
+				Why Cascade launched the Bedrock Initiative: coordinated, independent, long-term ERW research the whole field can rely on.
+			</p>
+			<p class="details">
+				<span class="date">06/01/2026</span>
+				·
+				<span class="read-time">12 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/lrm-financing">
 					Financing the Recovery Economy: The First Step Towards Scaled Lifecycle Refrigerant Management
 				</a>
