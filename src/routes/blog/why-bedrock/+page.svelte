@@ -218,7 +218,7 @@
 				will tackle three problems inhibiting deployment and demand:
 			</p>
 
-			<h2>Closing the carbon-removal uncertainty gap to enable long-term integration into compliance markets and policy programs</h2>
+			<h2>Closing the carbon-removal uncertainty gap</h2>
 			<p>
 				Bedrock's Coordinated Research Network (CRN) will apply a single standardized research protocol across
 				intensively measured field sites — generating the apples-to-apples evidence the field has lacked. Sustained over
