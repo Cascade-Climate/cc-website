@@ -243,21 +243,20 @@
 			</p>
 			<ul>
 				<li>
-					If you are conducting academic research on ERW, we welcome your participation in the work ahead. To learn how you can
+					If you are <strong>conducting academic research</strong> on ERW, we welcome your participation in the work ahead. To learn how you can
 					get involved, <a href="mailto:grants@cascadeclimate.org">email us</a>.
 				</li>
 				<li>
-					If you are an ERW buyer or project developer interested in embedding research into your work, please reach out <a href="mailto:grants@cascadeclimate.org">here</a>.
+					If you are an <strong>ERW buyer or project developer</strong> interested in embedding research into your work, please reach out <a href="mailto:grants@cascadeclimate.org">here</a>.
 				</li>
 				<li> 
-				If you are developing policy frameworks where ERW could play a role, we'd like to learn more about your needs. Email our Policy team at <a href="mailto:policy@cascadeclimate.org">policy@cascadeclimate.org</a>.
-				</li>
-				<li>
-				If you are interested in following along in this journey, sign up for our <a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1">newsletter</a> here.
+				If you are <strong>developing policy frameworks</strong> where ERW could play a role, we'd like to learn more about your needs. Email our Policy team at <a href="mailto:policy@cascadeclimate.org">policy@cascadeclimate.org</a>.
 				</li>
 			</ul>
 			<p>
-				To learn more, visit <a href="/bedrock-initiative">cascadeclimate.org/bedrock-initiative</a>.
+				To learn more about Bedrock Initiative, please visit
+				<a href="/bedrock-initiative">cascadeclimate.org/bedrock-initiative</a> -- and to follow the journey, sign up for newsletter updates
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1">here</a>.
 			</p>
 		</section>
 	</main>
