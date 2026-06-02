@@ -55,7 +55,7 @@
 				Cascade's
 				<a href="https://cascadeclimate.org/blog/weathering-potential-explorer">Weathering Potential Explorer</a>
 				highlights, weathering rates and
-				agricultural benefits align strongly in many of these regions.
+				agricultural benefits align in many of these regions.
 			</p>
 			<p>But alongside this promise, some questions remain that limit ERW's growth:</p>
 			<ul>
@@ -162,10 +162,7 @@
 					href="https://carbonherald.com/running-tide-shuts-down-citing-lack-of-demand-from-the-voluntary-market/"
 					target="_blank"
 					rel="noopener noreferrer">uncertain trajectories</a
-				> of early companies.
-			</p>
-			<p>
-				To complement commercial
+				> of early companies. To complement commercial
 				<a href="https://cascadeclimate.org/blog/foundations-for-a-healthy-erw-market-cycle"
 					>deployment-driven learning</a
 				>, the field needs independent research infrastructure that can
@@ -220,8 +217,7 @@
 
 			<h2>Closing the carbon-removal uncertainty gap</h2>
 			<p>
-				Bedrock's Coordinated Research Network (CRN) will apply a single standardized research protocol across
-				intensively measured field sites — generating the apples-to-apples evidence the field has lacked. Sustained over
+				Bedrock's Coordinated Research Network (CRN) will apply standardized research protocols across intensively measured field sites — generating the apples-to-apples evidence the field has lacked. Sustained over
 				multi-year timescales, measurements will go deeper into the soil profile and use multiple methods to robustly
 				constrain ERW's carbon removal under varied conditions.
 			</p>
@@ -230,7 +226,7 @@
 			<p>
 				Studies at Scale will address questions that can only be answered on working farms — including soil organic carbon
 				dynamics, watershed-level monitoring, and yield benefits across cropping systems. With particular focus on the
-				Global South, where ERW's promise for acidic soils is greatest, rigorous replicated trials will build the
+				Global South, where ERW's promise for acidic soils is greatest, rigorous trials will build the
 				crop-benefit data needed to earn farmer trust.
 			</p>
 
@@ -247,13 +243,17 @@
 			</p>
 			<ul>
 				<li>
-					If you are conducting academic research, we welcome your participation in the work ahead. To learn how you can
+					If you are conducting academic research on ERW, we welcome your participation in the work ahead. To learn how you can
 					get involved, <a href="mailto:grants@cascadeclimate.org">email us</a>.
 				</li>
 				<li>
-					If you are developing policy frameworks where ERW could play a role, we'd welcome a chance to learn more about
-					your needs. Email our Policy team at
-					<a href="mailto:policy@cascadeclimate.org">policy@cascadeclimate.org</a>.
+					If you are an ERW buyer or project developer interested in embedding research into your work, please reach out <a href="mailto:grants@cascadeclimate.org">here</a>.
+				</li>
+				<li> 
+				If you are developing policy frameworks where ERW could play a role, we'd like to learn more about your needs. Email our Policy team at <a href="mailto:policy@cascadeclimate.org">policy@cascadeclimate.org</a>.
+				</li>
+				<li>
+				If you are interested in following along in this journey, sign up for our <a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1">newsletter</a> here.
 				</li>
 			</ul>
 			<p>
