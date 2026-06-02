@@ -24,7 +24,7 @@
 					and farmer livelihoods. But realizing that potential requires a shared scientific
 					foundation — one that's difficult to build through commercial deployments or individual
 					research efforts alone. Here's why we launched the
-					<a href="https://cascadeclimate.org/bedrock-initiative" target="_blank" rel="noopener noreferrer"
+					<a href="https://cascadeclimate.org/bedrock-initiative" target="_blank" rel="noopener noreferrer" style="color: #e1fcf7;"
 						>Bedrock Initiative</a
 					>, designed to provide
 					coordinated, independent, long-term research that the whole field can rely on.

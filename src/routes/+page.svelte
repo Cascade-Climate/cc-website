@@ -54,7 +54,7 @@
 				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
 				<h2>Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering</h2>
 				<p>
-					Learn how the Bedrock Initiative will critically strengthen the evidence base for ERW
+					Learn how the Bedrock Initiative will critically strengthen the evidence base for ERW.
 				</p>
 				<a href="/bedrock-initiative">Learn More</a>
 			</div>
