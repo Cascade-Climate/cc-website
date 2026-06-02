@@ -53,7 +53,7 @@
 				regions in the Global South, especially where soil nutrient depletion is chronic and climate stress is growing
 				— making the link between carbon removal, productivity, and farmer livelihood especially compelling. As
 				Cascade's
-				<a href="https://cascadeclimate.org/blog/weathering-potential-explorer">Weathering Potential Explorer</a>
+				<a href="https://cascadeclimate.org/blog/weathering-potential-explorer" target="_blank" rel="noopener noreferrer">Weathering Potential Explorer</a>
 				highlights, weathering rates and
 				agricultural benefits align in many of these regions.
 			</p>
@@ -125,7 +125,7 @@
 				Commercial deployment plays an important role in advancing the evidence base for ERW. These deployments
 				generate valuable real-world data, and the companies leading these efforts have meaningfully advanced
 				measurement, monitoring and verification approaches. Data sharing efforts such as our
-				<a href="https://cascadeclimate.org/blog/data-sharing-system-for-erw">ERW Data Quarry</a> initiative aim to
+				<a href="https://cascadeclimate.org/blog/data-sharing-system-for-erw" target="_blank" rel="noopener noreferrer">ERW Data Quarry</a> initiative aim to
 				ensure that insights from commercial
 				deployments contribute to the broader scientific understanding of ERW.
 			</p>
@@ -163,7 +163,7 @@
 					target="_blank"
 					rel="noopener noreferrer">uncertain trajectories</a
 				> of early companies. To complement commercial
-				<a href="https://cascadeclimate.org/blog/foundations-for-a-healthy-erw-market-cycle"
+				<a href="https://cascadeclimate.org/blog/foundations-for-a-healthy-erw-market-cycle" target="_blank" rel="noopener noreferrer"
 					>deployment-driven learning</a
 				>, the field needs independent research infrastructure that can
 				persist beyond individual companies and answer questions private entities are least able to address.
