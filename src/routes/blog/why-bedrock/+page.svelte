@@ -255,7 +255,7 @@
 			</ul>
 			<p>
 				To learn more about Bedrock Initiative, please visit
-				<a href="/bedrock-initiative">cascadeclimate.org/bedrock-initiative</a> -- and to follow the journey, sign up for newsletter updates
+				<a href="/bedrock-initiative">cascadeclimate.org/bedrock-initiative</a> - and to follow the journey, sign up for newsletter updates
 				<a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1">here</a>.
 			</p>
 		</section>
