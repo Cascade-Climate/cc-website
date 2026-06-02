@@ -51,6 +51,14 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
+				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
+				<h2>Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering</h2>
+				<p>
+					Learn how the Bedrock Initiative will critically strengthen the evidence base for ERW
+				</p>
+				<a href="/bedrock-initiative">Learn More</a>
+			</div>
+			<div class="spotlight">
 				<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="Lifecycle Refrigerant Management" />
 				<h2>Can the right sequence unlock refrigerant recovery at scale?</h2>
 				<p>
@@ -77,14 +85,6 @@
 					</p>
 				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
 			</div>
-			<div class="spotlight">
-				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
-				<h2>Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering</h2>
-				<p>
-					Learn how the Bedrock Initiative will critically strengthen the evidence base for ERW
-				</p>
-				<a href="/bedrock-initiative">Learn More</a>
-			</div>
 		</div>
 
 		<hr style="margin: 64px;">
@@ -92,6 +92,24 @@
 		<h3>RECENT <a href="/blog">BLOGS ↗</a></h3>
 		<div id="blog">
 	<div id="post-list">
+
+		<div class="post">
+			<h1>
+				<a href="/blog/why-bedrock" target="_blank" style="color: var(--color-accent);">
+					Why Bedrock? The Case for Coordinated ERW Research Now
+				</a>
+			</h1>
+			<p>
+				Learn why we launched the Bedrock Initiative, designed to provide coordinated, independent, long-term ERW research the whole field can rely on.
+			</p>
+			<p class="details">
+				<span class="date">06/02/2026</span>
+				·
+				<span class="read-time">7 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
 
 		<div class="post">
 			<h1>
