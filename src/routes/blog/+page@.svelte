@@ -14,8 +14,8 @@
 				</a>
 			</h1>
 			<p>
-				Why Cascade launched the Bedrock Initiative: coordinated, independent, long-term ERW research the whole
-				field can rely on.
+				Learn why we launched the Bedrock Initiative, designed to provide coordinated, independent, long-term ERW
+				research the whole field can rely on.
 			</p>
 			<p class="details">
 				<span class="date">06/02/2026</span>

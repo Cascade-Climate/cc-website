@@ -22,7 +22,7 @@
 				<p>
 					Enhanced rock weathering has the potential to remove carbon at scale while improving soils and farmer
 					livelihoods. But realizing that potential requires a shared scientific foundation — one that's difficult
-					to build through commercial deployments or individual research efforts alone. Here's why Cascade Climate
+					to build through commercial deployments or individual research efforts alone. Here's why we
 					launched the Bedrock Initiative, designed to provide coordinated, independent, long-term research that the
 					whole field can rely on.
 				</p>
