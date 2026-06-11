@@ -114,6 +114,11 @@
 			<h1>Leah Bridle</h1>
 			<span>Operations Manager, ERW</span>
 		</a>
+		<a class="team-card" href="/people/carolina-catunda">
+			<img src="/images/people/carolina-catunda.png" alt="Carolina Catunda" />
+			<h1>Carolina Catunda</h1>
+			<span>Science Partnerships Lead - Brazil</span>
+		</a>
 		<a class="team-card" href="/people/nic-gubbins">
 			<img src={nicGubbins} alt="Nic Gubbins" />
 			<h1>Nic Gubbins</h1>
