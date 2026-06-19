@@ -10,7 +10,7 @@
 	<div class="member-info">
 		<h1>Abha Nirula</h1>
 		<div class="details">
-			<span>Carbon Markets Program Manager</span>
+			<span>Market Development Program Manager</span>
 			<div class="socials"></div>
 		</div>
 		<p>
