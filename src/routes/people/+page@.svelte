@@ -172,7 +172,7 @@
 		<a class="team-card" href="/people/brad-rochlin">
 			<img src={bradRochlin} alt="Brad Rochlin" />
 			<h1>Brad Rochlin</h1>
-			<span>Program Director, Carbon Markets</span>
+			<span>Program Director, Market Development</span>
 		</a>
 		<a class="team-card" href="/people/rachel-smith">
 			<img src={rachelSmith} alt="Rachel Smith" />
