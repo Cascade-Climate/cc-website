@@ -1,5 +1,4 @@
 <script>
-	import PDFLink from '$lib/components/PDFLink.svelte';
 	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
 </script>
 
@@ -7,7 +6,7 @@
 	<title>Article 5 HFC Destruction Workshop: Synthesis and Recommendations</title>
 	<meta
 		name="description"
-		content="Workshop synthesis and recommendations on using carbon finance to recover and destroy HFCs in Article 5 countries, with guardrails for Montreal Protocol alignment."
+		content="Workshop synthesis and recommendations on guardrails and pilots for catalytic HFC destruction projects in Article 5 countries."
 	/>
 </svelte:head>
 
@@ -17,22 +16,38 @@
 			<div class="copy">
 				<h1>Article 5 HFC Destruction Workshop</h1>
 				<p class="subtitle">Synthesis and Recommendations</p>
-				<hr />
+				<div class="links links-top">
+					<button type="button" class="download-btn accent">
+						Download Synthesis and Recommendations
+					</button>
+				</div>
 				<p>
-					Hydrofluorocarbons warm the planet far more potently than CO<sub>2</sub>, yet across many
-					developing countries these gases are still vented rather than recovered. Ahead of the 2026
-					Yale Clean Cooling Conference, Cascade Climate and the Carbon Containment Lab convened a
-					small expert group to ask how well-designed carbon finance could help recover and destroy
-					them — and what guardrails, data, and responsibilities are needed to do it without
-					diluting countries' existing Montreal Protocol commitments.
+					Prior to the March 2026 Yale Clean Cooling Conference, Cascade Climate and the Carbon
+					Containment Lab co-convened a small expert group for a workshop on &ldquo;Ensuring effective
+					guardrails and pilots for catalytic HFC destruction projects in Article 5 countries&rdquo;.
+					This workshop — on the heels of a major private sector commitment to super pollutant
+					mitigation — discussed the potential use of carbon finance in catalyzing ODS and HFC
+					recovery and destruction capacity build-out. In particular, it focused on enabling conditions
+					and appropriate guardrails for HFC carbon credits in Article 5 countries (i.e., developing
+					countries under the Montreal Protocol).
+				</p>
+				<p>
+					The workshop was motivated by the idea that
+					well-designed carbon finance could be a valuable component of kickstarting refrigerant
+					recovery and destruction capacity in countries where these high-GWP gases are traditionally
+					vented, and accelerating progress toward their Montreal Protocol, Kigali Amendment, and
+					domestic regulatory obligations.
+				</p>
+				<p>
+					The below document summarizes perspectives that emerged in the lead-up to, during, and after
+					the workshop, as well as Cascade&rsquo;s recommendations for actions the field can take to
+					maximize the value of initial HFC destruction projects as part of the broader refrigerant
+					transition in Article 5 countries.
 				</p>
 				<div class="links">
-					<PDFLink
-						link="/Cascade Climate - Article 5 HFC Destruction Workshop - Synthesis and Recommendations.pdf"
-						variant="accent"
-					>
+					<button type="button" class="download-btn accent">
 						Download Synthesis and Recommendations
-					</PDFLink>
+					</button>
 				</div>
 			</div>
 			<img
@@ -56,12 +71,6 @@
 		color: var(--color-light);
 	}
 
-	:global(.hfc-workshop-page .intro .copy hr) {
-		margin: 0 0 1.25rem;
-		border: 0;
-		border-top: 1px solid rgba(255, 255, 255, 0.25);
-	}
-
 	:global(.hfc-workshop-page .intro .copy p) {
 		line-height: 1.6;
 		margin-bottom: 1.5rem;
@@ -71,11 +80,30 @@
 		margin: 0;
 		width: 100%;
 		max-width: 28rem;
+		flex-direction: column;
+		gap: 0.75rem;
 	}
 
-	:global(.hfc-workshop-page .intro .links button) {
+	:global(.hfc-workshop-page .intro .links-top) {
+		margin-bottom: 1.25rem;
+	}
+
+	:global(.hfc-workshop-page .intro .links button),
+	.download-btn {
 		width: 100%;
 		text-align: center;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 30px;
+		font-size: 1.2rem;
+		flex-grow: 1;
+		font-weight: 400;
+		cursor: default;
+	}
+
+	.download-btn.accent {
+		background-color: var(--color-accent);
+		color: var(--color-light);
 	}
 
 	.large-image {
