@@ -1,5 +1,6 @@
 <script>
   import { getContext } from 'svelte';
+  import { pdfUrl } from '$lib/pdfUrl.js';
 
   const { openModal } = getContext('modal');
 
@@ -7,8 +8,11 @@
   export let variant = 'light';
 
   function openPdf(target) {
-    const url = target.startsWith('http') ? target : encodeURI(target);
-    window.open(url, '_blank', 'noopener,noreferrer');
+    const url = pdfUrl(target);
+    const pdfWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!pdfWindow) {
+      window.location.assign(url);
+    }
   }
 
   function handleClick() {

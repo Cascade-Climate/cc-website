@@ -1,4 +1,6 @@
 <script>
+	import { pdfUrl } from '$lib/pdfUrl.js';
+
 	export let showModal = false;
 	export let modalLink = '';
 
@@ -15,7 +17,13 @@
 		formData.link = modalLink;
 	}
 
-	async function handleSubmit() {
+	function handleSubmit() {
+		const url = pdfUrl(modalLink);
+		const pdfWindow = window.open(url, '_blank', 'noopener,noreferrer');
+		if (!pdfWindow) {
+			window.location.assign(url);
+		}
+
 		try {
 			fetch('/api/submit-form', {
 				method: 'POST',
@@ -26,10 +34,6 @@
 			});
 			localStorage.setItem('cc-formSubmitted', true);
 			closeModal();
-			setTimeout(() => {
-				const url = modalLink.startsWith('http') ? modalLink : encodeURI(modalLink);
-				window.open(url, '_blank', 'noopener,noreferrer');
-			}, 100);
 		} catch (error) {
 			console.error('Error:', error);
 		}
@@ -83,7 +87,7 @@
 					By disclosing your information you agree to receive updates from Cascade Climate. You can change your email preferences at any time.
 					<button type="submit">Sign up</button>
 					{#if modalLink}
-						<a href={modalLink}>No thanks, proceed to download.</a>
+						<a href={pdfUrl(modalLink)} target="_blank" rel="noopener noreferrer">No thanks, proceed to download.</a>
 					{/if}
 			</form>
 		</div>

@@ -10,8 +10,11 @@ export async function handle({ event, resolve }) {
 	if (event.url.pathname === '/bedrock-initiative/pressrelease.pdf') {
 		return Response.redirect(new URL('/Bedrock.PressRelease.pdf', event.url), 302);
 	}
-	if (event.url.pathname === '/Cascade_Climate_Bedrock_Initiative_Press_Release.pdf') {
-		return Response.redirect(new URL('/Bedrock.PressRelease.pdf', event.url), 302);
+	if (event.url.pathname === '/HFC-Destruction-in-Article-5-Countries.pdf') {
+		return Response.redirect(
+			new URL('/Cascade Climate - HFC Destruction in Article 5 Countries.pdf', event.url),
+			302
+		);
 	}
 	const response = await resolve(event);
 	if (dev) {
