@@ -1,5 +1,8 @@
 <script>
+	import PDFLink from '$lib/components/PDFLink.svelte';
 	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
+
+	const pdfLink = '/Cascade Climate - HFC Destruction in Article 5 Countries.pdf';
 </script>
 
 <svelte:head>
@@ -17,9 +20,9 @@
 				<h1>Article 5 HFC Destruction Workshop</h1>
 				<p class="subtitle">Synthesis and Recommendations</p>
 				<div class="links links-top">
-					<button type="button" class="download-btn accent">
+					<PDFLink link={pdfLink} variant="accent">
 						Download Synthesis and Recommendations
-					</button>
+					</PDFLink>
 				</div>
 				<p>
 					Prior to the March 2026 Yale Clean Cooling Conference, Cascade Climate and the Carbon
@@ -45,9 +48,9 @@
 					transition in Article 5 countries.
 				</p>
 				<div class="links">
-					<button type="button" class="download-btn accent">
+					<PDFLink link={pdfLink} variant="accent">
 						Download Synthesis and Recommendations
-					</button>
+					</PDFLink>
 				</div>
 			</div>
 			<img
@@ -88,22 +91,9 @@
 		margin-bottom: 1.25rem;
 	}
 
-	:global(.hfc-workshop-page .intro .links button),
-	.download-btn {
+	:global(.hfc-workshop-page .intro .links button) {
 		width: 100%;
 		text-align: center;
-		border: none;
-		padding: 10px 20px;
-		border-radius: 30px;
-		font-size: 1.2rem;
-		flex-grow: 1;
-		font-weight: 400;
-		cursor: default;
-	}
-
-	.download-btn.accent {
-		background-color: var(--color-accent);
-		color: var(--color-light);
 	}
 
 	.large-image {

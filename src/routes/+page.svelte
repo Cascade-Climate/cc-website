@@ -10,6 +10,7 @@
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
+	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
 </script>
 
 <svelte:head>
@@ -50,6 +51,12 @@
 
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
+			<div class="spotlight">
+				<img src={hfcWorkshopHero} alt="Air conditioning unit surrounded by tropical vegetation" />
+				<h2>HFC Destruction in Article 5 Countries</h2>
+				<p>A new report from Cascade Climate lays out key guardrails and recommendations for using carbon finance to destroy potent refrigerants in Article 5 countries under the Montreal Protocol.</p>
+				<a href="/blog/HFC-destruction-workshop" target="_blank">Learn More</a>
+			</div>
 			<div class="spotlight">
 				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
 				<h2>Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering</h2>

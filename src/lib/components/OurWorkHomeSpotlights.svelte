@@ -2,9 +2,19 @@
 	import erwPhoto from '$lib/images/nature/erw.webp';
 	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
 	import bedrockInitiativeHero from '$lib/images/nature/bedrock-initiative-hero.png';
+	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
 	import SpotlightGrid from '$lib/components/SpotlightGrid.svelte';
 
 	const items = [
+		{
+			image: hfcWorkshopHero,
+			imageAlt: 'Air conditioning unit surrounded by tropical vegetation',
+			title: 'HFC Destruction in Article 5 Countries',
+			excerpt:
+				'A new report from Cascade Climate lays out key guardrails and recommendations for using carbon finance to destroy potent refrigerants in Article 5 countries under the Montreal Protocol.',
+			href: '/blog/HFC-destruction-workshop',
+			linkTarget: '_blank'
+		},
 		{
 			image: '/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg',
 			imageAlt: 'Lifecycle Refrigerant Management',

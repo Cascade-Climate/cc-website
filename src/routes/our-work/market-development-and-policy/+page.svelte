@@ -7,6 +7,7 @@
 	import foundations from '$lib/images/nature/foundations.webp';
 	import policyImg from '$lib/images/nature/policy.webp';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
+	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
 </script>
 
 <svelte:head>
@@ -119,15 +120,24 @@
 			aria-labelledby="rmt-h"
 		>
 			<h5 id="rmt-h">REFRIGERANT MANAGEMENT POLICY AND MARKET DEVELOPMENT</h5>
-			<div class="highlights highlights--two">
+			<div class="highlights">
 				<div>
 					<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="" />
-					<h2>Financing the Recovery Economy</h2>
+					<h2>Can the right sequence unlock refrigerant recovery at scale?</h2>
 					<p>
 						Learn how Cascade is sequencing financing, policy, and markets to build practical refrigerant recovery systems in
 						Southeast Asia.
 					</p>
 					<a href="/blog/lrm-financing">Learn More</a>
+				</div>
+				<div>
+					<img src={hfcWorkshopHero} alt="" />
+					<h2>HFC Destruction in Article 5 Countries</h2>
+					<p>
+						A new report from Cascade Climate lays out key guardrails and recommendations for using carbon finance to
+						destroy potent refrigerants in Article 5 countries under the Montreal Protocol.
+					</p>
+					<a href="/blog/HFC-destruction-workshop">Learn More</a>
 				</div>
 				<div>
 					<img src={LRMblog1} alt="" />
