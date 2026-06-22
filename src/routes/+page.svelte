@@ -54,7 +54,7 @@
 			<div class="spotlight">
 				<img src={hfcWorkshopHero} alt="Air conditioning unit surrounded by tropical vegetation" />
 				<h2>HFC Destruction in Article 5 Countries</h2>
-				<p>A new report from Cascade Climate lays out key guardrails and recommendations for using carbon finance to destroy potent refrigerants in Article 5 countries under the Montreal Protocol.</p>
+				<p>Our new report lays out guardrails and recommendations for using carbon finance to destroy potent refrigerants in Article 5 countries under the Montreal Protocol.</p>
 				<a href="/blog/HFC-destruction-workshop" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">

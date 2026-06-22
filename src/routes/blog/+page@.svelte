@@ -9,6 +9,22 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/blog/HFC-destruction-workshop">
+					HFC Destruction in Article 5 Countries
+				</a>
+			</h1>
+			<p>
+				Our new report lays out guardrails and recommendations for using carbon finance to destroy potent refrigerants in
+				Article 5 countries under the Montreal Protocol.
+			</p>
+			<p class="details">
+				<span class="date">06/22/2026</span>
+				·
+				<span class="read-time">2 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/why-bedrock">
 					Why Bedrock? The Case for Coordinated ERW Research Now
 				</a>
