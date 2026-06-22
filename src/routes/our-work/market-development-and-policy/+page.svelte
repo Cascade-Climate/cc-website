@@ -122,15 +122,6 @@
 			<h5 id="rmt-h">REFRIGERANT MANAGEMENT POLICY AND MARKET DEVELOPMENT</h5>
 			<div class="highlights">
 				<div>
-					<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="" />
-					<h2>Can the right sequence unlock refrigerant recovery at scale?</h2>
-					<p>
-						Learn how Cascade is sequencing financing, policy, and markets to build practical refrigerant recovery systems in
-						Southeast Asia.
-					</p>
-					<a href="/blog/lrm-financing">Learn More</a>
-				</div>
-				<div>
 					<img src={hfcWorkshopHero} alt="" />
 					<h2>HFC Destruction in Article 5 Countries</h2>
 					<p>
@@ -138,6 +129,15 @@
 						destroy potent refrigerants in Article 5 countries under the Montreal Protocol.
 					</p>
 					<a href="/blog/HFC-destruction-workshop">Learn More</a>
+				</div>
+				<div>
+					<img src="/images/blog/christie-chau-OA07q0V2R94-unsplash.jpg" alt="" />
+					<h2>Can the right sequence unlock refrigerant recovery at scale?</h2>
+					<p>
+						Learn how Cascade is sequencing financing, policy, and markets to build practical refrigerant recovery systems in
+						Southeast Asia.
+					</p>
+					<a href="/blog/lrm-financing">Learn More</a>
 				</div>
 				<div>
 					<img src={LRMblog1} alt="" />
