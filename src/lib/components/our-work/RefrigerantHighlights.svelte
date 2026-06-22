@@ -1,6 +1,7 @@
 <script>
 	import slcp from '$lib/images/nature/slcp-entry.webp';
 	import LRMblog1 from '$lib/images/blog/LRMblog1.webp';
+	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
 </script>
 
 <h5>HIGHLIGHTS</h5>
@@ -13,6 +14,15 @@
 			Southeast Asia.
 		</p>
 		<a href="/blog/lrm-financing">Learn More</a>
+	</div>
+	<div>
+		<img src={hfcWorkshopHero} alt="Air conditioning unit surrounded by tropical vegetation" />
+		<h2>HFC Destruction in Article 5 Countries</h2>
+		<p>
+			A new report from Cascade Climate lays out key guardrails and recommendations for using carbon finance to destroy
+			potent refrigerants in Article 5 countries under the Montreal Protocol.
+		</p>
+		<a href="/blog/HFC-destruction-workshop">Learn More</a>
 	</div>
 	<div>
 		<img src={LRMblog1} alt="Lifecycle Refrigerant Management" />
