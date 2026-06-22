@@ -27,7 +27,8 @@
 			localStorage.setItem('cc-formSubmitted', true);
 			closeModal();
 			setTimeout(() => {
-				window.open(modalLink, '_blank');
+				const url = modalLink.startsWith('http') ? modalLink : encodeURI(modalLink);
+				window.open(url, '_blank', 'noopener,noreferrer');
 			}, 100);
 		} catch (error) {
 			console.error('Error:', error);

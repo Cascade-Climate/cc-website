@@ -2,7 +2,7 @@
 	import PDFLink from '$lib/components/PDFLink.svelte';
 	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
 
-	const pdfLink = '/Cascade Climate - HFC Destruction in Article 5 Countries.pdf';
+	const pdfLink = '/Cascade-Climate-HFC-Destruction-in-Article-5-Countries.pdf';
 </script>
 
 <svelte:head>

@@ -6,9 +6,14 @@
   export let link = '';
   export let variant = 'light';
 
+  function openPdf(target) {
+    const url = target.startsWith('http') ? target : encodeURI(target);
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
   function handleClick() {
 		if (localStorage.getItem('cc-formSubmitted')) {
-			window.open(link, '_blank');
+			openPdf(link);
 		} else {
 			openModal(link);
 		}
