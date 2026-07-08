@@ -14,22 +14,14 @@
 					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Access the ERW Data Quarry↗</a>
 				</div>
 			</div>
-			<img
-				src="/images/blog/data-quarry-summer-26-hero.png"
-				alt="Natural stone arch on a rugged volcanic coastline with turquoise ocean waves"
-				width="1024"
-				height="727"
-				decoding="async"
-				fetchpriority="high"
-			/>
 		</div>
 	</section>
 	<main>
 		<p>
-			The ERW Data Quarry was built to make ERW data available to the research community. One year later, this
-			investment is showing its first returns. Since May 2025, InPlanet, Carbon Drawdown Initiative, Flux, and Mati
-			have shared datasets through the Data Quarry, and their leadership is what makes this collection of ERW project
-			data possible.
+			The <a href="/blog/data-sharing-system-for-erw">ERW Data Quarry</a> was built to make ERW data available to the
+			research community. One year later, this investment is showing its first returns. Since May 2025, InPlanet,
+			Carbon Drawdown Initiative, Flux, and Mati have shared datasets through the Data Quarry, and their leadership is
+			what makes this collection of ERW project data possible.
 		</p>
 		<p>
 			Today the Data Quarry holds six datasets, each representing roughly a year of field projects across four
@@ -40,9 +32,10 @@
 
 		<h2 class="spaced-h2">How Data Quarry access works</h2>
 		<p>
-			Researchers request datasets through a lightweight, proposal-based system overseen by a Governance Board,
+			Researchers request datasets through a lightweight, proposal-based system overseen by a
+			<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Governance Board</a>,
 			designed to protect commercial interests while advancing ERW science. Health and safety data is released
-			publicly, no proposal required. You can read more about the structure of the DQ system and the thinking behind
+			publicly, with no proposal required. You can read more about the structure of the DQ system and the thinking behind
 			it <a href="/blog/data-sharing-system-for-erw">here</a>.
 		</p>
 		<p>
@@ -52,16 +45,39 @@
 
 		<h2 class="spaced-h2">What is in the Data Quarry today?</h2>
 		<p>
-			The collection currently includes six datasets contributed by four organizations across four countries: Carbon
-			Drawdown Initiative (Germany), Flux (Kenya), InPlanet (Brazil), and Mati (India).
+			The collection currently includes six datasets contributed by four organizations across four countries:
 		</p>
+		<img
+			src="/images/blog/data-quarry-dataset-table.png"
+			alt="Table of six ERW Data Quarry datasets by organization, project, country, crop, and size in hectares"
+			class="dataset-table"
+			width="1024"
+			height="410"
+			loading="lazy"
+		/>
+		<figure class="figure-block">
+			<img
+				src="/images/blog/data-quarry-figure-1-tag-coverage.png"
+				alt="Stacked bar chart showing variable coverage by category for each ERW Data Quarry dataset"
+				class="figure-image"
+				width="1024"
+				height="365"
+				loading="lazy"
+			/>
+			<figcaption>
+				<em
+					>Figure 1. Tag coverage by category for each dataset. Categories span weather &amp; agronomy, aqueous
+					(lysimeter) chemistry, feedstock characterization, biomass, and solid-phase soil measurements.</em
+				>
+			</figcaption>
+		</figure>
 		<p>
 			The datasets vary in scope and measurement coverage. Each contribution includes contextual data alongside
 			measurements from five categories. Solid-phase soil measurements and feedstock characterization dominate the
 			collection, reflecting where commercial MRV efforts are most concentrated today. InPlanet&apos;s two Brazilian
 			sites (Serra da Mantiqueira and Aracari) have the most variable coverage, spanning all five categories and
 			complementing each other well. The Carbon Drawdown Initiative&apos;s XXL-lysimeter project contributes rich
-			lysimetry data. Mati and Flux contribute data from especially data sparse regions.
+			lysimetry data. Mati and Flux contribute data from especially data-sparse regions.
 		</p>
 
 		<h2 class="spaced-h2">How much do the datasets overlap?</h2>
@@ -69,6 +85,26 @@
 			Breadth is only half the story. To do synthesis science — pooling datasets to reach conclusions that no single
 			project can support — datasets need to measure the same variables.
 		</p>
+		<p>
+			Figure 2 shows how much the six datasets overlap, both as a raw count of shared measurement tags and as Jaccard
+			similarity (shared tags divided by combined tags).
+		</p>
+		<figure class="figure-block">
+			<img
+				src="/images/blog/data-quarry-figure-2-overlap.png"
+				alt="Heatmaps showing pairwise ERW Data Quarry dataset overlap by shared tag count and Jaccard similarity"
+				class="figure-image figure-2-image"
+				width="1153"
+				height="2089"
+				loading="lazy"
+				decoding="async"
+			/>
+			<figcaption>
+				<em
+					>Figure 2. Pairwise dataset overlap, shown as shared tag count (top) and Jaccard similarity (bottom).</em
+				>
+			</figcaption>
+		</figure>
 		<p>
 			There&apos;s a clear pattern. Total tag counts are high, but overlap between projects is limited. The strongest
 			overlap is between Serra da Mantiqueira and Aracari (Jaccard 0.74) — InPlanet&apos;s two sites, which share a
@@ -81,7 +117,7 @@
 		<h2 class="spaced-h2">What can the Data Quarry answer today?</h2>
 		<p>
 			When we launched the Data Quarry, we were especially interested in four questions that commercial data seemed
-			well positioned to inform:
+			well-positioned to inform:
 		</p>
 		<ul>
 			<li>
@@ -96,7 +132,7 @@
 		</ul>
 		<p>
 			None of these questions can be fully answered by today&apos;s collection — but each is being carried further,
-			with more visibility than ever before. Here&apos;s where the data shows today.
+			with more visibility than ever before. Here&apos;s what the data shows today.
 		</p>
 		<ul>
 			<li>
@@ -111,15 +147,15 @@
 			</li>
 			<li>
 				<strong>MRV time lags.</strong> One year of data isn&apos;t enough to characterize MRV time lags. But every
-				additional year of project brings these questions closer — year two data is expected from at least one project
+				additional project year brings these questions closer — year-two data is expected from at least one project
 				before the end of 2026.
 			</li>
 			<li>
 				<strong>Potentially toxic elements.</strong> The current data show no evidence of regulatory violations in any
 				of the projects in the Data Quarry. Foreclosing toxicity risks entirely, however, will require longer-term
-				monitoring. All potentially toxic element data is made public and can be accessed at our
+				monitoring. All potentially toxic element data is made public and can be accessed at
 				<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener noreferrer"
-					>channel on CDRXIV</a
+					>our channel on CDRXIV</a
 				>.
 			</li>
 		</ul>
@@ -144,7 +180,7 @@
 			growing.
 		</p>
 		<p>
-			<strong>Researchers:</strong> a short proposal through the
+			<strong>Researchers:</strong> A short proposal through the
 			<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Data Quarry</a> is all it takes to
 			request access, and we add new datasets regularly — join the
 			<a
@@ -164,12 +200,13 @@
 
 <style>
 	.intro .content {
-		align-items: flex-start;
+		display: flex;
+		justify-content: center;
 	}
 
 	.intro .copy {
-		flex: 1;
-		min-width: 0;
+		width: 100%;
+		max-width: 980px;
 		text-align: left;
 	}
 
@@ -215,6 +252,43 @@
 	.spaced-h2 {
 		margin-top: 2.5rem;
 		margin-bottom: 1.25rem;
+	}
+
+	.dataset-table,
+	.figure-image {
+		display: block;
+		width: 75%;
+		max-width: 75%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 0.5rem;
+	}
+
+	.dataset-table {
+		margin-bottom: 1.25rem;
+	}
+
+	.figure-block {
+		margin: 0 0 1.25rem;
+	}
+
+	.figure-image {
+		margin-bottom: 0;
+	}
+
+	/* Keep Figure 2 at or below native width so it is never upscaled */
+	.figure-2-image {
+		width: min(75%, 865px);
+		max-width: min(75%, 865px);
+	}
+
+	.figure-block figcaption {
+		width: 75%;
+		margin: 0.65rem auto 0;
+		font-size: 0.95rem;
+		line-height: 1.5;
+		color: color-mix(in srgb, var(--color-text) 88%, var(--color-dark));
 	}
 
 	@media (max-width: 660px) {
