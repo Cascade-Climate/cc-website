@@ -35,6 +35,7 @@
 			<div class="copy">
 				<h1>Introducing the ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
                 <div class="links">
+                    <a href="/blog/data-quarry-update-summer-26">Read our one year reflection↗</a>
                     <a href="/blog/data-quarry-announcement">Read about the ERW Data Quarry Launch↗</a>
                 </div>
                 <p></p>
