@@ -9,6 +9,22 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/blog/data-quarry-update-summer-26">
+					The Data Quarry, One Year In
+				</a>
+			</h1>
+			<p>
+				Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what they
+				hold, what they can already tell us, and what future contributions may reveal.
+			</p>
+			<p class="details">
+				<span class="date">07/08/2026</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/HFC-destruction-workshop">
 					HFC Destruction in Article 5 Countries
 				</a>

@@ -50,10 +50,10 @@ import erwHero from '$lib/images/nature/erw-hero-program.jpg';
 			<h2 id="recent-blogs-h" class="section-title">RECENT BLOGS</h2>
 			<div class="blog-list">
 				<article>
-					<h4><a href="/blog/why-bedrock">Why Bedrock? The Case for Coordinated ERW Research Now</a></h4>
+					<h4><a href="/blog/data-quarry-update-summer-26">The Data Quarry, One Year In</a></h4>
 				</article>
 				<article>
-					<h4><a href="/blog/data-quarry-update-summer-26">The Data Quarry, One Year In</a></h4>
+					<h4><a href="/blog/why-bedrock">Why Bedrock? The Case for Coordinated ERW Research Now</a></h4>
 				</article>
 				<article>
 					<h4><a href="/blog/crn-eoi">Call for Expressions of Interest: Coordinated Research Network for Enhanced Rock Weathering</a></h4>

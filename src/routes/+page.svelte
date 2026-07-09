@@ -102,6 +102,25 @@
 
 		<div class="post">
 			<h1>
+				<a href="/blog/data-quarry-update-summer-26" target="_blank" style="color: var(--color-accent);">
+					The Data Quarry, One Year In
+				</a>
+			</h1>
+			<p>
+				Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what they
+				hold, what they can already tell us, and what future contributions may reveal.
+			</p>
+			<p class="details">
+				<span class="date">07/08/2026</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/why-bedrock" target="_blank" style="color: var(--color-accent);">
 					Why Bedrock? The Case for Coordinated ERW Research Now
 				</a>
@@ -113,24 +132,6 @@
 				<span class="date">06/02/2026</span>
 				·
 				<span class="read-time">7 MIN READ</span>
-			</p>
-		</div>
-
-		<hr>
-
-		<div class="post">
-			<h1>
-				<a href="/blog/data-quarry-update-spring-26" target="_blank" style="color: var(--color-accent);">
-					Rock On: The ERW Data Quarry Just Doubled Its Data
-				</a>
-			</h1>
-			<p>
-				Three new datasets are now available, and two more project developers have joined the effort, doubling the data available on the platform and bringing the total pipeline to 26 commitments.
-			</p>
-			<p class="details">
-				<span class="date">03/31/2026</span>
-				·
-				<span class="read-time">10 MIN READ</span>
 			</p>
 		</div>
 
