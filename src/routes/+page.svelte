@@ -78,7 +78,7 @@
 				<h2>The Data Quarry, One Year In</h2>
 				<p>
 					Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what
-					they hold, what they can already tell us, and what future contributions may reveal.
+					they tell us, and what future contributions may reveal.
 				</p>
 				<a href="/blog/data-quarry-update-summer-26" target="_blank">Learn More</a>
 			</div>
