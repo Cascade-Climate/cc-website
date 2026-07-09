@@ -30,18 +30,20 @@
 			through a common access framework.
 		</p>
 
-		<h2 class="spaced-h2">How Data Quarry access works</h2>
-		<p>
-			Researchers request datasets through a lightweight, proposal-based system overseen by a
-			<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Governance Board</a>,
-			designed to protect commercial interests while advancing ERW science. Health and safety data is released
-			publicly, with no proposal required. You can read more about the structure of the DQ system and the thinking behind
-			it <a href="/blog/data-sharing-system-for-erw">here</a>.
-		</p>
-		<p>
-			What follows is a first look at what the Quarry holds, what it can support, where it&apos;s growing next, and how
-			researchers can access the data today.
-		</p>
+		<aside class="access-callout" aria-labelledby="access-callout-heading">
+			<h2 id="access-callout-heading" class="access-callout-title">How does Data Quarry access work?</h2>
+			<p>
+				Researchers request datasets through a lightweight, proposal-based system overseen by a
+				<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Governance Board</a>,
+				designed to protect commercial interests while advancing ERW science. Health and safety data is released
+				publicly, with no proposal required. You can read more about the structure of the DQ system and the thinking
+				behind it <a href="/blog/data-sharing-system-for-erw">here</a>.
+			</p>
+			<p>
+				What follows is a first look at what the Quarry holds, what it can support, where it&apos;s growing next, and
+				how researchers can access the data today.
+			</p>
+		</aside>
 
 		<h2 class="spaced-h2">What is in the Data Quarry today?</h2>
 		<p>
@@ -66,15 +68,14 @@
 			/>
 			<figcaption>
 				<em
-					>Figure 1. Tag coverage by category for each dataset. Categories span weather &amp; agronomy, aqueous
+					>Figure 1. Tag coverage by category for each dataset. Categories span weather and agronomy, aqueous
 					(lysimeter) chemistry, feedstock characterization, biomass, and solid-phase soil measurements.</em
 				>
 			</figcaption>
 		</figure>
 		<p>
 			The datasets vary in scope and measurement coverage. Each contribution includes contextual data alongside
-			measurements from five categories. Solid-phase soil measurements and feedstock characterization dominate the
-			collection, reflecting where commercial MRV efforts are most concentrated today. InPlanet&apos;s two Brazilian
+			measurements from five categories. <strong>Solid-phase soil measurements and feedstock characterization dominate the collection</strong>, reflecting where commercial MRV efforts are most concentrated today. InPlanet&apos;s two Brazilian
 			sites (Serra da Mantiqueira and Aracari) have the most variable coverage, spanning all five categories and
 			complementing each other well. The Carbon Drawdown Initiative&apos;s XXL-lysimeter project contributes rich
 			lysimetry data. Mati and Flux contribute data from especially data-sparse regions.
@@ -82,7 +83,7 @@
 
 		<h2 class="spaced-h2">How much do the datasets overlap?</h2>
 		<p>
-			Breadth is only half the story. To do synthesis science — pooling datasets to reach conclusions that no single
+			Breadth is only half the story. To do <strong>synthesis science</strong> — pooling datasets to reach conclusions that no single
 			project can support — datasets need to measure the same variables.
 		</p>
 		<p>
@@ -106,11 +107,11 @@
 			</figcaption>
 		</figure>
 		<p>
-			There&apos;s a clear pattern. Total tag counts are high, but overlap between projects is limited. The strongest
+			There&apos;s a clear pattern. Total tag counts are high, but <strong>overlap between projects is limited.</strong> The strongest
 			overlap is between Serra da Mantiqueira and Aracari (Jaccard 0.74) — InPlanet&apos;s two sites, which share a
 			common measurement protocol. Cross-developer overlap is more modest. This is the expected consequence of a field
 			in which each company has built its own MRV approach — operating across a spectrum of agricultural soils and
-			management practices — and it constrains how much synthesis science this catalog can support at this point in
+			management practices — and it constrains how much <strong>synthesis science</strong> this catalog can support at this point in
 			time.
 		</p>
 
@@ -131,7 +132,7 @@
 			</li>
 		</ul>
 		<p>
-			None of these questions can be fully answered by today&apos;s collection — but each is being carried further,
+			<strong>None of these questions can be fully answered by today&apos;s collection</strong> — but each is being carried further,
 			with more visibility than ever before. Here&apos;s what the data shows today.
 		</p>
 		<ul>
@@ -180,9 +181,11 @@
 			growing.
 		</p>
 		<p>
-			<strong>Researchers:</strong> A short proposal through the
-			<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Data Quarry</a> is all it takes to
-			request access, and we add new datasets regularly — join the
+			<strong
+				>After signing up, a short proposal through the
+				<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Data Quarry</a> is all it takes to
+				request access</strong
+			>, and we add new datasets regularly — join the
 			<a
 				href="https://groups.google.com/a/cascadeclimate.org/g/notifs-dataquarry"
 				target="_blank"
@@ -252,6 +255,42 @@
 	.spaced-h2 {
 		margin-top: 2.5rem;
 		margin-bottom: 1.25rem;
+	}
+
+	.access-callout {
+		margin: 1.8rem 0 2.2rem;
+		padding: 1.2rem 1.33rem;
+		background-color: rgb(2, 60, 64);
+		border-radius: 0.44rem;
+		color: var(--color-light);
+		font-size: 0.89rem;
+	}
+
+	.access-callout-title {
+		margin: 0 0 0.89rem;
+		font-weight: 500;
+		font-size: 1.5em;
+		color: var(--color-light);
+	}
+
+	.access-callout p {
+		margin: 0 0 0.89rem;
+		line-height: 1.62;
+		color: var(--color-light);
+	}
+
+	.access-callout p:last-child {
+		margin-bottom: 0;
+	}
+
+	.access-callout a {
+		color: var(--color-highlight);
+		font-weight: 500;
+	}
+
+	.access-callout a:hover {
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
 	}
 
 	.dataset-table,
