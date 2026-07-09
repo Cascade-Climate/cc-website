@@ -53,7 +53,7 @@ import erwHero from '$lib/images/nature/erw-hero-program.jpg';
 					<h4><a href="/blog/why-bedrock">Why Bedrock? The Case for Coordinated ERW Research Now</a></h4>
 				</article>
 				<article>
-					<h4><a href="/blog/data-quarry-update-spring-26">Rock On: The ERW Data Quarry Just Doubled Its Data</a></h4>
+					<h4><a href="/blog/data-quarry-update-summer-26">The Data Quarry, One Year In</a></h4>
 				</article>
 				<article>
 					<h4><a href="/blog/crn-eoi">Call for Expressions of Interest: Coordinated Research Network for Enhanced Rock Weathering</a></h4>

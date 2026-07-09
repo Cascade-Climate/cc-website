@@ -75,12 +75,12 @@
 			</div>
 			<div class="spotlight">
 				<img src={erwPhoto} alt="Enhanced rock weathering" />
-				<h2>Spring quarry update: more data, more partners</h2>
+				<h2>The Data Quarry, One Year In</h2>
 				<p>
-					Three new datasets are now available in the ERW Data Quarry — and two new project developers have
-					joined the effort.
+					Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what
+					they hold, what they can already tell us, and what future contributions may reveal.
 				</p>
-				<a href="/blog/data-quarry-update-spring-26" target="_blank">Learn More</a>
+				<a href="/blog/data-quarry-update-summer-26" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={asiasmoke} alt="Asia Smoke"/>
