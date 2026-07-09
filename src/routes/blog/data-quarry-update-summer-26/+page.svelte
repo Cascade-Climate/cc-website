@@ -14,12 +14,6 @@
 					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Access the ERW Data Quarry↗</a>
 				</div>
 			</div>
-			<img
-				src="/images/blog/data-quarry-summer-26-hero.jpg"
-				alt="View through a window overlooking agricultural fields and tropical vegetation"
-				width="1024"
-				height="768"
-			/>
 		</div>
 	</section>
 	<main>

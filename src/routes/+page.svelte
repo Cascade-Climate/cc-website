@@ -1,5 +1,4 @@
 <script>
-	import erwPhoto from '$lib/images/nature/erw.webp';
 	import farm1 from '$lib/images/nature/farm1.webp';
 	import farm2 from '$lib/images/nature/farm2.webp';
 	import ocean1 from '$lib/images/nature/ocean1.webp';
@@ -74,7 +73,10 @@
 				<a href="/blog/lrm-financing" target="_blank">Learn More</a>
 			</div>
 			<div class="spotlight">
-				<img src={erwPhoto} alt="Enhanced rock weathering" />
+				<img
+					src="/images/blog/data-quarry-summer-26-hero.jpg"
+					alt="View through a window overlooking agricultural fields and tropical vegetation"
+				/>
 				<h2>The Data Quarry, One Year In</h2>
 				<p>
 					Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what
