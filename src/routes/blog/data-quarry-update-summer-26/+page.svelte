@@ -111,8 +111,7 @@
 			overlap is between Serra da Mantiqueira and Aracari (Jaccard 0.74) — InPlanet&apos;s two sites, which share a
 			common measurement protocol. Cross-developer overlap is more modest. This is the expected consequence of a field
 			in which each company has built its own MRV approach — operating across a spectrum of agricultural soils and
-			management practices — and it constrains how much <strong>synthesis science</strong> this catalog can support at this point in
-			time.
+			management practices — and it constrains how much <strong>synthesis science</strong> the current catalog can support.
 		</p>
 
 		<h2 class="spaced-h2">What can the Data Quarry answer today?</h2>
@@ -132,8 +131,8 @@
 			</li>
 		</ul>
 		<p>
-			<strong>None of these questions can be fully answered by today&apos;s collection</strong> — but each is being carried further,
-			with more visibility than ever before. Here&apos;s what the data shows today.
+			<strong>None of these questions can be fully answered by today&apos;s collection</strong> — but each is being moved forward,
+			with more visibility than ever before. Here&apos;s where the data shows today.
 		</p>
 		<ul>
 			<li>
@@ -194,8 +193,8 @@
 			to hear when. We&apos;re excited to see what the community can do with this data!
 		</p>
 		<p>
-			<strong>Do you have field data of your own?</strong> If you hold results from a commercial project or
-			non-commercial ERW trial, we&apos;d welcome the chance to bring them into the mix. Reach out to us at
+			<strong>Do you have field data of your own to contribute?</strong> If you hold results from a commercial project or
+			non-commercial ERW trial, we&apos;d love to learn more. Please reach out to us at
 			<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a>.
 		</p>
 	</main>
