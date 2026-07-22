@@ -8,7 +8,7 @@
 			imageAlt: 'Participants of the ERW Modeling Workshop gathered for a group photo',
 			title: 'Notes from the ERW Modeling Workshop',
 			excerpt:
-				'Cascade convened fifteen ERW modelers and empiricists in New York City to chart critical hypotheses and the field data needed to test them.',
+				"Cascade convened fifteen ERW modelers and empiricists in New York City to kick off Bedrock Initiative's Model Acceleration effort.",
 			href: '/bedrock-initiative/modeling/blog/may-workshop'
 		}
 	];
