@@ -104,6 +104,24 @@
 
 		<div class="post">
 			<h1>
+				<a href="/bedrock-initiative/modeling/blog/may-workshop" target="_blank" style="color: var(--color-accent);">
+					Mapping the Terrain: Notes from the ERW Modeling Workshop
+				</a>
+			</h1>
+			<p>
+				Cascade convened fifteen ERW modelers and empiricists in New York City to kick off Bedrock Initiative&apos;s Model Acceleration effort. Here&apos;s what we learned, together.
+			</p>
+			<p class="details">
+				<span class="date">07/22/2026</span>
+				·
+				<span class="read-time">5 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
+
+		<div class="post">
+			<h1>
 				<a href="/blog/data-quarry-update-summer-26" target="_blank" style="color: var(--color-accent);">
 					The Data Quarry, One Year In
 				</a>

@@ -14,8 +14,8 @@
 				</a>
 			</h1>
 			<p>
-				Cascade convened fifteen ERW modelers and empiricists in New York City to chart critical hypotheses and the
-				field data needed to test them.
+				Cascade convened fifteen ERW modelers and empiricists in New York City to kick off Bedrock
+				Initiative&apos;s Model Acceleration effort. Here&apos;s what we learned, together.
 			</p>
 			<p class="details">
 				<span class="date">07/22/2026</span>

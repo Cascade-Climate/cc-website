@@ -18,10 +18,6 @@
 				<p class="date" style="font-weight: 200;">July 22, 2026</p>
 				<hr />
 			</div>
-			<img
-				src="/images/blog/erw-modeling-workshop-hero.jpg"
-				alt="Participants of the ERW Modeling Workshop gathered for a group photo"
-			/>
 		</div>
 	</section>
 	<ScrollNav fixedUnderIntro />
@@ -54,6 +50,13 @@
 				alongside Cascade&rsquo;s Richard Marinos and Will Nguyen.
 			</p>
 		</section>
+
+		<figure class="workshop-photo">
+			<img
+				src="/images/blog/erw-modeling-workshop-hero.jpg"
+				alt="Participants of the ERW Modeling Workshop gathered for a group photo"
+			/>
+		</figure>
 
 		<section id="charting-critical-questions">
 			<h1>Charting critical questions</h1>
@@ -129,13 +132,6 @@
 </div>
 
 <style>
-	:global(.may-workshop-page .intro .content img) {
-		width: 45%;
-		min-width: 400px;
-		aspect-ratio: 4 / 3;
-		object-fit: cover;
-	}
-
 	:global(.may-workshop-page main section) {
 		scroll-margin-top: 7rem;
 		border-bottom: none !important;
@@ -155,16 +151,26 @@
 		margin-bottom: 1rem;
 	}
 
+	.workshop-photo {
+		margin: 2rem auto;
+		padding: 0;
+		max-width: 720px;
+		text-align: center;
+	}
+
+	.workshop-photo img {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+		border-radius: 1rem;
+		object-fit: cover;
+	}
+
 	.back {
 		color: var(--color-accent);
 		text-decoration: none;
 		font-weight: 420;
-	}
-
-	@media (max-width: 960px) {
-		:global(.may-workshop-page .intro .content img) {
-			min-width: 0;
-			width: 100%;
-		}
 	}
 </style>
