@@ -1,5 +1,17 @@
 <script>
 	import heroImg from '$lib/images/nature/model-acceleration-hero-2.png';
+	import SpotlightGrid from '$lib/components/SpotlightGrid.svelte';
+
+	const spotlightItems = [
+		{
+			image: '/images/blog/erw-modeling-workshop-hero.jpg',
+			imageAlt: 'Participants of the ERW Modeling Workshop gathered for a group photo',
+			title: 'Notes from the ERW Modeling Workshop',
+			excerpt:
+				'Cascade convened fifteen ERW modelers and empiricists in New York City to chart critical hypotheses and the field data needed to test them.',
+			href: '/bedrock-initiative/modeling/blog/may-workshop'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -22,9 +34,16 @@
 		</p>
 		<p>
 			These efforts — beginning with a comprehensive mapping of current model capabilities and process representations — will identify critical data gaps for field research to address, creating an iterative cycle between modeling and field experimentation — with the first community workshop in May 2026.
-
-			Stay tuned for more details.
 		</p>
+
+		<div class="spotlight-wrap">
+			<SpotlightGrid
+				sectionTitle="MODEL ACCELERATION"
+				sectionHref="/bedrock-initiative/modeling"
+				items={spotlightItems}
+			/>
+		</div>
+
 		<p><a class="back" href="/bedrock-initiative">← Back to Bedrock overview</a></p>
 	</section>
 </div>
@@ -59,9 +78,19 @@
 	}
 	.body {
 		padding: 1.75rem 4rem;
+		max-width: 1100px;
+	}
+	.body > p {
 		max-width: 720px;
 	}
+	.spotlight-wrap :global(.spotlight) {
+		flex: 0 1 260px;
+		width: 260px;
+		max-width: 100%;
+	}
 	.back {
+		display: inline-block;
+		margin-top: 1.5rem;
 		color: var(--color-accent);
 		text-decoration: none;
 	}
@@ -70,6 +99,11 @@
 		.body {
 			padding-left: 2rem;
 			padding-right: 2rem;
+		}
+
+		.spotlight-wrap :global(.spotlight) {
+			width: 100%;
+			flex-basis: 100%;
 		}
 	}
 </style>

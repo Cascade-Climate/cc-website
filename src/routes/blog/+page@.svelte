@@ -9,6 +9,22 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/bedrock-initiative/modeling/blog/may-workshop">
+					Mapping the Terrain: Notes from the ERW Modeling Workshop
+				</a>
+			</h1>
+			<p>
+				Cascade convened fifteen ERW modelers and empiricists in New York City to chart critical hypotheses and the
+				field data needed to test them.
+			</p>
+			<p class="details">
+				<span class="date">07/22/2026</span>
+				·
+				<span class="read-time">5 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/blog/data-quarry-update-summer-26">
 					The Data Quarry, One Year In
 				</a>
