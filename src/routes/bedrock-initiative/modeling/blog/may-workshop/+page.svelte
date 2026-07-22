@@ -56,6 +56,10 @@
 				src="/images/blog/erw-modeling-workshop-hero.jpg"
 				alt="Participants of the ERW Modeling Workshop gathered for a group photo"
 			/>
+			<figcaption>
+				Our group of ERW modelers and empiricists from around the globe takes a break from comparing
+				notes to capture the moment.
+			</figcaption>
 		</figure>
 
 		<section id="charting-critical-questions">
@@ -166,6 +170,15 @@
 		margin: 0 auto;
 		border-radius: 1rem;
 		object-fit: cover;
+	}
+
+	.workshop-photo figcaption {
+		margin-top: 0.75rem;
+		font-size: 0.95rem;
+		line-height: 1.45;
+		font-style: italic;
+		opacity: 0.85;
+		text-align: center;
 	}
 
 	.back {
