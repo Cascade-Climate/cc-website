@@ -15,6 +15,10 @@
 		<div class="content">
 			<div class="copy">
 				<h1>Mapping the Terrain: Notes from the ERW Modeling Workshop</h1>
+				By:
+				<a href="/people/richard-marinos" style="color: #e1fcf7;">Richard Marinos</a>
+				and
+				<a href="/people/jonathan-moore" style="color: #e1fcf7;">Jon Jon Moore</a>
 				<p class="date" style="font-weight: 200;">July 22, 2026</p>
 				<hr />
 			</div>
