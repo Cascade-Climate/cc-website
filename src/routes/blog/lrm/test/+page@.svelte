@@ -227,9 +227,11 @@
 		recommendations = pickRecommendations(sel);
 
 		pulseMetrics = false;
-		requestAnimationFrame(() => {
-			pulseMetrics = true;
-		});
+		if (typeof requestAnimationFrame !== 'undefined') {
+			requestAnimationFrame(() => {
+				pulseMetrics = true;
+			});
+		}
 	}
 
 	$: {
