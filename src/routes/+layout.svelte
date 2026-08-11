@@ -1,9 +1,13 @@
 <script>
+	import { page } from '$app/stores';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '$lib/theme.css';
 
 	export let data;
+
+	/** Full-bleed unlisted tools (no site chrome, link-only discovery). */
+	$: barePage = $page.url.pathname.startsWith('/blog/lrm/test');
 </script>
 
 {#if import.meta.env.DEV}
@@ -13,11 +17,15 @@
 	</div>
 {/if}
 
-<div id="root-layout" class:dev-hint-active={import.meta.env.DEV}>
-	<Header navItems={data.navItems} />
+{#if barePage}
 	<slot />
-	<Footer />
-</div>
+{:else}
+	<div id="root-layout" class:dev-hint-active={import.meta.env.DEV}>
+		<Header navItems={data.navItems} />
+		<slot />
+		<Footer />
+	</div>
+{/if}
 
 <style>
 	.dev-preview-hint {
