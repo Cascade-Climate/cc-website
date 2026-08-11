@@ -1,4 +1,6 @@
 <script>
+	import { calculateCosts } from '$lib/lrm/calculate.js';
+
 	const recommendationPools = {
 		Destruction: [
 			{
@@ -82,14 +84,8 @@
 	let scenarioSummary = '';
 	let opexValue = '—';
 	let capexValue = '—';
-	let amtRecovery = '—';
-	let amtTransport = '—';
-	let amtProcessing = '—';
-	let amtCapexShare = '—';
-	let barRecovery = 0;
-	let barTransport = 0;
-	let barProcessing = 0;
-	let barCapexShare = 0;
+	let opexRows = [];
+	let capexRows = [];
 	let recommendations = [];
 	let pulseMetrics = false;
 
@@ -141,51 +137,18 @@
 		return formatMoney(n, 0);
 	}
 
-	function articleFor(s) {
-		return /^[AEIOU]/i.test(s) ? 'an' : 'a';
+	function formatOpexLine(line) {
+		if (!line.available) return line.label;
+		return formatMoney(line.value) + '/kg';
 	}
 
-	function computeDummy(sel) {
-		const seed = hashString(Object.values(sel).join('|'));
-		const rand = mulberry32(seed);
+	function formatCapexLine(line) {
+		if (!line.available) return line.label;
+		return formatCompact(line.value);
+	}
 
-		const scenarioMult = { Low: 0.72, Medium: 1, High: 1.38 }[sel.costScenario];
-		const effortMult = sel.effort === 'Rural' ? 1.22 : 0.92;
-		const geoMult = sel.geography === 'Southeast Asia' ? 0.88 : 1.05;
-		const exportMult = sel.location === 'Exported' ? 1.35 : 1;
-		const equipMult = sel.recoveryEquipment === 'High Capacity' ? 1.55 : 0.85;
-		const facilityMult = sel.facilityType === 'New Facility' ? 1.7 : 0.95;
-		const endUseBase = {
-			Destruction: 1.25,
-			Reclamation: 1.1,
-			Recycling: 0.7
-		}[sel.endUse];
-
-		const recovery = (1.2 + rand() * 3.8) * scenarioMult * effortMult * geoMult;
-		const transport = (0.4 + rand() * 2.2) * scenarioMult * exportMult;
-		const processing =
-			sel.endUse === 'Recycling'
-				? 0.15 + rand() * 0.4
-				: (1.1 + rand() * 4.5) *
-					scenarioMult *
-					endUseBase *
-					(sel.technology === 'Plasma Arc' && sel.endUse === 'Destruction' ? 1.45 : 1);
-
-		const opex = recovery + transport + processing;
-
-		let capex =
-			(18000 + rand() * 42000) * equipMult * scenarioMult + (4000 + rand() * 9000);
-
-		if (sel.endUse !== 'Recycling') {
-			capex += (120000 + rand() * 680000) * facilityMult * geoMult;
-		}
-		if (sel.endUse === 'Reclamation') {
-			capex += (25000 + rand() * 80000) * scenarioMult;
-		}
-
-		const maxComponent = Math.max(recovery, transport, processing, opex * 0.35);
-
-		return { opex, capex, recovery, transport, processing, maxComponent };
+	function articleFor(s) {
+		return /^[AEIOU]/i.test(s) ? 'an' : 'a';
 	}
 
 	function buildSummary(sel) {
@@ -207,23 +170,62 @@
 		return shuffled.slice(0, 3);
 	}
 
+	function barWidth(line, scale) {
+		if (!line.available || !scale) return 0;
+		return Math.min(100, (line.value / scale) * 100);
+	}
+
 	function render() {
 		const sel = selections;
-		const costs = computeDummy(sel);
-		const scale = costs.maxComponent || 1;
+		const costs = calculateCosts(sel);
+
+		const opexNumeric = [costs.recovery, costs.transport, costs.processing]
+			.filter((l) => l.available)
+			.map((l) => l.value);
+		const opexScale = Math.max(...opexNumeric, 0.0001);
+
+		const capexLines = [
+			{ name: 'Recovery equipment', line: costs.recoveryEquip },
+			{ name: 'Recovery + recycling machine', line: costs.recyclingMachine },
+			{ name: 'Refrigerant identifiers', line: costs.identifiers },
+			{ name: 'Recovery cylinders', line: costs.cylinders },
+			{ name: 'Destruction / reclamation facility', line: costs.facility },
+			{ name: 'Reclamation training', line: costs.training },
+			{ name: 'GC — per analysis', line: costs.gcAnalysis },
+			{ name: 'GC — equipment', line: costs.gcEquip }
+		];
+		const capexNumeric = capexLines.filter((r) => r.line.available).map((r) => r.line.value);
+		const capexScale = Math.max(...capexNumeric, 0.0001);
 
 		scenarioSummary = buildSummary(sel);
-		opexValue = formatMoney(costs.opex);
-		capexValue = formatCompact(costs.capex);
-		amtRecovery = formatMoney(costs.recovery) + '/kg';
-		amtTransport = formatMoney(costs.transport) + '/kg';
-		amtProcessing = formatMoney(costs.processing) + '/kg';
-		amtCapexShare = formatCompact(costs.capex);
-		barRecovery = Math.min(100, (costs.recovery / scale) * 100);
-		barTransport = Math.min(100, (costs.transport / scale) * 100);
-		barProcessing = Math.min(100, (costs.processing / scale) * 100);
-		const capexShare = Math.min(costs.maxComponent * 0.95, costs.capex / 100000);
-		barCapexShare = Math.min(100, (capexShare / scale) * 100);
+		opexValue = formatMoney(costs.opexTotal);
+		capexValue = formatCompact(costs.capexTotal);
+
+		opexRows = [
+			{ name: 'Recovery', line: costs.recovery, bar: barWidth(costs.recovery, opexScale) },
+			{
+				name: 'Transport & handling',
+				line: costs.transport,
+				bar: barWidth(costs.transport, opexScale)
+			},
+			{
+				name: 'Post-recovery processing',
+				line: costs.processing,
+				bar: barWidth(costs.processing, opexScale)
+			}
+		].map((row) => ({
+			...row,
+			amt: formatOpexLine(row.line),
+			na: !row.line.available
+		}));
+
+		capexRows = capexLines.map((row) => ({
+			name: row.name,
+			amt: formatCapexLine(row.line),
+			bar: barWidth(row.line, capexScale),
+			na: !row.line.available
+		}));
+
 		recommendations = pickRecommendations(sel);
 
 		pulseMetrics = false;
@@ -244,7 +246,7 @@
 	<title>Refrigerant Lifecycle Explorer — Cascade Climate (unlisted test)</title>
 	<meta
 		name="description"
-		content="Unlisted prototype of the Refrigerant Lifecycle Explorer. Dummy costs for interaction design only."
+		content="Unlisted prototype of the Refrigerant Lifecycle Explorer using LRM Cost Model V2.3 calculations."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -262,13 +264,13 @@
 			<div class="eyebrow">Lifecycle refrigerant management · Prototype</div>
 			<h1>Refrigerant Lifecycle Explorer</h1>
 			<p class="lede">
-				Explore how geography, end-use pathway, and system type shape indicative operational and
-				capital costs for refrigerant recovery and management.
+				Explore how geography, end-use pathway, and system type shape operational and capital costs
+				for refrigerant recovery and management, using LRM Cost Model V2.3.
 			</p>
 			<div class="prototype-banner">
-				Proof of concept only. Cost figures and recommendations below are
-				<strong>dummy placeholders</strong> for interaction design — not outputs from the Excel cost
-				model.
+				Unlisted prototype. Cost figures below follow the V2.3 workbook logic (opex USD/kg, capex
+				USD). Policy pathway cards remain
+				<strong>illustrative placeholders</strong> — not model outputs.
 			</div>
 		</header>
 
@@ -381,7 +383,7 @@
 			</section>
 
 			<section class="panel results" aria-labelledby="results-heading">
-				<div class="dummy-tag">Dummy cost outputs</div>
+				<div class="model-tag">V2.3 model outputs</div>
 				<h2 id="results-heading">See your scenario</h2>
 				<p class="summary">{scenarioSummary}</p>
 
@@ -389,42 +391,41 @@
 					<div class="metric" class:pulse={pulseMetrics}>
 						<div class="label">Estimated operational cost</div>
 						<div class="value">{opexValue}</div>
-						<span class="unit">USD / kg · illustrative</span>
+						<span class="unit">USD / kg · Total Opex</span>
 					</div>
 					<div class="metric" class:pulse={pulseMetrics}>
 						<div class="label">Estimated capital cost</div>
 						<div class="value">{capexValue}</div>
-						<span class="unit">USD · illustrative</span>
+						<span class="unit">USD · Total Capex</span>
 					</div>
 				</div>
 
 				<div class="breakdown">
-					<h3>Simple cost breakdown (placeholder)</h3>
-					<div class="bar-row">
-						<span class="name">Recovery</span>
-						<div class="bar-track"><div class="bar-fill" style="width: {barRecovery}%" /></div>
-						<span class="amt">{amtRecovery}</span>
-					</div>
-					<div class="bar-row">
-						<span class="name">Transport &amp; handling</span>
-						<div class="bar-track"><div class="bar-fill" style="width: {barTransport}%" /></div>
-						<span class="amt">{amtTransport}</span>
-					</div>
-					<div class="bar-row">
-						<span class="name">Post-recovery processing</span>
-						<div class="bar-track"><div class="bar-fill" style="width: {barProcessing}%" /></div>
-						<span class="amt">{amtProcessing}</span>
-					</div>
-					<div class="bar-row">
-						<span class="name">Equipment &amp; facility</span>
-						<div class="bar-track"><div class="bar-fill" style="width: {barCapexShare}%" /></div>
-						<span class="amt">{amtCapexShare}</span>
-					</div>
+					<h3>Operational cost breakdown</h3>
+					{#each opexRows as row}
+						<div class="bar-row" class:na={row.na}>
+							<span class="name">{row.name}</span>
+							<div class="bar-track"><div class="bar-fill" style="width: {row.bar}%" /></div>
+							<span class="amt">{row.amt}</span>
+						</div>
+					{/each}
+				</div>
+
+				<div class="breakdown capex-breakdown">
+					<h3>Capital cost breakdown</h3>
+					{#each capexRows as row}
+						<div class="bar-row" class:na={row.na}>
+							<span class="name">{row.name}</span>
+							<div class="bar-track"><div class="bar-fill" style="width: {row.bar}%" /></div>
+							<span class="amt">{row.amt}</span>
+						</div>
+					{/each}
 				</div>
 
 				<p class="note">
-					These numbers change with your selections so you can feel the interaction. They are not
-					calculated from the Excel model.
+					NA / Not Available means the workbook has no figure for that combination; those lines are
+					excluded from totals (same as the Excel model). Refrigerant class does not change costs in
+					V2.3 — source data is classified as Both.
 				</p>
 			</section>
 		</div>
@@ -449,7 +450,7 @@
 		</section>
 
 		<p class="page-foot">
-			Inspired by LRM Cost Model V2.3 · Unlisted prototype · Not for decision-making
+			LRM Cost Model V2.3 · Unlisted prototype · Costs for exploration, not formal decision-making
 		</p>
 	</div>
 </div>
@@ -650,9 +651,11 @@
 		padding: 1.35rem 1.35rem 1.5rem;
 		position: sticky;
 		top: 1rem;
+		max-height: calc(100vh - 2rem);
+		overflow: auto;
 	}
 
-	.dummy-tag {
+	.model-tag {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.4rem;
@@ -660,19 +663,19 @@
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		font-weight: 600;
-		color: var(--warn);
-		background: var(--warn-bg);
+		color: var(--accent);
+		background: rgba(127, 214, 197, 0.12);
 		padding: 0.28rem 0.55rem;
 		border-radius: 2px;
 		margin-bottom: 0.85rem;
 	}
 
-	.dummy-tag::before {
+	.model-tag::before {
 		content: '';
 		width: 0.45rem;
 		height: 0.45rem;
 		border-radius: 50%;
-		background: #c9a45a;
+		background: var(--accent);
 	}
 
 	.summary {
@@ -737,9 +740,15 @@
 		margin: 0 0 0.75rem;
 	}
 
+	.capex-breakdown {
+		margin-top: 1.15rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--line);
+	}
+
 	.bar-row {
 		display: grid;
-		grid-template-columns: 8.5rem 1fr auto;
+		grid-template-columns: 9.5rem 1fr auto;
 		gap: 0.65rem;
 		align-items: center;
 		margin-bottom: 0.55rem;
@@ -755,6 +764,16 @@
 		font-variant-numeric: tabular-nums;
 		min-width: 4.5rem;
 		text-align: right;
+	}
+
+	.bar-row.na .name,
+	.bar-row.na .amt {
+		color: var(--muted);
+		font-style: italic;
+	}
+
+	.bar-row.na .bar-fill {
+		opacity: 0;
 	}
 
 	.bar-track {
@@ -854,6 +873,7 @@
 		}
 		.results {
 			position: static;
+			max-height: none;
 		}
 		.cards {
 			grid-template-columns: 1fr;
