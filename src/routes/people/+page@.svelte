@@ -167,7 +167,7 @@
 		<a class="team-card" href="/people/anna-sophia-roberts">
 			<img src={annaSophiaRoberts} alt="Anna Sophia Roberts" />
 			<h1>Anna Sophia Roberts</h1>
-			<span>Policy Associate</span>
+			<span>Policy Manager</span>
 		</a>
 		<a class="team-card" href="/people/brad-rochlin">
 			<img src={bradRochlin} alt="Brad Rochlin" />

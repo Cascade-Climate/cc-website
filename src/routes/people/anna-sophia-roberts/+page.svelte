@@ -14,7 +14,7 @@
 	<div class="member-info">
 		<h1>Anna Sophia Roberts</h1>
 		<div class="details">
-			<span>Policy Associate</span>
+			<span>Policy Manager</span>
 			<div class="socials">
 				<a target="_blank" href="https://www.linkedin.com/in/anna-sophia-roberts/">
 					<img src={linkedinIcon} alt="LinkedIn" />
