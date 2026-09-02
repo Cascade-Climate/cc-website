@@ -1,0 +1,173 @@
+<svelte:head>
+	<title>ERW Data Quarry Terms of Service - Cascade Climate</title>
+	<meta
+		name="description"
+		content="Terms of Service for the ERW Data Quarry platform operated by Cascade Climate."
+	/>
+</svelte:head>
+
+<div class="tos-page">
+	<section class="intro">
+		<div class="content">
+			<div class="copy">
+				<h1>Cascade Climate Terms of Service</h1>
+				<p class="date">Version: May 13, 2025</p>
+				<p class="note">
+					These are the Terms of Service for the ERW Data Quarry. The same terms appear in the Terms
+					of Service tab at
+					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
+						>data.cascadeclimate.org</a
+					>.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<main class="tos-body">
+		<p>These Terms of Service (this <b><i>"Agreement"</i></b>) set out the terms on which Cascade Climate (<b><i>"Cascade Climate"</i></b> <b><i>"we"</i></b> or <b><i>"us"</i></b>) will provide access to and use of its Data Quarry platform through which users (<b><i>"you"</i></b> or <b><i>"Users"</i></b>) can access data and datasets related to enhanced rock weathering (<b><i>"ERW"</i></b>) to advance the understanding of ERW-related scientific questions (the <b><i>"Platform"</i></b>). You should read this Agreement carefully. By indicating acceptance of this Agreement or by otherwise accessing or using the Platform, you are entering into a legally binding agreement with us (and you hereby represent that you are of legal age in the jurisdiction you are accessing the Platform from, and are otherwise fully able and competent, to enter into a binding agreement). We provide the use of the Platform on the basis of this Agreement. If you do not agree to these terms and conditions, you must not use the Platform.</p>
+		<p>THIS AGREEMENT CREATES A BINDING LEGAL AGREEMENT BETWEEN YOU AND CASCADE CLIMATE, AND INCLUDES AN ARBITRATION CLAUSE UNDER WHICH CERTAIN CLAIMS MAY NOT BE BROUGHT IN COURT OR DECIDED BY A JURY. PLEASE READ THIS AGREEMENT CAREFULLY.</p>
+		<div>
+		<h2 class="summary">Summary of Cascade Climate's Processes Related to this Platform</h2>
+		<ul>
+		<li>This Platform facilitates access to datasets. To access them, you must submit a brief research proposal and receive approval from the Cascade Climate-facilitated governing board (the <b><i>"Governing Board"</i></b>) or, in the case of a financial conflict of interest, the licensor who submitted the datasets to the Platform (the <b><i>"Data Licensor"</i></b>).</li>
+		<li>Your research proposal will be shared with Users of the Platform along with the approval status. This is to ensure transparency of the governing process and encourage collaboration across researchers.</li>
+		<li>Data access is granted for a three (3) year period, after which you must request renewal from the Governing Board or Data Licensor, as applicable.</li>
+		<li>ERW Data (as defined herein) is confidential and may only be shared with collaborators specifically named in your research proposal. Additional collaborators require submission of an amended proposal and separate agreement to these Terms of Service.</li>
+		<li>You may <b>not</b> use data accessed on this Platform for commercial purposes. This includes, but is not limited to: using data to train a proprietary model, selling data to any other person or entity, using data to inform site selection for a commercial project, filing a patent, etc.</li>
+		<li>You may publish peer-reviewed articles using this data. Upon publication the dataset will be made public. However, datasets cannot be released until at least one (1) year from data upload to the Platform without prior approval from the Data Licensor.</li>
+		<li>Unless otherwise noted, the datasets will be made public subject to a non-commercial use license, prohibiting use for commercial purposes.</li>
+		<li>If requested by the Data Licensor, you must discuss opportunities for research collaboration with them, including co-authorship opportunities for the Data Licensor. However, co-authorship is ultimately at the discretion of the lead researcher(s).</li>
+		<li>Prior to your submission of an Article (as defined herein) for publication, you must notify the Data Licensor whose data you analyzed in your Article, and the Data Licensor shall have at least thirty (30) days to review the Article, including use of data and acknowledgement of data source. The Data Licensor shall not have authority to prevent publication of the Article.</li></ul>
+		</div>
+		<div>
+		<h2>1. <span>Nature of the Platform</span></h2>
+		<ol type="a">
+		<li>
+		<p><i>Provision of Data and Datasets Related to Enhanced Rock Weathering.</i> Cascade Climate will use commercially reasonable efforts to provide the Platform described in and subject to these Terms of Service. The Platform offers access to data and datasets (the <b><i>"ERW Data"</i></b>) to the scientific community for use in research projects related to advancing the science of enhanced rock weathering.</p></li>
+		<li>
+		<p><i>Disclaimer re Data.</i> Cascade Climate uses reasonable procedures to provide ERW Data which has been provided to Cascade Climate by its third party data sources. You acknowledge that Cascade Climate is dependent on third party data sources that it does not control, and that errors in ERW Data will occur. Accordingly, Cascade Climate makes no representation or warranty as to the standard of the ERW Data, including the accuracy, timeliness, or completeness thereof. Any reliance on the Platform and the ERW Data is at your own risk, and Cascade Climate specifically disclaims all responsibility for any liability, loss or risk, personal or otherwise, that is incurred as a consequence, directly or indirectly, of the use of the Platform. We may remove ERW Data which we in our sole discretion believe is untruthful, misleading, inaccurate, harmful, or illegal; we reserve the right to remove ERW Data from the Platform, in whole or in part, without prior notice, for any reason or for no reason at all.</p></li>
+		</ol>
+		<h2>2. <span>Use of the Platform</span></h2>
+		<ol type="a">
+		<li>
+		<p><i>Eligibility.</i> Anyone may create a log-in and access the Platform. In order to access datasets on the Platform, you must submit a proposal for a research project which must be approved by either the dataset owner or the Cascade Climate-facilitated Governing Board. You are responsible for providing all of the equipment necessary to access and use the Platform and for all related third-party charges (e.g. internet service provider charges); to clarify, there is no charge for accessing the Platform. You accept sole responsibility in accordance with this Agreement for, and Cascade Climate will not be responsible for, your use of the Platform, and any device from which the Platform and the ERW Data have been accessed, whether or not it is owned by you.</p></li>
+		<li>
+		<p><i>Required Information.</i> To use the Platform, you will be required to provide us with demographic and contact information including, but not limited to, your first name, last name, email address, employer, job title, username and password. You represent and warrant to us that you will provide us with accurate, current and complete information. We reserve the right to refuse any requests to access and use the Platform, without liability or justification. To use the Platform, you will be required to create a password and register with us. You are responsible for your registration, and for all use of the Platform using any User credentials or passwords issued to you or chosen by you.</p></li>
+		<li>
+		<p><i>Errors.</i> The Platform may contain errors and inaccuracies for which we will not be liable to you or any other person, unless otherwise prohibited by law. We do not guarantee that the Platform will be available to all individuals who desire to access and use the Platform. We reserve the right to limit access to the Platform.</p></li>
+		<li>
+		<p><i>Compliance with Applicable Laws.</i> You represent and warrant that you comply and will at all times comply with all applicable laws and regulations in your use of the Platform.</p></li>
+		<li>
+		<p><i>Confidentiality and Non-Disclosure.</i> You agree to maintain the confidentiality of all ERW Data accessed through the Platform and shall not: (a) disclose, share, or otherwise make available any ERW Data to any person or entity not specifically named in your approved research proposal; (b) allow access to ERW Data by any person who has not separately agreed to these Terms of Service; (c) store ERW Data on shared or networked drives accessible to unapproved individuals; or (d) use the ERW data other than for the purposes specified in your research proposal. If you wish to share ERW Data with additional researchers not named in your original proposal, you must: (a) submit an amended research proposal identifying all new collaborators; (b) ensure each new collaborator agrees to these Terms of Service; (c) receive approval from the Governing Board or Data Licensor before sharing any ERW Data. Notwithstanding the foregoing, you may disclose ERW Data (i) as required by law or a valid court order, or (ii) to your attorneys, advisors, contractors, or agents with a need to know (provided that such third parties are bound by confidentiality obligations offering substantially similar protection to those in this Section; such third parties are only permitted to use such information for the purpose of advising or providing services to you, as applicable; and you remain responsible for all acts and omissions of such third parties in connect with the ERW data). This confidentiality obligation survives termination of this Agreement and continues in perpetuity, except for data that becomes publicly available through approved publications or public release.</p></li>
+		</ol>
+		<h2>3. <span>No Fees</span></h2>
+		<p>The Platform is offered free of charge to registered Users. Cascade Climate reserves the right to charge, and change eligibility requirements, for access to and use of some or all portions of the Platform, at any time.</p>
+		<h2>4. <span>Intellectual Property Rights</span></h2>
+		<ol type="a">
+		<li>
+		<p><i>Rights of Cascade Climate.</i> The Platform is the property of, and owned by, Cascade Climate or its licensors. Certain data made available on the Platform is licensed to Users under a Creative Commons copyright license and is intended to be distributed at no charge to researchers with approved research proposals. All the software, algorithms, functionality, inventions, designs, concepts, text, images, marks, logos, compilations, content and technology used to deliver the Platform or otherwise embodied in, displayed through, or provided directly or indirectly (e.g., emails or other communications from us to you) via the Platform are the property of Cascade Climate or its licensors (<b><i>"Our Property"</i></b>). Except as otherwise expressly permitted by this Agreement or the Creative Commons license pursuant to which certain ERW Data is licensed, any use, copying, making derivative works, transmitting, posting, linking, deep linking, framing, redistribution, sale, decompilation, modification, reverse engineering, translation or disassembly of Our Property is prohibited. You understand that reverse engineering, translation or disassembly of Our Property is prohibited. You understand that we and our licensors may pursue all remedies available to us in the event of your breach of this Agreement, and you consent to our obtaining injunctive relief to restrain any breach or threatened breach of this Agreement, without any requirement to post bond.</p>
+		<p>The mark CASCADE CLIMATE, and any associated logos, are registered or unregistered trademarks or service marks of Cascade Climate or its licensors. You may not use them, or any of our or their other marks or logos, in any manner, including any use that is likely to cause confusion or that disparages or discredits us, without our consent. The Platform may also feature the trademarks, service marks, and logos of third parties, and each owner retains all rights in such marks. Any use of such marks, or any others displayed on the Platform, will inure solely to the benefit of their respective owners.</p>
+		<p>Subject to the terms and conditions herein, we grant you the non-exclusive, non-transferable, limited, revocable right to access and use Our Property solely as permitted by this Agreement, solely for your non-commercial research use. We reserve all other rights. For clarity and without limiting other obligations herein, except as otherwise permitted by any applicable Creative Commons license pursuant to which any ERW Data is licensed, Users shall not distribute or otherwise commercialize Our Property.</p></li>
+		<li>
+		<p><i>User Data.</i> Except as provided herein, you retain all rights and title in and to the information you provide to us when you register with us as a User of the Platform. You hereby grant to Cascade Climate and its licensors the worldwide, royalty-free, irrevocable, perpetual, license to use, modify, reproduce, distribute, and create derivative works of the information and data you input into the Platform (<b><i>"User Data"</i></b>), to further develop and improve the Platform. You grant to other Users of the Platform a limited license to access any proposal which you submit through the Platform.</p></li>
+		<li>
+		<p><i>Use of the Platform.</i> You must comply with all rules and policies about use of the Platform in this Agreement and that we publish from time to time. These rules and policies will be available on the Platform. Certain features or content within the Platform may contain supplemental terms of use, to which you must agree in order to use the relevant features or content. You must not: (a) harvest or otherwise collect information about others from the Platform, except as expressly permitted through the functionality of the Platform; (b) take any action that imposes or may impose an unreasonable or disproportionately large load on the Platform or its infrastructure, or bypass any measures we may use to prevent or restrict access to any portion of the Platform (or other accounts, networks or services connected thereto); (c) use manual or automated software, devices, or other processes to "crawl", "scrape" or "spider" any of the Platform or otherwise to copy, obtain, propagate, distribute or misappropriate any information or other content from the Platform, including any of Our Property; (d) distribute or otherwise make available any information or other content obtained through the Platform to any third party, except as expressly permitted herein; or (e) otherwise interfere in any manner with the use or operation of the Platform. We reserve the right (but are under no obligation) to investigate any claim that use of the Platform does not conform to the terms and conditions of this Agreement, and to terminate your use of the Platform for breach of this Agreement.</p></li>
+		<li>
+		<p><i>Term of Data Access.</i> Your access to and use of ERW Data is granted for a period of three (3) years from the date of initial access to such data ("Initial Access Period"). Upon expiration of the Initial Access Period, if the ERW Data has not yet been made public, you must: (a) cease all use of the ERW Data except as necessary to maintain the integrity of already-published Articles; (b) delete or destroy all local copies of the ERW Data; (c) notify Cascade Climate in writing that you have complied with the foregoing requirements. To continue accessing the ERW Data after the Initial Access Period, you must submit a new research proposal and receive approval from the Governing Board or Data Licensor, as applicable. Requests for renewal should be submitted at least sixty (60) days prior to expiration of the Initial Access Period. For clarity, published Articles and any derivative works created during the Initial Access Period remain unaffected by this provision.</p></li>
+		</ol>
+		<h2>5. <span>Publication of Articles and Data</span></h2>
+		<p>In order to be eligible to use the Platform, you are required to submit a proposal, which the Governing Board must approve, for an article to be submitted for publication in a peer-reviewed journal (<b><i>"Article"</i></b>). Your proposal will be accessible to other Users of the Platform. Cascade Climate will grant you access to ERW Data related to your proposal. Except for ERW Data that is related to health and safety (<b><i>"Health and Safety Data"</i></b>), you may not make the ERW Data you access public via your Article for at least one (1) year from the date such ERW Data was submitted to the Platform by its Data Licensor without the written permission of such Data Licensor. (Health and Safety Data will be made available to the public upon submission of the ERW Data to the Platform by the Data Licensor). If requested by the Data Licensor, you must discuss opportunities for research collaboration with them, including co-authorship opportunities for the Data Licensor (but you are not required to guarantee co-authorship to the Data Licensor). Prior to your submission of an Article to a peer-reviewed journal, you must notify the Data Licensor whose ERW Data you analyzed in your Article, and the Data Licensor shall have at least thirty (30) days to review the Article and use of the ERW Data for inaccuracies and to confirm form of acknowledgement of data source. The Data Licensor shall not have authority to prevent publication of the Article. If the Data Licensor does not opt to make the non-Health and Safety Data (<b><i>"Other Data"</i></b>) publicly available immediately upon delivery of its ERW to Cascade Climate, after at least one (1) year of the ERW Data being uploaded in the Platform, such Other Data will be made publicly available by Cascade Climate, upon publication of your Article analyzing such data in a peer-reviewed journal. ERW Data which is made publicly available shall be made available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). We do not claim any ownership rights in Articles authored by Users, and as between you and Cascade Climate, you remain the owner of all intellectual property rights that you have in your Article. You agree that we are not responsible for any use or disclosure of your Article by other Users or any third party.</p>
+		<p>Notwithstanding the three (3) year time limit set forth in Section 4.d, you may continue to access ERW Data necessary for the completion and publication of Articles for which you received approval during the Initial Access Period, provided that such access is limited to data specifically required for the approved Article.</p>
+		<p>You represent and warrant that (i) your Article will not infringe, misappropriate or violate any intellectual property right or other right or applicable law, or cause injury to any person or entity, (iii) to the best of the your knowledge, your Article will be truthful, accurate and not misleading, and (iii) you will comply with all applicable laws in the course of accessing and using ERW Data through the Platform. You agree that you bear all risks associated with your Article and your use of ERW Data.</p>
+		<h2>6. <span>Feedback</span></h2>
+		<p>If you provide to us (directly or indirectly, and by any means) any comments, feedback, suggestions, ideas, or other submissions related to the Platform (collectively <b><i>"Feedback"</i></b>), the Feedback will be the sole property of Cascade Climate and its licensors. We will be entitled to use, reproduce, disclose, publish, distribute, and otherwise exploit in any manner, all Feedback, without restriction and without compensating you in any way. We are and shall be under no obligation to maintain any Feedback in confidence, or to respond to any Feedback.</p>
+		<h2>7. <span>Warranty Disclaimers and Limitations of Liability</span></h2>
+		<p>THE PLATFORM IS PROVIDED "AS IS", WITH ALL FAULTS. WE EXPRESSLY DISCLAIM ANY AND ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING: (A) ALL WARRANTIES RELATED TO THE PLATFORM; (B) ALL WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NONINFRINGEMENT, AND ANY AND ALL WARRANTIES ARISING FROM COURSE OF DEALING OR USAGE OF TRADE; AND (B) THAT THE PLATFORM, THE ERW DATA OR OUR PROPERTY WILL MEET YOUR REQUIREMENTS, WILL ALWAYS BE AVAILABLE, DEALING OR USAGE OF TRADE; AND (B) THAT THE PLATFORM, THE ERW DATA OR OUR PROPERTY WILL MEET YOUR REQUIREMENTS, WILL ALWAYS BE AVAILABLE, ACCESSIBLE, UNINTERRUPTED, TIMELY, SECURE OR OPERATE WITHOUT ERROR. WE DISCLAIM ALL LIABILITY AND RESPONSIBILITY FOR YOUR USE OF THE PLATFORM, AND ANY EFFECTS OF THE PLATFORM ON YOU OR ANY THIRD PARTY. We may pause or interrupt the Platform at any time, and you should expect periodic downtime for updates to the Platform. No advice or information, whether oral or written, obtained by you from us or through the Platform will create any other warranty.</p>
+		<p>WE HEREBY DISCLAIM ALL LIABILITY FOR ANY ACT OR OMISSION OF ANY USERS OF THE PLATFORM OR THIRD PARTIES.</p>
+		<p>UNDER NO CIRCUMSTANCES WILL YOU BE ENTITLED TO RECOVER FROM US ANY INCIDENTAL, CONSEQUENTIAL, INDIRECT, PUNITIVE OR SPECIAL DAMAGES (INCLUDING DAMAGES FOR LOSS OF DATA, OR LOSS OF USE), WHETHER BASED ON CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE ARISING FROM OR RELATING TO THIS AGREEMENT, THE PLATFORM, THE ERW DATA OR OUR PROPERTY, EVEN IF WE HAVE BEEN INFORMED OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES. TO THE EXTENT PERMITTED BY APPLICABLE LAW, OUR MAXIMUM AGGREGATE LIABILITY TO YOU FOR ANY DAMAGES ARISING FROM OR RELATING TO THIS AGREEMENT, THE PLATFORM, THE ERW DATA OR OUR PROPERTY, WHETHER BASED ON CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, SHALL BE LIMITED TO THE AMOUNTS PAID BY YOU TO US FOR THE PLATFORM IN THE PRIOR YEAR (OR, IF YOU ARE A NON-FEE PAYING USER, TO THE AMOUNT OF $10).</p>
+		<p>SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF WARRANTIES OR OF LIABILITY FOR CERTAIN TYPES OF DAMAGES, SO SOME OF THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU.</p>
+		<h2>8. <span>Third Party Licensors</span></h2>
+		<p>Without limitation of the disclaimers and limitations of liability set forth in Section 7, you acknowledge and agree that Cascade Climate provides the Platform using third party licensors, including the Data Licensors. Cascade Climate does not endorse, and hereby disclaims all liability or responsibility to you or any other person for, any third party licensor. We reserve the right to change the terms of any third party relationship or terminate your access to the Platform at any time upon notice to you due to a change necessitated by unforeseen circumstances that may arise after the date hereof, regulatory changes or changes imposed or required by a third party licensor.</p>
+		<h2>9. <span>Indemnity</span></h2>
+		<p>You will indemnify us, and our respective directors, officers, employees, and licensors against any and all claims, actions, proceedings, suits, liabilities, losses, damages, costs, expenses and attorneys' fees (<b><i>"Liabilities"</i></b>) arising out of or related to (a) your breach of this Agreement, or (b) your use of the Platform (but excluding any Liabilities to the extent caused by our negligence or the Platform (but excluding any Liabilities to the extent caused by our negligence or willful misconduct). We reserve the right to assume the sole control of the defense and settlement of any claim, action, suit or proceeding for which you are obliged to indemnify us. You will cooperate with us with respect to such defense and settlement.</p>
+		<h2>10. <span>Our Privacy Practices</span></h2>
+		<p>We operate the Platform under the Cascade Climate Website Privacy Policy published at <a href="/privacy">cascadeclimate.org/privacy</a> (the <b><i>"Privacy Policy"</i></b>), which is hereby incorporated into this Agreement. Each party shall comply with the Privacy Policy.</p>
+		<h2>11. <span>Suspension and Termination</span></h2>
+		<p>You may terminate this Agreement at any time by ceasing to use the Platform. We reserve the right to suspend your access to the Platform at any time if we believe you are in breach of this Agreement. We reserve the right to terminate this Agreement or to cease to offer the Platform at any time on written notice to you (including by posting on the Platform) for any reason or no reason. If this Agreement is terminated for any reason or no reason, you agree that we shall not be liable to you, or any third party, for compensation, reimbursement, or damages in connection with termination of this Agreement. Upon termination, your account registration information will be deactivated and may no longer be retrievable by you. Please note, however, that information you have provided to Cascade Climate is backed-up and saved on a server and as such, we cannot guarantee that information that has been deleted from Cascade Climate account will not be available elsewhere. Sections 1 and 4 through 18, any accrued obligations and remedies hereunder, and any other provisions that by their nature should reasonably survive, shall survive the termination or expiration of this Agreement.</p>
+		<h2>12. <span>Modification of Platform and Agreement</span></h2>
+		<p>We reserve the right to modify the Platform at any time, without notice to you. We may also from time to time amend this Agreement prospectively. If we do so, we will notify you by posting on the Platform. You agree that your continued use of the Platform constitutes your agreement to the amended Agreement. If you do not agree to any amended Agreement that we publish, you must terminate your account and cease using the Platform. Except as set forth above, this Agreement may be amended or modified only by an express writing signed by Cascade Climate.</p>
+		<h2>13. <span>Children</span></h2>
+		<p>The Platform is not directed to users under the age of 18. The Platform does not knowingly collect personal information from children under the age of 13. If you are under 18, you are not permitted to use the Platform or to send personal information to Cascade Climate.</p>
+		<h2>14. <span>Applicable Law</span></h2>
+		<p>You and we each agree that all disputes or other matters arising from or relating to this Agreement, or the use or operation of the Platform, will be governed by the substantive laws of the Commonwealth of Massachusetts, U.S.A., without regard to its or any other jurisdiction's conflicts of laws principles that would apply another law. Any action or proceeding relating to the Platform or this Agreement, will be governed by the substantive laws of the Commonwealth of Massachusetts, U.S.A., without regard to its or any other jurisdiction's conflicts of laws principles that would apply another law. Any action or proceeding by you relating to any claim arising from or relating to the Platform or this Agreement must commence within the shorter of the applicable statute of limitations or one year after the cause of action has accrued. The United Nations Convention for the International Sale of Goods is hereby disclaimed.</p>
+		<h2>15. <span>Arbitration</span></h2>
+		<p>We will attempt to resolve disputes with Users to their satisfaction. If, however, a matter arises that cannot be resolved promptly between you and us, you agree that any disputes arising out of or relating to the Platform or this Agreement (including the validity and scope of the agreement to arbitrate and any disputes with other users of the Platform) shall be resolved exclusively by final and binding arbitration administered by the American Arbitration Association (<b><i>"AAA"</i></b>) under the Federal Arbitration Act, and shall be conducted before a single arbitrator pursuant to the applicable Rules and Procedures established by the AAA (for information on the AAA and its rules, see adr.org). You agree that the arbitration shall be held in Boston, Massachusetts unless the AAA or the arbitrator shall determine that venue in such city is unreasonably burdensome, in which case the AAA or the arbitrator shall select a venue that is not unreasonably burdensome to both you and us. You agree that, if the AAA shall be unavailable or decline to administer the arbitration, and the parties do not agree on a substitute, a substitute administrator or arbitrator shall be appointed by the court. The arbitrator may render early or summary disposition of some or all issues, after the parties have had a reasonable opportunity to make submissions on these issues. At Cascade Climate's option, this provision shall not apply to claims of patent, trademark, or copyright infringement or misappropriation of trade secrets (<b><i>"IP Claims"</i></b>). With respect to any IP Claims that are not subject to arbitration under the above provision, you hereby consent to non-exclusive jurisdiction and venue in any federal or state court located within Boston, Massachusetts, U.S.A., with respect to any suit, claim or cause of action arising from or relating to the Platform or this Agreement, and you shall not bring any such suit, claim or cause of action except in a court located within New York, New York, U.S.A. You agree that any arbitration shall not permit claims on a class, mass, representative, or private attorney general basis. You further agree that no claims of other parties may be consolidated with your or our claims in the arbitration without both your and our consent. YOU ARE WAIVING YOUR RIGHTS TO HAVE YOUR CASE DECIDED BY A JURY AND TO PARTICIPATE IN A CLASS, MASS, REPRESENTATIVE, PRIVATE ATTORNEY GENERAL, OR CONSOLIDATED ACTION AGAINST US. If any part of this Arbitration clause is later deemed invalid as a matter of law, then it shall be severed and the remaining portions of this section shall remain in effect, with the exception that if the preceding paragraph is deemed invalid, then this entire section shall be deemed invalid and the arbitration clause shall be void.</p>
+		<h2>16. <span>Force Majeure</span></h2>
+		<p>Cascade Climate will not be liable for delay or non-performance of any of its obligations hereunder or its performance of the Platform to the extent that such performance is prevented, prohibited or delayed, or such loss or destruction is caused, by any circumstance for reasons beyond its control including without limitation, labor disputes, fire, flood, natural disaster, war blockade, military operations, riot, civil commotion, plant breakdown, power outage, computer or other equipment failure or non-delivery or delays in delivery by any other suppliers of goods or services utilized in the performance of services under this Agreement.</p>
+		<h2>17. <span>Geography</span></h2>
+		<p>We provide the Platform from the United States. We make no claims that the Platform is accessible or appropriate in all locations inside the United States or outside of the United States. Access to the Platform may not be legal by certain persons or in certain countries. If you access the Platform from outside the United States, you do so on your own initiative and are responsible for compliance with local laws.</p>
+		<h2>18. <span>Miscellaneous Provisions</span></h2>
+		<p>No delay or omission by us in exercising any of our rights occurring upon any noncompliance or default by you with respect to any of the terms and conditions of this Agreement will impair any such right or be construed to be a waiver thereof, and a waiver by us of any of the covenants, conditions or agreements to be performed by you will not be construed to be a waiver thereof or a waiver of any succeeding breach thereof or of any other covenant, condition or agreement herein. No waiver will be binding on us unless made in an express writing signed by us. If any provision of this Agreement is found by a court of competent jurisdiction to be invalid or unenforceable, then this Agreement will remain in full force and effect and will be reformed to be valid and enforceable while reflecting the intent of the parties to the greatest extent permitted by law. Except as otherwise expressly provided herein, this Agreement sets forth the entire agreement between us and you regarding its subject matter, and supersedes all prior promises, agreements or representations, whether written or oral, regarding such subject matter. Your registration, this Agreement and your rights and obligations hereunder are not assignable, or otherwise transferable or delegable, by you to any third party without our prior written consent in our sole discretion. Any purported assignment, transfer or delegation without such consent will be null and void. We may assign or otherwise transfer or delegate this Agreement (including any rights or obligations hereunder), from time-to-time in our sole discretion. This Agreement will be binding upon and inure to the benefit of the parties' successors and permitted assigns. You agree that the electronic text of this Agreement constitutes a writing and your assent to the terms and conditions hereof constitutes a "signing" for all purposes. As used herein and unless the intent is expressly otherwise in a specific instance, the terms "include," "includes" or "including" shall not be limiting and "or" shall not be exclusive. Any section headings herein are for convenience only and do not form a part of, and will not be used in the interpretation of, the substantive provisions of this Agreement. You agree that email to your email address on record will constitute formal notice under this Agreement.</p></div>
+		<div>
+		<p>Version: May 13, 2025</p></div>
+	</main>
+</div>
+
+<style>
+	.date {
+		font-weight: 200;
+		margin: 0.5rem 0 1rem;
+	}
+
+	.note {
+		max-width: 46rem;
+		font-size: 1rem;
+		line-height: 1.5;
+		opacity: 0.9;
+	}
+
+	.note a {
+		color: inherit;
+		text-decoration: underline;
+		font-weight: 420;
+	}
+
+	.tos-body :global(p) {
+		margin: 0 0 1rem;
+		text-align: justify;
+		line-height: 1.55;
+	}
+
+	.tos-body :global(h2) {
+		margin: 1.75rem 0 0.75rem;
+		font-weight: 500;
+		font-size: 1.35rem;
+	}
+
+	.tos-body :global(h2 span) {
+		text-decoration: underline;
+	}
+
+	.tos-body :global(h2.summary) {
+		text-decoration: none;
+	}
+
+	.tos-body :global(ul),
+	.tos-body :global(ol) {
+		margin: 0 0 1rem;
+		padding-left: 1.75rem;
+	}
+
+	.tos-body :global(ol[type='a']) {
+		list-style-type: lower-alpha;
+	}
+
+	.tos-body :global(li) {
+		margin-bottom: 0.65rem;
+		padding-left: 0.35rem;
+	}
+
+	.tos-body :global(li p) {
+		margin-bottom: 0.5rem;
+	}
+</style>
