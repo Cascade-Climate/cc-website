@@ -217,15 +217,6 @@
 			</div>
 			<p class="table-note">Table updated as of: September 2026</p>
 			<p>
-				<sup>**</sup>Note: Commitments are labeled as “overdue” if they are more than 6 months past
-				their initially committed data-sharing timeline, but the partners continue to communicate and
-				work with us on how to follow through on that commitment. Commitments with 3 or more months of
-				unexplained delay and 3 or more follow-ups without a response are labeled as “lapsed,”
-				indicating data sharing to the Data Quarry is no longer certain. Contributors are removed from
-				the contributors list if a contribution is no longer expected because no ERW deployment data
-				will be generated.
-			</p>
-			<p>
 				<sup>*</sup>Note: Though they are not reflected in the pipeline above, we also welcome
 				academic field trial datasets. We expect to host academic field trial datasets from our
 				<a href="/blog/erw-field-grant-awardees">Field Data Partnerships Grants</a>’ deployments at
@@ -233,6 +224,15 @@
 				platform to share ERW deployment datasets prior to publication. Reach out to
 				<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a> if you are interested in
 				sharing your field trial data.
+			</p>
+			<p>
+				<sup>**</sup>Note: Commitments are labeled as “overdue” if they are more than 6 months past
+				their initially committed data-sharing timeline, but the partners continue to communicate and
+				work with us on how to follow through on that commitment. Commitments with 3 or more months of
+				unexplained delay and 3 or more follow-ups without a response are labeled as “lapsed,”
+				indicating data sharing to the Data Quarry is no longer certain. Contributors are removed from
+				the contributors list if a contribution is no longer expected because no ERW deployment data
+				will be generated.
 			</p>
 		</section>
 	</main>
