@@ -60,8 +60,14 @@
 		{ contributor: 'Varaha', region: 'India', expected: 'By end of 2026' },
 		{ contributor: 'ZeroEx', region: 'Germany', expected: 'By end of 2026' },
 		{ contributor: 'The Rock Flour Company', region: 'Denmark', expected: 'By mid-2027' },
-		{ contributor: 'V6 Agronomy', region: 'USA', expected: 'Overdue**' },
-		{ contributor: 'AltCarbon', region: 'India', expected: 'Lapsed**' }
+		{
+			contributor: 'V6 Agronomy',
+			region: 'USA',
+			expected: 'Overdue',
+			footnote: 2,
+			citationId: 'citation2'
+		},
+		{ contributor: 'AltCarbon', region: 'India', expected: 'Lapsed', footnote: 2 }
 	];
 </script>
 
@@ -191,7 +197,9 @@
 				The Data Quarry is a voluntary data-sharing effort, and participation evolves over time as
 				projects progress. Submission timing can vary for multiple reasons, including lab turnaround
 				times, farmer consent processes, and completion of project data packaging. We use broad
-				timing windows to reflect that variability. Below is a pipeline of commercial<sup>*</sup>
+				timing windows to reflect that variability. Below is a pipeline of commercial<sup
+					><a id="citation1" href="#footnote1">1</a></sup
+				>
 				data-sharing partners who have formally committed to sharing data via the Data Quarry
 				system.
 			</p>
@@ -209,31 +217,42 @@
 							<tr>
 								<td>{row.contributor}</td>
 								<td>{row.region}</td>
-								<td>{row.expected}</td>
+								<td>
+									{row.expected}{#if row.footnote}<sup
+											><a href="#footnote{row.footnote}" id={row.citationId}>{row.footnote}</a></sup
+										>{/if}
+								</td>
 							</tr>
 						{/each}
 					</tbody>
 				</table>
 			</div>
 			<p class="table-note">Table updated as of: September 2026</p>
-			<p>
-				<sup>*</sup>Note: Though they are not reflected in the pipeline above, we also welcome
-				academic field trial datasets. We expect to host academic field trial datasets from our
-				<a href="/blog/erw-field-grant-awardees">Field Data Partnerships Grants</a>’ deployments at
-				academic research stations, and welcome any others who wish to leverage the Data Quarry
-				platform to share ERW deployment datasets prior to publication. Reach out to
-				<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a> if you are interested in
-				sharing your field trial data.
-			</p>
-			<p>
-				<sup>**</sup>Note: Commitments are labeled as “overdue” if they are more than 6 months past
-				their initially committed data-sharing timeline, but the partners continue to communicate and
-				work with us on how to follow through on that commitment. Commitments with 3 or more months of
-				unexplained delay and 3 or more follow-ups without a response are labeled as “lapsed,”
-				indicating data sharing to the Data Quarry is no longer certain. Contributors are removed from
-				the contributors list if a contribution is no longer expected because no ERW deployment data
-				will be generated.
-			</p>
+			<div class="footnotes">
+				<h3>Footnotes</h3>
+				<ol>
+					<li id="footnote1">
+						Though they are not reflected in the pipeline above, we also welcome academic field trial
+						datasets. We expect to host academic field trial datasets from our
+						<a href="/blog/erw-field-grant-awardees">Field Data Partnerships Grants</a>’ deployments
+						at academic research stations, and welcome any others who wish to leverage the Data
+						Quarry platform to share ERW deployment datasets prior to publication. Reach out to
+						<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a> if you are interested
+						in sharing your field trial data.
+						<a href="#citation1">↩</a>
+					</li>
+					<li id="footnote2">
+						Commitments are labeled as “overdue” if they are more than 6 months past their initially
+						committed data-sharing timeline, but the partners continue to communicate and work with us
+						on how to follow through on that commitment. Commitments with 3 or more months of
+						unexplained delay and/or 3 or more follow-ups without a response are labeled as “lapsed,”
+						indicating data sharing to the Data Quarry is no longer certain. Contributors are removed
+						from the contributors list if a contribution is no longer expected because no ERW
+						deployment data will be generated.
+						<a href="#citation2">↩</a>
+					</li>
+				</ol>
+			</div>
 		</section>
 	</main>
 </div>
@@ -288,5 +307,36 @@
 		font-size: 0.9rem;
 		font-style: italic;
 		margin-top: 0;
+	}
+
+	.footnotes {
+		margin-top: 1.5rem;
+		padding-top: 1.25rem;
+		border-top: 1px solid color-mix(in srgb, var(--color-text) 18%, transparent);
+		font-size: 0.9rem;
+	}
+
+	.footnotes h3 {
+		margin-bottom: 0.5rem;
+	}
+
+	.footnotes ol {
+		margin: 0;
+		padding-left: 1.5rem;
+	}
+
+	.footnotes li {
+		padding-left: 0.5rem;
+		margin-bottom: 0.75rem;
+		scroll-margin-top: 8rem;
+	}
+
+	.footnotes li:last-child {
+		margin-bottom: 0;
+	}
+
+	sup a {
+		text-decoration: none;
+		scroll-margin-top: 8rem;
 	}
 </style>
