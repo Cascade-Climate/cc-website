@@ -9,6 +9,8 @@
 	export let intro = '';
 	/** @type {string} */
 	export let variant = 'takeaways';
+	/** @type {string} */
+	export let headingId = 'explore-heading';
 
 	let openIndex = -1;
 	let dialogEl;
@@ -100,6 +102,7 @@
 	}
 
 	onDestroy(() => {
+		if (typeof document === 'undefined') return;
 		document.body.style.overflow = '';
 	});
 </script>
@@ -114,10 +117,10 @@
 	class="explore"
 	class:is-circle={isCircle}
 	class:is-stack={isStack}
-	aria-labelledby="explore-heading"
+	aria-labelledby={headingId}
 	style="--n: {spotCount}"
 >
-	<h2 id="explore-heading">{heading}</h2>
+	<h2 id={headingId}>{heading}</h2>
 	<p class="explore-intro">{intro}</p>
 	<p class="placeholder-note">Placeholder photographs · dummy copy</p>
 
@@ -160,6 +163,7 @@
 	<div class="backdrop" on:click={onBackdropClick} role="presentation">
 		<div
 			class="dialog"
+			class:half-page={isStack}
 			bind:this={dialogEl}
 			role="dialog"
 			aria-modal="true"
@@ -244,7 +248,7 @@
 		text-transform: uppercase;
 		font-weight: 600;
 		color: var(--muted);
-		background: var(--bg);
+		background: transparent;
 	}
 
 	.stop-btn {
@@ -452,6 +456,13 @@
 		border-radius: var(--radius);
 		box-shadow: var(--shadow);
 		padding: 1.35rem 1.35rem 1.5rem;
+	}
+
+	.dialog.half-page {
+		height: 50vh;
+		min-height: 50vh;
+		max-height: 50vh;
+		overflow-y: auto;
 	}
 
 	.close {

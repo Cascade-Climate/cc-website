@@ -1,14 +1,21 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { browser } from '$app/environment';
 	import '$lib/components/lrm/lrm-shell.css';
 	import LrmExplorerNav from '$lib/components/lrm/LrmExplorerNav.svelte';
 	import LrmIntroStory from '$lib/components/lrm/LrmIntroStory.svelte';
 	import LrmCostModel from '$lib/components/lrm/LrmCostModel.svelte';
 	import LrmImageExplore from '$lib/components/lrm/LrmImageExplore.svelte';
+	import LrmShareLink from '$lib/components/lrm/LrmShareLink.svelte';
+	import LrmSection from '$lib/components/lrm/LrmSection.svelte';
+	import LrmReveal from '$lib/components/lrm/LrmReveal.svelte';
 	import { TABS, TAB_IDS, takeaways, costStack, glossary } from '$lib/lrm/explorerContent.js';
+	import cascadeLogo from '$lib/images/cc-logo.webp';
 
-	let activeTab = browser ? tabFromHash() : 'intro';
+	let activeId = 'intro';
+	let spyPaused = false;
+	/** @type {ReturnType<typeof setTimeout> | undefined} */
+	let spyResumeTimer;
 
 	function tabFromHash() {
 		if (!browser) return 'intro';
@@ -16,34 +23,74 @@
 		return TAB_IDS.includes(hash) ? hash : 'intro';
 	}
 
-	function setTab(id, { replace = false, scroll = true } = {}) {
-		if (!TAB_IDS.includes(id)) return;
-		activeTab = id;
+	function setHash(id, { replace = false } = {}) {
 		if (!browser) return;
 		const url = `${window.location.pathname}${window.location.search}#${id}`;
-		if (replace) {
-			history.replaceState(history.state, '', url);
-		} else if (window.location.hash !== `#${id}`) {
-			history.pushState(history.state, '', url);
-		}
-		if (scroll) window.scrollTo(0, 0);
+		if (window.location.hash === `#${id}`) return;
+		if (replace) history.replaceState(history.state, '', url);
+		else history.pushState(history.state, '', url);
 	}
 
-	onMount(() => {
-		if (!window.location.hash) {
-			setTab('intro', { replace: true, scroll: false });
-		} else {
-			activeTab = tabFromHash();
+	function pauseSpy() {
+		spyPaused = true;
+		clearTimeout(spyResumeTimer);
+		spyResumeTimer = setTimeout(() => {
+			spyPaused = false;
+			syncFromScroll();
+		}, 450);
+	}
+
+	function goTo(id, { replace = false } = {}) {
+		if (!TAB_IDS.includes(id) || !browser) return;
+		activeId = id;
+		pauseSpy();
+		setHash(id, { replace });
+		document.getElementById(id)?.scrollIntoView({ behavior: 'instant', block: 'start' });
+		window.dispatchEvent(new Event('scroll'));
+	}
+
+	function syncFromScroll() {
+		if (!browser || spyPaused) return;
+		const probe = Math.min(140, window.innerHeight * 0.24);
+		let current = TAB_IDS[0];
+		for (const id of TAB_IDS) {
+			const el = document.getElementById(id);
+			if (!el) continue;
+			if (el.getBoundingClientRect().top <= probe) current = id;
 		}
-		const sync = () => {
+		if (current !== activeId) {
+			activeId = current;
+			setHash(current, { replace: true });
+		}
+	}
+
+	onMount(async () => {
+		activeId = tabFromHash();
+		await tick();
+		if (window.location.hash) {
+			document.getElementById(activeId)?.scrollIntoView({ behavior: 'instant', block: 'start' });
+		}
+
+		const onScroll = () => syncFromScroll();
+		const onPop = () => {
 			const next = tabFromHash();
-			if (next !== activeTab) activeTab = next;
+			activeId = next;
+			pauseSpy();
+			document.getElementById(next)?.scrollIntoView({ behavior: 'instant', block: 'start' });
 		};
-		window.addEventListener('hashchange', sync);
-		window.addEventListener('popstate', sync);
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+		window.addEventListener('resize', onScroll);
+		window.addEventListener('hashchange', onPop);
+		window.addEventListener('popstate', onPop);
+		syncFromScroll();
+
 		return () => {
-			window.removeEventListener('hashchange', sync);
-			window.removeEventListener('popstate', sync);
+			window.removeEventListener('scroll', onScroll);
+			window.removeEventListener('resize', onScroll);
+			window.removeEventListener('hashchange', onPop);
+			window.removeEventListener('popstate', onPop);
+			clearTimeout(spyResumeTimer);
 		};
 	});
 </script>
@@ -67,62 +114,50 @@
 <div class="lrm-shell">
 	<div class="wrap identity">
 		<header class="site">
-			<div class="eyebrow">Lifecycle refrigerant management</div>
-			<h1>Refrigerant Lifecycle Explorer</h1>
+			<h1>
+				<a class="brand" href="/">
+					<img src={cascadeLogo} alt="Cascade Climate" width="40" height="40" />
+				</a>
+			</h1>
 		</header>
 	</div>
 
-	<div class="wrap body">
-		<div
-			class="tab-panel"
-			id="panel-{activeTab}"
-			role="tabpanel"
-			aria-labelledby="tab-{activeTab}"
-		>
-			{#if activeTab === 'intro'}
-				<LrmIntroStory onGotoTool={() => setTab('tool')} />
-			{:else if activeTab === 'tool'}
-				<section class="tool-section" aria-labelledby="tool-heading">
-					<h2 id="tool-heading" class="visually-hidden">Cost model</h2>
-					<p class="tool-lede">
-						Inputs on the left; calculated operational and capital costs on the right. Figures follow
-						the V2.3 workbook, including NA where a combination has no value.
-					</p>
-					<p class="continue-row">
-						<button type="button" class="continue-link" on:click={() => setTab('takeaways')}>
-							What did the cost research find? →
-						</button>
-					</p>
-					<LrmCostModel idPrefix="explorer" />
-					<p class="continue-row after-model">
-						<button type="button" class="continue-link" on:click={() => setTab('takeaways')}>
-							What did the cost research find? →
-						</button>
-					</p>
-				</section>
-			{:else if activeTab === 'takeaways'}
+	<LrmSection id="intro" intro bleed={false} overlap={0} z={1}>
+		<LrmIntroStory />
+	</LrmSection>
+
+	<LrmSection id="takeaways" from="#023c40" to="#023c40" depth={200} overlap={64} rules={1} z={2}>
+		<div class="wrap">
+			<LrmReveal>
 				<LrmImageExplore
 					heading={takeaways.heading}
+					headingId="takeaways-heading"
 					intro={takeaways.intro}
 					spots={takeaways.spots}
 					variant="takeaways"
 				/>
-			{:else if activeTab === 'cost-stack'}
+			</LrmReveal>
+		</div>
+	</LrmSection>
+
+	<LrmSection id="cost-stack" from="#023c40" to="#023c40" depth={180} overlap={56} rules={1} z={3}>
+		<div class="wrap">
+			<LrmReveal>
 				<LrmImageExplore
 					heading={costStack.heading}
+					headingId="cost-stack-heading"
 					intro={costStack.intro}
 					spots={costStack.spots}
 					variant="costStack"
 				/>
+			</LrmReveal>
+			<LrmReveal delay={90}>
 				<section class="finance-layer" aria-labelledby="finance-layer-heading">
 					<p class="layer-kicker">{costStack.financeLayer.kicker}</p>
 					<h2 id="finance-layer-heading">{costStack.financeLayer.heading}</h2>
 					<p class="layer-intro">{costStack.financeLayer.intro}</p>
 					<figure class="layer-photo">
-						<img
-							src={costStack.financeLayer.photo}
-							alt={costStack.financeLayer.photoAlt}
-						/>
+						<img src={costStack.financeLayer.photo} alt={costStack.financeLayer.photoAlt} />
 					</figure>
 					{#each costStack.financeLayer.paragraphs as para}
 						<p class="layer-copy">{para}</p>
@@ -136,30 +171,68 @@
 						{/each}
 					</dl>
 				</section>
-			{:else if activeTab === 'glossary'}
-				<article class="glossary-tab">
-					<h2>{glossary.heading}</h2>
-					<p class="lede">{glossary.intro}</p>
-					<dl class="glossary">
-						{#each glossary.entries as entry}
-							<div class="glossary-item">
-								<dt>{entry.term}</dt>
-								<dd>{entry.definition}</dd>
-							</div>
-						{/each}
-					</dl>
-				</article>
-			{/if}
+			</LrmReveal>
 		</div>
+	</LrmSection>
 
-		<p class="page-foot">
-			LRM Cost Model V2.3 · Unlisted prototype · Costs for exploration, not formal decision-making
-		</p>
-	</div>
+	<LrmSection
+		id="tool"
+		from="#023c40"
+		to="#023c40"
+		depth={176}
+		overlap={52}
+		rules={1}
+		z={4}
+		labelledby="tool-heading"
+	>
+		<div class="wrap tool-section">
+			<LrmReveal>
+				<h2 id="tool-heading">Cost model</h2>
+				<p class="tool-lede">
+					Inputs on the left; calculated operational and capital costs on the right. Figures follow
+					the V2.3 workbook, including NA where a combination has no value.
+				</p>
+				<LrmShareLink />
+			</LrmReveal>
+			<LrmReveal delay={80}>
+				<LrmCostModel idPrefix="explorer" />
+			</LrmReveal>
+		</div>
+	</LrmSection>
+
+	<LrmSection
+		id="glossary"
+		from="#023c40"
+		to="#023c40"
+		depth={168}
+		overlap={48}
+		rules={1}
+		z={5}
+		last
+	>
+		<div class="wrap glossary-tab">
+			<LrmReveal>
+				<h2>{glossary.heading}</h2>
+				<p class="lede">{glossary.intro}</p>
+				<dl class="glossary">
+					{#each glossary.entries as entry}
+						<div class="glossary-item">
+							<dt>{entry.term}</dt>
+							<dd>{entry.definition}</dd>
+						</div>
+					{/each}
+				</dl>
+				<p class="page-foot">
+					LRM Cost Model V2.3 · Unlisted prototype · Costs for exploration, not formal
+					decision-making
+				</p>
+			</LrmReveal>
+		</div>
+	</LrmSection>
 
 	<div class="nav-dock">
 		<div class="wrap">
-			<LrmExplorerNav tabs={TABS} activeId={activeTab} on:select={(e) => setTab(e.detail)} />
+			<LrmExplorerNav tabs={TABS} {activeId} on:select={(e) => goTo(e.detail)} />
 		</div>
 	</div>
 </div>
@@ -171,30 +244,31 @@
 	}
 
 	.identity {
-		padding: 1.35rem 0 0.85rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 8;
+		padding: 1.15rem 0 0;
+		pointer-events: none;
 	}
 
-	.site {
-		color: var(--header);
-	}
-
-	.eyebrow {
-		font-size: 0.72rem;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		font-weight: 600;
-		margin-bottom: 0.4rem;
-		color: var(--muted);
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		pointer-events: auto;
 	}
 
 	.site h1 {
-		font-family: var(--font);
-		font-weight: 600;
-		font-size: 1.2rem;
-		line-height: 1.2;
 		margin: 0;
-		letter-spacing: -0.02em;
-		color: var(--header);
+		line-height: 0;
+	}
+
+	.brand img {
+		display: block;
+		width: 2.5rem;
+		height: 2.5rem;
+		filter: drop-shadow(0 2px 10px rgba(2, 60, 64, 0.55));
 	}
 
 	.nav-dock {
@@ -212,73 +286,8 @@
 		bottom: 1.85rem;
 	}
 
-	.body {
-		padding: 1.35rem 0 6.5rem;
-	}
-
-	.tab-panel :global(h2),
-	.finance-layer {
-		scroll-margin-top: 1rem;
-		scroll-margin-bottom: 5.5rem;
-	}
-
-	.visually-hidden {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		white-space: nowrap;
-		border: 0;
-	}
-
-	.tool-lede {
-		max-width: 40rem;
-		margin: 0 0 0.75rem;
-		color: var(--ink-soft);
-		font-size: 1rem;
-		line-height: 1.5;
-	}
-
-	.continue-row {
-		margin: 0 0 1.5rem;
-	}
-
-	.continue-row.after-model {
-		margin: 2rem 0 0;
-		padding-top: 1.25rem;
-		border-top: 1px solid var(--line);
-	}
-
-	.continue-link {
-		appearance: none;
-		border: 0;
-		background: none;
-		padding: 0.55rem 0;
-		min-height: 44px;
-		font: inherit;
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--accent);
-		cursor: pointer;
-	}
-
-	.continue-link:hover {
-		text-decoration: underline;
-	}
-
-	.lede {
-		max-width: 40rem;
-		color: var(--header);
-		opacity: 0.88;
-		font-size: 1.02rem;
-		margin: 0;
-		line-height: 1.5;
-	}
-
-	.glossary-tab h2,
+	.tool-section :global(h2),
+	.glossary-tab :global(h2),
 	.finance-layer h2 {
 		font-family: var(--font);
 		font-size: 1.45rem;
@@ -286,6 +295,21 @@
 		margin: 0 0 0.65rem;
 		color: var(--header);
 		line-height: 1.25;
+	}
+
+	.tool-lede,
+	.lede {
+		max-width: 40rem;
+		margin: 0 0 0.75rem;
+		color: var(--ink-soft);
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.lede {
+		color: var(--header);
+		opacity: 0.88;
+		font-size: 1.02rem;
 	}
 
 	.glossary {
@@ -321,6 +345,8 @@
 		padding-top: 2rem;
 		border-top: 1px solid var(--line);
 		max-width: 40rem;
+		scroll-margin-top: 4.75rem;
+		scroll-margin-bottom: 5.5rem;
 	}
 
 	.layer-kicker {

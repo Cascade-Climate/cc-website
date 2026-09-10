@@ -23,3 +23,182 @@
 	outline: 2px solid var(--accent);
 	outline-offset: 3px;
 }
+
+.lrm-section {
+	--bleed-accent: #e1fcf7;
+	--bleed-from: #023c40;
+	--bleed-to: #023c40;
+	--bleed-depth-set: 180px;
+	--bleed-overlap-set: 56px;
+	--bleed-depth: var(--bleed-depth-set);
+	--bleed-overlap: var(--bleed-overlap-set);
+	--bleed-z: 1;
+	--section-bg: #023c40;
+	--bleed-mid: color-mix(
+		in srgb,
+		color-mix(in srgb, var(--bleed-from) 50%, var(--bleed-to) 50%) 93%,
+		var(--bleed-accent) 7%
+	);
+	--bleed-gradient: linear-gradient(
+		180deg,
+		var(--bleed-from) 0%,
+		color-mix(in srgb, var(--bleed-from) 90%, var(--bleed-to) 10%) 10%,
+		color-mix(in srgb, var(--bleed-from) 76%, var(--bleed-to) 24%) 22%,
+		color-mix(in srgb, var(--bleed-from) 60%, var(--bleed-to) 40%) 34%,
+		color-mix(in srgb, var(--bleed-mid) 45%, var(--bleed-from) 55%) 44%,
+		color-mix(in srgb, var(--bleed-mid) 70%, var(--bleed-to) 30%) 54%,
+		color-mix(in srgb, var(--bleed-from) 28%, var(--bleed-to) 72%) 68%,
+		color-mix(in srgb, var(--bleed-from) 12%, var(--bleed-to) 88%) 82%,
+		var(--bleed-to) 100%
+	);
+	--rule-color: color-mix(in srgb, var(--bleed-accent) 10%, transparent);
+	--rule-1: linear-gradient(
+		180deg,
+		transparent calc(46% - 0.5px),
+		var(--rule-color) calc(46% - 0.5px),
+		var(--rule-color) calc(46% + 0.5px),
+		transparent calc(46% + 0.5px)
+	);
+	--rule-2: linear-gradient(
+		180deg,
+		transparent calc(58% - 0.5px),
+		color-mix(in srgb, var(--bleed-accent) 9%, transparent) calc(58% - 0.5px),
+		color-mix(in srgb, var(--bleed-accent) 9%, transparent) calc(58% + 0.5px),
+		transparent calc(58% + 0.5px)
+	);
+	--rule-3: linear-gradient(
+		180deg,
+		transparent calc(68% - 0.5px),
+		color-mix(in srgb, var(--bleed-accent) 7%, transparent) calc(68% - 0.5px),
+		color-mix(in srgb, var(--bleed-accent) 7%, transparent) calc(68% + 0.5px),
+		transparent calc(68% + 0.5px)
+	);
+
+	position: relative;
+	z-index: var(--bleed-z);
+	background: var(--section-bg);
+	padding: 2.75rem 0 3.5rem;
+	overflow-x: clip;
+	overflow-y: visible;
+	scroll-margin-top: 0.35rem;
+	scroll-margin-bottom: 5.5rem;
+}
+
+.lrm-section.is-intro {
+	padding: 0;
+	overflow: visible;
+	scroll-margin-top: 0;
+}
+
+.lrm-section.is-bleed {
+	margin-top: calc(var(--bleed-overlap) * -1);
+	padding-top: var(--bleed-depth);
+	scroll-margin-top: calc(var(--bleed-depth) * -0.35);
+}
+
+.lrm-section.is-bleed > :first-child {
+	padding-top: 2.35rem;
+}
+
+.lrm-section.is-last {
+	padding-bottom: 6.5rem;
+}
+
+.lrm-section.is-bleed::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: var(--bleed-depth);
+	pointer-events: none;
+	z-index: 0;
+	background-image: var(--bleed-gradient);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.lrm-section.is-bleed[data-rules='1']::before {
+	background-image: var(--bleed-gradient), var(--rule-1);
+}
+
+.lrm-section.is-bleed[data-rules='2']::before {
+	background-image: var(--bleed-gradient), var(--rule-1), var(--rule-2);
+}
+
+.lrm-section.is-bleed[data-rules='3']::before {
+	background-image: var(--bleed-gradient), var(--rule-1), var(--rule-2), var(--rule-3);
+}
+
+.lrm-section > :first-child {
+	position: relative;
+	z-index: 1;
+}
+
+.lrm-reveal {
+	opacity: 1;
+	transform: none;
+}
+
+.lrm-reveal.is-armed:not(.is-in) {
+	opacity: 0;
+	transform: translate3d(0, 12px, 0);
+}
+
+.lrm-reveal.is-in {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	transition:
+		opacity 0.62s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+		transform 0.62s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+.lrm-reveal.is-armed {
+	will-change: opacity, transform;
+}
+
+.lrm-reveal.is-in.is-settled {
+	will-change: auto;
+}
+
+@media (max-width: 900px) {
+	.lrm-section {
+		--bleed-depth: min(160px, var(--bleed-depth-set));
+		--bleed-overlap: min(48px, var(--bleed-overlap-set));
+	}
+}
+
+@media (max-width: 720px) {
+	.lrm-section {
+		--bleed-depth: min(144px, var(--bleed-depth-set));
+		--bleed-overlap: min(44px, var(--bleed-overlap-set));
+		padding: 2.25rem 0 3rem;
+	}
+
+	.lrm-section.is-bleed {
+		padding-top: var(--bleed-depth);
+	}
+
+	.lrm-section.is-bleed > :first-child {
+		padding-top: 1.85rem;
+	}
+
+	.lrm-section.is-last {
+		padding-bottom: 6.5rem;
+	}
+
+	.lrm-reveal.is-armed:not(.is-in) {
+		transform: translate3d(0, 10px, 0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lrm-reveal,
+	.lrm-reveal.is-armed:not(.is-in),
+	.lrm-reveal.is-in {
+		opacity: 1;
+		transform: none;
+		transition: none;
+		will-change: auto;
+	}
+}
