@@ -446,16 +446,6 @@
 		0.0001
 	);
 
-	$: takeaway = result
-		? (() => {
-				const topOpex = opexCats
-					.filter((row) => row.id !== 'opex-credits')
-					.sort((a, b) => b.value - a.value)[0];
-				const topCapex = [...capexCats].sort((a, b) => b.value - a.value)[0];
-				return `At ${formatKg(result.inputs.annualKg, 0)} kg/year, net opex is ${formatUsd(result.opex.net)}/kg and capex is ${formatUsd(result.capex.total)}. ${topOpex ? topOpex.name + ' is the largest operating line on this chart.' : ''} ${topCapex && topCapex.value ? topCapex.name + ' dominates capex.' : ''}`;
-			})()
-		: '';
-
 	$: sectorBlurb = residential
 		? 'Units are pumped down on-site and aggregated at a central facility for refrigerant recovery.'
 		: 'Mainly on-site recovery from decommissioned units; refilling is covered under the Recycling pathway.';
@@ -1137,8 +1127,6 @@
 						</div>
 					</div>
 					{/if}
-
-					<p class="takeaway">{takeaway}</p>
 				</section>
 				{/if}
 			</div>
@@ -1717,17 +1705,6 @@
 	.open-q strong {
 		display: block;
 		margin-bottom: 0.2rem;
-	}
-
-	.takeaway {
-		margin: 0 0 1.15rem;
-		padding: 0.75rem 0.85rem;
-		background: var(--panel-solid);
-		border: 1px solid var(--line);
-		border-radius: var(--radius);
-		font-size: 0.9rem;
-		color: var(--ink-soft);
-		line-height: 1.45;
 	}
 
 	.cat {
@@ -2648,13 +2625,6 @@
 		gap: 0.65rem;
 		flex: 1 1 auto;
 		min-height: 0;
-	}
-
-	.workspace-on .takeaway {
-		margin: 0.4rem 0 0;
-		padding: 0.35rem 0.45rem;
-		font-size: 0.72rem;
-		line-height: 1.35;
 	}
 
 	.workspace-on .run-bar {
