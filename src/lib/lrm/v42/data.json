@@ -1,5 +1,4 @@
-/** Generated from V4.3 SEA LRM Cost Model V3.xlsx · V4.3 SEA Data */
-export default {
+{
   "version": "4.3",
   "geography": "Southeast Asia",
   "rows": [
@@ -554,4 +553,4 @@ export default {
       "row": 56
     }
   ]
-};
+}

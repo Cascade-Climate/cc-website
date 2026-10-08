@@ -1,11 +1,18 @@
 <script>
+	import { tick } from 'svelte';
+	import cascadeLogo from '$lib/images/cc-logo.webp';
 	import {
 		calculate,
-		comparePathways,
 		excelDefaults,
 		defaultChargeKg,
 		defaultMix,
 		defaultCostScenario,
+		defaultRecoverablePct,
+		defaultRecoveryRateKgPerHour,
+		defaultLabourPerHour,
+		defaultUnitsPerDay,
+		defaultDaysPerYear,
+		defaultTeams,
 		mixTotal,
 		SECTOR_RESIDENTIAL,
 		SECTOR_COMMERCIAL,
@@ -14,6 +21,8 @@
 		PATHWAY_RECYCLING,
 		MACHINE_BASIC,
 		MACHINE_HIGH,
+		REFILL_DIRECT,
+		REFILL_CLEANING,
 		RESIDENTIAL_CHARGE_CAP_KG
 	} from '$lib/lrm/v42/calculate.js';
 
@@ -24,26 +33,31 @@
 	let chargeSizeKg = 100;
 	let chargeCappedNote = false;
 	let recoverablePct = 80;
-	let unitsPerSite = 2;
-	let sitesPerDay = 1;
-	let teams = 3;
-	let daysPerYear = 100;
-	let labourPerUnit = 300;
-	let markupPct = 10;
-	let distanceBand = '>90%';
+	let recoveryRateKgPerHour = 30;
+	let labourPerHour = 50;
+	let fuelEfficiencyKmPerL = 8.5;
+	let fuelPricePerL = 1.5;
+	let travelKmPerDay = 100;
+	let unitsPerDay = 1;
+	let daysPerYear = 75;
+	let teams = 1;
 	let warehousePerMonth = 1000;
+	let tmsCost = 50000;
 	let machineType = MACHINE_HIGH;
 	let destructionTech = 'Rotary';
-	let facilityStatus = 'New';
+	let facilityStatus = 'Retrofit';
 	let location = 'In-country';
-	let salePrice = 5;
-	let refillMode = 'Refilling';
-	let virginPrice = 0;
+	let salePrice = 15;
+	let refillMode = REFILL_CLEANING;
+	let virginPrice = 5;
 	let mixR32 = 5;
 	let mixR410a = 65;
 	let mixR22 = 30;
 	let costScenarioMode = 'auto';
 	let costScenarioManual = 'Medium';
+	let openCats = {};
+	let result = null;
+	let publishedKey = '';
 
 	$: residential = sector === SECTOR_RESIDENTIAL;
 	$: commercial = sector === SECTOR_COMMERCIAL;
@@ -56,7 +70,7 @@
 		: [
 				{ id: PATHWAY_DESTRUCTION, title: 'Destruction', body: 'Destroy recovered refrigerant at an end-use facility.' },
 				{ id: PATHWAY_RECLAMATION, title: 'Reclamation', body: 'Reclaim to specification and return gas to the market.' },
-				{ id: PATHWAY_RECYCLING, title: 'Recycling', body: 'Recover and refill — with or without additional recycling.' }
+				{ id: PATHWAY_RECYCLING, title: 'Recycling', body: 'Direct reuse, or clean and reuse recovered refrigerant.' }
 			];
 
 	$: mixSum = mixTotal({ r32: mixR32, r410a: mixR410a, r22: mixR22 });
@@ -67,14 +81,16 @@
 		pathway,
 		chargeSizeKg,
 		recoverablePct,
-		unitsPerSite,
-		sitesPerDay,
-		teams,
+		recoveryRateKgPerHour,
+		labourPerHour,
+		fuelEfficiencyKmPerL,
+		fuelPricePerL,
+		travelKmPerDay,
+		unitsPerDay,
 		daysPerYear,
-		labourPerUnit,
-		markupPct,
-		distanceBand,
+		teams,
 		warehousePerMonth,
+		tmsCost,
 		machineType: commercial ? MACHINE_HIGH : machineType,
 		destructionTech,
 		facilityStatus,
@@ -86,24 +102,55 @@
 		costScenarioOverride: costScenarioMode === 'auto' ? null : costScenarioManual
 	};
 
-	$: result = ready ? calculate(inputSnapshot) : null;
-	$: comparison = ready ? comparePathways(inputSnapshot) : null;
-	$: vis = result?.visibility;
-	$: autoScenario = result ? defaultCostScenario(result.inputs.annualKg) : 'Medium';
+	$: live = ready ? calculate(inputSnapshot) : null;
+	$: vis = live?.visibility;
+	$: autoScenario = live ? defaultCostScenario(live.inputs.annualKg) : 'Medium';
+	$: liveKey = JSON.stringify(inputSnapshot);
+	$: stale = Boolean(result) && publishedKey !== liveKey;
+
+	function pathwayTag(p, refill) {
+		if (p === PATHWAY_DESTRUCTION) return 'DE';
+		if (p === PATHWAY_RECLAMATION) return 'RC';
+		return refill === REFILL_CLEANING ? 'RY' : 'RF';
+	}
+
+	$: liveCode = pathwayTag(pathway, refillMode);
+	$: pathwayCode = result
+		? pathwayTag(result.inputs.pathway, result.inputs.refillMode)
+		: liveCode;
+
+	function toggleCat(id) {
+		openCats = { ...openCats, [id]: !openCats[id] };
+	}
+
+	function clearOutputs() {
+		result = null;
+		publishedKey = '';
+		openCats = {};
+	}
+
+	function produceOutputs() {
+		if (!ready || !mixOk || !live) return;
+		result = live;
+		publishedKey = liveKey;
+		openCats = {};
+	}
 
 	function applyDefaults(nextSector, nextPathway) {
 		const d = excelDefaults(nextSector, nextPathway);
 		chargeSizeKg = d.chargeSizeKg;
 		chargeCappedNote = false;
 		recoverablePct = d.recoverablePct;
-		unitsPerSite = d.unitsPerSite;
-		sitesPerDay = d.sitesPerDay;
-		teams = d.teams;
+		recoveryRateKgPerHour = d.recoveryRateKgPerHour;
+		labourPerHour = d.labourPerHour;
+		fuelEfficiencyKmPerL = d.fuelEfficiencyKmPerL;
+		fuelPricePerL = d.fuelPricePerL;
+		travelKmPerDay = d.travelKmPerDay;
+		unitsPerDay = d.unitsPerDay;
 		daysPerYear = d.daysPerYear;
-		labourPerUnit = d.labourPerUnit;
-		markupPct = d.markupPct;
-		distanceBand = d.distanceBand;
+		teams = d.teams;
 		warehousePerMonth = d.warehousePerMonth;
+		tmsCost = d.tmsCost;
 		machineType = d.machineType;
 		destructionTech = d.destructionTech;
 		facilityStatus = d.facilityStatus;
@@ -118,6 +165,17 @@
 		filledFromDefaults = true;
 	}
 
+	async function bumpTo(id) {
+		await tick();
+		if (id === 'workspace') {
+			window.scrollTo({ top: 0, behavior: 'auto' });
+			return;
+		}
+		const el = document.getElementById(id);
+		if (!el) return;
+		el.scrollIntoView({ behavior: 'auto', block: 'start' });
+	}
+
 	function chooseSector(next) {
 		const sectorChanged = sector !== next;
 		sector = next;
@@ -126,6 +184,12 @@
 		if (sectorChanged) {
 			chargeSizeKg = defaultChargeKg(next);
 			chargeCappedNote = false;
+			recoverablePct = defaultRecoverablePct(next);
+			recoveryRateKgPerHour = defaultRecoveryRateKgPerHour(next);
+			labourPerHour = defaultLabourPerHour(next);
+			unitsPerDay = defaultUnitsPerDay(next);
+			daysPerYear = defaultDaysPerYear(next);
+			teams = defaultTeams(next);
 			const mix = defaultMix(next);
 			mixR32 = mix.r32;
 			mixR410a = mix.r410a;
@@ -135,18 +199,30 @@
 		if (pathway && !filledFromDefaults) applyDefaults(next, pathway);
 		else if (pathway && sectorChanged && filledFromDefaults) {
 			chargeSizeKg = defaultChargeKg(next);
+			recoverablePct = defaultRecoverablePct(next);
+			recoveryRateKgPerHour = defaultRecoveryRateKgPerHour(next);
+			labourPerHour = defaultLabourPerHour(next);
+			unitsPerDay = defaultUnitsPerDay(next);
+			daysPerYear = defaultDaysPerYear(next);
+			teams = defaultTeams(next);
 			const mix = defaultMix(next);
 			mixR32 = mix.r32;
 			mixR410a = mix.r410a;
 			mixR22 = mix.r22;
 			machineType = next === SECTOR_COMMERCIAL ? MACHINE_HIGH : machineType;
 		}
+		if (sectorChanged) clearOutputs();
+		if (pathway) bumpTo('workspace');
+		else bumpTo('enduse-panel');
 	}
 
 	function choosePathway(next) {
+		const pathwayChanged = pathway !== next;
 		pathway = next;
 		if (next === PATHWAY_RECYCLING) location = 'In-country';
 		if (!filledFromDefaults && sector) applyDefaults(sector, next);
+		if (pathwayChanged) clearOutputs();
+		bumpTo('workspace');
 	}
 
 	$: if (residential && Number(chargeSizeKg) > RESIDENTIAL_CHARGE_CAP_KG) {
@@ -177,46 +253,153 @@
 		return Math.min(100, (value / scale) * 100);
 	}
 
-	$: opexRows = result
+	function capexBit(name, item) {
+		if (!item || item.hidden) return null;
+		return {
+			name,
+			value: item.na ? 0 : item.cost,
+			note: item.na ? item.label : `${item.units} unit${item.units === 1 ? '' : 's'}`
+		};
+	}
+
+	$: opexCats = result
 		? [
-				{ name: 'On-site recovery', value: result.opex.onSite, hide: false },
-				{ name: 'Mark-up for refilling / recycling', value: result.opex.refillMarkup, hide: vis.hideRefill },
-				{ name: 'Virgin refrigerant for refilling', value: result.opex.virgin, hide: vis.hideRefill },
-				{ name: 'Central facility recovery', value: result.opex.central, hide: false },
-				{ name: 'Warehouse storage', value: result.opex.warehouse, hide: false },
-				{ name: 'Transport & handling to end-use', value: result.opex.transport, hide: pathway === PATHWAY_RECYCLING },
-				{ name: 'End-use processing', value: result.opex.processing, hide: pathway === PATHWAY_RECYCLING },
-				{ name: 'Sale price credit', value: -result.opex.saleCredit, hide: vis.hideSale, credit: true }
-			].filter((row) => !row.hide)
+				{
+					id: 'opex-recovery',
+					name: 'Recovery',
+					value: result.opex.recovery + result.opex.refillMarkup,
+					unit: '/kg',
+					tooltip:
+						'Labour plus fuel to the central facility, and the recycling mark-up when that pathway is selected.',
+					parts: [
+						{
+							name: 'Recovery costs (including transport to central facility)',
+							value: result.opex.recovery
+						},
+						{ name: 'Mark-up for recycling costs', value: result.opex.refillMarkup }
+					]
+				},
+				{
+					id: 'opex-central',
+					name: 'Central facility',
+					value: result.opex.warehouse + result.opex.central,
+					unit: '/kg',
+					tooltip: 'Warehouse storage plus central-facility consolidation into large cylinders or ton tanks.',
+					parts: [
+						{ name: 'Warehouse storage', value: result.opex.warehouse },
+						{ name: 'Central facility operational activities', value: result.opex.central }
+					]
+				},
+				{
+					id: 'opex-transport',
+					name: 'Transport & handling to end-use',
+					value: result.opex.transport,
+					unit: '/kg',
+					tooltip: 'In-country or exported haulage to reclamation or destruction. Zero for Recycling.',
+					parts: [{ name: 'Transport & handling to end-use facility', value: result.opex.transport }]
+				},
+				{
+					id: 'opex-enduse',
+					name: 'End-use processing',
+					value: result.opex.processing,
+					unit: '/kg',
+					tooltip: 'Reclamation or destruction processing. Zero for Recycling.',
+					parts: [{ name: 'End-use processing', value: result.opex.processing }]
+				},
+				...(result.opex.saleCredit || result.opex.virginSavings
+					? [
+							{
+								id: 'opex-credits',
+								name: 'Credits',
+								value: -(result.opex.saleCredit + result.opex.virginSavings),
+								unit: '/kg',
+								tooltip:
+									'Sale price of reclaimed refrigerant and avoided virgin purchases are subtracted from gross to give net opex.',
+								parts: [
+									{ name: 'Sale price of reclaimed refrigerant', value: -result.opex.saleCredit },
+									{
+										name: 'Virgin refrigerant savings from recycling',
+										value: -result.opex.virginSavings
+									}
+								]
+							}
+						]
+					: [])
+			]
 		: [];
 
-	$: opexScale = Math.max(...opexRows.map((r) => Math.abs(r.value)), 0.0001);
+	$: opexScale = Math.max(...opexCats.filter((r) => !r.mock).map((r) => Math.abs(r.value)), 0.0001);
 
-	$: capexRows = result
+	$: capexCats = result
 		? [
-				{ name: 'Recovery machines (basic)', item: result.capex.machinesBasic },
-				{ name: 'Recovery accessories (basic)', item: result.capex.accessoriesBasic },
-				{ name: 'Recovery accessories (AC pump-down)', item: result.capex.accessoriesPumpdown },
-				{ name: 'Recovery machines (high capacity)', item: result.capex.machinesHigh },
-				{ name: 'Recovery accessories (high capacity)', item: result.capex.accessoriesHigh },
-				{ name: '12L cylinders (small, ~10 kg)', item: result.capex.cylinders12L },
-				{ name: '60L cylinders (large, ~50 kg)', item: result.capex.cylinders60L },
-				{ name: 'Refrigerant identifiers', item: result.capex.identifiers },
-				{ name: 'Ton tanks', item: result.capex.tonTanks },
-				{ name: 'Trucks / lorries', item: result.capex.trucks },
-				{ name: 'Tracking & monitoring system', item: result.capex.tracking },
-				{ name: 'Destruction / reclamation facility', item: result.capex.facility },
-				{ name: 'Admin & licensing', item: result.capex.admin },
-				{ name: 'Reclamation operators (training)', item: result.capex.operators },
-				{ name: 'Full gas chromatography lab', item: result.capex.gcLab }
-			].filter((row) => !row.item.hidden)
+				{
+					id: 'capex-recovery',
+					name: 'Recovery equipment',
+					parts: [
+						capexBit('Recovery machines (basic)', result.capex.machinesBasic),
+						capexBit('Recovery accessories (basic)', result.capex.accessoriesBasic),
+						capexBit('Recovery accessories (AC pump-down)', result.capex.accessoriesPumpdown),
+						capexBit('Recovery machines (high capacity)', result.capex.machinesHigh),
+						capexBit('Recovery accessories (high capacity)', result.capex.accessoriesHigh),
+						capexBit('12L cylinders', result.capex.cylinders12L),
+						capexBit('60L cylinders', result.capex.cylinders60L),
+						capexBit('Refrigerant identifiers', result.capex.identifiers),
+						capexBit('Ton tanks', result.capex.tonTanks)
+					].filter(Boolean),
+					tooltip: 'Machines, accessories, identifiers, cylinders, and tanks. TMS is a separate bar.'
+				},
+				{
+					id: 'capex-tracking',
+					name: 'Tracking & monitoring system',
+					parts: [capexBit('Tracking & monitoring system', result.capex.tracking)].filter(Boolean),
+					tooltip: 'Manual TMS input from the recovery capex block.'
+				},
+				{
+					id: 'capex-facility',
+					name:
+						result.inputs.pathway === PATHWAY_RECLAMATION
+							? 'Reclamation facility'
+							: 'Destruction facility',
+					hidden: result.capex.facility.hidden,
+					parts: [
+						capexBit(
+							result.inputs.pathway === PATHWAY_RECLAMATION
+								? 'Reclamation facility'
+								: 'Destruction facility',
+							result.capex.facility
+						),
+						capexBit('Reclamation operators (training)', result.capex.operators),
+						capexBit('Gas chromatography lab', result.capex.gcLab)
+					].filter(Boolean),
+					tooltip:
+						'End-use plant. Plasma Arc + Retrofit and Reclamation + Retrofit show as NA. Operators and GC apply to reclamation only.'
+				},
+				{
+					id: 'capex-admin',
+					name: 'Admin & licensing',
+					hidden: result.capex.admin.hidden,
+					parts: [capexBit('Admin & licensing', result.capex.admin)].filter(Boolean),
+					tooltip: 'Admin & licensing on a new or retrofit end-use facility. Zero for Recycling and Existing.'
+				}
+			]
+				.filter((row) => !row.hidden)
+				.map((row) => ({
+					...row,
+					value: row.parts.reduce((sum, part) => sum + part.value, 0)
+				}))
 		: [];
 
-	$: capexScale = Math.max(...capexRows.map((r) => r.item.cost), 0.0001);
+	$: capexScale = Math.max(...capexCats.map((r) => r.value), 0.0001);
 
-	$: compareCols = comparison
-		? [PATHWAY_DESTRUCTION, PATHWAY_RECLAMATION, PATHWAY_RECYCLING].filter((p) => comparison[p])
-		: [];
+	$: takeaway = result
+		? (() => {
+				const topOpex = opexCats
+					.filter((row) => row.id !== 'opex-credits')
+					.sort((a, b) => b.value - a.value)[0];
+				const topCapex = [...capexCats].sort((a, b) => b.value - a.value)[0];
+				return `At ${formatKg(result.inputs.annualKg, 0)} kg/year, net opex is ${formatUsd(result.opex.net)}/kg and capex is ${formatUsd(result.capex.total)}. ${topOpex ? topOpex.name + ' is the largest operating line on this chart.' : ''} ${topCapex && topCapex.value ? topCapex.name + ' dominates capex.' : ''}`;
+			})()
+		: '';
 
 	$: sectorBlurb = residential
 		? 'Units are pumped down on-site and aggregated at a central facility for refrigerant recovery.'
@@ -224,10 +407,10 @@
 </script>
 
 <svelte:head>
-	<title>Refrigerant Lifecycle Explorer — Cascade Climate (unlisted test)</title>
+	<title>Lifecycle Refrigerant Management Cost Calculator Mock 3.0 — Cascade Climate (unlisted)</title>
 	<meta
 		name="description"
-		content="Unlisted prototype of the Refrigerant Lifecycle Explorer using LRM Cost Model V4.2 (SEA)."
+		content="Unlisted Lifecycle Refrigerant Management Cost Calculator Mock 3.0 using LRM Cost Model V4.3 (SEA)."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -239,23 +422,45 @@
 	/>
 </svelte:head>
 
-<div class="lrm-explorer">
+<div class="lrm-explorer" class:workspace-on={ready}>
 	<div class="wrap">
-		<header class="site">
-			<div class="eyebrow">Lifecycle refrigerant management · Prototype</div>
-			<h1>Refrigerant Lifecycle Explorer</h1>
-			<p class="lede">
-				This tool lays bare the end-to-end refrigerant value chain — from recovery through
-				reclamation, recycling, or destruction — and the costs that sit in each step. Built from LRM
-				Cost Model V4.2 (Southeast Asia).
-			</p>
-			<div class="prototype-banner">
-				Unlisted prototype. Cost figures follow the V4.2 workbook (opex USD/kg shown to two decimals;
-				engine uses full precision). For exploration, not formal decision-making.
+		<div class="chrome">
+		<header class="site" class:compact={Boolean(sector)}>
+			<div class="site-copy">
+				<div class="eyebrow">Unlisted · V4.3 SEA</div>
+				<h1>
+					<img
+						class="brand"
+						src={cascadeLogo}
+						alt="Cascade Climate"
+						width="32"
+						height="32"
+					/>
+					<span class="title-text">
+						<span class="title-lead">Lifecycle Refrigerant Management</span>
+						<span class="title-rest">Cost Calculator</span>
+					</span>
+				</h1>
+				<details class="about">
+					<summary>About the calculator</summary>
+					<div class="about-body">
+						<p>
+							The Lifecycle Refrigerant Management (LRM) Cost Calculator is designed for the people
+							deciding whether and how to invest in refrigerant recovery — city and state program
+							leads, regulators, utilities, and private operators weighing financing options. It
+							covers the full post-recovery value chain: on-site recovery and reuse, transport to and
+							storage at central facilities, recycling, reclamation, and destruction. Results are
+							screening-level estimates based on default assumptions and user inputs, and should be
+							used to explore and compare pathways at a planning level — not as final costs,
+							investment-grade figures, or the basis for regulatory, procurement, or compliance
+							decisions.
+						</p>
+					</div>
+				</details>
 			</div>
 		</header>
 
-		<section class="panel branch" aria-labelledby="branch-heading">
+		<section class="panel branch" class:settled={Boolean(sector)} aria-labelledby="branch-heading">
 			<h2 id="branch-heading">1. Choose a sector</h2>
 			<p class="panel-intro">This is the main branch. Everything downstream follows from it.</p>
 			<div class="choice-grid two">
@@ -286,7 +491,7 @@
 		</section>
 
 		{#if sector}
-			<section class="panel branch" aria-labelledby="pathway-heading">
+			<section class="panel branch" id="enduse-panel" class:settled={Boolean(pathway)} aria-labelledby="pathway-heading">
 				<h2 id="pathway-heading">2. Choose the end-use of recovered refrigerant</h2>
 				<p class="panel-intro">
 					The second branch. After you choose, only the inputs that apply to this pathway appear.
@@ -306,20 +511,22 @@
 				</div>
 			</section>
 		{/if}
+		</div>
 
-		{#if ready && result}
-			<div class="layout">
+		{#if ready && live}
+			<div class="layout" id="workspace" class:has-results={Boolean(result)} class:awaiting={!result}>
 				<section class="panel controls" aria-labelledby="build-heading">
-					<h2 id="build-heading">Build the value chain</h2>
+					<h2 id="build-heading">Inputs</h2>
 					<p class="panel-intro">
-						Amber-style fields are inputs. Bold figures are calculated from the V4.2 model.
+						Grouped by the value chain. Amber-style fields are inputs. Bold figures are calculated.
 					</p>
 
 					<div class="field-group">
-						<div class="group-label">On-site recovery</div>
+						<div class="group-label">Recovery</div>
 
+						<div class="fields">
 						<div class="field">
-							<label for="chargeSizeKg">Average charge size per unit (kg)</label>
+							<label data-tip="Tooltip to come" for="chargeSizeKg">Average charge size per unit (kg)</label>
 							<input
 								id="chargeSizeKg"
 								type="number"
@@ -333,96 +540,20 @@
 								</p>
 							{:else}
 								<p class="field-hint">
-									Default {residential ? '0.75 kg' : '100 kg'} for this sector.
+									Default {residential ? '0.80 kg' : '100 kg'} for this sector.
 									{#if residential}Maximum {RESIDENTIAL_CHARGE_CAP_KG} kg.{/if}
 								</p>
 							{/if}
 						</div>
 
 						<div class="field">
-							<label for="recoverablePct">Recoverable refrigerant per unit (%)</label>
+							<label data-tip="Tooltip to come" for="recoverablePct">Recoverable refrigerant per unit (%)</label>
 							<input id="recoverablePct" type="number" min="0" max="100" step="1" bind:value={recoverablePct} />
+							<p class="field-hint">Default {residential ? '50%' : '80%'} for this sector.</p>
 						</div>
-
-						<div class="computed">
-							<div>
-								<span class="k">Available per unit</span>
-								<span class="v">{formatKg(result.inputs.availablePerUnit, 2)} kg</span>
-							</div>
-						</div>
-
-						<div class="field">
-							<label for="unitsPerSite">Units recovered per site per team</label>
-							<input id="unitsPerSite" type="number" min="0" step="1" bind:value={unitsPerSite} />
-						</div>
-						<div class="field">
-							<label for="sitesPerDay">Recovery sites per day per team</label>
-							<input id="sitesPerDay" type="number" min="0" step="1" bind:value={sitesPerDay} />
-						</div>
-						<div class="field">
-							<label for="teams">Recovery teams per recovery day</label>
-							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
-						</div>
-						<div class="field">
-							<label for="daysPerYear">Recovery days per year</label>
-							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
-						</div>
-
-						<div class="computed three">
-							<div>
-								<span class="k">Units / day</span>
-								<span class="v">{formatKg(result.inputs.unitsPerDay, 0)}</span>
-							</div>
-							<div>
-								<span class="k">kg / day</span>
-								<span class="v">{formatKg(result.inputs.kgPerDay, 2)}</span>
-							</div>
-							<div>
-								<span class="k">kg / year</span>
-								<span class="v">{formatKg(result.inputs.annualKg, 0)}</span>
-							</div>
-						</div>
-
-						<div class="field">
-							<label for="labourPerUnit">Recovery labour cost per unit (USD)</label>
-							<input id="labourPerUnit" type="number" min="0" step="1" bind:value={labourPerUnit} />
-						</div>
-						<div class="field">
-							<label for="markupPct">Mark-up % per extra unit at a location</label>
-							<input id="markupPct" type="number" min="0" step="0.1" bind:value={markupPct} />
-						</div>
-						<div class="field">
-							<label for="distanceBand">Share of refrigerant sourced within 50 km</label>
-							<select id="distanceBand" bind:value={distanceBand}>
-								<option value=">90%">&gt;90%</option>
-								<option value="50%-90%">50%–90%</option>
-								<option value="<50%">&lt;50%</option>
-							</select>
-						</div>
-
-						<div class="computed">
-							<div>
-								<span class="k">Labour per location / team</span>
-								<span class="v">{formatUsd(result.inputs.labourPerLocation)}</span>
-							</div>
-							<div>
-								<span class="k">On-site cost / day</span>
-								<span class="v">{formatUsd(result.inputs.onSitePerDay)}</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="field-group">
-						<div class="group-label">Central facility</div>
-						<div class="field">
-							<label for="warehousePerMonth">Warehouse storage (USD / month)</label>
-							<input id="warehousePerMonth" type="number" min="0" step="1" bind:value={warehousePerMonth} />
-						</div>
-						{#if commercial}
-							<p class="field-hint">Recovery machines are high-capacity only in commercial HVAC.</p>
-						{:else}
+						{#if !commercial}
 							<div class="field">
-								<label for="machineType">Recovery machine type</label>
+								<label data-tip="Tooltip to come" for="machineType">Recovery machine type</label>
 								<select id="machineType" bind:value={machineType}>
 									<option value={MACHINE_BASIC}>Basic</option>
 									<option value={MACHINE_HIGH}>High Capacity</option>
@@ -430,7 +561,99 @@
 							</div>
 						{/if}
 						<div class="field">
-							<label for="costScenarioMode">Cost scenario (end-use, transport, central facility)</label>
+							<label data-tip="Tooltip to come" for="recoveryRateKgPerHour">Recovery rate (kg/hour)</label>
+							<input
+								id="recoveryRateKgPerHour"
+								type="number"
+								min="0"
+								step="0.1"
+								bind:value={recoveryRateKgPerHour}
+							/>
+							<p class="field-hint">
+								Default {residential ? '3 kg/h (includes pump-down)' : '30 kg/h on-site'}.
+							</p>
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="labourPerHour">Hourly labour cost per team (USD/hour)</label>
+							<input id="labourPerHour" type="number" min="0" step="0.01" bind:value={labourPerHour} />
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="fuelEfficiencyKmPerL">Fuel efficiency (km/L)</label>
+							<input
+								id="fuelEfficiencyKmPerL"
+								type="number"
+								min="0"
+								step="0.1"
+								bind:value={fuelEfficiencyKmPerL}
+							/>
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="fuelPricePerL">Fuel price (USD/L)</label>
+							<input id="fuelPricePerL" type="number" min="0" step="0.01" bind:value={fuelPricePerL} />
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="travelKmPerDay">Average travel distance per recovery day (km)</label>
+							<input id="travelKmPerDay" type="number" min="0" step="1" bind:value={travelKmPerDay} />
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="unitsPerDay">Units recovered per day</label>
+							<input id="unitsPerDay" type="number" min="0" step="1" bind:value={unitsPerDay} />
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="daysPerYear">Recovery days per year</label>
+							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="teams">Recovery teams per recovery day</label>
+							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
+						</div>
+						</div>
+
+						<div class="computed three">
+							<div>
+								<span class="k">Available / unit</span>
+								<span class="v">{formatKg(live.inputs.availablePerUnit, 2)} kg</span>
+							</div>
+							<div>
+								<span class="k">Fuel / km</span>
+								<span class="v">{formatUsd(live.inputs.fuelPerKm)}</span>
+							</div>
+							<div>
+								<span class="k">Labour / unit</span>
+								<span class="v">{formatUsd(live.inputs.labourPerUnit)}</span>
+							</div>
+							<div>
+								<span class="k">kg / day</span>
+								<span class="v">{formatKg(live.inputs.kgPerDay, 2)}</span>
+							</div>
+							<div>
+								<span class="k">Cost / day</span>
+								<span class="v">{formatUsd(live.inputs.recoveryCostPerDay)}</span>
+							</div>
+							<div>
+								<span class="k">kg / year</span>
+								<span class="v">{formatKg(live.inputs.annualKg, 0)}</span>
+							</div>
+						</div>
+						<p class="field-hint">
+							Labour per unit = (available kg ÷ recovery rate) × labour/hour. Cost per day adds fuel
+							(USD/km × km/day).
+						</p>
+					</div>
+
+					<div class="field-group">
+						<div class="group-label">Central facility</div>
+						<div class="fields">
+						<div class="field">
+							<label data-tip="Tooltip to come" for="warehousePerMonth">Warehouse storage (USD / month)</label>
+							<input id="warehousePerMonth" type="number" min="0" step="1" bind:value={warehousePerMonth} />
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="tmsCost">Tracking & monitoring system (USD)</label>
+							<input id="tmsCost" type="number" min="0" step="1" bind:value={tmsCost} />
+						</div>
+						<div class="field">
+							<label data-tip="Tooltip to come" for="costScenarioMode">Cost scenario (central facility & end-use)</label>
 							<select id="costScenarioMode" bind:value={costScenarioMode}>
 								<option value="auto">Auto from annual volume ({autoScenario})</option>
 								<option value="manual">Override…</option>
@@ -438,7 +661,7 @@
 						</div>
 						{#if costScenarioMode === 'manual'}
 							<div class="field">
-								<label for="costScenarioManual">Override cost scenario</label>
+								<label data-tip="Tooltip to come" for="costScenarioManual">Override cost scenario</label>
 								<select id="costScenarioManual" bind:value={costScenarioManual}>
 									<option>Low</option>
 									<option>Medium</option>
@@ -446,79 +669,122 @@
 								</select>
 							</div>
 						{/if}
+						</div>
+						{#if commercial}
+							<p class="field-hint">Recovery machines are high-capacity only in commercial HVAC.</p>
+						{/if}
 						<p class="field-hint">
-							Volume rule: &lt;10,000 kg/yr High · 10,000–50,000 Medium · &gt;50,000 Low. Currently
-							{formatKg(result.inputs.annualKg, 0)} kg/yr → {autoScenario}.
+							Volume rule: &lt;5,000 kg/yr High · 5,000–50,000 Medium · &gt;50,000 Low. Currently
+							{formatKg(live.inputs.annualKg, 0)} kg/yr → {autoScenario}.
 						</p>
 					</div>
 
-					<div class="field-group">
-						<div class="group-label">End-use · {pathway}</div>
-						{#if !vis.hideTech}
+					<div class="field-group" class:option-idle={pathway !== PATHWAY_RECYCLING}>
+						<div class="group-label">Recycling</div>
+						<p class="field-hint">Direct reuse adds no mark-up. Cleaning + reuse marks recovery cost up 50%.</p>
+						{#if vis.recyclingOffered && pathway === PATHWAY_RECYCLING}
+							<div class="fields">
 							<div class="field">
-								<label for="destructionTech">Destruction technology</label>
-								<select id="destructionTech" bind:value={destructionTech}>
-									<option>Rotary</option>
-									<option>Cement</option>
-									<option>Plasma Arc</option>
+								<label data-tip="Tooltip to come" for="refillMode">Direct reuse or cleaning + reuse</label>
+								<select id="refillMode" bind:value={refillMode}>
+									<option value={REFILL_DIRECT}>Direct reuse</option>
+									<option value={REFILL_CLEANING}>Cleaning + reuse</option>
 								</select>
 							</div>
-						{/if}
-						{#if !vis.hideFacility}
 							<div class="field">
-								<label for="facilityStatus">Facility status</label>
+								<label data-tip="Tooltip to come" for="virginPrice">Price of virgin refrigerant avoided (USD/kg)</label>
+								<input id="virginPrice" type="number" min="0" step="0.01" bind:value={virginPrice} />
+							</div>
+							</div>
+							<p class="field-hint">
+								{refillMode === REFILL_CLEANING
+									? 'Cleaning + reuse (RY).'
+									: 'Direct reuse (RF).'}
+								Virgin savings are subtracted from gross opex. Recycling is in-country only.
+							</p>
+						{:else if !vis.recyclingOffered}
+							<p class="field-hint">Recycling is not offered for Residential AC in the workbook.</p>
+						{:else}
+							<p class="field-hint">Select Recycling above to edit these inputs.</p>
+						{/if}
+					</div>
+
+					<div class="field-group" class:option-idle={pathway !== PATHWAY_RECLAMATION}>
+						<div class="group-label">Reclamation</div>
+						{#if pathway === PATHWAY_RECLAMATION}
+							<div class="fields three">
+							<div class="field">
+								<label data-tip="Tooltip to come" for="facilityStatus">Facility status</label>
 								<select id="facilityStatus" bind:value={facilityStatus}>
 									<option>Existing</option>
 									<option>Retrofit</option>
 									<option>New</option>
 								</select>
 							</div>
-						{/if}
-						{#if vis.hideLocationChoice}
-							<p class="field-hint">Recycling is modelled as in-country only.</p>
-						{:else}
 							<div class="field">
-								<label for="location">End-use location</label>
+								<label data-tip="Tooltip to come" for="location">End-use location</label>
 								<select id="location" bind:value={location}>
 									<option>In-country</option>
 									<option>Exported</option>
 								</select>
 							</div>
-						{/if}
-						{#if !vis.hideSale}
 							<div class="field">
-								<label for="salePrice">Blended sale price of reclaimed refrigerant (USD/kg)</label>
+								<label data-tip="Tooltip to come" for="salePrice">Blended sale price of reclaimed refrigerant (USD/kg)</label>
 								<input id="salePrice" type="number" min="0" step="0.01" bind:value={salePrice} />
 							</div>
+							</div>
+						{:else}
+							<p class="field-hint">Select Reclamation above to edit these inputs.</p>
 						{/if}
-						{#if !vis.hideRefill}
+					</div>
+
+					<div class="field-group" class:option-idle={pathway !== PATHWAY_DESTRUCTION}>
+						<div class="group-label">Destruction</div>
+						{#if pathway === PATHWAY_DESTRUCTION}
+							<div class="fields three">
 							<div class="field">
-								<label for="refillMode">Refilling or recycling + refilling</label>
-								<select id="refillMode" bind:value={refillMode}>
-									<option>Refilling</option>
-									<option>Recycling + Refilling</option>
+								<label data-tip="Tooltip to come" for="destructionTech">Destruction technology</label>
+								<select id="destructionTech" bind:value={destructionTech}>
+									<option>Rotary</option>
+									<option>Cement</option>
+									<option>Plasma Arc</option>
 								</select>
 							</div>
 							<div class="field">
-								<label for="virginPrice">Price of virgin refrigerant for refilling (USD/kg)</label>
-								<input id="virginPrice" type="number" min="0" step="0.01" bind:value={virginPrice} />
+								<label data-tip="Tooltip to come" for="facilityStatusDest">Facility status</label>
+								<select id="facilityStatusDest" bind:value={facilityStatus}>
+									<option>Existing</option>
+									<option>Retrofit</option>
+									<option>New</option>
+								</select>
 							</div>
+							<div class="field">
+								<label data-tip="Tooltip to come" for="locationDest">End-use location</label>
+								<select id="locationDest" bind:value={location}>
+									<option>In-country</option>
+									<option>Exported</option>
+								</select>
+							</div>
+							</div>
+						{:else}
+							<p class="field-hint">Select Destruction above to edit these inputs.</p>
 						{/if}
 					</div>
 
 					<div class="field-group">
 						<div class="group-label">Refrigerant mix</div>
 						<p class="field-hint">Must total 100% of recovered volume.</p>
+						<div class="fields mix">
 						<div class="field">
-							<label for="mixR32">R-32 share (%)</label>
+							<label data-tip="Tooltip to come" for="mixR32">R-32 share (%)</label>
 							<input id="mixR32" type="number" min="0" max="100" step="1" bind:value={mixR32} />
 						</div>
 						<div class="field">
-							<label for="mixR410a">R-410A share (%)</label>
+							<label data-tip="Tooltip to come" for="mixR410a">R-410A share (%)</label>
 							<input id="mixR410a" type="number" min="0" max="100" step="1" bind:value={mixR410a} />
 						</div>
 						<div class="field">
-							<label for="mixR22">R-22 share (%)</label>
+							<label data-tip="Tooltip to come" for="mixR22">R-22 share (%)</label>
 							<input id="mixR22" type="number" min="0" max="100" step="1" bind:value={mixR22} />
 						</div>
 						<div class="computed" class:bad={!mixOk}>
@@ -527,6 +793,7 @@
 								<span class="v">{formatKg(mixSum, 0)}%</span>
 							</div>
 						</div>
+						</div>
 						{#if !mixOk}
 							<p class="field-note warn">
 								Refrigerant mix must total 100%. Adjust R-32, R-410A, and R-22 until the total is
@@ -534,152 +801,180 @@
 							</p>
 						{/if}
 					</div>
+
+					<div class="run-bar">
+						{#if stale}
+							<p class="run-note">Inputs have changed. Calculate again to refresh outputs.</p>
+						{:else if !result}
+							<p class="run-note">When the inputs look right, calculate to produce the cost view.</p>
+						{:else}
+							<p class="run-note">Outputs match the current inputs.</p>
+						{/if}
+						<button
+							type="button"
+							class="run"
+							disabled={!mixOk}
+							on:click={produceOutputs}
+						>
+							{#if !result}
+								Calculate costs
+							{:else if stale}
+								Update results
+							{:else}
+								Recalculate
+							{/if}
+						</button>
+					</div>
 				</section>
 
-				<section class="panel results" aria-labelledby="results-heading">
-					<div class="model-tag">V4.2 SEA model outputs</div>
-					<h2 id="results-heading">See the cost stack</h2>
-					<p class="summary">
-						{residential ? 'Residential AC' : 'Commercial HVAC'}
-						· {pathway}
-						{#if pathway === PATHWAY_DESTRUCTION}
-							· {destructionTech}
-						{/if}
-						· {result.inputs.location}
-						· {result.inputs.costScenario} cost case
-						· {formatKg(result.inputs.annualKg, 0)} kg/year
-					</p>
-
-					<div class="chain" aria-hidden="true">
-						<span>Recovery</span>
-						<span class="arrow">→</span>
-						<span>Central facility</span>
-						<span class="arrow">→</span>
-						<span>{pathway === PATHWAY_RECYCLING ? 'Recycling / refill' : 'Transport'}</span>
-						{#if pathway !== PATHWAY_RECYCLING}
-							<span class="arrow">→</span>
-							<span>{pathway}</span>
-						{/if}
+				{#if result}
+				<section class="panel results" class:has-open={Object.values(openCats).some(Boolean)} class:stale aria-labelledby="results-heading">
+					<div class="results-head">
+						<div class="model-tag">V4.3 SEA · {pathwayCode}</div>
+						<h2 id="results-heading">Outputs</h2>
+						<p class="summary">
+							{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
+							· {result.inputs.pathway}
+							{#if result.inputs.pathway === PATHWAY_RECYCLING}
+								· {pathwayCode === 'RY' ? 'cleaning + reuse (RY)' : 'direct reuse (RF)'}
+							{/if}
+							{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
+								· {result.inputs.destructionTech}
+							{/if}
+						</p>
 					</div>
 
-					<div class="metrics">
+					<div class="metrics three">
 						<div class="metric">
-							<div class="label">Total gross opex</div>
-							<div class="value">{formatUsd(result.opex.gross)}</div>
-							<span class="unit">USD / kg</span>
+							<div class="label">Total refrigerant recovered annually</div>
+							<div class="value">{formatKg(result.inputs.annualKg, 0)}</div>
+							<span class="unit">kg / year</span>
 						</div>
 						<div class="metric">
-							<div class="label">Total net opex</div>
+							<div class="label">Total OPEX</div>
 							<div class="value">{formatUsd(result.opex.net)}</div>
-							<span class="unit">USD / kg · {formatUsd(result.opex.netPerYear)} / year</span>
+							<span class="unit">USD / kg · net</span>
 						</div>
-						<div class="metric wide">
-							<div class="label">Total capex</div>
+						<div class="metric">
+							<div class="label">Total CAPEX</div>
 							<div class="value">{formatUsd(result.capex.total)}</div>
 							<span class="unit">USD · one-off</span>
 						</div>
 					</div>
 
+					<div class="charts">
 					<div class="breakdown">
-						<h3>Operational cost breakdown</h3>
-						{#each opexRows as row}
-							<div class="bar-row" class:credit={row.credit}>
-								<span class="name">{row.name}</span>
-								<div class="bar-track">
-									<div class="bar-fill" style="width: {opexBar(Math.abs(row.value), opexScale)}%" />
-								</div>
-								<span class="amt">{row.credit ? '−' + formatUsd(Math.abs(row.value)) : formatUsd(row.value)}/kg</span>
+						<h3>OPEX</h3>
+						<p class="opex-thesis">
+							Summary thesis of how the user should interpret the end result. Placeholder for two to
+							three sentences that explain what these operating costs mean for the selected pathway
+							and how to read them against the totals above.
+						</p>
+						{#each opexCats as row}
+							<div class="cat" class:mock={row.mock} class:open={openCats[row.id]}>
+								<button type="button" class="cat-toggle" on:click={() => toggleCat(row.id)}>
+									<span class="name">{row.name}</span>
+									<div class="bar-track">
+										<div
+											class="bar-fill"
+											class:mock-fill={row.mock}
+											style="width: {row.mock ? 42 : opexBar(Math.abs(row.value), opexScale)}%"
+										></div>
+									</div>
+									<span class="on-bar">
+										{#if row.mock}
+											Mock
+										{:else}
+											{formatUsd(row.value)}{row.unit}
+										{/if}
+									</span>
+								</button>
+								{#if openCats[row.id]}
+									<ul class="cat-parts">
+										{#each row.parts as part}
+											<li>
+												<span>{part.name}</span>
+												<span>
+													{#if part.mock || part.value == null}
+														Mock — awaiting source
+													{:else}
+														{formatUsd(part.value)}{row.unit}
+													{/if}
+												</span>
+											</li>
+										{/each}
+									</ul>
+									<p class="cat-tip">{row.tooltip}</p>
+								{/if}
 							</div>
 						{/each}
 					</div>
 
 					<div class="breakdown capex-breakdown">
-						<h3>Capital cost breakdown</h3>
-						{#each capexRows as row}
-							<div class="bar-row" class:na={row.item.na}>
-								<span class="name">{row.name}</span>
-								<div class="bar-track">
-									<div class="bar-fill" style="width: {row.item.na ? 0 : opexBar(row.item.cost, capexScale)}%" />
-								</div>
-								<span class="amt">
-									{#if row.item.na}
-										{row.item.label}
-									{:else}
-										<span class="units">{row.item.units}</span>
-										{formatUsd(row.item.cost)}
-									{/if}
-								</span>
+						<h3>CAPEX</h3>
+						{#each capexCats as row}
+							<div class="cat" class:open={openCats[row.id]}>
+								<button type="button" class="cat-toggle" on:click={() => toggleCat(row.id)}>
+									<span class="name">{row.name}</span>
+									<div class="bar-track">
+										<div class="bar-fill" style="width: {opexBar(row.value, capexScale)}%"></div>
+									</div>
+									<span class="on-bar">{formatUsd(row.value)}</span>
+								</button>
+								{#if openCats[row.id]}
+									<ul class="cat-parts">
+										{#each row.parts as part}
+											<li>
+												<span>{part.name}{#if part.note} · {part.note}{/if}</span>
+												<span>{formatUsd(part.value)}</span>
+											</li>
+										{/each}
+									</ul>
+									<p class="cat-tip">{row.tooltip}</p>
+								{/if}
 							</div>
 						{/each}
-						<p class="subtotal">
-							Recovery capex {formatUsd(result.capex.recoveryTotal)}
-							{#if !vis.hideEndUseCapex}
-								· Destruction/reclamation capex {formatUsd(result.capex.drTotal)}
-							{/if}
-						</p>
 					</div>
-				</section>
-			</div>
+					</div>
 
-			{#if compareCols.length}
-				<section class="panel compare" aria-labelledby="compare-heading">
-					<h2 id="compare-heading">Same recovery chain, different end-use</h2>
-					<p class="panel-intro">
-						Holds your on-site and central-facility inputs fixed, then runs each available pathway on
-						those parameters.
-					</p>
-					<div class="compare-table" style="--cols: {compareCols.length}">
-						<div class="compare-head sticky-col">Metric</div>
-						{#each compareCols as p}
-							<div class="compare-head" class:current={p === pathway}>{p}</div>
-						{/each}
-						<div class="sticky-col">Net opex (USD/kg)</div>
-						{#each compareCols as p}
-							<div class:current={p === pathway}>{formatUsd(comparison[p].netOpex)}</div>
-						{/each}
-						<div class="sticky-col">Net opex / year</div>
-						{#each compareCols as p}
-							<div class:current={p === pathway}>{formatUsd(comparison[p].netOpexPerYear)}</div>
-						{/each}
-						<div class="sticky-col">Total capex</div>
-						{#each compareCols as p}
-							<div class:current={p === pathway}>{formatUsd(comparison[p].capex)}</div>
-						{/each}
-						<div class="sticky-col">Grand total</div>
-						{#each compareCols as p}
-							<div class:current={p === pathway}>{formatUsd(comparison[p].grandTotal)}</div>
-						{/each}
-					</div>
+					<p class="takeaway">{takeaway}</p>
 				</section>
-			{/if}
+				{/if}
+			</div>
 		{/if}
 
 		<p class="page-foot">
-			LRM Cost Model V4.2 (SEA) · Unlisted prototype · Costs for exploration, not formal
-			decision-making
+			Lifecycle Refrigerant Management Cost Calculator Mock 3.0 · V4.3 SEA · Unlisted
 		</p>
 	</div>
 </div>
 
 <style>
 	.lrm-explorer {
-		--bg: #023c40;
-		--header: #e1fcf7;
-		--ink: #e1fcf7;
-		--ink-soft: #b7ddd6;
-		--muted: #8fb8b1;
-		--line: rgba(225, 252, 247, 0.18);
-		--panel: rgba(225, 252, 247, 0.07);
-		--panel-solid: rgba(225, 252, 247, 0.1);
-		--accent: #7fd6c5;
-		--accent-deep: #e1fcf7;
-		--warn: #f0d7a0;
-		--warn-bg: rgba(240, 215, 160, 0.14);
-		--dummy: #f0d7a0;
-		--dummy-bg: rgba(240, 215, 160, 0.12);
-		--shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-		--radius: 4px;
-		--font: Inter, sans-serif;
+		--bg: #f4f3ed;
+		--teal: #023c40;
+		--teal-hover: #012f32;
+		--teal-muted: rgba(2, 60, 64, 0.55);
+		--selected-bg: rgba(2, 60, 64, 0.08);
+		--header: #000000;
+		--ink: #000000;
+		--ink-soft: rgba(0, 0, 0, 0.72);
+		--muted: rgba(2, 60, 64, 0.62);
+		--line: rgba(2, 60, 64, 0.18);
+		--panel: #fafafa;
+		--panel-solid: #fafafa;
+		--card: #fafafa;
+		--on-teal: #fafafa;
+		--accent: #023c40;
+		--accent-deep: #023c40;
+		--chart: #023c40;
+		--chart-secondary: rgba(2, 60, 64, 0.35);
+		--warn: #023c40;
+		--warn-bg: rgba(2, 60, 64, 0.08);
+		--dummy: #023c40;
+		--dummy-bg: rgba(2, 60, 64, 0.08);
+		--radius: 8px;
+		--font: Inter, system-ui, sans-serif;
 
 		min-height: 100vh;
 		color: var(--ink);
@@ -687,92 +982,182 @@
 		line-height: 1.5;
 		background: var(--bg);
 		position: relative;
-	}
-
-	.lrm-explorer::before {
-		content: '';
-		position: fixed;
-		inset: 0;
-		pointer-events: none;
-		opacity: 0.22;
-		background-image:
-			linear-gradient(rgba(225, 252, 247, 0.06) 1px, transparent 1px),
-			linear-gradient(90deg, rgba(225, 252, 247, 0.06) 1px, transparent 1px);
-		background-size: 48px 48px;
-		mask-image: linear-gradient(180deg, black, transparent 85%);
+		-webkit-font-smoothing: antialiased;
 	}
 
 	.wrap {
-		width: min(1120px, calc(100% - 2rem));
+		width: min(1160px, calc(100% - 2.5rem));
 		margin: 0 auto;
-		padding: 2.25rem 0 4rem;
+		padding: 2rem 0 3.5rem;
 		position: relative;
 		z-index: 1;
 	}
 
 	.site {
-		margin-bottom: 2rem;
+		margin-bottom: 1.75rem;
 		color: var(--header);
 	}
 
 	.eyebrow {
 		display: inline-block;
-		font-size: 0.78rem;
-		letter-spacing: 0.08em;
+		font-size: 0.72rem;
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		color: var(--header);
+		color: var(--accent);
 		font-weight: 600;
-		margin-bottom: 0.65rem;
+		margin-bottom: 0.55rem;
 	}
 
 	.site h1 {
 		font-family: var(--font);
 		font-weight: 600;
-		font-size: clamp(2rem, 4vw, 3rem);
-		line-height: 1.12;
-		margin: 0 0 0.65rem;
-		letter-spacing: -0.02em;
+		font-size: clamp(1.45rem, 2.8vw, 2rem);
+		line-height: 1.2;
+		margin: 0 0 0.7rem;
+		letter-spacing: -0.025em;
 		color: var(--header);
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
 	}
 
-	.lede {
-		max-width: 46rem;
-		color: var(--header);
-		opacity: 0.88;
-		font-size: 1.05rem;
+	.site h1 .title-text {
+		display: flex;
+		flex-direction: column;
+		max-width: none;
+		line-height: 1.15;
+	}
+
+	.site h1 .title-lead {
+		white-space: nowrap;
+	}
+
+	.brand {
+		width: 2.1rem;
+		height: 2.1rem;
+		padding: 0.28rem;
+		background: var(--teal);
+		border-radius: var(--radius);
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+
+	.about {
+		margin: 0 0 0.85rem;
+		max-width: 40rem;
+		position: relative;
+	}
+
+	.about summary {
+		cursor: pointer;
+		list-style: none;
+		font-size: 0.78rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--teal);
+		width: fit-content;
+	}
+
+	.about summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.about summary::after {
+		content: ' +';
+		font-weight: 600;
+	}
+
+	.about[open] summary::after {
+		content: ' −';
+	}
+
+	.about-body {
+		margin-top: 0.55rem;
+		padding: 0.7rem 0.8rem;
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+	}
+
+	.about-body p {
 		margin: 0;
+		font-size: 0.88rem;
 		line-height: 1.5;
+		color: var(--ink);
 	}
 
-	.prototype-banner {
-		margin-top: 1.25rem;
-		padding: 0.75rem 1rem;
-		background: var(--dummy-bg);
-		border-left: 3px solid #c9a45a;
-		color: var(--dummy);
-		font-size: 0.92rem;
-		max-width: 46rem;
+	.site.compact {
+		margin-bottom: 0.75rem;
+	}
+
+	.site.compact h1 {
+		font-size: 0.98rem;
+		max-width: none;
+		margin: 0;
+		line-height: 1.35;
+		gap: 0.5rem;
+	}
+
+	.site.compact h1 .title-text {
+		max-width: none;
+	}
+
+	.site.compact .brand {
+		width: 1.55rem;
+		height: 1.55rem;
+		padding: 0.18rem;
+	}
+
+	#enduse-panel,
+	#workspace {
+		scroll-margin-top: 0.75rem;
 	}
 
 	.layout {
 		display: grid;
 		grid-template-columns: minmax(280px, 0.95fr) minmax(300px, 1.05fr);
 		gap: 1.25rem;
-		align-items: start;
+		align-items: stretch;
 		margin-top: 1.25rem;
+		height: calc(100vh - 1.25rem);
+		min-height: 28rem;
+	}
+
+	.layout > .panel {
+		min-height: 0;
+		overflow: auto;
 	}
 
 	.panel {
 		background: var(--panel);
-		backdrop-filter: blur(10px);
 		border: 1px solid var(--line);
-		box-shadow: var(--shadow);
 		border-radius: var(--radius);
-		padding: 1.35rem 1.35rem 1.5rem;
+		padding: 1.2rem 1.3rem 1.35rem;
 	}
 
 	.branch {
 		margin-bottom: 1.25rem;
+	}
+
+	.branch.settled {
+		padding: 0.85rem 1.1rem 1rem;
+		margin-bottom: 0.85rem;
+	}
+
+	.branch.settled h2 {
+		font-size: 1.05rem;
+		margin-bottom: 0.55rem;
+	}
+
+	.branch.settled .panel-intro,
+	.branch.settled .choice-body,
+	.branch.settled .assumption {
+		display: none;
+	}
+
+	.branch.settled .choice {
+		padding: 0.55rem 0.75rem;
 	}
 
 	.panel h2 {
@@ -808,25 +1193,30 @@
 		text-align: left;
 		cursor: pointer;
 		color: var(--header);
-		background: rgba(2, 60, 64, 0.35);
-		border: 1px solid rgba(225, 252, 247, 0.28);
+		background: var(--card);
+		border: 1px solid var(--line);
 		border-radius: var(--radius);
-		padding: 1rem 1.05rem 1.05rem;
+		padding: 0.9rem 1rem;
 		font: inherit;
 		transition:
-			border-color 0.2s ease,
-			background 0.2s ease,
-			box-shadow 0.2s ease;
+			border-color 0.15s ease,
+			background 0.15s ease;
 	}
 
 	.choice:hover {
-		border-color: rgba(225, 252, 247, 0.5);
+		border-color: var(--teal-hover);
+		background: var(--selected-bg);
+	}
+
+	.choice:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
 	}
 
 	.choice.selected {
-		border-color: var(--accent);
-		background: rgba(127, 214, 197, 0.16);
-		box-shadow: 0 0 0 3px rgba(127, 214, 197, 0.16);
+		border-color: var(--teal);
+		background: var(--selected-bg);
+		box-shadow: inset 3px 0 0 var(--teal);
 	}
 
 	.choice-kicker {
@@ -865,17 +1255,41 @@
 		border-top: 1px solid var(--line);
 	}
 
+	.fields {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.55rem 0.75rem;
+	}
+
+	.fields.three {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.fields.mix {
+		grid-template-columns: 1fr 1fr 1fr minmax(6.5rem, 0.85fr);
+		align-items: end;
+	}
+
+	.fields.mix .computed {
+		margin: 0;
+	}
+
+	.fields .field {
+		margin-bottom: 0;
+	}
+
 	.group-label {
 		font-size: 0.75rem;
 		letter-spacing: 0.07em;
 		text-transform: uppercase;
-		color: var(--accent-deep);
+		color: var(--ink);
 		font-weight: 600;
 		margin-bottom: 0.85rem;
 	}
 
 	.field {
 		margin-bottom: 0.85rem;
+		overflow: visible;
 	}
 
 	label {
@@ -884,43 +1298,75 @@
 		font-weight: 500;
 		margin-bottom: 0.35rem;
 		color: var(--header);
+		position: relative;
+	}
+
+	label[data-tip] {
+		cursor: help;
+	}
+
+	label[data-tip]:hover::after,
+	label[data-tip]:focus-visible::after {
+		content: attr(data-tip);
+		position: absolute;
+		left: 0;
+		bottom: calc(100% + 6px);
+		width: max-content;
+		max-width: 100%;
+		padding: 0.35rem 0.5rem;
+		background: var(--teal);
+		color: var(--on-teal);
+		font-size: 0.7rem;
+		font-weight: 400;
+		line-height: 1.35;
+		letter-spacing: 0;
+		text-transform: none;
+		border-radius: 6px;
+		z-index: 40;
+		pointer-events: none;
+		box-shadow: 0 6px 18px rgba(2, 60, 64, 0.16);
+		white-space: normal;
+	}
+
+	.field:focus-within label[data-tip]::after {
+		content: none;
 	}
 
 	select,
 	input[type='number'] {
 		width: 100%;
 		appearance: none;
-		background: rgba(2, 60, 64, 0.55);
-		border: 1px solid rgba(225, 252, 247, 0.28);
-		border-radius: var(--radius);
-		padding: 0.65rem 0.75rem;
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		padding: 0.62rem 0.75rem;
+		min-height: 2.5rem;
 		font: inherit;
-		color: var(--header);
-		transition:
-			border-color 0.2s ease,
-			box-shadow 0.2s ease;
+		color: var(--ink);
+		transition: border-color 0.15s ease, background 0.15s ease;
 	}
 
 	select {
 		background:
-			linear-gradient(45deg, transparent 50%, var(--header) 50%) right 14px top 16px / 6px 6px
+			linear-gradient(45deg, transparent 50%, var(--ink) 50%) right 14px top 18px / 6px 6px
 				no-repeat,
-			linear-gradient(135deg, var(--header) 50%, transparent 50%) right 9px top 16px / 6px 6px
+			linear-gradient(135deg, var(--ink) 50%, transparent 50%) right 9px top 18px / 6px 6px
 				no-repeat,
-			rgba(2, 60, 64, 0.55);
+			var(--card);
 		padding-right: 2.2rem;
 	}
 
 	select:hover,
 	input[type='number']:hover {
-		border-color: rgba(225, 252, 247, 0.5);
+		border-color: var(--teal-hover);
 	}
 
 	select:focus,
 	input[type='number']:focus {
 		outline: none;
-		border-color: var(--accent);
-		box-shadow: 0 0 0 3px rgba(127, 214, 197, 0.2);
+		border-color: var(--teal);
+		background-color: var(--selected-bg);
+		box-shadow: 0 0 0 3px var(--selected-bg);
 	}
 
 	.field-hint,
@@ -932,10 +1378,10 @@
 	}
 
 	.field-note.warn {
-		color: var(--warn);
+		color: var(--ink);
 		background: var(--warn-bg);
 		padding: 0.45rem 0.6rem;
-		border-left: 3px solid #c9a45a;
+		border-left: 3px solid var(--teal);
 	}
 
 	.computed {
@@ -954,7 +1400,7 @@
 	}
 
 	.computed.bad {
-		border-color: #c9a45a;
+		border-color: var(--teal);
 	}
 
 	.computed .k {
@@ -973,9 +1419,8 @@
 	}
 
 	.results {
-		position: sticky;
-		top: 1rem;
-		max-height: calc(100vh - 2rem);
+		position: relative;
+		max-height: none;
 		overflow: auto;
 	}
 
@@ -983,15 +1428,15 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 0.4rem;
-		font-size: 0.72rem;
-		letter-spacing: 0.06em;
+		font-size: 0.68rem;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		font-weight: 600;
-		color: var(--accent);
-		background: rgba(127, 214, 197, 0.12);
-		padding: 0.28rem 0.55rem;
-		border-radius: 2px;
-		margin-bottom: 0.85rem;
+		color: var(--on-teal);
+		background: var(--teal);
+		padding: 0.22rem 0.55rem;
+		border-radius: 999px;
+		margin-bottom: 0.7rem;
 	}
 
 	.model-tag::before {
@@ -999,7 +1444,7 @@
 		width: 0.45rem;
 		height: 0.45rem;
 		border-radius: 50%;
-		background: var(--accent);
+		background: var(--on-teal);
 	}
 
 	.summary {
@@ -1030,8 +1475,155 @@
 	.metrics {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		gap: 0;
+		margin-bottom: 1.15rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		overflow: hidden;
+		background: var(--panel-solid);
+	}
+
+	.metrics.three {
+		grid-template-columns: 1fr;
+	}
+
+	.metrics .metric {
+		padding: 0.85rem 1rem;
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+	}
+
+	.metrics.three .metric + .metric {
+		border-top: 1px solid var(--line);
+	}
+
+	.option-idle {
+		opacity: 0.55;
+	}
+
+	.open-q {
+		margin: 0 0 0.5rem;
+		padding: 0.5rem 0.7rem;
+		background: var(--warn-bg);
+		border-left: 2px solid var(--teal);
+		color: var(--ink);
+		font-size: 0.75rem;
+		line-height: 1.4;
+		border-radius: 0 6px 6px 0;
+	}
+
+	.open-q strong {
+		display: block;
+		margin-bottom: 0.2rem;
+	}
+
+	.takeaway {
+		margin: 0 0 1.15rem;
+		padding: 0.75rem 0.85rem;
+		background: var(--panel-solid);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		font-size: 0.9rem;
+		color: var(--ink-soft);
+		line-height: 1.45;
+	}
+
+	.cat {
+		margin-bottom: 0.55rem;
+	}
+
+	.cat-toggle {
+		display: grid;
+		grid-template-columns: minmax(7.5rem, 0.9fr) minmax(6rem, 1.4fr) auto;
+		gap: 0.45rem;
+		align-items: center;
+		width: 100%;
+		padding: 0.15rem 0;
+		border: 0;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		text-align: left;
+		cursor: pointer;
+		border-radius: 4px;
+	}
+
+	.cat-toggle:hover .name {
+		color: var(--accent);
+	}
+
+	.cat-toggle:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+
+	.cat-toggle .name {
+		font-size: 0.82rem;
+		line-height: 1.3;
+	}
+
+	.bar-track {
+		position: relative;
+		height: 1.5rem;
+		background: rgba(2, 60, 64, 0.08);
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+	.bar-fill {
+		position: relative;
+		height: 100%;
+		min-width: 0;
+		background: var(--chart);
+		border-radius: 4px;
+	}
+
+	.bar-fill.mock-fill {
+		min-width: 2.4rem;
+		background: repeating-linear-gradient(
+			-45deg,
+			rgba(2, 60, 64, 0.18),
+			rgba(2, 60, 64, 0.18) 6px,
+			rgba(2, 60, 64, 0.06) 6px,
+			rgba(2, 60, 64, 0.06) 12px
+		);
+		border: 1px dashed var(--teal-muted);
+	}
+
+	.on-bar {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		min-width: 4.6rem;
+		font-size: 0.72rem;
+		font-weight: 600;
+		font-variant-numeric: tabular-nums;
+		color: var(--header);
+		white-space: nowrap;
+	}
+
+	.cat-parts {
+		list-style: none;
+		margin: 0.4rem 0 0;
+		padding: 0.15rem 0 0 0.2rem;
+		font-size: 0.78rem;
+		color: var(--ink-soft);
+	}
+
+	.cat-parts li {
+		display: flex;
+		justify-content: space-between;
 		gap: 0.75rem;
-		margin-bottom: 1.25rem;
+		padding: 0.2rem 0;
+		border-top: 1px solid var(--line);
+	}
+
+	.cat-tip {
+		margin: 0.25rem 0 0.55rem;
+		font-size: 0.75rem;
+		color: var(--muted);
+		line-height: 1.4;
 	}
 
 	.metric {
@@ -1046,15 +1638,18 @@
 	}
 
 	.metric .label {
-		font-size: 0.78rem;
+		font-size: 0.68rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
 		color: var(--muted);
-		margin-bottom: 0.3rem;
+		margin-bottom: 0.25rem;
 	}
 
 	.metric .value {
-		font-size: 1.55rem;
+		font-size: 1.35rem;
 		font-weight: 600;
-		letter-spacing: -0.02em;
+		letter-spacing: -0.03em;
+		font-variant-numeric: tabular-nums;
 		color: var(--header);
 		line-height: 1.2;
 	}
@@ -1075,56 +1670,17 @@
 		margin: 0 0 0.75rem;
 	}
 
+	.opex-thesis {
+		margin: -0.35rem 0 0.75rem;
+		font-size: 0.82rem;
+		line-height: 1.45;
+		color: var(--ink-soft);
+	}
+
 	.capex-breakdown {
 		margin-top: 1.15rem;
 		padding-top: 1rem;
 		border-top: 1px solid var(--line);
-	}
-
-	.bar-row {
-		display: grid;
-		grid-template-columns: 9.5rem 1fr auto;
-		gap: 0.65rem;
-		align-items: center;
-		margin-bottom: 0.55rem;
-		font-size: 0.88rem;
-	}
-
-	.bar-row .name {
-		color: var(--ink-soft);
-	}
-
-	.bar-row .amt {
-		color: var(--ink);
-		font-variant-numeric: tabular-nums;
-		min-width: 7.5rem;
-		text-align: right;
-	}
-
-	.bar-row .units {
-		color: var(--muted);
-		margin-right: 0.4rem;
-		font-size: 0.78rem;
-	}
-
-	.bar-row.na .name,
-	.bar-row.na .amt {
-		color: var(--muted);
-		font-style: italic;
-	}
-
-	.bar-track {
-		height: 0.45rem;
-		background: rgba(225, 252, 247, 0.14);
-		border-radius: 99px;
-		overflow: hidden;
-	}
-
-	.bar-fill {
-		height: 100%;
-		background: linear-gradient(90deg, #3d9a82, #7fd6c5);
-		border-radius: 99px;
-		transition: width 0.45s ease;
 	}
 
 	.subtotal {
@@ -1154,17 +1710,17 @@
 	}
 
 	.compare-head {
-		background: rgba(127, 214, 197, 0.1);
+		background: var(--selected-bg);
 		font-weight: 600;
 		font-size: 0.78rem;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
-		color: var(--accent-deep);
+		color: var(--teal);
 		border-top: none;
 	}
 
 	.compare-table > div.current {
-		background: rgba(127, 214, 197, 0.12);
+		background: var(--selected-bg);
 	}
 
 	.page-foot {
@@ -1173,14 +1729,511 @@
 		font-size: 0.82rem;
 	}
 
+	.run-bar {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.55rem 1rem;
+		margin-top: 0.85rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid var(--line);
+	}
+
+	.run-note {
+		margin: 0;
+		font-size: 0.8rem;
+		color: var(--muted);
+		line-height: 1.35;
+		flex: 1 1 12rem;
+	}
+
+	.run {
+		appearance: none;
+		border: 0;
+		background: var(--teal);
+		color: var(--on-teal);
+		font: inherit;
+		font-weight: 600;
+		font-size: 0.88rem;
+		padding: 0.55rem 1.05rem;
+		border-radius: var(--radius);
+		cursor: pointer;
+		white-space: nowrap;
+	}
+
+	.run:hover {
+		background: var(--teal-hover);
+	}
+
+	.run:disabled {
+		opacity: 0.45;
+		cursor: not-allowed;
+		background: var(--teal);
+	}
+
+	.run:focus-visible {
+		outline: 2px solid var(--teal);
+		outline-offset: 2px;
+	}
+
+	.results.stale {
+		box-shadow: inset 0 0 0 1px rgba(2, 60, 64, 0.28);
+	}
+
+	.results-head .summary {
+		margin: 0 0 1rem;
+	}
+
+	.open-qs {
+		margin-bottom: 1rem;
+	}
+
+	.workspace-on {
+		height: 100vh;
+		height: 100dvh;
+		max-height: 100vh;
+		max-height: 100dvh;
+		overflow: hidden;
+		line-height: 1.3;
+	}
+
+	.workspace-on .wrap {
+		width: min(1680px, calc(100% - 1.25rem));
+		height: 100%;
+		margin: 0 auto;
+		padding: 0.45rem 0 0.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.workspace-on .chrome {
+		flex: 0 0 auto;
+		display: grid;
+		grid-template-columns: minmax(13rem, 0.8fr) minmax(16rem, 1fr) minmax(20rem, 1.4fr);
+		gap: 0.45rem;
+		align-items: stretch;
+		overflow: visible;
+		z-index: 5;
+	}
+
+	.workspace-on .eyebrow {
+		display: none;
+	}
+
+	.workspace-on .site.compact {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		overflow: visible;
+		position: relative;
+	}
+
+	.workspace-on .about {
+		margin: 0.12rem 0 0;
+		max-width: none;
+	}
+
+	.workspace-on .about summary {
+		font-size: 0.58rem;
+	}
+
+	.workspace-on .about[open] .about-body {
+		position: absolute;
+		z-index: 60;
+		top: calc(100% + 0.35rem);
+		left: 0;
+		width: min(34rem, 72vw);
+		margin: 0;
+		box-shadow: 0 10px 28px rgba(2, 60, 64, 0.16);
+	}
+
+	.workspace-on .site.compact h1 {
+		font-size: 0.92rem;
+	}
+
+	.workspace-on .branch {
+		margin: 0;
+		padding: 0.35rem 0.55rem 0.4rem;
+	}
+
+	.workspace-on .branch.settled h2 {
+		font-size: 0.62rem;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--muted);
+		margin: 0 0 0.25rem;
+		font-weight: 600;
+	}
+
+	.workspace-on .branch.settled .choice {
+		padding: 0.28rem 0.5rem;
+	}
+
+	.workspace-on .choice-kicker {
+		display: none;
+	}
+
+	.workspace-on .choice-title {
+		font-size: 0.8rem;
+		margin: 0;
+	}
+
+	.workspace-on .layout {
+		flex: 1 1 auto;
+		min-height: 0;
+		height: auto;
+		margin: 0;
+		overflow: hidden;
+		gap: 0.55rem;
+		grid-template-columns: minmax(280px, 1.05fr) minmax(300px, 1fr);
+	}
+
+	.workspace-on .layout.awaiting {
+		grid-template-columns: minmax(0, 56rem);
+		justify-content: start;
+	}
+
+	.workspace-on .layout > .panel {
+		overflow: hidden;
+		padding: 0.55rem 0.7rem 0.6rem;
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
+	}
+
+	.workspace-on .layout > .controls {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-content: start;
+		column-gap: 0.65rem;
+		row-gap: 0;
+		overflow: visible;
+	}
+
+	.workspace-on .controls > h2,
+	.workspace-on .controls > .panel-intro,
+	.workspace-on .controls > .field-group:not(.option-idle),
+	.workspace-on .controls > .run-bar {
+		grid-column: 1 / -1;
+	}
+
+	.workspace-on .option-idle {
+		display: none;
+	}
+
+	.workspace-on .page-foot {
+		display: none;
+	}
+
+	.workspace-on .panel h2 {
+		font-size: 0.72rem;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		margin: 0 0 0.35rem;
+	}
+
+	.workspace-on .panel-intro {
+		display: none;
+	}
+
+	.workspace-on .field-group + .field-group {
+		margin-top: 0.22rem;
+		padding-top: 0.22rem;
+	}
+
+	.workspace-on .group-label {
+		margin-bottom: 0.16rem;
+		font-size: 0.6rem;
+	}
+
+	.workspace-on .option-idle {
+		opacity: 0.42;
+		margin-top: 0.08rem;
+		padding-top: 0.08rem;
+	}
+
+	.workspace-on .fields.mix {
+		grid-template-columns: 1fr 1fr 1fr minmax(5.5rem, 0.7fr);
+		align-items: end;
+	}
+
+	.workspace-on .fields.mix .computed {
+		margin: 0;
+		padding: 0.2rem 0.4rem;
+	}
+
+	.workspace-on .option-idle .group-label {
+		margin: 0;
+	}
+
+	.workspace-on .fields {
+		gap: 0.18rem 0.55rem;
+	}
+
+	.workspace-on .fields:not(.three) .field {
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(5.6rem, 1fr);
+		align-items: center;
+		column-gap: 0.4rem;
+	}
+
+	.workspace-on .fields:not(.three) label {
+		margin-bottom: 0;
+	}
+
+	.workspace-on .fields:not(.three) .field-note,
+	.workspace-on .fields:not(.three) .field-hint {
+		grid-column: 1 / -1;
+	}
+
+	.workspace-on .fields:not(.three) .field:has(#costScenarioMode),
+	.workspace-on .fields:not(.three) .field:has(#costScenarioManual) {
+		grid-column: 1 / -1;
+		grid-template-columns: minmax(0, 1fr) minmax(12rem, 1.35fr);
+	}
+
+	.workspace-on label {
+		font-size: 0.65rem;
+		margin-bottom: 0.06rem;
+		line-height: 1.2;
+	}
+
+	.workspace-on select,
+	.workspace-on input[type='number'] {
+		min-height: 1.45rem;
+		height: 1.45rem;
+		padding: 0 0.35rem;
+		font-size: 0.75rem;
+		border-radius: 4px;
+		line-height: 1.2;
+	}
+
+	.workspace-on select {
+		background:
+			linear-gradient(45deg, transparent 50%, var(--ink) 50%) right 10px top 11px / 5px 5px
+				no-repeat,
+			linear-gradient(135deg, var(--ink) 50%, transparent 50%) right 6px top 11px / 5px 5px
+				no-repeat,
+			var(--card);
+		padding-right: 1.55rem;
+	}
+
+	.workspace-on .computed {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		margin: 0.16rem 0 0.04rem;
+		padding: 0.12rem 0.4rem;
+		gap: 0.15rem 0.85rem;
+		min-height: 0;
+	}
+
+	.workspace-on .computed > div {
+		display: flex;
+		align-items: baseline;
+		gap: 0.35rem;
+		min-width: 0;
+	}
+
+	.workspace-on .computed .k,
+	.workspace-on .computed .v {
+		display: inline;
+		line-height: 1.2;
+	}
+
+	.workspace-on .computed .k {
+		font-size: 0.55rem;
+	}
+
+	.workspace-on .computed .v {
+		font-size: 0.72rem;
+	}
+
+	.workspace-on .field-hint {
+		display: none;
+	}
+
+	.workspace-on .field-note.warn {
+		font-size: 0.65rem;
+		padding: 0.18rem 0.35rem;
+		margin: 0.18rem 0 0;
+		line-height: 1.25;
+	}
+
+	.workspace-on .option-idle {
+		opacity: 0.42;
+	}
+
+	.workspace-on .option-idle > :not(.group-label) {
+		display: none;
+	}
+
+	.workspace-on .results-head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.25rem 0.65rem;
+		margin-bottom: 0.35rem;
+	}
+
+	.workspace-on .results-head h2,
+	.workspace-on .results-head .summary,
+	.workspace-on .model-tag {
+		margin: 0;
+	}
+
+	.workspace-on .summary {
+		font-size: 0.78rem;
+	}
+
+	.workspace-on .metrics {
+		margin-bottom: 0.35rem;
+	}
+
+	.workspace-on .metrics.three {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.workspace-on .metrics.three .metric + .metric {
+		border-top: 0;
+		border-left: 1px solid var(--line);
+	}
+
+	.workspace-on .metric {
+		padding: 0.35rem 0.5rem;
+	}
+
+	.workspace-on .metric .label {
+		font-size: 0.58rem;
+		margin-bottom: 0.1rem;
+	}
+
+	.workspace-on .metric .value {
+		font-size: 1rem;
+	}
+
+	.workspace-on .metric .unit {
+		font-size: 0.65rem;
+		margin-top: 0;
+	}
+
+	.workspace-on .open-qs {
+		display: grid;
+		gap: 0.2rem;
+		margin-bottom: 0.4rem;
+	}
+
+	.workspace-on .open-q {
+		margin: 0;
+		padding: 0.22rem 0.4rem;
+		font-size: 0.62rem;
+		line-height: 1.3;
+	}
+
+	.workspace-on .open-q strong {
+		display: inline;
+		margin: 0 0.2rem 0 0;
+	}
+
+	.workspace-on .charts {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.65rem;
+		flex: 1 1 auto;
+		min-height: 0;
+	}
+
+	.workspace-on .takeaway {
+		margin: 0.4rem 0 0;
+		padding: 0.35rem 0.45rem;
+		font-size: 0.72rem;
+		line-height: 1.35;
+	}
+
+	.workspace-on .run-bar {
+		margin-top: 0.35rem;
+		padding-top: 0.35rem;
+	}
+
+	.workspace-on .run-note {
+		font-size: 0.68rem;
+	}
+
+	.workspace-on .run {
+		font-size: 0.78rem;
+		padding: 0.32rem 0.85rem;
+	}
+
+	.workspace-on .bar-track {
+		height: 1.15rem;
+	}
+
+	.workspace-on .cat {
+		margin-bottom: 0.22rem;
+	}
+
+	.workspace-on .cat-toggle {
+		grid-template-columns: minmax(5.2rem, 0.85fr) minmax(3.5rem, 1fr) auto;
+		gap: 0.3rem;
+	}
+
+	.workspace-on .cat-toggle .name {
+		font-size: 0.72rem;
+	}
+
+	.workspace-on .on-bar {
+		position: static;
+		inset: auto;
+		font-size: 0.62rem;
+		min-width: 4.2rem;
+	}
+
+	.workspace-on .capex-breakdown {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	.workspace-on .breakdown h3 {
+		margin: 0 0 0.3rem;
+		font-size: 0.62rem;
+	}
+
+	.workspace-on .opex-thesis {
+		margin: 0 0 0.4rem;
+		font-size: 0.65rem;
+		line-height: 1.35;
+	}
+
+	.workspace-on .results.has-open {
+		overflow: auto;
+	}
+
 	@media (max-width: 860px) {
+		.site h1 {
+			font-size: 1.2rem;
+		}
 		.layout,
 		.choice-grid.two,
 		.choice-grid.three,
 		.computed,
 		.computed.three,
-		.metrics {
+		.metrics,
+		.fields,
+		.fields.three,
+		.fields.mix {
 			grid-template-columns: 1fr;
+		}
+		.layout {
+			height: auto;
+			min-height: 0;
+		}
+		.layout > .panel {
+			overflow: visible;
 		}
 		.results {
 			position: static;
@@ -1197,6 +2250,47 @@
 		.compare-table {
 			grid-template-columns: minmax(7rem, 0.9fr) repeat(var(--cols), 1fr);
 			font-size: 0.78rem;
+		}
+		.workspace-on {
+			height: auto;
+			max-height: none;
+			overflow: visible;
+		}
+		.workspace-on .wrap {
+			height: auto;
+			display: block;
+			padding: 1rem 0 2rem;
+		}
+		.workspace-on .chrome {
+			display: block;
+		}
+		.workspace-on .layout {
+			display: grid;
+			overflow: visible;
+		}
+		.workspace-on .layout > .panel {
+			overflow: visible;
+		}
+		.workspace-on .layout > .controls {
+			display: flex;
+			flex-direction: column;
+		}
+		.workspace-on .charts {
+			grid-template-columns: 1fr;
+		}
+		.workspace-on .metrics.three {
+			grid-template-columns: 1fr;
+		}
+		.workspace-on .metrics.three .metric + .metric {
+			border-left: 0;
+			border-top: 1px solid var(--line);
+		}
+		.workspace-on .page-foot {
+			display: block;
+		}
+		.workspace-on .field-hint,
+		.workspace-on .option-idle > :not(.group-label) {
+			display: block;
 		}
 	}
 </style>
