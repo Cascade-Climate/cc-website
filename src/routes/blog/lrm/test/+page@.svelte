@@ -58,6 +58,9 @@
 	let openCats = {};
 	let result = null;
 	let publishedKey = '';
+	/** @type {'bars' | 'alt'} */
+	let chartView = 'bars';
+	let selectedAlt = '';
 
 	$: residential = sector === SECTOR_RESIDENTIAL;
 	$: commercial = sector === SECTOR_COMMERCIAL;
@@ -123,10 +126,15 @@
 		openCats = { ...openCats, [id]: !openCats[id] };
 	}
 
+	function selectAlt(id) {
+		selectedAlt = selectedAlt === id ? '' : id;
+	}
+
 	function clearOutputs() {
 		result = null;
 		publishedKey = '';
 		openCats = {};
+		selectedAlt = '';
 	}
 
 	function produceOutputs() {
@@ -134,6 +142,7 @@
 		result = live;
 		publishedKey = liveKey;
 		openCats = {};
+		selectedAlt = '';
 	}
 
 	function applyDefaults(nextSector, nextPathway) {
@@ -390,6 +399,52 @@
 		: [];
 
 	$: capexScale = Math.max(...capexCats.map((r) => r.value), 0.0001);
+
+	$: waterfallSteps = (() => {
+		let running = 0;
+		const steps = [];
+		for (const row of opexCats) {
+			const from = running;
+			running += row.value;
+			steps.push({
+				...row,
+				from,
+				to: running,
+				delta: row.value
+			});
+		}
+		const vals = steps.flatMap((s) => [s.from, s.to]);
+		const min = Math.min(0, ...vals);
+		const max = Math.max(0, ...vals);
+		const span = Math.max(max - min, 0.0001);
+		const pct = (v) => ((v - min) / span) * 100;
+		return steps.map((s, i) => {
+			const lo = Math.min(s.from, s.to);
+			const hi = Math.max(s.from, s.to);
+			return {
+				...s,
+				leftPct: pct(lo),
+				widthPct: Math.max(pct(hi) - pct(lo), 0.8),
+				zeroPct: pct(0),
+				connectorPct: i === 0 ? null : pct(steps[i - 1].to),
+				negative: s.delta < 0
+			};
+		});
+	})();
+
+	$: selectedOpexAlt =
+		selectedAlt && selectedAlt.startsWith('opex-')
+			? opexCats.find((row) => row.id === selectedAlt) || null
+			: null;
+	$: selectedCapexAlt =
+		selectedAlt && selectedAlt.startsWith('capex-')
+			? capexCats.find((row) => row.id === selectedAlt) || null
+			: null;
+
+	$: capexStackTotal = Math.max(
+		capexCats.reduce((sum, row) => sum + Math.max(row.value, 0), 0),
+		0.0001
+	);
 
 	$: takeaway = result
 		? (() => {
@@ -862,6 +917,36 @@
 						</div>
 					</div>
 
+					<div class="view-tabs" role="tablist" aria-label="Output chart style">
+						<button
+							type="button"
+							role="tab"
+							class="view-tab"
+							class:active={chartView === 'bars'}
+							aria-selected={chartView === 'bars'}
+							on:click={() => {
+								chartView = 'bars';
+								selectedAlt = '';
+							}}
+						>
+							Bars
+						</button>
+						<button
+							type="button"
+							role="tab"
+							class="view-tab"
+							class:active={chartView === 'alt'}
+							aria-selected={chartView === 'alt'}
+							on:click={() => {
+								chartView = 'alt';
+								openCats = {};
+							}}
+						>
+							Waterfall + stacked
+						</button>
+					</div>
+
+					{#if chartView === 'bars'}
 					<div class="charts">
 					<div class="breakdown">
 						<h3>OPEX</h3>
@@ -936,6 +1021,122 @@
 						{/each}
 					</div>
 					</div>
+					{:else}
+					<div class="charts alt-charts">
+						<div class="breakdown">
+							<h3>OPEX waterfall</h3>
+							<p class="opex-thesis">
+								Each step adds or subtracts from the running total. Click a step for the line-item
+								breakdown.
+							</p>
+							<div class="waterfall">
+								{#each waterfallSteps as step}
+									<button
+										type="button"
+										class="wf-row"
+										class:selected={selectedAlt === step.id}
+										class:negative={step.negative}
+										on:click={() => selectAlt(step.id)}
+									>
+										<span class="wf-label">{step.name}</span>
+										<span class="wf-track">
+											{#if step.connectorPct != null}
+												<span class="wf-connector" style="left: {step.connectorPct}%"></span>
+											{/if}
+											<span class="wf-zero" style="left: {step.zeroPct}%"></span>
+											<span
+												class="wf-bar"
+												style="left: {step.leftPct}%; width: {step.widthPct}%"
+											></span>
+										</span>
+										<span class="wf-amt">
+											{step.delta >= 0 ? '+' : ''}{formatUsd(step.delta)}{step.unit}
+										</span>
+									</button>
+								{/each}
+								<div class="wf-net">
+									<span class="wf-label">Net opex</span>
+									<span class="wf-amt net">{formatUsd(result.opex.net)}/kg</span>
+								</div>
+							</div>
+							{#if selectedOpexAlt}
+								<div class="alt-detail">
+									<div class="alt-detail-title">{selectedOpexAlt.name}</div>
+									<ul class="cat-parts">
+										{#each selectedOpexAlt.parts as part}
+											<li>
+												<span>{part.name}</span>
+												<span>{formatUsd(part.value)}/kg</span>
+											</li>
+										{/each}
+									</ul>
+									<p class="cat-tip">{selectedOpexAlt.tooltip}</p>
+								</div>
+							{/if}
+						</div>
+
+						<div class="breakdown capex-breakdown">
+							<h3>CAPEX stacked</h3>
+							<p class="opex-thesis">Click a segment for that category’s breakdown.</p>
+							<div class="stack-bar" role="group" aria-label="CAPEX composition">
+								{#each capexCats as row, i}
+									<button
+										type="button"
+										class="stack-seg"
+										class:selected={selectedAlt === row.id}
+										class:tone-a={i % 4 === 0}
+										class:tone-b={i % 4 === 1}
+										class:tone-c={i % 4 === 2}
+										class:tone-d={i % 4 === 3}
+										style="flex: {Math.max(row.value, 0)} 1 0"
+										title="{row.name}: {formatUsd(row.value)}"
+										on:click={() => selectAlt(row.id)}
+									>
+										{#if row.value / capexStackTotal > 0.12}
+											<span class="stack-seg-label">{formatUsd(row.value, 0)}</span>
+										{/if}
+									</button>
+								{/each}
+							</div>
+							<ul class="stack-legend">
+								{#each capexCats as row, i}
+									<li>
+										<button
+											type="button"
+											class="stack-legend-btn"
+											class:selected={selectedAlt === row.id}
+											on:click={() => selectAlt(row.id)}
+										>
+											<span
+												class="swatch"
+												class:tone-a={i % 4 === 0}
+												class:tone-b={i % 4 === 1}
+												class:tone-c={i % 4 === 2}
+												class:tone-d={i % 4 === 3}
+											></span>
+											<span class="stack-name">{row.name}</span>
+											<span class="stack-val">{formatUsd(row.value)}</span>
+										</button>
+									</li>
+								{/each}
+							</ul>
+							{#if selectedCapexAlt}
+								<div class="alt-detail">
+									<div class="alt-detail-title">{selectedCapexAlt.name}</div>
+									<ul class="cat-parts">
+										{#each selectedCapexAlt.parts as part}
+											<li>
+												<span>{part.name}{#if part.note} · {part.note}{/if}</span>
+												<span>{formatUsd(part.value)}</span>
+											</li>
+										{/each}
+									</ul>
+									<p class="cat-tip">{selectedCapexAlt.tooltip}</p>
+								</div>
+							{/if}
+						</div>
+					</div>
+					{/if}
 
 					<p class="takeaway">{takeaway}</p>
 				</section>
@@ -1677,6 +1878,266 @@
 		color: var(--ink-soft);
 	}
 
+	.view-tabs {
+		display: inline-flex;
+		gap: 0;
+		margin: 0.55rem 0 0.7rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		overflow: hidden;
+		background: var(--card);
+	}
+
+	.view-tab {
+		appearance: none;
+		border: 0;
+		background: transparent;
+		color: var(--ink-soft);
+		font: inherit;
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		padding: 0.35rem 0.7rem;
+		cursor: pointer;
+	}
+
+	.view-tab + .view-tab {
+		border-left: 1px solid var(--line);
+	}
+
+	.view-tab.active {
+		background: var(--teal);
+		color: var(--on-teal);
+	}
+
+	.view-tab:hover:not(.active) {
+		background: var(--selected-bg);
+		color: var(--header);
+	}
+
+	.waterfall {
+		display: flex;
+		flex-direction: column;
+		gap: 0.28rem;
+	}
+
+	.wf-row {
+		appearance: none;
+		border: 1px solid transparent;
+		background: transparent;
+		display: grid;
+		grid-template-columns: minmax(5.5rem, 0.85fr) minmax(4rem, 1.4fr) auto;
+		gap: 0.4rem;
+		align-items: center;
+		width: 100%;
+		padding: 0.2rem 0.25rem;
+		border-radius: 6px;
+		cursor: pointer;
+		text-align: left;
+		font: inherit;
+		color: inherit;
+	}
+
+	.wf-row:hover,
+	.wf-row.selected {
+		background: var(--selected-bg);
+		border-color: var(--line);
+	}
+
+	.wf-label {
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--header);
+		line-height: 1.2;
+	}
+
+	.wf-track {
+		position: relative;
+		height: 1.15rem;
+		background: rgba(2, 60, 64, 0.06);
+		border-radius: 3px;
+		overflow: hidden;
+	}
+
+	.wf-zero {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background: rgba(0, 0, 0, 0.28);
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.wf-connector {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		border-left: 1px dashed rgba(2, 60, 64, 0.35);
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.wf-bar {
+		position: absolute;
+		top: 2px;
+		bottom: 2px;
+		background: var(--chart);
+		border-radius: 2px;
+	}
+
+	.wf-row.negative .wf-bar {
+		background: rgba(2, 60, 64, 0.38);
+	}
+
+	.wf-amt {
+		font-size: 0.7rem;
+		font-weight: 600;
+		font-variant-numeric: tabular-nums;
+		white-space: nowrap;
+		color: var(--header);
+		justify-self: end;
+	}
+
+	.wf-net {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 0.35rem;
+		padding: 0.35rem 0.25rem 0;
+		border-top: 1px solid var(--line);
+	}
+
+	.wf-amt.net {
+		color: var(--teal);
+	}
+
+	.stack-bar {
+		display: flex;
+		width: 100%;
+		height: 2rem;
+		border-radius: var(--radius);
+		overflow: hidden;
+		border: 1px solid var(--line);
+		background: rgba(2, 60, 64, 0.06);
+	}
+
+	.stack-seg {
+		appearance: none;
+		border: 0;
+		border-right: 1px solid rgba(250, 250, 250, 0.55);
+		min-width: 0;
+		padding: 0;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--on-teal);
+		position: relative;
+	}
+
+	.stack-seg:last-child {
+		border-right: 0;
+	}
+
+	.stack-seg.tone-a,
+	.swatch.tone-a {
+		background: #023c40;
+	}
+	.stack-seg.tone-b,
+	.swatch.tone-b {
+		background: #046066;
+	}
+	.stack-seg.tone-c,
+	.swatch.tone-c {
+		background: #3a6f72;
+	}
+	.stack-seg.tone-d,
+	.swatch.tone-d {
+		background: #6a9092;
+	}
+
+	.stack-seg.selected {
+		outline: 2px solid #000;
+		outline-offset: -2px;
+		z-index: 1;
+	}
+
+	.stack-seg-label {
+		font-size: 0.62rem;
+		font-weight: 600;
+		white-space: nowrap;
+		pointer-events: none;
+	}
+
+	.stack-legend {
+		list-style: none;
+		margin: 0.55rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+
+	.stack-legend-btn {
+		appearance: none;
+		border: 1px solid transparent;
+		background: transparent;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 0.7rem minmax(0, 1fr) auto;
+		gap: 0.4rem;
+		align-items: center;
+		padding: 0.22rem 0.3rem;
+		border-radius: 6px;
+		cursor: pointer;
+		font: inherit;
+		color: inherit;
+		text-align: left;
+	}
+
+	.stack-legend-btn:hover,
+	.stack-legend-btn.selected {
+		background: var(--selected-bg);
+		border-color: var(--line);
+	}
+
+	.swatch {
+		width: 0.7rem;
+		height: 0.7rem;
+		border-radius: 2px;
+		display: block;
+	}
+
+	.stack-name {
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--header);
+	}
+
+	.stack-val {
+		font-size: 0.7rem;
+		font-weight: 600;
+		font-variant-numeric: tabular-nums;
+		color: var(--ink-soft);
+	}
+
+	.alt-detail {
+		margin-top: 0.55rem;
+		padding: 0.45rem 0.5rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--card);
+	}
+
+	.alt-detail-title {
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: var(--header);
+		margin-bottom: 0.15rem;
+	}
+
 	.capex-breakdown {
 		margin-top: 1.15rem;
 		padding-top: 1rem;
@@ -2119,6 +2580,48 @@
 	.workspace-on .metric .unit {
 		font-size: 0.65rem;
 		margin-top: 0;
+	}
+
+	.workspace-on .view-tabs {
+		margin: 0.2rem 0 0.4rem;
+	}
+
+	.workspace-on .view-tab {
+		font-size: 0.62rem;
+		padding: 0.22rem 0.55rem;
+	}
+
+	.workspace-on .waterfall {
+		gap: 0.15rem;
+	}
+
+	.workspace-on .wf-row {
+		grid-template-columns: minmax(4.8rem, 0.8fr) minmax(3rem, 1.3fr) auto;
+		gap: 0.28rem;
+		padding: 0.1rem 0.15rem;
+	}
+
+	.workspace-on .wf-label,
+	.workspace-on .stack-name {
+		font-size: 0.62rem;
+	}
+
+	.workspace-on .wf-track {
+		height: 0.95rem;
+	}
+
+	.workspace-on .wf-amt,
+	.workspace-on .stack-val {
+		font-size: 0.62rem;
+	}
+
+	.workspace-on .stack-bar {
+		height: 1.55rem;
+	}
+
+	.workspace-on .alt-detail {
+		margin-top: 0.35rem;
+		padding: 0.3rem 0.4rem;
 	}
 
 	.workspace-on .open-qs {
