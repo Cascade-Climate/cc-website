@@ -3,6 +3,7 @@
 	import cascadeLogo from '$lib/images/cc-logo-full.png';
 	import {
 		calculate,
+		comparePathways,
 		excelDefaults,
 		defaultChargeKg,
 		defaultMix,
@@ -469,6 +470,25 @@
 		0.0001
 	);
 
+	$: comparison = result ? comparePathways(result.inputs) : null;
+	$: compareCols = [
+		{ id: PATHWAY_DESTRUCTION, name: 'Destruction' },
+		{ id: PATHWAY_RECLAMATION, name: 'Reclamation' },
+		{ id: PATHWAY_RECYCLING, name: 'Recycling' }
+	].filter((col) => comparison?.[col.id]);
+	$: compareMetrics = [
+		{ id: 'opex', label: 'Total net opex per year', unit: 'USD / year', key: 'netOpexPerYear' },
+		{ id: 'capex', label: 'Total capex', unit: 'USD · one-off', key: 'capex' },
+		{ id: 'grand', label: 'Grand total', unit: 'USD · year-1 opex + capex', key: 'grandTotal' }
+	].map((metric) => ({
+		...metric,
+		scale: Math.max(
+			0.0001,
+			...compareCols.map((col) => Math.abs(comparison?.[col.id]?.[metric.key] || 0))
+		)
+	}));
+	$: compareFacilityNa = compareCols.some((col) => comparison?.[col.id]?.facilityNa);
+
 	$: sectorBlurb = residential
 		? 'Residential recovery can include on-site pump-down when it applies, then recovery at a central facility. The model no longer assumes every unit is pumped down first.'
 		: 'Mainly on-site recovery from decommissioned units; refilling is covered under the Recycling pathway.';
@@ -506,7 +526,7 @@
 					/>
 					<span class="title-text">
 						<span class="title-lead">Lifecycle Refrigerant Management</span>
-						<span class="title-rest">Calculator</span>
+						<span class="title-rest">Explorer</span>
 					</span>
 				</h1>
 				<details class="about">
@@ -613,7 +633,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="For 'Commercial HVAC' sector, only 'High Capacity' can be selected"
+								data-tip="For 'Commercial HVAC' sector, only 'High Capacity' can be selected."
 								for="machineType">Recovery machine type</label
 							>
 							{#if commercial}
@@ -672,7 +692,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC 1 team for every 10 units recovered per day. For Commercial HVAC, 1 team for every unit recovered from per day"
+								data-tip="Default guidance: Residential AC 1 team for every 10 units recovered per day. For Commercial HVAC, 1 team for every unit recovered from per day."
 								for="teams">Number of recovery teams mobilized per day</label
 							>
 							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
@@ -718,7 +738,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip={'This selection will determine the costs for central facility activities & end-use processing, based on the total amount of refrigerant recovered per year. Default guidance: (i) if <5,000 kg/year, select High; (ii) if 5,000 kg - 50,000 kg/year, select Medium; (iii) if > 50,000 kg/year, select Low'}
+								data-tip={'This selection will determine the costs for central facility activities & end-use processing, based on the total amount of refrigerant recovered per year. Default guidance: (i) if <5,000 kg/year, select High; (ii) if 5,000 kg - 50,000 kg/year, select Medium; (iii) if > 50,000 kg/year, select Low.'}
 								for="costScenarioMode">Cost scenario</label
 							>
 							<select id="costScenarioMode" bind:value={costScenarioMode}>
@@ -763,7 +783,7 @@
 							<div class="fields three">
 							<div class="field">
 								<label
-									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable"
+									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable."
 									for="facilityStatus">Facility status</label
 								>
 								<select id="facilityStatus" bind:value={facilityStatus}>
@@ -774,7 +794,7 @@
 							</div>
 							<div class="field">
 								<label
-									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing"
+									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing."
 									for="location">Location</label
 								>
 								<select id="location" bind:value={location}>
@@ -808,7 +828,7 @@
 							</div>
 							<div class="field">
 								<label
-									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable"
+									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable."
 									for="facilityStatusDest">Facility status</label
 								>
 								<select id="facilityStatusDest" bind:value={facilityStatus}>
@@ -819,7 +839,7 @@
 							</div>
 							<div class="field">
 								<label
-									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing"
+									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing."
 									for="locationDest">Location</label
 								>
 								<select id="locationDest" bind:value={location}>
@@ -1150,6 +1170,63 @@
 						</div>
 					</div>
 					{/if}
+
+					{#if comparison}
+						<div class="compare">
+							<h3>Pathway comparison</h3>
+							<p class="opex-thesis">
+								Same recovery setup, compared across end-uses. Recycling is commercial HVAC only.
+								Grand total adds this year’s operating cost to one-time capital, so it mixes two
+								kinds of dollars.
+							</p>
+							{#if compareFacilityNa}
+								<p class="opex-thesis compare-caveat">
+									Retrofit is not applicable for reclamation, or for plasma-arc destruction. Those
+									bars keep facility capex at $0 instead of switching the facility to New.
+								</p>
+							{/if}
+							{#each compareMetrics as metric}
+								<div class="compare-metric">
+									<div class="compare-metric-label">
+										{metric.label}
+										<span class="compare-unit">{metric.unit}</span>
+									</div>
+									{#each compareCols as col, i}
+										{@const amount = comparison[col.id][metric.key]}
+										<div
+											class="compare-row"
+											class:current={result.inputs.pathway === col.id}
+											class:negative={amount < 0}
+											class:tone-a={i % 3 === 0}
+											class:tone-b={i % 3 === 1}
+											class:tone-c={i % 3 === 2}
+										>
+											<span class="name">
+												{col.name}
+												{#if result.inputs.pathway === col.id}
+													<span class="current-mark">Selected</span>
+												{/if}
+												{#if comparison[col.id].facilityNa && metric.key !== 'netOpexPerYear'}
+													<span class="na-mark">Facility N/A</span>
+												{/if}
+											</span>
+											<div
+												class="bar-track"
+												title="{col.name}: {formatUsd(amount)}"
+												aria-label="{col.name} {metric.label} {formatUsd(amount)}"
+											>
+												<div
+													class="bar-fill"
+													style="width: {opexBar(Math.abs(amount), metric.scale)}%"
+												></div>
+											</div>
+											<span class="on-bar">{formatUsd(amount)}</span>
+										</div>
+									{/each}
+								</div>
+							{/each}
+						</div>
+					{/if}
 				</section>
 				{/if}
 			</div>
@@ -1235,13 +1312,23 @@
 
 	.site h1 .title-text {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: baseline;
+		gap: 0.3em;
 		max-width: none;
 		line-height: 1.15;
+		white-space: nowrap;
 	}
 
-	.site h1 .title-lead {
+	.site h1 .title-lead,
+	.site h1 .title-rest {
 		white-space: nowrap;
+	}
+
+	.site.compact h1 .title-text {
+		flex-direction: column;
+		gap: 0;
 	}
 
 	.brand {
@@ -2161,37 +2248,110 @@
 	}
 
 	.compare {
-		margin-top: 1.25rem;
-	}
-
-	.compare-table {
-		display: grid;
-		grid-template-columns: minmax(9rem, 1.1fr) repeat(var(--cols), 1fr);
-		gap: 0;
-		border: 1px solid var(--line);
-		border-radius: var(--radius);
-		overflow: hidden;
-		font-size: 0.88rem;
-	}
-
-	.compare-table > div {
-		padding: 0.7rem 0.8rem;
+		margin-top: 1.15rem;
+		padding-top: 1rem;
 		border-top: 1px solid var(--line);
-		font-variant-numeric: tabular-nums;
+		flex: 0 0 auto;
 	}
 
-	.compare-head {
-		background: var(--selected-bg);
-		font-weight: 600;
+	.compare h3 {
 		font-size: 0.78rem;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.07em;
 		text-transform: uppercase;
-		color: var(--teal);
-		border-top: none;
+		color: var(--muted);
+		font-weight: 600;
+		margin: 0 0 0.45rem;
 	}
 
-	.compare-table > div.current {
+	.compare-caveat {
+		margin-top: -0.15rem;
+	}
+
+	.compare-metric {
+		margin-bottom: 0.75rem;
+	}
+
+	.compare-metric:last-child {
+		margin-bottom: 0;
+	}
+
+	.compare-metric-label {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.35rem 0.55rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--header);
+		margin-bottom: 0.28rem;
+	}
+
+	.compare-unit {
+		font-size: 0.68rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	.compare-row {
+		display: grid;
+		grid-template-columns: minmax(7.5rem, 0.9fr) minmax(6rem, 1.4fr) auto;
+		gap: 0.45rem;
+		align-items: center;
+		width: 100%;
+		padding: 0.12rem 0.2rem;
+		border-radius: 4px;
+	}
+
+	.compare-row .on-bar {
+		min-width: 6.4rem;
+	}
+
+	.compare-row.current {
 		background: var(--selected-bg);
+	}
+
+	.compare-row .name {
+		font-size: 0.82rem;
+		line-height: 1.3;
+	}
+
+	.compare-row.tone-b .bar-fill {
+		background: rgba(2, 60, 64, 0.62);
+	}
+
+	.compare-row.tone-c .bar-fill {
+		background: rgba(2, 60, 64, 0.38);
+	}
+
+	.compare-row.negative .bar-fill {
+		background: repeating-linear-gradient(
+			-45deg,
+			rgba(2, 60, 64, 0.55),
+			rgba(2, 60, 64, 0.55) 6px,
+			rgba(2, 60, 64, 0.22) 6px,
+			rgba(2, 60, 64, 0.22) 12px
+		);
+	}
+
+	.current-mark,
+	.na-mark {
+		display: inline-block;
+		margin-left: 0.3rem;
+		font-size: 0.58rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		font-weight: 700;
+		white-space: nowrap;
+	}
+
+	.current-mark {
+		color: var(--teal);
+	}
+
+	.na-mark {
+		color: var(--muted);
 	}
 
 	.page-foot {
@@ -2656,7 +2816,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 0.65rem;
-		flex: 1 1 auto;
+		flex: 0 0 auto;
 		min-height: 0;
 	}
 
@@ -2715,12 +2875,56 @@
 		line-height: 1.35;
 	}
 
-	.workspace-on .results.has-open {
+	.workspace-on .layout > .results {
 		overflow: auto;
+		min-height: 0;
+	}
+
+	.workspace-on .compare {
+		margin-top: 0.45rem;
+		padding-top: 0.45rem;
+	}
+
+	.workspace-on .compare h3,
+	.workspace-on .compare-metric-label {
+		font-size: 0.62rem;
+		margin-bottom: 0.22rem;
+	}
+
+	.workspace-on .compare-unit {
+		font-size: 0.52rem;
+	}
+
+	.workspace-on .compare-metric {
+		margin-bottom: 0.4rem;
+	}
+
+	.workspace-on .compare-row {
+		grid-template-columns: minmax(5.2rem, 0.85fr) minmax(3.5rem, 1fr) auto;
+		gap: 0.3rem;
+		padding: 0.08rem 0.12rem;
+	}
+
+	.workspace-on .compare-row .name {
+		font-size: 0.72rem;
+	}
+
+	.workspace-on .compare-row .on-bar {
+		min-width: 5.8rem;
+	}
+
+	.workspace-on .current-mark,
+	.workspace-on .na-mark {
+		font-size: 0.5rem;
+		margin-left: 0.2rem;
 	}
 
 	@media (max-width: 860px) {
-		.site h1 {
+		.site:not(.compact) h1 {
+			flex-wrap: wrap;
+			font-size: clamp(0.92rem, 4.1vw, 1.2rem);
+		}
+		.site.compact h1 {
 			font-size: 1.2rem;
 		}
 		.layout,
@@ -2753,9 +2957,16 @@
 			text-align: left;
 			min-width: 0;
 		}
-		.compare-table {
-			grid-template-columns: minmax(7rem, 0.9fr) repeat(var(--cols), 1fr);
-			font-size: 0.78rem;
+		.compare-row,
+		.workspace-on .compare-row {
+			grid-template-columns: 1fr;
+			gap: 0.2rem;
+			padding: 0.28rem 0;
+		}
+		.compare-row .on-bar,
+		.workspace-on .compare-row .on-bar {
+			justify-content: flex-start;
+			min-width: 0;
 		}
 		.workspace-on {
 			height: auto;

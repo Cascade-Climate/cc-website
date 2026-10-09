@@ -188,6 +188,22 @@ assertEq('residential charge cap', capped.inputs.chargeSizeKg, 5);
 assertEq('charge capped flag', capped.warnings.chargeCapped, true);
 assertEq('residential no recycling compare', comparePathways(capped.inputs).Recycling, null);
 
+const retrofitCompare = comparePathways({
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
+	facilityStatus: 'Retrofit',
+	destructionTech: 'Rotary'
+});
+assertEq('rotary retrofit destruction facility ok', retrofitCompare.Destruction.facilityNa, false);
+assertEq('reclamation retrofit facility na in compare', retrofitCompare.Reclamation.facilityNa, true);
+assertEq('recycling compare still present commercially', Boolean(retrofitCompare.Recycling), true);
+
+const plasmaCompare = comparePathways({
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
+	facilityStatus: 'Retrofit',
+	destructionTech: 'Plasma Arc'
+});
+assertEq('plasma retrofit destruction facility na', plasmaCompare.Destruction.facilityNa, true);
+
 const mixBad = calculate({
 	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_RECYCLING),
 	mix: { r32: 10, r410a: 10, r22: 10 }

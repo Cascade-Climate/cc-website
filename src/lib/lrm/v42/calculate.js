@@ -538,7 +538,8 @@ export function comparePathways(raw) {
 			netOpexPerYear: result.opex.netPerYear,
 			capex: result.capex.total,
 			grandTotal: result.opex.netPerYear + result.capex.total,
-			recovery: result.opex.labour
+			recovery: result.opex.labour,
+			facilityNa: Boolean(result.capex.facility?.na)
 		};
 	}
 	return rows;
