@@ -1,6 +1,6 @@
 <script>
 	import { tick } from 'svelte';
-	import cascadeLogo from '$lib/images/cc-logo.webp';
+	import cascadeLogo from '$lib/images/cc-logo-full.png';
 	import {
 		calculate,
 		excelDefaults,
@@ -64,13 +64,33 @@
 	$: ready = Boolean(sector && pathway);
 	$: pathways = residential
 		? [
-				{ id: PATHWAY_DESTRUCTION, title: 'Destruction', body: 'Destroy recovered refrigerant at an end-use facility.' },
-				{ id: PATHWAY_RECLAMATION, title: 'Reclamation', body: 'Reclaim to specification and return gas to the market.' }
+				{
+					id: PATHWAY_DESTRUCTION,
+					title: 'Destruction',
+					body: 'Permanent destruction of refrigerant at a destruction facility'
+				},
+				{
+					id: PATHWAY_RECLAMATION,
+					title: 'Reclamation',
+					body: 'Reprocessing of recovered refrigerant to meet the purity specifications of AHRI Standard 700'
+				}
 			]
 		: [
-				{ id: PATHWAY_DESTRUCTION, title: 'Destruction', body: 'Destroy recovered refrigerant at an end-use facility.' },
-				{ id: PATHWAY_RECLAMATION, title: 'Reclamation', body: 'Reclaim to specification and return gas to the market.' },
-				{ id: PATHWAY_RECYCLING, title: 'Recycling', body: 'On-site cleaning and refill of recovered refrigerant.' }
+				{
+					id: PATHWAY_DESTRUCTION,
+					title: 'Destruction',
+					body: 'Permanent destruction of refrigerant at a destruction facility'
+				},
+				{
+					id: PATHWAY_RECLAMATION,
+					title: 'Reclamation',
+					body: 'Reprocessing of recovered refrigerant to meet the purity specifications of AHRI Standard 700'
+				},
+				{
+					id: PATHWAY_RECYCLING,
+					title: 'Recycling',
+					body: 'Extracting and cleaning refrigerant for direct reuse on-site, without meeting all of the requirements for reclamation'
+				}
 			];
 
 	$: mixSum = mixTotal({ r32: mixR32, r410a: mixR410a, r22: mixR22 });
@@ -455,10 +475,10 @@
 </script>
 
 <svelte:head>
-	<title>Lifecycle Refrigerant Management Cost Calculator Mock 3.0 — Cascade Climate (unlisted)</title>
+	<title>Lifecycle Refrigerant Management Calculator Mock 3.0 — Cascade Climate (unlisted)</title>
 	<meta
 		name="description"
-		content="Unlisted Lifecycle Refrigerant Management Cost Calculator Mock 3.0 using LRM Cost Model V5.0 (SEA)."
+		content="Unlisted Lifecycle Refrigerant Management Calculator Mock 3.0 using LRM Cost Model V5.0 (SEA)."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -481,12 +501,12 @@
 						class="brand"
 						src={cascadeLogo}
 						alt="Cascade Climate"
-						width="32"
-						height="32"
+						width="190"
+						height="69"
 					/>
 					<span class="title-text">
 						<span class="title-lead">Lifecycle Refrigerant Management</span>
-						<span class="title-rest">Cost Calculator</span>
+						<span class="title-rest">Calculator</span>
 					</span>
 				</h1>
 				<details class="about">
@@ -508,9 +528,7 @@
 			</div>
 		</header>
 
-		<section class="panel branch" class:settled={Boolean(sector)} aria-labelledby="branch-heading">
-			<h2 id="branch-heading">1. Choose a sector</h2>
-			<p class="panel-intro">This is the main branch. Everything downstream follows from it.</p>
+		<section class="panel branch" class:settled={Boolean(sector)} aria-label="Choose a sector">
 			<div class="choice-grid two">
 				<button
 					type="button"
@@ -518,9 +536,7 @@
 					class:selected={sector === SECTOR_RESIDENTIAL}
 					on:click={() => chooseSector(SECTOR_RESIDENTIAL)}
 				>
-					<span class="choice-kicker">Small capacity</span>
 					<span class="choice-title">Residential AC</span>
-					<span class="choice-body">On-site collection; recovery at a central facility. Include pump-down time when it applies.</span>
 				</button>
 				<button
 					type="button"
@@ -528,9 +544,7 @@
 					class:selected={sector === SECTOR_COMMERCIAL}
 					on:click={() => chooseSector(SECTOR_COMMERCIAL)}
 				>
-					<span class="choice-kicker">Large capacity</span>
 					<span class="choice-title">Commercial HVAC</span>
-					<span class="choice-body">On-site recovery from decommissioned units.</span>
 				</button>
 			</div>
 			{#if sector}
@@ -539,11 +553,7 @@
 		</section>
 
 		{#if sector}
-			<section class="panel branch" id="enduse-panel" class:settled={Boolean(pathway)} aria-labelledby="pathway-heading">
-				<h2 id="pathway-heading">2. Choose the end-use of recovered refrigerant</h2>
-				<p class="panel-intro">
-					The second branch. After you choose, only the inputs that apply to this pathway appear.
-				</p>
+			<section class="panel branch" id="enduse-panel" class:settled={Boolean(pathway)} aria-label="Choose the end-use of recovered refrigerant">
 				<div class="choice-grid" class:three={!residential} class:two={residential}>
 					{#each pathways as p}
 						<button
@@ -553,7 +563,6 @@
 							on:click={() => choosePathway(p.id)}
 						>
 							<span class="choice-title">{p.title}</span>
-							<span class="choice-body">{p.body}</span>
 						</button>
 					{/each}
 				</div>
@@ -574,7 +583,10 @@
 
 						<div class="fields">
 						<div class="field">
-							<label data-tip="Tooltip to come" for="chargeSizeKg">Average charge size per unit (kg)</label>
+							<label
+								data-tip="Default guidance: Residential AC = 1 kg, Commercial HVAC = 100 kg"
+								for="chargeSizeKg">Average equipment charge size per unit (kg)</label
+							>
 							<input
 								id="chargeSizeKg"
 								type="number"
@@ -584,32 +596,40 @@
 							/>
 							{#if chargeCappedNote}
 								<p class="field-note warn">
-									Residential charge size is capped at {RESIDENTIAL_CHARGE_CAP_KG} kg.
-								</p>
-							{:else}
-								<p class="field-hint">
-									Default {residential ? '1.0 kg' : '100 kg'} for this sector.
-									{#if residential}Maximum {RESIDENTIAL_CHARGE_CAP_KG} kg.{/if}
+									Residential AC charge size cannot exceed {RESIDENTIAL_CHARGE_CAP_KG} kg. Please
+									update this field.
 								</p>
 							{/if}
 						</div>
 
 						<div class="field">
-							<label data-tip="Tooltip to come" for="recoverablePct">Recoverable refrigerant per unit (%)</label>
+							<label
+								data-tip="Default guidance: Residential AC = 50%, Commercial HVAC = 80%"
+								for="recoverablePct">Estimated % of recoverable refrigerant per unit (%)</label
+							>
 							<input id="recoverablePct" type="number" min="0" max="100" step="1" bind:value={recoverablePct} />
-							<p class="field-hint">Default {residential ? '50%' : '80%'} for this sector.</p>
 						</div>
-						{#if !commercial}
-							<div class="field">
-								<label data-tip="Tooltip to come" for="machineType">Recovery machine type</label>
+						<div class="field">
+							<label
+								data-tip="For 'Commercial HVAC' sector, only 'High Capacity' can be selected"
+								for="machineType">Recovery machine type</label
+							>
+							{#if commercial}
+								<select id="machineType" disabled>
+									<option value={MACHINE_HIGH}>High Capacity</option>
+								</select>
+							{:else}
 								<select id="machineType" bind:value={machineType}>
 									<option value={MACHINE_BASIC}>Basic</option>
 									<option value={MACHINE_HIGH}>High Capacity</option>
 								</select>
-							</div>
-						{/if}
+							{/if}
+						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="recoveryHoursPerUnit">Estimated time needed for recovery per unit (hours)</label>
+							<label
+								data-tip="For Residential AC, consider the time needed for AC pump down as well (if applicable). For Commercial HVAC, consider the time needed from set up to completion."
+								for="recoveryHoursPerUnit">Recovery time needed per unit (hours)</label
+							>
 							<input
 								id="recoveryHoursPerUnit"
 								type="number"
@@ -617,21 +637,25 @@
 								step="0.01"
 								bind:value={recoveryHoursPerUnit}
 							/>
-							<p class="field-hint">
-								{#if residential}
-									Include pump-down time if units are pumped down on-site. Default 0.5 hours.
-								{:else}
-									From set-up to completion on-site. Default 0.5 hours.
-								{/if}
-							</p>
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="labourPerHour">Hourly labour cost rate per unit (USD/hour)</label>
+							<label
+								data-tip="Default guidance: Residential AC = USD $10/hour, Commercial HVAC = USD $20/hour (assuming a two-man team)"
+								for="labourPerHour">Hourly labor cost rate per unit (USD/hour)</label
+							>
 							<input id="labourPerHour" type="number" min="0" step="0.01" bind:value={labourPerHour} />
-							<p class="field-hint">Default {residential ? '$10' : '$20'} for this sector.</p>
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="fuelEfficiencyKmPerL">Fuel efficiency (km/L)</label>
+							<label
+								data-tip="Default guidance: Residential AC = 40, Commercial HVAC = 1"
+								for="unitsPerDay">Average number of units recovered per day</label
+							>
+							<input id="unitsPerDay" type="number" min="0" step="1" bind:value={unitsPerDay} />
+						</div>
+						<div class="field">
+							<label data-tip="Default guidance: 8.5 km/L" for="fuelEfficiencyKmPerL"
+								>Fuel efficiency of vehicle used (km/L)</label
+							>
 							<input
 								id="fuelEfficiencyKmPerL"
 								type="number"
@@ -641,76 +665,60 @@
 							/>
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="fuelPricePerL">Fuel price (USD/L)</label>
+							<label data-tip="Default guidance: USD $1.50/L" for="fuelPricePerL">Fuel price (USD/L)</label>
 							<input id="fuelPricePerL" type="number" min="0" step="0.01" bind:value={fuelPricePerL} />
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="travelKmPerTeam">Average distance travelled per team (km/day)</label>
+							<label
+								data-tip="Default guidance: Residential AC 1 team for every 10 units recovered per day. For Commercial HVAC, 1 team for every unit recovered from per day"
+								for="teams">Number of recovery teams mobilized per day</label
+							>
+							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
+						</div>
+						<div class="field">
+							<label
+								data-tip="Covers transportation to recovery site until central facility. Default = 100 km per team"
+								for="travelKmPerTeam">Average distance travelled per team (km/day)</label
+							>
 							<input id="travelKmPerTeam" type="number" min="0" step="1" bind:value={travelKmPerTeam} />
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="unitsPerDay">Units recovered per day</label>
-							<input id="unitsPerDay" type="number" min="0" step="1" bind:value={unitsPerDay} />
-						</div>
-						<div class="field">
-							<label data-tip="Tooltip to come" for="daysPerYear">Recovery days per year</label>
+							<label
+								data-tip="Default guidance: Residential AC = 200, Commercial HVAC = 75"
+								for="daysPerYear">Estimated number of recovery days per year</label
+							>
 							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
 						</div>
-						<div class="field">
-							<label data-tip="Tooltip to come" for="teams">Recovery teams per recovery day</label>
-							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
 						</div>
-						</div>
-
-						<div class="computed three">
+						<div class="computed">
 							<div>
-								<span class="k">Available / unit</span>
-								<span class="v">{formatKg(live.inputs.availablePerUnit, 2)} kg</span>
-							</div>
-							<div>
-								<span class="k">Fuel / km</span>
-								<span class="v">{formatUsd(live.inputs.fuelPerKm)}</span>
-							</div>
-							<div>
-								<span class="k">Labour / unit</span>
-								<span class="v">{formatUsd(live.inputs.labourPerUnit)}</span>
-							</div>
-							<div>
-								<span class="k">Labour / day</span>
-								<span class="v">{formatUsd(live.inputs.labourCostPerDay)}</span>
-							</div>
-							<div>
-								<span class="k">Transport / day</span>
-								<span class="v">{formatUsd(live.inputs.recoveryTransportPerDay)}</span>
-							</div>
-							<div>
-								<span class="k">kg / day</span>
-								<span class="v">{formatKg(live.inputs.kgPerDay, 2)}</span>
-							</div>
-							<div>
-								<span class="k">kg / year</span>
-								<span class="v">{formatKg(live.inputs.annualKg, 0)}</span>
+								<span class="k">Number of units recovered per year</span>
+								<span class="v">{formatKg(live.inputs.unitsPerYear, 0)}</span>
 							</div>
 						</div>
-						<p class="field-hint">
-							Labour per day = (labour/hour × hours/unit) × units/day. Transport per day = km per team
-							× teams × fuel/km.
-						</p>
 					</div>
 
 					<div class="field-group">
 						<div class="group-label">Central facility</div>
 						<div class="fields">
 						<div class="field">
-							<label data-tip="Tooltip to come" for="warehousePerMonth">Warehouse storage (USD / month)</label>
+							<label data-tip="Default: USD 1,000/month" for="warehousePerMonth"
+								>Central facility warehouse storage (USD per month)</label
+							>
 							<input id="warehousePerMonth" type="number" min="0" step="1" bind:value={warehousePerMonth} />
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="tmsCost">Tracking & monitoring system (USD)</label>
+							<label
+								data-tip="Cost to establish system for chain of custody tracking and monitoring"
+								for="tmsCost">Tracking & monitoring system (USD)</label
+							>
 							<input id="tmsCost" type="number" min="0" step="1" bind:value={tmsCost} />
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="costScenarioMode">Cost scenario (central facility & end-use)</label>
+							<label
+								data-tip={'This selection will determine the costs for central facility activities & end-use processing, based on the total amount of refrigerant recovered per year. Default guidance: (i) if <5,000 kg/year, select High; (ii) if 5,000 kg - 50,000 kg/year, select Medium; (iii) if > 50,000 kg/year, select Low'}
+								for="costScenarioMode">Cost scenario</label
+							>
 							<select id="costScenarioMode" bind:value={costScenarioMode}>
 								<option value="auto">Auto from annual volume ({autoScenario})</option>
 								<option value="manual">Override…</option>
@@ -718,7 +726,7 @@
 						</div>
 						{#if costScenarioMode === 'manual'}
 							<div class="field">
-								<label data-tip="Tooltip to come" for="costScenarioManual">Override cost scenario</label>
+								<label for="costScenarioManual">Override cost scenario</label>
 								<select id="costScenarioManual" bind:value={costScenarioManual}>
 									<option>Low</option>
 									<option>Medium</option>
@@ -727,33 +735,21 @@
 							</div>
 						{/if}
 						</div>
-						{#if commercial}
-							<p class="field-hint">Recovery machines are high-capacity only in commercial HVAC.</p>
-						{/if}
-						<p class="field-hint">
-							Volume rule: &lt;5,000 kg/yr High · 5,000–50,000 Medium · &gt;50,000 Low. Currently
-							{formatKg(live.inputs.annualKg, 0)} kg/yr → {autoScenario}.
-						</p>
 					</div>
 
 					<div class="field-group" class:option-idle={pathway !== PATHWAY_RECYCLING}>
 						<div class="group-label">Recycling</div>
-						<p class="field-hint">
-							Recycling is on-site cleaning and refill. Recovery labour is marked up 50%. There is no
-							direct-reuse option.
-						</p>
 						{#if vis.recyclingOffered && pathway === PATHWAY_RECYCLING}
 							<div class="fields">
 							<div class="field">
-								<label data-tip="Tooltip to come" for="virginPrice">Price of virgin refrigerant avoided (USD/kg)</label>
+								<label for="virginPrice"
+									>(For Recycling only) Price of virgin refrigerant avoided (USD/kg)</label
+								>
 								<input id="virginPrice" type="number" min="0" step="0.01" bind:value={virginPrice} />
 							</div>
 							</div>
-							<p class="field-hint">
-								Virgin savings are subtracted from gross opex. Recycling is in-country only.
-							</p>
 						{:else if !vis.recyclingOffered}
-							<p class="field-hint">Recycling is not offered for Residential AC in the workbook.</p>
+							<p class="field-hint">Recycling is not offered for Residential AC.</p>
 						{:else}
 							<p class="field-hint">Select Recycling above to edit these inputs.</p>
 						{/if}
@@ -764,7 +760,10 @@
 						{#if pathway === PATHWAY_RECLAMATION}
 							<div class="fields three">
 							<div class="field">
-								<label data-tip="Tooltip to come" for="facilityStatus">Facility status</label>
+								<label
+									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable"
+									for="facilityStatus">Facility status</label
+								>
 								<select id="facilityStatus" bind:value={facilityStatus}>
 									<option>Existing</option>
 									<option>Retrofit</option>
@@ -772,14 +771,19 @@
 								</select>
 							</div>
 							<div class="field">
-								<label data-tip="Tooltip to come" for="location">End-use location</label>
+								<label
+									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing"
+									for="location">Location</label
+								>
 								<select id="location" bind:value={location}>
 									<option>In-country</option>
 									<option>Exported</option>
 								</select>
 							</div>
 							<div class="field">
-								<label data-tip="Tooltip to come" for="salePrice">Blended sale price of reclaimed refrigerant (USD/kg)</label>
+								<label for="salePrice"
+									>Blended sale price of reclaimed refrigerants (incl. profit margin) (USD/kg)</label
+								>
 								<input id="salePrice" type="number" min="0" step="0.01" bind:value={salePrice} />
 							</div>
 							</div>
@@ -793,7 +797,7 @@
 						{#if pathway === PATHWAY_DESTRUCTION}
 							<div class="fields three">
 							<div class="field">
-								<label data-tip="Tooltip to come" for="destructionTech">Destruction technology</label>
+								<label for="destructionTech">Destruction technology</label>
 								<select id="destructionTech" bind:value={destructionTech}>
 									<option>Rotary</option>
 									<option>Cement</option>
@@ -801,7 +805,10 @@
 								</select>
 							</div>
 							<div class="field">
-								<label data-tip="Tooltip to come" for="facilityStatusDest">Facility status</label>
+								<label
+									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable"
+									for="facilityStatusDest">Facility status</label
+								>
 								<select id="facilityStatusDest" bind:value={facilityStatus}>
 									<option>Existing</option>
 									<option>Retrofit</option>
@@ -809,7 +816,10 @@
 								</select>
 							</div>
 							<div class="field">
-								<label data-tip="Tooltip to come" for="locationDest">End-use location</label>
+								<label
+									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing"
+									for="locationDest">Location</label
+								>
 								<select id="locationDest" bind:value={location}>
 									<option>In-country</option>
 									<option>Exported</option>
@@ -823,31 +833,37 @@
 
 					<div class="field-group">
 						<div class="group-label">Refrigerant mix</div>
-						<p class="field-hint">Must total 100% of recovered volume.</p>
 						<div class="fields mix">
 						<div class="field">
-							<label data-tip="Tooltip to come" for="mixR32">R-32 share (%)</label>
+							<label data-tip="GWP-100 of R-32 (kgCO2e/kg) = 771 (Reference: IPCC AR6)" for="mixR32"
+								>R-32 share of recovered volume (%)</label
+							>
 							<input id="mixR32" type="number" min="0" max="100" step="1" bind:value={mixR32} />
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="mixR410a">R-410A share (%)</label>
+							<label
+								data-tip="GWP-100 of R-410A (kgCO2e/kg) = 2256 (Reference: IPCC AR6)"
+								for="mixR410a">R-410A share of recovered volume (%)</label
+							>
 							<input id="mixR410a" type="number" min="0" max="100" step="1" bind:value={mixR410a} />
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="mixR22">R-22 share (%)</label>
+							<label data-tip="GWP-100 of R-22 (kgCO2e/kg) = 1960 (Reference: IPCC AR6)" for="mixR22"
+								>R-22 share of recovered volume (%)</label
+							>
 							<input id="mixR22" type="number" min="0" max="100" step="1" bind:value={mixR22} />
 						</div>
 						<div class="computed" class:bad={!mixOk}>
 							<div>
-								<span class="k">Total mix</span>
+								<span class="k">Total refrigerant mix (%)</span>
 								<span class="v">{formatKg(mixSum, 0)}%</span>
 							</div>
 						</div>
 						</div>
 						{#if !mixOk}
 							<p class="field-note warn">
-								Refrigerant mix must total 100%. Adjust R-32, R-410A, and R-22 until the total is
-								100%.
+								Total refrigerant mix must always equal 100%. Adjust R-32, R-410A, and R-22 until the
+								total is 100%.
 							</p>
 						{/if}
 					</div>
@@ -896,7 +912,7 @@
 
 					<div class="metrics three">
 						<div class="metric">
-							<div class="label">Total refrigerant recovered annually</div>
+							<div class="label">Total amount of refrigerant recovered per year</div>
 							<div class="value">{formatKg(result.inputs.annualKg, 0)}</div>
 							<span class="unit">kg / year</span>
 						</div>
@@ -1138,7 +1154,7 @@
 		{/if}
 
 		<p class="page-foot">
-			Lifecycle Refrigerant Management Cost Calculator Mock 3.0 · V5.0 SEA · Unlisted
+			Lifecycle Refrigerant Management Calculator Mock 3.0 · V5.0 SEA · Unlisted
 		</p>
 	</div>
 </div>
@@ -1227,11 +1243,11 @@
 	}
 
 	.brand {
-		width: 2.1rem;
-		height: 2.1rem;
-		padding: 0.28rem;
-		background: var(--teal);
-		border-radius: var(--radius);
+		width: auto;
+		height: 2.6rem;
+		padding: 0;
+		background: none;
+		border-radius: 0;
 		object-fit: contain;
 		flex-shrink: 0;
 	}
@@ -1298,9 +1314,9 @@
 	}
 
 	.site.compact .brand {
-		width: 1.55rem;
-		height: 1.55rem;
-		padding: 0.18rem;
+		width: auto;
+		height: 1.85rem;
+		padding: 0;
 	}
 
 	#enduse-panel,
@@ -1427,7 +1443,7 @@
 		display: block;
 		font-size: 1.05rem;
 		font-weight: 600;
-		margin-bottom: 0.3rem;
+		margin-bottom: 0;
 	}
 
 	.choice-body {
@@ -1506,7 +1522,7 @@
 		left: 0;
 		bottom: calc(100% + 6px);
 		width: max-content;
-		max-width: 100%;
+		max-width: min(22rem, calc(100vw - 2rem));
 		padding: 0.35rem 0.5rem;
 		background: var(--teal);
 		color: var(--on-teal);
@@ -1548,6 +1564,16 @@
 				no-repeat,
 			var(--card);
 		padding-right: 2.2rem;
+	}
+
+	select:disabled,
+	input[type='number']:disabled,
+	input[type='number']:read-only {
+		opacity: 1;
+		color: var(--ink);
+		background: var(--panel-solid);
+		font-weight: 700;
+		cursor: not-allowed;
 	}
 
 	select:hover,
