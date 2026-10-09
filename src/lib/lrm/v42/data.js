@@ -1,6 +1,6 @@
-/** Generated from V4.3 SEA LRM Cost Model V3.xlsx · V4.3 SEA Data */
+/** Generated from V5.0 LRM Cost Model.xlsx · V4.5 SEA Data */
 export default {
-  "version": "4.3",
+  "version": "5.0",
   "geography": "Southeast Asia",
   "rows": [
     {
@@ -512,24 +512,13 @@ export default {
     {
       "stage": "Recycling",
       "geography": "Southeast Asia",
-      "variable": "Direct reuse (% from normal recovery cost)",
-      "scenario": null,
-      "cost": 0.0,
-      "costLabel": null,
-      "capexOpex": "Opex",
-      "systemType": null,
-      "row": 53
-    },
-    {
-      "stage": "Recycling",
-      "geography": "Southeast Asia",
-      "variable": "Cleaning + reuse (% mark up from normal recovery cost)",
+      "variable": "Recycling Costs (% mark up from normal recovery cost)",
       "scenario": null,
       "cost": 0.5,
       "costLabel": null,
       "capexOpex": "Opex",
       "systemType": null,
-      "row": 54
+      "row": 53
     },
     {
       "stage": "Recycling",
@@ -540,18 +529,18 @@ export default {
       "costLabel": null,
       "capexOpex": "Capex",
       "systemType": null,
-      "row": 55
+      "row": 54
     },
     {
       "stage": "Recycling",
       "geography": "Southeast Asia",
       "variable": "Recycling Equipment (High capacity)",
       "scenario": null,
-      "cost": 10000.0,
+      "cost": 20000.0,
       "costLabel": null,
       "capexOpex": "Capex",
       "systemType": null,
-      "row": 56
+      "row": 55
     }
   ]
 };

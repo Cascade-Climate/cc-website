@@ -8,7 +8,7 @@
 		defaultMix,
 		defaultCostScenario,
 		defaultRecoverablePct,
-		defaultRecoveryRateKgPerHour,
+		defaultRecoveryHours,
 		defaultLabourPerHour,
 		defaultUnitsPerDay,
 		defaultDaysPerYear,
@@ -21,8 +21,6 @@
 		PATHWAY_RECYCLING,
 		MACHINE_BASIC,
 		MACHINE_HIGH,
-		REFILL_DIRECT,
-		REFILL_CLEANING,
 		RESIDENTIAL_CHARGE_CAP_KG
 	} from '$lib/lrm/v42/calculate.js';
 
@@ -33,11 +31,11 @@
 	let chargeSizeKg = 100;
 	let chargeCappedNote = false;
 	let recoverablePct = 80;
-	let recoveryRateKgPerHour = 30;
-	let labourPerHour = 50;
+	let recoveryHoursPerUnit = 0.5;
+	let labourPerHour = 20;
 	let fuelEfficiencyKmPerL = 8.5;
 	let fuelPricePerL = 1.5;
-	let travelKmPerDay = 100;
+	let travelKmPerTeam = 100;
 	let unitsPerDay = 1;
 	let daysPerYear = 75;
 	let teams = 1;
@@ -47,8 +45,7 @@
 	let destructionTech = 'Rotary';
 	let facilityStatus = 'Retrofit';
 	let location = 'In-country';
-	let salePrice = 15;
-	let refillMode = REFILL_CLEANING;
+	let salePrice = 5;
 	let virginPrice = 5;
 	let mixR32 = 5;
 	let mixR410a = 65;
@@ -73,7 +70,7 @@
 		: [
 				{ id: PATHWAY_DESTRUCTION, title: 'Destruction', body: 'Destroy recovered refrigerant at an end-use facility.' },
 				{ id: PATHWAY_RECLAMATION, title: 'Reclamation', body: 'Reclaim to specification and return gas to the market.' },
-				{ id: PATHWAY_RECYCLING, title: 'Recycling', body: 'Direct reuse, or clean and reuse recovered refrigerant.' }
+				{ id: PATHWAY_RECYCLING, title: 'Recycling', body: 'On-site cleaning and refill of recovered refrigerant.' }
 			];
 
 	$: mixSum = mixTotal({ r32: mixR32, r410a: mixR410a, r22: mixR22 });
@@ -84,11 +81,11 @@
 		pathway,
 		chargeSizeKg,
 		recoverablePct,
-		recoveryRateKgPerHour,
+		recoveryHoursPerUnit,
 		labourPerHour,
 		fuelEfficiencyKmPerL,
 		fuelPricePerL,
-		travelKmPerDay,
+		travelKmPerTeam,
 		unitsPerDay,
 		daysPerYear,
 		teams,
@@ -99,7 +96,6 @@
 		facilityStatus,
 		location: pathway === PATHWAY_RECYCLING ? 'In-country' : location,
 		salePrice,
-		refillMode,
 		virginPrice,
 		mix: { r32: mixR32, r410a: mixR410a, r22: mixR22 },
 		costScenarioOverride: costScenarioMode === 'auto' ? null : costScenarioManual
@@ -111,16 +107,14 @@
 	$: liveKey = JSON.stringify(inputSnapshot);
 	$: stale = Boolean(result) && publishedKey !== liveKey;
 
-	function pathwayTag(p, refill) {
+	function pathwayTag(p) {
 		if (p === PATHWAY_DESTRUCTION) return 'DE';
 		if (p === PATHWAY_RECLAMATION) return 'RC';
-		return refill === REFILL_CLEANING ? 'RY' : 'RF';
+		return 'RY';
 	}
 
-	$: liveCode = pathwayTag(pathway, refillMode);
-	$: pathwayCode = result
-		? pathwayTag(result.inputs.pathway, result.inputs.refillMode)
-		: liveCode;
+	$: liveCode = pathwayTag(pathway);
+	$: pathwayCode = result ? pathwayTag(result.inputs.pathway) : liveCode;
 
 	function toggleCat(id) {
 		openCats = { ...openCats, [id]: !openCats[id] };
@@ -150,11 +144,11 @@
 		chargeSizeKg = d.chargeSizeKg;
 		chargeCappedNote = false;
 		recoverablePct = d.recoverablePct;
-		recoveryRateKgPerHour = d.recoveryRateKgPerHour;
+		recoveryHoursPerUnit = d.recoveryHoursPerUnit;
 		labourPerHour = d.labourPerHour;
 		fuelEfficiencyKmPerL = d.fuelEfficiencyKmPerL;
 		fuelPricePerL = d.fuelPricePerL;
-		travelKmPerDay = d.travelKmPerDay;
+		travelKmPerTeam = d.travelKmPerTeam;
 		unitsPerDay = d.unitsPerDay;
 		daysPerYear = d.daysPerYear;
 		teams = d.teams;
@@ -165,7 +159,6 @@
 		facilityStatus = d.facilityStatus;
 		location = d.location;
 		salePrice = d.salePrice;
-		refillMode = d.refillMode;
 		virginPrice = d.virginPrice;
 		mixR32 = d.mix.r32;
 		mixR410a = d.mix.r410a;
@@ -194,7 +187,7 @@
 			chargeSizeKg = defaultChargeKg(next);
 			chargeCappedNote = false;
 			recoverablePct = defaultRecoverablePct(next);
-			recoveryRateKgPerHour = defaultRecoveryRateKgPerHour(next);
+			recoveryHoursPerUnit = defaultRecoveryHours(next);
 			labourPerHour = defaultLabourPerHour(next);
 			unitsPerDay = defaultUnitsPerDay(next);
 			daysPerYear = defaultDaysPerYear(next);
@@ -209,7 +202,7 @@
 		else if (pathway && sectorChanged && filledFromDefaults) {
 			chargeSizeKg = defaultChargeKg(next);
 			recoverablePct = defaultRecoverablePct(next);
-			recoveryRateKgPerHour = defaultRecoveryRateKgPerHour(next);
+			recoveryHoursPerUnit = defaultRecoveryHours(next);
 			labourPerHour = defaultLabourPerHour(next);
 			unitsPerDay = defaultUnitsPerDay(next);
 			daysPerYear = defaultDaysPerYear(next);
@@ -274,18 +267,29 @@
 	$: opexCats = result
 		? [
 				{
-					id: 'opex-recovery',
-					name: 'Recovery',
-					value: result.opex.recovery + result.opex.refillMarkup,
+					id: 'opex-labour',
+					name: 'Recovery labour',
+					value: result.opex.labour + result.opex.refillMarkup,
 					unit: '/kg',
 					tooltip:
-						'Labour plus fuel to the central facility, and the recycling mark-up when that pathway is selected.',
+						'Labour to recover refrigerant into cylinders, plus the 50% recycling mark-up when that pathway is selected.',
+					parts: [
+						{ name: 'Recovery labour costs', value: result.opex.labour },
+						{ name: 'Mark-up for recycling costs', value: result.opex.refillMarkup }
+					]
+				},
+				{
+					id: 'opex-recovery-transport',
+					name: 'Recovery transportation',
+					value: result.opex.recoveryTransport,
+					unit: '/kg',
+					tooltip:
+						'Fuel to the central facility: distance per team × number of teams × fuel cost per km, divided by kg recovered per day.',
 					parts: [
 						{
-							name: 'Recovery costs (including transport to central facility)',
-							value: result.opex.recovery
-						},
-						{ name: 'Mark-up for recycling costs', value: result.opex.refillMarkup }
+							name: 'Recovery transportation (on-site to central facility)',
+							value: result.opex.recoveryTransport
+						}
 					]
 				},
 				{
@@ -347,7 +351,6 @@
 					parts: [
 						capexBit('Recovery machines (basic)', result.capex.machinesBasic),
 						capexBit('Recovery accessories (basic)', result.capex.accessoriesBasic),
-						capexBit('Recovery accessories (AC pump-down)', result.capex.accessoriesPumpdown),
 						capexBit('Recovery machines (high capacity)', result.capex.machinesHigh),
 						capexBit('Recovery accessories (high capacity)', result.capex.accessoriesHigh),
 						capexBit('12L cylinders', result.capex.cylinders12L),
@@ -447,7 +450,7 @@
 	);
 
 	$: sectorBlurb = residential
-		? 'Units are pumped down on-site and aggregated at a central facility for refrigerant recovery.'
+		? 'Residential recovery can include on-site pump-down when it applies, then recovery at a central facility. The model no longer assumes every unit is pumped down first.'
 		: 'Mainly on-site recovery from decommissioned units; refilling is covered under the Recycling pathway.';
 </script>
 
@@ -455,7 +458,7 @@
 	<title>Lifecycle Refrigerant Management Cost Calculator Mock 3.0 — Cascade Climate (unlisted)</title>
 	<meta
 		name="description"
-		content="Unlisted Lifecycle Refrigerant Management Cost Calculator Mock 3.0 using LRM Cost Model V4.3 (SEA)."
+		content="Unlisted Lifecycle Refrigerant Management Cost Calculator Mock 3.0 using LRM Cost Model V5.0 (SEA)."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -472,7 +475,7 @@
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">Unlisted · V4.3 SEA</div>
+				<div class="eyebrow">Unlisted · V5.0 SEA</div>
 				<h1>
 					<img
 						class="brand"
@@ -517,7 +520,7 @@
 				>
 					<span class="choice-kicker">Small capacity</span>
 					<span class="choice-title">Residential AC</span>
-					<span class="choice-body">Pump-down on-site, recovery at a central facility.</span>
+					<span class="choice-body">On-site collection; recovery at a central facility. Include pump-down time when it applies.</span>
 				</button>
 				<button
 					type="button"
@@ -585,7 +588,7 @@
 								</p>
 							{:else}
 								<p class="field-hint">
-									Default {residential ? '0.80 kg' : '100 kg'} for this sector.
+									Default {residential ? '1.0 kg' : '100 kg'} for this sector.
 									{#if residential}Maximum {RESIDENTIAL_CHARGE_CAP_KG} kg.{/if}
 								</p>
 							{/if}
@@ -606,21 +609,26 @@
 							</div>
 						{/if}
 						<div class="field">
-							<label data-tip="Tooltip to come" for="recoveryRateKgPerHour">Recovery rate (kg/hour)</label>
+							<label data-tip="Tooltip to come" for="recoveryHoursPerUnit">Estimated time needed for recovery per unit (hours)</label>
 							<input
-								id="recoveryRateKgPerHour"
+								id="recoveryHoursPerUnit"
 								type="number"
 								min="0"
-								step="0.1"
-								bind:value={recoveryRateKgPerHour}
+								step="0.01"
+								bind:value={recoveryHoursPerUnit}
 							/>
 							<p class="field-hint">
-								Default {residential ? '3 kg/h (includes pump-down)' : '30 kg/h on-site'}.
+								{#if residential}
+									Include pump-down time if units are pumped down on-site. Default 0.5 hours.
+								{:else}
+									From set-up to completion on-site. Default 0.5 hours.
+								{/if}
 							</p>
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="labourPerHour">Hourly labour cost per team (USD/hour)</label>
+							<label data-tip="Tooltip to come" for="labourPerHour">Hourly labour cost rate per unit (USD/hour)</label>
 							<input id="labourPerHour" type="number" min="0" step="0.01" bind:value={labourPerHour} />
+							<p class="field-hint">Default {residential ? '$10' : '$20'} for this sector.</p>
 						</div>
 						<div class="field">
 							<label data-tip="Tooltip to come" for="fuelEfficiencyKmPerL">Fuel efficiency (km/L)</label>
@@ -637,8 +645,8 @@
 							<input id="fuelPricePerL" type="number" min="0" step="0.01" bind:value={fuelPricePerL} />
 						</div>
 						<div class="field">
-							<label data-tip="Tooltip to come" for="travelKmPerDay">Average travel distance per recovery day (km)</label>
-							<input id="travelKmPerDay" type="number" min="0" step="1" bind:value={travelKmPerDay} />
+							<label data-tip="Tooltip to come" for="travelKmPerTeam">Average distance travelled per team (km/day)</label>
+							<input id="travelKmPerTeam" type="number" min="0" step="1" bind:value={travelKmPerTeam} />
 						</div>
 						<div class="field">
 							<label data-tip="Tooltip to come" for="unitsPerDay">Units recovered per day</label>
@@ -668,12 +676,16 @@
 								<span class="v">{formatUsd(live.inputs.labourPerUnit)}</span>
 							</div>
 							<div>
-								<span class="k">kg / day</span>
-								<span class="v">{formatKg(live.inputs.kgPerDay, 2)}</span>
+								<span class="k">Labour / day</span>
+								<span class="v">{formatUsd(live.inputs.labourCostPerDay)}</span>
 							</div>
 							<div>
-								<span class="k">Cost / day</span>
-								<span class="v">{formatUsd(live.inputs.recoveryCostPerDay)}</span>
+								<span class="k">Transport / day</span>
+								<span class="v">{formatUsd(live.inputs.recoveryTransportPerDay)}</span>
+							</div>
+							<div>
+								<span class="k">kg / day</span>
+								<span class="v">{formatKg(live.inputs.kgPerDay, 2)}</span>
 							</div>
 							<div>
 								<span class="k">kg / year</span>
@@ -681,8 +693,8 @@
 							</div>
 						</div>
 						<p class="field-hint">
-							Labour per unit = (available kg ÷ recovery rate) × labour/hour. Cost per day adds fuel
-							(USD/km × km/day).
+							Labour per day = (labour/hour × hours/unit) × units/day. Transport per day = km per team
+							× teams × fuel/km.
 						</p>
 					</div>
 
@@ -726,25 +738,18 @@
 
 					<div class="field-group" class:option-idle={pathway !== PATHWAY_RECYCLING}>
 						<div class="group-label">Recycling</div>
-						<p class="field-hint">Direct reuse adds no mark-up. Cleaning + reuse marks recovery cost up 50%.</p>
+						<p class="field-hint">
+							Recycling is on-site cleaning and refill. Recovery labour is marked up 50%. There is no
+							direct-reuse option.
+						</p>
 						{#if vis.recyclingOffered && pathway === PATHWAY_RECYCLING}
 							<div class="fields">
-							<div class="field">
-								<label data-tip="Tooltip to come" for="refillMode">Direct reuse or cleaning + reuse</label>
-								<select id="refillMode" bind:value={refillMode}>
-									<option value={REFILL_DIRECT}>Direct reuse</option>
-									<option value={REFILL_CLEANING}>Cleaning + reuse</option>
-								</select>
-							</div>
 							<div class="field">
 								<label data-tip="Tooltip to come" for="virginPrice">Price of virgin refrigerant avoided (USD/kg)</label>
 								<input id="virginPrice" type="number" min="0" step="0.01" bind:value={virginPrice} />
 							</div>
 							</div>
 							<p class="field-hint">
-								{refillMode === REFILL_CLEANING
-									? 'Cleaning + reuse (RY).'
-									: 'Direct reuse (RF).'}
 								Virgin savings are subtracted from gross opex. Recycling is in-country only.
 							</p>
 						{:else if !vis.recyclingOffered}
@@ -875,13 +880,13 @@
 				{#if result}
 				<section class="panel results" class:has-open={Object.values(openCats).some(Boolean)} class:stale aria-labelledby="results-heading">
 					<div class="results-head">
-						<div class="model-tag">V4.3 SEA · {pathwayCode}</div>
+						<div class="model-tag">V5.0 SEA · {pathwayCode}</div>
 						<h2 id="results-heading">Outputs</h2>
 						<p class="summary">
 							{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
 							· {result.inputs.pathway}
 							{#if result.inputs.pathway === PATHWAY_RECYCLING}
-								· {pathwayCode === 'RY' ? 'cleaning + reuse (RY)' : 'direct reuse (RF)'}
+								· cleaning + refill (RY)
 							{/if}
 							{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
 								· {result.inputs.destructionTech}
@@ -1133,7 +1138,7 @@
 		{/if}
 
 		<p class="page-foot">
-			Lifecycle Refrigerant Management Cost Calculator Mock 3.0 · V4.3 SEA · Unlisted
+			Lifecycle Refrigerant Management Cost Calculator Mock 3.0 · V5.0 SEA · Unlisted
 		</p>
 	</div>
 </div>

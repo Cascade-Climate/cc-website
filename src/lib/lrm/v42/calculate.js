@@ -1,18 +1,18 @@
 /**
- * LRM Cost Model V4.3 (SEA) — 1:1 port of the V4.3 Model sheet formulas.
- * Source: V4.3 SEA LRM Cost Model V3.xlsx (V4.3 Model + V4.3 SEA Data).
+ * LRM Cost Model V5.0 (SEA) — 1:1 port of the V5.0 Model sheet formulas.
+ * Source: V5.0 LRM Cost Model.xlsx (V5.0 Model + V4.5 SEA Data).
  *
- * Recovery opex (C92) = recovery cost per day / kg per day, where
- *   labour per unit = (available kg ÷ recovery rate kg/h) × labour USD/h
- *   cost per day = (labour per unit × units/day) + (fuel USD/km × km/day)
- * TMS capex is the D31 manual input. Trucks / 50 km distance bands are not in V4.3.
- * Net opex = gross − sale credit − virgin savings.
+ * Recovery labour/day = (labour USD/h × hours/unit) × units/day
+ * Recovery transport/day = (km/team × teams) × fuel USD/km
+ * Those two are separate opex lines (C91 vs C93).
+ * Recycling always uses the 50% mark-up on recovery labour (on-site cleaning + refill).
+ * Opex and capex money lines are ROUND(..., 2) as in the Model sheet.
  */
 import data from './data.js';
 
 const ROWS = data.rows;
 
-export const MODEL_VERSION = '4.3';
+export const MODEL_VERSION = '5.0';
 export const GEOGRAPHY = 'Southeast Asia';
 export const RESIDENTIAL_CHARGE_CAP_KG = 5;
 
@@ -26,8 +26,8 @@ export const PATHWAY_RECYCLING = 'Recycling';
 export const MACHINE_BASIC = 'Basic';
 export const MACHINE_HIGH = 'High Capacity';
 
-export const REFILL_DIRECT = 'Direct reuse';
 export const REFILL_CLEANING = 'Cleaning + reuse';
+export const REFILL_DIRECT = 'Direct reuse';
 
 export const GWP_R32 = 771;
 export const GWP_R410A = 2256;
@@ -49,6 +49,12 @@ function roundup(value, digits = 0) {
 	return (Math.sign(x) * Math.ceil(Math.abs(x) * f - 1e-12)) / f;
 }
 
+function excelRound(value, digits = 2) {
+	const x = num(value);
+	const f = 10 ** digits;
+	return Math.round(x * f + Number.EPSILON) / f;
+}
+
 function sumproduct(pred) {
 	let total = 0;
 	for (const row of ROWS) {
@@ -66,19 +72,19 @@ export function isCommercial(sector) {
 }
 
 export function defaultChargeKg(sector) {
-	return isResidential(sector) ? 0.8 : 100;
+	return isResidential(sector) ? 1 : 100;
 }
 
 export function defaultRecoverablePct(sector) {
 	return isResidential(sector) ? 50 : 80;
 }
 
-export function defaultRecoveryRateKgPerHour(sector) {
-	return isResidential(sector) ? 3 : 30;
+export function defaultRecoveryHours(sector) {
+	return 0.5;
 }
 
 export function defaultLabourPerHour(sector) {
-	return isResidential(sector) ? 10 : 50;
+	return isResidential(sector) ? 10 : 20;
 }
 
 export function defaultUnitsPerDay(sector) {
@@ -90,7 +96,7 @@ export function defaultDaysPerYear(sector) {
 }
 
 export function defaultTeams(sector) {
-	return isResidential(sector) ? 4 : 1;
+	return isResidential(sector) ? 5 : 1;
 }
 
 export function defaultMix(sector) {
@@ -98,7 +104,7 @@ export function defaultMix(sector) {
 	return { r32: 5, r410a: 65, r22: 30 };
 }
 
-/** C33 guide: <5 MT High; 5–50 MT Medium; >50 MT Low. */
+/** C33 is a manual Low/Medium/High. Auto guide kept from prior: <5 MT High; 5–50 MT Medium; >50 MT Low. */
 export function defaultCostScenario(annualKg) {
 	const kg = num(annualKg);
 	if (kg < 5000) return 'High';
@@ -146,17 +152,11 @@ function lookupCentralFacilityOpex(costScenario) {
 	);
 }
 
-function lookupRecyclingMarkup(refillMode) {
-	if (refillMode === REFILL_DIRECT) {
-		return sumproduct(
-			(r) =>
-				r.stage === 'Recycling' && r.variable === 'Direct reuse (% from normal recovery cost)'
-		);
-	}
+function lookupRecyclingMarkup() {
 	return sumproduct(
 		(r) =>
 			r.stage === 'Recycling' &&
-			r.variable === 'Cleaning + reuse (% mark up from normal recovery cost)'
+			r.variable === 'Recycling Costs (% mark up from normal recovery cost)'
 	);
 }
 
@@ -236,9 +236,6 @@ function facilityNa(pathway, tech, status) {
 	);
 }
 
-/**
- * @param {object} raw
- */
 export function normalizeInputs(raw) {
 	const sector = raw.sector || SECTOR_COMMERCIAL;
 	const residential = isResidential(sector);
@@ -260,10 +257,6 @@ export function normalizeInputs(raw) {
 	let location = raw.location || 'In-country';
 	if (pathway === PATHWAY_RECYCLING) location = 'In-country';
 
-	let refillMode = raw.refillMode || REFILL_CLEANING;
-	if (refillMode === 'Refilling') refillMode = REFILL_DIRECT;
-	if (refillMode === 'Recycling + Refilling') refillMode = REFILL_CLEANING;
-
 	const mix = {
 		r32: num(raw.mix?.r32 ?? defaultMix(sector).r32),
 		r410a: num(raw.mix?.r410a ?? defaultMix(sector).r410a),
@@ -278,11 +271,11 @@ export function normalizeInputs(raw) {
 		chargeSizeKg,
 		chargeCapped,
 		recoverablePct: num(raw.recoverablePct ?? defaultRecoverablePct(sector)),
-		recoveryRateKgPerHour: num(raw.recoveryRateKgPerHour ?? defaultRecoveryRateKgPerHour(sector)),
+		recoveryHoursPerUnit: num(raw.recoveryHoursPerUnit ?? defaultRecoveryHours(sector)),
 		labourPerHour: num(raw.labourPerHour ?? defaultLabourPerHour(sector)),
 		fuelEfficiencyKmPerL: num(raw.fuelEfficiencyKmPerL ?? 8.5),
 		fuelPricePerL: num(raw.fuelPricePerL ?? 1.5),
-		travelKmPerDay: num(raw.travelKmPerDay ?? 100),
+		travelKmPerTeam: num(raw.travelKmPerTeam ?? raw.travelKmPerDay ?? 100),
 		unitsPerDay: num(raw.unitsPerDay ?? defaultUnitsPerDay(sector)),
 		daysPerYear: num(raw.daysPerYear ?? defaultDaysPerYear(sector)),
 		teams: num(raw.teams ?? defaultTeams(sector)),
@@ -290,8 +283,8 @@ export function normalizeInputs(raw) {
 		tmsCost: num(raw.tmsCost ?? 50000),
 		destructionTech: raw.destructionTech || 'Rotary',
 		facilityStatus: raw.facilityStatus || 'Retrofit',
-		salePrice: num(raw.salePrice ?? 15),
-		refillMode,
+		salePrice: num(raw.salePrice ?? 5),
+		refillMode: REFILL_CLEANING,
 		virginPrice: num(raw.virginPrice ?? 5),
 		gwpR32: num(raw.gwpR32 ?? GWP_R32),
 		gwpR410a: num(raw.gwpR410a ?? GWP_R410A),
@@ -312,7 +305,7 @@ function line(units, cost, { hidden = false, na = false, naLabel = 'NA – Exist
 }
 
 /**
- * Full V4.3 Model calculation (C92–C136).
+ * Full V5.0 Model calculation (C91–C136).
  * @param {object} raw
  */
 export function calculate(raw) {
@@ -324,104 +317,93 @@ export function calculate(raw) {
 	const unitsPerDay = inp.unitsPerDay;
 	const kgPerDay = unitsPerDay * availablePerUnit;
 	const unitsPerYear = unitsPerDay * inp.daysPerYear;
-	const annualKg = unitsPerYear * availablePerUnit;
+	const annualKg = kgPerDay * inp.daysPerYear;
 
 	const fuelPerKm = inp.fuelEfficiencyKmPerL === 0 ? 0 : inp.fuelPricePerL / inp.fuelEfficiencyKmPerL;
-	const labourPerUnit =
-		inp.recoveryRateKgPerHour === 0 ? 0 : (availablePerUnit / inp.recoveryRateKgPerHour) * inp.labourPerHour;
-	const recoveryCostPerDay = labourPerUnit * unitsPerDay + fuelPerKm * inp.travelKmPerDay;
+	const labourPerUnit = inp.labourPerHour * inp.recoveryHoursPerUnit;
+	const labourCostPerDay = labourPerUnit * unitsPerDay;
+	const recoveryTransportPerDay = inp.travelKmPerTeam * inp.teams * fuelPerKm;
 
 	const autoScenario = defaultCostScenario(annualKg);
 	const costScenario = inp.costScenarioOverride || autoScenario;
 
-	// C92
-	const recoveryOpex = kgPerDay === 0 ? 0 : recoveryCostPerDay / kgPerDay;
-
-	// C93
-	const refillMarkupOpex =
-		inp.pathway === PATHWAY_RECYCLING ? recoveryOpex * lookupRecyclingMarkup(inp.refillMode) : 0;
-
-	// C94
-	const warehouseOpex = annualKg === 0 ? 0 : (inp.warehousePerMonth * 12) / annualKg;
-
-	// C95 — no sector filter and no Residential×Basic 1.5× in V4.3
-	const centralOpex = lookupCentralFacilityOpex(costScenario);
-
-	// C96
-	const transportOpex =
-		inp.pathway === PATHWAY_RECYCLING ? 0 : lookupTransport(inp.location, costScenario);
-
-	// C97
-	const processingOpex = lookupEndUseOpex(inp.pathway, inp.destructionTech, costScenario);
+	const labourOpex = excelRound(kgPerDay === 0 ? 0 : labourCostPerDay / kgPerDay);
+	const refillMarkupOpex = excelRound(
+		inp.pathway === PATHWAY_RECYCLING ? labourOpex * lookupRecyclingMarkup() : 0
+	);
+	const recoveryTransportOpex = excelRound(kgPerDay === 0 ? 0 : recoveryTransportPerDay / kgPerDay);
+	const warehouseOpex = excelRound(annualKg === 0 ? 0 : (inp.warehousePerMonth * 12) / annualKg);
+	const centralOpex = excelRound(lookupCentralFacilityOpex(costScenario));
+	const transportOpex = excelRound(
+		inp.pathway === PATHWAY_RECYCLING ? 0 : lookupTransport(inp.location, costScenario)
+	);
+	const processingOpex = excelRound(lookupEndUseOpex(inp.pathway, inp.destructionTech, costScenario));
 
 	const grossOpex =
-		recoveryOpex + refillMarkupOpex + warehouseOpex + centralOpex + transportOpex + processingOpex;
+		labourOpex +
+		refillMarkupOpex +
+		recoveryTransportOpex +
+		warehouseOpex +
+		centralOpex +
+		transportOpex +
+		processingOpex;
 
-	// C99 — sale credit only for reclamation
-	const saleCredit =
-		inp.pathway === PATHWAY_DESTRUCTION || inp.pathway === PATHWAY_RECYCLING ? 0 : inp.salePrice;
-
-	// C100 — virgin savings only for recycling
-	const virginSavings =
-		inp.pathway === PATHWAY_DESTRUCTION || inp.pathway === PATHWAY_RECLAMATION ? 0 : inp.virginPrice;
-
+	const saleCredit = excelRound(
+		inp.pathway === PATHWAY_DESTRUCTION || inp.pathway === PATHWAY_RECYCLING ? 0 : inp.salePrice
+	);
+	const virginSavings = excelRound(inp.pathway === PATHWAY_RECYCLING ? inp.virginPrice : 0);
 	const netOpex = grossOpex - saleCredit - virginSavings;
 	const netOpexPerYear = netOpex * annualKg;
 
+	const blankTeams = inp.teams === 0;
 	const blankKg = annualKg === 0;
 
-	// C103 basic machine units — divisor 3,000 kg
-	const machBasicU = commercial
-		? 0
-		: inp.machineType === MACHINE_BASIC
-			? blankKg
-				? 0
-				: Math.max(1, roundup(annualKg / 3000, 0))
-			: 0;
+	const machBasicU =
+		commercial || inp.machineType === MACHINE_HIGH ? 0 : blankTeams ? 0 : inp.teams;
+	const machBasicT = excelRound(commercial ? 0 : machBasicU * machineUnitPrice(inp.pathway, 'basic'));
 
-	const basicMachinePrice = machineUnitPrice(inp.pathway, 'basic');
-	const machBasicT = machBasicU * basicMachinePrice;
+	const accBasicU = commercial ? 0 : blankTeams ? 0 : inp.teams;
+	const accBasicT = excelRound(
+		commercial ? 0 : accBasicU * lookupCapex('Recovery', 'Recovery accessories (ba')
+	);
 
-	const accBasicU = machBasicU;
-	const accBasicT = accBasicU * lookupCapex('Recovery', 'Recovery accessories (ba');
-
-	const accPumpU = commercial ? 0 : inp.teams;
-	const accPumpT = accPumpU * lookupCapex('Recovery', 'Recovery accessories (for');
-
-	// C109
 	const machHighU = commercial
 		? inp.teams
 		: inp.machineType === MACHINE_HIGH
 			? blankKg
 				? 0
-				: Math.max(1, roundup(annualKg / 20000, 0))
+				: Math.max(1, roundup(annualKg / 10000, 0))
 			: 0;
-
-	const highMachinePrice = machineUnitPrice(inp.pathway, 'high');
-	const machHighT = machHighU * highMachinePrice;
-
+	const machHighT = excelRound(machHighU * machineUnitPrice(inp.pathway, 'high'));
 	const accHighU = machHighU;
-	const accHighT = accHighU * lookupCapex('Recovery', 'Recovery accessories (hi');
+	const accHighT = excelRound(machHighU * lookupCapex('Recovery', 'Recovery accessories (hi'));
 
-	const cyl12U = blankKg ? 0 : roundup(annualKg / 2 / 10 / 3, 0);
-	const cyl12T = cyl12U * lookupCapex('Recovery', 'Recovery Cylinders (smal');
-	const cyl60U = blankKg ? 0 : roundup(annualKg / 2 / 50 / 3, 0);
-	const cyl60T = cyl60U * lookupCapex('Recovery', 'Recovery Cylinders (larg');
+	const cyl12U = blankKg
+		? 0
+		: residential
+			? roundup((annualKg * 0.7) / 10 / 3, 0)
+			: roundup((annualKg * 0.3) / 10 / 3, 0);
+	const cyl12T = excelRound(cyl12U * lookupCapex('Recovery', 'Recovery Cylinders (smal'));
+	const cyl60U = blankKg
+		? 0
+		: residential
+			? roundup((annualKg * 0.3) / 50 / 3, 0)
+			: roundup((annualKg * 0.7) / 50 / 3, 0);
+	const cyl60T = excelRound(cyl60U * lookupCapex('Recovery', 'Recovery Cylinders (larg'));
 
 	const totalMachineU = commercial ? machHighU : machBasicU + machHighU;
 	const ridU = totalMachineU;
-	const ridT = ridU * lookupCapex('Recovery', '', 'Refrigerant Identifiers');
+	const ridT = excelRound(ridU * lookupCapex('Recovery', '', 'Refrigerant Identifiers'));
 
 	const tonU = blankKg ? 0 : roundup(annualKg / 600 / 2, 0);
-	const tonT = tonU * lookupCapex('Recovery', '', 'Ton Tanks');
+	const tonT = excelRound(tonU * lookupCapex('Recovery', '', 'Ton Tanks'));
 
 	const tmsU = 1;
-	const tmsT = inp.tmsCost;
+	const tmsT = excelRound(inp.tmsCost);
 
 	const recoveryCapex =
-		machBasicT + accBasicT + accPumpT + machHighT + accHighT + cyl12T + cyl60T + ridT + tonT + tmsT;
+		machBasicT + accBasicT + machHighT + accHighT + cyl12T + cyl60T + ridT + tonT + tmsT;
 
-	// C125 facility units
 	let facU;
 	if (inp.facilityStatus === 'Existing') facU = 0;
 	else if (inp.pathway === PATHWAY_RECYCLING) facU = 0;
@@ -430,41 +412,34 @@ export function calculate(raw) {
 	else facU = Math.max(1, roundup(annualKg / 80000, 0));
 
 	const naFacility = facilityNa(inp.pathway, inp.destructionTech, inp.facilityStatus);
-	const facT = naFacility
-		? 0
-		: facU * lookupFacilityUnitCost(inp.pathway, inp.destructionTech, inp.facilityStatus);
-
-	const adminT = inp.facilityStatus === 'Existing' ? 0 : facU * lookupAdmin(inp.pathway);
-
+	const facT = excelRound(
+		naFacility ? 0 : facU * lookupFacilityUnitCost(inp.pathway, inp.destructionTech, inp.facilityStatus)
+	);
+	const adminT = excelRound(
+		inp.facilityStatus === 'Existing' ? 0 : facU * lookupAdmin(inp.pathway)
+	);
 	const opU = inp.pathway === PATHWAY_RECLAMATION ? facU * 3 : 0;
-	const opT =
-		inp.pathway === PATHWAY_RECLAMATION
-			? opU * lookupCapex('Reclamation', '', 'Reclamation Training')
-			: 0;
-
+	const opT = excelRound(
+		inp.pathway === PATHWAY_RECLAMATION ? opU * lookupCapex('Reclamation', '', 'Reclamation Training') : 0
+	);
 	const gcU = inp.pathway === PATHWAY_RECLAMATION ? facU : 0;
-	const gcT =
-		inp.pathway === PATHWAY_RECLAMATION
-			? gcU * lookupCapex('Reclamation', 'Gas Chromatography')
-			: 0;
+	const gcT = excelRound(
+		inp.pathway === PATHWAY_RECLAMATION ? gcU * lookupCapex('Reclamation', 'Gas Chromatography') : 0
+	);
 
 	const drCapex = facT + adminT + opT + gcT;
 	const totalCapex = recoveryCapex + drCapex;
 
-	const blendedGwp =
-		(inp.mix.r32 * inp.gwpR32 + inp.mix.r410a * inp.gwpR410a + inp.mix.r22 * inp.gwpR22) / 100;
-	const emissionsAvoidedT = (annualKg * blendedGwp) / 1000;
+	const blendedGwp = excelRound(
+		(inp.mix.r32 * inp.gwpR32 + inp.mix.r410a * inp.gwpR410a + inp.mix.r22 * inp.gwpR22) / 100
+	);
+	const emissionsAvoidedT = excelRound((annualKg * blendedGwp) / 1000);
+	const costPerTco2e = excelRound(emissionsAvoidedT === 0 ? 0 : (grossOpex * annualKg) / emissionsAvoidedT);
 
-	const hideBasic = commercial || inp.machineType === MACHINE_HIGH;
-	const hidePump = commercial;
+	const hideBasicMachines = commercial || inp.machineType === MACHINE_HIGH;
+	const hideBasicAccessories = commercial;
 	const hideEndUseCapex = inp.pathway === PATHWAY_RECYCLING;
 	const hideReclaimOnly = inp.pathway !== PATHWAY_RECLAMATION;
-	const hideSale = inp.pathway !== PATHWAY_RECLAMATION;
-	const hideRefill = inp.pathway !== PATHWAY_RECYCLING || residential;
-	const hideTech = inp.pathway !== PATHWAY_DESTRUCTION;
-	const hideFacility = inp.pathway === PATHWAY_RECYCLING;
-	const hideLocationChoice = inp.pathway === PATHWAY_RECYCLING;
-	const hideVirgin = hideRefill;
 
 	return {
 		inputs: {
@@ -478,29 +453,33 @@ export function calculate(raw) {
 			annualKg,
 			fuelPerKm,
 			labourPerUnit,
-			recoveryCostPerDay
+			labourCostPerDay,
+			recoveryTransportPerDay
 		},
 		warnings: {
 			chargeCapped: inp.chargeCapped,
 			mixInvalid: !mixIsValid(inp.mix)
 		},
 		visibility: {
-			hideBasic,
-			hidePump,
+			hideBasic: hideBasicMachines,
+			hideBasicAccessories,
+			hidePump: true,
 			hideEndUseCapex,
 			hideReclaimOnly,
-			hideSale,
-			hideRefill,
-			hideVirgin,
-			hideTech,
-			hideFacility,
-			hideLocationChoice,
+			hideSale: inp.pathway !== PATHWAY_RECLAMATION,
+			hideRefill: true,
+			hideVirgin: inp.pathway !== PATHWAY_RECYCLING || residential,
+			hideTech: inp.pathway !== PATHWAY_DESTRUCTION,
+			hideFacility: inp.pathway === PATHWAY_RECYCLING,
+			hideLocationChoice: inp.pathway === PATHWAY_RECYCLING,
 			recyclingOffered: !residential
 		},
 		opex: {
-			recovery: recoveryOpex,
-			onSite: recoveryOpex,
+			labour: labourOpex,
+			recovery: labourOpex,
+			onSite: labourOpex,
 			refillMarkup: refillMarkupOpex,
+			recoveryTransport: recoveryTransportOpex,
 			virgin: 0,
 			virginSavings,
 			central: centralOpex,
@@ -514,12 +493,13 @@ export function calculate(raw) {
 		},
 		climate: {
 			blendedGwp,
-			emissionsAvoidedT
+			emissionsAvoidedT,
+			costPerTco2e
 		},
 		capex: {
-			machinesBasic: line(machBasicU, machBasicT, { hidden: hideBasic }),
-			accessoriesBasic: line(accBasicU, accBasicT, { hidden: hideBasic }),
-			accessoriesPumpdown: line(accPumpU, accPumpT, { hidden: hidePump }),
+			machinesBasic: line(machBasicU, machBasicT, { hidden: hideBasicMachines }),
+			accessoriesBasic: line(accBasicU, accBasicT, { hidden: hideBasicAccessories }),
+			accessoriesPumpdown: line(0, 0, { hidden: true }),
 			machinesHigh: line(machHighU, machHighT),
 			accessoriesHigh: line(accHighU, accHighT),
 			cylinders12L: line(cyl12U, cyl12T),
@@ -558,7 +538,7 @@ export function comparePathways(raw) {
 			netOpexPerYear: result.opex.netPerYear,
 			capex: result.capex.total,
 			grandTotal: result.opex.netPerYear + result.capex.total,
-			recovery: result.opex.recovery
+			recovery: result.opex.labour
 		};
 	}
 	return rows;
@@ -571,11 +551,11 @@ export function excelDefaults(sector = SECTOR_COMMERCIAL, pathway = PATHWAY_RECY
 		pathway: pathwayOptions(sector).includes(pathway) ? pathway : pathwayOptions(sector)[0],
 		chargeSizeKg: defaultChargeKg(sector),
 		recoverablePct: defaultRecoverablePct(sector),
-		recoveryRateKgPerHour: defaultRecoveryRateKgPerHour(sector),
+		recoveryHoursPerUnit: defaultRecoveryHours(sector),
 		labourPerHour: defaultLabourPerHour(sector),
 		fuelEfficiencyKmPerL: 8.5,
 		fuelPricePerL: 1.5,
-		travelKmPerDay: 100,
+		travelKmPerTeam: 100,
 		unitsPerDay: defaultUnitsPerDay(sector),
 		daysPerYear: defaultDaysPerYear(sector),
 		teams: defaultTeams(sector),
@@ -585,7 +565,7 @@ export function excelDefaults(sector = SECTOR_COMMERCIAL, pathway = PATHWAY_RECY
 		destructionTech: 'Rotary',
 		facilityStatus: 'Retrofit',
 		location: 'In-country',
-		salePrice: 15,
+		salePrice: 5,
 		refillMode: REFILL_CLEANING,
 		virginPrice: 5,
 		mix,
