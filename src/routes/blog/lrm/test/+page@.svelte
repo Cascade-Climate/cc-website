@@ -528,7 +528,8 @@
 			</div>
 		</header>
 
-		<section class="panel branch" class:settled={Boolean(sector)} aria-label="Choose a sector">
+		<section class="panel branch" class:settled={Boolean(sector)} aria-labelledby="branch-heading">
+			<h2 id="branch-heading">1. Choose a sector</h2>
 			<div class="choice-grid two">
 				<button
 					type="button"
@@ -553,7 +554,8 @@
 		</section>
 
 		{#if sector}
-			<section class="panel branch" id="enduse-panel" class:settled={Boolean(pathway)} aria-label="Choose the end-use of recovered refrigerant">
+			<section class="panel branch" id="enduse-panel" class:settled={Boolean(pathway)} aria-labelledby="pathway-heading">
+				<h2 id="pathway-heading">2. Choose the end-use of recovered refrigerant</h2>
 				<div class="choice-grid" class:three={!residential} class:two={residential}>
 					{#each pathways as p}
 						<button
