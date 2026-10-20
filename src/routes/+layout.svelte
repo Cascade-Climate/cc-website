@@ -7,7 +7,11 @@
 	export let data;
 
 	/** Full-bleed unlisted tools (no site chrome, link-only discovery). */
-	$: barePage = $page.url.pathname.startsWith('/blog/lrm/test');
+	$: barePage =
+		$page.url.pathname.startsWith('/blog/lrm/test') ||
+		$page.url.pathname.startsWith(
+			'/our-work/refrigerant-management-and-transition/costs/explorer'
+		);
 </script>
 
 {#if import.meta.env.DEV}

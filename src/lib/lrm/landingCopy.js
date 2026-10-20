@@ -1,4 +1,4 @@
-export const toolHref = "/blog/lrm/test";
+export const toolHref = "/our-work/refrigerant-management-and-transition/costs/explorer";
 export const hero = {
   "eyebrow": "Placeholder copy · Unlisted",
   "title": "Lifecycle Refrigerant Management",
