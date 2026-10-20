@@ -3,8 +3,9 @@
  * Source: V5.0 LRM Cost Model.xlsx (V5.0 Model + V4.5 SEA Data).
  *
  * Recovery labour/day = (labour USD/h × hours/unit) × units/day
+ *   + ((km/team × teams) / 80 km/h) × labour USD/h
  * Recovery transport/day = (km/team × teams) × fuel USD/km
- * Those two are separate opex lines (C91 vs C93).
+ * Those two are separate opex lines (C91 vs C93). Fuel is unchanged by travel labour.
  * Recycling always uses the 50% mark-up on recovery labour (on-site cleaning + refill).
  * Opex and capex money lines are ROUND(..., 2) as in the Model sheet.
  */
@@ -15,6 +16,8 @@ const ROWS = data.rows;
 export const MODEL_VERSION = '5.0';
 export const GEOGRAPHY = 'Southeast Asia';
 export const RESIDENTIAL_CHARGE_CAP_KG = 5;
+/** Driving speed used only for recovery travel labour. Not a user input. */
+export const TRAVEL_SPEED_KM_PER_HOUR = 80;
 
 export const SECTOR_RESIDENTIAL = 'Residential AC/Small Capacity';
 export const SECTOR_COMMERCIAL = 'Commercial HVAC/Large Capacity';
@@ -120,6 +123,13 @@ export function pathwayOptions(sector) {
 export function machineOptions(sector) {
 	if (isCommercial(sector)) return [MACHINE_HIGH];
 	return [MACHINE_BASIC, MACHINE_HIGH];
+}
+
+/** Maximum recovery hours per unit. Commercial HVAC is always High Capacity. */
+export function maxRecoveryHoursPerUnit(sector, machineType) {
+	if (isCommercial(sector)) return 36;
+	if (machineType === MACHINE_HIGH) return 1.5;
+	return 2;
 }
 
 export function mixTotal(mix) {
@@ -254,6 +264,14 @@ export function normalizeInputs(raw) {
 	let machineType = commercial ? MACHINE_HIGH : raw.machineType || MACHINE_BASIC;
 	if (commercial) machineType = MACHINE_HIGH;
 
+	let recoveryHoursPerUnit = num(raw.recoveryHoursPerUnit ?? defaultRecoveryHours(sector));
+	const recoveryHoursMax = maxRecoveryHoursPerUnit(sector, machineType);
+	let recoveryHoursCapped = false;
+	if (recoveryHoursPerUnit > recoveryHoursMax) {
+		recoveryHoursPerUnit = recoveryHoursMax;
+		recoveryHoursCapped = true;
+	}
+
 	let location = raw.location || 'In-country';
 	if (pathway === PATHWAY_RECYCLING) location = 'In-country';
 
@@ -271,7 +289,9 @@ export function normalizeInputs(raw) {
 		chargeSizeKg,
 		chargeCapped,
 		recoverablePct: num(raw.recoverablePct ?? defaultRecoverablePct(sector)),
-		recoveryHoursPerUnit: num(raw.recoveryHoursPerUnit ?? defaultRecoveryHours(sector)),
+		recoveryHoursPerUnit,
+		recoveryHoursMax,
+		recoveryHoursCapped,
 		labourPerHour: num(raw.labourPerHour ?? defaultLabourPerHour(sector)),
 		fuelEfficiencyKmPerL: num(raw.fuelEfficiencyKmPerL ?? 8.5),
 		fuelPricePerL: num(raw.fuelPricePerL ?? 1.5),
@@ -321,7 +341,11 @@ export function calculate(raw) {
 
 	const fuelPerKm = inp.fuelEfficiencyKmPerL === 0 ? 0 : inp.fuelPricePerL / inp.fuelEfficiencyKmPerL;
 	const labourPerUnit = inp.labourPerHour * inp.recoveryHoursPerUnit;
-	const labourCostPerDay = labourPerUnit * unitsPerDay;
+	const travelLaborPerDay =
+		TRAVEL_SPEED_KM_PER_HOUR === 0
+			? 0
+			: ((inp.travelKmPerTeam * inp.teams) / TRAVEL_SPEED_KM_PER_HOUR) * inp.labourPerHour;
+	const labourCostPerDay = labourPerUnit * unitsPerDay + travelLaborPerDay;
 	const recoveryTransportPerDay = inp.travelKmPerTeam * inp.teams * fuelPerKm;
 
 	const autoScenario = defaultCostScenario(annualKg);
@@ -332,10 +356,13 @@ export function calculate(raw) {
 		inp.pathway === PATHWAY_RECYCLING ? labourOpex * lookupRecyclingMarkup() : 0
 	);
 	const recoveryTransportOpex = excelRound(kgPerDay === 0 ? 0 : recoveryTransportPerDay / kgPerDay);
-	const warehouseOpex = excelRound(annualKg === 0 ? 0 : (inp.warehousePerMonth * 12) / annualKg);
-	const centralOpex = excelRound(lookupCentralFacilityOpex(costScenario));
+	const recycling = inp.pathway === PATHWAY_RECYCLING;
+	const warehouseOpex = excelRound(
+		recycling || annualKg === 0 ? 0 : (inp.warehousePerMonth * 12) / annualKg
+	);
+	const centralOpex = excelRound(recycling ? 0 : lookupCentralFacilityOpex(costScenario));
 	const transportOpex = excelRound(
-		inp.pathway === PATHWAY_RECYCLING ? 0 : lookupTransport(inp.location, costScenario)
+		recycling ? 0 : lookupTransport(inp.location, costScenario)
 	);
 	const processingOpex = excelRound(lookupEndUseOpex(inp.pathway, inp.destructionTech, costScenario));
 
@@ -453,11 +480,13 @@ export function calculate(raw) {
 			annualKg,
 			fuelPerKm,
 			labourPerUnit,
+			travelLaborPerDay,
 			labourCostPerDay,
 			recoveryTransportPerDay
 		},
 		warnings: {
 			chargeCapped: inp.chargeCapped,
+			recoveryHoursCapped: inp.recoveryHoursCapped,
 			mixInvalid: !mixIsValid(inp.mix)
 		},
 		visibility: {

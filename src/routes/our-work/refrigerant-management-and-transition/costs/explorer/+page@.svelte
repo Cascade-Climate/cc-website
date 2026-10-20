@@ -1,5 +1,5 @@
 <script>
-	import { tick } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import cascadeLogo from '$lib/images/cc-logo-full.png';
 	import {
 		calculate,
@@ -22,7 +22,8 @@
 		PATHWAY_RECYCLING,
 		MACHINE_BASIC,
 		MACHINE_HIGH,
-		RESIDENTIAL_CHARGE_CAP_KG
+		RESIDENTIAL_CHARGE_CAP_KG,
+		maxRecoveryHoursPerUnit
 	} from '$lib/lrm/v42/calculate.js';
 
 	let sector = '';
@@ -30,8 +31,21 @@
 	let filledFromDefaults = false;
 	let aboutOpen = false;
 
+	function openAbout(host) {
+		const rect = host.getBoundingClientRect();
+		const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+		const width = Math.min(34 * rem, window.innerWidth - 24);
+		let left = rect.left;
+		if (left + width > window.innerWidth - 12) left = Math.max(12, window.innerWidth - 12 - width);
+		host.style.setProperty('--about-x', `${left}px`);
+		host.style.setProperty('--about-y', `${rect.bottom}px`);
+		host.style.setProperty('--about-w', `${width}px`);
+		aboutOpen = true;
+	}
+
 	let chargeSizeKg = 100;
 	let chargeCappedNote = false;
+	let recoveryHoursCappedNote = false;
 	let recoverablePct = 80;
 	let recoveryHoursPerUnit = 0.5;
 	let labourPerHour = 20;
@@ -57,11 +71,80 @@
 	let openCats = {};
 	let result = null;
 	let publishedKey = '';
-	/** @type {'opex' | 'opex2' | 'capex'} */
-	let chartView = 'opex';
+	/** @type {'opex2' | 'capex'} */
+	let chartView = 'opex2';
 	const CARBON_TIP =
 		'For reference, Singapore’s carbon tax, for 2026-2027, is S$45/tCO2e (~US$35), and Japan’s GX-ETS, mandatory since 2026, operates within a price corridor of ¥1,700-¥4,300/tCO2e (~US$11-27)';
 	let selectedAlt = '';
+	/** @type {HTMLElement | null} */
+	let tipHost = null;
+	/** @type {HTMLDivElement | null} */
+	let tipProbe = null;
+
+	function positionTip(host) {
+		if (!(host instanceof HTMLElement) || !host.dataset.tip) return;
+		const rect = host.getBoundingClientRect();
+		const margin = 8;
+		const gap = 6;
+		if (
+			rect.bottom < margin ||
+			rect.top > window.innerHeight - margin ||
+			rect.right < margin ||
+			rect.left > window.innerWidth - margin
+		) {
+			host.style.setProperty('--tip-x', '-9999px');
+			host.style.setProperty('--tip-y', '0px');
+			return;
+		}
+		const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+		const maxWidth = Math.min(22 * rem, window.innerWidth - margin * 2);
+		if (!tipProbe) {
+			tipProbe = document.createElement('div');
+			tipProbe.setAttribute('aria-hidden', 'true');
+			tipProbe.style.cssText =
+				'position:fixed;left:-9999px;top:0;visibility:hidden;pointer-events:none;white-space:pre-line;box-sizing:border-box;';
+			document.body.appendChild(tipProbe);
+		}
+		tipProbe.style.font = `400 0.75rem/1.4 ${getComputedStyle(host).fontFamily}`;
+		tipProbe.style.padding = '0.45rem 0.6rem';
+		tipProbe.style.width = 'max-content';
+		tipProbe.style.maxWidth = `${maxWidth}px`;
+		tipProbe.textContent = host.dataset.tip;
+		const tipW = tipProbe.offsetWidth;
+		const tipH = tipProbe.offsetHeight;
+		let left = rect.left;
+		if (left + tipW > window.innerWidth - margin) left = window.innerWidth - margin - tipW;
+		if (left < margin) left = margin;
+		let top = rect.top - gap - tipH;
+		if (top < margin) top = rect.bottom + gap;
+		if (top + tipH > window.innerHeight - margin) {
+			top = Math.max(margin, window.innerHeight - margin - tipH);
+		}
+		host.style.setProperty('--tip-x', `${Math.round(left)}px`);
+		host.style.setProperty('--tip-y', `${Math.round(top)}px`);
+		tipHost = host;
+	}
+
+	function placeTip(event) {
+		const node = event.target;
+		const host = node instanceof Element ? node.closest('[data-tip]') : null;
+		if (host instanceof HTMLElement && host.dataset.tip) positionTip(host);
+	}
+
+	function followTip() {
+		if (tipHost) positionTip(tipHost);
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', followTip, true);
+		window.addEventListener('resize', followTip);
+		return () => {
+			window.removeEventListener('scroll', followTip, true);
+			window.removeEventListener('resize', followTip);
+			tipProbe?.remove();
+			tipProbe = null;
+		};
+	});
 
 	$: residential = sector === SECTOR_RESIDENTIAL;
 	$: commercial = sector === SECTOR_COMMERCIAL;
@@ -254,12 +337,27 @@
 		chargeCappedNote = false;
 	}
 
+	$: recoveryHoursMax = maxRecoveryHoursPerUnit(
+		sector || SECTOR_COMMERCIAL,
+		commercial || !sector ? MACHINE_HIGH : machineType
+	);
+	$: if (Number(recoveryHoursPerUnit) > recoveryHoursMax) {
+		recoveryHoursPerUnit = recoveryHoursMax;
+		recoveryHoursCappedNote = true;
+	} else if (Number(recoveryHoursPerUnit) < recoveryHoursMax) {
+		recoveryHoursCappedNote = false;
+	}
+
 	function formatUsd(n, digits = 2) {
-		return n.toLocaleString('en-US', {
+		const value = Number(n);
+		const amount = Number.isFinite(value) ? value : 0;
+		const cents = Math.round(Math.abs(amount) * 100);
+		const places = digits === 0 || cents % 100 === 0 ? 0 : digits;
+		return amount.toLocaleString('en-US', {
 			style: 'currency',
 			currency: 'USD',
-			minimumFractionDigits: digits,
-			maximumFractionDigits: digits
+			minimumFractionDigits: places,
+			maximumFractionDigits: places
 		});
 	}
 
@@ -327,8 +425,8 @@
 		});
 	}
 
-	function capexBit(name, item) {
-		if (!item || item.hidden) return null;
+	function capexBit(name, item, { showHidden = false } = {}) {
+		if (!item || (item.hidden && !showHidden)) return null;
 		return {
 			name,
 			value: item.na ? 0 : item.cost,
@@ -347,7 +445,7 @@
 					parts: [
 						{ name: 'Recovery labour costs', value: result.opex.labour },
 						...(result.inputs.pathway === PATHWAY_RECYCLING
-							? [{ name: 'Mark-up for recycling costs', value: result.opex.refillMarkup }]
+							? [{ name: 'Additional costs for recycling', value: result.opex.refillMarkup }]
 							: []),
 						{
 							name: 'Recovery transportation (on-site to central facility)',
@@ -359,7 +457,8 @@
 					id: 'opex-central',
 					name: 'Central facility',
 					value: result.opex.warehouse + result.opex.central,
-					tooltip: 'Warehouse storage plus central-facility consolidation into large cylinders or ton tanks.',
+					tooltip:
+						'Warehouse storage plus central-facility consolidation into large cylinders or ton tanks. Zero for Recycling.',
 					parts: [
 						{ name: 'Warehouse storage', value: result.opex.warehouse },
 						{ name: 'Central facility operational activities', value: result.opex.central }
@@ -410,14 +509,20 @@
 					id: 'capex-recovery',
 					name: 'Recovery equipment',
 					parts: [
-						capexBit('Recovery machines (basic)', result.capex.machinesBasic),
-						capexBit('Recovery accessories (basic)', result.capex.accessoriesBasic),
-						capexBit('Recovery machines (high capacity)', result.capex.machinesHigh),
-						capexBit('Recovery accessories (high capacity)', result.capex.accessoriesHigh),
-						capexBit('12L cylinders', result.capex.cylinders12L),
-						capexBit('60L cylinders', result.capex.cylinders60L),
-						capexBit('Refrigerant identifiers', result.capex.identifiers),
-						capexBit('Ton tanks', result.capex.tonTanks)
+						capexBit('Recovery machines (basic)', result.capex.machinesBasic, { showHidden: true }),
+						capexBit('Recovery accessories (basic)', result.capex.accessoriesBasic, { showHidden: true }),
+						capexBit(
+							result.inputs.pathway === PATHWAY_RECYCLING
+								? 'Recovery + Recycling Machine'
+								: 'Recovery machines (high capacity)',
+							result.capex.machinesHigh,
+							{ showHidden: true }
+						),
+						capexBit('Recovery accessories (high capacity)', result.capex.accessoriesHigh, { showHidden: true }),
+						capexBit('12L cylinders', result.capex.cylinders12L, { showHidden: true }),
+						capexBit('60L cylinders', result.capex.cylinders60L, { showHidden: true }),
+						capexBit('Refrigerant identifiers', result.capex.identifiers, { showHidden: true }),
+						capexBit('Ton tanks', result.capex.tonTanks, { showHidden: true })
 					].filter(Boolean),
 					tooltip: 'Machines, accessories, identifiers, cylinders, and tanks. TMS is a separate bar.'
 				},
@@ -425,7 +530,7 @@
 					id: 'capex-tracking',
 					name: 'Tracking & monitoring system',
 					parts: [capexBit('Tracking & monitoring system', result.capex.tracking)].filter(Boolean),
-					tooltip: 'Manual TMS input from the recovery capex block.'
+					tooltip: 'Manual TMS input from the recovery capital costs block.'
 				},
 				{
 					id: 'capex-facility',
@@ -473,13 +578,23 @@
 		{ id: PATHWAY_RECYCLING, name: 'Recycling' }
 	].filter((col) => comparison?.[col.id]);
 	$: compareMetrics = [
-		{ id: 'opex', label: 'Total net opex per year', unit: 'USD / year', key: 'netOpexPerYear' },
-		{ id: 'capex', label: 'Total capex', unit: 'USD · one-off', key: 'capex' }
+		{ id: 'opex', label: 'Total net operational costs', unit: 'USD / kg', key: 'netOpex' },
+		{ id: 'capex', label: 'Total capital costs', unit: 'USD / kg', key: 'capexPerKg' }
 	].map((metric) => ({
 		...metric,
 		scale: Math.max(
 			0.0001,
-			...compareCols.map((col) => Math.abs(comparison?.[col.id]?.[metric.key] || 0))
+			...compareCols.map((col) => {
+				const row = comparison?.[col.id];
+				if (!row) return 0;
+				const amount =
+					metric.key === 'capexPerKg'
+						? result.inputs.annualKg
+							? row.capex / result.inputs.annualKg
+							: 0
+						: row[metric.key];
+				return Math.abs(amount || 0);
+			})
 		)
 	}));
 	$: compareAssumedNew = compareCols.some((col) => comparison?.[col.id]?.facilityAssumedNew);
@@ -505,7 +620,7 @@
 	/>
 </svelte:head>
 
-<div class="lrm-explorer" class:workspace-on={ready}>
+<div class="lrm-explorer" class:workspace-on={ready} on:mouseover={placeTip} on:focusin={placeTip}>
 	<div class="wrap">
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
@@ -524,36 +639,39 @@
 						<span class="title-rest">Explorer</span>
 					</span>
 				</h1>
-				<div
-					class="about"
-					class:about-open={aboutOpen}
-					on:mouseenter={() => (aboutOpen = true)}
-					on:mouseleave={() => (aboutOpen = false)}
-				>
-					<p
-						class="about-label"
-						tabindex={ready ? 0 : undefined}
-						on:focus={() => (aboutOpen = true)}
-						on:blur={() => (aboutOpen = false)}
-					>
-						About the Explorer
-					</p>
-					<a
-						class="manual-link"
-						href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
-						>User Manual</a
-					>
-					<div class="about-body">
-						<p>
-							The LRM Cost Explorer is an interactive tool that estimates the capital and operational
-							costs of LRM activities from a set of user inputs. Results are intended to provide a
-							high-level estimate to support prioritization and planning of LRM activities. The
-							Explorer is not meant to serve as a comprehensive financial model.
-						</p>
-					</div>
-				</div>
 			</div>
 		</header>
+
+		<div
+			class="about"
+			class:about-open={aboutOpen}
+			on:mouseenter={(e) => openAbout(e.currentTarget)}
+			on:mouseleave={() => (aboutOpen = false)}
+		>
+			<p
+				class="about-label"
+				tabindex={ready ? 0 : undefined}
+				on:focus={(e) => openAbout(e.currentTarget.closest('.about'))}
+				on:blur={() => (aboutOpen = false)}
+			>
+				About the Explorer
+			</p>
+			<a
+				class="manual-link"
+				href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
+				target="_blank"
+				rel="noopener noreferrer"
+				>User Manual</a
+			>
+			<div class="about-body">
+				<p>
+					The LRM Cost Explorer is an interactive tool that estimates the capital and operational
+					costs of LRM activities from a set of user inputs. Results are intended to provide a
+					high-level estimate to support prioritization and planning of LRM activities. The
+					Explorer is not meant to serve as a comprehensive financial model.
+				</p>
+			</div>
+		</div>
 
 		<section class="panel branch" class:settled={Boolean(sector)} aria-labelledby="branch-heading">
 			<h2 id="branch-heading">1. Choose a sector</h2>
@@ -609,13 +727,14 @@
 						Grouped by the value chain. Amber-style fields are inputs. Bold figures are calculated.
 					</p>
 
+					<div class="inputs-scroll">
 					<div class="field-group">
 						<div class="group-label">Recovery</div>
 
 						<div class="fields">
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = 1 kg, Commercial HVAC = 100 kg"
+								data-tip="Default: Residential AC = 1 kg, Commercial HVAC = 100 kg"
 								for="chargeSizeKg">Average equipment charge size per unit (kg)</label
 							>
 							<input
@@ -635,7 +754,7 @@
 
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = 50%, Commercial HVAC = 80%"
+								data-tip="Default: Residential AC = 50%, Commercial HVAC = 80%"
 								for="recoverablePct">Estimated % of recoverable refrigerant per unit (%)</label
 							>
 							<input id="recoverablePct" type="number" min="0" max="100" step="1" bind:value={recoverablePct} />
@@ -667,26 +786,33 @@
 								id="recoveryHoursPerUnit"
 								type="number"
 								min="0"
+								max={recoveryHoursMax}
 								step="0.01"
 								bind:value={recoveryHoursPerUnit}
 							/>
+							{#if recoveryHoursCappedNote}
+								<p class="field-note warn">
+									Recovery time cannot exceed {recoveryHoursMax} hours per unit for this sector and
+									machine. Please update this field.
+								</p>
+							{/if}
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = USD 10/hour, Commercial HVAC = USD 20/hour (assuming a two-man team)"
+								data-tip="Default: Residential AC = USD 10/hour, Commercial HVAC = USD 20/hour (assuming a two-man team)"
 								for="labourPerHour">Hourly labor rate (USD/hr)</label
 							>
 							<input id="labourPerHour" type="number" min="0" step="0.01" bind:value={labourPerHour} />
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = 40, Commercial HVAC = 1"
+								data-tip="Default: Residential AC = 40, Commercial HVAC = 1"
 								for="unitsPerDay">Average number of units recovered per day</label
 							>
 							<input id="unitsPerDay" type="number" min="0" step="1" bind:value={unitsPerDay} />
 						</div>
 						<div class="field">
-							<label data-tip="Default guidance: 8.5 km/L" for="fuelEfficiencyKmPerL"
+							<label data-tip="Default: 8.5 km/L" for="fuelEfficiencyKmPerL"
 								>Fuel efficiency of vehicle used (km/L)</label
 							>
 							<input
@@ -698,15 +824,15 @@
 							/>
 						</div>
 						<div class="field">
-							<label data-tip="Default guidance: USD 1.50/L" for="fuelPricePerL">Fuel price (USD/L)</label>
+							<label data-tip="Default: USD 1.50/L" for="fuelPricePerL">Fuel price (USD/L)</label>
 							<input id="fuelPricePerL" type="number" min="0" step="0.01" bind:value={fuelPricePerL} />
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = 200, Commercial HVAC = 75"
-								for="daysPerYear">Estimated number of recovery days per year</label
+								data-tip="Default: Residential AC = 1 team for every 10 units recovered per day, Commercial HVAC = 1 team for every unit recovered per day"
+								for="teams">Number of recovery teams mobilized per day</label
 							>
-							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
+							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
 						</div>
 						<div class="field">
 							<label
@@ -717,16 +843,31 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = 1 team for every 10 units recovered per day, Commercial HVAC = 1 team for every unit recovered per day"
-								for="teams">Number of recovery teams mobilized per day</label
+								data-tip="Default: Residential AC = 200, Commercial HVAC = 75"
+								for="daysPerYear">Estimated number of recovery days per year</label
 							>
-							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
+							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
 						</div>
 						</div>
 						<div class="computed computed-sum">
 							<div>
-								<span class="k">Total units recovered per year</span>
-								<span class="v">{formatKg(live.inputs.unitsPerYear, 0)}</span>
+								<span class="k">Labor cost for traveling time per day (USD/day)</span>
+								<span class="v">{formatUsd(live.inputs.travelLaborPerDay)}</span>
+							</div>
+						</div>
+						<div class="snapshot">
+							<div class="snapshot-label">Recovery snapshot</div>
+							<div>
+								<span class="k">Total labor cost per day (USD/day)</span>
+								<span class="v">{formatUsd(live.inputs.labourCostPerDay)}</span>
+							</div>
+							<div>
+								<span class="k">Total transport cost per day (USD/day)</span>
+								<span class="v">{formatUsd(live.inputs.recoveryTransportPerDay)}</span>
+							</div>
+							<div>
+								<span class="k">Total refrigerant recovered per day (kg/day)</span>
+								<span class="v">{formatKg(live.inputs.kgPerDay, 2)}</span>
 							</div>
 						</div>
 					</div>
@@ -749,7 +890,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip={'This selection will determine the costs for central facility activities & end-use processing, based on the total amount of refrigerant recovered per year. Default guidance: \n(i) if <5,000 kg/year, select "High"\n(ii) if 5,000 kg - 50,000 kg/year, select "Medium"\n(iii) if > 50,000 kg/year, select "Low"'}
+								data-tip="Default determined by annual volume. To change, select 'override.'"
 								for="costScenarioMode">Cost scenario</label
 							>
 							<select id="costScenarioMode" bind:value={costScenarioMode}>
@@ -759,7 +900,10 @@
 						</div>
 						{#if costScenarioMode === 'manual'}
 							<div class="field">
-								<label for="costScenarioManual">Override cost scenario</label>
+								<label
+									data-tip={'High represents <10,000 kg/year, Medium represents 10,000 - 50,000 kg per year, Low represents > 50,000 kg per year'}
+									for="costScenarioManual">Override cost scenario</label
+								>
 								<select id="costScenarioManual" bind:value={costScenarioManual}>
 									<option>Low</option>
 									<option>Medium</option>
@@ -833,7 +977,10 @@
 								</select>
 							</div>
 							<div class="field">
-								<label for="facilityStatusDest">Facility status</label>
+								<label
+									data-tip="Select ‘New facility’ if a brand new facility will be constructed, ‘Retrofit’ if an existing facility will be retrofitted for refrigerant processing, and ‘Existing’ if refrigerant will be sent to an existing facility for processing, without the need for additional retrofitting."
+									for="facilityStatusDest">Facility status</label
+								>
 								<select id="facilityStatusDest" bind:value={facilityStatus}>
 									<option>Existing</option>
 									{#if destructionTech !== 'Plasma Arc'}
@@ -893,6 +1040,7 @@
 							</p>
 						{/if}
 					</div>
+					</div>
 
 					<div class="run-bar">
 						{#if stale}
@@ -922,18 +1070,24 @@
 				{#if result}
 				<section class="panel results" class:has-open={Object.values(openCats).some(Boolean)} class:stale aria-labelledby="results-heading">
 					<div class="results-head">
-						<div class="model-tag">Updated Oct 16 5pm ET</div>
-						<h2 id="results-heading">Outputs</h2>
-						<p class="summary">
-							{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
-							· {result.inputs.pathway}
-							{#if result.inputs.pathway === PATHWAY_RECYCLING}
-								· cleaning + refill (RY)
-							{/if}
-							{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
-								· {result.inputs.destructionTech}
-							{/if}
-						</p>
+						<div class="results-head-copy">
+							<div class="model-tag">Updated Oct 16 5pm ET</div>
+							<h2 id="results-heading">Outputs</h2>
+							<p class="summary">
+								{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
+								· {result.inputs.pathway}
+								{#if result.inputs.pathway === PATHWAY_RECYCLING}
+									· cleaning + refill (RY)
+								{/if}
+								{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
+									· {result.inputs.destructionTech}
+								{/if}
+							</p>
+						</div>
+						<div class="results-year">
+							<span class="results-year-label">Total Net Operational Costs per year (USD)</span>
+							<span class="results-year-value">{formatUsd(result.opex.netPerYear)}</span>
+						</div>
 					</div>
 
 					<div class="metrics" class:four={result.inputs.pathway === PATHWAY_DESTRUCTION}>
@@ -947,19 +1101,19 @@
 						</div>
 						{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
 							<div class="metric">
-								<div class="label">Opex</div>
+								<div class="label">Operational Costs</div>
 								<div class="value">{formatUsd(result.opex.net)}</div>
 								<span class="unit">USD / kg</span>
 							</div>
 							<div class="metric" data-tip={CARBON_TIP}>
-								<div class="label">Opex</div>
+								<div class="label">Operational Costs</div>
 								<div class="value">{formatUsd(result.climate.costPerTco2e)}</div>
 								<span class="unit">USD / tCO2e</span>
 							</div>
 						{:else if result.inputs.pathway === PATHWAY_RECLAMATION}
 							<div class="metric">
 								<div class="label">
-									Opex
+									Operational Costs
 									<span class="label-note">net of reclaimed refrigerant sales</span>
 								</div>
 								<div class="value">{formatUsd(result.opex.net)}</div>
@@ -968,7 +1122,7 @@
 						{:else}
 							<div class="metric">
 								<div class="label">
-									Opex
+									Operational Costs
 									<span class="label-note">net of virgin refrigerant avoided</span>
 								</div>
 								<div class="value">{formatUsd(result.opex.net)}</div>
@@ -976,26 +1130,13 @@
 							</div>
 						{/if}
 						<div class="metric">
-							<div class="label">Capex</div>
+							<div class="label">Capital Costs</div>
 							<div class="value">{formatUsd(result.capex.total)}</div>
 							<span class="unit">USD · one-off</span>
 						</div>
 					</div>
 
 					<div class="view-tabs" role="tablist" aria-label="Output charts">
-						<button
-							type="button"
-							role="tab"
-							class="view-tab"
-							class:active={chartView === 'opex'}
-							aria-selected={chartView === 'opex'}
-							on:click={() => {
-								chartView = 'opex';
-								selectedAlt = '';
-							}}
-						>
-							See Opex cost breakdown
-						</button>
 						<button
 							type="button"
 							role="tab"
@@ -1007,7 +1148,7 @@
 								selectedAlt = '';
 							}}
 						>
-							See Opex 2 cost breakdown
+							Operational Costs
 						</button>
 						<button
 							type="button"
@@ -1020,65 +1161,14 @@
 								selectedAlt = '';
 							}}
 						>
-							See Capex cost breakdown
+							Capital Costs
 						</button>
 					</div>
 					<p class="inputs-tip">For a detailed breakdown, click any cost.</p>
 
-					{#if chartView === 'opex'}
+					{#if chartView === 'opex2'}
 						<div class="vchart">
-							<div class="vplot" aria-label="Operating cost waterfall">
-								{#each opexChart.bars as bar}
-									<button
-										type="button"
-										class="vseg"
-										class:drop={bar.drop}
-										class:tone-a={!bar.drop && bar.tone === 0}
-										class:tone-b={!bar.drop && bar.tone === 1}
-										class:tone-c={!bar.drop && bar.tone === 2}
-										class:tone-d={!bar.drop && bar.tone === 3}
-										class:selected={selectedAlt === bar.id}
-										style="bottom: {bar.bottomPct}%; height: {bar.heightPct}%"
-										title="{bar.name}: {formatUsd(bar.value)}/kg"
-										aria-pressed={selectedAlt === bar.id}
-										on:click={() => selectAlt(bar.id)}
-									></button>
-								{/each}
-							</div>
-							<ul class="vlegend">
-								{#each [...opexChart.bars].reverse() as bar}
-									<li>
-										<button
-											type="button"
-											class="vlegend-btn"
-											class:selected={selectedAlt === bar.id}
-											class:drop={bar.drop}
-											class:tone-a={!bar.drop && bar.tone === 0}
-											class:tone-b={!bar.drop && bar.tone === 1}
-											class:tone-c={!bar.drop && bar.tone === 2}
-											class:tone-d={!bar.drop && bar.tone === 3}
-											aria-pressed={selectedAlt === bar.id}
-											on:click={() => selectAlt(bar.id)}
-										>
-											<span
-												class="swatch"
-												class:drop={bar.drop}
-												class:tone-a={!bar.drop && bar.tone === 0}
-												class:tone-b={!bar.drop && bar.tone === 1}
-												class:tone-c={!bar.drop && bar.tone === 2}
-												class:tone-d={!bar.drop && bar.tone === 3}
-											></span>
-											<span class="stack-name">{bar.name}</span>
-											<span class="stack-val">{formatUsd(bar.value)}/kg</span>
-										</button>
-									</li>
-								{/each}
-							</ul>
-						</div>
-						<p class="vnet">Net opex {formatUsd(opexChart.net)}/kg</p>
-					{:else if chartView === 'opex2'}
-						<div class="vchart">
-							<div class="vplot vplot-fall" aria-label="Operating cost stacked waterfall">
+							<div class="vplot vplot-fall" aria-label="Operational costs">
 								{#each opexChart.bars as bar, i}
 									<div
 										class="wf-col"
@@ -1137,10 +1227,10 @@
 								{/each}
 							</ul>
 						</div>
-						<p class="vnet">Net opex {formatUsd(opexChart.net)}/kg</p>
+						<p class="vnet">Net operational costs {formatUsd(opexChart.net)}/kg</p>
 					{:else}
 						<div class="vchart">
-							<div class="vplot" aria-label="Capital cost stack">
+							<div class="vplot" aria-label="Capital costs">
 								{#each capexChart as bar}
 									<button
 										type="button"
@@ -1185,7 +1275,7 @@
 								{/each}
 							</ul>
 						</div>
-						<p class="vnet">Total capex {formatUsd(result.capex.total)}</p>
+						<p class="vnet">Total capital costs {formatUsd(result.capex.total)}</p>
 					{/if}
 
 					{#if selectedDetail}
@@ -1231,7 +1321,12 @@
 										<span class="compare-unit">{metric.unit}</span>
 									</div>
 									{#each compareCols as col, i}
-										{@const amount = comparison[col.id][metric.key]}
+										{@const amount =
+											metric.key === 'capexPerKg'
+												? result.inputs.annualKg
+													? comparison[col.id].capex / result.inputs.annualKg
+													: 0
+												: comparison[col.id][metric.key]}
 										<div
 											class="compare-row"
 											class:current={result.inputs.pathway === col.id}
@@ -1245,9 +1340,9 @@
 												{#if result.inputs.pathway === col.id}
 													<span class="current-mark">Selected</span>
 												{/if}
-												{#if comparison[col.id].facilityNa && metric.key !== 'netOpexPerYear'}
+												{#if comparison[col.id].facilityNa && metric.id === 'capex'}
 													<span class="na-mark">Facility N/A</span>
-												{:else if comparison[col.id].facilityAssumedNew && metric.key === 'capex'}
+												{:else if comparison[col.id].facilityAssumedNew && metric.id === 'capex'}
 													<span class="na-mark">Costed as new</span>
 												{/if}
 											</span>
@@ -1410,8 +1505,7 @@
 		font-size: 0.78rem;
 		font-weight: 600;
 		color: var(--teal);
-		text-decoration: underline;
-		text-underline-offset: 0.18em;
+		text-decoration: none;
 	}
 
 	.manual-link:hover {
@@ -1662,11 +1756,12 @@
 	.choice[data-tip]:hover::after,
 	.choice[data-tip]:focus-visible::after {
 		content: attr(data-tip);
-		position: absolute;
-		left: 0;
-		bottom: calc(100% + 6px);
+		position: fixed;
+		left: var(--tip-x, 8px);
+		top: var(--tip-y, 8px);
+		bottom: auto;
 		width: max-content;
-		max-width: min(22rem, calc(100vw - 2rem));
+		max-width: min(22rem, calc(100vw - 1rem));
 		padding: 0.45rem 0.6rem;
 		background: var(--teal);
 		color: var(--on-teal);
@@ -1676,16 +1771,10 @@
 		letter-spacing: 0;
 		text-transform: none;
 		border-radius: 6px;
-		z-index: 40;
+		z-index: 80;
 		pointer-events: none;
 		box-shadow: 0 6px 18px rgba(2, 60, 64, 0.16);
 		white-space: pre-line;
-	}
-
-	.choice[data-tip]:hover::after,
-	.choice[data-tip]:focus-visible::after {
-		top: calc(100% + 6px);
-		bottom: auto;
 	}
 
 	.field:focus-within label[data-tip]::after {
@@ -1767,6 +1856,53 @@
 
 	.computed.three {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.computed.computed-sum {
+		grid-template-columns: 1fr;
+	}
+
+	.snapshot {
+		display: grid;
+		gap: 0.4rem;
+		margin: 0 0 1rem;
+		padding: 0.65rem 0.8rem;
+		background: #f4efe4;
+		border: 1px solid #c4a574;
+		border-radius: var(--radius);
+	}
+
+	.snapshot-label {
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #8a5a12;
+	}
+
+	.snapshot > div:not(.snapshot-label) {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 0.75rem;
+	}
+
+	.snapshot .k {
+		display: block;
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0;
+		text-transform: none;
+		color: #8a5a12;
+	}
+
+	.snapshot .v {
+		display: block;
+		font-size: 0.95rem;
+		font-weight: 700;
+		font-variant-numeric: tabular-nums;
+		color: #6b3f0a;
+		white-space: nowrap;
 	}
 
 	.computed.bad {
@@ -2653,8 +2789,12 @@
 		justify-content: space-between;
 		gap: 0.55rem 1rem;
 		margin-top: 0.85rem;
-		padding-top: 0.75rem;
+		padding: 0.75rem 0 0.15rem;
 		border-top: 1px solid var(--line);
+		position: sticky;
+		bottom: 0;
+		z-index: 3;
+		background: var(--panel);
 	}
 
 	.run-note {
@@ -2702,6 +2842,40 @@
 		margin: 0 0 1rem;
 	}
 
+	.results-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 0.75rem 1.25rem;
+	}
+
+	.results-head-copy {
+		min-width: 0;
+	}
+
+	.results-year {
+		margin-left: auto;
+		text-align: right;
+		flex: 0 0 auto;
+	}
+
+	.results-year-label {
+		display: block;
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--muted);
+	}
+
+	.results-year-value {
+		display: block;
+		margin-top: 0.15rem;
+		font-size: 1.35rem;
+		font-weight: 700;
+		line-height: 1.15;
+		font-variant-numeric: tabular-nums;
+		color: var(--header);
+	}
+
 	.open-qs {
 		margin-bottom: 1rem;
 	}
@@ -2728,7 +2902,8 @@
 	.workspace-on .chrome {
 		flex: 0 0 auto;
 		display: grid;
-		grid-template-columns: minmax(13rem, 0.8fr) minmax(16rem, 1fr) minmax(20rem, 1.4fr);
+		grid-template-columns: auto max-content max-content minmax(0, 1fr);
+		grid-template-areas: 'title sector enduse links';
 		gap: 0.45rem;
 		align-items: stretch;
 		overflow: visible;
@@ -2740,6 +2915,7 @@
 	}
 
 	.workspace-on .site.compact {
+		grid-area: title;
 		margin: 0;
 		display: flex;
 		flex-direction: column;
@@ -2751,9 +2927,16 @@
 	}
 
 	.workspace-on .about {
-		margin: 0.55rem 0 0;
+		grid-area: links;
+		align-self: center;
+		justify-self: start;
+		margin: 0;
 		max-width: none;
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 0.28rem;
+		padding-left: 0.2rem;
 	}
 
 	.workspace-on .about-label {
@@ -2766,7 +2949,7 @@
 	}
 
 	.workspace-on .manual-link {
-		margin: 0.28rem 0 0;
+		margin: 0;
 		font-size: 0.72rem;
 	}
 
@@ -2781,13 +2964,13 @@
 
 	.workspace-on .about-body {
 		display: none;
-		position: absolute;
+		position: fixed;
 		z-index: 60;
-		top: 100%;
-		left: 0;
-		width: min(34rem, 72vw);
+		top: var(--about-y, 0px);
+		left: var(--about-x, 12px);
+		width: var(--about-w, min(34rem, calc(100vw - 1.5rem)));
 		margin: 0;
-		padding-top: 0.35rem;
+		padding-top: 0.4rem;
 	}
 
 	.workspace-on .about.about-open .about-body {
@@ -2823,8 +3006,33 @@
 	}
 
 	.workspace-on .branch {
+		grid-area: sector;
 		margin: 0;
 		padding: 0.35rem 0.55rem 0.4rem;
+		width: max-content;
+		max-width: 20rem;
+	}
+
+	.workspace-on #enduse-panel {
+		grid-area: enduse;
+		max-width: 26rem;
+	}
+
+	.workspace-on .choice-grid {
+		width: max-content;
+		max-width: 100%;
+	}
+
+	.workspace-on .choice-grid.two {
+		grid-template-columns: max-content max-content;
+	}
+
+	.workspace-on .choice-grid.three {
+		grid-template-columns: max-content max-content max-content;
+	}
+
+	.workspace-on .choice {
+		white-space: nowrap;
 	}
 
 	.workspace-on .branch.settled h2 {
@@ -2874,20 +3082,24 @@
 	}
 
 	.workspace-on .layout > .controls {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		flex-direction: column;
 		align-content: start;
-		column-gap: 0.65rem;
-		row-gap: 0;
-		overflow: visible;
+		overflow: hidden;
+		min-height: 0;
 	}
 
-	.workspace-on .controls > h2,
-	.workspace-on .controls > .inputs-tip,
-	.workspace-on .controls > .panel-intro,
-	.workspace-on .controls > .field-group:not(.option-idle),
+	.workspace-on .inputs-scroll {
+		flex: 1 1 auto;
+		min-height: 0;
+		overflow: auto;
+	}
+
 	.workspace-on .controls > .run-bar {
-		grid-column: 1 / -1;
+		flex: 0 0 auto;
+		background: var(--panel);
+		position: relative;
+		z-index: 2;
 	}
 
 	.workspace-on .option-idle {
@@ -3041,6 +3253,8 @@
 
 	.workspace-on .computed.computed-sum {
 		width: 100%;
+		flex-direction: column;
+		align-items: stretch;
 		margin: 0.28rem 0 0.08rem;
 		padding: 0.32rem 0 0.06rem;
 		border: none;
@@ -3068,6 +3282,24 @@
 		color: var(--header);
 	}
 
+	.workspace-on .snapshot {
+		margin: 0.28rem 0 0.12rem;
+		padding: 0.38rem 0.45rem;
+		gap: 0.18rem;
+	}
+
+	.workspace-on .snapshot-label {
+		font-size: 0.62rem;
+	}
+
+	.workspace-on .snapshot .k {
+		font-size: 0.72rem;
+	}
+
+	.workspace-on .snapshot .v {
+		font-size: 0.8rem;
+	}
+
 	.workspace-on .field-hint {
 		display: none;
 	}
@@ -3090,9 +3322,18 @@
 	.workspace-on .results-head {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: baseline;
+		align-items: flex-start;
 		gap: 0.25rem 0.65rem;
 		margin-bottom: 0.35rem;
+	}
+
+	.workspace-on .results-year-label {
+		font-size: 0.62rem;
+	}
+
+	.workspace-on .results-year-value {
+		margin-top: 0.05rem;
+		font-size: 1.02rem;
 	}
 
 	.workspace-on .results-head h2,

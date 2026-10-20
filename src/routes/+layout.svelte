@@ -12,6 +12,9 @@
 		$page.url.pathname.startsWith(
 			'/our-work/refrigerant-management-and-transition/costs/explorer'
 		);
+	$: hideFooter = $page.url.pathname.startsWith(
+		'/our-work/refrigerant-management-and-transition/explorer/user-manual'
+	);
 </script>
 
 {#if import.meta.env.DEV}
@@ -27,7 +30,9 @@
 	<div id="root-layout" class:dev-hint-active={import.meta.env.DEV}>
 		<Header navItems={data.navItems} />
 		<slot />
-		<Footer />
+		{#if !hideFooter}
+			<Footer />
+		{/if}
 	</div>
 {/if}
 
