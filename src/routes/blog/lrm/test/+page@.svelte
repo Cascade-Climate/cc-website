@@ -28,6 +28,7 @@
 	let sector = '';
 	let pathway = '';
 	let filledFromDefaults = false;
+	let aboutOpen = false;
 
 	let chargeSizeKg = 100;
 	let chargeCappedNote = false;
@@ -56,8 +57,10 @@
 	let openCats = {};
 	let result = null;
 	let publishedKey = '';
-	/** @type {'bars' | 'alt'} */
-	let chartView = 'bars';
+	/** @type {'opex' | 'opex2' | 'capex'} */
+	let chartView = 'opex';
+	const CARBON_TIP =
+		'For reference, Singapore’s carbon tax, for 2026-2027, is S$45/tCO2e (~US$35), and Japan’s GX-ETS, mandatory since 2026, operates within a price corridor of ¥1,700-¥4,300/tCO2e (~US$11-27)';
 	let selectedAlt = '';
 
 	$: residential = sector === SECTOR_RESIDENTIAL;
@@ -127,15 +130,6 @@
 	$: autoScenario = live ? defaultCostScenario(live.inputs.annualKg) : 'Medium';
 	$: liveKey = JSON.stringify(inputSnapshot);
 	$: stale = Boolean(result) && publishedKey !== liveKey;
-
-	function pathwayTag(p) {
-		if (p === PATHWAY_DESTRUCTION) return 'DE';
-		if (p === PATHWAY_RECLAMATION) return 'RC';
-		return 'RY';
-	}
-
-	$: liveCode = pathwayTag(pathway);
-	$: pathwayCode = result ? pathwayTag(result.inputs.pathway) : liveCode;
 
 	function toggleCat(id) {
 		openCats = { ...openCats, [id]: !openCats[id] };
@@ -248,6 +242,11 @@
 		bumpTo('workspace');
 	}
 
+	$: retrofitUnavailable =
+		pathway === PATHWAY_RECLAMATION ||
+		(pathway === PATHWAY_DESTRUCTION && destructionTech === 'Plasma Arc');
+	$: if (retrofitUnavailable && facilityStatus === 'Retrofit') facilityStatus = 'New';
+
 	$: if (residential && Number(chargeSizeKg) > RESIDENTIAL_CHARGE_CAP_KG) {
 		chargeSizeKg = RESIDENTIAL_CHARGE_CAP_KG;
 		chargeCappedNote = true;
@@ -276,6 +275,58 @@
 		return Math.min(100, (value / scale) * 100);
 	}
 
+	function layoutWaterfall(steps, credit) {
+		let running = 0;
+		const bars = [];
+		for (const step of steps) {
+			const from = running;
+			running += step.value;
+			bars.push({ ...step, from, to: running, drop: false, tone: bars.length });
+		}
+		const gross = running;
+		let net = gross;
+		if (credit) {
+			const to = gross + credit.value;
+			bars.push({ ...credit, from: gross, to, drop: true });
+			net = to;
+		}
+		const min = Math.min(0, net);
+		const max = Math.max(gross, 0);
+		const span = Math.max(max - min, 0.0001);
+		const pct = (v) => ((v - min) / span) * 100;
+		return {
+			net,
+			bars: bars.map((step) => {
+				const lo = Math.min(step.from, step.to);
+				const hi = Math.max(step.from, step.to);
+				const heightPct = pct(hi) - pct(lo);
+				return {
+					...step,
+					bottomPct: pct(lo),
+					heightPct: step.value === 0 ? 0 : Math.max(heightPct, 1.5),
+					toPct: pct(step.to)
+				};
+			})
+		};
+	}
+
+	function layoutStack(rows) {
+		const total = rows.reduce((sum, row) => sum + Math.max(row.value, 0), 0);
+		const span = Math.max(total, 0.0001);
+		let running = 0;
+		return rows.map((row, i) => {
+			const from = running;
+			running += Math.max(row.value, 0);
+			const heightPct = (Math.max(row.value, 0) / span) * 100;
+			return {
+				...row,
+				tone: i % 4,
+				bottomPct: (from / span) * 100,
+				heightPct: row.value === 0 ? 0 : Math.max(heightPct, 1.5)
+			};
+		});
+	}
+
 	function capexBit(name, item) {
 		if (!item || item.hidden) return null;
 		return {
@@ -285,28 +336,19 @@
 		};
 	}
 
-	$: opexCats = result
+	$: opexSteps = result
 		? [
 				{
-					id: 'opex-labour',
-					name: 'Recovery labour',
-					value: result.opex.labour + result.opex.refillMarkup,
-					unit: '/kg',
+					id: 'opex-recovery',
+					name: 'Recovery',
+					value: result.opex.labour + result.opex.refillMarkup + result.opex.recoveryTransport,
 					tooltip:
-						'Labour to recover refrigerant into cylinders, plus the 50% recycling mark-up when that pathway is selected.',
+						'Labour to recover refrigerant, the recycling mark-up when that pathway is selected, and fuel from the site to the central facility.',
 					parts: [
 						{ name: 'Recovery labour costs', value: result.opex.labour },
-						{ name: 'Mark-up for recycling costs', value: result.opex.refillMarkup }
-					]
-				},
-				{
-					id: 'opex-recovery-transport',
-					name: 'Recovery transportation',
-					value: result.opex.recoveryTransport,
-					unit: '/kg',
-					tooltip:
-						'Fuel to the central facility: distance per team × number of teams × fuel cost per km, divided by kg recovered per day.',
-					parts: [
+						...(result.inputs.pathway === PATHWAY_RECYCLING
+							? [{ name: 'Mark-up for recycling costs', value: result.opex.refillMarkup }]
+							: []),
 						{
 							name: 'Recovery transportation (on-site to central facility)',
 							value: result.opex.recoveryTransport
@@ -317,7 +359,6 @@
 					id: 'opex-central',
 					name: 'Central facility',
 					value: result.opex.warehouse + result.opex.central,
-					unit: '/kg',
 					tooltip: 'Warehouse storage plus central-facility consolidation into large cylinders or ton tanks.',
 					parts: [
 						{ name: 'Warehouse storage', value: result.opex.warehouse },
@@ -328,7 +369,6 @@
 					id: 'opex-transport',
 					name: 'Transport & handling to end-use',
 					value: result.opex.transport,
-					unit: '/kg',
 					tooltip: 'In-country or exported haulage to reclamation or destruction. Zero for Recycling.',
 					parts: [{ name: 'Transport & handling to end-use facility', value: result.opex.transport }]
 				},
@@ -336,33 +376,33 @@
 					id: 'opex-enduse',
 					name: 'End-use processing',
 					value: result.opex.processing,
-					unit: '/kg',
 					tooltip: 'Reclamation or destruction processing. Zero for Recycling.',
 					parts: [{ name: 'End-use processing', value: result.opex.processing }]
-				},
-				...(result.opex.saleCredit || result.opex.virginSavings
-					? [
-							{
-								id: 'opex-credits',
-								name: 'Credits',
-								value: -(result.opex.saleCredit + result.opex.virginSavings),
-								unit: '/kg',
-								tooltip:
-									'Sale price of reclaimed refrigerant and avoided virgin purchases are subtracted from gross to give net opex.',
-								parts: [
-									{ name: 'Sale price of reclaimed refrigerant', value: -result.opex.saleCredit },
-									{
-										name: 'Virgin refrigerant savings from recycling',
-										value: -result.opex.virginSavings
-									}
-								]
-							}
-						]
-					: [])
+				}
 			]
 		: [];
 
-	$: opexScale = Math.max(...opexCats.filter((r) => !r.mock).map((r) => Math.abs(r.value)), 0.0001);
+	$: opexCredit = !result
+		? null
+		: result.inputs.pathway === PATHWAY_RECLAMATION
+			? {
+					id: 'opex-sale',
+					name: 'Sale price of reclaimed refrigerant',
+					value: -result.opex.saleCredit,
+					tooltip: 'Subtracted from gross operating cost. This is the blended sale price input.',
+					parts: [{ name: 'Sale price of reclaimed refrigerant', value: -result.opex.saleCredit }]
+				}
+			: result.inputs.pathway === PATHWAY_RECYCLING
+				? {
+						id: 'opex-virgin',
+						name: 'Price of virgin refrigerant avoided',
+						value: -result.opex.virginSavings,
+						tooltip: 'Subtracted from gross operating cost. This is the virgin-refrigerant price input.',
+						parts: [{ name: 'Price of virgin refrigerant avoided', value: -result.opex.virginSavings }]
+					}
+				: null;
+
+	$: opexChart = layoutWaterfall(opexSteps, opexCredit);
 
 	$: capexCats = result
 		? [
@@ -422,53 +462,9 @@
 				}))
 		: [];
 
-	$: capexScale = Math.max(...capexCats.map((r) => r.value), 0.0001);
+	$: capexChart = layoutStack(capexCats);
 
-	$: waterfallSteps = (() => {
-		let running = 0;
-		const steps = [];
-		for (const row of opexCats) {
-			const from = running;
-			running += row.value;
-			steps.push({
-				...row,
-				from,
-				to: running,
-				delta: row.value
-			});
-		}
-		const vals = steps.flatMap((s) => [s.from, s.to]);
-		const min = Math.min(0, ...vals);
-		const max = Math.max(0, ...vals);
-		const span = Math.max(max - min, 0.0001);
-		const pct = (v) => ((v - min) / span) * 100;
-		return steps.map((s, i) => {
-			const lo = Math.min(s.from, s.to);
-			const hi = Math.max(s.from, s.to);
-			return {
-				...s,
-				leftPct: pct(lo),
-				widthPct: Math.max(pct(hi) - pct(lo), 0.8),
-				zeroPct: pct(0),
-				connectorPct: i === 0 ? null : pct(steps[i - 1].to),
-				negative: s.delta < 0
-			};
-		});
-	})();
-
-	$: selectedOpexAlt =
-		selectedAlt && selectedAlt.startsWith('opex-')
-			? opexCats.find((row) => row.id === selectedAlt) || null
-			: null;
-	$: selectedCapexAlt =
-		selectedAlt && selectedAlt.startsWith('capex-')
-			? capexCats.find((row) => row.id === selectedAlt) || null
-			: null;
-
-	$: capexStackTotal = Math.max(
-		capexCats.reduce((sum, row) => sum + Math.max(row.value, 0), 0),
-		0.0001
-	);
+	$: selectedDetail = [...opexChart.bars, ...capexChart].find((row) => row.id === selectedAlt) || null;
 
 	$: comparison = result ? comparePathways(result.inputs) : null;
 	$: compareCols = [
@@ -478,8 +474,7 @@
 	].filter((col) => comparison?.[col.id]);
 	$: compareMetrics = [
 		{ id: 'opex', label: 'Total net opex per year', unit: 'USD / year', key: 'netOpexPerYear' },
-		{ id: 'capex', label: 'Total capex', unit: 'USD · one-off', key: 'capex' },
-		{ id: 'grand', label: 'Grand total', unit: 'USD · year-1 opex + capex', key: 'grandTotal' }
+		{ id: 'capex', label: 'Total capex', unit: 'USD · one-off', key: 'capex' }
 	].map((metric) => ({
 		...metric,
 		scale: Math.max(
@@ -487,7 +482,7 @@
 			...compareCols.map((col) => Math.abs(comparison?.[col.id]?.[metric.key] || 0))
 		)
 	}));
-	$: compareFacilityNa = compareCols.some((col) => comparison?.[col.id]?.facilityNa);
+	$: compareAssumedNew = compareCols.some((col) => comparison?.[col.id]?.facilityAssumedNew);
 
 	$: sectorBlurb = residential
 		? 'Residential recovery can include on-site pump-down when it applies, then recovery at a central facility. The model no longer assumes every unit is pumped down first.'
@@ -495,10 +490,10 @@
 </script>
 
 <svelte:head>
-	<title>Lifecycle Refrigerant Management Calculator Mock 3.0 — Cascade Climate (unlisted)</title>
+	<title>Lifecycle Refrigerant Management Explorer — Cascade Climate (unlisted)</title>
 	<meta
 		name="description"
-		content="Unlisted Lifecycle Refrigerant Management Calculator Mock 3.0 using LRM Cost Model V5.0 (SEA)."
+		content="Unlisted Lifecycle Refrigerant Management Explorer. Version Oct 16 5pm ET."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -515,7 +510,7 @@
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">Unlisted · V5.0 SEA</div>
+				<div class="eyebrow">V. Oct 16 5pm ET</div>
 				<h1>
 					<img
 						class="brand"
@@ -529,22 +524,34 @@
 						<span class="title-rest">Explorer</span>
 					</span>
 				</h1>
-				<details class="about">
-					<summary>About the calculator</summary>
+				<div
+					class="about"
+					class:about-open={aboutOpen}
+					on:mouseenter={() => (aboutOpen = true)}
+					on:mouseleave={() => (aboutOpen = false)}
+				>
+					<p
+						class="about-label"
+						tabindex={ready ? 0 : undefined}
+						on:focus={() => (aboutOpen = true)}
+						on:blur={() => (aboutOpen = false)}
+					>
+						About the Explorer
+					</p>
+					<a
+						class="manual-link"
+						href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
+						>User Manual</a
+					>
 					<div class="about-body">
 						<p>
-							The Lifecycle Refrigerant Management (LRM) Cost Calculator is designed for the people
-							deciding whether and how to invest in refrigerant recovery — city and state program
-							leads, regulators, utilities, and private operators weighing financing options. It
-							covers the full post-recovery value chain: on-site recovery and reuse, transport to and
-							storage at central facilities, recycling, reclamation, and destruction. Results are
-							screening-level estimates based on default assumptions and user inputs, and should be
-							used to explore and compare pathways at a planning level — not as final costs,
-							investment-grade figures, or the basis for regulatory, procurement, or compliance
-							decisions.
+							The LRM Cost Explorer is an interactive tool that estimates the capital and operational
+							costs of LRM activities from a set of user inputs. Results are intended to provide a
+							high-level estimate to support prioritization and planning of LRM activities. The
+							Explorer is not meant to serve as a comprehensive financial model.
 						</p>
 					</div>
-				</details>
+				</div>
 			</div>
 		</header>
 
@@ -582,6 +589,7 @@
 							type="button"
 							class="choice"
 							class:selected={pathway === p.id}
+							data-tip={p.body}
 							on:click={() => choosePathway(p.id)}
 						>
 							<span class="choice-title">{p.title}</span>
@@ -596,6 +604,7 @@
 			<div class="layout" id="workspace" class:has-results={Boolean(result)} class:awaiting={!result}>
 				<section class="panel controls" aria-labelledby="build-heading">
 					<h2 id="build-heading">Inputs</h2>
+					<p class="inputs-tip">Enter the inputs below. For guidance, hover over an input.</p>
 					<p class="panel-intro">
 						Grouped by the value chain. Amber-style fields are inputs. Bold figures are calculated.
 					</p>
@@ -633,7 +642,9 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="For 'Commercial HVAC' sector, only 'High Capacity' can be selected."
+								data-tip={commercial
+									? 'For Commercial HVAC, default is High Capacity'
+									: undefined}
 								for="machineType">Recovery machine type</label
 							>
 							{#if commercial}
@@ -662,8 +673,8 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = USD $10/hour, Commercial HVAC = USD $20/hour (assuming a two-man team)"
-								for="labourPerHour">Hourly labor cost rate per unit (USD/hour)</label
+								data-tip="Default guidance: Residential AC = USD 10/hour, Commercial HVAC = USD 20/hour (assuming a two-man team)"
+								for="labourPerHour">Hourly labor rate (USD/hr)</label
 							>
 							<input id="labourPerHour" type="number" min="0" step="0.01" bind:value={labourPerHour} />
 						</div>
@@ -687,15 +698,15 @@
 							/>
 						</div>
 						<div class="field">
-							<label data-tip="Default guidance: USD $1.50/L" for="fuelPricePerL">Fuel price (USD/L)</label>
+							<label data-tip="Default guidance: USD 1.50/L" for="fuelPricePerL">Fuel price (USD/L)</label>
 							<input id="fuelPricePerL" type="number" min="0" step="0.01" bind:value={fuelPricePerL} />
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC 1 team for every 10 units recovered per day. For Commercial HVAC, 1 team for every unit recovered from per day."
-								for="teams">Number of recovery teams mobilized per day</label
+								data-tip="Default guidance: Residential AC = 200, Commercial HVAC = 75"
+								for="daysPerYear">Estimated number of recovery days per year</label
 							>
-							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
+							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
 						</div>
 						<div class="field">
 							<label
@@ -706,15 +717,15 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default guidance: Residential AC = 200, Commercial HVAC = 75"
-								for="daysPerYear">Estimated number of recovery days per year</label
+								data-tip="Default guidance: Residential AC = 1 team for every 10 units recovered per day, Commercial HVAC = 1 team for every unit recovered per day"
+								for="teams">Number of recovery teams mobilized per day</label
 							>
-							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
+							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
 						</div>
 						</div>
-						<div class="computed">
+						<div class="computed computed-sum">
 							<div>
-								<span class="k">Number of units recovered per year</span>
+								<span class="k">Total units recovered per year</span>
 								<span class="v">{formatKg(live.inputs.unitsPerYear, 0)}</span>
 							</div>
 						</div>
@@ -738,7 +749,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip={'This selection will determine the costs for central facility activities & end-use processing, based on the total amount of refrigerant recovered per year. Default guidance: (i) if <5,000 kg/year, select High; (ii) if 5,000 kg - 50,000 kg/year, select Medium; (iii) if > 50,000 kg/year, select Low.'}
+								data-tip={'This selection will determine the costs for central facility activities & end-use processing, based on the total amount of refrigerant recovered per year. Default guidance: \n(i) if <5,000 kg/year, select "High"\n(ii) if 5,000 kg - 50,000 kg/year, select "Medium"\n(iii) if > 50,000 kg/year, select "Low"'}
 								for="costScenarioMode">Cost scenario</label
 							>
 							<select id="costScenarioMode" bind:value={costScenarioMode}>
@@ -782,21 +793,16 @@
 						{#if pathway === PATHWAY_RECLAMATION}
 							<div class="fields three">
 							<div class="field">
-								<label
-									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable."
-									for="facilityStatus">Facility status</label
-								>
+								<label for="facilityStatus">Facility status</label>
 								<select id="facilityStatus" bind:value={facilityStatus}>
 									<option>Existing</option>
-									<option>Retrofit</option>
 									<option>New</option>
 								</select>
 							</div>
 							<div class="field">
 								<label
-									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing."
-									for="location">Location</label
-								>
+									data-tip={'In-country: Refrigerant is processed in-country\nExported: Refrigerant is exported overseas for processing'}
+									for="location">Location</label>
 								<select id="location" bind:value={location}>
 									<option>In-country</option>
 									<option>Exported</option>
@@ -827,21 +833,19 @@
 								</select>
 							</div>
 							<div class="field">
-								<label
-									data-tip="For 'Destruction > Plasma Arc' & 'Reclamation' selections, the 'Retrofit' option is not applicable."
-									for="facilityStatusDest">Facility status</label
-								>
+								<label for="facilityStatusDest">Facility status</label>
 								<select id="facilityStatusDest" bind:value={facilityStatus}>
 									<option>Existing</option>
-									<option>Retrofit</option>
+									{#if destructionTech !== 'Plasma Arc'}
+										<option>Retrofit</option>
+									{/if}
 									<option>New</option>
 								</select>
 							</div>
 							<div class="field">
 								<label
-									data-tip="In-country: Refrigerant is processed in-country. Exported: Refrigerant is exported overseas for processing."
-									for="locationDest">Location</label
-								>
+									data-tip={'In-country: Refrigerant is processed in-country\nExported: Refrigerant is exported overseas for processing'}
+									for="locationDest">Location</label>
 								<select id="locationDest" bind:value={location}>
 									<option>In-country</option>
 									<option>Exported</option>
@@ -894,7 +898,7 @@
 						{#if stale}
 							<p class="run-note">Inputs have changed. Calculate again to refresh outputs.</p>
 						{:else if !result}
-							<p class="run-note">When the inputs look right, calculate to produce the cost view.</p>
+							<p class="run-note">When you're ready, calculate the costs.</p>
 						{:else}
 							<p class="run-note">Outputs match the current inputs.</p>
 						{/if}
@@ -918,7 +922,7 @@
 				{#if result}
 				<section class="panel results" class:has-open={Object.values(openCats).some(Boolean)} class:stale aria-labelledby="results-heading">
 					<div class="results-head">
-						<div class="model-tag">V5.0 SEA · {pathwayCode}</div>
+						<div class="model-tag">Updated Oct 16 5pm ET</div>
 						<h2 id="results-heading">Outputs</h2>
 						<p class="summary">
 							{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
@@ -932,243 +936,280 @@
 						</p>
 					</div>
 
-					<div class="metrics three">
+					<div class="metrics" class:four={result.inputs.pathway === PATHWAY_DESTRUCTION}>
 						<div class="metric">
-							<div class="label">Total amount of refrigerant recovered per year</div>
+							<div class="label">
+								Total refrigerant recovered
+								<span class="label-note">per year</span>
+							</div>
 							<div class="value">{formatKg(result.inputs.annualKg, 0)}</div>
 							<span class="unit">kg / year</span>
 						</div>
+						{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
+							<div class="metric">
+								<div class="label">Opex</div>
+								<div class="value">{formatUsd(result.opex.net)}</div>
+								<span class="unit">USD / kg</span>
+							</div>
+							<div class="metric" data-tip={CARBON_TIP}>
+								<div class="label">Opex</div>
+								<div class="value">{formatUsd(result.climate.costPerTco2e)}</div>
+								<span class="unit">USD / tCO2e</span>
+							</div>
+						{:else if result.inputs.pathway === PATHWAY_RECLAMATION}
+							<div class="metric">
+								<div class="label">
+									Opex
+									<span class="label-note">net of reclaimed refrigerant sales</span>
+								</div>
+								<div class="value">{formatUsd(result.opex.net)}</div>
+								<span class="unit">USD / kg</span>
+							</div>
+						{:else}
+							<div class="metric">
+								<div class="label">
+									Opex
+									<span class="label-note">net of virgin refrigerant avoided</span>
+								</div>
+								<div class="value">{formatUsd(result.opex.net)}</div>
+								<span class="unit">USD / kg</span>
+							</div>
+						{/if}
 						<div class="metric">
-							<div class="label">Total OPEX</div>
-							<div class="value">{formatUsd(result.opex.net)}</div>
-							<span class="unit">USD / kg · net</span>
-						</div>
-						<div class="metric">
-							<div class="label">Total CAPEX</div>
+							<div class="label">Capex</div>
 							<div class="value">{formatUsd(result.capex.total)}</div>
 							<span class="unit">USD · one-off</span>
 						</div>
 					</div>
 
-					<div class="view-tabs" role="tablist" aria-label="Output chart style">
+					<div class="view-tabs" role="tablist" aria-label="Output charts">
 						<button
 							type="button"
 							role="tab"
 							class="view-tab"
-							class:active={chartView === 'bars'}
-							aria-selected={chartView === 'bars'}
+							class:active={chartView === 'opex'}
+							aria-selected={chartView === 'opex'}
 							on:click={() => {
-								chartView = 'bars';
+								chartView = 'opex';
 								selectedAlt = '';
 							}}
 						>
-							Bars
+							See Opex cost breakdown
 						</button>
 						<button
 							type="button"
 							role="tab"
 							class="view-tab"
-							class:active={chartView === 'alt'}
-							aria-selected={chartView === 'alt'}
+							class:active={chartView === 'opex2'}
+							aria-selected={chartView === 'opex2'}
 							on:click={() => {
-								chartView = 'alt';
-								openCats = {};
+								chartView = 'opex2';
+								selectedAlt = '';
 							}}
 						>
-							Waterfall + stacked
+							See Opex 2 cost breakdown
+						</button>
+						<button
+							type="button"
+							role="tab"
+							class="view-tab"
+							class:active={chartView === 'capex'}
+							aria-selected={chartView === 'capex'}
+							on:click={() => {
+								chartView = 'capex';
+								selectedAlt = '';
+							}}
+						>
+							See Capex cost breakdown
 						</button>
 					</div>
+					<p class="inputs-tip">For a detailed breakdown, click any cost.</p>
 
-					{#if chartView === 'bars'}
-					<div class="charts">
-					<div class="breakdown">
-						<h3>OPEX</h3>
-						<p class="opex-thesis">
-							Summary thesis of how the user should interpret the end result. Placeholder for two to
-							three sentences that explain what these operating costs mean for the selected pathway
-							and how to read them against the totals above.
-						</p>
-						{#each opexCats as row}
-							<div class="cat" class:mock={row.mock} class:open={openCats[row.id]}>
-								<button type="button" class="cat-toggle" on:click={() => toggleCat(row.id)}>
-									<span class="name">{row.name}</span>
-									<div class="bar-track">
-										<div
-											class="bar-fill"
-											class:mock-fill={row.mock}
-											style="width: {row.mock ? 42 : opexBar(Math.abs(row.value), opexScale)}%"
-										></div>
-									</div>
-									<span class="on-bar">
-										{#if row.mock}
-											Mock
-										{:else}
-											{formatUsd(row.value)}{row.unit}
-										{/if}
-									</span>
-								</button>
-								{#if openCats[row.id]}
-									<ul class="cat-parts">
-										{#each row.parts as part}
-											<li>
-												<span>{part.name}</span>
-												<span>
-													{#if part.mock || part.value == null}
-														Mock — awaiting source
-													{:else}
-														{formatUsd(part.value)}{row.unit}
-													{/if}
-												</span>
-											</li>
-										{/each}
-									</ul>
-									<p class="cat-tip">{row.tooltip}</p>
-								{/if}
-							</div>
-						{/each}
-					</div>
-
-					<div class="breakdown capex-breakdown">
-						<h3>CAPEX</h3>
-						{#each capexCats as row}
-							<div class="cat" class:open={openCats[row.id]}>
-								<button type="button" class="cat-toggle" on:click={() => toggleCat(row.id)}>
-									<span class="name">{row.name}</span>
-									<div class="bar-track">
-										<div class="bar-fill" style="width: {opexBar(row.value, capexScale)}%"></div>
-									</div>
-									<span class="on-bar">{formatUsd(row.value)}</span>
-								</button>
-								{#if openCats[row.id]}
-									<ul class="cat-parts">
-										{#each row.parts as part}
-											<li>
-												<span>{part.name}{#if part.note} · {part.note}{/if}</span>
-												<span>{formatUsd(part.value)}</span>
-											</li>
-										{/each}
-									</ul>
-									<p class="cat-tip">{row.tooltip}</p>
-								{/if}
-							</div>
-						{/each}
-					</div>
-					</div>
-					{:else}
-					<div class="charts alt-charts">
-						<div class="breakdown">
-							<h3>OPEX waterfall</h3>
-							<p class="opex-thesis">
-								Each step adds or subtracts from the running total. Click a step for the line-item
-								breakdown.
-							</p>
-							<div class="waterfall">
-								{#each waterfallSteps as step}
+					{#if chartView === 'opex'}
+						<div class="vchart">
+							<div class="vplot" aria-label="Operating cost waterfall">
+								{#each opexChart.bars as bar}
 									<button
 										type="button"
-										class="wf-row"
-										class:selected={selectedAlt === step.id}
-										class:negative={step.negative}
-										on:click={() => selectAlt(step.id)}
-									>
-										<span class="wf-label">{step.name}</span>
-										<span class="wf-track">
-											{#if step.connectorPct != null}
-												<span class="wf-connector" style="left: {step.connectorPct}%"></span>
-											{/if}
-											<span class="wf-zero" style="left: {step.zeroPct}%"></span>
-											<span
-												class="wf-bar"
-												style="left: {step.leftPct}%; width: {step.widthPct}%"
-											></span>
-										</span>
-										<span class="wf-amt">
-											{step.delta >= 0 ? '+' : ''}{formatUsd(step.delta)}{step.unit}
-										</span>
-									</button>
-								{/each}
-								<div class="wf-net">
-									<span class="wf-label">Net opex</span>
-									<span class="wf-amt net">{formatUsd(result.opex.net)}/kg</span>
-								</div>
-							</div>
-							{#if selectedOpexAlt}
-								<div class="alt-detail">
-									<div class="alt-detail-title">{selectedOpexAlt.name}</div>
-									<ul class="cat-parts">
-										{#each selectedOpexAlt.parts as part}
-											<li>
-												<span>{part.name}</span>
-												<span>{formatUsd(part.value)}/kg</span>
-											</li>
-										{/each}
-									</ul>
-									<p class="cat-tip">{selectedOpexAlt.tooltip}</p>
-								</div>
-							{/if}
-						</div>
-
-						<div class="breakdown capex-breakdown">
-							<h3>CAPEX stacked</h3>
-							<p class="opex-thesis">Click a segment for that category’s breakdown.</p>
-							<div class="stack-bar" role="group" aria-label="CAPEX composition">
-								{#each capexCats as row, i}
-									<button
-										type="button"
-										class="stack-seg"
-										class:selected={selectedAlt === row.id}
-										class:tone-a={i % 4 === 0}
-										class:tone-b={i % 4 === 1}
-										class:tone-c={i % 4 === 2}
-										class:tone-d={i % 4 === 3}
-										style="flex: {Math.max(row.value, 0)} 1 0"
-										title="{row.name}: {formatUsd(row.value)}"
-										on:click={() => selectAlt(row.id)}
-									>
-										{#if row.value / capexStackTotal > 0.12}
-											<span class="stack-seg-label">{formatUsd(row.value, 0)}</span>
-										{/if}
-									</button>
+										class="vseg"
+										class:drop={bar.drop}
+										class:tone-a={!bar.drop && bar.tone === 0}
+										class:tone-b={!bar.drop && bar.tone === 1}
+										class:tone-c={!bar.drop && bar.tone === 2}
+										class:tone-d={!bar.drop && bar.tone === 3}
+										class:selected={selectedAlt === bar.id}
+										style="bottom: {bar.bottomPct}%; height: {bar.heightPct}%"
+										title="{bar.name}: {formatUsd(bar.value)}/kg"
+										aria-pressed={selectedAlt === bar.id}
+										on:click={() => selectAlt(bar.id)}
+									></button>
 								{/each}
 							</div>
-							<ul class="stack-legend">
-								{#each capexCats as row, i}
+							<ul class="vlegend">
+								{#each [...opexChart.bars].reverse() as bar}
 									<li>
 										<button
 											type="button"
-											class="stack-legend-btn"
-											class:selected={selectedAlt === row.id}
-											on:click={() => selectAlt(row.id)}
+											class="vlegend-btn"
+											class:selected={selectedAlt === bar.id}
+											class:drop={bar.drop}
+											class:tone-a={!bar.drop && bar.tone === 0}
+											class:tone-b={!bar.drop && bar.tone === 1}
+											class:tone-c={!bar.drop && bar.tone === 2}
+											class:tone-d={!bar.drop && bar.tone === 3}
+											aria-pressed={selectedAlt === bar.id}
+											on:click={() => selectAlt(bar.id)}
 										>
 											<span
 												class="swatch"
-												class:tone-a={i % 4 === 0}
-												class:tone-b={i % 4 === 1}
-												class:tone-c={i % 4 === 2}
-												class:tone-d={i % 4 === 3}
+												class:drop={bar.drop}
+												class:tone-a={!bar.drop && bar.tone === 0}
+												class:tone-b={!bar.drop && bar.tone === 1}
+												class:tone-c={!bar.drop && bar.tone === 2}
+												class:tone-d={!bar.drop && bar.tone === 3}
 											></span>
-											<span class="stack-name">{row.name}</span>
-											<span class="stack-val">{formatUsd(row.value)}</span>
+											<span class="stack-name">{bar.name}</span>
+											<span class="stack-val">{formatUsd(bar.value)}/kg</span>
 										</button>
 									</li>
 								{/each}
 							</ul>
-							{#if selectedCapexAlt}
-								<div class="alt-detail">
-									<div class="alt-detail-title">{selectedCapexAlt.name}</div>
-									<ul class="cat-parts">
-										{#each selectedCapexAlt.parts as part}
-											<li>
-												<span>{part.name}{#if part.note} · {part.note}{/if}</span>
-												<span>{formatUsd(part.value)}</span>
-											</li>
-										{/each}
-									</ul>
-									<p class="cat-tip">{selectedCapexAlt.tooltip}</p>
-								</div>
+						</div>
+						<p class="vnet">Net opex {formatUsd(opexChart.net)}/kg</p>
+					{:else if chartView === 'opex2'}
+						<div class="vchart">
+							<div class="vplot vplot-fall" aria-label="Operating cost stacked waterfall">
+								{#each opexChart.bars as bar, i}
+									<div
+										class="wf-col"
+										style="left: {(i / opexChart.bars.length) * 100}%; width: {100 / opexChart.bars.length}%"
+									>
+										<button
+											type="button"
+											class="vseg"
+											class:drop={bar.drop}
+											class:tone-a={!bar.drop && bar.tone === 0}
+											class:tone-b={!bar.drop && bar.tone === 1}
+											class:tone-c={!bar.drop && bar.tone === 2}
+											class:tone-d={!bar.drop && bar.tone === 3}
+											class:selected={selectedAlt === bar.id}
+											style="bottom: {bar.bottomPct}%; height: {bar.heightPct}%"
+											title="{bar.name}: {formatUsd(bar.value)}/kg"
+											aria-pressed={selectedAlt === bar.id}
+											on:click={() => selectAlt(bar.id)}
+										></button>
+									</div>
+									{#if i < opexChart.bars.length - 1}
+										<span
+											class="wf-link"
+											style="left: {((i + 0.78) / opexChart.bars.length) * 100}%; width: {(0.44 / opexChart.bars.length) * 100}%; bottom: {bar.toPct}%"
+										></span>
+									{/if}
+								{/each}
+							</div>
+							<ul class="vlegend">
+								{#each [...opexChart.bars].reverse() as bar}
+									<li>
+										<button
+											type="button"
+											class="vlegend-btn"
+											class:selected={selectedAlt === bar.id}
+											class:drop={bar.drop}
+											class:tone-a={!bar.drop && bar.tone === 0}
+											class:tone-b={!bar.drop && bar.tone === 1}
+											class:tone-c={!bar.drop && bar.tone === 2}
+											class:tone-d={!bar.drop && bar.tone === 3}
+											aria-pressed={selectedAlt === bar.id}
+											on:click={() => selectAlt(bar.id)}
+										>
+											<span
+												class="swatch"
+												class:drop={bar.drop}
+												class:tone-a={!bar.drop && bar.tone === 0}
+												class:tone-b={!bar.drop && bar.tone === 1}
+												class:tone-c={!bar.drop && bar.tone === 2}
+												class:tone-d={!bar.drop && bar.tone === 3}
+											></span>
+											<span class="stack-name">{bar.name}</span>
+											<span class="stack-val">{formatUsd(bar.value)}/kg</span>
+										</button>
+									</li>
+								{/each}
+							</ul>
+						</div>
+						<p class="vnet">Net opex {formatUsd(opexChart.net)}/kg</p>
+					{:else}
+						<div class="vchart">
+							<div class="vplot" aria-label="Capital cost stack">
+								{#each capexChart as bar}
+									<button
+										type="button"
+										class="vseg"
+										class:tone-a={bar.tone === 0}
+										class:tone-b={bar.tone === 1}
+										class:tone-c={bar.tone === 2}
+										class:tone-d={bar.tone === 3}
+										class:selected={selectedAlt === bar.id}
+										style="bottom: {bar.bottomPct}%; height: {bar.heightPct}%"
+										title="{bar.name}: {formatUsd(bar.value)}"
+										aria-pressed={selectedAlt === bar.id}
+										on:click={() => selectAlt(bar.id)}
+									></button>
+								{/each}
+							</div>
+							<ul class="vlegend">
+								{#each [...capexChart].reverse() as bar}
+									<li>
+										<button
+											type="button"
+											class="vlegend-btn"
+											class:selected={selectedAlt === bar.id}
+											class:tone-a={bar.tone === 0}
+											class:tone-b={bar.tone === 1}
+											class:tone-c={bar.tone === 2}
+											class:tone-d={bar.tone === 3}
+											aria-pressed={selectedAlt === bar.id}
+											on:click={() => selectAlt(bar.id)}
+										>
+											<span
+												class="swatch"
+												class:tone-a={bar.tone === 0}
+												class:tone-b={bar.tone === 1}
+												class:tone-c={bar.tone === 2}
+												class:tone-d={bar.tone === 3}
+											></span>
+											<span class="stack-name">{bar.name}</span>
+											<span class="stack-val">{formatUsd(bar.value)}</span>
+										</button>
+									</li>
+								{/each}
+							</ul>
+						</div>
+						<p class="vnet">Total capex {formatUsd(result.capex.total)}</p>
+					{/if}
+
+					{#if selectedDetail}
+						<div
+							class="alt-detail"
+							class:drop={selectedDetail.drop}
+							class:tone-a={!selectedDetail.drop && selectedDetail.tone === 0}
+							class:tone-b={!selectedDetail.drop && selectedDetail.tone === 1}
+							class:tone-c={!selectedDetail.drop && selectedDetail.tone === 2}
+							class:tone-d={!selectedDetail.drop && selectedDetail.tone === 3}
+						>
+							<div class="alt-detail-title">{selectedDetail.name}</div>
+							<ul class="cat-parts">
+								{#each selectedDetail.parts as part}
+									<li>
+										<span>{part.name}{#if part.note} · {part.note}{/if}</span>
+										<span>{formatUsd(part.value)}{chartView === 'capex' ? '' : '/kg'}</span>
+									</li>
+								{/each}
+							</ul>
+							{#if selectedDetail.tooltip}
+								<p class="cat-tip">{selectedDetail.tooltip}</p>
 							{/if}
 						</div>
-					</div>
 					{/if}
 
 					{#if comparison}
@@ -1176,13 +1217,11 @@
 							<h3>Pathway comparison</h3>
 							<p class="opex-thesis">
 								Same recovery setup, compared across end-uses. Recycling is commercial HVAC only.
-								Grand total adds this year’s operating cost to one-time capital, so it mixes two
-								kinds of dollars.
 							</p>
-							{#if compareFacilityNa}
+							{#if compareAssumedNew}
 								<p class="opex-thesis compare-caveat">
-									Retrofit is not applicable for reclamation, or for plasma-arc destruction. Those
-									bars keep facility capex at $0 instead of switching the facility to New.
+									Retrofit is not available for that pathway, so the comparison is costed as a new
+									facility.
 								</p>
 							{/if}
 							{#each compareMetrics as metric}
@@ -1208,6 +1247,8 @@
 												{/if}
 												{#if comparison[col.id].facilityNa && metric.key !== 'netOpexPerYear'}
 													<span class="na-mark">Facility N/A</span>
+												{:else if comparison[col.id].facilityAssumedNew && metric.key === 'capex'}
+													<span class="na-mark">Costed as new</span>
 												{/if}
 											</span>
 											<div
@@ -1233,7 +1274,7 @@
 		{/if}
 
 		<p class="page-foot">
-			Lifecycle Refrigerant Management Calculator Mock 3.0 · V5.0 SEA · Unlisted
+			V. Oct 16 5pm ET
 		</p>
 	</div>
 </div>
@@ -1263,7 +1304,7 @@
 		--dummy: #023c40;
 		--dummy-bg: rgba(2, 60, 64, 0.08);
 		--radius: 8px;
-		--font: Inter, system-ui, sans-serif;
+		--font: 'Inter', sans-serif;
 
 		min-height: 100vh;
 		color: var(--ink);
@@ -1272,6 +1313,13 @@
 		background: var(--bg);
 		position: relative;
 		-webkit-font-smoothing: antialiased;
+	}
+
+	.lrm-explorer button,
+	.lrm-explorer input,
+	.lrm-explorer select,
+	.lrm-explorer textarea {
+		font-family: var(--font);
 	}
 
 	.wrap {
@@ -1290,8 +1338,8 @@
 	.eyebrow {
 		display: inline-block;
 		font-size: 0.72rem;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		text-transform: none;
 		color: var(--accent);
 		font-weight: 600;
 		margin-bottom: 0.55rem;
@@ -1306,8 +1354,9 @@
 		letter-spacing: -0.025em;
 		color: var(--header);
 		display: flex;
-		align-items: center;
-		gap: 0.7rem;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.65rem;
 	}
 
 	.site h1 .title-text {
@@ -1343,47 +1392,41 @@
 
 	.about {
 		margin: 0 0 0.85rem;
-		max-width: 40rem;
-		position: relative;
+		max-width: 42rem;
 	}
 
-	.about summary {
-		cursor: pointer;
-		list-style: none;
+	.about-label {
+		margin: 0 0 0.2rem;
 		font-size: 0.78rem;
 		font-weight: 600;
-		letter-spacing: 0.04em;
-		text-transform: uppercase;
+		letter-spacing: 0.01em;
 		color: var(--teal);
 		width: fit-content;
 	}
 
-	.about summary::-webkit-details-marker {
-		display: none;
-	}
-
-	.about summary::after {
-		content: ' +';
+	.manual-link {
+		display: inline-block;
+		margin: 0 0 0.45rem;
+		font-size: 0.78rem;
 		font-weight: 600;
+		color: var(--teal);
+		text-decoration: underline;
+		text-underline-offset: 0.18em;
 	}
 
-	.about[open] summary::after {
-		content: ' −';
+	.manual-link:hover {
+		opacity: 0.88;
 	}
 
 	.about-body {
-		margin-top: 0.55rem;
-		padding: 0.7rem 0.8rem;
-		background: var(--card);
-		border: 1px solid var(--line);
-		border-radius: var(--radius);
+		margin: 0;
 	}
 
 	.about-body p {
 		margin: 0;
-		font-size: 0.88rem;
-		line-height: 1.5;
-		color: var(--ink);
+		font-size: 0.95rem;
+		line-height: 1.55;
+		color: var(--ink-soft);
 	}
 
 	.site.compact {
@@ -1394,8 +1437,8 @@
 		font-size: 0.98rem;
 		max-width: none;
 		margin: 0;
-		line-height: 1.35;
-		gap: 0.5rem;
+		line-height: 1.25;
+		gap: 0.45rem;
 	}
 
 	.site.compact h1 .title-text {
@@ -1404,7 +1447,7 @@
 
 	.site.compact .brand {
 		width: auto;
-		height: 1.85rem;
+		height: 2.6rem;
 		padding: 0;
 	}
 
@@ -1468,6 +1511,13 @@
 		line-height: 1.25;
 	}
 
+	.inputs-tip {
+		color: var(--muted);
+		font-size: 0.82rem;
+		line-height: 1.4;
+		margin: -0.05rem 0 0.85rem;
+	}
+
 	.panel-intro {
 		color: var(--muted);
 		font-size: 0.92rem;
@@ -1489,6 +1539,7 @@
 	}
 
 	.choice {
+		position: relative;
 		text-align: left;
 		cursor: pointer;
 		color: var(--header);
@@ -1578,11 +1629,11 @@
 	}
 
 	.group-label {
-		font-size: 0.75rem;
-		letter-spacing: 0.07em;
+		font-size: 1rem;
+		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: var(--ink);
-		font-weight: 600;
+		color: var(--header);
+		font-weight: 700;
 		margin-bottom: 0.85rem;
 	}
 
@@ -1605,26 +1656,36 @@
 	}
 
 	label[data-tip]:hover::after,
-	label[data-tip]:focus-visible::after {
+	label[data-tip]:focus-visible::after,
+	.metric[data-tip]:hover::after,
+	.metric[data-tip]:focus-visible::after,
+	.choice[data-tip]:hover::after,
+	.choice[data-tip]:focus-visible::after {
 		content: attr(data-tip);
 		position: absolute;
 		left: 0;
 		bottom: calc(100% + 6px);
 		width: max-content;
 		max-width: min(22rem, calc(100vw - 2rem));
-		padding: 0.35rem 0.5rem;
+		padding: 0.45rem 0.6rem;
 		background: var(--teal);
 		color: var(--on-teal);
-		font-size: 0.7rem;
+		font-size: 0.75rem;
 		font-weight: 400;
-		line-height: 1.35;
+		line-height: 1.4;
 		letter-spacing: 0;
 		text-transform: none;
 		border-radius: 6px;
 		z-index: 40;
 		pointer-events: none;
 		box-shadow: 0 6px 18px rgba(2, 60, 64, 0.16);
-		white-space: normal;
+		white-space: pre-line;
+	}
+
+	.choice[data-tip]:hover::after,
+	.choice[data-tip]:focus-visible::after {
+		top: calc(100% + 6px);
+		bottom: auto;
 	}
 
 	.field:focus-within label[data-tip]::after {
@@ -1736,24 +1797,15 @@
 	.model-tag {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.4rem;
 		font-size: 0.68rem;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+		letter-spacing: 0.04em;
 		font-weight: 600;
-		color: var(--on-teal);
-		background: var(--teal);
-		padding: 0.22rem 0.55rem;
-		border-radius: 999px;
+		color: var(--header);
+		background: var(--card);
+		border: 1px solid var(--line);
+		padding: 0.22rem 0.5rem;
+		border-radius: 4px;
 		margin-bottom: 0.7rem;
-	}
-
-	.model-tag::before {
-		content: '';
-		width: 0.45rem;
-		height: 0.45rem;
-		border-radius: 50%;
-		background: var(--on-teal);
 	}
 
 	.summary {
@@ -1788,7 +1840,7 @@
 		margin-bottom: 1.15rem;
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
-		overflow: hidden;
+		overflow: visible;
 		background: var(--panel-solid);
 	}
 
@@ -1801,6 +1853,11 @@
 		background: transparent;
 		border: 0;
 		border-radius: 0;
+		position: relative;
+	}
+
+	.metric[data-tip] {
+		cursor: help;
 	}
 
 	.metrics.three .metric + .metric {
@@ -1936,11 +1993,26 @@
 	}
 
 	.metric .label {
-		font-size: 0.68rem;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-		color: var(--muted);
-		margin-bottom: 0.25rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: 2.4rem;
+		font-size: 0.92rem;
+		font-weight: 700;
+		letter-spacing: 0;
+		text-transform: none;
+		color: var(--header);
+		line-height: 1.2;
+		margin-bottom: 0.28rem;
+	}
+
+	.metric .label-note {
+		display: block;
+		margin-top: 0.12rem;
+		font-size: 0.72rem;
+		font-weight: 600;
+		line-height: 1.25;
+		color: var(--ink-soft);
 	}
 
 	.metric .value {
@@ -1976,30 +2048,28 @@
 	}
 
 	.view-tabs {
-		display: inline-flex;
-		gap: 0;
+		display: flex;
+		width: 100%;
+		flex: 0 0 auto;
+		gap: 0.55rem;
 		margin: 0.55rem 0 0.7rem;
-		border: 1px solid var(--line);
-		border-radius: var(--radius);
-		overflow: hidden;
-		background: var(--card);
 	}
 
 	.view-tab {
 		appearance: none;
-		border: 0;
-		background: transparent;
+		flex: 1 1 0;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--card);
 		color: var(--ink-soft);
 		font: inherit;
 		font-size: 0.72rem;
 		font-weight: 600;
-		letter-spacing: 0.03em;
-		padding: 0.35rem 0.7rem;
+		letter-spacing: 0;
+		line-height: 1.25;
+		text-align: center;
+		padding: 0.45rem 0.7rem;
 		cursor: pointer;
-	}
-
-	.view-tab + .view-tab {
-		border-left: 1px solid var(--line);
 	}
 
 	.view-tab.active {
@@ -2009,6 +2079,171 @@
 
 	.view-tab:hover:not(.active) {
 		background: var(--selected-bg);
+		color: var(--header);
+	}
+
+	.vchart {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(6.5rem, 0.72fr);
+		gap: 0.65rem;
+		align-items: stretch;
+	}
+
+	.vchart .vlegend {
+		order: -1;
+	}
+
+	.vplot {
+		position: relative;
+		height: 16rem;
+	}
+
+	.vseg {
+		position: absolute;
+		left: 18%;
+		right: 18%;
+		border: 0;
+		padding: 0;
+		background: var(--teal);
+		cursor: pointer;
+		box-shadow: inset 0 2px 0 var(--panel);
+	}
+
+	.vseg.drop {
+		background: #e0b84a;
+		box-shadow: inset 0 1px 0 var(--panel);
+	}
+
+	.vseg.tone-a {
+		background: #023c40;
+	}
+	.vseg.tone-b {
+		background: #2f6f4e;
+	}
+	.vseg.tone-c {
+		background: #3d6e99;
+	}
+	.vseg.tone-d {
+		background: #b85c38;
+	}
+
+	.vseg.selected {
+		z-index: 3;
+		box-shadow: 0 0 0 2px var(--panel), 0 0 0 5px var(--teal);
+	}
+
+	.wf-col {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+
+	.wf-col .vseg {
+		left: 22%;
+		right: 22%;
+		box-shadow: none;
+	}
+
+	.wf-col .vseg.selected {
+		z-index: 3;
+		box-shadow: 0 0 0 2px var(--panel), 0 0 0 5px var(--teal);
+	}
+
+	.wf-link {
+		position: absolute;
+		height: 1px;
+		transform: translateY(1px);
+		background: rgba(2, 60, 64, 0.28);
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	.vlegend {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 0.2rem;
+	}
+
+	.vlegend-btn {
+		appearance: none;
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		gap: 0.35rem;
+		align-items: center;
+		text-align: left;
+		border: 1px solid transparent;
+		background: transparent;
+		border-radius: 6px;
+		padding: 0.28rem 0.35rem;
+		font: inherit;
+		color: var(--header);
+		cursor: pointer;
+	}
+
+	.vlegend-btn:hover {
+		border-color: var(--line);
+		background: var(--selected-bg);
+	}
+
+	.vlegend-btn.selected {
+		box-shadow: inset 3px 0 0 var(--teal);
+	}
+
+	.vlegend-btn.selected.tone-a {
+		background: rgba(2, 60, 64, 0.08);
+		border-color: rgba(2, 60, 64, 0.28);
+		box-shadow: inset 3px 0 0 #023c40;
+	}
+
+	.vlegend-btn.selected.tone-b {
+		background: rgba(47, 111, 78, 0.1);
+		border-color: rgba(47, 111, 78, 0.28);
+		box-shadow: inset 3px 0 0 #2f6f4e;
+	}
+
+	.vlegend-btn.selected.tone-c {
+		background: rgba(61, 110, 153, 0.1);
+		border-color: rgba(61, 110, 153, 0.3);
+		box-shadow: inset 3px 0 0 #3d6e99;
+	}
+
+	.vlegend-btn.selected.tone-d {
+		background: rgba(184, 92, 56, 0.1);
+		border-color: rgba(184, 92, 56, 0.3);
+		box-shadow: inset 3px 0 0 #b85c38;
+	}
+
+	.vlegend-btn.selected.drop {
+		background: rgba(224, 184, 74, 0.22);
+		border-color: rgba(176, 132, 32, 0.4);
+		box-shadow: inset 3px 0 0 #e0b84a;
+	}
+
+	.vlegend-btn.selected .stack-name {
+		font-weight: 600;
+	}
+
+	.vlegend .swatch {
+		width: 0.7rem;
+		height: 0.7rem;
+		border-radius: 2px;
+		background: var(--teal);
+	}
+
+	.vlegend .swatch.drop {
+		background: #e0b84a;
+		box-shadow: none;
+	}
+
+	.vnet {
+		margin: 0.45rem 0 0;
+		font-size: 0.78rem;
+		font-weight: 600;
 		color: var(--header);
 	}
 
@@ -2144,15 +2379,15 @@
 	}
 	.stack-seg.tone-b,
 	.swatch.tone-b {
-		background: #046066;
+		background: #2f6f4e;
 	}
 	.stack-seg.tone-c,
 	.swatch.tone-c {
-		background: #3a6f72;
+		background: #3d6e99;
 	}
 	.stack-seg.tone-d,
 	.swatch.tone-d {
-		background: #6a9092;
+		background: #b85c38;
 	}
 
 	.stack-seg.selected {
@@ -2226,6 +2461,37 @@
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		background: var(--card);
+		box-shadow: inset 3px 0 0 var(--teal);
+	}
+
+	.alt-detail.tone-a {
+		background: rgba(2, 60, 64, 0.06);
+		border-color: rgba(2, 60, 64, 0.28);
+		box-shadow: inset 3px 0 0 #023c40;
+	}
+
+	.alt-detail.tone-b {
+		background: rgba(47, 111, 78, 0.07);
+		border-color: rgba(47, 111, 78, 0.28);
+		box-shadow: inset 3px 0 0 #2f6f4e;
+	}
+
+	.alt-detail.tone-c {
+		background: rgba(61, 110, 153, 0.07);
+		border-color: rgba(61, 110, 153, 0.3);
+		box-shadow: inset 3px 0 0 #3d6e99;
+	}
+
+	.alt-detail.tone-d {
+		background: rgba(184, 92, 56, 0.07);
+		border-color: rgba(184, 92, 56, 0.3);
+		box-shadow: inset 3px 0 0 #b85c38;
+	}
+
+	.alt-detail.drop {
+		background: rgba(224, 184, 74, 0.16);
+		border-color: rgba(176, 132, 32, 0.4);
+		box-shadow: inset 3px 0 0 #e0b84a;
 	}
 
 	.alt-detail-title {
@@ -2233,6 +2499,26 @@
 		font-weight: 700;
 		color: var(--header);
 		margin-bottom: 0.15rem;
+	}
+
+	.alt-detail.tone-a .alt-detail-title {
+		color: #023c40;
+	}
+
+	.alt-detail.tone-b .alt-detail-title {
+		color: #2f6f4e;
+	}
+
+	.alt-detail.tone-c .alt-detail-title {
+		color: #3d6e99;
+	}
+
+	.alt-detail.tone-d .alt-detail-title {
+		color: #b85c38;
+	}
+
+	.alt-detail.drop .alt-detail-title {
+		color: #8a6414;
 	}
 
 	.capex-breakdown {
@@ -2461,29 +2747,79 @@
 		justify-content: center;
 		overflow: visible;
 		position: relative;
+		min-width: 0;
 	}
 
 	.workspace-on .about {
-		margin: 0.12rem 0 0;
+		margin: 0.55rem 0 0;
 		max-width: none;
+		position: relative;
 	}
 
-	.workspace-on .about summary {
-		font-size: 0.58rem;
+	.workspace-on .about-label {
+		margin: 0;
+		font-size: 0.72rem;
+		cursor: default;
+		text-decoration: underline;
+		text-decoration-style: dotted;
+		text-underline-offset: 0.18em;
 	}
 
-	.workspace-on .about[open] .about-body {
+	.workspace-on .manual-link {
+		margin: 0.28rem 0 0;
+		font-size: 0.72rem;
+	}
+
+	.workspace-on .about-label:focus {
+		outline: none;
+	}
+
+	.workspace-on .about-label:focus-visible {
+		outline: 2px solid var(--teal);
+		outline-offset: 2px;
+	}
+
+	.workspace-on .about-body {
+		display: none;
 		position: absolute;
 		z-index: 60;
-		top: calc(100% + 0.35rem);
+		top: 100%;
 		left: 0;
 		width: min(34rem, 72vw);
 		margin: 0;
+		padding-top: 0.35rem;
+	}
+
+	.workspace-on .about.about-open .about-body {
+		display: block;
+	}
+
+	.workspace-on .about-body p {
+		padding: 0.7rem 0.8rem;
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
 		box-shadow: 0 10px 28px rgba(2, 60, 64, 0.16);
+		font-size: 0.82rem;
+		line-height: 1.5;
+		color: var(--ink);
 	}
 
 	.workspace-on .site.compact h1 {
-		font-size: 0.92rem;
+		font-size: 1.15rem;
+		font-weight: 600;
+		min-width: 0;
+		gap: 1.05rem;
+	}
+
+	.workspace-on .site.compact .brand {
+		height: 2.6rem;
+	}
+
+	.workspace-on .site.compact h1 .title-text,
+	.workspace-on .site.compact h1 .title-lead,
+	.workspace-on .site.compact h1 .title-rest {
+		white-space: normal;
 	}
 
 	.workspace-on .branch {
@@ -2509,7 +2845,8 @@
 	}
 
 	.workspace-on .choice-title {
-		font-size: 0.8rem;
+		font-size: 0.78rem;
+		font-weight: 600;
 		margin: 0;
 	}
 
@@ -2546,6 +2883,7 @@
 	}
 
 	.workspace-on .controls > h2,
+	.workspace-on .controls > .inputs-tip,
 	.workspace-on .controls > .panel-intro,
 	.workspace-on .controls > .field-group:not(.option-idle),
 	.workspace-on .controls > .run-bar {
@@ -2561,10 +2899,22 @@
 	}
 
 	.workspace-on .panel h2 {
-		font-size: 0.72rem;
-		letter-spacing: 0.07em;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		margin: 0 0 0.35rem;
+		margin: 0 0 0.15rem;
+	}
+
+	.workspace-on .inputs-tip {
+		font-size: 0.78rem;
+		font-weight: 600;
+		line-height: 1.35;
+		color: var(--muted);
+		background: var(--selected-bg);
+		border-radius: 4px;
+		padding: 0.32rem 0.5rem;
+		margin: 0 0 0.4rem;
 	}
 
 	.workspace-on .panel-intro {
@@ -2577,8 +2927,11 @@
 	}
 
 	.workspace-on .group-label {
-		margin-bottom: 0.16rem;
-		font-size: 0.6rem;
+		margin: 0.12rem 0 0.28rem;
+		font-size: 0.88rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		color: var(--header);
 	}
 
 	.workspace-on .option-idle {
@@ -2628,7 +2981,8 @@
 	}
 
 	.workspace-on label {
-		font-size: 0.65rem;
+		font-size: 0.72rem;
+		font-weight: 500;
 		margin-bottom: 0.06rem;
 		line-height: 1.2;
 	}
@@ -2638,7 +2992,8 @@
 		min-height: 1.45rem;
 		height: 1.45rem;
 		padding: 0 0.35rem;
-		font-size: 0.75rem;
+		font-size: 0.78rem;
+		font-weight: 400;
 		border-radius: 4px;
 		line-height: 1.2;
 	}
@@ -2684,6 +3039,35 @@
 		font-size: 0.72rem;
 	}
 
+	.workspace-on .computed.computed-sum {
+		width: 100%;
+		margin: 0.28rem 0 0.08rem;
+		padding: 0.32rem 0 0.06rem;
+		border: none;
+		border-top: 1px solid var(--line);
+		border-radius: 0;
+		background: transparent;
+		cursor: default;
+	}
+
+	.workspace-on .computed.computed-sum > div {
+		gap: 0.55rem;
+	}
+
+	.workspace-on .computed.computed-sum .k {
+		font-size: 0.8rem;
+		font-weight: 600;
+		letter-spacing: 0;
+		text-transform: none;
+		color: var(--header);
+	}
+
+	.workspace-on .computed.computed-sum .v {
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: var(--header);
+	}
+
 	.workspace-on .field-hint {
 		display: none;
 	}
@@ -2723,10 +3107,7 @@
 
 	.workspace-on .metrics {
 		margin-bottom: 0.35rem;
-	}
-
-	.workspace-on .metrics.three {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 	}
 
 	.workspace-on .metrics.three .metric + .metric {
@@ -2739,26 +3120,70 @@
 	}
 
 	.workspace-on .metric .label {
-		font-size: 0.58rem;
-		margin-bottom: 0.1rem;
+		min-height: 3.15rem;
+		font-size: 0.78rem;
+		margin-bottom: 0.12rem;
+		justify-content: flex-start;
+	}
+
+	.workspace-on .metric .label-note {
+		font-size: 0.62rem;
+		font-weight: 500;
+		margin-top: 0.08rem;
 	}
 
 	.workspace-on .metric .value {
 		font-size: 1rem;
+		font-weight: 600;
+		font-variant-numeric: tabular-nums;
 	}
 
 	.workspace-on .metric .unit {
 		font-size: 0.65rem;
+		font-weight: 400;
 		margin-top: 0;
 	}
 
 	.workspace-on .view-tabs {
-		margin: 0.2rem 0 0.4rem;
+		margin: 0.28rem 0 0.28rem;
+		gap: 0.5rem;
+	}
+
+	.workspace-on .results > .inputs-tip {
+		flex: 0 0 auto;
 	}
 
 	.workspace-on .view-tab {
-		font-size: 0.62rem;
-		padding: 0.22rem 0.55rem;
+		font-size: 0.78rem;
+		font-weight: 600;
+		padding: 0.4rem 0.65rem;
+	}
+
+	.workspace-on .vplot {
+		height: 13rem;
+	}
+
+	.workspace-on .vlegend-btn {
+		padding: 0.12rem 0.2rem;
+	}
+
+	.workspace-on .vlegend-btn,
+	.workspace-on .stack-name,
+	.workspace-on .stack-val,
+	.workspace-on .vnet {
+		font-family: var(--font);
+		font-size: 0.65rem;
+		font-weight: 400;
+	}
+
+	.workspace-on .stack-val,
+	.workspace-on .vnet {
+		font-weight: 500;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.workspace-on .vnet {
+		margin-top: 0.25rem;
 	}
 
 	.workspace-on .waterfall {
@@ -2826,11 +3251,18 @@
 	}
 
 	.workspace-on .run-note {
-		font-size: 0.68rem;
+		font-size: 0.78rem;
+		font-weight: 600;
+		line-height: 1.35;
+		color: var(--muted);
+		background: var(--selected-bg);
+		border-radius: 4px;
+		padding: 0.32rem 0.5rem;
 	}
 
 	.workspace-on .run {
 		font-size: 0.78rem;
+		font-weight: 600;
 		padding: 0.32rem 0.85rem;
 	}
 
@@ -2872,7 +3304,13 @@
 	.workspace-on .opex-thesis {
 		margin: 0 0 0.4rem;
 		font-size: 0.65rem;
+		font-weight: 400;
 		line-height: 1.35;
+	}
+
+	.workspace-on .model-tag {
+		font-size: 0.65rem;
+		font-weight: 400;
 	}
 
 	.workspace-on .layout > .results {
@@ -2885,14 +3323,21 @@
 		padding-top: 0.45rem;
 	}
 
-	.workspace-on .compare h3,
+	.workspace-on .compare h3 {
+		font-size: 0.78rem;
+		font-weight: 700;
+		margin-bottom: 0.22rem;
+	}
+
 	.workspace-on .compare-metric-label {
-		font-size: 0.62rem;
+		font-size: 0.72rem;
+		font-weight: 600;
 		margin-bottom: 0.22rem;
 	}
 
 	.workspace-on .compare-unit {
-		font-size: 0.52rem;
+		font-size: 0.65rem;
+		font-weight: 400;
 	}
 
 	.workspace-on .compare-metric {
@@ -2995,9 +3440,11 @@
 		.workspace-on .charts {
 			grid-template-columns: 1fr;
 		}
+		.workspace-on .metrics,
 		.workspace-on .metrics.three {
-			grid-template-columns: 1fr;
+			grid-template-columns: 1fr 1fr;
 		}
+		.workspace-on .metrics .metric + .metric,
 		.workspace-on .metrics.three .metric + .metric {
 			border-left: 0;
 			border-top: 1px solid var(--line);

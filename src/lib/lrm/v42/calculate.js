@@ -532,14 +532,22 @@ export function comparePathways(raw) {
 			rows[pathway] = null;
 			continue;
 		}
-		const result = calculate({ ...raw, pathway });
+		const assumedNew =
+			pathway !== base.pathway &&
+			base.facilityStatus === 'Retrofit' &&
+			facilityNa(pathway, base.destructionTech, 'Retrofit');
+		const result = calculate({
+			...raw,
+			pathway,
+			facilityStatus: assumedNew ? 'New' : raw.facilityStatus
+		});
 		rows[pathway] = {
 			netOpex: result.opex.net,
 			netOpexPerYear: result.opex.netPerYear,
 			capex: result.capex.total,
-			grandTotal: result.opex.netPerYear + result.capex.total,
 			recovery: result.opex.labour,
-			facilityNa: Boolean(result.capex.facility?.na)
+			facilityNa: Boolean(result.capex.facility?.na),
+			facilityAssumedNew: assumedNew
 		};
 	}
 	return rows;

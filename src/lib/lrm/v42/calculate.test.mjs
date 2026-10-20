@@ -194,7 +194,8 @@ const retrofitCompare = comparePathways({
 	destructionTech: 'Rotary'
 });
 assertEq('rotary retrofit destruction facility ok', retrofitCompare.Destruction.facilityNa, false);
-assertEq('reclamation retrofit facility na in compare', retrofitCompare.Reclamation.facilityNa, true);
+assertEq('reclamation retrofit costed as new in compare', retrofitCompare.Reclamation.facilityAssumedNew, true);
+assertEq('reclamation retrofit not left as facility na', retrofitCompare.Reclamation.facilityNa, false);
 assertEq('recycling compare still present commercially', Boolean(retrofitCompare.Recycling), true);
 
 const plasmaCompare = comparePathways({
