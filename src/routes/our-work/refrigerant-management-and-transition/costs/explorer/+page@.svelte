@@ -654,7 +654,7 @@
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
 				<div class="eyebrow">V. Oct 20 8pm ET</div>
-				<h1>
+				<div class="title-line">
 					<img
 						class="brand"
 						src={cascadeLogo}
@@ -662,22 +662,24 @@
 						width="190"
 						height="69"
 					/>
-					<span class="title-text">
-						<span class="title-lead">Lifecycle Refrigerant Management</span>
-						<span class="title-rest">Explorer</span>
-					</span>
-				</h1>
+					<h1>
+						<span class="title-text">
+							<span class="title-lead">Lifecycle Refrigerant Management</span>
+							<span class="title-rest">Explorer</span>
+						</span>
+					</h1>
+					<a
+						class="manual-link"
+						href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
+						target="_blank"
+						rel="noopener noreferrer"
+						>User Manual</a
+					>
+				</div>
 			</div>
 		</header>
 
-		<div class="chrome-links">
-			<a
-				class="manual-link"
-				href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
-				target="_blank"
-				rel="noopener noreferrer"
-				>User Manual</a
-			>
+		<div class="intro">
 			<div
 				class="about"
 				class:about-open={aboutOpen}
@@ -693,15 +695,29 @@
 					About the Explorer
 				</p>
 				<div class="about-body">
-					<p>
-						The LRM Cost Explorer is a free, interactive tool created by Cascade Climate that helps
-						users estimate the operational and capital costs of recovering and responsibly managing
-						refrigerants. This tool is intended to help users see what drives cost and compare
-						end-use pathways under different operating conditions. It does not provide definitive
-						cost estimates or replace detailed, project-specific financial assessments.
-					</p>
+					<div class="about-copy">
+						<p>
+							The LRM Cost Explorer is a free, interactive tool created by Cascade Climate that helps
+							users estimate the operational and capital costs of recovering and responsibly managing
+							refrigerants. It combines user inputs with data from Cascade’s on-the-ground research
+							and stakeholder conversations in Southeast Asia to generate detailed cost breakdowns
+							across the refrigerant management value chain.
+						</p>
+						<p>
+							The tool is intended to reveal key cost drivers. It does not provide definitive cost
+							estimates or replace detailed, project-specific financial assessments.
+						</p>
+					</div>
 				</div>
 			</div>
+			<aside class="how-works">
+				<h2>How it works</h2>
+				<ol>
+					<li><span>1</span>Choose a sector and the end-use pathway</li>
+					<li><span>2</span>Enter operating conditions</li>
+					<li><span>3</span>Explore how costs vary across scenarios</li>
+				</ol>
+			</aside>
 		</div>
 
 		<div class="chrome-choices">
@@ -1450,7 +1466,7 @@
 	}
 
 	.wrap {
-		width: min(1160px, calc(100% - 2.5rem));
+		width: min(1100px, calc(100% - 2.5rem));
 		margin: 0 auto;
 		padding: 2rem 0 3.5rem;
 		position: relative;
@@ -1458,7 +1474,7 @@
 	}
 
 	.site {
-		margin-bottom: 1.75rem;
+		margin-bottom: 1.15rem;
 		color: var(--header);
 	}
 
@@ -1472,18 +1488,45 @@
 		margin-bottom: 0.55rem;
 	}
 
+	.title-line {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas:
+			'logo logo'
+			'title manual';
+		align-items: center;
+		column-gap: 1.25rem;
+		row-gap: 0.65rem;
+	}
+
+	.title-line .brand {
+		grid-area: logo;
+		justify-self: start;
+	}
+
+	.title-line h1 {
+		grid-area: title;
+	}
+
+	.title-line .manual-link {
+		grid-area: manual;
+		justify-self: end;
+	}
+
 	.site h1 {
 		font-family: var(--font);
 		font-weight: 600;
 		font-size: clamp(1.45rem, 2.8vw, 2rem);
 		line-height: 1.2;
-		margin: 0 0 0.7rem;
+		margin: 0;
 		letter-spacing: -0.025em;
 		color: var(--header);
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 0.65rem;
+		flex: 0 1 auto;
+		min-width: min-content;
 	}
 
 	.site h1 .title-text {
@@ -1517,13 +1560,42 @@
 		flex-shrink: 0;
 	}
 
-	.chrome-links {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.45rem;
-		margin: 0 0 0.85rem;
-		max-width: 42rem;
+	.intro {
+		display: grid;
+		grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+		gap: 1.15rem 2rem;
+		align-items: start;
+		margin: 0 0 1.35rem;
+	}
+
+	.how-works h2 {
+		margin: 0 0 0.55rem;
+		font-size: 0.78rem;
+		font-weight: 600;
+		letter-spacing: 0.01em;
+		color: var(--teal);
+	}
+
+	.how-works ol {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.55rem;
+	}
+
+	.how-works li {
+		display: grid;
+		grid-template-columns: 1.1rem minmax(0, 1fr);
+		gap: 0.35rem;
+		font-size: 0.95rem;
+		line-height: 1.4;
+		color: var(--ink-soft);
+	}
+
+	.how-works li span {
+		font-weight: 600;
+		color: var(--teal);
 	}
 
 	.about {
@@ -1532,7 +1604,7 @@
 	}
 
 	.about-label {
-		margin: 0 0 0.2rem;
+		margin: 0 0 0.55rem;
 		font-size: 0.78rem;
 		font-weight: 600;
 		letter-spacing: 0.01em;
@@ -1571,8 +1643,12 @@
 	.about-body p {
 		margin: 0;
 		font-size: 0.95rem;
-		line-height: 1.55;
+		line-height: 1.4;
 		color: var(--ink-soft);
+	}
+
+	.about-body p + p {
+		margin-top: 0.55rem;
 	}
 
 	.site.compact {
@@ -2969,15 +3045,24 @@
 		min-width: max-content;
 	}
 
-	.workspace-on .chrome-links {
-		flex: 0 0 auto;
-		flex-direction: row;
+	.workspace-on .title-line {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
 		align-items: center;
-		align-self: center;
-		margin: 0;
-		max-width: none;
-		gap: 0.75rem;
-		padding-left: 0;
+		gap: 0.7rem;
+	}
+
+	.workspace-on .title-line .brand {
+		flex: 0 0 auto;
+	}
+
+	.workspace-on .intro {
+		display: contents;
+	}
+
+	.workspace-on .how-works {
+		display: none;
 	}
 
 	.workspace-on .chrome-choices {
@@ -3035,15 +3120,22 @@
 		display: block;
 	}
 
-	.workspace-on .about-body p {
+	.workspace-on .about-copy {
 		padding: 0.7rem 0.8rem;
 		background: var(--card);
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		box-shadow: 0 10px 28px rgba(2, 60, 64, 0.16);
+	}
+
+	.workspace-on .about-body p {
 		font-size: 0.82rem;
 		line-height: 1.5;
 		color: var(--ink);
+	}
+
+	.workspace-on .about-body p + p {
+		margin-top: 0.55rem;
 	}
 
 	.workspace-on .site.compact h1 {
@@ -3678,6 +3770,25 @@
 		.site:not(.compact) h1 {
 			flex-wrap: wrap;
 			font-size: clamp(0.92rem, 4.1vw, 1.2rem);
+		}
+		.intro {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+		.title-line {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'logo'
+				'title'
+				'manual';
+			row-gap: 0.75rem;
+		}
+		.title-line .manual-link {
+			justify-self: start;
+		}
+		.site h1 .title-text {
+			white-space: normal;
+			flex-wrap: wrap;
 		}
 		.site.compact h1 {
 			font-size: 1.2rem;
