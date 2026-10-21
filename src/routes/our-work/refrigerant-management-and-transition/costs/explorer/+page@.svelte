@@ -1074,7 +1074,6 @@
 				<section class="panel results" class:has-open={Object.values(openCats).some(Boolean)} class:stale aria-labelledby="results-heading">
 					<div class="results-head">
 						<div class="results-head-copy">
-							<div class="model-tag">Updated Oct 16 5pm ET</div>
 							<h2 id="results-heading">Outputs</h2>
 							<p class="summary">
 								{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
@@ -1951,20 +1950,6 @@
 		position: relative;
 		max-height: none;
 		overflow: auto;
-	}
-
-	.model-tag {
-		display: inline-flex;
-		align-items: center;
-		font-size: 0.68rem;
-		letter-spacing: 0.04em;
-		font-weight: 600;
-		color: var(--header);
-		background: var(--card);
-		border: 1px solid var(--line);
-		padding: 0.22rem 0.5rem;
-		border-radius: 4px;
-		margin-bottom: 0.7rem;
 	}
 
 	.summary {
@@ -3365,8 +3350,7 @@
 	}
 
 	.workspace-on .results-head h2,
-	.workspace-on .results-head .summary,
-	.workspace-on .model-tag {
+	.workspace-on .results-head .summary {
 		margin: 0;
 	}
 
@@ -3575,11 +3559,6 @@
 		font-size: 0.65rem;
 		font-weight: 400;
 		line-height: 1.35;
-	}
-
-	.workspace-on .model-tag {
-		font-size: 0.65rem;
-		font-weight: 400;
 	}
 
 	.workspace-on .layout > .results {
