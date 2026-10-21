@@ -704,6 +704,7 @@
 			</div>
 		</div>
 
+		<div class="chrome-choices">
 		<section class="panel branch" class:settled={Boolean(sector)} aria-labelledby="branch-heading">
 			<h2 id="branch-heading">1. Choose a sector</h2>
 			<div class="choice-grid two">
@@ -747,6 +748,7 @@
 				</div>
 			</section>
 		{/if}
+		</div>
 		</div>
 
 		{#if ready && live}
@@ -2942,11 +2944,11 @@
 
 	.workspace-on .chrome {
 		flex: 0 0 auto;
-		display: grid;
-		grid-template-columns: auto max-content minmax(0, 1fr) max-content max-content;
-		grid-template-areas: 'title links . sector enduse';
-		gap: 0.65rem 0.85rem;
+		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
+		column-gap: 0.85rem;
+		row-gap: 0.4rem;
 		overflow: visible;
 		z-index: 5;
 	}
@@ -2956,7 +2958,7 @@
 	}
 
 	.workspace-on .site.compact {
-		grid-area: title;
+		flex: 0 0 auto;
 		margin: 0;
 		display: flex;
 		flex-direction: column;
@@ -2964,19 +2966,27 @@
 		justify-content: center;
 		overflow: visible;
 		position: relative;
-		min-width: 0;
+		min-width: max-content;
 	}
 
 	.workspace-on .chrome-links {
-		grid-area: links;
+		flex: 0 0 auto;
 		flex-direction: row;
 		align-items: center;
 		align-self: center;
-		justify-self: start;
 		margin: 0;
 		max-width: none;
 		gap: 0.75rem;
 		padding-left: 0;
+	}
+
+	.workspace-on .chrome-choices {
+		display: flex;
+		flex: 0 0 auto;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.4rem 0.85rem;
+		margin-left: auto;
 	}
 
 	.workspace-on .about {
@@ -3062,7 +3072,6 @@
 	}
 
 	.workspace-on .branch {
-		grid-area: sector;
 		margin: 0;
 		padding: 0.35rem 0.55rem 0.4rem;
 		width: max-content;
@@ -3070,7 +3079,6 @@
 	}
 
 	.workspace-on #enduse-panel {
-		grid-area: enduse;
 		max-width: 26rem;
 	}
 
