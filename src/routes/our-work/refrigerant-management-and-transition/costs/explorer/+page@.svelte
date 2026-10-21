@@ -642,20 +642,7 @@
 			</div>
 		</header>
 
-		<div
-			class="about"
-			class:about-open={aboutOpen}
-			on:mouseenter={(e) => openAbout(e.currentTarget)}
-			on:mouseleave={() => (aboutOpen = false)}
-		>
-			<p
-				class="about-label"
-				tabindex={ready ? 0 : undefined}
-				on:focus={(e) => openAbout(e.currentTarget.closest('.about'))}
-				on:blur={() => (aboutOpen = false)}
-			>
-				About the Explorer
-			</p>
+		<div class="chrome-links">
 			<a
 				class="manual-link"
 				href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
@@ -663,13 +650,29 @@
 				rel="noopener noreferrer"
 				>User Manual</a
 			>
-			<div class="about-body">
-				<p>
-					The LRM Cost Explorer is an interactive tool that estimates the capital and operational
-					costs of LRM activities from a set of user inputs. Results are intended to provide a
-					high-level estimate to support prioritization and planning of LRM activities. The
-					Explorer is not meant to serve as a comprehensive financial model.
+			<div
+				class="about"
+				class:about-open={aboutOpen}
+				on:mouseenter={(e) => openAbout(e.currentTarget)}
+				on:mouseleave={() => (aboutOpen = false)}
+			>
+				<p
+					class="about-label"
+					tabindex={ready ? 0 : undefined}
+					on:focus={(e) => openAbout(e.currentTarget.closest('.about'))}
+					on:blur={() => (aboutOpen = false)}
+				>
+					About the Explorer
 				</p>
+				<div class="about-body">
+					<p>
+						The LRM Cost Explorer is a free, interactive tool created by Cascade Climate that helps
+						users estimate the operational and capital costs of recovering and responsibly managing
+						refrigerants. This tool is intended to help users see what drives cost and compare
+						end-use pathways under different operating conditions. It does not provide definitive
+						cost estimates or replace detailed, project-specific financial assessments.
+					</p>
+				</div>
 			</div>
 		</div>
 
@@ -1485,9 +1488,18 @@
 		flex-shrink: 0;
 	}
 
-	.about {
+	.chrome-links {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.45rem;
 		margin: 0 0 0.85rem;
 		max-width: 42rem;
+	}
+
+	.about {
+		margin: 0;
+		max-width: none;
 	}
 
 	.about-label {
@@ -1501,15 +1513,26 @@
 
 	.manual-link {
 		display: inline-block;
-		margin: 0 0 0.45rem;
+		margin: 0;
+		padding: 0.32rem 0.75rem;
+		border: 0;
+		border-radius: var(--radius);
+		background: var(--teal);
+		color: var(--on-teal);
 		font-size: 0.78rem;
 		font-weight: 600;
-		color: var(--teal);
+		line-height: 1.2;
 		text-decoration: none;
+		white-space: nowrap;
 	}
 
 	.manual-link:hover {
-		opacity: 0.88;
+		background: var(--teal-hover);
+	}
+
+	.manual-link:focus-visible {
+		outline: 2px solid var(--teal);
+		outline-offset: 2px;
 	}
 
 	.about-body {
@@ -2926,17 +2949,21 @@
 		min-width: 0;
 	}
 
-	.workspace-on .about {
+	.workspace-on .chrome-links {
 		grid-area: links;
 		align-self: center;
 		justify-self: start;
 		margin: 0;
 		max-width: none;
+		gap: 0.4rem;
+		padding-left: 0.2rem;
+	}
+
+	.workspace-on .about {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: 0.28rem;
-		padding-left: 0.2rem;
+		margin: 0;
 	}
 
 	.workspace-on .about-label {
@@ -2950,6 +2977,7 @@
 
 	.workspace-on .manual-link {
 		margin: 0;
+		padding: 0.28rem 0.65rem;
 		font-size: 0.72rem;
 	}
 
