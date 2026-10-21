@@ -71,6 +71,34 @@
 	let openCats = {};
 	let result = null;
 	let publishedKey = '';
+	let inputsAtEnd = false;
+
+	function watchInputsEnd(node) {
+		const sync = () => {
+			inputsAtEnd = node.scrollHeight - node.scrollTop - node.clientHeight <= 4;
+		};
+		const ro = new ResizeObserver(sync);
+		const observe = () => {
+			ro.disconnect();
+			ro.observe(node);
+			for (const child of node.children) ro.observe(child);
+		};
+		observe();
+		const mo = new MutationObserver(() => {
+			observe();
+			sync();
+		});
+		mo.observe(node, { childList: true, subtree: true });
+		node.addEventListener('scroll', sync, { passive: true });
+		sync();
+		return {
+			destroy() {
+				ro.disconnect();
+				mo.disconnect();
+				node.removeEventListener('scroll', sync);
+			}
+		};
+	}
 	/** @type {'opex2' | 'capex'} */
 	let chartView = 'opex2';
 	const CARBON_TIP =
@@ -730,7 +758,7 @@
 						Grouped by the value chain. Amber-style fields are inputs. Bold figures are calculated.
 					</p>
 
-					<div class="inputs-scroll">
+					<div class="inputs-scroll" use:watchInputsEnd>
 					<div class="field-group">
 						<div class="group-label">Recovery</div>
 
@@ -1056,7 +1084,7 @@
 						<button
 							type="button"
 							class="run"
-							disabled={!mixOk}
+							disabled={!mixOk || !inputsAtEnd}
 							on:click={produceOutputs}
 						>
 							{#if !result}
@@ -2832,9 +2860,14 @@
 	}
 
 	.run:disabled {
-		opacity: 0.45;
+		opacity: 1;
 		cursor: not-allowed;
-		background: var(--teal);
+		background: #b9b9b9;
+		color: #5e5e5e;
+	}
+
+	.run:disabled:hover {
+		background: #b9b9b9;
 	}
 
 	.run:focus-visible {
@@ -2910,10 +2943,10 @@
 	.workspace-on .chrome {
 		flex: 0 0 auto;
 		display: grid;
-		grid-template-columns: auto max-content max-content minmax(0, 1fr);
-		grid-template-areas: 'title sector enduse links';
-		gap: 0.45rem;
-		align-items: stretch;
+		grid-template-columns: auto max-content minmax(0, 1fr) max-content max-content;
+		grid-template-areas: 'title links . sector enduse';
+		gap: 0.65rem 0.85rem;
+		align-items: center;
 		overflow: visible;
 		z-index: 5;
 	}
@@ -2936,12 +2969,14 @@
 
 	.workspace-on .chrome-links {
 		grid-area: links;
+		flex-direction: row;
+		align-items: center;
 		align-self: center;
 		justify-self: start;
 		margin: 0;
 		max-width: none;
-		gap: 0.4rem;
-		padding-left: 0.2rem;
+		gap: 0.75rem;
+		padding-left: 0;
 	}
 
 	.workspace-on .about {
@@ -3002,20 +3037,28 @@
 	}
 
 	.workspace-on .site.compact h1 {
+		flex-direction: row;
+		align-items: center;
 		font-size: 1.15rem;
 		font-weight: 600;
 		min-width: 0;
-		gap: 1.05rem;
+		gap: 0.7rem;
 	}
 
 	.workspace-on .site.compact .brand {
 		height: 2.6rem;
 	}
 
-	.workspace-on .site.compact h1 .title-text,
+	.workspace-on .site.compact h1 .title-text {
+		flex-direction: row;
+		align-items: baseline;
+		gap: 0.3em;
+		white-space: nowrap;
+	}
+
 	.workspace-on .site.compact h1 .title-lead,
 	.workspace-on .site.compact h1 .title-rest {
-		white-space: normal;
+		white-space: nowrap;
 	}
 
 	.workspace-on .branch {
@@ -3296,13 +3339,24 @@
 	}
 
 	.workspace-on .snapshot {
-		margin: 0.28rem 0 0.12rem;
-		padding: 0.38rem 0.45rem;
-		gap: 0.18rem;
+		margin: 0.12rem 0 0.06rem;
+		padding: 0.18rem 0.45rem 0.14rem;
+		gap: 0;
+		line-height: 1.15;
 	}
 
 	.workspace-on .snapshot-label {
 		font-size: 0.62rem;
+		line-height: 1.15;
+	}
+
+	.workspace-on .snapshot > div:not(.snapshot-label) {
+		line-height: 1.15;
+	}
+
+	.workspace-on .snapshot .k,
+	.workspace-on .snapshot .v {
+		line-height: 1.15;
 	}
 
 	.workspace-on .snapshot .k {
