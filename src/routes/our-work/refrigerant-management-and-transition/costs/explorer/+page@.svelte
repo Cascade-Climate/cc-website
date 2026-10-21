@@ -898,14 +898,8 @@
 							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
 						</div>
 						</div>
-						<div class="computed computed-sum">
-							<div>
-								<span class="k">Labor cost for traveling time per day (USD/day)</span>
-								<span class="v">{formatUsd(live.inputs.travelLaborPerDay)}</span>
-							</div>
-						</div>
+						<div class="group-label">Recovery snapshot</div>
 						<div class="snapshot">
-							<div class="snapshot-label">Recovery snapshot</div>
 							<div>
 								<span class="k">Total labor cost per day (USD/day)</span>
 								<span class="v">{formatUsd(live.inputs.labourCostPerDay)}</span>
@@ -1995,20 +1989,13 @@
 		gap: 0.4rem;
 		margin: 0 0 1rem;
 		padding: 0.65rem 0.8rem;
-		background: #f4efe4;
-		border: 1px solid #c4a574;
+		background: #023c40;
+		border: 1px solid #e1fcf7;
 		border-radius: var(--radius);
+		color: #fff;
 	}
 
-	.snapshot-label {
-		font-size: 0.72rem;
-		font-weight: 700;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: #8a5a12;
-	}
-
-	.snapshot > div:not(.snapshot-label) {
+	.snapshot > div {
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
@@ -2021,7 +2008,7 @@
 		font-weight: 600;
 		letter-spacing: 0;
 		text-transform: none;
-		color: #8a5a12;
+		color: #fff;
 	}
 
 	.snapshot .v {
@@ -2029,7 +2016,7 @@
 		font-size: 0.95rem;
 		font-weight: 700;
 		font-variant-numeric: tabular-nums;
-		color: #6b3f0a;
+		color: #fff;
 		white-space: nowrap;
 	}
 
@@ -3445,12 +3432,7 @@
 		line-height: 1.15;
 	}
 
-	.workspace-on .snapshot-label {
-		font-size: 0.62rem;
-		line-height: 1.15;
-	}
-
-	.workspace-on .snapshot > div:not(.snapshot-label) {
+	.workspace-on .snapshot > div {
 		line-height: 1.15;
 	}
 
