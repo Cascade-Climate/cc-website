@@ -625,7 +625,7 @@
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">V. Oct 16 5pm ET</div>
+				<div class="eyebrow">V. Oct 20 8pm ET</div>
 				<h1>
 					<img
 						class="brand"
@@ -1369,7 +1369,7 @@
 		{/if}
 
 		<p class="page-foot">
-			V. Oct 16 5pm ET
+			V. Oct 20 8pm ET
 		</p>
 	</div>
 </div>
