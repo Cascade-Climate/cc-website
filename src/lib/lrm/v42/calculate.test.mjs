@@ -3,6 +3,7 @@ import {
 	comparePathways,
 	excelDefaults,
 	defaultRecoveryHours,
+	defaultCostScenario,
 	maxRecoveryHoursPerUnit,
 	TRAVEL_SPEED_KM_PER_HOUR,
 	SECTOR_COMMERCIAL,
@@ -139,8 +140,9 @@ assertClose('comm recovery capex', rec.capex.recoveryTotal, 134300);
 assertClose('comm dr recycling', rec.capex.drTotal, 0);
 
 const dest = calculate({ ...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION) });
-assertClose('destruction processing', dest.opex.processing, 7);
-assertClose('destruction transport', dest.opex.transport, 0.4);
+assertEq('commercial 6000 kg auto High', dest.inputs.autoScenario, 'High');
+assertClose('destruction processing', dest.opex.processing, 8);
+assertClose('destruction transport', dest.opex.transport, 0.6);
 assertClose('destruction high machines recovery price', dest.capex.machinesHigh.cost, 20000);
 assertClose('destruction retrofit facility', dest.capex.facility.cost, 200000);
 assertEq('destruction facility units', dest.capex.facility.units, 1);
@@ -154,7 +156,7 @@ const destNew = calculate({
 assertClose('new rotary facility', destNew.capex.facility.cost, 3500000);
 
 const reclaim = calculate({ ...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_RECLAMATION) });
-assertClose('reclamation processing', reclaim.opex.processing, 8.5);
+assertClose('reclamation processing', reclaim.opex.processing, 11.5);
 assertClose('reclamation sale credit default 5', reclaim.opex.saleCredit, 5);
 assertEq('reclamation retrofit na', reclaim.capex.facility.na, true);
 assertEq('reclamation operators units', reclaim.capex.operators.units, 3);
@@ -167,7 +169,7 @@ const na = calculate({
 	facilityStatus: 'Retrofit'
 });
 assertEq('plasma retrofit na', na.capex.facility.na, true);
-assertClose('plasma processing medium', na.opex.processing, 6.5);
+assertClose('plasma processing high', na.opex.processing, 8);
 
 const res = calculate({
 	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
@@ -234,6 +236,10 @@ assertClose(
 	40 * labour.inputs.unitsPerDay + labour.inputs.travelLaborPerDay
 );
 
+assertEq('below 10000 kg is High', defaultCostScenario(9999), 'High');
+assertEq('10000 kg is Medium', defaultCostScenario(10000), 'Medium');
+assertEq('50000 kg is Medium', defaultCostScenario(50000), 'Medium');
+assertEq('above 50000 kg is Low', defaultCostScenario(50001), 'Low');
 assertEq('default recovery hours stay 0.5', defaultRecoveryHours(SECTOR_RESIDENTIAL), 0.5);
 assertEq('residential basic max hours', maxRecoveryHoursPerUnit(SECTOR_RESIDENTIAL, MACHINE_BASIC), 2);
 assertEq('residential high max hours', maxRecoveryHoursPerUnit(SECTOR_RESIDENTIAL, MACHINE_HIGH), 1.5);

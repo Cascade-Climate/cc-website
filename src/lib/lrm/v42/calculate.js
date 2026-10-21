@@ -107,10 +107,10 @@ export function defaultMix(sector) {
 	return { r32: 5, r410a: 65, r22: 30 };
 }
 
-/** C33 is a manual Low/Medium/High. Auto guide kept from prior: <5 MT High; 5–50 MT Medium; >50 MT Low. */
+/** Auto guide: <10,000 kg/year High; 10,000–50,000 kg/year Medium; >50,000 kg/year Low. */
 export function defaultCostScenario(annualKg) {
 	const kg = num(annualKg);
-	if (kg < 5000) return 'High';
+	if (kg < 10000) return 'High';
 	if (kg <= 50000) return 'Medium';
 	return 'Low';
 }
