@@ -714,7 +714,7 @@
 				<h2>How it works</h2>
 				<ol>
 					<li><span>1</span>Choose a sector and the end-use pathway</li>
-					<li><span>2</span>Enter operating conditions</li>
+					<li><span>2</span>Input operating conditions</li>
 					<li><span>3</span>Explore how costs vary across scenarios</li>
 				</ol>
 			</aside>
@@ -901,16 +901,19 @@
 						<div class="group-label">Recovery snapshot</div>
 						<div class="snapshot">
 							<div>
-								<span class="k">Total labor cost per day (USD/day)</span>
+								<span class="k">Total labor cost<span>per day</span></span>
 								<span class="v">{formatUsd(live.inputs.labourCostPerDay)}</span>
+								<span class="u">USD / day</span>
 							</div>
 							<div>
-								<span class="k">Total transport cost per day (USD/day)</span>
+								<span class="k">Total transport cost<span>per day</span></span>
 								<span class="v">{formatUsd(live.inputs.recoveryTransportPerDay)}</span>
+								<span class="u">USD / day</span>
 							</div>
 							<div>
-								<span class="k">Total refrigerant recovered per day (kg/day)</span>
+								<span class="k">Total refrigerant recovered<span>per day</span></span>
 								<span class="v">{formatKg(live.inputs.kgPerDay, 2)}</span>
+								<span class="u">kg / day</span>
 							</div>
 						</div>
 					</div>
@@ -1986,38 +1989,70 @@
 
 	.snapshot {
 		display: grid;
-		gap: 0.4rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0;
 		margin: 0 0 1rem;
-		padding: 0.65rem 0.8rem;
-		background: #023c40;
-		border: 1px solid #e1fcf7;
+		padding: 0;
+		background: var(--panel-solid);
+		border: 1px solid var(--line);
 		border-radius: var(--radius);
-		color: #fff;
+		color: var(--header);
+		overflow: hidden;
 	}
 
 	.snapshot > div {
 		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 0.75rem;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 0.08rem;
+		min-width: 0;
+		padding: 0.45rem 0.5rem 0.4rem;
+	}
+
+	.snapshot > div + div {
+		border-left: 1px solid var(--line);
 	}
 
 	.snapshot .k {
-		display: block;
-		font-size: 0.82rem;
-		font-weight: 600;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		min-height: 2.15rem;
+		font-size: 0.78rem;
+		font-weight: 700;
+		line-height: 1.2;
 		letter-spacing: 0;
 		text-transform: none;
-		color: #fff;
+		color: var(--header);
+	}
+
+	.snapshot .k span {
+		display: block;
+		margin-top: 0.08rem;
+		font-size: 0.62rem;
+		font-weight: 500;
+		line-height: 1.25;
+		color: var(--ink-soft);
 	}
 
 	.snapshot .v {
 		display: block;
-		font-size: 0.95rem;
-		font-weight: 700;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: -0.03em;
+		line-height: 1.15;
 		font-variant-numeric: tabular-nums;
-		color: #fff;
 		white-space: nowrap;
+		color: var(--header);
+	}
+
+	.snapshot .u {
+		display: block;
+		font-size: 0.65rem;
+		font-weight: 400;
+		line-height: 1.2;
+		color: var(--muted);
 	}
 
 	.computed.bad {
@@ -3426,27 +3461,31 @@
 	}
 
 	.workspace-on .snapshot {
-		margin: 0.12rem 0 0.06rem;
-		padding: 0.18rem 0.45rem 0.14rem;
-		gap: 0;
-		line-height: 1.15;
+		margin: 0.12rem 0 0.2rem;
 	}
 
 	.workspace-on .snapshot > div {
-		line-height: 1.15;
-	}
-
-	.workspace-on .snapshot .k,
-	.workspace-on .snapshot .v {
-		line-height: 1.15;
+		padding: 0.35rem 0.4rem 0.32rem;
 	}
 
 	.workspace-on .snapshot .k {
+		min-height: 2.05rem;
 		font-size: 0.72rem;
+		line-height: 1.15;
+	}
+
+	.workspace-on .snapshot .k span {
+		font-size: 0.6rem;
 	}
 
 	.workspace-on .snapshot .v {
-		font-size: 0.8rem;
+		font-size: 0.92rem;
+		line-height: 1.15;
+	}
+
+	.workspace-on .snapshot .u {
+		font-size: 0.6rem;
+		line-height: 1.15;
 	}
 
 	.workspace-on .field-hint {
