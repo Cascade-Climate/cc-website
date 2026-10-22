@@ -6,7 +6,8 @@
  *   + ((km/team × teams) / 80 km/h) × labour USD/h
  * Recovery transport/day = (km/team × teams) × fuel USD/km
  * Those two are separate opex lines (C91 vs C93). Fuel is unchanged by travel labour.
- * Recycling always uses the 50% mark-up on recovery labour (on-site cleaning + refill).
+ * Recycling's 50% mark-up applies only to on-site recovery labour
+ * (USD/h × hours/unit × units/day), not to travel labour.
  * Opex and capex money lines are ROUND(..., 2) as in the Model sheet.
  */
 import data from './data.js';
@@ -15,7 +16,9 @@ const ROWS = data.rows;
 
 export const MODEL_VERSION = '5.0';
 export const GEOGRAPHY = 'Southeast Asia';
-export const RESIDENTIAL_CHARGE_CAP_KG = 5;
+export const RESIDENTIAL_CHARGE_CAP_KG = 10;
+export const COMMERCIAL_CHARGE_MIN_KG = 10;
+export const COMMERCIAL_CHARGE_MAX_KG = 400;
 /** Driving speed used only for recovery travel labour. Not a user input. */
 export const TRAVEL_SPEED_KM_PER_HOUR = 80;
 
@@ -75,7 +78,7 @@ export function isCommercial(sector) {
 }
 
 export function defaultChargeKg(sector) {
-	return isResidential(sector) ? 1 : 100;
+	return isResidential(sector) ? 1 : 150;
 }
 
 export function defaultRecoverablePct(sector) {
@@ -83,7 +86,7 @@ export function defaultRecoverablePct(sector) {
 }
 
 export function defaultRecoveryHours(sector) {
-	return 0.5;
+	return isCommercial(sector) ? 8 : 0.5;
 }
 
 export function defaultLabourPerHour(sector) {
@@ -99,7 +102,7 @@ export function defaultDaysPerYear(sector) {
 }
 
 export function defaultTeams(sector) {
-	return isResidential(sector) ? 5 : 1;
+	return isResidential(sector) ? 4 : 1;
 }
 
 export function defaultMix(sector) {
@@ -125,11 +128,10 @@ export function machineOptions(sector) {
 	return [MACHINE_BASIC, MACHINE_HIGH];
 }
 
-/** Maximum recovery hours per unit. Commercial HVAC is always High Capacity. */
-export function maxRecoveryHoursPerUnit(sector, machineType) {
-	if (isCommercial(sector)) return 36;
-	if (machineType === MACHINE_HIGH) return 1.5;
-	return 2;
+/** Maximum recovery hours per unit. Residential Basic and High Capacity are both 4 hours. Commercial HVAC is 12 hours. */
+export function maxRecoveryHoursPerUnit(sector, _machineType) {
+	if (isCommercial(sector)) return 12;
+	return 4;
 }
 
 export function mixTotal(mix) {
@@ -256,6 +258,12 @@ export function normalizeInputs(raw) {
 	if (residential && chargeSizeKg > RESIDENTIAL_CHARGE_CAP_KG) {
 		chargeSizeKg = RESIDENTIAL_CHARGE_CAP_KG;
 		chargeCapped = true;
+	} else if (commercial && chargeSizeKg < COMMERCIAL_CHARGE_MIN_KG) {
+		chargeSizeKg = COMMERCIAL_CHARGE_MIN_KG;
+		chargeCapped = true;
+	} else if (commercial && chargeSizeKg > COMMERCIAL_CHARGE_MAX_KG) {
+		chargeSizeKg = COMMERCIAL_CHARGE_MAX_KG;
+		chargeCapped = true;
 	}
 
 	let pathway = raw.pathway || PATHWAY_DESTRUCTION;
@@ -341,19 +349,21 @@ export function calculate(raw) {
 
 	const fuelPerKm = inp.fuelEfficiencyKmPerL === 0 ? 0 : inp.fuelPricePerL / inp.fuelEfficiencyKmPerL;
 	const labourPerUnit = inp.labourPerHour * inp.recoveryHoursPerUnit;
+	const onSiteLabourPerDay = labourPerUnit * unitsPerDay;
 	const travelLaborPerDay =
 		TRAVEL_SPEED_KM_PER_HOUR === 0
 			? 0
 			: ((inp.travelKmPerTeam * inp.teams) / TRAVEL_SPEED_KM_PER_HOUR) * inp.labourPerHour;
-	const labourCostPerDay = labourPerUnit * unitsPerDay + travelLaborPerDay;
+	const labourCostPerDay = onSiteLabourPerDay + travelLaborPerDay;
 	const recoveryTransportPerDay = inp.travelKmPerTeam * inp.teams * fuelPerKm;
 
 	const autoScenario = defaultCostScenario(annualKg);
 	const costScenario = inp.costScenarioOverride || autoScenario;
 
 	const labourOpex = excelRound(kgPerDay === 0 ? 0 : labourCostPerDay / kgPerDay);
+	const onSiteLabourOpex = excelRound(kgPerDay === 0 ? 0 : onSiteLabourPerDay / kgPerDay);
 	const refillMarkupOpex = excelRound(
-		inp.pathway === PATHWAY_RECYCLING ? labourOpex * lookupRecyclingMarkup() : 0
+		inp.pathway === PATHWAY_RECYCLING ? onSiteLabourOpex * lookupRecyclingMarkup() : 0
 	);
 	const recoveryTransportOpex = excelRound(kgPerDay === 0 ? 0 : recoveryTransportPerDay / kgPerDay);
 	const recycling = inp.pathway === PATHWAY_RECYCLING;

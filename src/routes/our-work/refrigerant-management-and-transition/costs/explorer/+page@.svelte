@@ -23,6 +23,8 @@
 		MACHINE_BASIC,
 		MACHINE_HIGH,
 		RESIDENTIAL_CHARGE_CAP_KG,
+		COMMERCIAL_CHARGE_MIN_KG,
+		COMMERCIAL_CHARGE_MAX_KG,
 		maxRecoveryHoursPerUnit
 	} from '$lib/lrm/v42/calculate.js';
 
@@ -45,6 +47,7 @@
 
 	let chargeSizeKg = 100;
 	let chargeCappedNote = false;
+	let chargeLimitNote = '';
 	let recoveryHoursCappedNote = false;
 	let recoverablePct = 80;
 	let recoveryHoursPerUnit = 0.5;
@@ -269,6 +272,7 @@
 		const d = excelDefaults(nextSector, nextPathway);
 		chargeSizeKg = d.chargeSizeKg;
 		chargeCappedNote = false;
+		chargeLimitNote = '';
 		recoverablePct = d.recoverablePct;
 		recoveryHoursPerUnit = d.recoveryHoursPerUnit;
 		labourPerHour = d.labourPerHour;
@@ -312,6 +316,7 @@
 		if (sectorChanged) {
 			chargeSizeKg = defaultChargeKg(next);
 			chargeCappedNote = false;
+			chargeLimitNote = '';
 			recoverablePct = defaultRecoverablePct(next);
 			recoveryHoursPerUnit = defaultRecoveryHours(next);
 			labourPerHour = defaultLabourPerHour(next);
@@ -361,8 +366,23 @@
 	$: if (residential && Number(chargeSizeKg) > RESIDENTIAL_CHARGE_CAP_KG) {
 		chargeSizeKg = RESIDENTIAL_CHARGE_CAP_KG;
 		chargeCappedNote = true;
-	} else if (!residential || Number(chargeSizeKg) < RESIDENTIAL_CHARGE_CAP_KG) {
+		chargeLimitNote = 'residential-max';
+	} else if (commercial && Number(chargeSizeKg) < COMMERCIAL_CHARGE_MIN_KG) {
+		chargeSizeKg = COMMERCIAL_CHARGE_MIN_KG;
+		chargeCappedNote = true;
+		chargeLimitNote = 'commercial-min';
+	} else if (commercial && Number(chargeSizeKg) > COMMERCIAL_CHARGE_MAX_KG) {
+		chargeSizeKg = COMMERCIAL_CHARGE_MAX_KG;
+		chargeCappedNote = true;
+		chargeLimitNote = 'commercial-max';
+	} else if (
+		(residential && Number(chargeSizeKg) < RESIDENTIAL_CHARGE_CAP_KG) ||
+		(commercial &&
+			Number(chargeSizeKg) > COMMERCIAL_CHARGE_MIN_KG &&
+			Number(chargeSizeKg) < COMMERCIAL_CHARGE_MAX_KG)
+	) {
 		chargeCappedNote = false;
+		chargeLimitNote = '';
 	}
 
 	$: recoveryHoursMax = maxRecoveryHoursPerUnit(
@@ -462,6 +482,21 @@
 		};
 	}
 
+	function recoveryAccessoriesBit(basic, high) {
+		const items = [basic, high].filter(Boolean);
+		if (!items.length) return null;
+		const value = items.reduce((sum, item) => sum + (item.na ? 0 : item.cost || 0), 0);
+		const active = items.filter((item) => item.units);
+		let note = '0 units';
+		if (active.length === 1) {
+			const units = active[0].units;
+			note = `${units} unit${units === 1 ? '' : 's'}`;
+		} else if (active.length > 1) {
+			note = '';
+		}
+		return { name: 'Recovery accessories', value, note };
+	}
+
 	$: opexSteps = result
 		? [
 				{
@@ -538,7 +573,6 @@
 					name: 'Recovery equipment',
 					parts: [
 						capexBit('Recovery machines (basic)', result.capex.machinesBasic, { showHidden: true }),
-						capexBit('Recovery accessories (basic)', result.capex.accessoriesBasic, { showHidden: true }),
 						capexBit(
 							result.inputs.pathway === PATHWAY_RECYCLING
 								? 'Recovery + Recycling Machine'
@@ -546,7 +580,7 @@
 							result.capex.machinesHigh,
 							{ showHidden: true }
 						),
-						capexBit('Recovery accessories (high capacity)', result.capex.accessoriesHigh, { showHidden: true }),
+						recoveryAccessoriesBit(result.capex.accessoriesBasic, result.capex.accessoriesHigh),
 						capexBit('12L cylinders', result.capex.cylinders12L, { showHidden: true }),
 						capexBit('60L cylinders', result.capex.cylinders60L, { showHidden: true }),
 						capexBit('Refrigerant identifiers', result.capex.identifiers, { showHidden: true }),
@@ -605,26 +639,10 @@
 		{ id: PATHWAY_RECLAMATION, name: 'Reclamation' },
 		{ id: PATHWAY_RECYCLING, name: 'Recycling' }
 	].filter((col) => comparison?.[col.id]);
-	$: compareMetrics = [
-		{ id: 'opex', label: 'Total net operational costs', unit: 'USD / kg', key: 'netOpex' },
-		{ id: 'capex', label: 'Total capital costs', unit: 'USD / kg', key: 'capexPerKg' }
-	].map((metric) => ({
-		...metric,
-		scale: Math.max(
-			0.0001,
-			...compareCols.map((col) => {
-				const row = comparison?.[col.id];
-				if (!row) return 0;
-				const amount =
-					metric.key === 'capexPerKg'
-						? result.inputs.annualKg
-							? row.capex / result.inputs.annualKg
-							: 0
-						: row[metric.key];
-				return Math.abs(amount || 0);
-			})
-		)
-	}));
+	$: compareOpexScale = Math.max(
+		0.0001,
+		...compareCols.map((col) => Math.abs(comparison?.[col.id]?.netOpex || 0))
+	);
 	$: compareAssumedNew = compareCols.some((col) => comparison?.[col.id]?.facilityAssumedNew);
 
 	$: sectorBlurb = residential
@@ -783,20 +801,33 @@
 						<div class="fields">
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = 1 kg, Commercial HVAC = 100 kg"
+								data-tip="Default: Residential AC = 1 kg, Commercial HVAC = 150 kg"
 								for="chargeSizeKg">Average equipment charge size per unit (kg)</label
 							>
 							<input
 								id="chargeSizeKg"
 								type="number"
-								min="0"
+								min={commercial ? COMMERCIAL_CHARGE_MIN_KG : 0}
+								max={residential
+									? RESIDENTIAL_CHARGE_CAP_KG
+									: commercial
+										? COMMERCIAL_CHARGE_MAX_KG
+										: undefined}
 								step="0.01"
 								bind:value={chargeSizeKg}
 							/>
 							{#if chargeCappedNote}
 								<p class="field-note warn">
-									Residential AC charge size cannot exceed {RESIDENTIAL_CHARGE_CAP_KG} kg. Please
-									update this field.
+									{#if chargeLimitNote === 'commercial-min'}
+										Commercial HVAC charge size cannot be below {COMMERCIAL_CHARGE_MIN_KG} kg. Please
+										update this field.
+									{:else if chargeLimitNote === 'commercial-max'}
+										Commercial HVAC charge size cannot exceed {COMMERCIAL_CHARGE_MAX_KG} kg. Please
+										update this field.
+									{:else}
+										Residential AC charge size cannot exceed {RESIDENTIAL_CHARGE_CAP_KG} kg. Please
+										update this field.
+									{/if}
 								</p>
 							{/if}
 						</div>
@@ -919,7 +950,6 @@
 					</div>
 
 					<div class="field-group">
-						<div class="group-label">Central facility</div>
 						<div class="fields">
 						<div class="field">
 							<label data-tip="Default: USD 1,000/month" for="warehousePerMonth"
@@ -1121,9 +1151,6 @@
 							<p class="summary">
 								{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
 								· {result.inputs.pathway}
-								{#if result.inputs.pathway === PATHWAY_RECYCLING}
-									· cleaning + refill (RY)
-								{/if}
 								{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
 									· {result.inputs.destructionTech}
 								{/if}
@@ -1150,11 +1177,6 @@
 								<div class="value">{formatUsd(result.opex.net)}</div>
 								<span class="unit">USD / kg</span>
 							</div>
-							<div class="metric" data-tip={CARBON_TIP}>
-								<div class="label">Operational Costs</div>
-								<div class="value">{formatUsd(result.climate.costPerTco2e)}</div>
-								<span class="unit">USD / tCO2e</span>
-							</div>
 						{:else if result.inputs.pathway === PATHWAY_RECLAMATION}
 							<div class="metric">
 								<div class="label">
@@ -1179,6 +1201,13 @@
 							<div class="value">{formatUsd(result.capex.total)}</div>
 							<span class="unit">USD · one-off</span>
 						</div>
+						{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
+							<div class="metric" data-tip={CARBON_TIP}>
+								<div class="label">Cost per tonne CO2 equivalent</div>
+								<div class="value">{formatUsd(result.climate.costPerTco2e)}</div>
+								<span class="unit">USD / tCO2e</span>
+							</div>
+						{/if}
 					</div>
 
 					<div class="view-tabs" role="tablist" aria-label="Output charts">
@@ -1347,7 +1376,7 @@
 						</div>
 					{/if}
 
-					{#if comparison}
+					{#if comparison && chartView === 'opex2'}
 						<div class="compare">
 							<h3>Pathway comparison</h3>
 							<p class="opex-thesis">
@@ -1359,53 +1388,45 @@
 									facility.
 								</p>
 							{/if}
-							{#each compareMetrics as metric}
-								<div class="compare-metric">
-									<div class="compare-metric-label">
-										{metric.label}
-										<span class="compare-unit">{metric.unit}</span>
-									</div>
-									{#each compareCols as col, i}
-										{@const amount =
-											metric.key === 'capexPerKg'
-												? result.inputs.annualKg
-													? comparison[col.id].capex / result.inputs.annualKg
-													: 0
-												: comparison[col.id][metric.key]}
-										<div
-											class="compare-row"
-											class:current={result.inputs.pathway === col.id}
-											class:negative={amount < 0}
-											class:tone-a={i % 3 === 0}
-											class:tone-b={i % 3 === 1}
-											class:tone-c={i % 3 === 2}
-										>
-											<span class="name">
-												{col.name}
-												{#if result.inputs.pathway === col.id}
-													<span class="current-mark">Selected</span>
-												{/if}
-												{#if comparison[col.id].facilityNa && metric.id === 'capex'}
-													<span class="na-mark">Facility N/A</span>
-												{:else if comparison[col.id].facilityAssumedNew && metric.id === 'capex'}
-													<span class="na-mark">Costed as new</span>
-												{/if}
-											</span>
-											<div
-												class="bar-track"
-												title="{col.name}: {formatUsd(amount)}"
-												aria-label="{col.name} {metric.label} {formatUsd(amount)}"
-											>
-												<div
-													class="bar-fill"
-													style="width: {opexBar(Math.abs(amount), metric.scale)}%"
-												></div>
-											</div>
-											<span class="on-bar">{formatUsd(amount)}</span>
-										</div>
-									{/each}
+							<div class="compare-metric">
+								<div class="compare-metric-label">
+									Total net operational costs
+									<span class="compare-unit">USD / kg</span>
 								</div>
-							{/each}
+								{#each compareCols as col, i}
+									{@const amount = comparison[col.id].netOpex}
+									{@const leftward =
+										amount < 0 &&
+										(col.id === PATHWAY_RECLAMATION || col.id === PATHWAY_RECYCLING)}
+									<div
+										class="compare-row"
+										class:current={result.inputs.pathway === col.id}
+										class:negative={amount < 0}
+										class:leftward
+										class:tone-a={i % 3 === 0}
+										class:tone-b={i % 3 === 1}
+										class:tone-c={i % 3 === 2}
+									>
+										<span class="name">
+											{col.name}
+											{#if result.inputs.pathway === col.id}
+												<span class="current-mark">Selected</span>
+											{/if}
+										</span>
+										<div
+											class="bar-track compare-track"
+											title="{col.name}: {formatUsd(amount)}"
+											aria-label="{col.name} Total net operational costs {formatUsd(amount)}"
+										>
+											<div
+												class="bar-fill"
+												style="width: {opexBar(Math.abs(amount), compareOpexScale) / 2}%"
+											></div>
+										</div>
+										<span class="on-bar">{formatUsd(amount)}</span>
+									</div>
+								{/each}
+							</div>
 						</div>
 					{/if}
 				</section>
@@ -2883,6 +2904,31 @@
 		background: rgba(2, 60, 64, 0.38);
 	}
 
+	.compare-track .bar-fill {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 100%;
+		border-radius: 0 4px 4px 0;
+	}
+
+	.compare-track::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background: rgba(2, 60, 64, 0.28);
+		transform: translateX(-0.5px);
+	}
+
+	.compare-row.leftward .compare-track .bar-fill {
+		left: auto;
+		right: 50%;
+		border-radius: 4px 0 0 4px;
+	}
+
 	.compare-row.negative .bar-fill {
 		background: repeating-linear-gradient(
 			-45deg,
@@ -2998,23 +3044,29 @@
 		margin-left: auto;
 		text-align: right;
 		flex: 0 0 auto;
+		max-width: 16rem;
+		padding: 0.45rem 0.7rem 0.5rem;
+		background: var(--selected-bg);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
 	}
 
 	.results-year-label {
 		display: block;
-		font-size: 0.72rem;
-		font-weight: 600;
-		color: var(--muted);
+		font-size: 0.78rem;
+		font-weight: 700;
+		line-height: 1.25;
+		color: var(--header);
 	}
 
 	.results-year-value {
 		display: block;
-		margin-top: 0.15rem;
-		font-size: 1.35rem;
+		margin-top: 0.12rem;
+		font-size: 1.65rem;
 		font-weight: 700;
-		line-height: 1.15;
+		line-height: 1.1;
 		font-variant-numeric: tabular-nums;
-		color: var(--header);
+		color: var(--teal);
 	}
 
 	.open-qs {
@@ -3515,13 +3567,17 @@
 		margin-bottom: 0.35rem;
 	}
 
+	.workspace-on .results-year {
+		padding: 0.32rem 0.55rem 0.38rem;
+	}
+
 	.workspace-on .results-year-label {
-		font-size: 0.62rem;
+		font-size: 0.68rem;
 	}
 
 	.workspace-on .results-year-value {
-		margin-top: 0.05rem;
-		font-size: 1.02rem;
+		margin-top: 0.04rem;
+		font-size: 1.35rem;
 	}
 
 	.workspace-on .results-head h2,

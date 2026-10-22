@@ -118,36 +118,36 @@ assertEq('res high machines ROUNDUP(annual/10000)', resHigh.capex.machinesHigh.u
 assertEq('res high acc high follow machines', resHigh.capex.accessoriesHigh.units, 2);
 
 const rec = calculate(excelDefaults(SECTOR_COMMERCIAL, PATHWAY_RECYCLING));
-assertEq('comm availablePerUnit', rec.inputs.availablePerUnit, 80);
-assertEq('comm annualKg', rec.inputs.annualKg, 6000);
-assertClose('comm labourPerUnit hours×rate', rec.inputs.labourPerUnit, 20 * 0.5);
+assertEq('comm availablePerUnit', rec.inputs.availablePerUnit, 120);
+assertEq('comm annualKg', rec.inputs.annualKg, 9000);
+assertClose('comm labourPerUnit hours×rate', rec.inputs.labourPerUnit, 20 * 8);
 assertEq('comm refill always cleaning', rec.inputs.refillMode, REFILL_CLEANING);
-assertClose('comm labour opex', rec.opex.labour, 0.44);
-assertClose('comm recycling markup 50% of labour', rec.opex.refillMarkup, 0.22);
-assertClose('comm recovery transport', rec.opex.recoveryTransport, 0.22);
+assertClose('comm labour opex', rec.opex.labour, 1.54);
+assertClose('comm recycling markup 50% of on-site labour', rec.opex.refillMarkup, 0.67);
+assertClose('comm recovery transport', rec.opex.recoveryTransport, 0.15);
 assertClose('comm warehouse', rec.opex.warehouse, 0);
 assertClose('comm central', rec.opex.central, 0);
 assertClose('comm transport recycling', rec.opex.transport, 0);
 assertClose('comm processing recycling', rec.opex.processing, 0);
-assertClose('comm gross', rec.opex.gross, 0.88);
+assertClose('comm gross', rec.opex.gross, 2.36);
 assertClose('comm virginSavings', rec.opex.virginSavings, 5);
-assertClose('comm net', rec.opex.net, -4.12);
+assertClose('comm net', rec.opex.net, -2.64);
 assertEq('comm high machines = teams', rec.capex.machinesHigh.units, 1);
 assertClose('comm recycling high equipment 20k', rec.capex.machinesHigh.cost, 20000);
-assertEq('comm 12L 30% split', rec.capex.cylinders12L.units, 60);
-assertEq('comm 60L 70% split', rec.capex.cylinders60L.units, 28);
-assertClose('comm recovery capex', rec.capex.recoveryTotal, 134300);
+assertEq('comm 12L 30% split', rec.capex.cylinders12L.units, 90);
+assertEq('comm 60L 70% split', rec.capex.cylinders60L.units, 42);
+assertClose('comm recovery capex', rec.capex.recoveryTotal, 161700);
 assertClose('comm dr recycling', rec.capex.drTotal, 0);
 
 const dest = calculate({ ...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION) });
-assertEq('commercial 6000 kg auto High', dest.inputs.autoScenario, 'High');
+assertEq('commercial 9000 kg auto High', dest.inputs.autoScenario, 'High');
 assertClose('destruction processing', dest.opex.processing, 8);
 assertClose('destruction transport', dest.opex.transport, 0.6);
 assertClose('destruction high machines recovery price', dest.capex.machinesHigh.cost, 20000);
 assertClose('destruction retrofit facility', dest.capex.facility.cost, 200000);
 assertEq('destruction facility units', dest.capex.facility.units, 1);
 assertClose('destruction admin', dest.capex.admin.cost, 10000);
-assertClose('destruction total capex', dest.capex.total, 344300);
+assertClose('destruction total capex', dest.capex.total, 371700);
 
 const destNew = calculate({
 	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
@@ -178,9 +178,9 @@ const res = calculate({
 assertEq('res default available', res.inputs.availablePerUnit, 0.5);
 assertEq('res default annualKg 40×200×0.5', res.inputs.annualKg, 4000);
 assertEq('res auto High', res.inputs.autoScenario, 'High');
-assertEq('res basic machines follow teams', res.capex.machinesBasic.units, 5);
-assertClose('res labour opex', res.opex.labour, 13.13);
-assertClose('res recovery transport', res.opex.recoveryTransport, 4.41);
+assertEq('res basic machines follow teams', res.capex.machinesBasic.units, 4);
+assertClose('res labour opex', res.opex.labour, 12.5);
+assertClose('res recovery transport', res.opex.recoveryTransport, 3.53);
 assertClose('res warehouse', res.opex.warehouse, 3);
 assertClose('res central override Medium', res.opex.central, 0.75);
 assertEq('res 12L 70% split', res.capex.cylinders12L.units, 94);
@@ -190,8 +190,39 @@ const capped = calculate({
 	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
 	chargeSizeKg: 12
 });
-assertEq('residential charge cap', capped.inputs.chargeSizeKg, 5);
+assertEq('residential charge cap', capped.inputs.chargeSizeKg, 10);
 assertEq('charge capped flag', capped.warnings.chargeCapped, true);
+const atCap = calculate({
+	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
+	chargeSizeKg: 10
+});
+assertEq('residential charge at max kept', atCap.inputs.chargeSizeKg, 10);
+assertEq('residential charge at max not flagged', atCap.warnings.chargeCapped, false);
+
+const commercialLow = calculate({
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
+	chargeSizeKg: 9
+});
+assertEq('commercial charge min', commercialLow.inputs.chargeSizeKg, 10);
+assertEq('commercial charge min flagged', commercialLow.warnings.chargeCapped, true);
+const commercialAtMin = calculate({
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
+	chargeSizeKg: 10
+});
+assertEq('commercial charge at min kept', commercialAtMin.inputs.chargeSizeKg, 10);
+assertEq('commercial charge at min not flagged', commercialAtMin.warnings.chargeCapped, false);
+const commercialAtMax = calculate({
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
+	chargeSizeKg: 400
+});
+assertEq('commercial charge at max kept', commercialAtMax.inputs.chargeSizeKg, 400);
+assertEq('commercial charge at max not flagged', commercialAtMax.warnings.chargeCapped, false);
+const commercialHigh = calculate({
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
+	chargeSizeKg: 401
+});
+assertEq('commercial charge max', commercialHigh.inputs.chargeSizeKg, 400);
+assertEq('commercial charge max flagged', commercialHigh.warnings.chargeCapped, true);
 assertEq('residential no recycling compare', comparePathways(capped.inputs).Recycling, null);
 
 const retrofitCompare = comparePathways({
@@ -235,39 +266,41 @@ assertClose(
 	labour.inputs.labourCostPerDay,
 	40 * labour.inputs.unitsPerDay + labour.inputs.travelLaborPerDay
 );
+assertClose('recycling markup excludes travel labour', labour.opex.refillMarkup, 0.17);
 
 assertEq('below 10000 kg is High', defaultCostScenario(9999), 'High');
 assertEq('10000 kg is Medium', defaultCostScenario(10000), 'Medium');
 assertEq('50000 kg is Medium', defaultCostScenario(50000), 'Medium');
 assertEq('above 50000 kg is Low', defaultCostScenario(50001), 'Low');
 assertEq('default recovery hours stay 0.5', defaultRecoveryHours(SECTOR_RESIDENTIAL), 0.5);
-assertEq('residential basic max hours', maxRecoveryHoursPerUnit(SECTOR_RESIDENTIAL, MACHINE_BASIC), 2);
-assertEq('residential high max hours', maxRecoveryHoursPerUnit(SECTOR_RESIDENTIAL, MACHINE_HIGH), 1.5);
-assertEq('commercial high max hours', maxRecoveryHoursPerUnit(SECTOR_COMMERCIAL, MACHINE_HIGH), 36);
+assertEq('commercial default recovery hours', defaultRecoveryHours(SECTOR_COMMERCIAL), 8);
+assertEq('residential basic max hours', maxRecoveryHoursPerUnit(SECTOR_RESIDENTIAL, MACHINE_BASIC), 4);
+assertEq('residential high max hours', maxRecoveryHoursPerUnit(SECTOR_RESIDENTIAL, MACHINE_HIGH), 4);
+assertEq('commercial high max hours', maxRecoveryHoursPerUnit(SECTOR_COMMERCIAL, MACHINE_HIGH), 12);
 
 const resBasicOver = calculate({
 	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
 	machineType: MACHINE_BASIC,
 	recoveryHoursPerUnit: 5
 });
-assertEq('residential basic hours clamped', resBasicOver.inputs.recoveryHoursPerUnit, 2);
+assertEq('residential basic hours clamped', resBasicOver.inputs.recoveryHoursPerUnit, 4);
 assertEq('residential basic hours capped flag', resBasicOver.warnings.recoveryHoursCapped, true);
 
 const resHighOver = calculate({
 	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
 	machineType: MACHINE_HIGH,
-	recoveryHoursPerUnit: 2
+	recoveryHoursPerUnit: 5
 });
-assertEq('residential high hours clamped', resHighOver.inputs.recoveryHoursPerUnit, 1.5);
+assertEq('residential high hours clamped', resHighOver.inputs.recoveryHoursPerUnit, 4);
 assertEq('residential high hours capped flag', resHighOver.warnings.recoveryHoursCapped, true);
 
 const resBasicOk = calculate({
 	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
 	machineType: MACHINE_BASIC,
-	recoveryHoursPerUnit: 2
+	recoveryHoursPerUnit: 4
 });
 assertEq('residential basic at max is not capped', resBasicOk.warnings.recoveryHoursCapped, false);
-assertEq('residential basic at max kept', resBasicOk.inputs.recoveryHoursPerUnit, 2);
+assertEq('residential basic at max kept', resBasicOk.inputs.recoveryHoursPerUnit, 4);
 
 const commOver = calculate({
 	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
@@ -275,7 +308,13 @@ const commOver = calculate({
 	recoveryHoursPerUnit: 40
 });
 assertEq('commercial stays high capacity', commOver.inputs.machineType, MACHINE_HIGH);
-assertEq('commercial hours clamped', commOver.inputs.recoveryHoursPerUnit, 36);
+assertEq('commercial hours clamped', commOver.inputs.recoveryHoursPerUnit, 12);
 assertEq('commercial hours capped flag', commOver.warnings.recoveryHoursCapped, true);
+const commAtMax = calculate({
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_DESTRUCTION),
+	recoveryHoursPerUnit: 12
+});
+assertEq('commercial hours at max kept', commAtMax.inputs.recoveryHoursPerUnit, 12);
+assertEq('commercial hours at max not flagged', commAtMax.warnings.recoveryHoursCapped, false);
 
 console.log('All V5.0 golden tests passed');
