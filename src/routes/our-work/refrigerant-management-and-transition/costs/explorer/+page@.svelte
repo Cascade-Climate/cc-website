@@ -559,36 +559,67 @@
 					name: 'Recovery',
 					value: result.opex.labour + result.opex.refillMarkup + result.opex.recoveryTransport,
 					parts: [
-						{ name: 'Recovery labour costs', value: result.opex.labour },
+						{
+							name: 'Recovery labor costs',
+							value: result.opex.labour,
+							detail: 'Labor for on-site refrigerant recovery and traveling time'
+						},
 						...(result.inputs.pathway === PATHWAY_RECYCLING
 							? [{ name: 'Additional costs for recycling', value: result.opex.refillMarkup }]
 							: []),
 						{
-							name: 'Recovery transportation (on-site to central facility)',
+							name: 'Recovery transportation (recovery site to central facility)',
 							value: result.opex.recoveryTransport
 						}
 					]
 				},
 				{
 					id: 'opex-central',
-					name: 'Central facility',
+					name: 'Central facility storage and operations',
 					value: result.opex.warehouse + result.opex.central,
 					parts: [
-						{ name: 'Central facility storage', value: result.opex.warehouse },
-						{ name: 'Central facility operational activities', value: result.opex.central }
+						{
+							name: 'Central facility storage',
+							value: result.opex.warehouse,
+							detail:
+								result.inputs.pathway === PATHWAY_RECYCLING
+									? 'Not applicable for recycling'
+									: undefined
+						},
+						{
+							name: 'Central facility operational activities',
+							value: result.opex.central,
+							detail:
+								'Operational labor costs for bulk consolidation of refrigerants into larger cylinders and/or tonne tanks'
+						}
 					]
 				},
 				{
 					id: 'opex-transport',
 					name: 'Transport & handling to end-use',
 					value: result.opex.transport,
-					parts: [{ name: 'Transport & handling to end-use facility', value: result.opex.transport }]
+					parts: [
+						{
+							name: 'Transport & handling to end-use facility',
+							value: result.opex.transport,
+							detail:
+								result.inputs.pathway === PATHWAY_RECYCLING
+									? 'Not applicable for recycling'
+									: undefined
+						}
+					]
 				},
 				{
 					id: 'opex-enduse',
 					name: 'End-use processing',
 					value: result.opex.processing,
-					parts: [{ name: 'End-use processing', value: result.opex.processing }]
+					parts: [
+						{
+							name: 'End-use processing',
+							value: result.opex.processing,
+							detail: 'Processing costs for reclamation or destruction'
+						}
+					]
 				}
 			]
 		: [];
@@ -661,7 +692,13 @@
 					id: 'capex-admin',
 					name: 'Admin & licensing',
 					hidden: result.capex.admin.hidden,
-					parts: [capexBit('Admin & licensing', result.capex.admin)].filter(Boolean)
+					parts: [capexBit('Admin & licensing', result.capex.admin)]
+						.filter(Boolean)
+						.map((part) => ({
+							...part,
+							detail:
+								'Licensing and administrative costs required for new and/or retrofitted facilities'
+						}))
 				}
 			]
 				.filter((row) => !row.hidden)
@@ -712,7 +749,7 @@
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">V. Oct 23 2am ET</div>
+				<div class="eyebrow">V. Oct 23 3am ET</div>
 				<div class="title-line">
 					<img
 						class="brand"
@@ -882,9 +919,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip={commercial
-									? 'For Commercial HVAC, default is High Capacity'
-									: undefined}
+								data-tip="Basic includes standard compact recovery machines used for small capacity units; High capacity includes high-speed recovery machines primarily used for large commercial units or systems."
 								for="machineType">Recovery machine type</label
 							>
 							{#if commercial}
@@ -900,7 +935,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="For Residential AC, consider the time needed for AC pump down as well (if applicable). For Commercial HVAC, consider the time needed from set up to completion."
+								data-tip="Total time required for recovery from set up to completion. For Residential AC, if applicable, time needed for AC pump down should be factored in. Defaults: Residential AC = 0.5 hours for a 1 kg AC unit; Commercial HVAC = 8 hours for a 150 kg unit/system."
 								for="recoveryHoursPerUnit">Recovery time needed per unit (hours)</label
 							>
 							<input
@@ -920,7 +955,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = USD 10/hour, Commercial HVAC = USD 20/hour (assuming a two-person team)"
+								data-tip="Hourly labor rate for technicians. Defaults: Residential AC = USD 10/hour (per technician); Commercial HVAC = USD 20/hour (combined rate for a two-person team)"
 								for="labourPerHour">Hourly labor rate (USD/hr)</label
 							>
 							<input id="labourPerHour" type="number" min="0" step="0.01" bind:value={labourPerHour} />
@@ -933,8 +968,9 @@
 							<input id="unitsPerDay" type="number" min="0" step="1" bind:value={unitsPerDay} />
 						</div>
 						<div class="field">
-							<label data-tip="Default: 8.5 km/L" for="fuelEfficiencyKmPerL"
-								>Fuel efficiency of vehicle used (km/L)</label
+							<label
+								data-tip="Dependent on vehicle type used. Default: 8.5 km/L (for small truck/lorry)"
+								for="fuelEfficiencyKmPerL">Fuel efficiency of vehicle used (km/L)</label
 							>
 							<input
 								id="fuelEfficiencyKmPerL"
@@ -945,19 +981,21 @@
 							/>
 						</div>
 						<div class="field">
-							<label data-tip="Default: USD 1.50/L" for="fuelPricePerL">Fuel price (USD/L)</label>
+							<label data-tip="Depends on local fuel prices. Default: USD 1.50/L" for="fuelPricePerL"
+								>Fuel price (USD/L)</label
+							>
 							<input id="fuelPricePerL" type="number" min="0" step="0.01" bind:value={fuelPricePerL} />
 						</div>
 						<div class="field">
 							<label
-								data-tip="Guidance: Residential AC = 1 team for every 10 units recovered per day, Commercial HVAC = 1 team for every unit recovered per day"
+								data-tip="Guidance: Residential AC = 1 team per 10 units recovered per day; Commercial HVAC = 1 team per unit recovered per day"
 								for="teams">Number of recovery teams mobilized per day</label
 							>
 							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
 						</div>
 						<div class="field">
 							<label
-								data-tip="Covers transportation to recovery site until central facility. Default = 100 km per team"
+								data-tip="Average distance traveled by each team, from departure to the recovery site and onward to the central facility. Default: 100 km per team"
 								for="travelKmPerTeam">Average distance travelled per team (km/day)</label
 							>
 							<input id="travelKmPerTeam" type="number" min="0" step="1" bind:value={travelKmPerTeam} />
@@ -970,22 +1008,21 @@
 							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
 						</div>
 						</div>
-						<div class="group-label subhead">Recovery snapshot</div>
+						<div class="group-label subhead">Recovery Summary</div>
 						<div class="snapshot">
-							<div>
-								<span class="k">Total labor cost<span>per day</span></span>
+							<div
+								data-tip="Sumtotal of technician on-site labor + traveling time"
+							>
+								<span class="k">Total labor cost per day (USD/day)</span>
 								<span class="v">{formatUsd(live.inputs.labourCostPerDay)}</span>
-								<span class="u">USD / day</span>
 							</div>
 							<div>
-								<span class="k">Total transport cost<span>per day</span></span>
+								<span class="k">Total transport cost per day (USD/day)</span>
 								<span class="v">{formatUsd(live.inputs.recoveryTransportPerDay)}</span>
-								<span class="u">USD / day</span>
 							</div>
 							<div>
-								<span class="k">Total refrigerant recovered<span>per day</span></span>
+								<span class="k">Total amount of refrigerant recovered per day (kg/day)</span>
 								<span class="v">{formatKg(live.inputs.kgPerDay, 2)}</span>
-								<span class="u">kg / day</span>
 							</div>
 						</div>
 					</div>
@@ -994,8 +1031,9 @@
 						<div class="fields">
 						{#if pathway !== PATHWAY_RECYCLING}
 							<div class="field">
-								<label data-tip="Default: USD 1,000/month" for="warehousePerMonth"
-									>Central facility storage (USD per month)</label
+								<label
+									data-tip="Cost required to rent/own a central facility for storage, recovery and bulk consolidation activities. Default: USD 1,000/month"
+									for="warehousePerMonth">Central facility storage (USD per month)</label
 								>
 								<input id="warehousePerMonth" type="number" min="0" step="1" bind:value={warehousePerMonth} />
 							</div>
@@ -1056,15 +1094,16 @@
 						{#if pathway === PATHWAY_RECLAMATION}
 							<div class="fields three">
 							<div class="field">
-								<label for="facilityStatus">Facility status</label>
+								<label data-tip="Retrofit is not applicable." for="facilityStatus">Facility status</label>
 								<select id="facilityStatus" bind:value={facilityStatus}>
 									<option>Existing</option>
 									<option>New</option>
 								</select>
+								<p class="field-hint">Retrofit is not applicable.</p>
 							</div>
 							<div class="field">
 								<label
-									data-tip={'In-country: Refrigerant is processed in-country\nExported: Refrigerant is exported overseas for processing'}
+									data-tip="Select ‘In-country’ if refrigerant is processed in-country. Select ‘Exported’ if refrigerant is exported overseas for processing."
 									for="location">Location</label>
 								<select id="location" bind:value={location}>
 									<option>In-country</option>
@@ -1088,7 +1127,10 @@
 						{#if pathway === PATHWAY_DESTRUCTION}
 							<div class="fields three">
 							<div class="field">
-								<label for="destructionTech">Destruction technology</label>
+								<label
+									data-tip="Options: Rotary Kiln Incineration, Cement Kiln Incineration, or Plasma Arc."
+									for="destructionTech">Destruction technology</label
+								>
 								<select id="destructionTech" bind:value={destructionTech}>
 									<option value="Rotary">Rotary kiln incineration</option>
 									<option value="Cement">Cement kiln incineration</option>
@@ -1107,10 +1149,13 @@
 									{/if}
 									<option>New</option>
 								</select>
+								{#if destructionTech === 'Plasma Arc'}
+									<p class="field-hint">Retrofit is not applicable.</p>
+								{/if}
 							</div>
 							<div class="field">
 								<label
-									data-tip={'In-country: Refrigerant is processed in-country\nExported: Refrigerant is exported overseas for processing'}
+									data-tip="Select ‘In-country’ if refrigerant is processed in-country. Select ‘Exported’ if refrigerant is exported overseas for processing."
 									for="locationDest">Location</label>
 								<select id="locationDest" bind:value={location}>
 									<option>In-country</option>
@@ -1205,19 +1250,15 @@
 							</p>
 						</div>
 						<div class="results-year">
-							<span class="results-year-label">Total Net Operational Costs per year (USD)</span>
+							<span class="results-year-label">Total net operational costs per year (USD)</span>
 							<span class="results-year-value">{formatUsd(result.opex.netPerYear)}</span>
 						</div>
 					</div>
 
 					<div class="metrics" class:four={result.inputs.pathway === PATHWAY_DESTRUCTION}>
 						<div class="metric">
-							<div class="label">
-								Total refrigerant recovered
-								<span class="label-note">per year</span>
-							</div>
+							<div class="label">Total amount of refrigerant recovered per year (kg/year)</div>
 							<div class="value">{formatKg(result.inputs.annualKg, 0)}</div>
-							<span class="unit">kg / year</span>
 						</div>
 						{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
 							<div class="metric">
@@ -1485,7 +1526,7 @@
 		{/if}
 
 		<p class="page-foot">
-			V. Oct 23 2am ET
+			V. Oct 23 3am ET
 		</p>
 	</div>
 </div>
@@ -1943,7 +1984,8 @@
 
 	label[data-tip],
 	.choice[data-tip],
-	.group-label[data-tip] {
+	.group-label[data-tip],
+	.snapshot [data-tip] {
 		cursor: help;
 	}
 
