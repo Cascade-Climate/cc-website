@@ -106,11 +106,42 @@
 	let chartView = 'opex2';
 	const CARBON_TIP =
 		'For reference, Singapore’s carbon tax, for 2026-2027, is S$45/tCO2e (~US$35), and Japan’s GX-ETS, mandatory since 2026, operates within a price corridor of ¥1,700-¥4,300/tCO2e (~US$11-27)';
+	const NEGATIVE_OPEX_TIP = 'Negative values indicate total net cost savings';
 	let selectedAlt = '';
 	/** @type {HTMLElement | null} */
 	let tipHost = null;
 	/** @type {HTMLDivElement | null} */
 	let tipProbe = null;
+
+	function ensureTip() {
+		if (tipProbe) return tipProbe;
+		tipProbe = document.createElement('div');
+		tipProbe.setAttribute('aria-hidden', 'true');
+		tipProbe.style.cssText = [
+			'position:fixed',
+			'z-index:80',
+			'left:0',
+			'top:0',
+			'visibility:hidden',
+			'pointer-events:none',
+			'white-space:pre-line',
+			'box-sizing:border-box',
+			'width:max-content',
+			'padding:0.45rem 0.6rem',
+			'background:#023c40',
+			'color:#fafafa',
+			'font:400 0.75rem/1.4 Inter, sans-serif',
+			'border-radius:6px',
+			'box-shadow:0 6px 18px rgba(2, 60, 64, 0.16)'
+		].join(';');
+		document.body.appendChild(tipProbe);
+		return tipProbe;
+	}
+
+	function hideTip() {
+		tipHost = null;
+		if (tipProbe) tipProbe.style.visibility = 'hidden';
+	}
 
 	function positionTip(host) {
 		if (!(host instanceof HTMLElement) || !host.dataset.tip) return;
@@ -123,26 +154,17 @@
 			rect.right < margin ||
 			rect.left > window.innerWidth - margin
 		) {
-			host.style.setProperty('--tip-x', '-9999px');
-			host.style.setProperty('--tip-y', '0px');
+			hideTip();
 			return;
 		}
+		const tip = ensureTip();
 		const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
 		const maxWidth = Math.min(22 * rem, window.innerWidth - margin * 2);
-		if (!tipProbe) {
-			tipProbe = document.createElement('div');
-			tipProbe.setAttribute('aria-hidden', 'true');
-			tipProbe.style.cssText =
-				'position:fixed;left:-9999px;top:0;visibility:hidden;pointer-events:none;white-space:pre-line;box-sizing:border-box;';
-			document.body.appendChild(tipProbe);
-		}
-		tipProbe.style.font = `400 0.75rem/1.4 ${getComputedStyle(host).fontFamily}`;
-		tipProbe.style.padding = '0.45rem 0.6rem';
-		tipProbe.style.width = 'max-content';
-		tipProbe.style.maxWidth = `${maxWidth}px`;
-		tipProbe.textContent = host.dataset.tip;
-		const tipW = tipProbe.offsetWidth;
-		const tipH = tipProbe.offsetHeight;
+		tip.style.font = `400 0.75rem/1.4 ${getComputedStyle(host).fontFamily}`;
+		tip.style.maxWidth = `${maxWidth}px`;
+		tip.textContent = host.dataset.tip;
+		const tipW = tip.offsetWidth;
+		const tipH = tip.offsetHeight;
 		let left = rect.left;
 		if (left + tipW > window.innerWidth - margin) left = window.innerWidth - margin - tipW;
 		if (left < margin) left = margin;
@@ -151,15 +173,36 @@
 		if (top + tipH > window.innerHeight - margin) {
 			top = Math.max(margin, window.innerHeight - margin - tipH);
 		}
-		host.style.setProperty('--tip-x', `${Math.round(left)}px`);
-		host.style.setProperty('--tip-y', `${Math.round(top)}px`);
+		tip.style.left = `${Math.round(left)}px`;
+		tip.style.top = `${Math.round(top)}px`;
+		tip.style.visibility = 'visible';
 		tipHost = host;
 	}
 
+	function tipHostFrom(node) {
+		if (!(node instanceof Element)) return null;
+		const direct = node.closest('[data-tip]');
+		if (direct instanceof HTMLElement && direct.dataset.tip) return direct;
+		if (node instanceof HTMLElement && node.id) {
+			const label = document.querySelector(`label[for="${CSS.escape(node.id)}"]`);
+			if (label instanceof HTMLElement && label.dataset.tip) return label;
+		}
+		return null;
+	}
+
 	function placeTip(event) {
-		const node = event.target;
-		const host = node instanceof Element ? node.closest('[data-tip]') : null;
-		if (host instanceof HTMLElement && host.dataset.tip) positionTip(host);
+		const host = tipHostFrom(event.target);
+		if (host) positionTip(host);
+	}
+
+	function leaveTip(event) {
+		if (!tipHost) return;
+		const next = event.relatedTarget;
+		if (next instanceof Node && tipHost.contains(next)) return;
+		const from = event.target;
+		const fromHost = from instanceof Element ? from.closest('[data-tip]') : null;
+		if (fromHost !== tipHost) return;
+		hideTip();
 	}
 
 	function followTip() {
@@ -409,6 +452,12 @@
 		});
 	}
 
+	function destructionTechLabel(tech) {
+		if (tech === 'Rotary') return 'Rotary kiln incineration';
+		if (tech === 'Cement') return 'Cement kiln incineration';
+		return tech;
+	}
+
 	function formatKg(n, digits = 2) {
 		return n.toLocaleString('en-US', {
 			minimumFractionDigits: digits,
@@ -494,7 +543,13 @@
 		} else if (active.length > 1) {
 			note = '';
 		}
-		return { name: 'Recovery accessories', value, note };
+		return {
+			name: 'Recovery accessories',
+			value,
+			note,
+			detail:
+				'Includes all necessary accessories required for recovery activities corresponding to the type of recovery machine used, as well as basic tools for AC pump down where applicable.'
+		};
 	}
 
 	$: opexSteps = result
@@ -503,8 +558,6 @@
 					id: 'opex-recovery',
 					name: 'Recovery',
 					value: result.opex.labour + result.opex.refillMarkup + result.opex.recoveryTransport,
-					tooltip:
-						'Labour to recover refrigerant, the recycling mark-up when that pathway is selected, and fuel from the site to the central facility.',
 					parts: [
 						{ name: 'Recovery labour costs', value: result.opex.labour },
 						...(result.inputs.pathway === PATHWAY_RECYCLING
@@ -520,10 +573,8 @@
 					id: 'opex-central',
 					name: 'Central facility',
 					value: result.opex.warehouse + result.opex.central,
-					tooltip:
-						'Warehouse storage plus central-facility consolidation into large cylinders or ton tanks. Zero for Recycling.',
 					parts: [
-						{ name: 'Warehouse storage', value: result.opex.warehouse },
+						{ name: 'Central facility storage', value: result.opex.warehouse },
 						{ name: 'Central facility operational activities', value: result.opex.central }
 					]
 				},
@@ -531,14 +582,12 @@
 					id: 'opex-transport',
 					name: 'Transport & handling to end-use',
 					value: result.opex.transport,
-					tooltip: 'In-country or exported haulage to reclamation or destruction. Zero for Recycling.',
 					parts: [{ name: 'Transport & handling to end-use facility', value: result.opex.transport }]
 				},
 				{
 					id: 'opex-enduse',
 					name: 'End-use processing',
 					value: result.opex.processing,
-					tooltip: 'Reclamation or destruction processing. Zero for Recycling.',
 					parts: [{ name: 'End-use processing', value: result.opex.processing }]
 				}
 			]
@@ -551,7 +600,6 @@
 					id: 'opex-sale',
 					name: 'Sale price of reclaimed refrigerant',
 					value: -result.opex.saleCredit,
-					tooltip: 'Subtracted from gross operating cost. This is the blended sale price input.',
 					parts: [{ name: 'Sale price of reclaimed refrigerant', value: -result.opex.saleCredit }]
 				}
 			: result.inputs.pathway === PATHWAY_RECYCLING
@@ -559,7 +607,6 @@
 						id: 'opex-virgin',
 						name: 'Price of virgin refrigerant avoided',
 						value: -result.opex.virginSavings,
-						tooltip: 'Subtracted from gross operating cost. This is the virgin-refrigerant price input.',
 						parts: [{ name: 'Price of virgin refrigerant avoided', value: -result.opex.virginSavings }]
 					}
 				: null;
@@ -575,7 +622,7 @@
 						capexBit('Recovery machines (basic)', result.capex.machinesBasic, { showHidden: true }),
 						capexBit(
 							result.inputs.pathway === PATHWAY_RECYCLING
-								? 'Recovery + Recycling Machine'
+								? 'Recovery + recycling machines (high capacity)'
 								: 'Recovery machines (high capacity)',
 							result.capex.machinesHigh,
 							{ showHidden: true }
@@ -584,15 +631,13 @@
 						capexBit('12L cylinders', result.capex.cylinders12L, { showHidden: true }),
 						capexBit('60L cylinders', result.capex.cylinders60L, { showHidden: true }),
 						capexBit('Refrigerant identifiers', result.capex.identifiers, { showHidden: true }),
-						capexBit('Ton tanks', result.capex.tonTanks, { showHidden: true })
-					].filter(Boolean),
-					tooltip: 'Machines, accessories, identifiers, cylinders, and tanks. TMS is a separate bar.'
+						capexBit('Tonne tanks', result.capex.tonTanks, { showHidden: true })
+					].filter(Boolean)
 				},
 				{
 					id: 'capex-tracking',
 					name: 'Tracking & monitoring system',
-					parts: [capexBit('Tracking & monitoring system', result.capex.tracking)].filter(Boolean),
-					tooltip: 'Manual TMS input from the recovery capital costs block.'
+					parts: [capexBit('Tracking & monitoring system', result.capex.tracking)].filter(Boolean)
 				},
 				{
 					id: 'capex-facility',
@@ -610,16 +655,13 @@
 						),
 						capexBit('Reclamation operators (training)', result.capex.operators),
 						capexBit('Gas chromatography lab', result.capex.gcLab)
-					].filter(Boolean),
-					tooltip:
-						'End-use plant. Plasma Arc + Retrofit and Reclamation + Retrofit show as NA. Operators and GC apply to reclamation only.'
+					].filter(Boolean)
 				},
 				{
 					id: 'capex-admin',
 					name: 'Admin & licensing',
 					hidden: result.capex.admin.hidden,
-					parts: [capexBit('Admin & licensing', result.capex.admin)].filter(Boolean),
-					tooltip: 'Admin & licensing on a new or retrofit end-use facility. Zero for Recycling and Existing.'
+					parts: [capexBit('Admin & licensing', result.capex.admin)].filter(Boolean)
 				}
 			]
 				.filter((row) => !row.hidden)
@@ -643,7 +685,6 @@
 		0.0001,
 		...compareCols.map((col) => Math.abs(comparison?.[col.id]?.netOpex || 0))
 	);
-	$: compareAssumedNew = compareCols.some((col) => comparison?.[col.id]?.facilityAssumedNew);
 
 	$: sectorBlurb = residential
 		? 'Residential recovery can include on-site pump-down when it applies, then recovery at a central facility. The model no longer assumes every unit is pumped down first.'
@@ -666,12 +707,12 @@
 	/>
 </svelte:head>
 
-<div class="lrm-explorer" class:workspace-on={ready} on:mouseover={placeTip} on:focusin={placeTip}>
+<div class="lrm-explorer" class:workspace-on={ready} on:mouseover={placeTip} on:mouseout={leaveTip} on:focusin={placeTip}>
 	<div class="wrap">
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">V. Oct 20 8pm ET</div>
+				<div class="eyebrow">V. Oct 23 2am ET</div>
 				<div class="title-line">
 					<img
 						class="brand"
@@ -796,7 +837,7 @@
 
 					<div class="inputs-scroll" use:watchInputsEnd>
 					<div class="field-group">
-						<div class="group-label">Recovery</div>
+						<div class="group-label subhead">Recovery</div>
 
 						<div class="fields">
 						<div class="field">
@@ -879,7 +920,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = USD 10/hour, Commercial HVAC = USD 20/hour (assuming a two-man team)"
+								data-tip="Default: Residential AC = USD 10/hour, Commercial HVAC = USD 20/hour (assuming a two-person team)"
 								for="labourPerHour">Hourly labor rate (USD/hr)</label
 							>
 							<input id="labourPerHour" type="number" min="0" step="0.01" bind:value={labourPerHour} />
@@ -909,7 +950,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = 1 team for every 10 units recovered per day, Commercial HVAC = 1 team for every unit recovered per day"
+								data-tip="Guidance: Residential AC = 1 team for every 10 units recovered per day, Commercial HVAC = 1 team for every unit recovered per day"
 								for="teams">Number of recovery teams mobilized per day</label
 							>
 							<input id="teams" type="number" min="0" step="1" bind:value={teams} />
@@ -929,7 +970,7 @@
 							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
 						</div>
 						</div>
-						<div class="group-label">Recovery snapshot</div>
+						<div class="group-label subhead">Recovery snapshot</div>
 						<div class="snapshot">
 							<div>
 								<span class="k">Total labor cost<span>per day</span></span>
@@ -951,12 +992,14 @@
 
 					<div class="field-group">
 						<div class="fields">
-						<div class="field">
-							<label data-tip="Default: USD 1,000/month" for="warehousePerMonth"
-								>Central facility warehouse storage (USD per month)</label
-							>
-							<input id="warehousePerMonth" type="number" min="0" step="1" bind:value={warehousePerMonth} />
-						</div>
+						{#if pathway !== PATHWAY_RECYCLING}
+							<div class="field">
+								<label data-tip="Default: USD 1,000/month" for="warehousePerMonth"
+									>Central facility storage (USD per month)</label
+								>
+								<input id="warehousePerMonth" type="number" min="0" step="1" bind:value={warehousePerMonth} />
+							</div>
+						{/if}
 						<div class="field">
 							<label
 								data-tip="Cost to establish system for chain of custody tracking and monitoring"
@@ -966,7 +1009,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default determined by annual volume. To change, select 'override.'"
+								data-tip="Applies to post-recovery costs only; determines which cost range value (high, medium, low) is utilized in cost calculations. Default determined by annual volume. To change, select ‘override’."
 								for="costScenarioMode">Cost scenario</label
 							>
 							<select id="costScenarioMode" bind:value={costScenarioMode}>
@@ -977,7 +1020,7 @@
 						{#if costScenarioMode === 'manual'}
 							<div class="field">
 								<label
-									data-tip={'High represents <10,000 kg/year, Medium represents 10,000 - 50,000 kg per year, Low represents > 50,000 kg per year'}
+									data-tip="Guidance: Select high for volumes <10,000 kg/year, medium for 10,000 – 50,000 kg/year, low for > 50,000 kg/year."
 									for="costScenarioManual">Override cost scenario</label
 								>
 								<select id="costScenarioManual" bind:value={costScenarioManual}>
@@ -996,7 +1039,7 @@
 							<div class="fields">
 							<div class="field">
 								<label for="virginPrice"
-									>(For Recycling only) Price of virgin refrigerant avoided (USD/kg)</label
+									>Price of virgin refrigerant avoided (USD/kg)</label
 								>
 								<input id="virginPrice" type="number" min="0" step="0.01" bind:value={virginPrice} />
 							</div>
@@ -1009,7 +1052,7 @@
 					</div>
 
 					<div class="field-group" class:option-idle={pathway !== PATHWAY_RECLAMATION}>
-						<div class="group-label">Reclamation</div>
+						<div class="group-label subhead">Reclamation</div>
 						{#if pathway === PATHWAY_RECLAMATION}
 							<div class="fields three">
 							<div class="field">
@@ -1047,14 +1090,14 @@
 							<div class="field">
 								<label for="destructionTech">Destruction technology</label>
 								<select id="destructionTech" bind:value={destructionTech}>
-									<option>Rotary</option>
-									<option>Cement</option>
+									<option value="Rotary">Rotary kiln incineration</option>
+									<option value="Cement">Cement kiln incineration</option>
 									<option>Plasma Arc</option>
 								</select>
 							</div>
 							<div class="field">
 								<label
-									data-tip="Select ‘New facility’ if a brand new facility will be constructed, ‘Retrofit’ if an existing facility will be retrofitted for refrigerant processing, and ‘Existing’ if refrigerant will be sent to an existing facility for processing, without the need for additional retrofitting."
+									data-tip="Select ‘New facility’ if a brand new facility will be constructed, ‘Retrofit’ if an existing facility will be retrofitted for refrigerant processing, and ‘Existing’ if refrigerant will be sent to an existing facility for processing, without the need for additional modifications."
 									for="facilityStatusDest">Facility status</label
 								>
 								<select id="facilityStatusDest" bind:value={facilityStatus}>
@@ -1081,7 +1124,12 @@
 					</div>
 
 					<div class="field-group">
-						<div class="group-label">Refrigerant mix</div>
+						<div
+							class="group-label subhead"
+							data-tip="When destruction is selected, this section is used to calculate the carbon price (USD/tCO2e) based on the weighted-average GWP. This section does not impact recycling or reclamation pathway outputs."
+						>
+							Refrigerant mix
+						</div>
 						<div class="fields mix">
 						<div class="field">
 							<label data-tip="GWP-100 of R-32 (kgCO2e/kg) = 771 (Reference: IPCC AR6)" for="mixR32"
@@ -1152,7 +1200,7 @@
 								{result.inputs.sector === SECTOR_RESIDENTIAL ? 'Residential AC' : 'Commercial HVAC'}
 								· {result.inputs.pathway}
 								{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
-									· {result.inputs.destructionTech}
+									· {destructionTechLabel(result.inputs.destructionTech)}
 								{/if}
 							</p>
 						</div>
@@ -1178,7 +1226,10 @@
 								<span class="unit">USD / kg</span>
 							</div>
 						{:else if result.inputs.pathway === PATHWAY_RECLAMATION}
-							<div class="metric">
+							<div
+								class="metric"
+								data-tip={result.opex.net < 0 ? NEGATIVE_OPEX_TIP : undefined}
+							>
 								<div class="label">
 									Operational Costs
 									<span class="label-note">net of reclaimed refrigerant sales</span>
@@ -1187,7 +1238,10 @@
 								<span class="unit">USD / kg</span>
 							</div>
 						{:else}
-							<div class="metric">
+							<div
+								class="metric"
+								data-tip={result.opex.net < 0 ? NEGATIVE_OPEX_TIP : undefined}
+							>
 								<div class="label">
 									Operational Costs
 									<span class="label-note">net of virgin refrigerant avoided</span>
@@ -1365,14 +1419,14 @@
 							<ul class="cat-parts">
 								{#each selectedDetail.parts as part}
 									<li>
-										<span>{part.name}{#if part.note} · {part.note}{/if}</span>
+										<span class="part-copy">
+											<span>{part.name}{#if part.note} · {part.note}{/if}</span>
+											{#if part.detail}<span class="part-detail">{part.detail}</span>{/if}
+										</span>
 										<span>{formatUsd(part.value)}{chartView === 'capex' ? '' : '/kg'}</span>
 									</li>
 								{/each}
 							</ul>
-							{#if selectedDetail.tooltip}
-								<p class="cat-tip">{selectedDetail.tooltip}</p>
-							{/if}
 						</div>
 					{/if}
 
@@ -1380,14 +1434,10 @@
 						<div class="compare">
 							<h3>Pathway comparison</h3>
 							<p class="opex-thesis">
-								Same recovery setup, compared across end-uses. Recycling is commercial HVAC only.
+								High-level comparison between selected pathway and other applicable pathways. Recovery
+								costs stay the same, but processing costs differ. Recycling will appear only when
+								Commercial HVAC is selected. Capital costs are not included.
 							</p>
-							{#if compareAssumedNew}
-								<p class="opex-thesis compare-caveat">
-									Retrofit is not available for that pathway, so the comparison is costed as a new
-									facility.
-								</p>
-							{/if}
 							<div class="compare-metric">
 								<div class="compare-metric-label">
 									Total net operational costs
@@ -1435,7 +1485,7 @@
 		{/if}
 
 		<p class="page-foot">
-			V. Oct 20 8pm ET
+			V. Oct 23 2am ET
 		</p>
 	</div>
 </div>
@@ -1891,41 +1941,12 @@
 		position: relative;
 	}
 
-	label[data-tip] {
+	label[data-tip],
+	.choice[data-tip],
+	.group-label[data-tip] {
 		cursor: help;
 	}
 
-	label[data-tip]:hover::after,
-	label[data-tip]:focus-visible::after,
-	.metric[data-tip]:hover::after,
-	.metric[data-tip]:focus-visible::after,
-	.choice[data-tip]:hover::after,
-	.choice[data-tip]:focus-visible::after {
-		content: attr(data-tip);
-		position: fixed;
-		left: var(--tip-x, 8px);
-		top: var(--tip-y, 8px);
-		bottom: auto;
-		width: max-content;
-		max-width: min(22rem, calc(100vw - 1rem));
-		padding: 0.45rem 0.6rem;
-		background: var(--teal);
-		color: var(--on-teal);
-		font-size: 0.75rem;
-		font-weight: 400;
-		line-height: 1.4;
-		letter-spacing: 0;
-		text-transform: none;
-		border-radius: 6px;
-		z-index: 80;
-		pointer-events: none;
-		box-shadow: 0 6px 18px rgba(2, 60, 64, 0.16);
-		white-space: pre-line;
-	}
-
-	.field:focus-within label[data-tip]::after {
-		content: none;
-	}
 
 	select,
 	input[type='number'] {
@@ -2267,11 +2288,17 @@
 		border-top: 1px solid var(--line);
 	}
 
-	.cat-tip {
-		margin: 0.25rem 0 0.55rem;
-		font-size: 0.75rem;
-		color: var(--muted);
-		line-height: 1.4;
+	.part-copy {
+		display: flex;
+		flex-direction: column;
+		gap: 0.12rem;
+		min-width: 0;
+	}
+
+	.part-detail {
+		font-size: 0.72rem;
+		font-weight: 400;
+		line-height: 1.35;
 	}
 
 	.metric {
@@ -2331,13 +2358,6 @@
 		color: var(--muted);
 		font-weight: 600;
 		margin: 0 0 0.75rem;
-	}
-
-	.opex-thesis {
-		margin: -0.35rem 0 0.75rem;
-		font-size: 0.82rem;
-		line-height: 1.45;
-		color: var(--ink-soft);
 	}
 
 	.view-tabs {
@@ -2842,8 +2862,11 @@
 		margin: 0 0 0.45rem;
 	}
 
-	.compare-caveat {
-		margin-top: -0.15rem;
+	.opex-thesis {
+		margin: -0.35rem 0 0.75rem;
+		font-size: 0.82rem;
+		line-height: 1.45;
+		color: var(--ink-soft);
 	}
 
 	.compare-metric {
@@ -3341,7 +3364,7 @@
 	}
 
 	.workspace-on .panel h2 {
-		font-size: 0.78rem;
+		font-size: 0.88rem;
 		font-weight: 700;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
@@ -3374,6 +3397,10 @@
 		font-weight: 700;
 		letter-spacing: 0.04em;
 		color: var(--header);
+	}
+
+	.workspace-on .group-label.subhead {
+		font-size: 0.78rem;
 	}
 
 	.workspace-on .option-idle {
@@ -3785,13 +3812,6 @@
 		font-size: 0.62rem;
 	}
 
-	.workspace-on .opex-thesis {
-		margin: 0 0 0.4rem;
-		font-size: 0.65rem;
-		font-weight: 400;
-		line-height: 1.35;
-	}
-
 	.workspace-on .layout > .results {
 		overflow: auto;
 		min-height: 0;
@@ -3806,6 +3826,13 @@
 		font-size: 0.78rem;
 		font-weight: 700;
 		margin-bottom: 0.22rem;
+	}
+
+	.workspace-on .opex-thesis {
+		margin: 0 0 0.4rem;
+		font-size: 0.65rem;
+		font-weight: 400;
+		line-height: 1.35;
 	}
 
 	.workspace-on .compare-metric-label {
