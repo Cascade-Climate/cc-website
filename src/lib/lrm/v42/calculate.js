@@ -571,14 +571,17 @@ export function comparePathways(raw) {
 			rows[pathway] = null;
 			continue;
 		}
+		const comparisonOnly = pathway !== base.pathway;
 		const assumedNew =
-			pathway !== base.pathway &&
+			comparisonOnly &&
 			base.facilityStatus === 'Retrofit' &&
 			facilityNa(pathway, base.destructionTech, 'Retrofit');
 		const result = calculate({
 			...raw,
 			pathway,
-			facilityStatus: assumedNew ? 'New' : raw.facilityStatus
+			facilityStatus: assumedNew ? 'New' : raw.facilityStatus,
+			// Other pathways in the comparison use the default prices. The selected pathway keeps the entered prices.
+			...(comparisonOnly ? { salePrice: 5, virginPrice: 5 } : {})
 		});
 		rows[pathway] = {
 			netOpex: result.opex.net,

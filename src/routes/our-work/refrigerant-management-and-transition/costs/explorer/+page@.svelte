@@ -749,7 +749,7 @@
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">V. Oct 23 3am ET</div>
+				<div class="eyebrow">V. Oct 23 10pm ET</div>
 				<div class="title-line">
 					<img
 						class="brand"
@@ -769,6 +769,7 @@
 						href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
 						target="_blank"
 						rel="noopener noreferrer"
+						data-tip="This guide provides a step-by-step walkthrough of the inputs users are asked to provide and defines each of the terms used in the Explorer. It also explains the outputs of the Explorer, including formulas, data sources, and assumptions for each of the outputs."
 						>User Manual</a
 					>
 				</div>
@@ -1526,7 +1527,7 @@
 		{/if}
 
 		<p class="page-foot">
-			V. Oct 23 3am ET
+			V. Oct 23 10pm ET
 		</p>
 	</div>
 </div>
@@ -1734,6 +1735,7 @@
 		line-height: 1.2;
 		text-decoration: none;
 		white-space: nowrap;
+		cursor: help;
 	}
 
 	.manual-link:hover {
@@ -3736,7 +3738,9 @@
 	}
 
 	.workspace-on .vnet {
-		margin-top: 0.25rem;
+		margin-top: 0.35rem;
+		font-size: 0.88rem;
+		font-weight: 600;
 	}
 
 	.workspace-on .waterfall {

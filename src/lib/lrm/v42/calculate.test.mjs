@@ -317,4 +317,48 @@ const commAtMax = calculate({
 assertEq('commercial hours at max kept', commAtMax.inputs.recoveryHoursPerUnit, 12);
 assertEq('commercial hours at max not flagged', commAtMax.warnings.recoveryHoursCapped, false);
 
+const priced = {
+	...excelDefaults(SECTOR_COMMERCIAL, PATHWAY_RECLAMATION),
+	facilityStatus: 'New',
+	salePrice: 12,
+	virginPrice: 9
+};
+const fromReclamation = comparePathways(priced);
+const reclamationOwn = calculate(priced);
+assertClose(
+	'selected reclamation keeps the entered sale price',
+	fromReclamation.Reclamation.netOpex,
+	reclamationOwn.opex.net
+);
+const recyclingAtFive = calculate({ ...priced, pathway: PATHWAY_RECYCLING, virginPrice: 5 });
+assertClose(
+	'recycling comparison uses the default virgin price',
+	fromReclamation.Recycling.netOpex,
+	recyclingAtFive.opex.net
+);
+const fromRecycling = comparePathways({ ...priced, pathway: PATHWAY_RECYCLING });
+const recyclingOwn = calculate({ ...priced, pathway: PATHWAY_RECYCLING });
+assertClose(
+	'selected recycling keeps the entered virgin price',
+	fromRecycling.Recycling.netOpex,
+	recyclingOwn.opex.net
+);
+const reclamationAtFive = calculate({ ...priced, salePrice: 5 });
+assertClose(
+	'reclamation comparison uses the default sale price',
+	fromRecycling.Reclamation.netOpex,
+	reclamationAtFive.opex.net
+);
+const fromDestruction = comparePathways({ ...priced, pathway: PATHWAY_DESTRUCTION });
+assertClose(
+	'destruction comparison reclamation uses the default sale price',
+	fromDestruction.Reclamation.netOpex,
+	reclamationAtFive.opex.net
+);
+assertClose(
+	'destruction comparison recycling uses the default virgin price',
+	fromDestruction.Recycling.netOpex,
+	recyclingAtFive.opex.net
+);
+
 console.log('All V5.0 golden tests passed');
