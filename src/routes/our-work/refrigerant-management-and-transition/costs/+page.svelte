@@ -10,7 +10,7 @@
 	}));
 
 	let active = clusters[0].id;
-	let openId = clusters[0].id;
+	let openIds = clusters.map((cluster) => cluster.id);
 	let scrollLock = 0;
 	let navWrapper;
 	let navEl;
@@ -58,20 +58,23 @@
 		if (navWrapper) pinned = navWrapper.getBoundingClientRect().top <= headerOffset;
 	}
 
+	function setSectionOpen(id, nextOpen) {
+		const has = openIds.includes(id);
+		if (nextOpen && !has) openIds = [...openIds, id];
+		if (!nextOpen && has) openIds = openIds.filter((item) => item !== id);
+		if (nextOpen) active = id;
+	}
+
 	function syncCluster(id, isOpen) {
-		if (isOpen) {
-			openId = id;
-			active = id;
-		} else if (openId === id) {
-			openId = '';
-		}
+		setSectionOpen(id, isOpen);
 	}
 
 	async function toggleCluster(id) {
-		openId = openId === id ? '' : id;
+		const opening = !openIds.includes(id);
+		setSectionOpen(id, opening);
 		active = id;
 		scrollLock = Date.now() + 800;
-		if (!openId) return;
+		if (!opening) return;
 		history.replaceState(null, '', `#${id}`);
 		await flush();
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -96,7 +99,7 @@
 		if (!id) return;
 		const cluster = clusterByTarget(id);
 		if (!cluster) return;
-		openId = cluster.id;
+		setSectionOpen(cluster.id, true);
 		active = cluster.id;
 		await flush();
 		openFold(id);
@@ -149,7 +152,7 @@
 				<a
 					class:active={active === cluster.id}
 					href="#{cluster.id}"
-					aria-expanded={openId === cluster.id}
+					aria-expanded={openIds.includes(cluster.id)}
 					on:click|preventDefault={() => toggleCluster(cluster.id)}
 				>{cluster.title}</a>
 			{/each}
@@ -161,7 +164,7 @@
 			<div class="measure">
 				<details
 					class="section-fold"
-					open={openId === cluster.id}
+					open={openIds.includes(cluster.id)}
 					on:toggle={(event) => syncCluster(cluster.id, event.currentTarget.open)}
 				>
 					<summary>

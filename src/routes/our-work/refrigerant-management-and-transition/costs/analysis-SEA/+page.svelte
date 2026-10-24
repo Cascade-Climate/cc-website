@@ -1,9 +1,13 @@
 <script>
 	import { onMount, tick as flush } from 'svelte';
 	import { hero, sections } from '$lib/lrm/seaAnalysis.js';
-	import { toolHref } from '$lib/lrm/landingCopy.js';
 	import CopyParts from '$lib/lrm/CopyParts.svelte';
-	import heroImg from '$lib/images/lrm-cylinders-hero.jpg';
+	import heroImg from '$lib/images/lrm-sea/sea-hero.jpg';
+
+	const costsHref = '/our-work/refrigerant-management-and-transition/costs';
+	const sources = sections.flatMap((section) =>
+		section.blocks.filter((block) => block.type === 'notes').flatMap((block) => block.items)
+	);
 	import destruction from '$lib/images/lrm-sea/destruction-opex.png';
 	import reclamation from '$lib/images/lrm-sea/reclamation-prices.png';
 	import recycling from '$lib/images/lrm-sea/recycling-reclamation.png';
@@ -19,7 +23,7 @@
 	}));
 
 	let active = clusters[0].id;
-	let openId = clusters[0].id;
+	let openIds = clusters.map((cluster) => cluster.id);
 	let scrollLock = 0;
 	let navWrapper;
 	let navEl;
@@ -67,20 +71,23 @@
 		if (navWrapper) pinned = navWrapper.getBoundingClientRect().top <= headerOffset;
 	}
 
+	function setSectionOpen(id, nextOpen) {
+		const has = openIds.includes(id);
+		if (nextOpen && !has) openIds = [...openIds, id];
+		if (!nextOpen && has) openIds = openIds.filter((item) => item !== id);
+		if (nextOpen) active = id;
+	}
+
 	function syncCluster(id, isOpen) {
-		if (isOpen) {
-			openId = id;
-			active = id;
-		} else if (openId === id) {
-			openId = '';
-		}
+		setSectionOpen(id, isOpen);
 	}
 
 	async function toggleCluster(id) {
-		openId = openId === id ? '' : id;
+		const opening = !openIds.includes(id);
+		setSectionOpen(id, opening);
 		active = id;
 		scrollLock = Date.now() + 800;
-		if (!openId) return;
+		if (!opening) return;
 		history.replaceState(null, '', `#${id}`);
 		await flush();
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -105,7 +112,7 @@
 		if (!id) return;
 		const cluster = clusterByTarget(id);
 		if (!cluster) return;
-		openId = cluster.id;
+		setSectionOpen(cluster.id, true);
 		active = cluster.id;
 		await flush();
 		openFold(id);
@@ -136,15 +143,15 @@
 		<div class="hero-copy">
 			<h1>{hero.title}</h1>
 			<div class="hero-actions">
-				<a class="cta" href={toolHref}>{hero.toolCta}</a>
+				<a class="cta" href={costsHref}>Return to LRM Costs</a>
 			</div>
 		</div>
 		<img
 			class="hero-img"
 			src={heroImg}
-			alt="Stacked refrigerant cylinders"
+			alt="Yellow residential tower covered with window air conditioners"
 			width="1024"
-			height="683"
+			height="768"
 			decoding="async"
 			fetchpriority="high"
 		/>
@@ -157,7 +164,7 @@
 				<a
 					class:active={active === cluster.id}
 					href="#{cluster.id}"
-					aria-expanded={openId === cluster.id}
+					aria-expanded={openIds.includes(cluster.id)}
 					on:click|preventDefault={() => toggleCluster(cluster.id)}
 				>{cluster.title}</a>
 			{/each}
@@ -169,7 +176,7 @@
 			<div class="measure">
 				<details
 					class="section-fold"
-					open={openId === cluster.id}
+					open={openIds.includes(cluster.id)}
 					on:toggle={(event) => syncCluster(cluster.id, event.currentTarget.open)}
 				>
 					<summary>
@@ -227,14 +234,6 @@
 								<figure>
 									<img src={figures[block.src]} alt={block.alt} />
 								</figure>
-							{:else if block.type === 'notes'}
-								<ol class="footnotes">
-									{#each block.items as item}
-										<li id={"fn-" + item.id} value={Number(item.id)}>
-											<CopyParts parts={item.parts} />
-										</li>
-									{/each}
-								</ol>
 							{/if}
 						{/each}
 					</div>
@@ -242,6 +241,19 @@
 			</div>
 		</section>
 	{/each}
+
+	<section class="band sources" aria-labelledby="sources-title">
+		<div class="measure">
+			<h2 id="sources-title">Sources</h2>
+			<ol class="footnotes">
+				{#each sources as item}
+					<li id={"fn-" + item.id} value={Number(item.id)}>
+						<CopyParts parts={item.parts} />
+					</li>
+				{/each}
+			</ol>
+		</div>
+	</section>
 </div>
 
 <style>
@@ -491,7 +503,7 @@
 		color: color-mix(in srgb, var(--color-text) 92%, var(--deep-teal));
 	}
 
-	.band a {
+	.band :global(a) {
 		color: var(--deep-teal);
 		font-weight: 500;
 		text-decoration: underline;
@@ -499,7 +511,7 @@
 		text-decoration-thickness: 1px;
 	}
 
-	.band a:hover {
+	.band :global(a:hover) {
 		opacity: 0.88;
 	}
 
@@ -551,10 +563,18 @@
 		border-radius: 0.75rem;
 	}
 
+	.sources {
+		padding-top: 1.75rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.sources h2 {
+		margin-bottom: 0.75rem;
+	}
+
 	.footnotes {
-		margin: 1.6rem 0 0.2rem;
-		padding: 1rem 0 0 1.2rem;
-		border-top: 1px solid color-mix(in srgb, var(--deep-teal) 16%, transparent);
+		margin: 0.25rem 0 0.2rem;
+		padding: 0 0 0 1.2rem;
 		font-size: 0.88rem;
 	}
 
