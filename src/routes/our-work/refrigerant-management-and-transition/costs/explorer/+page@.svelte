@@ -76,6 +76,8 @@
 	let result = null;
 	let publishedKey = '';
 	let inputsAtEnd = false;
+	/** @type {'inputs' | 'outputs'} */
+	let mobilePane = 'inputs';
 
 	function watchInputsEnd(node) {
 		const sync = () => {
@@ -302,6 +304,22 @@
 		publishedKey = '';
 		openCats = {};
 		selectedAlt = '';
+		mobilePane = 'inputs';
+	}
+
+	function phoneLayout() {
+		return window.matchMedia('(max-width: 860px)').matches;
+	}
+
+	async function showPane(pane) {
+		if (pane === 'outputs' && !result) return;
+		mobilePane = pane;
+		await tick();
+		const target =
+			pane === 'outputs'
+				? document.querySelector('.pane-switch')
+				: document.getElementById('build-heading');
+		target?.scrollIntoView({ block: 'start' });
 	}
 
 	function produceOutputs() {
@@ -313,6 +331,7 @@
 		publishedKey = JSON.stringify(snapshot);
 		openCats = {};
 		selectedAlt = '';
+		if (phoneLayout()) showPane('outputs');
 	}
 
 	function applyDefaults(nextSector, nextPathway) {
@@ -761,7 +780,7 @@
 	<title>Lifecycle Refrigerant Management Explorer — Cascade Climate (unlisted)</title>
 	<meta
 		name="description"
-		content="Unlisted Lifecycle Refrigerant Management Explorer. Version Oct 16 5pm ET."
+		content="Unlisted Lifecycle Refrigerant Management Explorer. Version november 2026."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -778,18 +797,20 @@
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">V. Oct 23 10pm ET</div>
+				<div class="eyebrow">november 2026</div>
 				<div class="title-line">
-					<img
-						class="brand"
-						src={cascadeLogo}
-						alt="Cascade Climate"
-						width="190"
-						height="69"
-					/>
+					<a class="brand-link" href="https://cascadeclimate.org/">
+						<img
+							class="brand"
+							src={cascadeLogo}
+							alt="Cascade Climate"
+							width="190"
+							height="69"
+						/>
+					</a>
 					<h1>
 						<span class="title-text">
-							<span class="title-lead">Lifecycle Refrigerant Management</span>
+							<span class="title-lead">Lifecycle Refrigerant <span class="title-break"></span>Management</span>
 							<span class="title-rest">Explorer</span>
 						</span>
 					</h1>
@@ -799,7 +820,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						data-tip="This guide provides a step-by-step walkthrough of the inputs users are asked to provide and defines each of the terms used in the Explorer. It also explains the outputs of the Explorer, including formulas, data sources, and assumptions for each of the outputs."
-						>User Manual</a
+						>User Manual<span class="sr-only"> (opens in a new tab)</span></a
 					>
 				</div>
 			</div>
@@ -894,7 +915,28 @@
 		</div>
 
 		{#if ready && live}
-			<div class="layout" id="workspace" class:has-results={Boolean(result)} class:awaiting={!result}>
+			<div class="layout" id="workspace" class:has-results={Boolean(result)} class:awaiting={!result} class:mobile-outputs={mobilePane === 'outputs'}>
+				<div class="pane-switch">
+					<button
+						type="button"
+						class="view-tab"
+						class:active={mobilePane === 'inputs'}
+						aria-pressed={mobilePane === 'inputs'}
+						on:click={() => showPane('inputs')}
+					>
+						Inputs
+					</button>
+					<button
+						type="button"
+						class="view-tab"
+						class:active={mobilePane === 'outputs'}
+						aria-pressed={mobilePane === 'outputs'}
+						disabled={!result}
+						on:click={() => showPane('outputs')}
+					>
+						Outputs
+					</button>
+				</div>
 				<section class="panel controls" aria-labelledby="build-heading">
 					<h2 id="build-heading">Inputs</h2>
 					<p class="inputs-tip">Enter the inputs below. For guidance, hover over an input.</p>
@@ -1052,7 +1094,7 @@
 							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
 						</div>
 						</div>
-						<div class="group-label subhead">Recovery Summary</div>
+						<div class="group-label subhead summary-label">Recovery Summary</div>
 						<div class="snapshot">
 							<div
 								data-tip="Sumtotal of technician on-site labor + traveling time"
@@ -1253,13 +1295,6 @@
 					</div>
 
 					<div class="run-bar">
-						{#if stale}
-							<p class="run-note">Inputs have changed. Calculate again to refresh outputs.</p>
-						{:else if !result}
-							<p class="run-note">Your scenario is ready. See your estimated costs.</p>
-						{:else}
-							<p class="run-note">Outputs match the current inputs.</p>
-						{/if}
 						<button
 							type="button"
 							class="run"
@@ -1274,11 +1309,24 @@
 								Recalculate
 							{/if}
 						</button>
+						{#if stale}
+							<p class="run-note">Inputs have changed. Calculate again to refresh outputs.</p>
+						{:else if result}
+							<p class="run-note">Outputs match the current inputs.</p>
+						{/if}
 					</div>
 				</section>
 
 				{#if result}
 				<section class="panel results" class:has-open={Object.values(openCats).some(Boolean)} class:stale aria-labelledby="results-heading">
+					{#if stale}
+						<div class="mobile-refresh">
+							<button type="button" class="run" disabled={!mixOk} on:click={produceOutputs}>
+								Update results
+							</button>
+							<p class="run-note">Inputs have changed. Calculate again to refresh outputs.</p>
+						</div>
+					{/if}
 					<div class="results-head">
 						<div class="results-head-copy">
 							<h2 id="results-heading">Outputs</h2>
@@ -1347,13 +1395,12 @@
 						{/if}
 					</div>
 
-					<div class="view-tabs" role="tablist" aria-label="Output charts">
+					<div class="view-tabs">
 						<button
 							type="button"
-							role="tab"
 							class="view-tab"
 							class:active={chartView === 'opex2'}
-							aria-selected={chartView === 'opex2'}
+							aria-pressed={chartView === 'opex2'}
 							on:click={() => {
 								chartView = 'opex2';
 								selectedAlt = '';
@@ -1363,10 +1410,9 @@
 						</button>
 						<button
 							type="button"
-							role="tab"
 							class="view-tab"
 							class:active={chartView === 'capex'}
-							aria-selected={chartView === 'capex'}
+							aria-pressed={chartView === 'capex'}
 							on:click={() => {
 								chartView = 'capex';
 								selectedAlt = '';
@@ -1568,7 +1614,7 @@
 		{/if}
 
 		<p class="page-foot">
-			V. Oct 23 10pm ET
+			november 2026
 		</p>
 	</div>
 </div>
@@ -1583,8 +1629,8 @@
 		--header: #000000;
 		--ink: #000000;
 		--ink-soft: rgba(0, 0, 0, 0.72);
-		--muted: rgba(2, 60, 64, 0.62);
-		--line: rgba(2, 60, 64, 0.18);
+		--muted: rgba(2, 60, 64, 0.72);
+		--line: rgba(2, 60, 64, 0.56);
 		--panel: #fafafa;
 		--panel-solid: #fafafa;
 		--card: #fafafa;
@@ -1650,9 +1696,18 @@
 		row-gap: 0.65rem;
 	}
 
-	.title-line .brand {
+	.title-line .brand-link {
 		grid-area: logo;
 		justify-self: start;
+		display: inline-flex;
+		line-height: 0;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.brand-link:focus-visible {
+		outline: 2px solid var(--teal);
+		outline-offset: 2px;
 	}
 
 	.title-line h1 {
@@ -1694,6 +1749,10 @@
 	.site h1 .title-lead,
 	.site h1 .title-rest {
 		white-space: nowrap;
+	}
+
+	.title-break {
+		display: none;
 	}
 
 	.site.compact h1 .title-text {
@@ -1764,6 +1823,7 @@
 	}
 
 	.manual-link {
+		position: relative;
 		display: inline-block;
 		margin: 0;
 		padding: 0.32rem 0.75rem;
@@ -1786,6 +1846,18 @@
 	.manual-link:focus-visible {
 		outline: 2px solid var(--teal);
 		outline-offset: 2px;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
 	}
 
 	.about-body {
@@ -2942,7 +3014,7 @@
 		font-size: 0.78rem;
 		letter-spacing: 0.07em;
 		text-transform: uppercase;
-		color: var(--muted);
+		color: var(--header);
 		font-weight: 600;
 		margin: 0 0 0.45rem;
 	}
@@ -3076,7 +3148,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-start;
 		gap: 0.55rem 1rem;
 		margin-top: 0.85rem;
 		padding: 0.75rem 0 0.15rem;
@@ -3092,7 +3164,12 @@
 		font-size: 0.8rem;
 		color: var(--muted);
 		line-height: 1.35;
-		flex: 1 1 12rem;
+		flex: 0 1 auto;
+	}
+
+	.pane-switch,
+	.mobile-refresh {
+		display: none;
 	}
 
 	.run {
@@ -3235,7 +3312,7 @@
 		gap: 0.7rem;
 	}
 
-	.workspace-on .title-line .brand {
+	.workspace-on .title-line .brand-link {
 		flex: 0 0 auto;
 	}
 
@@ -3249,11 +3326,12 @@
 
 	.workspace-on .chrome-choices {
 		display: flex;
-		flex: 0 0 auto;
+		flex: 1 0 100%;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: flex-start;
+		justify-content: flex-start;
 		gap: 0.4rem 0.85rem;
-		margin-left: auto;
+		margin: 0;
 	}
 
 	.workspace-on .about {
@@ -3330,7 +3408,7 @@
 	}
 
 	.workspace-on .site.compact .brand {
-		height: 2.6rem;
+		height: 3.4rem;
 	}
 
 	.workspace-on .site.compact h1 .title-text {
@@ -3486,6 +3564,11 @@
 
 	.workspace-on .group-label.subhead {
 		font-size: 0.78rem;
+	}
+
+	.group-label.summary-label,
+	.workspace-on .group-label.summary-label {
+		color: var(--muted);
 	}
 
 	.workspace-on .option-idle {
@@ -4044,7 +4127,37 @@
 		}
 		.workspace-on .layout {
 			display: grid;
+			grid-template-columns: 1fr;
 			overflow: visible;
+		}
+		.workspace-on .pane-switch {
+			display: flex;
+			position: sticky;
+			top: 0;
+			z-index: 6;
+			grid-column: 1 / -1;
+			gap: 0.5rem;
+			margin: 0 0 0.45rem;
+			padding: 0.35rem 0;
+			background: var(--bg);
+		}
+		.workspace-on .pane-switch .view-tab:disabled {
+			cursor: not-allowed;
+			opacity: 0.55;
+		}
+		.workspace-on .layout.mobile-outputs > .controls {
+			display: none;
+		}
+		.workspace-on .layout:not(.mobile-outputs) > .results {
+			display: none;
+		}
+		.workspace-on .mobile-refresh {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 0.55rem 0.75rem;
+			margin: 0 0 0.65rem;
 		}
 		.workspace-on .layout > .panel {
 			overflow: visible;
@@ -4067,6 +4180,48 @@
 		}
 		.workspace-on .page-foot {
 			display: block;
+		}
+		.workspace-on .site.compact {
+			min-width: 0;
+			max-width: 100%;
+		}
+		.workspace-on .title-line {
+			flex-wrap: wrap;
+			max-width: 100%;
+		}
+		.workspace-on .site.compact h1 {
+			min-width: 0;
+		}
+		.workspace-on .site.compact h1 .title-text {
+			display: block;
+			white-space: normal;
+			max-width: 100%;
+		}
+		.workspace-on .site.compact h1 .title-lead,
+		.workspace-on .site.compact h1 .title-rest {
+			white-space: normal;
+		}
+		.workspace-on .title-break {
+			display: block;
+		}
+		.workspace-on .branch,
+		.workspace-on #enduse-panel {
+			width: 100%;
+			max-width: 100%;
+		}
+		.workspace-on .choice-grid.two,
+		.workspace-on .choice-grid.three {
+			grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+			width: 100%;
+		}
+		.workspace-on .fields.mix {
+			grid-template-columns: 1fr;
+		}
+		.workspace-on .fields.mix .field {
+			grid-template-columns: minmax(0, 1fr);
+		}
+		.workspace-on .fields.mix label {
+			margin-bottom: 0.2rem;
 		}
 		.workspace-on .field-hint,
 		.workspace-on .option-idle > :not(.group-label) {
