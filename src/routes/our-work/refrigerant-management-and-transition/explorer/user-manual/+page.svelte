@@ -1,30 +1,18 @@
 <script>
 	import { onMount } from 'svelte';
-	import {
-		introWords,
-		loremParagraphs,
-		manualTitle,
-		navItems,
-		sections
-	} from '$lib/lrm/userManual.js';
-
-	const intro = loremParagraphs(introWords, 'intro');
+	import { intro, manualTitle, navItems, sections } from '$lib/lrm/userManual.js';
 
 	let active = navItems[0].id;
 	let scrollLock = 0;
 
 	function tick() {
 		if (Date.now() < scrollLock) return;
-		const line = 120;
+		const line = 180;
 		let next = '';
 		for (const item of navItems) {
 			const el = document.getElementById(item.id);
 			if (!el) continue;
-			const rect = el.getBoundingClientRect();
-			if (rect.top <= line && rect.bottom > line) {
-				next = item.id;
-				break;
-			}
+			if (el.getBoundingClientRect().top <= line) next = item.id;
 		}
 		if (!next) {
 			for (const item of navItems) {
@@ -38,7 +26,7 @@
 
 	function jump(id) {
 		active = id;
-		scrollLock = Date.now() + 700;
+		scrollLock = Date.now() + 1500;
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
@@ -50,10 +38,10 @@
 </script>
 
 <svelte:head>
-	<title>{manualTitle} — Cascade Climate (unlisted)</title>
+	<title>{manualTitle} — Cascade Climate</title>
 	<meta
 		name="description"
-		content="Unlisted user manual for the Lifecycle Refrigerant Management Explorer. Body copy is placeholder text."
+		content="User manual for the Lifecycle Refrigerant Management Cost Explorer."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -61,7 +49,7 @@
 
 <div class="manual">
 	<aside class="rail">
-		<p class="rail-kicker">Unlisted</p>
+		<p class="rail-kicker">Contents</p>
 		<nav aria-label="In this manual">
 			{#each navItems as item}
 				<a
@@ -77,21 +65,40 @@
 	<article class="doc">
 		<h1>{manualTitle}</h1>
 		{#each intro as para}
-			<p>{para}</p>
+			<p>
+				{#each para.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+			</p>
 		{/each}
 
 		{#each sections as section}
 			<section id={section.id}>
-				<h2>{section.number}. {section.title}</h2>
+				<h2>{section.title}</h2>
 				{#each section.blocks as block}
-					{#if block.type === 'h3'}
+					{#if block.type === 'h2'}
 						<h3 id={block.id}>{block.title}</h3>
-					{:else if block.type === 'h4'}
-						<h4>{block.title}</h4>
+					{:else if block.type === 'h3' || block.type === 'h4'}
+						<h4 id={block.id}>{block.title}</h4>
 					{:else if block.type === 'p'}
-						{#each loremParagraphs(block.words, block.key) as para}
-							<p>{para}</p>
-						{/each}
+						<p class:formula={block.formula}>
+							{#each block.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+						</p>
+					{:else if block.type === 'ul'}
+						<ul>
+							{#each block.items as item}
+								<li>
+									{#each item.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+									{#if item.children.length}
+										<ul>
+											{#each item.children as child}
+												<li>
+													{#each child.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+												</li>
+											{/each}
+										</ul>
+									{/if}
+								</li>
+							{/each}
+						</ul>
 					{/if}
 				{/each}
 			</section>
@@ -164,7 +171,8 @@
 	.doc {
 		background: var(--paper);
 		margin-left: 18.5rem;
-		padding: 0.7rem 3rem 50vh;
+		padding: 1.35rem 2.75rem 40vh;
+		max-width: 46rem;
 		min-width: 0;
 	}
 
@@ -184,11 +192,15 @@
 	}
 
 	h2 {
-		margin: 2.35rem 0 0.85rem;
+		margin: 2.1rem 0 0.75rem;
 		font-size: 1.35rem;
 		font-weight: 500;
 		line-height: 1.3;
 		text-decoration: none;
+	}
+
+	section:first-of-type h2 {
+		margin-top: 1.35rem;
 	}
 
 	h3 {
@@ -207,10 +219,30 @@
 
 	.doc :global(p),
 	p {
-		margin: 0 0 1rem;
-		text-align: justify;
-		line-height: 1.55;
+		margin: 0 0 0.9rem;
+		text-align: left;
+		line-height: 1.6;
 		color: #000;
+	}
+
+	p.formula {
+		text-align: left;
+	}
+
+	ul {
+		margin: 0 0 1rem 1.15rem;
+		padding: 0;
+	}
+
+	li {
+		margin: 0 0 0.45rem;
+		text-align: left;
+		line-height: 1.55;
+	}
+
+	li ul {
+		margin-top: 0.35rem;
+		margin-bottom: 0.15rem;
 	}
 
 	section {
@@ -231,7 +263,8 @@
 
 		.doc {
 			margin-left: 0;
-			padding: 1.75rem 1.35rem 3rem;
+			max-width: none;
+			padding: 1.5rem 1.25rem 3rem;
 		}
 	}
 </style>
