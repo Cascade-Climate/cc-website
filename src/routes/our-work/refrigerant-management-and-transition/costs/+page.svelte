@@ -583,21 +583,19 @@
 
 	.band a.country-link {
 		display: block;
-		margin: 0;
-		padding: 1rem 1.15rem;
+		cursor: pointer;
 		text-decoration: none;
 		color: inherit;
-		font-weight: 500;
+		font-weight: inherit;
+	}
+
+	.band a.country-link:hover {
+		opacity: 1;
+		border-color: color-mix(in srgb, var(--deep-teal) 45%, transparent);
 	}
 
 	.country-link h4 {
-		margin-bottom: 0;
-		text-decoration: underline;
-		text-underline-offset: 0.18em;
-	}
-
-	.cards a.country-link {
-		padding: 1.15rem;
+		text-decoration: none;
 	}
 
 	.note {
