@@ -65,6 +65,9 @@
 	<article class="doc">
 		<h1>User Manual</h1>
 		<p class="subtitle">Lifecycle Refrigerant Management (LRM) Cost Explorer</p>
+		<p class="return">
+			<a class="return-link" href="/our-work/refrigerant-management-and-transition/costs">Return to LRM costs</a>
+		</p>
 		{#each intro as para}
 			<p>
 				{#each para.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
@@ -191,6 +194,26 @@
 		line-height: 1.35;
 		text-align: left;
 		color: var(--teal);
+	}
+
+	.return {
+		margin: 0 0 1.25rem;
+	}
+
+	.return-link {
+		display: inline-block;
+		padding: 0.55rem 1.35rem;
+		border-radius: 2rem;
+		background: var(--color-accent);
+		color: var(--color-light);
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.3;
+	}
+
+	.return-link:hover {
+		opacity: 0.92;
 	}
 
 	h2,
