@@ -780,7 +780,7 @@
 	<title>Lifecycle Refrigerant Management Explorer — Cascade Climate (unlisted)</title>
 	<meta
 		name="description"
-		content="Unlisted Lifecycle Refrigerant Management Explorer. Version november 2026."
+		content="Unlisted Lifecycle Refrigerant Management Explorer. Updated November 2026."
 	/>
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
@@ -797,7 +797,7 @@
 		<div class="chrome">
 		<header class="site" class:compact={Boolean(sector)}>
 			<div class="site-copy">
-				<div class="eyebrow">november 2026</div>
+				<div class="eyebrow">Updated November 2026</div>
 				<div class="title-line">
 					<a class="brand-link" href="https://cascadeclimate.org/">
 						<img
@@ -1614,7 +1614,7 @@
 		{/if}
 
 		<p class="page-foot">
-			november 2026
+			Updated November 2026
 		</p>
 	</div>
 </div>
