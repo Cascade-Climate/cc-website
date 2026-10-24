@@ -223,6 +223,19 @@ const commercialHigh = calculate({
 });
 assertEq('commercial charge max', commercialHigh.inputs.chargeSizeKg, 400);
 assertEq('commercial charge max flagged', commercialHigh.warnings.chargeCapped, true);
+
+const recoverableHigh = calculate({
+	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
+	recoverablePct: 150
+});
+assertEq('recoverable pct cap', recoverableHigh.inputs.recoverablePct, 100);
+assertEq('recoverable pct capped flag', recoverableHigh.warnings.recoverableCapped, true);
+const recoverableAtMax = calculate({
+	...excelDefaults(SECTOR_RESIDENTIAL, PATHWAY_DESTRUCTION),
+	recoverablePct: 100
+});
+assertEq('recoverable pct at max kept', recoverableAtMax.inputs.recoverablePct, 100);
+assertEq('recoverable pct at max not flagged', recoverableAtMax.warnings.recoverableCapped, false);
 assertEq('residential no recycling compare', comparePathways(capped.inputs).Recycling, null);
 
 const retrofitCompare = comparePathways({

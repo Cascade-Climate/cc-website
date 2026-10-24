@@ -50,6 +50,7 @@
 	let chargeLimitNote = '';
 	let recoveryHoursCappedNote = false;
 	let recoverablePct = 80;
+	let recoverableCappedNote = false;
 	let recoveryHoursPerUnit = 0.5;
 	let labourPerHour = 20;
 	let fuelEfficiencyKmPerL = 8.5;
@@ -305,8 +306,11 @@
 
 	function produceOutputs() {
 		if (!ready || !mixOk || !live) return;
-		result = live;
-		publishedKey = liveKey;
+		clampChargeField();
+		clampRecoverableField();
+		const snapshot = { ...inputSnapshot, chargeSizeKg, recoverablePct };
+		result = calculate(snapshot);
+		publishedKey = JSON.stringify(snapshot);
 		openCats = {};
 		selectedAlt = '';
 	}
@@ -317,6 +321,7 @@
 		chargeCappedNote = false;
 		chargeLimitNote = '';
 		recoverablePct = d.recoverablePct;
+		recoverableCappedNote = false;
 		recoveryHoursPerUnit = d.recoveryHoursPerUnit;
 		labourPerHour = d.labourPerHour;
 		fuelEfficiencyKmPerL = d.fuelEfficiencyKmPerL;
@@ -361,6 +366,7 @@
 			chargeCappedNote = false;
 			chargeLimitNote = '';
 			recoverablePct = defaultRecoverablePct(next);
+			recoverableCappedNote = false;
 			recoveryHoursPerUnit = defaultRecoveryHours(next);
 			labourPerHour = defaultLabourPerHour(next);
 			unitsPerDay = defaultUnitsPerDay(next);
@@ -406,27 +412,50 @@
 		(pathway === PATHWAY_DESTRUCTION && destructionTech === 'Plasma Arc');
 	$: if (retrofitUnavailable && facilityStatus === 'Retrofit') facilityStatus = 'New';
 
-	$: if (residential && Number(chargeSizeKg) > RESIDENTIAL_CHARGE_CAP_KG) {
-		chargeSizeKg = RESIDENTIAL_CHARGE_CAP_KG;
-		chargeCappedNote = true;
-		chargeLimitNote = 'residential-max';
-	} else if (commercial && Number(chargeSizeKg) < COMMERCIAL_CHARGE_MIN_KG) {
-		chargeSizeKg = COMMERCIAL_CHARGE_MIN_KG;
-		chargeCappedNote = true;
-		chargeLimitNote = 'commercial-min';
-	} else if (commercial && Number(chargeSizeKg) > COMMERCIAL_CHARGE_MAX_KG) {
-		chargeSizeKg = COMMERCIAL_CHARGE_MAX_KG;
-		chargeCappedNote = true;
-		chargeLimitNote = 'commercial-max';
-	} else if (
-		(residential && Number(chargeSizeKg) < RESIDENTIAL_CHARGE_CAP_KG) ||
-		(commercial &&
-			Number(chargeSizeKg) > COMMERCIAL_CHARGE_MIN_KG &&
-			Number(chargeSizeKg) < COMMERCIAL_CHARGE_MAX_KG)
-	) {
-		chargeCappedNote = false;
-		chargeLimitNote = '';
+	function chargeViolation() {
+		const value = Number(chargeSizeKg);
+		if (residential && value > RESIDENTIAL_CHARGE_CAP_KG) return 'residential-max';
+		if (commercial && value < COMMERCIAL_CHARGE_MIN_KG) return 'commercial-min';
+		if (commercial && value > COMMERCIAL_CHARGE_MAX_KG) return 'commercial-max';
+		return '';
 	}
+
+	function clampChargeField() {
+		const kind = chargeViolation();
+		if (kind === 'residential-max') chargeSizeKg = RESIDENTIAL_CHARGE_CAP_KG;
+		else if (kind === 'commercial-min') chargeSizeKg = COMMERCIAL_CHARGE_MIN_KG;
+		else if (kind === 'commercial-max') chargeSizeKg = COMMERCIAL_CHARGE_MAX_KG;
+		if (kind) {
+			chargeCappedNote = true;
+			chargeLimitNote = kind;
+		}
+	}
+
+	function clampRecoverableField() {
+		if (Number(recoverablePct) > 100) {
+			recoverablePct = 100;
+			recoverableCappedNote = true;
+		}
+	}
+
+	$: {
+		const kind = chargeViolation();
+		if (kind) {
+			chargeCappedNote = true;
+			chargeLimitNote = kind;
+		} else if (
+			(residential && Number(chargeSizeKg) < RESIDENTIAL_CHARGE_CAP_KG) ||
+			(commercial &&
+				Number(chargeSizeKg) > COMMERCIAL_CHARGE_MIN_KG &&
+				Number(chargeSizeKg) < COMMERCIAL_CHARGE_MAX_KG)
+		) {
+			chargeCappedNote = false;
+			chargeLimitNote = '';
+		}
+	}
+
+	$: if (Number(recoverablePct) > 100) recoverableCappedNote = true;
+	else if (Number(recoverablePct) < 100) recoverableCappedNote = false;
 
 	$: recoveryHoursMax = maxRecoveryHoursPerUnit(
 		sector || SECTOR_COMMERCIAL,
@@ -535,13 +564,13 @@
 		const items = [basic, high].filter(Boolean);
 		if (!items.length) return null;
 		const value = items.reduce((sum, item) => sum + (item.na ? 0 : item.cost || 0), 0);
-		const active = items.filter((item) => item.units);
+		const basicUnits = basic && !basic.hidden && basic.units ? basic.units : 0;
+		const highUnits = high && !high.hidden && high.units ? high.units : 0;
 		let note = '0 units';
-		if (active.length === 1) {
-			const units = active[0].units;
+		if (basicUnits && highUnits) note = `${basicUnits} basic + ${highUnits} high capacity`;
+		else if (basicUnits || highUnits) {
+			const units = basicUnits || highUnits;
 			note = `${units} unit${units === 1 ? '' : 's'}`;
-		} else if (active.length > 1) {
-			note = '';
 		}
 		return {
 			name: 'Recovery accessories',
@@ -596,7 +625,7 @@
 				},
 				{
 					id: 'opex-transport',
-					name: 'Transport & handling to end-use',
+					name: 'Transport & handling to end-use facility',
 					value: result.opex.transport,
 					parts: [
 						{
@@ -819,7 +848,7 @@
 
 		<div class="chrome-choices">
 		<section class="panel branch" class:settled={Boolean(sector)} aria-labelledby="branch-heading">
-			<h2 id="branch-heading">1. Choose a sector</h2>
+			<h2 id="branch-heading">Choose a sector</h2>
 			<div class="choice-grid two">
 				<button
 					type="button"
@@ -845,7 +874,7 @@
 
 		{#if sector}
 			<section class="panel branch" id="enduse-panel" class:settled={Boolean(pathway)} aria-labelledby="pathway-heading">
-				<h2 id="pathway-heading">2. Choose the end-use of recovered refrigerant</h2>
+				<h2 id="pathway-heading">Choose the end-use of recovered refrigerant</h2>
 				<div class="choice-grid" class:three={!residential} class:two={residential}>
 					{#each pathways as p}
 						<button
@@ -880,7 +909,7 @@
 						<div class="fields">
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = 1 kg, Commercial HVAC = 150 kg"
+								data-tip="Default: Residential AC = 1 kg; Commercial HVAC = 150 kg"
 								for="chargeSizeKg">Average equipment charge size per unit (kg)</label
 							>
 							<input
@@ -894,6 +923,7 @@
 										: undefined}
 								step="0.01"
 								bind:value={chargeSizeKg}
+								on:blur={clampChargeField}
 							/>
 							{#if chargeCappedNote}
 								<p class="field-note warn">
@@ -913,10 +943,23 @@
 
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = 50%, Commercial HVAC = 80%"
+								data-tip="Default: Residential AC = 50%; Commercial HVAC = 80%"
 								for="recoverablePct">Estimated % of recoverable refrigerant per unit (%)</label
 							>
-							<input id="recoverablePct" type="number" min="0" max="100" step="1" bind:value={recoverablePct} />
+							<input
+								id="recoverablePct"
+								type="number"
+								min="0"
+								max="100"
+								step="1"
+								bind:value={recoverablePct}
+								on:blur={clampRecoverableField}
+							/>
+							{#if recoverableCappedNote}
+								<p class="field-note warn">
+									Estimated recoverable refrigerant cannot exceed 100%. Please update this field.
+								</p>
+							{/if}
 						</div>
 						<div class="field">
 							<label
@@ -963,14 +1006,14 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = 40, Commercial HVAC = 1"
+								data-tip="Default: Residential AC = 40; Commercial HVAC = 1"
 								for="unitsPerDay">Average number of units recovered per day</label
 							>
 							<input id="unitsPerDay" type="number" min="0" step="1" bind:value={unitsPerDay} />
 						</div>
 						<div class="field">
 							<label
-								data-tip="Dependent on vehicle type used. Default: 8.5 km/L (for small truck/lorry)"
+								data-tip="Depends on vehicle type used. Default: 8.5 km/L (for small truck/lorry)"
 								for="fuelEfficiencyKmPerL">Fuel efficiency of vehicle used (km/L)</label
 							>
 							<input
@@ -1003,7 +1046,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Default: Residential AC = 200, Commercial HVAC = 75"
+								data-tip="Default: Residential AC = 200; Commercial HVAC = 75"
 								for="daysPerYear">Estimated number of recovery days per year</label
 							>
 							<input id="daysPerYear" type="number" min="0" step="1" bind:value={daysPerYear} />
@@ -1029,7 +1072,7 @@
 					</div>
 
 					<div class="field-group">
-						<div class="fields">
+						<div class="fields" class:stack={pathway === PATHWAY_RECYCLING}>
 						{#if pathway !== PATHWAY_RECYCLING}
 							<div class="field">
 								<label
@@ -1041,7 +1084,7 @@
 						{/if}
 						<div class="field">
 							<label
-								data-tip="Cost to establish system for chain of custody tracking and monitoring"
+								data-tip="Cost to establish system for chain of custody tracking and monitoring. Default: USD 50,000"
 								for="tmsCost">Tracking & monitoring system (USD)</label
 							>
 							<input id="tmsCost" type="number" min="0" step="1" bind:value={tmsCost} />
@@ -1059,7 +1102,7 @@
 						{#if costScenarioMode === 'manual'}
 							<div class="field">
 								<label
-									data-tip="Guidance: Select high for volumes <10,000 kg/year, medium for 10,000 – 50,000 kg/year, low for > 50,000 kg/year."
+									data-tip="Guidance: Select high for volumes <10,000 kg/year; medium for 10,000 – 50,000 kg/year; low for > 50,000 kg/year."
 									for="costScenarioManual">Override cost scenario</label
 								>
 								<select id="costScenarioManual" bind:value={costScenarioManual}>
@@ -1073,7 +1116,7 @@
 					</div>
 
 					<div class="field-group" class:option-idle={pathway !== PATHWAY_RECYCLING}>
-						<div class="group-label">Recycling</div>
+						<div class="group-label subhead">Recycling</div>
 						{#if vis.recyclingOffered && pathway === PATHWAY_RECYCLING}
 							<div class="fields">
 							<div class="field">
@@ -1124,14 +1167,11 @@
 					</div>
 
 					<div class="field-group" class:option-idle={pathway !== PATHWAY_DESTRUCTION}>
-						<div class="group-label">Destruction</div>
+						<div class="group-label subhead">Destruction</div>
 						{#if pathway === PATHWAY_DESTRUCTION}
 							<div class="fields three">
 							<div class="field">
-								<label
-									data-tip="Options: Rotary Kiln Incineration, Cement Kiln Incineration, or Plasma Arc."
-									for="destructionTech">Destruction technology</label
-								>
+								<label for="destructionTech">Destruction technology</label>
 								<select id="destructionTech" bind:value={destructionTech}>
 									<option value="Rotary">Rotary kiln incineration</option>
 									<option value="Cement">Cement kiln incineration</option>
@@ -1140,7 +1180,7 @@
 							</div>
 							<div class="field">
 								<label
-									data-tip="Select ‘New facility’ if a brand new facility will be constructed, ‘Retrofit’ if an existing facility will be retrofitted for refrigerant processing, and ‘Existing’ if refrigerant will be sent to an existing facility for processing, without the need for additional modifications."
+									data-tip="Select ‘New facility’ if a brand new facility will be constructed; ‘Retrofit’ if an existing facility will be retrofitted for refrigerant processing; and ‘Existing’ if refrigerant will be sent to an existing facility for processing, without the need for additional modifications."
 									for="facilityStatusDest">Facility status</label
 								>
 								<select id="facilityStatusDest" bind:value={facilityStatus}>
@@ -1216,7 +1256,7 @@
 						{#if stale}
 							<p class="run-note">Inputs have changed. Calculate again to refresh outputs.</p>
 						{:else if !result}
-							<p class="run-note">When you're ready, calculate the costs.</p>
+							<p class="run-note">Your scenario is ready. See your estimated costs.</p>
 						{:else}
 							<p class="run-note">Outputs match the current inputs.</p>
 						{/if}
@@ -1258,8 +1298,9 @@
 
 					<div class="metrics" class:four={result.inputs.pathway === PATHWAY_DESTRUCTION}>
 						<div class="metric">
-							<div class="label">Total amount of refrigerant recovered per year (kg/year)</div>
+							<div class="label">Total amount of refrigerant recovered per year</div>
 							<div class="value">{formatKg(result.inputs.annualKg, 0)}</div>
+							<span class="unit">kg / year</span>
 						</div>
 						{#if result.inputs.pathway === PATHWAY_DESTRUCTION}
 							<div class="metric">
@@ -3333,7 +3374,7 @@
 	}
 
 	.workspace-on .branch.settled h2 {
-		font-size: 0.62rem;
+		font-size: 0.78rem;
 		letter-spacing: 0.07em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -3471,6 +3512,16 @@
 		gap: 0.18rem 0.55rem;
 	}
 
+	.workspace-on .fields.stack {
+		grid-template-columns: 1fr;
+	}
+
+	.workspace-on .fields:not(.three):not(.stack) .field:has(#costScenarioMode),
+	.workspace-on .fields:not(.three):not(.stack) .field:has(#costScenarioManual) {
+		grid-column: 1 / -1;
+		grid-template-columns: calc(((100% - 0.55rem) / 2 - 0.4rem) * 1.15 / 2.15) minmax(0, 1fr);
+	}
+
 	.workspace-on .fields:not(.three) .field {
 		display: grid;
 		grid-template-columns: minmax(0, 1.15fr) minmax(5.6rem, 1fr);
@@ -3485,12 +3536,6 @@
 	.workspace-on .fields:not(.three) .field-note,
 	.workspace-on .fields:not(.three) .field-hint {
 		grid-column: 1 / -1;
-	}
-
-	.workspace-on .fields:not(.three) .field:has(#costScenarioMode),
-	.workspace-on .fields:not(.three) .field:has(#costScenarioManual) {
-		grid-column: 1 / -1;
-		grid-template-columns: minmax(0, 1fr) minmax(12rem, 1.35fr);
 	}
 
 	.workspace-on label {
@@ -3643,7 +3688,7 @@
 	}
 
 	.workspace-on .results-year-label {
-		font-size: 0.68rem;
+		font-size: 0.78rem;
 	}
 
 	.workspace-on .results-year-value {

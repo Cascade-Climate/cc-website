@@ -266,6 +266,13 @@ export function normalizeInputs(raw) {
 		chargeCapped = true;
 	}
 
+	let recoverablePct = num(raw.recoverablePct ?? defaultRecoverablePct(sector));
+	let recoverableCapped = false;
+	if (recoverablePct > 100) {
+		recoverablePct = 100;
+		recoverableCapped = true;
+	}
+
 	let pathway = raw.pathway || PATHWAY_DESTRUCTION;
 	if (residential && pathway === PATHWAY_RECYCLING) pathway = PATHWAY_DESTRUCTION;
 
@@ -296,7 +303,8 @@ export function normalizeInputs(raw) {
 		location,
 		chargeSizeKg,
 		chargeCapped,
-		recoverablePct: num(raw.recoverablePct ?? defaultRecoverablePct(sector)),
+		recoverablePct,
+		recoverableCapped,
 		recoveryHoursPerUnit,
 		recoveryHoursMax,
 		recoveryHoursCapped,
@@ -496,6 +504,7 @@ export function calculate(raw) {
 		},
 		warnings: {
 			chargeCapped: inp.chargeCapped,
+			recoverableCapped: inp.recoverableCapped,
 			recoveryHoursCapped: inp.recoveryHoursCapped,
 			mixInvalid: !mixIsValid(inp.mix)
 		},
