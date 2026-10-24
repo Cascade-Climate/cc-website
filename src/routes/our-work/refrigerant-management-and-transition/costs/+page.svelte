@@ -3,32 +3,11 @@
 	import { hero, sections, toolHref } from '$lib/lrm/landingCopy.js';
 	import heroImg from '$lib/images/lrm-cylinders-hero.jpg';
 
-	const clusters = [
-		{
-			id: 'why-economics-matter',
-			number: '01',
-			title: 'Why Economics Matter',
-			sectionIds: ['why-economics']
-		},
-		{
-			id: 'lrm-cost-drivers',
-			number: '02',
-			title: 'LRM Cost Drivers',
-			sectionIds: ['cost-drivers', 'pathways']
-		},
-		{
-			id: 'lrm-financing',
-			number: '03',
-			title: 'LRM Financing',
-			sectionIds: ['financing']
-		},
-		{
-			id: 'country-synthesis',
-			number: '04',
-			title: 'Country Synthesis',
-			sectionIds: ['scale']
-		}
-	];
+	const clusters = sections.map((section) => ({
+		id: section.id,
+		number: section.number,
+		title: section.title
+	}));
 
 	let active = clusters[0].id;
 	let openId = '';
@@ -39,19 +18,11 @@
 	let pinned = false;
 	const headerOffset = 64;
 
-	function sectionById(id) {
-		return sections.find((section) => section.id === id);
-	}
-
 	function clusterByTarget(id) {
-		return clusters.find(
-			(cluster) =>
-				cluster.id === id ||
-				cluster.sectionIds.includes(id) ||
-				cluster.sectionIds.some((sectionId) =>
-					sectionById(sectionId)?.blocks.some((block) => block.id === id)
-				)
+		const section = sections.find(
+			(item) => item.id === id || item.blocks.some((block) => block.id === id)
 		);
+		return section && clusters.find((cluster) => cluster.id === section.id);
 	}
 
 	function tick() {
@@ -106,24 +77,6 @@
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
-	/** Intro copy stays above the subsections. Each h3 starts a collapsible group. */
-	function partsOf(blocks) {
-		const lead = [];
-		const groups = [];
-		let current = null;
-		for (const block of blocks) {
-			if (block.type === 'h3') {
-				current = { heading: block, blocks: [] };
-				groups.push(current);
-			} else if (current) {
-				current.blocks.push(block);
-			} else {
-				lead.push(block);
-			}
-		}
-		return { lead, groups };
-	}
-
 	function openFold(id) {
 		const el = document.getElementById(id);
 		if (!el) return;
@@ -147,6 +100,7 @@
 		active = cluster.id;
 		await flush();
 		openFold(id);
+		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
 	onMount(() => {
@@ -162,11 +116,8 @@
 </script>
 
 <svelte:head>
-	<title>Lifecycle Refrigerant Management — Cascade Climate (unlisted)</title>
-	<meta
-		name="description"
-		content="Placeholder essay on the economics of lifecycle refrigerant management, and the home of the LRM Cost Explorer."
-	/>
+	<title>{hero.title} — Cascade Climate</title>
+	<meta name="description" content={hero.description} />
 	<meta name="robots" content="noindex, nofollow, noarchive" />
 	<meta name="googlebot" content="noindex, nofollow, noarchive" />
 </svelte:head>
@@ -174,18 +125,11 @@
 <div class="lrm-landing">
 	<section class="hero">
 		<div class="hero-copy">
-			<p class="eyebrow">{hero.eyebrow}</p>
 			<h1>{hero.title}</h1>
-			<p class="lede">{hero.lede[0]}</p>
+			<p class="lede">{hero.lede[0]}<br /><br />{hero.lede[1]}</p>
 			<div class="hero-actions">
 				<a class="cta" href={toolHref}>{hero.toolCta}</a>
-				<a class="cta cta-manual" href="/our-work/refrigerant-management-and-transition/explorer/user-manual"
-					>User Manual</a
-				>
 			</div>
-			{#if hero.lede[1]}
-				<p class="lede follow">{hero.lede[1]}</p>
-			{/if}
 		</div>
 		<img
 			class="hero-img"
@@ -227,89 +171,41 @@
 						</span>
 					</summary>
 					<div class="fold-body">
-						{#each cluster.sectionIds as sectionId}
-							{@const section = sectionById(sectionId)}
-							{@const parts = partsOf(section.blocks)}
-							<div class="cluster-part" id={cluster.sectionIds.length > 1 ? section.id : undefined}>
-								{#if cluster.sectionIds.length > 1}
-									<h3 class="cluster-source">{section.title}</h3>
-								{/if}
-						{#each parts.lead as block}
-							{#if block.type === 'h4'}
-								<h4 id={block.id}>{block.text}</h4>
+						{#each sections[i].blocks as block}
+							{#if block.type === 'h3'}
+								<h3 id={block.id}>{block.text}</h3>
+							{:else if block.type === 'h4'}
+								<h4 id={block.id}>
+									{#each block.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+								</h4>
 							{:else if block.type === 'p'}
-								<p>{block.text}</p>
-							{:else if block.type === 'note'}
-								<aside class="note" class:is-observed={block.kind === 'observation'}>
-									<p class="note-label">
-										{block.kind === 'modeled' ? 'Modeled result' : 'Broader observation'}
-									</p>
-									<p>{block.text}</p>
-								</aside>
-							{:else if block.type === 'cards'}
-								<div class="cards">
+								<p>
+									{#each block.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold && part.italic}<strong><em>{part.text}</em></strong>{:else if part.bold}<strong>{part.text}</strong>{:else if part.italic}<em>{part.text}</em>{:else}{part.text}{/if}{/each}
+								</p>
+							{:else if block.type === 'ul'}
+								<ul>
+									{#each block.items as item}
+										<li>
+											{#each item.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold && part.italic}<strong><em>{part.text}</em></strong>{:else if part.bold}<strong>{part.text}</strong>{:else if part.italic}<em>{part.text}</em>{:else}{part.text}{/if}{/each}
+										</li>
+									{/each}
+								</ul>
+							{:else if block.type === 'links'}
+								<ul class="jump-links">
+									{#each block.items as item}
+										<li><a href={item.href}>{item.text}</a></li>
+									{/each}
+								</ul>
+							{:else if block.type === 'countries'}
+								<div class="cards countries">
 									{#each block.items as item}
 										<article>
 											<h4>{item.title}</h4>
-											{#each item.paragraphs as para}
-												<p>{para}</p>
-											{/each}
+											{#if item.note}<p>{item.note}</p>{/if}
 										</article>
 									{/each}
 								</div>
-							{:else if block.type === 'cta'}
-								<p class="band-cta">
-									<a class="cta" href={toolHref}>{hero.toolCta}</a>
-								</p>
-							{:else if block.type === 'tool'}
-								<p class="inline-tool">
-									<a href={toolHref}>{hero.toolCta}</a>
-								</p>
 							{/if}
-						{/each}
-						{#each parts.groups as group}
-							<details class="sub-fold" id={group.heading.id}>
-								<summary>
-									<h3>{group.heading.text}</h3>
-								</summary>
-								<div class="fold-body">
-									{#each group.blocks as block}
-										{#if block.type === 'h4'}
-											<h4 id={block.id}>{block.text}</h4>
-										{:else if block.type === 'p'}
-											<p>{block.text}</p>
-										{:else if block.type === 'note'}
-											<aside class="note" class:is-observed={block.kind === 'observation'}>
-												<p class="note-label">
-													{block.kind === 'modeled' ? 'Modeled result' : 'Broader observation'}
-												</p>
-												<p>{block.text}</p>
-											</aside>
-										{:else if block.type === 'cards'}
-											<div class="cards">
-												{#each block.items as item}
-													<article>
-														<h4>{item.title}</h4>
-														{#each item.paragraphs as para}
-															<p>{para}</p>
-														{/each}
-													</article>
-												{/each}
-											</div>
-										{:else if block.type === 'cta'}
-											<p class="band-cta">
-												<a class="cta" href={toolHref}>{hero.toolCta}</a>
-											</p>
-										{:else if block.type === 'tool'}
-											<p class="inline-tool">
-												<a href={toolHref}>{hero.toolCta}</a>
-											</p>
-										{/if}
-									{/each}
-								</div>
-							</details>
-						{/each}
-							</div>
 						{/each}
 					</div>
 				</details>
@@ -393,7 +289,7 @@
 		font-size: 2rem;
 		line-height: 1.15;
 		margin: 0 0 1.15rem;
-		max-width: 22ch;
+		max-width: 18em;
 	}
 
 	.lede {
@@ -429,12 +325,6 @@
 		border: 1px solid transparent;
 	}
 
-	.cta-manual {
-		background: transparent;
-		color: var(--color-light);
-		border-color: color-mix(in srgb, var(--color-light) 72%, transparent);
-	}
-
 	.cta:hover {
 		opacity: 0.92;
 	}
@@ -468,8 +358,8 @@
 	nav.scroll-nav a {
 		flex: 1 1 0;
 		min-width: 0;
-		padding: 0.7rem 0.65rem;
-		font-size: 0.95rem;
+		padding: 0.65rem 0.5rem;
+		font-size: 0.84rem;
 		line-height: 1.35;
 		text-decoration: none;
 		color: inherit;
@@ -605,6 +495,46 @@
 		scroll-margin-top: 8rem;
 	}
 
+	.fold-body > h3 {
+		margin: 1.55rem 0 0.55rem;
+		font-size: 1.2rem;
+		scroll-margin-top: 8rem;
+	}
+
+	.fold-body > h3:first-child {
+		margin-top: 0.15rem;
+	}
+
+	.fold-body > h4 {
+		margin: 1.35rem 0 0.45rem;
+		font-size: 1.05rem;
+		font-weight: 500;
+		letter-spacing: 0;
+		text-transform: none;
+		font-style: italic;
+		line-height: 1.35;
+		color: var(--deep-teal);
+	}
+
+	.fold-body ul {
+		margin: 0 0 1.1rem;
+		padding-left: 1.2rem;
+	}
+
+	.fold-body li {
+		margin: 0 0 0.7rem;
+		line-height: 1.62;
+	}
+
+	.jump-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem 1.4rem;
+		list-style: none;
+		padding: 0;
+		margin: 0.35rem 0 0.4rem;
+	}
+
 	.band p {
 		margin: 0 0 1.1rem;
 		line-height: 1.62;
@@ -670,6 +600,10 @@
 		margin: 0.5rem 0 1.25rem;
 	}
 
+	.cards.countries {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
 	.cards article {
 		margin: 0;
 		padding: 1rem 1.15rem 0.15rem;
@@ -703,6 +637,10 @@
 	}
 
 	@media (max-width: 660px) {
+		.cards.countries {
+			grid-template-columns: 1fr;
+		}
+
 		.hero,
 		.band {
 			padding-left: 2rem;
