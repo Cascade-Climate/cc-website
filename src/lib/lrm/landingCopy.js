@@ -968,7 +968,14 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "The cost of LRM looks different in each geography. Labor rates, the types of equipment in use, the refrigerants in circulation, the facilities already available, and the policies that enable recovery all vary by market. To reflect those differences, Cascade is developing country- and region-specific use cases of the LRM Cost Explorer, starting with Southeast Asia."
+            "text": "The cost of LRM looks different in each geography. Labor rates, the types of equipment in use, the refrigerants in circulation, the facilities already available, and the policies that enable recovery all vary by market. To reflect those differences, Cascade is developing country- and region-specific use cases of the LRM Cost Explorer, starting with "
+          },
+          {
+            "text": "Southeast Asia",
+            "href": "/our-work/refrigerant-management-and-transition/costs/analysis-SEA"
+          },
+          {
+            "text": "."
           }
         ]
       },
@@ -991,7 +998,8 @@ export const sections = [
         "type": "countries",
         "items": [
           {
-            "title": "Southeast Asia"
+            "title": "Southeast Asia",
+            "href": "/our-work/refrigerant-management-and-transition/costs/analysis-SEA"
           },
           {
             "title": "India",

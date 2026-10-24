@@ -10,7 +10,7 @@
 	}));
 
 	let active = clusters[0].id;
-	let openId = '';
+	let openId = clusters[0].id;
 	let scrollLock = 0;
 	let navWrapper;
 	let navEl;
@@ -199,10 +199,17 @@
 							{:else if block.type === 'countries'}
 								<div class="cards countries">
 									{#each block.items as item}
-										<article>
-											<h4>{item.title}</h4>
-											{#if item.note}<p>{item.note}</p>{/if}
-										</article>
+										{#if item.href}
+											<a class="country-link" href={item.href}>
+												<h4>{item.title}</h4>
+												{#if item.note}<p>{item.note}</p>{/if}
+											</a>
+										{:else}
+											<article>
+												<h4>{item.title}</h4>
+												{#if item.note}<p>{item.note}</p>{/if}
+											</article>
+										{/if}
 									{/each}
 								</div>
 							{/if}
@@ -564,10 +571,30 @@
 	}
 
 	.note,
-	.cards article {
+	.cards article,
+	.country-link {
 		background: var(--panel);
 		border: 1px solid color-mix(in srgb, var(--deep-teal) 14%, transparent);
 		border-radius: 1rem;
+	}
+
+	.band a.country-link {
+		display: block;
+		margin: 0;
+		padding: 1rem 1.15rem;
+		text-decoration: none;
+		color: inherit;
+		font-weight: 500;
+	}
+
+	.country-link h4 {
+		margin-bottom: 0;
+		text-decoration: underline;
+		text-underline-offset: 0.18em;
+	}
+
+	.cards a.country-link {
+		padding: 1.15rem;
 	}
 
 	.note {
@@ -604,7 +631,8 @@
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
-	.cards article {
+	.cards article,
+	.country-link {
 		margin: 0;
 		padding: 1rem 1.15rem 0.15rem;
 	}
