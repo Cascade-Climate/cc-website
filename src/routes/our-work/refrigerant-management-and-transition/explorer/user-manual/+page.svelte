@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { intro, manualTitle, navItems, sections } from '$lib/lrm/userManual.js';
+	import { intro, navItems, sections } from '$lib/lrm/userManual.js';
 
 	let active = navItems[0].id;
 	let scrollLock = 0;
@@ -38,7 +38,7 @@
 </script>
 
 <svelte:head>
-	<title>{manualTitle} — Cascade Climate</title>
+	<title>User Manual — Cascade Climate</title>
 	<meta
 		name="description"
 		content="User manual for the Lifecycle Refrigerant Management Cost Explorer."
@@ -63,7 +63,8 @@
 	</aside>
 
 	<article class="doc">
-		<h1>{manualTitle}</h1>
+		<h1>User Manual</h1>
+		<p class="subtitle">Lifecycle Refrigerant Management (LRM) Cost Explorer</p>
 		{#each intro as para}
 			<p>
 				{#each para.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
@@ -172,15 +173,23 @@
 		background: var(--paper);
 		margin-left: 18.5rem;
 		padding: 1.35rem 2.75rem 40vh;
-		max-width: 46rem;
 		min-width: 0;
 	}
 
 	h1 {
-		margin: 0 0 1.15rem;
+		margin: 0;
 		font-size: clamp(1.85rem, 2.6vw, 2.45rem);
 		font-weight: 500;
 		line-height: 1.15;
+		color: var(--teal);
+	}
+
+	p.subtitle {
+		margin: 0.35rem 0 1.25rem;
+		font-size: 1.15rem;
+		font-weight: 500;
+		line-height: 1.35;
+		text-align: left;
 		color: var(--teal);
 	}
 
@@ -263,7 +272,6 @@
 
 		.doc {
 			margin-left: 0;
-			max-width: none;
 			padding: 1.5rem 1.25rem 3rem;
 		}
 	}
