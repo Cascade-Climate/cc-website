@@ -866,7 +866,9 @@
 				</ol>
 			</aside>
 		</div>
+		</div>
 
+		<div class="stage">
 		<div class="chrome-choices">
 		<section class="panel branch" class:settled={Boolean(sector)} aria-labelledby="branch-heading">
 			<h2 id="branch-heading">Choose a sector</h2>
@@ -911,7 +913,6 @@
 				</div>
 			</section>
 		{/if}
-		</div>
 		</div>
 
 		{#if ready && live}
@@ -1612,10 +1613,7 @@
 				{/if}
 			</div>
 		{/if}
-
-		<p class="page-foot">
-			Updated November 2026
-		</p>
+		</div>
 	</div>
 </div>
 
@@ -3138,12 +3136,6 @@
 		color: var(--muted);
 	}
 
-	.page-foot {
-		margin-top: 2rem;
-		color: var(--muted);
-		font-size: 0.82rem;
-	}
-
 	.run-bar {
 		display: flex;
 		flex-wrap: wrap;
@@ -3324,14 +3316,32 @@
 		display: none;
 	}
 
+	.workspace-on .stage {
+		flex: 1 1 auto;
+		min-height: 0;
+		display: grid;
+		grid-template-columns: minmax(280px, 1.05fr) minmax(300px, 1fr);
+		grid-template-rows: auto minmax(0, 1fr);
+		column-gap: 0.55rem;
+		row-gap: 0.4rem;
+		align-items: stretch;
+	}
+
 	.workspace-on .chrome-choices {
 		display: flex;
-		flex: 1 0 100%;
+		grid-column: 1 / -1;
+		grid-row: 1;
 		flex-wrap: wrap;
 		align-items: flex-start;
+		align-self: start;
 		justify-content: flex-start;
 		gap: 0.4rem 0.85rem;
 		margin: 0;
+		min-width: 0;
+	}
+
+	.workspace-on .stage:has(.layout.has-results) .chrome-choices {
+		grid-column: 1;
 	}
 
 	.workspace-on .about {
@@ -3485,8 +3495,27 @@
 	}
 
 	.workspace-on .layout.awaiting {
+		grid-column: 1 / -1;
+		grid-row: 2;
 		grid-template-columns: minmax(0, 56rem);
 		justify-content: start;
+		min-height: 0;
+	}
+
+	.workspace-on .layout.has-results {
+		display: contents;
+	}
+
+	.workspace-on .layout.has-results > .controls {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.workspace-on .layout.has-results > .results {
+		grid-column: 2;
+		grid-row: 1 / span 2;
+		align-self: stretch;
+		max-height: none;
 	}
 
 	.workspace-on .layout > .panel {
@@ -3519,10 +3548,6 @@
 	}
 
 	.workspace-on .option-idle {
-		display: none;
-	}
-
-	.workspace-on .page-foot {
 		display: none;
 	}
 
@@ -4125,10 +4150,25 @@
 		.workspace-on .chrome {
 			display: block;
 		}
-		.workspace-on .layout {
+		.workspace-on .stage {
+			display: block;
+			min-height: 0;
+		}
+		.workspace-on .eyebrow {
+			display: inline-block;
+		}
+		.workspace-on .layout,
+		.workspace-on .layout.has-results {
 			display: grid;
 			grid-template-columns: 1fr;
 			overflow: visible;
+		}
+		.workspace-on .layout.awaiting,
+		.workspace-on .layout.has-results > .controls,
+		.workspace-on .layout.has-results > .results {
+			grid-column: auto;
+			grid-row: auto;
+			max-height: none;
 		}
 		.workspace-on .pane-switch {
 			display: flex;
@@ -4177,9 +4217,6 @@
 		.workspace-on .metrics.three .metric + .metric {
 			border-left: 0;
 			border-top: 1px solid var(--line);
-		}
-		.workspace-on .page-foot {
-			display: block;
 		}
 		.workspace-on .site.compact {
 			min-width: 0;
