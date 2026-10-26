@@ -3,11 +3,11 @@ export const manualHref = "/our-work/refrigerant-management-and-transition/explo
 export const hero = {
   "title": "LRM Cost Explorer: Tool, Research, and Insights",
   "lede": [
-    "Lifecycle refrigerant management (LRM) can cut avoidable emissions and help countries meet Montreal Protocol targets, but in most Article 5 countries it is held back by weak markets for used refrigerant, venting that is hard to detect, and a lack of reliable cost data.",
+    "Lifecycle refrigerant management (LRM) offers a powerful opportunity to reduce avoidable emissions while helping countries meet their Montreal Protocol and Kigali Amendment targets. By preventing leaks, recovering refrigerants for recycling or reclamation, and responsibly destroying those that cannot be reused, LRM can support existing cooling needs while reducing demand for virgin refrigerants.",
     "Cascade’s LRM Cost Explorer, built from fieldwork across Southeast Asia, helps fill the cost data gap by providing estimates for the costs of recovery, recycling, reclamation and destruction."
   ],
-  "description": "Lifecycle refrigerant management (LRM) can cut avoidable emissions and help countries meet Montreal Protocol targets, but in most Article 5 countries it is held back by weak markets for used refrigerant, venting that is hard to detect, and a lack of reliable cost data.",
-  "toolCta": "Explore costs for LRM"
+  "description": "Lifecycle refrigerant management (LRM) offers a powerful opportunity to reduce avoidable emissions while helping countries meet their Montreal Protocol and Kigali Amendment targets. By preventing leaks, recovering refrigerants for recycling or reclamation, and responsibly destroying those that cannot be reused, LRM can support existing cooling needs while reducing demand for virgin refrigerants.",
+  "toolCta": "Access the LRM Cost Explorer"
 };
 export const sections = [
   {
@@ -24,7 +24,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "This year marks ten years since the Kigali Amendment to the Montreal Protocol was adopted on October 15, 2016. It was the first time the Protocol controlled refrigerant gases for their effect on climate: hydrofluorocarbons (HFCs) don’t deplete the ozone layer directly but are potent greenhouse gases. The Protocol and Kigali Amendment limit the production and consumption of HFCs and ozone-depleting substances (ODS), thereby constraining the supply available for use in new equipment and for servicing existing equipment. For HFCs, this is a gradual phasedown, not a phaseout: countries will cut HFCs by more than 80 percent between 2036 and 2047. Millions of tonnes of HFCs will therefore remain in installed and new equipment today, and HFC banks are expected to keep growing until around 2030."
+            "text": "This year marks ten years since the Kigali Amendment to the Montreal Protocol was adopted on October 15, 2016. It was the first time the Protocol controlled refrigerant gases for their effect on climate: hydrofluorocarbons (HFCs) don’t deplete the ozone layer directly but are potent greenhouse gases. The Protocol and Kigali Amendment limit the production and consumption of HFCs and ozone-depleting substances (ODS), thereby constraining the supply available for use in new equipment and for servicing existing equipment. For HFCs, this is a gradual phasedown, not a phaseout: countries will cut HFCs by more than 80 percent between 2036 and 2047. Millions of tonnes of HFCs will therefore remain in installed and new equipment for several decades, and HFC banks are expected to keep growing until around 2030."
           }
         ]
       },
@@ -32,7 +32,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Lifecycle refrigerant management (LRM) holds important potential as a climate strategy that can also help countries meet their Montreal Protocol and Kigali Amendment targets. LRM reduces avoidable emissions from the installed base of refrigerants through improved leak management and recovery at servicing and equipment end-of-life. Recovered refrigerant that is then recycled or reclaimed can help countries service their existing cooling equipment while reducing demand for virgin HFCs. This will matter more and more as HFC consumption limits tighten. Certain refrigerants with no remaining demand or low reuse potential, including ODS and highly contaminated HFCs, can also be responsibly destroyed, permanently preventing their emissions."
+            "text": "Lifecycle refrigerant management (LRM) holds important potential as a climate strategy that can also help countries meet their Montreal Protocol and Kigali Amendment targets. LRM reduces avoidable emissions from the installed base of refrigerants through improved leak management and recovery at servicing and equipment end-of-life. Recovered refrigerant that is then recycled or reclaimed can help countries service their existing cooling equipment while reducing demand for virgin HFCs. This will become increasingly important as HFC consumption limits tighten. Certain refrigerants with no remaining demand or low reuse potential, including ODS and highly contaminated HFCs, can also be responsibly destroyed, permanently preventing their emissions."
           }
         ]
       },
@@ -82,7 +82,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Inventory data can inform capital cost planning. ",
+                "text": "Refrigerant bank inventory data can inform capital cost planning. ",
                 "bold": true
               },
               {
@@ -93,7 +93,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "End-use markets for recovered refrigerants are essential but currently underdeveloped in most countries. ",
+                "text": "End-use markets for recovered refrigerants are essential but currently underdeveloped in most Article 5 countries. ",
                 "bold": true
               },
               {
@@ -104,7 +104,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Sustaining LRM beyond pilots requires funding for operations.",
+                "text": "Sustaining LRM beyond pilots requires revenue models and funding for operations.",
                 "bold": true
               },
               {
@@ -141,7 +141,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "In conversations with stakeholders, including national governments, reverse supply chain actors (i.e., technicians, reclaimers, etc.), Montreal Protocol Implementation Agencies, and other financing institutions, we consistently heard that a major challenge in designing LRM programs is the lack of adequate cost information. Precise, region-specific, and comprehensive cost data is essential and matters most in developing countries—referred to as Article 5 countries under the Montreal Protocol—where recovery rates remain low and LRM activity is nascent and underfunded."
+            "text": "In conversations with stakeholders, including national governments, reverse supply chain actors (i.e., technicians, reclaimers, etc.), Montreal Protocol Implementation Agencies, and other financing institutions, we consistently heard that a major challenge in implementing LRM programs is the lack of adequate cost information. Precise, region-specific, and comprehensive cost data is essential and matters most in developing countries—referred to as Article 5 countries under the Montreal Protocol—where recovery rates remain low and LRM activity is nascent and underfunded."
           }
         ]
       },
@@ -212,7 +212,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": " – The extraction and cleaning of recovered refrigerant for reuse, often in the same system, without bringing it to full AHRI 700 reclamation standard. A typical setup combines acid and moisture filters, an oil separator, a dryer or purifier using desiccants or molecular sieves, and a vacuum pump and cylinders for recharging the gas into the same or comparable equipment."
+                "text": " – The extraction and cleaning of recovered refrigerants for reuse, often in the same system, without bringing it to full AHRI 700 reclamation standard. A typical setup combines acid and moisture filters, an oil separator, a dryer or purifier using desiccants or molecular sieves, and a vacuum pump and cylinders for recharging the gas into the same or comparable equipment."
               }
             ]
           },
@@ -223,7 +223,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": " – The processing of recovered refrigerants to meet international purity standards such as AHRI 700 in a full-scale reclamation facility. The process generally involves four stages: initial filtering and drying to remove moisture and larger particles; separating mixtures and contaminants, through fractional distillation or molecular filtration; chemical treatment to neutralize acids and other impurities; and gas chromatography (GC) testing to confirm composition and purity. Simple distillation is the most common reclamation method worldwide. However, simple distillation typically requires recovered refrigerant to have ~98% purity, limiting its applicability for mixed or contaminated gas. Fractional distillation is a more complex process that can handle lower-purity refrigerants, but they are significantly more expensive to own and operate."
+                "text": " – The processing of recovered refrigerants to meet international purity standards such as AHRI 700 in a full-scale reclamation facility. The process generally involves four stages: initial filtering and drying to remove moisture and larger particles; separating mixtures and contaminants, through fractional distillation or molecular filtration; chemical treatment to neutralize acids and other impurities; and gas chromatography (GC) testing to confirm composition and purity. Simple distillation is the most common reclamation method worldwide. However, simple distillation typically requires recovered refrigerants to have ~98% purity, limiting its applicability for mixed or contaminated gas. Fractional distillation is a more complex process that can handle lower-purity refrigerants, but they are significantly more expensive to own and operate."
               }
             ]
           },
@@ -234,7 +234,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": " The permanent decomposition of refrigerants at a destruction facility using a technology that meets or exceeds the Montreal Protocol's Technology and Economic Assessment Panel (TEAP) standards. During the destruction process, refrigerant chemicals are broken down at very high temperatures, to a standard of decomposing at least 99.99 percent of the molecules for concentrated sources, with the by-products captured and treated. There are several TEAP-approved destruction technologies, including cement kiln, rotary kiln, argon plasma arc and municipal solid waste incineration."
+                "text": " The permanent decomposition of refrigerants at a destruction facility using a technology that meets or exceeds the Montreal Protocol's Technology and Economic Assessment Panel (TEAP) standards. During the destruction process, refrigerants chemicals are broken down at very high temperatures, to a standard of decomposing at least 99.99 percent of the molecules for concentrated sources, with the by-products captured and treated. There are several TEAP-approved destruction technologies, including cement kiln, rotary kiln, argon plasma arc and municipal solid waste incineration."
               }
             ]
           }
@@ -337,7 +337,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Operational costs in USD per kg and total USD per year"
+                "text": "Operational costs in USD per kilogram (kg) and total USD per year"
               }
             ]
           },
@@ -383,7 +383,7 @@ export const sections = [
             "external": true
           },
           {
-            "text": " (CCAC) and others have laid essential groundwork for understanding LRM costs and financing mechanisms. This tool adds an additional level of detail sourced from on-the-ground operations and allows users to tailor calculations to their own context."
+            "text": " (CCAC) and others have laid essential groundwork for understanding LRM costs and financing mechanisms. This tool adds an additional layer of detail sourced from on-the-ground operations and allows users to tailor calculations to their own context."
           }
         ]
       },
@@ -480,7 +480,7 @@ export const sections = [
         "type": "links",
         "items": [
           {
-            "text": "Explore costs for LRM",
+            "text": "Access the LRM Cost Explorer",
             "href": "/our-work/refrigerant-management-and-transition/costs/explorer"
           },
           {
@@ -521,7 +521,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": " One cost driver is how much refrigerant each recovery job yields, which depends on both the charge size and the share of that charge that is actually in the unit at the time of recovery. Much of the effort in a recovery job (travel, setup, base labor) costs about the same whether a unit contains 0.5 kg or 120 kg. Reducing the refrigerant recovered per residential AC unit by 50% raised the net cost of a destruction program from about USD 27 to USD 44 per kg. For commercial systems, which yield far more refrigerant per job, reducing the refrigerant recovered per unit by 50% only raised the net cost of a destruction program from USD 13 per kg to USD 17 per kg. Not only is recovery from commercial HVAC equipment cheaper than residential AC equipment at baseline, but it is also less sensitive to changes in the recoverable amount of refrigerant at the point of recovery. This is important because no one knows exactly how much refrigerant can actually be recovered from a unit until technicians are already on-site (and costs have already been incurred). We heard from recovery teams that residential AC units tend to be leaky and poorly maintained, with units often holding only 0.2–0.3 kg by the time a technician reaches them. Commercial HVAC equipment has the highest likelihood of having enough remaining refrigerant to make recovery cost-effective."
+            "text": " One cost driver is how much refrigerant each recovery job yields, which depends on both the charge size and the share of that charge that is actually in the unit at the time of recovery. Much of the effort in a recovery job (travel, setup, base labor) costs about the same whether a unit contains 0.5 kg or 150 kg. Reducing the amount of refrigerant recovered per residential AC unit by 50% raised the net cost of a destruction program from about USD 27 to USD 44 per kg. For commercial systems, which yield far more refrigerant per job, reducing the refrigerant recovered per unit by 50% only raised the net cost of a destruction program from USD 13 per kg to USD 17 per kg. Not only is recovery from commercial HVAC equipment cheaper than residential AC equipment at baseline, but it is also less sensitive to changes in the recoverable amount of refrigerant at the point of recovery. This is important because no one knows exactly how much refrigerant can actually be recovered from a unit until technicians are already on-site (and costs have already been incurred). We heard from recovery teams that residential AC units tend to be leaky and poorly maintained, with units often holding only 0.2–0.3 kg by the time a technician reaches them. Commercial HVAC equipment has the highest likelihood of having enough remaining refrigerant to make recovery cost-effective."
           }
         ]
       },
@@ -533,7 +533,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": "Another cost driver is recovery labor productivity, or how long each recovery takes and what that time costs. Recovery time was among the most influential inputs across all five combinations we tested. If recovering a residential unit takes two hours instead of half an hour, the net cost more than doubles, from about USD 27 to USD 57 per kg. Better recovery tools, technician training, and equipment aggregation can all improve labor efficiency, particularly for residential AC units. In the field we saw a high-capacity recovery machine that could recover refrigerant from up to five split units simultaneously, drastically impacting the labor efficiency and reducing net operating costs. Maximizing how many units a team can recover at a single site, and how close those sites are to a central facility, helps improve cost-effectiveness as well."
+            "text": "Another cost driver is recovery labor productivity, or how long each recovery job takes and what that time costs. Recovery time was among the most influential inputs across all five user scenarios we tested. If recovering a residential unit takes two hours instead of half an hour, the net cost more than doubles, from about USD 27 to USD 57 per kg. Better recovery tools, technician training, and equipment aggregation can all improve labor efficiency, particularly for residential AC units. In the field we saw a high-capacity recovery machine that could recover refrigerant from multiple split units simultaneously, drastically impacting the labor efficiency and reducing net operating costs. Maximizing how many units a team can recover at a single site, and how close those sites are to a central facility, helps improve cost-effectiveness as well."
           }
         ]
       },
@@ -545,7 +545,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": "Another driver is what the recovered refrigerant is worth: the resale price of reclaimed refrigerant, or the price of virgin refrigerant that recycling allows equipment owners to avoid buying. In situations where recovered refrigerant is reused (whether recycled or reclaimed), the market price of that refrigerant drives whether the recovery job is worth doing at all. If reclaimed refrigerant sold for USD 20 per kg instead of USD 5 per kg (default value in the Explorer), most commercial HVAC reclamation scenarios—despite low recovery volume (0–10 tonnes)—would still turn a profit. This assessment aligns with what we heard from market actors: most reclamation in Article 5 countries is currently only feasible if the gas can be sold in non-Article 5 markets where HFC supply constraints have driven refrigerant sale prices up. Virgin refrigerant price plays the same role for recycling, where it is also the top driver."
+            "text": "Another driver is what the recovered refrigerant is worth: the resale price of reclaimed refrigerant, or the price of virgin refrigerant that recycling allows equipment owners to avoid buying. In situations where recovered refrigerant is reused (whether recycled or reclaimed), the market price of that refrigerant drives whether the recovery job is worth doing at all. If reclaimed refrigerant sold for USD 20 per kg instead of USD 5 per kg (default value in the Explorer), most commercial HVAC reclamation scenarios—even at low recovery volumes (0–10 tonnes)—would still turn a profit. This assessment aligns with what we heard from market actors: most reclamation in Article 5 countries is currently only economically feasible if the gas can be sold in non-Article 5 markets where HFC supply constraints have driven refrigerant sale prices up. Virgin refrigerant price plays the same role for recycling, where it is also the top driver."
           }
         ]
       },
@@ -570,7 +570,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "New build vs existing infrastructure for destruction: ",
+            "text": "New build versus existing infrastructure for destruction: ",
             "italic": true
           },
           {
@@ -619,7 +619,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Use inventory data to inform capital cost planning: ",
+            "text": "Use refrigerant bank inventory data to inform capital cost planning: ",
             "italic": true
           },
           {
@@ -631,7 +631,7 @@ export const sections = [
             "external": true
           },
           {
-            "text": " provides useful direction on how to translate bank inventories into plans and policy."
+            "text": " provides useful direction on how to translate refrigerant bank inventories into plans and policy."
           }
         ]
       },
@@ -639,7 +639,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Currently, few Article 5 countries have sufficient annual recovered refrigerant volumes to justify investing in a full-scale reclamation or destruction facility. However, there are several ways to build capacity with what is available. For reclamation, basic reclamation units with enhanced filtration and dehydration can be placed at training centres or recovery hubs. These units require relatively little investment, can process modest volumes of common refrigerants such as R-22, R-134a, and R-410A, and may qualify for Hydrochlorofluorocarbons Phaseout Management Plan (HPMP) or Kigali Implementation Plan (KIP) funding. Mobile reclamation units can rotate between cities or servicing clusters, offering periodic collection and purification. Several Article 5 countries have used this model successfully. This approach works best in markets where volumes are scattered, and it scales well at low cost, especially when combined with national recovery requirements and technician training. A shared regional facility can serve several countries with low refrigerant demand through cost-sharing or public-private partnerships, ideally building on existing gas or chemical plants rather than new construction. Smaller and low-volume-consuming countries can then send gas to neighboring countries for reclamation, provided they account for the rules on moving these substances across borders."
+            "text": "Currently, few Article 5 countries have sufficient annual recovered refrigerant volumes to justify investing in a full-scale reclamation or destruction facility. However, there are several ways to build capacity with what is available. For reclamation, basic reclamation units with enhanced filtration and dehydration can be placed at training centres or recovery hubs. These units require relatively little investment, can process modest volumes of common refrigerants such as R-22, R-134a, and R-410A, and may qualify for Hydrochlorofluorocarbons Phaseout Management Plan (HPMP) or Kigali Implementation Plan (KIP) funding. Mobile reclamation units can rotate between cities or servicing clusters, offering periodic collection and purification. Several Article 5 countries have used this model successfully. This approach works best in markets where volumes are scattered, and it scales well at low cost, especially when combined with national recovery requirements and technician training. A shared regional facility can serve several countries with low refrigerant demand through cost-sharing or public-private partnerships. Smaller and low-volume-consuming countries can then send gas to neighboring countries for reclamation, provided they account for the rules on moving these substances across borders."
           }
         ]
       },
@@ -983,7 +983,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Each use case will leverage data gathered through field research and conversations with local supply chain actors. It shows what LRM costs at that country or regional level, which factors drive those costs, and which levers can enable LRM activity to scale. Our goal is to provide stakeholders with a realistic picture of the investment needed to move LRM activity from small, short-lived pilot projects to programs that can grow in scale and sustain themselves. Using the LRM Cost Explorer? We’d like to hear about how you’re applying the Explorer, and what would make it more useful at "
+            "text": "Each use case will leverage data gathered through field research and conversations with local supply chain actors. It shows what LRM costs at that country or regional level, which factors drive those costs, and which levers can enable LRM activity to scale. Our goal is to provide stakeholders with a realistic picture of the investment needed to move LRM activity from small, short-lived pilot projects to programs that can grow in scale and sustain themselves. We’d like to hear about how you’re applying the Explorer, and what would make it more useful -- reach out at "
           },
           {
             "text": "refrigerantmanagement@cascade.org",
