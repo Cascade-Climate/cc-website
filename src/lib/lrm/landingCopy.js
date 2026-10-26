@@ -545,7 +545,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": "Another driver is what the recovered refrigerant is worth: the resale price of reclaimed refrigerant, or the price of virgin refrigerant that recycling allows equipment owners to avoid buying. In situations where recovered refrigerant is reused (whether recycled or reclaimed), the market price of that refrigerant drives whether the recovery job is worth doing at all. If reclaimed refrigerant sold for USD 20 per kg instead of USD 5 per kg (default value in the Explorer), most commercial HVAC reclamation scenarios—even at low recovery volumes (0–10 tonnes)—would still turn a profit. This assessment aligns with what we heard from market actors: most reclamation in Article 5 countries is currently only economically feasible if the gas can be sold in non-Article 5 markets where HFC supply constraints have driven refrigerant sale prices up. Virgin refrigerant price plays the same role for recycling, where it is also the top driver."
+            "text": "Another cost driver is what the recovered refrigerant is worth: the resale price of reclaimed refrigerant, or the price of virgin refrigerant that recycling allows equipment owners to avoid buying. In situations where recovered refrigerant is reused (whether recycled or reclaimed), the market price of that refrigerant drives whether the recovery job is worth doing at all. If reclaimed refrigerant sold for USD 20 per kg instead of USD 5 per kg (default value in the Explorer), most commercial HVAC reclamation scenarios—even at low recovery volumes (0–10 tonnes)—would still turn a profit. This assessment aligns with what we heard from market actors: most reclamation activity in Article 5 countries is currently only economically feasible if the gas can be sold in non-Article 5 markets where HFC supply constraints have driven refrigerant sale prices up. Virgin refrigerant price plays the same role for recycling, where it is also the top cost driver."
           }
         ]
       },
@@ -557,7 +557,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": " Another driver is scale. As volumes grow, fixed costs like warehousing and central facility operations are spread across more kilograms, and per-kilogram rates for handling and end-of-life processing come down. Annual volumes that shifted the Explorer’s cost scenario from high (0–10 metric tonnes per year) to low (50 metric tonnes or more) cut net cost by about USD 6.90 per kg for reclamation, a reduction of 27% for residential AC programs and 57% for commercial HVAC ones. For destruction, the cut was about USD 2.90 per kg, or 11% for residential AC and 21% for commercial HVAC. In practice, scale comes from handling more refrigerant more efficiently. Quadrupling a residential AC recovery project from 40 to 160 units a day brought net cost down from about USD 27 to USD 20 per kg."
+            "text": " Another cost driver is scale. As volumes grow, fixed costs like warehousing and central facility operations are spread across more kilograms, and per-kilogram rates for handling and end-of-life processing come down. Annual volumes that shifted the Explorer’s cost scenario from high (0–10 metric tonnes per year) to low (50 metric tonnes or more) cut net cost by about USD 6.90 per kg for reclamation, a reduction of 27% for residential AC programs and 57% for commercial HVAC ones. For destruction, the cut was about USD 2.90 per kg, or 11% for residential AC and 21% for commercial HVAC. In practice, scale comes from handling more refrigerant more efficiently. Quadrupling a residential AC recovery program from recovering 40 units a day to 160 units a day brought net cost down from about USD 27 to USD 20 per kg."
           }
         ]
       },
@@ -586,7 +586,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": "Reclamation faces the same problem from a different angle: the equipment has to be sufficiently utilized to be worth buying. In the Explorer, a new simple distillation reclamation facility costs about USD 850,000, and a full gas chromatography lab to verify purity adds another USD 225,000. Unlike a kiln, there’s no retrofit option, so a program either uses an existing reclamation facility for a fee or builds its own. A typical simple distillation facility can process roughly 150 tonnes a year, but a commercial pilot recovering 9 tonnes a year would use only about 6% of that capacity. Larger volumes spread the same investment over more refrigerant, so reclamation infrastructure investment makes the most sense once a reliable recovery supply chain is in place."
+            "text": "Reclamation faces the same problem from a different angle: the equipment has to be sufficiently utilized to be worth buying. In the Explorer, a new simple distillation reclamation facility costs about USD 850,000, and a full gas chromatography lab to verify purity adds another USD 225,000. Unlike a kiln, there’s no retrofit option, so a program either uses an existing reclamation facility for a fee or builds its own. A typical simple distillation facility can process up to 150 tonnes a year, but a commercial HVAC pilot recovering 9 tonnes a year would use only about 6% of that capacity. Larger volumes spread the same investment over more refrigerant, so reclamation infrastructure investment makes the most sense once a reliable recovery supply chain is in place."
           }
         ]
       },
@@ -603,7 +603,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": "Programs aiming to reach cost-effective volumes quickly should begin with commercial equipment and other aggregated sources rather than targeting small residential AC units. A single commercial HVAC system can yield as much refrigerant as hundreds of residential split units, so the labor efficiency is much higher. Under residential AC defaults, recovery-related activities account for more than 90% of gross cost. The sensitivity analysis points to the same cost drivers every time: refrigerant recovered per unit, units recovered per site, and labor cost per unit. Small split units often hold only 0.2–0.3 kg at end-of-life, out of an original 0.5–0.8 kg charge."
+            "text": "Programs aiming to reach cost-effective recovery volumes quickly should begin with commercial HVAC equipment and other aggregated sources rather than targeting small residential AC units. A single commercial HVAC system can yield as much refrigerant as hundreds of residential split units, so the labor efficiency is much higher. Under residential AC default user scenarios, recovery-related activities account for more than 90% of gross cost. The sensitivity analysis points to the same cost drivers every time: refrigerant recovered per unit, units recovered per site, and labor cost per unit."
           }
         ]
       },
@@ -611,7 +611,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Where residential AC recovery is a priority, governments and program developers can support improved recovery efficiency by bringing equipment to technicians rather than sending technicians to it, through retailer take-back schemes and decommissioning contracts. Paired with high-capacity recovery equipment and technician training, these approaches can bring residential costs closer to those of commercial programs. Without take-back obligations or enforced venting bans, programs must compete for residential AC equipment with informal scrap yards, where most equipment is either vented on-site or arrives already vented."
+            "text": "Where residential AC recovery is a priority, governments and program developers can support improved recovery efficiency by bringing equipment to technicians rather than sending technicians to it, through retailer take-back schemes and decommissioning contracts. Paired with high-capacity recovery equipment and technician training, these approaches can bring residential AC costs closer to those of commercial HVAC programs. Without take-back obligations or enforced venting bans, programs must compete for residential AC equipment with informal scrap yards, where most equipment is either vented on-site or arrives already vented."
           }
         ]
       },
@@ -639,7 +639,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Currently, few Article 5 countries have sufficient annual recovered refrigerant volumes to justify investing in a full-scale reclamation or destruction facility. However, there are several ways to build capacity with what is available. For reclamation, basic reclamation units with enhanced filtration and dehydration can be placed at training centres or recovery hubs. These units require relatively little investment, can process modest volumes of common refrigerants such as R-22, R-134a, and R-410A, and may qualify for Hydrochlorofluorocarbons Phaseout Management Plan (HPMP) or Kigali Implementation Plan (KIP) funding. Mobile reclamation units can rotate between cities or servicing clusters, offering periodic collection and purification. Several Article 5 countries have used this model successfully. This approach works best in markets where volumes are scattered, and it scales well at low cost, especially when combined with national recovery requirements and technician training. A shared regional facility can serve several countries with low refrigerant demand through cost-sharing or public-private partnerships. Smaller and low-volume-consuming countries can then send gas to neighboring countries for reclamation, provided they account for the rules on moving these substances across borders."
+            "text": "Currently, few Article 5 countries have sufficient annual recovered refrigerant volumes to justify investing in a full-scale reclamation or destruction facility. However, there are several ways to build capacity with what is available. For reclamation, basic reclamation units with enhanced filtration and dehydration can be placed at training centres or recovery hubs. These units require relatively little investment, can process modest volumes of common refrigerants such as R-22, R-134a, and R-410A, and may qualify for Hydrochlorofluorocarbons Phaseout Management Plan (HPMP) or Kigali Implementation Plan (KIP) funding. Mobile reclamation units can rotate between cities or servicing clusters, offering periodic collection and purification. Several Article 5 countries have used this model successfully. This approach works best in markets where volumes are scattered, and it scales well at low cost, especially when combined with national recovery requirements and technician training. A shared regional facility can serve several countries with low refrigerant volumes through cost-sharing or public-private partnerships. Smaller and low-volume-consuming countries can then send gas to neighboring countries for reclamation, provided they account for the rules on moving these substances across borders."
           }
         ]
       },
@@ -658,7 +658,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": " end-use pathway. Given the nascency of LRM in most Article 5 countries, increasing recovery rates is the greatest challenge with the highest impact potential. Rather than applying a broad hierarchical approach, we believe that the most appropriate way to manage recovered refrigerant is highly situation-dependent. Factors such as access to existing destruction or reclamation infrastructure, refrigerant type and purity, virgin refrigerant prices, and other national or regional dynamics drastically impact the cost of LRM. The LRM Cost Explorer allows users to calculate and compare scenarios for several end-use pathways to help determine which management hierarchy may be most economically feasible. Ultimately, the best end-use pathway is the one that can fund sustained refrigerant recovery."
+            "text": " end-use pathway. Given the nascency of LRM in most Article 5 countries, increasing recovery rates is the greatest challenge with the highest impact potential. Rather than applying a broad hierarchical approach, we believe that the most appropriate way to manage recovered refrigerant is highly situation-dependent. Factors such as access to existing destruction or reclamation infrastructure, refrigerant type and purity, virgin refrigerant prices, and other national or regional dynamics drastically impact the cost of LRM. The LRM Cost Explorer allows users to calculate and compare scenarios for several end-use pathways to help determine which management hierarchy may be most economically feasible for their scenario. Ultimately, the best end-use pathway is the one that can fund sustained refrigerant recovery."
           }
         ]
       }
@@ -672,7 +672,7 @@ export const sections = [
       {
         "type": "h3",
         "id": "in-order-to-fund-lrm-we-need-to-understand-end-use-markets",
-        "text": "In order to fund LRM, we need to understand end use markets"
+        "text": "In order to fund LRM, we need to understand end-use markets"
       },
       {
         "type": "p",
@@ -704,7 +704,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Recovering refrigerant from end-of-life equipment is the foundational activity that underpins any LRM project or program. Before gas can be recycled, reclaimed for resale, or destroyed, it must first be recovered. Recovery volume determines whether a program can ever reach commercial scale, and how carefully gas is segregated at recovery determines whether it can be reclaimed or has to be destroyed. Recovery itself is not a revenue-generating activity, but it is an activity that needs to be funded regardless of the end-use of the recovered refrigerant. Recovery operational costs are a significant portion of the overall LRM cost. It is therefore essential that any LRM business model is able to cover the costs associated with recovery, and provide a strong enough incentive for technicians to recover refrigerant rather than vent it."
+            "text": "Recovering refrigerant from end-of-life equipment is the foundational activity that underpins any LRM project or program. Before gas can be recycled, reclaimed for resale, or destroyed, it must first be recovered. Recovery volume determines whether a program can ever reach scale, and how carefully gas is segregated at recovery determines whether it can be reclaimed or has to be destroyed. Recovery itself is not a revenue-generating activity, but it is an activity that needs to be funded regardless of the end-use of the recovered refrigerant. Recovery operational costs are a significant portion of the overall LRM cost. It is therefore essential that any LRM business model is able to cover the costs associated with recovery, and provide a strong enough incentive for technicians to recover refrigerant rather than vent it."
           }
         ]
       },
@@ -712,7 +712,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Despite the importance of recovery, providing sufficient economic motivation for technicians to recover a critical volume of refrigerant was the single biggest challenge we encountered in our discussions. We heard from stakeholders time and again that labor and access, not equipment, are the major challenges to recovery. Agreements with building owners to recover gas rarely reach the people on site during decommissioning, technicians often lack vehicles that can carry full sets of recovery equipment, and scrap yards pay cash for whole units, regardless of whether the gas inside has been properly recovered. Workforce capacity is a further concern, because much of the technician training in Article 5 countries has been MLF-funded and stakeholders are worried about what happens when that funding ends. Nevertheless, foundational policies like venting bans, when well enforced or paired with other mechanisms (such as extended producer responsibility programs or cash bounty payments for recovered gas), can help internalize the cost of recovery into LRM operations."
+            "text": "Despite the importance of recovery, providing sufficient economic motivation for technicians to recover a critical volume of refrigerant, or for building owners to allow recovery, was the single biggest challenge we encountered in our discussions. We heard from stakeholders time and again that labor and access, not equipment, are the major challenges to recovery. Agreements with building owners to recover gas may not reach the people on site during decommissioning, technicians often lack vehicles that can carry full sets of recovery equipment, and scrap yards pay cash for whole units, regardless of whether the gas inside has been properly recovered. Workforce capacity is a further concern, because much of the technician training in Article 5 countries has been MLF-funded and stakeholders are worried about what happens when that funding ends. Nevertheless, foundational policies like venting bans, when well enforced or paired with other mechanisms (such as extended producer responsibility [EPR] programs or cash bounty payments for recovered gas), can help motivate those in the refrigerant value chain to recover gas."
           }
         ]
       },
@@ -735,7 +735,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "The economic benefit of recycled refrigerant is realized when the refrigerant is used for on-site charging or stockpiled to service existing equipment, displacing a technician or business owner’s need to purchase virgin refrigerant. In commercial equipment, recycling is the cheapest end-use pathway when using default inputs in the Explorer, with only a small increase over the cost of recovery alone. There is not, however, typically a traditional market where recycled refrigerant can be sold. Since it does not have the same purity level as reclaimed or virgin refrigerant, it isn’t sold by equipment manufacturers or distributors. Utilizing refrigerant with unverified purity levels can cause serious operational issues in equipment, which has led to mixed opinions around promoting recycling as part of LRM. In sectors where recovered refrigerant purity is likely to be high, recycling may offer a cost-effective bridge to reclamation that can build recovery capacity in Article 5 countries ahead of Kigali phasedown schedules. However, more research needs to be done to provide better guidance on when to recycle vs. reclaim recovered refrigerant."
+            "text": "The economic benefit of recycled refrigerant is realized when the refrigerant is used for on-site charging or stockpiled to service existing equipment, displacing a technician or business owner’s need to purchase virgin refrigerant. In commercial equipment, recycling is the cheapest end-use pathway when using default inputs in the Explorer, with only a small increase over the cost of recovery alone. There is not, however, typically a traditional market where recycled refrigerant can be sold. Since it does not have the same verified purity level as reclaimed or virgin refrigerant, it isn’t sold by equipment manufacturers or distributors. Utilizing refrigerant with unverified purity levels can cause serious operational issues in equipment, which has led to mixed opinions around promoting recycling as part of LRM. In sectors where recovered refrigerant purity is likely to be high, recycling may offer a cost-effective bridge to reclamation that can build recovery capacity in Article 5 countries ahead of Kigali phasedown schedules. However, more research needs to be done to provide better guidance on when to recycle vs. reclaim recovered refrigerant."
           }
         ]
       },
@@ -753,7 +753,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "For policymakers who wish to support recycling, regulations can help make recycling attractive, by, at minimum, ensuring that recycling is explicitly allowed. In several jurisdictions such as the US, and EU, laws allow recycled gas to be used in equipment owned by the same entity. This approach strikes the balance of legally permitting recycling while hedging against some of its risks by prohibiting recycled refrigerant from being sold or used in equipment owned by a different individual or company. In addition, MLF-funded programs can continue to support recycling by providing the necessary equipment and accompanying technician training."
+            "text": "For policymakers who wish to support recycling, regulations can help make recycling attractive, by, at minimum, ensuring that recycling is explicitly allowed. In several jurisdictions such as the United States, and the European Union, laws allow recycled gas to be used in equipment owned by the same entity. This approach strikes the balance of legally permitting recycling while hedging against some of its risks by prohibiting recycled refrigerant from being sold or used in equipment owned by a different individual or company. In addition, MLF-funded programs can continue to support recycling by providing the necessary equipment and accompanying technician training."
           }
         ]
       },
@@ -779,11 +779,11 @@ export const sections = [
             "text": "Reclaimed gas has clear market value as a product that can be sold to technicians, equipment manufacturers, and distributors. This is particularly true for HFCs, which are being phased "
           },
           {
-            "text": "down not",
+            "text": "down",
             "italic": true
           },
           {
-            "text": " out. This means that there will likely be HFC-compatible equipment in operation for decades, unlike ODS-compatible equipment which is gradually being replaced due to the complete phaseout of ODS. Unlike recycled refrigerant, properly reclaimed refrigerant is functionally and chemically the same as virgin refrigerant because both must meet the exact same industry purity standards. There is a misconception held by some consumers that reclaimed refrigerant is somehow of lower quality than virgin refrigerant. While this has been "
+            "text": " not out. This means that there will likely be HFC-compatible equipment in operation for decades, unlike ODS-compatible equipment which is gradually being replaced due to the complete phaseout of ODS. Unlike recycled refrigerant, properly reclaimed refrigerant is functionally and chemically the same as virgin refrigerant because both must meet the exact same industry purity standards. There is a misconception held by some consumers that reclaimed refrigerant is somehow of lower quality than virgin refrigerant. While this has been "
           },
           {
             "text": "proven false",
@@ -791,7 +791,7 @@ export const sections = [
             "external": true
           },
           {
-            "text": ", it does impact sale prices; multiple reverse supply chain actors shared that reclaimed refrigerant is often sold at a discount compared to virgin refrigerant. Low virgin prices in many Article 5 countries makes it difficult for reclaimed gas to compete in the market. The capital and operational costs of recovering and reclaiming refrigerant are often higher than the revenue that can be generated from selling reclaimed gas."
+            "text": ", it does impact sale prices; multiple reverse supply chain actors shared that reclaimed refrigerant is often sold at a discount compared to virgin refrigerant. Low virgin refrigerant prices in many Article 5 countries make it difficult for reclaimed gas to compete in the market. The operational costs of recovering and reclaiming refrigerant are often higher than the revenue that can be generated from selling reclaimed gas."
           }
         ]
       },
@@ -817,7 +817,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "In the intervening years before virgin refrigerant prices rise as a result of constrained HFC supply, there are a few activities countries can engage in to incentivize reclamation. Venting bans, which underpin all LRM activities, are a good starting place, though they are often insufficient on their own due to the difficulty of enforcement. In addition, clear regulations about when reclaimed refrigerants can be used and the standards that reclaimed gas must meet can build confidence for potential buyers of reclaimed gas. Some jurisdictions have undertaken more aggressive demand creation measures such as mandating the use of reclaimed gas in certain applications (e.g., California, EU) or placing import levies on virgin gas, which makes it easier for reclaimed gas to compete in the market. These strategies can contribute to the economic viability of reclaimed gas, but require a significant governmental enforcement capacity in order to be effective."
+            "text": "In the intervening years before virgin refrigerant prices in Article 5 countries rise as a result of constrained HFC supply, there are a few activities countries can engage in to incentivize reclamation. Venting bans, which underpin all LRM activities, are a good starting place, though they are often insufficient on their own due to the difficulty of enforcement. In addition, clear regulations about when reclaimed refrigerants can be used and the standards that reclaimed gas must meet can build confidence for potential buyers of reclaimed gas. Some jurisdictions have undertaken more aggressive demand creation measures such as mandating the use of reclaimed gas in certain applications (e.g., California, European Union) or placing import levies on virgin gas, which makes it easier for reclaimed gas to compete in the market. These strategies can contribute to the economic viability of reclaimed gas, but require a significant governmental enforcement capacity in order to be effective."
           }
         ]
       },
@@ -886,7 +886,7 @@ export const sections = [
             "href": "https://cascadeclimate.org/blog/lrm-financing"
           },
           {
-            "text": " blog for more information). In compliance markets, governments legally require covered entities to stay under an emissions cap, and often allow limited use of offset credits to meet this cap. The clear additionality and lack of reversal risk from ODS credits as well as their relative cost-effectiveness makes them an attractive credit type in compliance markets, such as in California where ODS destruction is one of only a few carbon credit project types eligible under the state’s cap-and-invest system. These features could also make ODS destruction attractive for governments who are currently setting up domestic compliance markets—as many A5 countries currently are—to consider making them eligible."
+            "text": " blog for more information). In compliance markets, governments legally require covered entities to stay under an emissions cap, and often allow limited use of offset credits to meet this cap. The clear additionality and lack of reversal risk from ODS credits as well as their relative cost-effectiveness makes them an attractive credit type in compliance markets, such as in California where ODS destruction is one of only a few carbon credit project types eligible under the state’s cap-and-invest system. These features could also make ODS destruction attractive for governments who are currently setting up domestic compliance markets—as many Article 5 countries currently are—to consider making them eligible."
           }
         ]
       },
@@ -894,7 +894,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "In the long-term, EPR programs could serve as a non-carbon-market-based source of revenue for destruction. For example, countries such as Australia and Norway, have implemented the principle of extended producer responsibility through import taxes on gas and pre-charged equipment, the revenue from which covers the cost of destruction and recovery. These programs often involve using bounty payments (i.e. cash incentives) to reimburse technicians, aggregators, and/or destruction facilities themselves for the recovery and/or certified destruction of gas. It is worth noting that such programs require a high degree of government capacity to function well, and must have a way to ring-fence, or demarcate, revenue from the EPR program to ensure that it is used to incentivize recovery and destruction. Often, a non-governmental entity called a Producer Responsibility Organization takes on the transaction costs of setting up and running an EPR program."
+            "text": "In the long-term, EPR programs could serve as a non-carbon-market-based source of revenue for destruction. For example, countries such as Australia and Norway have implemented the principle of extended producer responsibility through import taxes on gas and pre-charged equipment, the revenue from which covers the cost of recovery and destruction. These programs often involve using bounty payments (i.e. cash incentives) to reimburse technicians, aggregators, and/or destruction facilities themselves for the recovery and/or certified destruction of gas. It is worth noting that such programs require a high degree of government capacity to function well, and must have a way to ring-fence, or demarcate, revenue from the EPR program to ensure that it is used to incentivize recovery and destruction. Often, a non-governmental entity called a Producer Responsibility Organization takes on the transaction costs of setting up and running an EPR program."
           }
         ]
       }
@@ -929,11 +929,11 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "2. Funding for operations, not just equipment.",
+            "text": "2. Revenue models for operations, not just funding for equipment.",
             "bold": true
           },
           {
-            "text": " Business models that cover the operational costs, not just pilot funding for equipment, are essential to the long-term success of LRM. As policy and business models develop, other forms of finance, such as carbon finance, can bridge the gap. The MLF’s funding window from "
+            "text": " Business models that cover the operational costs, not just pilot funding for equipment capital costs, are essential to the long-term success of LRM. As policy and business models develop, other forms of finance, such as carbon finance, can bridge the gap. The MLF’s funding window from "
           },
           {
             "text": "Decision 91/66",
@@ -949,11 +949,11 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "3. Monitoring, reporting and verification.",
+            "text": "3. Monitoring, reporting and verification (MRV).",
             "bold": true
           },
           {
-            "text": " Strong MRV systems produce credible refrigerant management data. They let governments measure progress against national and international commitments, quantify environmental benefits and show compliance. Reliable MRV is also the foundation for carbon finance, since every credit depends on verified volumes recovered, reclaimed or destroyed, and it gives investors and donors the confidence to offer sustained, performance-based financing. A national MRV framework should set common metrics, such as volumes recovered, reclaimed and destroyed, and CO2-equivalent emissions avoided. It should keep data consistent across HPMP and KIP reporting, customs records, and national greenhouse gas inventories. Electronic tracking, where possible, simplifies field data collection and improves transparency."
+            "text": " Strong MRV systems produce credible refrigerant management data. They let governments measure progress against national and international commitments, quantify environmental benefits and verify compliance. Reliable MRV is also the foundation for carbon finance, since every credit depends on verified volumes recovered, reclaimed or destroyed, and it gives investors and donors the confidence to offer sustained, performance-based financing. A national MRV framework should set common metrics, such as volumes recovered, reclaimed and destroyed, and CO2-equivalent emissions avoided. It should keep data consistent across HPMP and KIP reporting, customs records, and national greenhouse gas inventories. Electronic tracking, where possible, simplifies field data collection and improves transparency."
           }
         ]
       }
@@ -983,7 +983,15 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Each use case will leverage data gathered through field research and conversations with local supply chain actors. It shows what LRM costs at that country or regional level, which factors drive those costs, and which levers can enable LRM activity to scale. Our goal is to provide stakeholders with a realistic picture of the investment needed to move LRM activity from small, short-lived pilot projects to programs that can grow in scale and sustain themselves. We’d like to hear about how you’re applying the Explorer, and what would make it more useful -- reach out at "
+            "text": "Each use case will leverage data gathered through field research and conversations with local supply chain actors. It shows what LRM costs at that country or regional level, which factors drive those costs, and which levers can enable LRM activity to scale. Our goal is to provide stakeholders with a realistic picture of the investment needed to move LRM activity from small, short-lived pilot projects to programs that can grow in scale and sustain themselves."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "parts": [
+          {
+            "text": "Using the LRM Cost Explorer? We’d like to hear about how you’re applying the Explorer, and what would make it more useful -- reach out at "
           },
           {
             "text": "refrigerantmanagement@cascade.org",
