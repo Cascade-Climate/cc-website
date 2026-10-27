@@ -2,6 +2,7 @@
 	import { onMount, tick as flush } from 'svelte';
 	import { hero, sections } from '$lib/lrm/seaAnalysis.js';
 	import CopyParts from '$lib/lrm/CopyParts.svelte';
+	import AiNote from '$lib/lrm/AiNote.svelte';
 	import heroImg from '$lib/images/lrm-sea/sea-hero.jpg';
 
 	const costsHref = '/our-work/refrigerant-management-and-transition/costs';
@@ -252,6 +253,14 @@
 					</li>
 				{/each}
 			</ol>
+		</div>
+	</section>
+
+	<section class="ai-disclosure" aria-label="A Note on AI">
+		<div class="measure">
+			<AiNote
+				text="AI was used to support the visual design of charts and the sensitivity analysis presented on this page. The data reflected in the charts was sourced from Cascade Climate’s Excel cost model and was not generated using AI. All sensitivity analysis calculations were verified using Excel."
+			/>
 		</div>
 	</section>
 </div>
@@ -565,7 +574,11 @@
 
 	.sources {
 		padding-top: 1.75rem;
-		padding-bottom: 2.5rem;
+		padding-bottom: 1.25rem;
+	}
+
+	.ai-disclosure {
+		padding: 0.35rem 4rem 2.4rem;
 	}
 
 	.sources h2 {
@@ -597,7 +610,8 @@
 
 	@media (max-width: 660px) {
 		.hero,
-		.band {
+		.band,
+		.ai-disclosure {
 			padding-left: 2rem;
 			padding-right: 2rem;
 		}

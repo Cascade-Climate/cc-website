@@ -999,6 +999,10 @@ export const sections = [
         ]
       },
       {
+        "type": "ai-note",
+        "text": "Cascade Climate used Cursor, an AI-powered code editor, to support the development of the LRM Cost Explorer’s user interface. AI was not used to collect or generate data or develop the tool’s calculation logic, which was built in Excel. Our team reviewed the Explorer’s outputs against the original Excel model to verify their accuracy and integrity."
+      },
+      {
         "type": "h2",
         "id": "operational-costs-toggle-usd-kg",
         "title": "b. Operational Costs Toggle (USD/kg)"

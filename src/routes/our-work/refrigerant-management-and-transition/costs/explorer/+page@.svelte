@@ -1,5 +1,6 @@
 <script>
 	import { onMount, tick } from 'svelte';
+	import AiNote from '$lib/lrm/AiNote.svelte';
 	import cascadeLogo from '$lib/images/cc-logo-full.png';
 	import {
 		calculate,
@@ -1614,6 +1615,9 @@
 			</div>
 		{/if}
 		</div>
+		<AiNote
+			text="Cascade Climate used Cursor, an AI-powered code editor, to support the development of the LRM Cost Explorer’s user interface. AI was not used to collect or generate data or develop the tool’s calculation logic, which was built in Excel. Our team reviewed the Explorer’s outputs against the original Excel model to verify their accuracy and integrity."
+		/>
 	</div>
 </div>
 
@@ -1666,6 +1670,10 @@
 		padding: 2rem 0 3.5rem;
 		position: relative;
 		z-index: 1;
+	}
+
+	.wrap :global(.ai-note) {
+		margin-top: 2.25rem;
 	}
 
 	.site {

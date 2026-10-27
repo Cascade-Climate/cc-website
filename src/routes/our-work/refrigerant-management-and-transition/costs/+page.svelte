@@ -1,6 +1,7 @@
 <script>
 	import { onMount, tick as flush } from 'svelte';
 	import { hero, sections, toolHref } from '$lib/lrm/landingCopy.js';
+	import AiNote from '$lib/lrm/AiNote.svelte';
 	import heroImg from '$lib/images/lrm-cylinders-hero.jpg';
 
 	const clusters = sections.map((section) => ({
@@ -222,6 +223,14 @@
 			</div>
 		</section>
 	{/each}
+
+	<section class="ai-disclosure" aria-label="A Note on AI">
+		<div class="measure">
+			<AiNote
+				text="AI supported the development of the LRM Cost Explorer’s user interface, the visual design of charts in the Southeast Asia analysis, and the sensitivity analysis. AI was not used to collect or generate underlying cost data or develop the Explorer’s calculation logic. All cost outputs and sensitivity analysis calculations were checked against or verified using Excel models."
+			/>
+		</div>
+	</section>
 </div>
 
 <style>
@@ -248,6 +257,10 @@
 	.measure {
 		max-width: 70rem;
 		margin: 0 auto;
+	}
+
+	.ai-disclosure {
+		padding: 1.35rem 4rem 2.4rem;
 	}
 
 	.hero {
@@ -671,7 +684,8 @@
 		}
 
 		.hero,
-		.band {
+		.band,
+		.ai-disclosure {
 			padding-left: 2rem;
 			padding-right: 2rem;
 		}

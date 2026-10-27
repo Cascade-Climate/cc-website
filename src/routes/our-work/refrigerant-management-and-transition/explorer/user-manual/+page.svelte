@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { intro, navItems, sections } from '$lib/lrm/userManual.js';
+	import AiNote from '$lib/lrm/AiNote.svelte';
 
 	let active = navItems[0].id;
 	let scrollLock = 0;
@@ -82,6 +83,8 @@
 						<h3 id={block.id}>{block.title}</h3>
 					{:else if block.type === 'h3' || block.type === 'h4'}
 						<h4 id={block.id}>{block.title}</h4>
+					{:else if block.type === 'ai-note'}
+						<AiNote text={block.text} />
 					{:else if block.type === 'p'}
 						<p class:formula={block.formula}>
 							{#each block.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
@@ -251,6 +254,10 @@
 
 	.doc a:not(.return-link) {
 		color: var(--teal);
+	}
+
+	.doc :global(.ai-note) {
+		margin: 1.15rem 0 1.35rem;
 	}
 
 	.doc :global(p),
