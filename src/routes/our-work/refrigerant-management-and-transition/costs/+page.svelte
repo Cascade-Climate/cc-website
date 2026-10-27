@@ -19,6 +19,10 @@
 	let pinned = false;
 	const headerOffset = 64;
 
+	function opensNew(href, external) {
+		return external || href === toolHref;
+	}
+
 	function clusterByTarget(id) {
 		const section = sections.find(
 			(item) => item.id === id || item.blocks.some((block) => block.id === id)
@@ -132,7 +136,7 @@
 			<h1>{hero.title}</h1>
 			<p class="lede">{hero.lede[0]}<br /><br />{hero.lede[1]}</p>
 			<div class="hero-actions">
-				<a class="cta" href={toolHref}>{hero.toolCta}</a>
+				<a class="cta" href={toolHref} target="_blank" rel="noopener noreferrer">{hero.toolCta}</a>
 			</div>
 		</div>
 		<img
@@ -180,24 +184,24 @@
 								<h3 id={block.id}>{block.text}</h3>
 							{:else if block.type === 'h4'}
 								<h4 id={block.id}>
-									{#each block.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+									{#each block.parts as part}{#if part.href}<a href={part.href} target={opensNew(part.href, part.external) ? '_blank' : null} rel={opensNew(part.href, part.external) ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
 								</h4>
 							{:else if block.type === 'p'}
 								<p>
-									{#each block.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold && part.italic}<strong><em>{part.text}</em></strong>{:else if part.bold}<strong>{part.text}</strong>{:else if part.italic}<em>{part.text}</em>{:else}{part.text}{/if}{/each}
+									{#each block.parts as part}{#if part.href}<a href={part.href} target={opensNew(part.href, part.external) ? '_blank' : null} rel={opensNew(part.href, part.external) ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold && part.italic}<strong><em>{part.text}</em></strong>{:else if part.bold}<strong>{part.text}</strong>{:else if part.italic}<em>{part.text}</em>{:else}{part.text}{/if}{/each}
 								</p>
 							{:else if block.type === 'ul'}
 								<ul>
 									{#each block.items as item}
 										<li>
-											{#each item.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold && part.italic}<strong><em>{part.text}</em></strong>{:else if part.bold}<strong>{part.text}</strong>{:else if part.italic}<em>{part.text}</em>{:else}{part.text}{/if}{/each}
+											{#each item.parts as part}{#if part.href}<a href={part.href} target={opensNew(part.href, part.external) ? '_blank' : null} rel={opensNew(part.href, part.external) ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold && part.italic}<strong><em>{part.text}</em></strong>{:else if part.bold}<strong>{part.text}</strong>{:else if part.italic}<em>{part.text}</em>{:else}{part.text}{/if}{/each}
 										</li>
 									{/each}
 								</ul>
 							{:else if block.type === 'links'}
 								<ul class="jump-links">
 									{#each block.items as item}
-										<li><a href={item.href}>{item.text}</a></li>
+										<li><a href={item.href} target={opensNew(item.href) ? '_blank' : null} rel={opensNew(item.href) ? 'noopener noreferrer' : null}>{item.text}</a></li>
 									{/each}
 								</ul>
 							{:else if block.type === 'countries'}

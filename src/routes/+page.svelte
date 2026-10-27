@@ -52,7 +52,7 @@
 			<div class="spotlight">
 				<img src={lrmCylinders} alt="Stacked refrigerant cylinders" />
 				<h2>Introducing the LRM Cost Explorer</h2>
-				<p>A new tool that breaks down what lifecycle refrigerant management actually costs.</p>
+				<p>Discover how our new tool estimates the operational and capital costs of recovering and responsibly managing refrigerants.</p>
 				<a href="/our-work/refrigerant-management-and-transition/costs">Learn More</a>
 			</div>
 			<div class="spotlight">
