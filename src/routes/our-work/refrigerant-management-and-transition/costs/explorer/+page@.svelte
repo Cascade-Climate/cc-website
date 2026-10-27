@@ -852,6 +852,10 @@
 							across the refrigerant management value chain.
 						</p>
 						<p>
+							Learn how it was built and explore insights from real-world operations by visiting the
+							<a href="/our-work/refrigerant-management-and-transition/costs">LRM costs hub</a>.
+						</p>
+						<p>
 							The tool is intended to reveal key cost drivers. It does not provide definitive cost
 							estimates or replace detailed, project-specific financial assessments.
 						</p>
@@ -1880,6 +1884,18 @@
 
 	.about-body p + p {
 		margin-top: 0.55rem;
+	}
+
+	.about-body a {
+		color: var(--teal);
+		font-weight: 500;
+		text-decoration: underline;
+		text-underline-offset: 0.18em;
+		text-decoration-thickness: 1px;
+	}
+
+	.about-body a:hover {
+		opacity: 0.88;
 	}
 
 	.site.compact {
