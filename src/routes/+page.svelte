@@ -19,8 +19,8 @@
 	/>
 </svelte:head>
 <div>
-	<a class="bedrock-topbar" href="/bedrock-initiative">
-		<span>Introducing Bedrock Initiative, a coordinated global research program to unlock the climate and agricultural potential of ERW</span>
+	<a class="bedrock-topbar" href="/our-work/refrigerant-management-and-transition/costs">
+		<span>Introducing the LRM Cost Explorer, a new tool that breaks down what lifecycle refrigerant management actually costs</span>
 	</a>
 	<section id="headline" style="width: 100%;">
 		<h1>
@@ -51,7 +51,8 @@
 		<div class="spotlights">
 			<div class="spotlight">
 				<img src={lrmCylinders} alt="Stacked refrigerant cylinders" />
-				<h2>Introducing the LRM Cost Explorer, a new tool that breaks down what lifecycle refrigerant management actually costs</h2>
+				<h2>Introducing the LRM Cost Explorer</h2>
+				<p>A new tool that breaks down what lifecycle refrigerant management actually costs.</p>
 				<a href="/our-work/refrigerant-management-and-transition/costs">Learn More</a>
 			</div>
 			<div class="spotlight">
