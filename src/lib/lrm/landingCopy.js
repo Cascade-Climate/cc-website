@@ -1,7 +1,7 @@
 export const toolHref = "/our-work/refrigerant-management-and-transition/costs/explorer";
 export const manualHref = "/our-work/refrigerant-management-and-transition/explorer/user-manual";
 export const hero = {
-  "title": "LRM Cost Explorer: Tool, Research, and Insights",
+  "title": "LRM Costs: Explorer, Research, and Insights",
   "lede": [
     "Lifecycle refrigerant management (LRM) offers a powerful opportunity to reduce avoidable emissions while helping countries meet their Montreal Protocol and Kigali Amendment targets. By preventing leaks, recovering refrigerants for recycling or reclamation, and responsibly destroying those that cannot be reused, LRM can support existing cooling needs while reducing demand for virgin refrigerants.",
     "Cascade’s LRM Cost Explorer, built from fieldwork across Southeast Asia, helps fill the cost data gap by providing estimates for the costs of recovery, recycling, reclamation and destruction."
