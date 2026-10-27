@@ -581,6 +581,10 @@
 		padding: 0.35rem 4rem 2.4rem;
 	}
 
+	.ai-disclosure :global(.ai-note) {
+		max-width: none;
+	}
+
 	.sources h2 {
 		margin-bottom: 0.75rem;
 	}
