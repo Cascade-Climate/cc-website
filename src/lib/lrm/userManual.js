@@ -5,7 +5,14 @@ export const intro = [
   {
     "parts": [
       {
-        "text": "The Lifecycle Refrigerant Management (LRM) Cost Explorer is a free, interactive tool created by Cascade Climate that helps users estimate the operational (opex) and capital costs (capex) associated with recovering and responsibly managing refrigerants through recycling, reclamation, and destruction. Users enter details about their LRM scenario, which the tool combines with data from Cascade’s on-the-ground research and stakeholder conversations to generate detailed cost breakdowns across the refrigerant management value chain.",
+        "text": "The "
+      },
+      {
+        "text": "Lifecycle Refrigerant Management (LRM) Cost Explorer",
+        "href": "/our-work/refrigerant-management-and-transition/costs/explorer"
+      },
+      {
+        "text": " is a free, interactive tool created by Cascade Climate that helps users estimate the operational (opex) and capital costs (capex) associated with recovering and responsibly managing refrigerants through recycling, reclamation, and destruction. Users enter details about their LRM scenario, which the tool combines with data from Cascade’s on-the-ground research and stakeholder conversations to generate detailed cost breakdowns across the refrigerant management value chain.",
         "bold": false
       }
     ]
@@ -102,7 +109,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": ": This end-use pathway refers to the permanent chemical decomposition of refrigerants at a destruction facility using a technology that meets the .",
+                "text": ": This end-use pathway refers to the permanent chemical decomposition of refrigerants at a destruction facility using a technology that meets the ",
+                "bold": false
+              },
+              {
+                "text": "Montreal Protocol’s Technology and Economic Assessment Panel (TEAP) standards",
+                "href": "https://ozone.unep.org/sites/default/files/2019-04/TEAP-DecXXIX4-TF-Report-April2018.pdf",
+                "external": true
+              },
+              {
+                "text": ".",
                 "bold": false
               }
             ],
@@ -160,7 +176,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "The Input section prompts users to input data that the tool uses to calculate total recovery costs (covering recovery and transportation to a central facility) and the total amount of refrigerant recovered per year.",
+            "text": "The input section prompts users to input data that the tool uses to calculate total recovery costs (covering recovery and transportation to a central facility) and the total amount of refrigerant recovered per year.",
             "bold": false
           }
         ]
@@ -173,7 +189,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Default values are pre-populated in the Input Section to act as guidance for users who may not have access to certain data points. Users can read default values for inputs by hovering the cursor over an input. Default values are based on estimated figures determined by Cascade through research and stakeholder conversations, and can be overridden by the user as necessary.",
+            "text": "Default values are pre-populated in the input section to act as guidance for users who may not have access to certain data points. Default values are based on estimated figures determined by Cascade through research and stakeholder conversations, and can be overridden by the user as necessary. Users can hover their cursor over an input to view its description and default values.",
             "bold": false
           }
         ]
@@ -195,7 +211,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "For 'Residential AC': Average charge sizes for small capacity single-split AC units typically range between 0.5–1.5 kg, with multi-split units ranging from 1.0–3.0 kg. Since single split AC units are more widely used globally, the default value provided is 1.0 kg. The charge size input range for this sector is greater than 0 and less than 10 kg. The default value provided for the estimated percentage of recoverable refrigerant per unit is 50%.",
+            "text": "For 'Residential AC': Average charge sizes for small capacity single-split AC units typically range between 0.5–1.5 kg, with multi-split units ranging from 1.0–3.0 kg. Since single split AC units are more widely used globally, the default value provided is 1.0 kg. The allowable charge size input range for this sector is greater than 0 and less than 10 kg. The default value provided for the estimated percentage of recoverable refrigerant per unit is 50%.",
             "bold": false
           }
         ]
@@ -204,7 +220,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "For ‘Commercial HVAC’: Average charge sizes for commercial ACs, rooftop units, and large chillers can range from anywhere between 10 kg to hundreds of kg per unit. A conservative figure of 150 kg has been provided as default, with a recoverable rate of 80%. The charge size input range for this sector is between 10 kg and 400 kg, where a maximum limit was set to avoid unrealistically high entries by users. For example, to model a recovery scenario from a 800 kg charge size system, users can provide the parameters required to recover 400 kg per day and input two recovery days instead of one when determining the ‘estimated number of recovery days per year’ field to fully capture the costs required.",
+            "text": "For ‘Commercial HVAC’: Average charge sizes for commercial ACs, rooftop units, and large chillers can range from anywhere between 10 kg to hundreds of kg per unit. A conservative figure of 150 kg has been provided as default, with a recoverable rate of 80%. The allowable charge size input range for this sector is between 10 kg and 400 kg. A maximum limit for this input was set to avoid unrealistically high entries by users. For equipment that contains more than 400 kg of refrigerant, other inputs can be adjusted. If a user needs to model a recovery scenario from a 800 kg charge size system, users can provide the parameters required to recover 400 kg per day and input two recovery days instead of one when determining the ‘estimated number of recovery days per year’ field to fully capture the costs required.",
             "bold": false
           }
         ]
@@ -350,7 +366,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Recovery time can vary widely for commercial HVAC systems depending on the equipment type. For the ‘recovery time needed per unit (hours)’ field, an input range of greater than 0 and less than 12 hours has been set, with the upper limit based on the maximum number of hours a recovery team might realistically work in a single day. As guidance, the default value for the estimated time needed for recovery from a 150 kg commercial chiller is 8 hours from set up to completion.",
+                "text": "Recovery time can vary widely for commercial HVAC systems depending on the equipment type. For the ‘recovery time needed per unit (hours)’ field, an input range of greater than 0 and less than 12 hours has been set, with the upper limit based on the maximum number of hours a recovery team might realistically work in a single day. As guidance, the default value of 8 hours is used, roughly the time needed for recovery from a 150 kg commercial chiller.",
                 "bold": false
               }
             ],
@@ -447,7 +463,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Users provide the expected number of teams that will be deployed for recovery per day. This selection impacts both operational costs (labor and transportation costs) and capital cost calculations (recovery equipment required). The default value used for ‘Residential AC’ is one team per 10 units recovered per day, and one team per one unit recovered per day for ‘Commercial HVAC’.",
+            "text": "Users provide the expected number of teams that will be deployed for recovery per day. This selection impacts both operational costs (labor and transportation costs) and capital cost calculations (recovery equipment required). The default value used for ‘Residential AC’ is based on the assumption of one team per 10 units recovered per day, and one team per one unit recovered per day for ‘Commercial HVAC’.",
             "bold": false
           }
         ]
@@ -571,7 +587,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "To determine the costs for subsequent components of the LRM process after recovery (namely ‘Central facility operational activities,’ ‘Transport and handling to end-use facility,’ and ‘End-use processing’), this model uses a ‘cost scenario’ approach where each component is allocated a range which is divided into three cost scenario categories:",
+            "text": "To estimate the costs that come after recovery (central facility operations, transport and handling to the end-use facility, and end-use processing), the model uses a cost scenario-based approach. Each of these cost components has an estimated cost for each of the three cost scenarios, and the model applies the estimated cost that matches the scenario. The consideration that drives the cost scenario decision is the scale of the LRM program in terms of the total amount of refrigerant recovered per year. The higher the volume, the lower the cost, given economies of scale.",
             "bold": false
           }
         ]
@@ -582,7 +598,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "‘Low’ representing the lowest end of the range",
+                "text": "'Low' represents the lowest end of the cost range, corresponding to more than 50 metric tonnes per year of refrigerant recovered.",
                 "bold": false
               }
             ],
@@ -591,7 +607,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "‘Medium’ representing the midpoint of the range",
+                "text": "'Medium' represents the midpoint of the cost range, corresponding to between 10 and 50 metric tonnes per year of refrigerant recovered.",
                 "bold": false
               }
             ],
@@ -600,20 +616,11 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "‘High’ representing the highest end of the range",
+                "text": "'High' represents the highest end of the cost range, corresponding to less than 10 metric tonnes per year of refrigerant recovered.",
                 "bold": false
               }
             ],
             "children": []
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "parts": [
-          {
-            "text": "In general, the primary consideration that drives the cost scenario decision is the scale of the project in terms of the total amount of refrigerant recovered per year, related to the economies of scale that can be achieved with higher volumes. As guidance:",
-            "bold": false
           }
         ]
       },
@@ -624,24 +631,6 @@ export const sections = [
             "parts": [
               {
                 "text": "Less than 10 metric tonnes of refrigerant recovered per year indicates a ‘High’ cost scenario",
-                "bold": false
-              }
-            ],
-            "children": []
-          },
-          {
-            "parts": [
-              {
-                "text": "Between 10 to 50 metric tonnes per year indicates a ‘Medium’ cost scenario",
-                "bold": false
-              }
-            ],
-            "children": []
-          },
-          {
-            "parts": [
-              {
-                "text": "More than 50 metric tonnes per year indicates a ‘Low’ cost scenario",
                 "bold": false
               }
             ],
@@ -819,7 +808,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "This section allows users to provide an estimated percentage breakdown (%) of the different refrigerant types recovered from their modeled user scenario. These figures have no impact on opex and capex costs, but contribute towards the figures shown in the climate impact values in the Output section. This section uses the weighted average Global Warming Potential (GWP) of the refrigerant mix to provide a USD per metric tonne of carbon dioxide equivalent (USD/tCO2e) estimate. This cost can serve as a reference point to compare against if the user is planning to leverage carbon finance for their respective programs.",
+            "text": "This section allows users to provide an estimated percentage breakdown (%) of the different refrigerant types recovered from their modeled user scenario. These figures have no impact on opex and capex costs, but contribute towards the figures shown in the climate impact values in the Output section (only shown when 'Destruction' is selected - explained below). This section uses the weighted average Global Warming Potential (GWP) of the refrigerant mix to provide a USD per metric tonne of carbon dioxide equivalent (USD/tCO2e) estimate. This cost can serve as a reference point to compare against if the user is planning to leverage carbon finance for their respective programs.",
             "bold": false
           }
         ]
@@ -929,7 +918,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "At the top of the Output section will be a summary of the key figures: ‘Total amount of refrigerant recovered per year’(kg/year), ‘Operational Costs’ (USD/kg), ‘Capital Costs’ (USD), and ‘Total net operational costs per year’ (USD). When ‘Destruction’ is selected, the summary also shows the ‘Cost per tonne CO2 equivalent’, which is based on the GWP values of the refrigerant mix selected in the Input section. This figure only appears for ‘Destruction’ since destruction is the only end-use pathway that is  currently included in carbon markets.",
+            "text": "At the top of the Output section will be a summary of the key figures: ‘Total amount of refrigerant recovered per year’(kg/year), ‘Operational Costs’ (USD/kg), ‘Capital Costs’ (USD), and ‘Total net operational costs per year’ (USD). The ‘Cost per Tonne CO2 Equivalent’ (USD/tCO2e) output is calculated only for the 'Destruction' pathway, given that only destruction mitigates the climate impact of the refrigerant completely, whereas reclamation or recycling results in a deferral of climate impact. The calculated ‘Cost per Tonne CO2 Equivalent’ output does not take into account a comprehensive Life Cycle Assessment (LCA).",
             "bold": false
           }
         ]
@@ -947,7 +936,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "At the bottom of the Output section, the tool will also display a ‘Pathway Comparison’ chart, described below. The ‘Pathway Comparison’ is only available when the ‘Operational Costs’ toggle is selected due to the high variability of capital costs.",
+            "text": "At the bottom of the Output Section, the tool will also display a \"Pathway Comparison\" chart, comparing the opex for the same recovered refrigerant scenarios across different end-use pathways (Destruction, Reclamation, and Recycling).",
             "bold": false
           }
         ]
@@ -975,7 +964,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": " based directly on the input variables entered by the user (or the default values). For example, recovery labor costs are calculated using information inputted by the user on average hourly labor rates and average charge size per unit. In this case, the tool does not source from Cascade’s data reference sheet to determine costs and uses only the information entered into the Input section.",
+                "text": " based directly on the input variables entered by the user (or the default values). For example, recovery labor costs are calculated using information inputted by the user such as recovery time, labor hourly rate, etc. In this case, the tool does not source from Cascade’s data reference sheet to determine costs and uses only the information entered into the Input section.",
                 "bold": false
               }
             ],
@@ -1088,7 +1077,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "For ‘Reclamation’, the model only includes opex and capex cost estimates for basic, single-component reclamation and not advanced, fractional distillation facilities. This approach was adopted based on stakeholder feedback and research on existing refrigerant processing facilities within Southeast Asia, which indicates that fractional distillation is, at present, not considered economically viable specifically for refrigerant recovery in the region.",
+            "text": "For ‘Reclamation’, the model only includes opex and capex cost estimates for basic, single-component reclamation and not advanced, fractional distillation facilities. This approach was adopted based on stakeholder feedback and research on existing refrigerant processing facilities within Southeast Asia, which indicates that fractional distillation is, at present, not considered economically viable in the region.",
             "bold": false
           }
         ]
@@ -1498,7 +1487,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Sourced from the data reference sheet. Capex costs for new destruction and retrofit facilities reference published figures (such as the  and news articles) in addition to direct stakeholder feedback. The Retrofit option is not applicable for ‘Plasma Arc’ technology or reclamation facilities in this model. Facility capex will be set to zero for the ‘Recycling’ pathway, since no separate processing at an external facility is required, as well as for user scenarios where the ‘Existing’ option is selected.",
+                "text": "Sourced from the data reference sheet. Capex costs for new destruction and retrofit facilities reference published figures (",
+                "bold": false
+              },
+              {
+                "text": "TEAP",
+                "href": "https://ozone.unep.org/system/files/documents/TEAP-May2024-DecXXXV-11-TF-Report.pdf",
+                "external": true
+              },
+              {
+                "text": ") in addition to direct stakeholder feedback. The 'Retrofit' option is only available for cement kiln incinerator and rotary kiln incinerator for destruction, since those are facilities that currently operate for other purposes but can be retrofitted with refrigerant destruction capabilities. The 'Retrofit' option is not applicable for ‘Plasma Arc’ destruction technology or reclamation facilities in this model. Facility capex will be set to zero for the ‘Recycling’ pathway, since no separate processing at an external facility is required, as well as for user scenarios where the ‘Existing’ option is selected.",
                 "bold": false
               }
             ],
@@ -1683,7 +1681,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Based on the user’s inputs, the model will determine the estimated number of units required for each type of equipment and output cost figures based on the data reference sheet. These are calculated estimates based on the following formulas:",
+                "text": "Based on the user’s inputs, the model will determine the estimated number of units required for each type of equipment and output cost figures based on the per unit equipment cost in the data reference sheet. These are calculated estimates based on the following formulas:",
                 "bold": false
               }
             ],
@@ -1855,7 +1853,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Thus, for the ‘Residential AC’ sector, the number of small cylinders required will be estimated based on 70% of the total amount of refrigerant recovered per year, and large cylinders based on 30% of the amount.",
+                "text": "For the ‘Residential AC’ sector, the number of small cylinders required will be estimated based on 70% of the total amount of refrigerant recovered per year, and large cylinders based on 30% of the amount.",
                 "bold": false
               }
             ],

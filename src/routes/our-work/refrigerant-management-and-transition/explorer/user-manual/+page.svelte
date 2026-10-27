@@ -66,11 +66,11 @@
 		<h1>User Manual</h1>
 		<p class="subtitle">Lifecycle Refrigerant Management (LRM) Cost Explorer</p>
 		<p class="return">
-			<a class="return-link" href="/our-work/refrigerant-management-and-transition/costs">Return to LRM costs</a>
+			<a class="return-link" href="/our-work/refrigerant-management-and-transition/costs">Return to LRM costs hub</a>
 		</p>
 		{#each intro as para}
 			<p>
-				{#each para.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+				{#each para.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
 			</p>
 		{/each}
 
@@ -84,18 +84,18 @@
 						<h4 id={block.id}>{block.title}</h4>
 					{:else if block.type === 'p'}
 						<p class:formula={block.formula}>
-							{#each block.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+							{#each block.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
 						</p>
 					{:else if block.type === 'ul'}
 						<ul>
 							{#each block.items as item}
 								<li>
-									{#each item.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+									{#each item.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
 									{#if item.children.length}
 										<ul>
 											{#each item.children as child}
 												<li>
-													{#each child.parts as part}{#if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
+													{#each child.parts as part}{#if part.href}<a href={part.href} target={part.external ? '_blank' : null} rel={part.external ? 'noopener noreferrer' : null}>{part.text}</a>{:else if part.bold}<strong>{part.text}</strong>{:else}{part.text}{/if}{/each}
 												</li>
 											{/each}
 										</ul>
@@ -247,6 +247,10 @@
 		font-size: 1rem;
 		font-weight: 600;
 		line-height: 1.35;
+	}
+
+	.doc a:not(.return-link) {
+		color: var(--teal);
 	}
 
 	.doc :global(p),
