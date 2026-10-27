@@ -49,7 +49,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "The LRM Cost Explorer (‘tool’) allows users to model refrigerant recovery scenarios (‘user scenarios'’) in two sectors:",
+            "text": "The LRM Cost Explorer (‘tool’) allows users to model refrigerant recovery scenarios (‘user scenarios’) in two sectors:",
             "bold": false
           }
         ]
@@ -105,24 +105,11 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Recovery",
-                "bold": true
-              },
-              {
-                "text": ": The collection and storage of controlled substances from machinery, equipment, containment vessels, etc., during servicing or prior to disposal.",
-                "bold": false
-              }
-            ],
-            "children": []
-          },
-          {
-            "parts": [
-              {
                 "text": "Recycling",
                 "bold": true
               },
               {
-                "text": ": The extraction and cleaning of recovered refrigerants for reuse, often in the same system, without bringing it to full AHRI 700 reclamation standard. A typical setup combines acid and moisture filters, an oil separator, a dryer or purifier using desiccants or molecular sieves, and a vacuum pump and cylinders for recharging the gas into the same or comparable equipment.",
+                "text": ": The extraction and cleaning of recovered refrigerants for reuse, often in the same system, without bringing them to full AHRI 700 reclamation standard. A typical setup combines acid and moisture filters, an oil separator, a dryer or purifier using desiccants or molecular sieves, and a vacuum pump and cylinders for recharging the gas into the same or comparable equipment.",
                 "bold": false
               }
             ],
@@ -157,7 +144,7 @@ export const sections = [
                 "external": true
               },
               {
-                "text": ". During the destruction process, refrigerants chemicals are broken down at very high temperatures, to a standard of decomposing at least 99.99 percent of the molecules for concentrated sources, with the by-products captured and treated. There are several TEAP-approved destruction technologies, including cement kiln, rotary kiln, argon plasma arc and municipal solid waste incineration.",
+                "text": ". During the destruction process, refrigerant chemicals are broken down at very high temperatures, to a standard of decomposing at least 99.99 percent of the molecules for concentrated sources, with the by-products captured and treated. There are several TEAP-approved destruction technologies, including cement kiln, rotary kiln, argon plasma arc and municipal solid waste incineration.",
                 "bold": false
               }
             ],
@@ -233,7 +220,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "For ‘Commercial HVAC’: Average charge sizes for commercial ACs, rooftop units, and large chillers can range from anywhere between 10 kg to hundreds of kg per unit. A conservative figure of 150 kg has been provided as default, with a recoverable rate of 80%. The allowable charge size input range for this sector is between 10 kg and 400 kg. A maximum limit for this input was set to avoid unrealistically high entries by users. For equipment that contains more than 400 kg of refrigerant, other inputs can be adjusted. If a user needs to model a recovery scenario from a 800 kg charge size system, users can provide the parameters required to recover 400 kg per day and input two recovery days instead of one when determining the ‘estimated number of recovery days per year’ field to fully capture the costs required.",
+            "text": "For ‘Commercial HVAC’: Average charge sizes for commercial ACs, rooftop units, and large chillers can range from 10 kg to hundreds of kg per unit. A conservative figure of 150 kg has been provided as default, with a recoverable rate of 80%. The allowable charge size input range for this sector is between 10 kg and 400 kg. A maximum limit for this input was set to avoid unrealistically high entries by users. For equipment that contains more than 400 kg of refrigerant, other inputs can be adjusted. If a user needs to model a recovery scenario from an 800 kg charge size system, users can provide the parameters required to recover 400 kg per day and input two recovery days instead of one when determining the ‘estimated number of recovery days per year’ field to fully capture the costs required.",
             "bold": false
           }
         ]
@@ -264,7 +251,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "High capacity: This option refers to high speed recovery machines that are usually used for larger equipment within the commercial HVAC sector, but are also capable of recovering refrigerant from multiple small capacity AC units simultaneously in certain set ups. ‘High capacity’ is the default for ‘Commercial HVAC’ but may also be selected for ‘Residential AC’.",
+            "text": "High capacity: This option refers to high speed recovery machines that are usually used for larger equipment within the commercial HVAC sector, but are also capable of recovering refrigerant from multiple small capacity AC units simultaneously in certain set ups. ‘High Capacity’ is the default for ‘Commercial HVAC’ but may also be selected for ‘Residential AC’.",
             "bold": false
           }
         ]
@@ -325,7 +312,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "A default value of 0.5 hours has been set for the ‘recovery time needed per unit’ field for both ‘Basic’ and ‘High capacity’ equipment selections, but can be changed by users as required. The input range is greater than 0 and less than 4 hours.",
+                "text": "A default value of 0.5 hours has been set for the ‘recovery time needed per unit’ field for both ‘Basic’ and ‘High Capacity’ equipment selections, but can be changed by users as required. The input range is greater than 0 and less than 4 hours.",
                 "bold": false
               }
             ],
@@ -440,7 +427,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Users should consider the type of vehicle used by recovery teams to travel to the recovery site, and to the central facility, as well as the average local fuel price rates. The default input values provided for fuel price, vehicle fuel efficiency and average distance traveled per team were based on estimated averages through Cascade’s stakeholder conversations with Southeast Asia. Users are encouraged to consider local rates and conditions when determining the relevant inputs used for the calculation of this value.",
+            "text": "Users should consider the type of vehicle used by recovery teams to travel to the recovery site, and to the central facility, as well as the average local fuel price rates. The default input values provided for fuel price, vehicle fuel efficiency and average distance traveled per team were based on estimated averages through Cascade’s stakeholder conversations in Southeast Asia. Users are encouraged to consider local rates and conditions when determining the relevant inputs used for the calculation of this value.",
             "bold": false
           }
         ]
@@ -483,7 +470,7 @@ export const sections = [
       },
       {
         "type": "h4",
-        "title": "Average distance travelled per team (km/day)"
+        "title": "Average distance traveled per team (km/day)"
       },
       {
         "type": "p",
@@ -498,7 +485,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "When determining this input, the central question users should consider is how many units will be available for recovery at each location that a team travels to. For example, recovering 10 residential AC units from one location vs. 10 units from 10 different locations will impact the total distance travelled significantly.",
+            "text": "When determining this input, the central question users should consider is how many units will be available for recovery at each location that a team travels to. For example, recovering 10 residential AC units from one location vs. 10 units from 10 different locations will impact the total distance traveled significantly.",
             "bold": false
           }
         ]
@@ -511,7 +498,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "To account for the labor cost incurred for a technician’s traveling time, the model will provide a calculated figure based on the user’s inputs for average distance travelled per team and hourly labor cost rate, as well as an estimated overall travel speed of 80 km/hour during jobs. The formula for this field is as follows:",
+            "text": "To account for the labor cost incurred for a technician’s traveling time, the model will provide a calculated figure based on the user’s inputs for average distance traveled per team and hourly labor cost rate, as well as an estimated overall travel speed of 80 km/hour during jobs. The formula for this field is as follows:",
             "bold": false
           }
         ]
@@ -520,7 +507,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Labor cost for traveling time per day (USD/day) = ((Average distance travelled per team (km) x Number of recovery teams mobilized per day) / 80 (km/hour)) x Hourly labor cost rate per unit (USD/hour)",
+            "text": "Labor cost for traveling time per day (USD/day) = ((Average distance traveled per team (km) x Number of recovery teams mobilized per day) / 80 (km/hour)) x Hourly labor cost rate per unit (USD/hour)",
             "bold": false
           }
         ],
@@ -530,7 +517,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "This figure will then be added with on-site labor cost to provide the ‘Total labor cost per day’ (USD/day) value as displayed in the Input section.",
+            "text": "This figure will then be added to on-site labor cost to provide the ‘Total labor cost per day’ (USD/day) value as displayed in the Input section.",
             "bold": false
           }
         ]
@@ -638,24 +625,10 @@ export const sections = [
         ]
       },
       {
-        "type": "ul",
-        "items": [
-          {
-            "parts": [
-              {
-                "text": "Less than 10 metric tonnes of refrigerant recovered per year indicates a ‘High’ cost scenario",
-                "bold": false
-              }
-            ],
-            "children": []
-          }
-        ]
-      },
-      {
         "type": "p",
         "parts": [
           {
-            "text": "That said, users are given the option to select their preferred cost scenario based on personal judgement of their project’s anticipated circumstances as well as the policy and infrastructure landscape of their respective geographies.",
+            "text": "That said, users are given the option to select their preferred cost scenario based on personal judgment of their project’s anticipated circumstances as well as the policy and infrastructure landscape of their respective geographies.",
             "bold": false
           }
         ]
@@ -711,7 +684,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "‘Plasma Arc’ destruction technology has no retrofit option – selecting ‘Plasma Arc’ and ‘Retrofit’ will return 'NA – New facility only' on the ‘Capex’ facility output line.",
+                "text": "‘Plasma Arc’ destruction technology has no retrofit option. Retrofit is not applicable when ‘Plasma Arc’ is selected.",
                 "bold": false
               }
             ],
@@ -862,7 +835,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "In this tool,  GWP-100 values are referenced, where:",
+            "text": "In this tool, GWP-100 values are referenced, where:",
             "bold": false
           }
         ]
@@ -931,7 +904,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "At the top of the Output section will be a summary of the key figures: ‘Total amount of refrigerant recovered per year’(kg/year), ‘Operational Costs’ (USD/kg), ‘Capital Costs’ (USD), and ‘Total net operational costs per year’ (USD). The ‘Cost per Tonne CO2 Equivalent’ (USD/tCO2e) output is calculated only for the 'Destruction' pathway, given that only destruction mitigates the climate impact of the refrigerant completely, whereas reclamation or recycling results in a deferral of climate impact. The calculated ‘Cost per Tonne CO2 Equivalent’ output does not take into account a comprehensive Life Cycle Assessment (LCA).",
+            "text": "At the top of the Output section will be a summary of the key figures: ‘Total amount of refrigerant recovered per year’ (kg/year), ‘Operational Costs’ (USD/kg), ‘Capital Costs’ (USD), and ‘Total net operational costs per year’ (USD). The ‘Cost per Tonne CO2 Equivalent’ (USD/tCO2e) output is calculated only for the 'Destruction' pathway, given that only destruction mitigates the climate impact of the refrigerant completely, whereas reclamation or recycling results in a deferral of climate impact. The calculated ‘Cost per Tonne CO2 Equivalent’ output does not take into account a comprehensive Life Cycle Assessment (LCA).",
             "bold": false
           }
         ]
@@ -940,7 +913,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Below the summary, the user can toggle between ‘Operational Costs ’ and ‘Capital Costs’ to view graphical breakdowns of each. The charts show the main cost components that make up total operational or capital costs. Each main cost component (described in depth below) is clickable in the graphs. When clicked, the user can learn more about sub-costs included in each main cost component. When the ‘Operational Costs’ Toggle is selected, the cost breakdown is displayed as a waterfall bar chart. When the ‘Capital Costs’ Toggle is selected, the cost breakdown is displayed as a stacked bar chart.",
+            "text": "Below the summary, the user can toggle between ‘Operational Costs’ and ‘Capital Costs’ to view graphical breakdowns of each. The charts show the main cost components that make up total operational or capital costs. Each main cost component (described in depth below) is clickable in the graphs. When clicked, the user can learn more about sub-costs included in each main cost component. When the ‘Operational Costs’ Toggle is selected, the cost breakdown is displayed as a waterfall bar chart. When the ‘Capital Costs’ Toggle is selected, the cost breakdown is displayed as a stacked bar chart.",
             "bold": false
           }
         ]
@@ -1290,7 +1263,7 @@ export const sections = [
               {
                 "parts": [
                   {
-                    "text": "Labor cost for traveling time (USD/day) = ((Average distance travelled per team (km) x Number of recovery teams mobilized per day) / 80 (km/hour)) x Hourly labor cost rate per unit (USD/hour)",
+                    "text": "Labor cost for traveling time (USD/day) = ((Average distance traveled per team (km) x Number of recovery teams mobilized per day) / 80 (km/hour)) x Hourly labor cost rate per unit (USD/hour)",
                     "bold": false
                   }
                 ],
@@ -1353,7 +1326,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "The default input values provided for fuel price, vehicle fuel efficiency and average distance traveled per team were based on estimated averages through Cascade’s stakeholder conversations with Southeast Asia. Users are encouraged to consider local rates and conditions when determining the relevant inputs used for the calculation of this value.",
+                "text": "The default input values provided for fuel price, vehicle fuel efficiency and average distance traveled per team were based on estimated averages through Cascade’s stakeholder conversations in Southeast Asia. Users are encouraged to consider local rates and conditions when determining the relevant inputs used for the calculation of this value.",
                 "bold": false
               }
             ],
@@ -1911,7 +1884,7 @@ export const sections = [
               {
                 "parts": [
                   {
-                    "text": "Number of small recovery cylinders (12L/~10 kg capacity) needed = ((Amount of refrigerant volume recovered per year (kg) x 0.3) / 10 (kg)) / 3 (refill cycles per year), rounded up to the nearest number.",
+                    "text": "Number of small recovery cylinders (12L/~10 kg capacity) needed = ((Amount of refrigerant volume recovered per year (kg) x 0.3) / 10 (kg)) / 3 (refill cycles per year), rounded up to the nearest whole number.",
                     "bold": false
                   }
                 ],
@@ -1920,7 +1893,7 @@ export const sections = [
               {
                 "parts": [
                   {
-                    "text": "Number of large recovery cylinders (60L/~50 kg capacity) needed = ((Amount of refrigerant volume recovered per year (kg) x 0.7) / 50 (kg)) / 3 (refill cycles per year), rounded up to the nearest number.",
+                    "text": "Number of large recovery cylinders (60L/~50 kg capacity) needed = ((Amount of refrigerant volume recovered per year (kg) x 0.7) / 50 (kg)) / 3 (refill cycles per year), rounded up to the nearest whole number.",
                     "bold": false
                   }
                 ],
@@ -1944,7 +1917,7 @@ export const sections = [
               {
                 "parts": [
                   {
-                    "text": "Number of tonne tanks needed = (Amount of refrigerant volume recovered per year (kg) / 600 (kg) / 2 (refill cycles per year), rounded up to the nearest number.",
+                    "text": "Number of tonne tanks needed = (Amount of refrigerant volume recovered per year (kg) / 600 (kg) / 2 (refill cycles per year)), rounded up to the nearest whole number.",
                     "bold": false
                   }
                 ],
@@ -1964,7 +1937,7 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Refrigerant identifiers are typically used at the point of recovery. Thus, the number of units required are estimated based on one unit for every set of recovery machines needed (both sectors).",
+                "text": "Refrigerant identifiers are typically used at the point of recovery. Thus, the number of units required is estimated based on one unit for every set of recovery machines needed (both sectors).",
                 "bold": false
               }
             ],

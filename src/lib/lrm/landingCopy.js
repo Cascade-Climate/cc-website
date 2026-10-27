@@ -86,7 +86,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Governments should carefully assess the feasibility of getting to high enough recovery volumes to justify the costs of building new in-country destruction or reclamation facilities. The MLF-funded bank inventories that many countries are currently developing is an essential starting place for this analysis, providing insight into the maximum potential recoverable volume in a country. For countries with low recovery rates or low volume consumption, retrofitting existing kilns or exporting refrigerant may be the most cost-effective solution for destruction. Small recovery volumes cannot justify the cost of full-scale reclamation facilities; the MLF has also funded small-scale reclamation equipment that can help countries begin reclaiming gas without significant upfront investment."
+                "text": "Governments should carefully assess the feasibility of getting to high enough recovery volumes to justify the costs of building new in-country destruction or reclamation facilities. The MLF-funded bank inventories that many countries are currently developing are an essential starting place for this analysis, providing insight into the maximum potential recoverable volume in a country. For countries with low recovery rates or low volume consumption, retrofitting existing kilns or exporting refrigerant may be the most cost-effective solution for destruction. Small recovery volumes cannot justify the cost of full-scale reclamation facilities; the MLF has also funded small-scale reclamation equipment that can help countries begin reclaiming gas without significant upfront investment."
               }
             ]
           },
@@ -157,7 +157,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "In practice, LRM systems are complex with many interdependencies, not a set of separate activities. In the tool and in our discussion below, we treat recycling, reclamation, and destruction separately because they represent distinct physical transformations of refrigerant gas and each come with their own costs, markets, and policy considerations."
+            "text": "In practice, LRM systems are complex with many interdependencies, not a set of separate activities. In the tool and in our discussion below, we treat recycling, reclamation, and destruction separately because they represent distinct physical transformations of refrigerant gas and each comes with its own costs, markets, and policy considerations."
           }
         ]
       },
@@ -212,7 +212,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": " – The extraction and cleaning of recovered refrigerants for reuse, often in the same system, without bringing it to full AHRI 700 reclamation standard. A typical setup combines acid and moisture filters, an oil separator, a dryer or purifier using desiccants or molecular sieves, and a vacuum pump and cylinders for recharging the gas into the same or comparable equipment."
+                "text": " – The extraction and cleaning of recovered refrigerants for reuse, often in the same system, without bringing them to full AHRI 700 reclamation standard. A typical setup combines acid and moisture filters, an oil separator, a dryer or purifier using desiccants or molecular sieves, and a vacuum pump and cylinders for recharging the gas into the same or comparable equipment."
               }
             ]
           },
@@ -234,7 +234,7 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": " The permanent decomposition of refrigerants at a destruction facility using a technology that meets or exceeds the Montreal Protocol's Technology and Economic Assessment Panel (TEAP) standards. During the destruction process, refrigerants chemicals are broken down at very high temperatures, to a standard of decomposing at least 99.99 percent of the molecules for concentrated sources, with the by-products captured and treated. There are several TEAP-approved destruction technologies, including cement kiln, rotary kiln, argon plasma arc and municipal solid waste incineration."
+                "text": " The permanent decomposition of refrigerants at a destruction facility using a technology that meets or exceeds the Montreal Protocol's Technology and Economic Assessment Panel (TEAP) standards. During the destruction process, refrigerant chemicals are broken down at very high temperatures, to a standard of decomposing at least 99.99 percent of the molecules for concentrated sources, with the by-products captured and treated. There are several TEAP-approved destruction technologies, including cement kiln, rotary kiln, argon plasma arc and municipal solid waste incineration."
               }
             ]
           }
@@ -504,7 +504,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "To understand which cost components matter most for operational costs, we ran a simple sensitivity analysis on the Explorer’s net operating cost per kilogram. We evaluated each possible combination of sector and end-use pathway. For each, we started from the Explorer’s default input values and adjusted each input higher and lower across an anticipated data range (e.g, ±50%), one at a time, while holding all other inputs constant. This analysis shows how much each input estimate can swing the cost of recovering a kilogram of refrigerant. For capital costs, most of which are fixed amounts in the Explorer, we compared the upfront cost of each major equipment and facility option side by side to identify which decisions drive total up-front investment. The results were then combined with the qualitative data we gathered from reverse supply chain actors to identify the top cost drivers of LRM. All costs are shown in USD."
+            "text": "To understand which cost components matter most for operational costs, we ran a simple sensitivity analysis on the Explorer’s net operating cost per kilogram. We evaluated each possible combination of sector and end-use pathway. For each, we started from the Explorer’s default input values and adjusted each input higher and lower across an anticipated data range (e.g., ±50%), one at a time, while holding all other inputs constant. This analysis shows how much each input estimate can swing the cost of recovering a kilogram of refrigerant. For capital costs, most of which are fixed amounts in the Explorer, we compared the upfront cost of each major equipment and facility option side by side to identify which decisions drive total up-front investment. The results were then combined with the qualitative data we gathered from reverse supply chain actors to identify the top cost drivers of LRM. All costs are shown in USD."
           }
         ]
       },
@@ -623,7 +623,7 @@ export const sections = [
             "italic": true
           },
           {
-            "text": "Governments should carefully assess the feasibility of getting to high enough recovery volumes to justify the costs of building destruction or reclamation facilities. The MLF-funded bank inventories that many countries are currently conducting is an essential starting place for this analysis, providing insight into the maximum potential recoverable volume in a country. CCAC’s "
+            "text": "Governments should carefully assess the feasibility of getting to high enough recovery volumes to justify the costs of building destruction or reclamation facilities. The MLF-funded bank inventories that many countries are currently developing are an essential starting place for this analysis, providing insight into the maximum potential recoverable volume in a country. CCAC’s "
           },
           {
             "text": "Practical Guide on National Action Plans for Lifecycle Refrigerant Management",
@@ -639,7 +639,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Currently, few Article 5 countries have sufficient annual recovered refrigerant volumes to justify investing in a full-scale reclamation or destruction facility. However, there are several ways to build capacity with what is available. For reclamation, basic reclamation units with enhanced filtration and dehydration can be placed at training centres or recovery hubs. These units require relatively little investment, can process modest volumes of common refrigerants such as R-22, R-134a, and R-410A, and may qualify for Hydrochlorofluorocarbons Phaseout Management Plan (HPMP) or Kigali Implementation Plan (KIP) funding. Mobile reclamation units can rotate between cities or servicing clusters, offering periodic collection and purification. Several Article 5 countries have used this model successfully. This approach works best in markets where volumes are scattered, and it scales well at low cost, especially when combined with national recovery requirements and technician training. A shared regional facility can serve several countries with low refrigerant volumes through cost-sharing or public-private partnerships. Smaller and low-volume-consuming countries can then send gas to neighboring countries for reclamation, provided they account for the rules on moving these substances across borders."
+            "text": "Currently, few Article 5 countries have sufficient annual recovered refrigerant volumes to justify investing in a full-scale reclamation or destruction facility. However, there are several ways to build capacity with what is available. For reclamation, basic reclamation units with enhanced filtration and dehydration can be placed at training centers or recovery hubs. These units require relatively little investment, can process modest volumes of common refrigerants such as R-22, R-134a, and R-410A, and may qualify for Hydrochlorofluorocarbons Phaseout Management Plan (HPMP) or Kigali Implementation Plan (KIP) funding. Mobile reclamation units can rotate between cities or servicing clusters, offering periodic collection and purification. Several Article 5 countries have used this model successfully. This approach works best in markets where volumes are scattered, and it scales well at low cost, especially when combined with national recovery requirements and technician training. A shared regional facility can serve several countries with low refrigerant volumes through cost-sharing or public-private partnerships. Smaller and low-volume-consuming countries can then send gas to neighboring countries for reclamation, provided they account for the rules on moving these substances across borders."
           }
         ]
       },
@@ -753,7 +753,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "For policymakers who wish to support recycling, regulations can help make recycling attractive, by, at minimum, ensuring that recycling is explicitly allowed. In several jurisdictions such as the United States, and the European Union, laws allow recycled gas to be used in equipment owned by the same entity. This approach strikes the balance of legally permitting recycling while hedging against some of its risks by prohibiting recycled refrigerant from being sold or used in equipment owned by a different individual or company. In addition, MLF-funded programs can continue to support recycling by providing the necessary equipment and accompanying technician training."
+            "text": "For policymakers who wish to support recycling, regulations can help make recycling attractive, at a minimum, by ensuring that recycling is explicitly allowed. In several jurisdictions such as the United States, and the European Union, laws allow recycled gas to be used in equipment owned by the same entity. This approach strikes the balance of legally permitting recycling while hedging against some of its risks by prohibiting recycled refrigerant from being sold or used in equipment owned by a different individual or company. In addition, MLF-funded programs can continue to support recycling by providing the necessary equipment and accompanying technician training."
           }
         ]
       },
@@ -799,7 +799,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "As countries progress further in their Kigali phasedown schedules, market conditions will gradually become more favorable for reclaimed HFCs. As the supply of virgin HFCs becomes more constrained due to production and consumption step-downs, prices will rise, enabling reclaimed refrigerants to be more cost-competitive. This is already occurring in non-Article 5 countries. In the long-run, we envision a circular economy for reclaimed gas underpinned by the scarcity of HFCs."
+            "text": "As countries progress further in their Kigali phasedown schedules, market conditions will gradually become more favorable for reclaimed HFCs. As the supply of virgin HFCs becomes more constrained due to production and consumption step-downs, prices will rise, enabling reclaimed refrigerants to be more cost-competitive. This is already occurring in non-Article 5 countries. In the long run, we envision a circular economy for reclaimed gas underpinned by the scarcity of HFCs."
           }
         ]
       },
@@ -840,7 +840,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "Destroyed gas is primarily valued for its climate benefit. This value does not have a traditional market because the benefit—avoided emissions—is diffuse, while the cost is concentrated. However, markets can and do exist for climate benefits—namely carbon markets. Carbon markets provide a source of revenue for climate benefits and have helped create demand and provide price support for ODS destruction in the past. The other potential long-term “market” for destroyed gas are government programs that mandate "
+            "text": "Destroyed gas is primarily valued for its climate benefit. This value does not have a traditional market because the benefit—avoided emissions—is diffuse, while the cost is concentrated. However, markets can and do exist for climate benefits—namely carbon markets. Carbon markets provide a source of revenue for climate benefits and have helped create demand and provide price support for ODS destruction in the past. The other potential long-term “market” for destroyed gas is government programs that mandate "
           },
           {
             "text": "and pay for ",
@@ -894,7 +894,7 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "In the long-term, EPR programs could serve as a non-carbon-market-based source of revenue for destruction. For example, countries such as Australia and Norway have implemented the principle of extended producer responsibility through import taxes on gas and pre-charged equipment, the revenue from which covers the cost of recovery and destruction. These programs often involve using bounty payments (i.e. cash incentives) to reimburse technicians, aggregators, and/or destruction facilities themselves for the recovery and/or certified destruction of gas. It is worth noting that such programs require a high degree of government capacity to function well, and must have a way to ring-fence, or demarcate, revenue from the EPR program to ensure that it is used to incentivize recovery and destruction. Often, a non-governmental entity called a Producer Responsibility Organization takes on the transaction costs of setting up and running an EPR program."
+            "text": "In the long term, EPR programs could serve as a non-carbon-market-based source of revenue for destruction. For example, countries such as Australia and Norway have implemented the principle of extended producer responsibility through import taxes on gas and pre-charged equipment, the revenue from which covers the cost of recovery and destruction. These programs often involve using bounty payments (i.e., cash incentives) to reimburse technicians, aggregators, and/or destruction facilities themselves for the recovery and/or certified destruction of gas. It is worth noting that such programs require a high degree of government capacity to function well, and must have a way to ring-fence, or demarcate, revenue from the EPR program to ensure that it is used to incentivize recovery and destruction. Often, a non-governmental entity called a Producer Responsibility Organization takes on the transaction costs of setting up and running an EPR program."
           }
         ]
       }
@@ -994,8 +994,8 @@ export const sections = [
             "text": "Using the LRM Cost Explorer? We’d like to hear about how you’re applying the Explorer, and what would make it more useful -- reach out at "
           },
           {
-            "text": "refrigerantmanagement@cascade.org",
-            "href": "mailto:refrigerantmanagement@cascade.org"
+            "text": "refrigerantmanagement@cascadeclimate.org",
+            "href": "mailto:refrigerantmanagement@cascadeclimate.org"
           },
           {
             "text": ". We'd love to know what's working and what's missing."

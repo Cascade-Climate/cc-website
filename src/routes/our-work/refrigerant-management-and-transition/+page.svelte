@@ -36,9 +36,17 @@
 			and industry to build the institutional frameworks that reflect the diverse operating realities of the Global South.
 		</p>
 		<nav class="scroll-nav" aria-label="Refrigerant Management and Transition sections">
+			<a href="#lrm-cost-explorer">LRM Cost Explorer</a>
 			<a href="#highlights">Highlights</a>
 			<a href="#recent-blogs">Recent Blogs</a>
 		</nav>
+		<section id="lrm-cost-explorer" class="feature-panel" aria-labelledby="lrm-cost-h">
+			<h2 id="lrm-cost-h">LRM Cost Explorer</h2>
+			<p>
+				Cascade’s LRM Cost Explorer, built from fieldwork across Southeast Asia, helps fill the cost data gap by providing estimates for the costs of recovery, recycling, reclamation and destruction.
+			</p>
+			<a class="cta" href="/our-work/refrigerant-management-and-transition/costs">Learn more</a>
+		</section>
 		<section id="highlights" class="section-anchor">
 			<RefrigerantHighlights />
 		</section>
@@ -109,8 +117,34 @@
 	}
 
 	.section-anchor,
+	.feature-panel,
 	.body {
 		scroll-margin-top: 6rem;
+	}
+
+	.feature-panel {
+		margin-top: 2rem;
+		padding: 1.75rem 2rem;
+		background: var(--color-dark);
+		color: var(--color-light);
+		border-radius: 1rem;
+	}
+
+	.feature-panel h2 {
+		font-weight: 400;
+		font-size: 1.35rem;
+		margin: 0 0 0.75rem;
+		color: var(--color-light);
+	}
+
+	.cta {
+		display: inline-block;
+		margin-top: 1rem;
+		border-radius: 2rem;
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		padding: 0.55rem 1.35rem;
+		text-decoration: none;
 	}
 
 	.section-title {

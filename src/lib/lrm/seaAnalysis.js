@@ -7,6 +7,7 @@ const iea = "https://www.iea.org/reports/the-future-of-cooling-in-southeast-asia
 const ccl = "https://carboncontainmentlab.org/updates/posts/singapore-scrapyard";
 const iir = "https://iifiir.org/en/news/eu-high-gwp-hfc-shortages-and-price-rises";
 const nea = "https://www.nea.gov.sg/our-services/climate-change-energy-efficiency/climate-change/carbon-tax";
+const spg = "https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/040826-japans-gx-ets-mandatory-phase-begins-demand-muted-as-companies-await-allocation-clarity";
 
 function p(...parts) {
 	return { type: "p", parts };
@@ -154,7 +155,7 @@ export const sections = [
 				]
 			},
 			p(t("All pilots use the high-cost tier values and all at-scale programs use the low-cost tier value.")),
-			p(t("Commercial HVAC recovery is assumed to require two technicians for a total labor rate of USD 20/hour; residential AC recovery is assumed to require only one technician for a total labor rate of 10 USD/hour.")),
+			p(t("Commercial HVAC recovery is assumed to require two technicians for a total labor rate of USD 20/hour; residential AC recovery is assumed to require only one technician for a total labor rate of USD 10/hour.")),
 			{ type: "h3", id: "recovery-destruction-costs", text: "Comparing recovery-to-destruction operating costs across scenarios" },
 			p(t("To assess the impact of each of the six scenarios on recovery-to-destruction operating costs, we held the destruction facility type constant as an existing in-country facility. The chart below compares the operating cost of recovering and destroying a kilogram of refrigerant across all six scenarios.")),
 			{
@@ -166,11 +167,11 @@ export const sections = [
 			{ type: "h4", id: "recovery-drivers", text: "What drives cost, and what doesn’t" },
 			p(
 				b("Amount of refrigerant recovered per job. "),
-				t("How much refrigerant each job yields is the most significant cost driver. A technician might spend half an hour on a residential AC split unit and recover half a kilogram. The same technician could spend a full day on a commercial HVAC system and recover 150 kg. As a result, recovery makes up more than 50% the cost of a residential AC pilot program using basic equipment, but less than 20% of a commercial HVAC pilot program.")
+				t("How much refrigerant each job yields is the most significant cost driver. A technician might spend half an hour on a residential AC split unit and recover half a kilogram. The same technician could spend a full day on a commercial HVAC system and recover 150 kg. As a result, recovery makes up more than 50% of the cost of a residential AC pilot program using basic equipment, but less than 20% of a commercial HVAC pilot program.")
 			),
 			p(
 				b("Recovery efficiency. "),
-				t("As a result of low refrigerant per-job yields, recovery costs for residential AC programs are more significantly impacted by a technician’s transportation-related costs than for commercial HVAC programs. Therefore, improving recovery efficiency per site traveled to is a crucial factor for achieving cost reductions in the residential AC sector. For example, recovering 5 residential AC units from a single location will greatly reduce per kg costs compared to recovering 5 units from 5 different locations. This gap is a strong argument for aggregating residential AC units using the “pump-down” method where possible, before extracting refrigerant in bulk at a centralized facility. This approach is currently being practiced on the ground, where a centralized facility we visited was able to recover refrigerant from multiple AC units–around 4 to 5 units–simultaneously using a high-capacity recovery machine, potentially cutting recovery labor costs by 60-80 percent.")
+				t("As a result of low refrigerant per-job yields, recovery costs for residential AC programs are more significantly impacted by a technician’s transportation-related costs than for commercial HVAC programs. Therefore, improving recovery efficiency per site traveled to is a crucial factor for achieving cost reductions in the residential AC sector. For example, recovering 5 residential AC units from a single location will greatly reduce per kg costs compared to recovering 5 units from 5 different locations. This gap is a strong argument for aggregating residential AC units using the “pump-down” method where possible, before extracting refrigerant in bulk at a centralized facility. This approach is currently being practiced on the ground, where a centralized facility we visited was able to recover refrigerant from multiple AC units – around 4 to 5 units – simultaneously using a high-capacity recovery machine, potentially cutting recovery labor costs by 60-80 percent.")
 			),
 			p(
 				b("What matters less. "),
@@ -190,11 +191,11 @@ export const sections = [
 			{ type: "h4", id: "reclamation-drivers", text: "What drives the cost of reclaimed refrigerant, and what doesn’t" },
 			p(
 				b("Volume reaching the reclamation facility. "),
-				t("Reclamation processing is the largest cost in every modeled scenario, and the one most sensitive to scale. At a pilot level, it makes up between about 40% and 70% of the cost of reclaimed refrigerant, depending on equipment type. For commercial HVAC, moving from pilot volumes to at-scale volumes cuts the needed sale price from about USD 19/kg to USD 10/kg, and almost all of that reduction comes from lower reclamation and handling costs. That ‘at-scale’ volume—more than 50 tonnes per year—is hard to come by in the region today. While reclamation capacity in Southeast Asia will eventually need to increase for reclamation to scale, the facilities that we encountered were operating well below the current equipment capacity. Sufficient recovered volumes of refrigerant is the biggest bottleneck, not access to reclamation equipment.")
+				t("Reclamation processing is the largest cost in every modeled scenario, and the one most sensitive to scale. At a pilot level, it makes up between about 40% and 70% of the cost of reclaimed refrigerant, depending on equipment type. For commercial HVAC, moving from pilot volumes to at-scale volumes cuts the needed sale price from about USD 19/kg to USD 10/kg, and almost all of that reduction comes from lower reclamation and handling costs. That ‘at-scale’ volume—more than 50 tonnes per year—is hard to come by in the region today. While reclamation capacity in Southeast Asia will eventually need to increase for reclamation to scale, the facilities that we encountered were operating well below the current equipment capacity. Sufficient recovered volumes of refrigerant are the biggest bottleneck, not access to reclamation equipment.")
 			),
 			p(
 				b("Where reclamation happens. "),
-				t("Our scenarios assume utilizing an in-country existing reclamation facility. Exporting refrigerant for reclamation raises transport and handling from under USD 1/kg to about USD 4–6/kg, and introduces approvals required under the Basel Convention. Navigating Basel Convention requirements can create significant roadblocks for reclamation; we encountered several operations where even transporting refrigerant to a bordering country was prohibitively expensive and/or complex.")
+				t("Our scenarios assume utilizing an existing in-country reclamation facility. Exporting refrigerant for reclamation raises transport and handling from under USD 1/kg to about USD 4–6/kg, and introduces approvals required under the Basel Convention. Navigating Basel Convention requirements can create significant roadblocks for reclamation; we encountered several operations where even transporting refrigerant to a bordering country was prohibitively expensive and/or complex.")
 			),
 			p(
 				b("What matters less. "),
@@ -205,7 +206,7 @@ export const sections = [
 				t("The model assumes all recovered refrigerant can be reclaimed. In practice, gas from residential AC units is often contaminated with oil, and R-410A, the most common refrigerant in the recovered stream, cannot be separated into its components by the simple distillation units available in the region. Mixed or contaminated cylinders usually end up destroyed, which raises the actual cost of each kilogram that does get reclaimed.")
 			),
 			{ type: "h4", id: "reclamation-takeaways", text: "Takeaways" },
-			p(t("At scale, commercial HVAC (about USD 10/kg) and residential AC programs using high-capacity equipment (about USD 14/kg) fall within the current virgin refrigerant price range, so they may be able to compete with virgin gas priced at the higher-end. No pilot program can compete: even commercial HVAC, the cheapest pilot, would need to sell at about USD 19/kg. Residential AC reclamation programs using basic equipment are unlikely to be cost-effective, even at scale, until virgin prices rise.")),
+			p(t("At scale, commercial HVAC (about USD 10/kg) and residential AC programs using high-capacity equipment (about USD 14/kg) fall within the current virgin refrigerant price range, so they may be able to compete with virgin gas priced at the higher end. No pilot program can compete: even commercial HVAC, the cheapest pilot, would need to sell at about USD 19/kg. Residential AC reclamation programs using basic equipment are unlikely to be cost-effective, even at scale, until virgin prices rise.")),
 			p(
 				t("As Kigali implementation progresses in Southeast Asia, recovered refrigerant has an extremely important role to play in developing a circular economy for HFC consumption. It will become an increasingly valuable resource as supply becomes restricted and virgin gas prices rise. We have already seen that play out in non-Article 5 countries. In the European Union, for example, prices for some of the most widely used HFCs rose by 30–60% in a single year as the first major supply cut approached."),
 				n("6"),
@@ -246,7 +247,7 @@ export const sections = [
 				t("Everywhere else in this report, we show operating costs only, because upfront costs vary widely by what existing infrastructure is available and how these costs can be funded. Here, we compare destruction cost against carbon prices, which are paid per tonne of CO₂e, so a fair comparison needs the full cost of each tonne, including the equipment needed to deliver it. To get there, we spread upfront costs evenly over their expected working life: five years for recovery equipment (recovery machines, cylinders, refrigerant identifiers and tracking systems) and ten years for kiln retrofits and new kilns. We don’t include financing costs, so the figures are a simple average cost per tonne rather than a full investment case.")
 			),
 			{ type: "h4", id: "comparing-destruction", text: "Comparing the scenarios" },
-			p(t("The chart below compares the full cost of recovering and destroying refrigerant, in per tonne of CO₂e, across scenarios and against carbon prices in Japan and Singapore.")),
+			p(t("The chart below compares the full cost of recovering and destroying refrigerant, in dollars per tonne of CO₂e, across scenarios and against carbon prices in Japan and Singapore.")),
 			{
 				type: "figure",
 				src: "carbon",
@@ -296,7 +297,10 @@ export const sections = [
 					},
 					{
 						id: "8",
-						parts: [t("S&P Global Commodity Insights, “Japan’s GX-ETS mandatory phase begins” (8 April 2026), on eligible credits.")]
+						parts: [
+							a("S&P Global Commodity Insights, “Japan’s GX-ETS mandatory phase begins”", spg),
+							t(" (8 April 2026), on eligible credits.")
+						]
 					}
 				]
 			}

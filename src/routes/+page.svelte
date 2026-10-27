@@ -8,8 +8,7 @@
 	import bedrockInitiativeHero from '$lib/images/nature/bedrock-initiative-hero.png';
 	import heroPhoto4 from '$lib/images/hero.webp';
 	import newblock1 from '$lib/images/supporters/newblock-1.webp';
-	import asiasmoke from '$lib/images/blog/asiasmoke.webp';
-	import hfcWorkshopHero from '$lib/images/blog/hfc-destruction-workshop-hero.jpg';
+	import lrmCylinders from '$lib/images/lrm-cylinders-hero.jpg';
 </script>
 
 <svelte:head>
@@ -51,10 +50,10 @@
 		<h3>SPOTLIGHT ON <a href="/our-work">OUR WORK ↗</a></h3>
 		<div class="spotlights">
 			<div class="spotlight">
-				<img src={hfcWorkshopHero} alt="Air conditioning unit surrounded by tropical vegetation" />
-				<h2>HFC Destruction in Article 5 Countries</h2>
-				<p>Our new report lays out guardrails and recommendations for using carbon finance to destroy potent refrigerants in Article 5 countries under the Montreal Protocol.</p>
-				<a href="/blog/HFC-destruction-workshop" target="_blank">Learn More</a>
+				<img src={lrmCylinders} alt="Stacked refrigerant cylinders" />
+				<h2>Introducing the LRM Cost Explorer</h2>
+				<p>Lifecycle refrigerant management can help limit near-term warming — but what does it actually cost? Our new tool breaks it down.</p>
+				<a href="/our-work/refrigerant-management-and-transition/costs">Learn More</a>
 			</div>
 			<div class="spotlight">
 				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
@@ -83,16 +82,6 @@
 					they tell us, and what future contributions may reveal.
 				</p>
 				<a href="/blog/data-quarry-update-summer-26" target="_blank">Learn More</a>
-			</div>
-			<div class="spotlight">
-				<img src={asiasmoke} alt="Asia Smoke"/>
-					<h2>Accounting and claims for short-lived and long-lived pollutants
-					</h2>
-					<p>
-						Learn more about why today's climate actions must go beyond CO<sub>2</sub> mitigation and prioritize activities that can reduce near-term warming in the coming decades.
-	
-					</p>
-				<a href="/blog/accounting-and-claims-for-super-pollutants" target="_blank">Learn More</a>
 			</div>
 		</div>
 

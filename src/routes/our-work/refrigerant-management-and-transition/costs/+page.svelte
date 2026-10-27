@@ -259,6 +259,10 @@
 		margin: 0 auto;
 	}
 
+	.measure a {
+		overflow-wrap: anywhere;
+	}
+
 	.ai-disclosure {
 		padding: 1.35rem 4rem 2.4rem;
 	}
@@ -692,6 +696,20 @@
 
 		.hero {
 			padding-top: calc(4rem + 1.5rem);
+		}
+
+		nav.scroll-nav,
+		.scroll-nav-wrapper.pinned .scroll-nav {
+			position: static;
+			top: auto;
+			left: auto;
+			right: auto;
+			width: auto;
+			box-shadow: none;
+		}
+
+		.scroll-nav-spacer {
+			display: none;
 		}
 
 		nav.scroll-nav a {

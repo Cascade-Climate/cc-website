@@ -620,6 +620,20 @@
 			padding-top: calc(4rem + 1.5rem);
 		}
 
+		nav.scroll-nav,
+		.scroll-nav-wrapper.pinned .scroll-nav {
+			position: static;
+			top: auto;
+			left: auto;
+			right: auto;
+			width: auto;
+			box-shadow: none;
+		}
+
+		.scroll-nav-spacer {
+			display: none;
+		}
+
 		nav.scroll-nav a {
 			flex: 1 1 100%;
 			text-align: left;

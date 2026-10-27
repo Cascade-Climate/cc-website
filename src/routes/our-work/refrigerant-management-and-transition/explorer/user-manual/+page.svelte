@@ -28,7 +28,10 @@
 	function jump(id) {
 		active = id;
 		scrollLock = Date.now() + 1500;
-		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		const el = document.getElementById(id);
+		if (!el) return;
+		const top = el.getBoundingClientRect().top + window.scrollY - 84;
+		window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
 	}
 
 	onMount(() => {

@@ -1023,7 +1023,7 @@
 						</div>
 						<div class="field">
 							<label
-								data-tip="Total time required for recovery from set up to completion. For Residential AC, if applicable, time needed for AC pump down should be factored in. Defaults: Residential AC = 0.5 hours for a 1 kg AC unit; Commercial HVAC = 8 hours for a 150 kg unit/system."
+								data-tip="Total time required for recovery from setup to completion. For Residential AC, if applicable, time needed for AC pump-down should be factored in. Defaults: Residential AC = 0.5 hours for a 1 kg AC unit; Commercial HVAC = 8 hours for a 150 kg unit/system."
 								for="recoveryHoursPerUnit">Recovery time needed per unit (hours)</label
 							>
 							<input
@@ -1099,7 +1099,7 @@
 						<div class="group-label subhead summary-label">Recovery Summary</div>
 						<div class="snapshot">
 							<div
-								data-tip="Sumtotal of technician on-site labor + traveling time"
+								data-tip="Sum total of technician on-site labor + traveling time"
 							>
 								<span class="k">Total labor cost per day (USD/day)</span>
 								<span class="v">{formatUsd(live.inputs.labourCostPerDay)}</span>
@@ -1306,7 +1306,7 @@
 							{#if !result}
 								Calculate costs
 							{:else if stale}
-								Update results
+								Recalculate
 							{:else}
 								Recalculate
 							{/if}
@@ -1324,7 +1324,7 @@
 					{#if stale}
 						<div class="mobile-refresh">
 							<button type="button" class="run" disabled={!mixOk} on:click={produceOutputs}>
-								Update results
+								Recalculate
 							</button>
 							<p class="run-note">Inputs have changed. Calculate again to refresh outputs.</p>
 						</div>
