@@ -28,7 +28,7 @@ export const hero = {
 	title: "Regional Scenario Analysis: Southeast Asia",
 	description:
 		"Southeast Asia is one of the world’s fastest-growing refrigerant markets. This analysis uses the LRM Cost Explorer to compare recovery, recycling, reclamation, and destruction costs in the region.",
-	toolCta: "Explore costs for LRM"
+	toolCta: "Access the LRM Cost Explorer"
 };
 
 export const sections = [
@@ -48,7 +48,7 @@ export const sections = [
 				n("4")
 			),
 			p(
-				t("Every one of those units will eventually reach end-of-life, and today, nearly all refrigerant is vented at that point. Venting refrigerant is illegal in many Southeast Asian countries, but it is hard to monitor and enforce. Even in Singapore, which enforces its environmental rules more strictly than most, more than 90% is released rather than recovered."),
+				t("Every one of those units will eventually reach end-of-life, and today, nearly all refrigerant is vented at that point. Venting refrigerant is illegal in many Southeast Asian countries, but it is extremely difficult to monitor and enforce. Even in Singapore, which enforces its environmental rules more strictly than most, more than 90% is released rather than recovered."),
 				n("5")
 			),
 			{
@@ -59,13 +59,13 @@ export const sections = [
 						parts: [
 							t("Cascade Climate analysis of "),
 							a("Green Cooling Initiative country data", gci),
-							t(" (GIZ Proklima; last updated 2023). 2024 values under the Kigali Implementation Plan scenario. Southeast Asia includes Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, the Philippines, Singapore, Thailand, Timor-Leste and Vietnam.")
+							t(" (GIZ Proklima; last updated 2023). Figures use 2024 values under the Kigali Implementation Plan scenario. Southeast Asia includes Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, the Philippines, Singapore, Thailand, Timor-Leste and Vietnam.")
 						]
 					},
 					{
 						id: "2",
 						parts: [
-							a("Climate and Ozone Protection Alliance (COPA) / GIZ, Global Banks of Ozone Depleting Substances (ODS) and Hydro Fluoro Carbons (HFCs): A Country-Level Estimate 2024", copa),
+							a("Climate and Ozone Protection Alliance (COPA) and GIZ, Global Banks of Ozone Depleting Substances (ODS) and Hydrofluorocarbons (HFCs): A Country-Level Estimate 2024", copa),
 							t(" (2025), Figure 5.")
 						]
 					},
@@ -78,7 +78,7 @@ export const sections = [
 						parts: [
 							t("Cascade Climate analysis of "),
 							a("Green Cooling Initiative country data", gci),
-							t(" (GIZ Proklima; last updated 2023), business-as-usual scenario. Direct emissions for the 11 Southeast Asian countries rise from about 74 Mt CO₂e in 2024 to about 104 Mt CO₂e in 2040.")
+							t(" (GIZ Proklima; last updated 2023). Figures use the business-as-usual scenario. Direct emissions for the 11 Southeast Asian countries rise from about 74 million tonnes of CO₂e in 2024 to about 104 million tonnes of CO₂e in 2040.")
 						]
 					},
 					{
@@ -97,7 +97,7 @@ export const sections = [
 			p(
 				t("Using our "),
 				a("LRM Cost Explorer", EXPLORER, false),
-				t(", we developed several cost scenarios for Southeast Asia to highlight what is needed for increased LRM activity in the region. Region-specific public cost data is nearly nonexistent, so we collected primary data through site visits in multiple countries as well as interviews with regional stakeholders. Over the past year, we traveled to Singapore, Indonesia, Thailand, Vietnam and Malaysia to see the region’s reverse supply chain up close. We toured 10 sites, including waste handling facilities, reclamation facilities with lab testing, refrigerant aggregation warehouses, and technician training centers. We spoke with the people who run them about what it actually costs to recover, store, move and process refrigerant at the end of its life. We are extremely grateful to the many partners who opened their doors to us and shared cost data and business insights, including technicians, project developers, facility owners and operators, equipment manufacturers and university researchers. To protect commercially sensitive information, all data has been anonymized and aggregated.")
+				t(", we developed several cost scenarios for Southeast Asia to highlight what is needed for increased LRM activity in the region. Region-specific public cost data is nearly nonexistent, so we collected primary data through site visits in multiple countries as well as interviews with regional stakeholders. Over the past year, we traveled to Singapore, Indonesia, Thailand, Vietnam and Malaysia to see the region’s reverse supply chain up close. We toured 10 sites, including waste handling facilities, reclamation facilities with lab testing, refrigerant aggregation warehouses, and technician training centers. We spoke with the people who run them about what it actually costs to recover, store, move and process refrigerant. We are extremely grateful to the many partners who opened their doors to us and shared cost data and business insights, including technicians, project developers, facility owners and operators, equipment manufacturers and university researchers. To protect commercially sensitive information, all data has been anonymized and aggregated.")
 			)
 		]
 	},
@@ -116,7 +116,7 @@ export const sections = [
 					{ parts: [t("Cost Tier: High-cost (‘pilot’ program) vs. Low-cost (‘at-scale’ program).")] }
 				]
 			},
-			p(t("Basic recovery refers to the standard compact recovery machines typically used to recover refrigerant from small capacity AC units and was not considered for commercial HVAC scenarios.")),
+			p(t("Basic recovery refers to the standard compact recovery machines typically used to recover refrigerant from small capacity residential AC units and was not considered applicable for commercial HVAC scenarios.")),
 			p(t("The tool’s built-in cost tiers correspond to two maturity stages:")),
 			{
 				type: "ul",
@@ -130,13 +130,13 @@ export const sections = [
 					{
 						parts: [
 							b("At-scale: "),
-							t("Programs recovering more than 50 tonnes per year, considered an ‘at-scale’ program, fall into the low-cost tier in the Explorer. Based on stakeholder discussions, we consider this volume to be at-scale, where steady, high volumes earn better processing rates and spread fixed handling and testing costs across far more refrigerant.")
+							t("Programs recovering more than 50 tonnes per year, considered an ‘at-scale’ program, fall into the low-cost tier in the Explorer. Based on stakeholder discussions, we consider this volume to be at-scale, where steady, high volumes earn better processing rates and spread fixed handling and testing costs across far more refrigerant. Market actors we spoke with estimated that a realistic minimum viable scale is 50–70 tonnes per year, which they felt could be reachable over about three years.")
 						]
 					}
 				]
 			},
 			p(
-				t("Market actors we spoke with estimated that a realistic minimum viable scale is 50–70 tonnes per year, which they felt could be reachable over about three years. The table below shows the main inputs behind each scenario. See the "),
+				t("The table below shows the main inputs behind each scenario. See the "),
 				a("LRM Cost Explorer User Manual", MANUAL, false),
 				t(" for detailed information on all of the default values used for the Southeast Asia scenario modeling.")
 			),
@@ -153,17 +153,17 @@ export const sections = [
 					["Annual volume (pilot / at-scale)", "4 / 50.6 tonnes", "4 / 50.6 tonnes", "9 / 54 tonnes"]
 				]
 			},
-			p(t("All pilots use the high-cost tier and all at-scale programs use the low-cost tier.")),
+			p(t("All pilots use the high-cost tier values and all at-scale programs use the low-cost tier value.")),
 			p(t("Commercial HVAC recovery is assumed to require two technicians for a total labor rate of USD 20/hour; residential AC recovery is assumed to require only one technician for a total labor rate of 10 USD/hour.")),
-			{ type: "h3", id: "recovery-destruction-costs", text: "Comparing recovery and destruction operating costs across scenarios" },
-			p(t("To assess the impact of each of the six recovery scenarios on destruction operating costs, we held the destruction facility type constant as an existing in-country facility. The chart below compares the operating cost of recovering and destroying a kilogram of refrigerant across all six scenarios.")),
+			{ type: "h3", id: "recovery-destruction-costs", text: "Comparing recovery-to-destruction operating costs across scenarios" },
+			p(t("To assess the impact of each of the six scenarios on recovery-to-destruction operating costs, we held the destruction facility type constant as an existing in-country facility. The chart below compares the operating cost of recovering and destroying a kilogram of refrigerant across all six scenarios.")),
 			{
 				type: "figure",
 				src: "destruction",
 				alt: "Stacked bar chart of the operating cost of recovering and destroying 1 kg of refrigerant. Pilot, high-cost tier: residential basic equipment $28.63, residential high-capacity $20.63, commercial HVAC $12.62. At-scale, low-cost tier: $22.35, $14.35, and $9.50."
 			},
 			p(t("A residential AC pilot program using basic recovery equipment costs about USD 29/kg of refrigerant destroyed. Switching to high-capacity equipment brings that down to about USD 21/kg. A commercial HVAC pilot program costs about USD 13/kg. Moving to an at-scale program cuts operating cost by 25-30%; residential AC falls to USD 22/kg with basic equipment and USD 14/kg with high-capacity equipment, and commercial HVAC falls to under USD 10/kg.")),
-			{ type: "h3", id: "recovery-drivers", text: "What drives cost, and what doesn’t" },
+			{ type: "h4", id: "recovery-drivers", text: "What drives cost, and what doesn’t" },
 			p(
 				b("Amount of refrigerant recovered per job. "),
 				t("How much refrigerant each job yields is the most significant cost driver. A technician might spend half an hour on a residential AC split unit and recover half a kilogram. The same technician could spend a full day on a commercial HVAC system and recover 150 kg. As a result, recovery makes up more than 50% the cost of a residential AC pilot program using basic equipment, but less than 20% of a commercial HVAC pilot program.")
@@ -174,20 +174,20 @@ export const sections = [
 			),
 			p(
 				b("What matters less. "),
-				t("Fuel prices and vehicle efficiency have a low impact on commercial HVAC recovery costs, where travel adds less than USD 0.20/kg. Residential AC programs are the exception on travel: for a pilot program, driving adds about USD 4.40/kg, because each team covers about 100 km a day to collect only a few kilograms of refrigerant.")
+				t("Fuel prices and vehicle efficiency have a low impact on commercial HVAC recovery costs, where travel adds less than USD 0.20/kg. Residential AC programs are the exception on travel: for a pilot program, driving adds about USD 4.40/kg, because each team covers about 100 kilometers per day to collect only a few kilograms of refrigerant.")
 			),
-			{ type: "h3", id: "recovery-takeaways", text: "Takeaways" },
-			p(t("Achieving scaled recovery in Southeast Asia will likely require recovering from a mix of commercial HVAC and residential AC units, rather than from residential AC units alone. Using the above parameters, reaching the model’s low-cost scenario requires recovering from more than 100,000 residential AC units a year. That’s roughly half of what one Southeast Asian market we studied decommissions annually. A commercial HVAC program can achieve the same level of scale by recovering from an average of three units a day over the course of a year using the default number of recovery days. Today’s programs, while beneficial and impactful, are far from reaching these thresholds. Across LRM programs we encountered, total recovered volumes ranged from less than 10 kg to 3 tonnes per year.")),
-			p(t("Incentives haven’t closed the gap either: a reported pilot conducted in one Southeast Asian country paid technicians about USD 5/kg for recovered refrigerant, roughly half of what our model suggests residential AC recovery labor alone costs. Where residential AC collection does work today, it is because a business has built it into its operations, such as a retailer offering a discount on a new unit with free pickup and disposal of the old one. Until residential AC units are brought into e-waste or extended producer responsibility (EPR) schemes that deliver them to central facilities in volume, which can cut recovery and transport costs by using the “pump-down” method, targeting commercial HVAC units is the most cost-effective LRM strategy. Residential AC programs that do go ahead should pair high-capacity equipment with retailer take-back or other ways of aggregating units, which bring their costs much closer to commercial HVAC levels.")),
-			{ type: "h3", id: "reclamation-costs", text: "Reclamation costs compared to virgin refrigerant prices" },
-			p(t("We modeled reclamation costs using the same six recovery scenarios as above. Recovery inputs remain unchanged. The only difference is the end-use pathway: the recovered refrigerant is reclaimed at an existing in-country facility rather than destroyed. Reclamation costs include processing the gas using reclamation equipment as well as the lab testing necessary to confirm purity standards are met. These post-recovery operational costs are set at USD 11.50/kg for a pilot program, and USD 5.50/kg for an at-scale program. Transport and handling to the facility adds another USD 0.20–0.60/kg, depending on the cost tier.")),
+			{ type: "h4", id: "recovery-takeaways", text: "Takeaways" },
+			p(t("Achieving scaled recovery in Southeast Asia will likely require recovering from a mix of commercial HVAC and residential AC units, rather than from residential AC units alone. Using the above parameters, reaching the Explorer’s low-cost tier requires recovering from more than 100,000 residential AC units per year. That’s roughly half of what one Southeast Asian market we studied decommissions annually. A commercial HVAC program can achieve the same level of scale by recovering from an average of three units a day over the course of a year using the default number of recovery days. Today’s programs, while beneficial and impactful, are far from reaching these thresholds. Across LRM programs we encountered, total recovered volumes ranged from less than 10 kg to 3 tonnes per year.")),
+			p(t("Where residential AC collection does work today, it is because a business has built it into its operations, such as a retailer offering a discount on a new unit with free pickup and disposal of the old one. Until residential AC units are brought into e-waste or extended producer responsibility (EPR) schemes that deliver them to central facilities in volume, which can cut recovery and transport costs by using the “pump-down” method, targeting commercial HVAC units is the most cost-effective LRM strategy. Residential AC programs that do go ahead should pair high-capacity equipment with retailer take-back or other ways of aggregating units, which bring their costs much closer to commercial HVAC levels.")),
+			{ type: "h3", id: "reclamation-costs", text: "Recovery-to-reclamation operating costs compared to virgin refrigerant prices" },
+			p(t("We modeled reclamation costs using the same six recovery scenarios as above. Recovery inputs remain unchanged. The only difference is the end-use pathway: the recovered refrigerant is reclaimed at an existing in-country facility rather than destroyed. Reclamation costs include processing the gas using reclamation equipment as well as the lab testing necessary to confirm purity standards are met. These post-recovery operational costs are set at USD 11.50/kg for a pilot program, and USD 5.50/kg for an at-scale program. Transport and handling to an in-country facility adds another USD 0.20–0.60/kg, depending on the cost tier.")),
 			p(t("For reclamation to happen without outside support, reclaimed refrigerant has to sell for more than it costs to produce—with a reasonable profit adder—to be a viable business model. To reflect this, we added a 15% profit margin to the operating cost of recovering and reclaiming a kilogram of refrigerant. Because the chart shows the price needed to cover those costs, it does not use the tool’s default resale price for reclaimed refrigerant. The chart below shows the sale price a reclaimer would need to be profitable across scenarios compared with the price of virgin refrigerant in Southeast Asia. Based on conversations with regional market actors, virgin refrigerants in Southeast Asia sell for roughly USD 8–14.50/kg, averaged across the refrigerants most commonly used in residential AC and commercial HVAC systems: R-32, R-410A and R-22.")),
 			{
 				type: "figure",
 				src: "reclamation",
 				alt: "Stacked bar chart of the sale price a reclaimer needs to cover operating costs plus a 15% margin, compared with Southeast Asian virgin refrigerant at about $8 to $14.50 per kg. Pilot: residential basic $36.95, residential high-capacity $27.75, commercial HVAC $18.54. At-scale: $25.13, $15.93, and $10.35."
 			},
-			{ type: "h3", id: "reclamation-drivers", text: "What drives the cost of reclaimed refrigerant, and what doesn’t" },
+			{ type: "h4", id: "reclamation-drivers", text: "What drives the cost of reclaimed refrigerant, and what doesn’t" },
 			p(
 				b("Volume reaching the reclamation facility. "),
 				t("Reclamation processing is the largest cost in every modeled scenario, and the one most sensitive to scale. At a pilot level, it makes up between about 40% and 70% of the cost of reclaimed refrigerant, depending on equipment type. For commercial HVAC, moving from pilot volumes to at-scale volumes cuts the needed sale price from about USD 19/kg to USD 10/kg, and almost all of that reduction comes from lower reclamation and handling costs. That ‘at-scale’ volume—more than 50 tonnes per year—is hard to come by in the region today. While reclamation capacity in Southeast Asia will eventually need to increase for reclamation to scale, the facilities that we encountered were operating well below the current equipment capacity. Sufficient recovered volumes of refrigerant is the biggest bottleneck, not access to reclamation equipment.")
@@ -204,7 +204,7 @@ export const sections = [
 				b("What the model doesn’t capture. "),
 				t("The model assumes all recovered refrigerant can be reclaimed. In practice, gas from residential AC units is often contaminated with oil, and R-410A, the most common refrigerant in the recovered stream, cannot be separated into its components by the simple distillation units available in the region. Mixed or contaminated cylinders usually end up destroyed, which raises the actual cost of each kilogram that does get reclaimed.")
 			),
-			{ type: "h3", id: "reclamation-takeaways", text: "Takeaways" },
+			{ type: "h4", id: "reclamation-takeaways", text: "Takeaways" },
 			p(t("At scale, commercial HVAC (about USD 10/kg) and residential AC programs using high-capacity equipment (about USD 14/kg) fall within the current virgin refrigerant price range, so they may be able to compete with virgin gas priced at the higher-end. No pilot program can compete: even commercial HVAC, the cheapest pilot, would need to sell at about USD 19/kg. Residential AC reclamation programs using basic equipment are unlikely to be cost-effective, even at scale, until virgin prices rise.")),
 			p(
 				t("As Kigali implementation progresses in Southeast Asia, recovered refrigerant has an extremely important role to play in developing a circular economy for HFC consumption. It will become an increasingly valuable resource as supply becomes restricted and virgin gas prices rise. We have already seen that play out in non-Article 5 countries. In the European Union, for example, prices for some of the most widely used HFCs rose by 30–60% in a single year as the first major supply cut approached."),
@@ -212,7 +212,7 @@ export const sections = [
 				t(" At the moment, however, virgin HFCs (and to a lesser extent, HCFCs) are still readily available and cheap across Southeast Asia. Recovering and reclaiming refrigerant, while essential in the long term, is not yet a profitable business in most of the region. In the near term, support is needed for reclamation to achieve cost parity with virgin refrigerant. Ramping up recovery volumes takes time. Initial fragmented volumes will need to be sold at a loss unless there is support in the form of subsidies or requirements to use reclaimed refrigerants in certain applications such as during servicing. Reverse value chain actors have to also combat the fact that consumers are unfamiliar with reclaimed refrigerant and may not be willing to pay up to the price of virgin gas.")
 			),
 			{ type: "h3", id: "recycling-costs", text: "Recycling costs compared to reclaimed refrigerant costs for commercial HVAC" },
-			p(t("We compared recycling against reclamation using the same commercial HVAC scenarios as above: a 9-tonne pilot program and a 54-tonne at-scale program. Recycling skips transport to an end-use facility and reclamation processing, which reduces costs significantly. Recovery costs stay the same, but recycling incurs an estimated 50% increase in labor to cover the extra time spent cleaning the gas (shown as on-site cleaning in the chart below). The LRM Cost Explorer does not include a recycling scenario for the residential AC sector. The feedback from reverse supply chain actors was that refrigerant recovered from residential AC units is almost always too contaminated, usually with compressor oil, to be recycled. The Explorer therefore offers recycling only for the commercial HVAC sector, and this section compares the two end-use pathways for commercial HVAC alone.")),
+			p(t("We compared recovery-to-recycling costs against recovery-to-reclamation costs using the same commercial HVAC scenarios as above: a 9-tonne pilot program and a 54-tonne at-scale program. Recycling skips transport to an end-use facility and reclamation processing, which reduces costs significantly. Recovery costs stay the same, but recycling incurs an estimated 50% increase in labor to cover the extra time spent cleaning the gas (shown as on-site cleaning in the chart below). The LRM Cost Explorer does not include a recycling scenario for the residential AC sector. The feedback from reverse supply chain actors was that refrigerant recovered from residential AC units is almost always too contaminated, usually with compressor oil, to be recycled. The Explorer therefore offers recycling only for the commercial HVAC sector, and this section compares the two end-use pathways for commercial HVAC alone.")),
 			{ type: "h4", id: "comparing-recycling", text: "Comparing recycling and reclamation" },
 			p(t("The chart below compares the operating cost of recycling and reclaiming a kilogram of refrigerant from commercial HVAC equipment against the price of virgin refrigerant in Southeast Asia.")),
 			{
@@ -234,8 +234,8 @@ export const sections = [
 				b("What the model doesn’t capture. "),
 				t("Gas quality is the real constraint on recycling, and it is rarely checked. Recycled gas doesn’t have to meet a purity standard, and practitioners we spoke with disagreed on how far recycling should be promoted for that reason. Based on anecdotal feedback from stakeholders, some equipment owners recycle gas from domestic units even when it is contaminated in order to reduce costs. Contaminated gas returned to a system can damage it, and poor practice risks undermining confidence in reused refrigerant more broadly. Recycling also depends on how a system is maintained: gas that can be held in the compressor during servicing can be reused directly, while gas that has to be moved into cylinders adds handling time and the risk of mixing refrigerants.")
 			),
-			{ type: "h3", id: "recycling-takeaways", text: "Takeaways" },
-			p(t("Wherever gas is clean enough, recycling is the cheapest option and pays for itself. At under USD 2.50/kg, recycling costs less than virgin refrigerant at any scale, so commercial HVAC equipment owners and operators could save money by reusing their own gas without outside support. It is the one LRM end-use pathway in our analysis that is self-sustaining in Southeast Asia today. However, the applicability of recycling depends entirely on recovered gas purity levels. More research is needed to understand how and where recycling is an appropriate end-use pathway.")),
+			{ type: "h4", id: "recycling-takeaways", text: "Takeaways" },
+			p(t("Wherever gas is clean enough, recycling is the cheapest option and pays for itself. At under USD 2.50/kg, recycling costs less than virgin refrigerant at any scale, so commercial HVAC equipment owners and operators could save money by reusing their own gas without outside support. It is the one LRM end-use pathway in our analysis that is self-sustaining in Southeast Asia today. However, the applicability of recycling depends entirely on recovered gas purity levels. More research and on-the-ground assessments are needed to understand how and where recycling is an appropriate end-use pathway.")),
 			p(t("Unlike reclamation, recycling won’t build a market on its own. Recycling produces no product to sell, so it has to be driven by servicing practice and regulation rather than revenue. That makes technician training and servicing standards the main levers, and in much of the region those are at risk of being under strain if there are no sustained sources of funding, such as the Multilateral Fund programs for phasing out HCFCs, to continue supporting technician training programs in the future.")),
 			{ type: "h3", id: "destruction-carbon", text: "Recovery-to-destruction costs compared to regional carbon prices" },
 			{ type: "h4", id: "destruction-assumptions", text: "The scenarios and destruction assumptions" },
@@ -292,11 +292,11 @@ export const sections = [
 					},
 					{
 						id: "7",
-						parts: [a("National Environment Agency (NEA), Singapore, “Carbon Tax”", nea), t(" (international carbon credits).")]
+						parts: [a("National Environment Agency (NEA), Singapore, “Carbon Tax”", nea), t(", on international carbon credits.")]
 					},
 					{
 						id: "8",
-						parts: [t("S&P Global Commodity Insights, “Japan's GX-ETS mandatory phase begins” (8 April 2026), on eligible credits.")]
+						parts: [t("S&P Global Commodity Insights, “Japan’s GX-ETS mandatory phase begins” (8 April 2026), on eligible credits.")]
 					}
 				]
 			}
