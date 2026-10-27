@@ -271,6 +271,10 @@
 		padding: 1.35rem 4rem 2.4rem;
 	}
 
+	.ai-disclosure :global(.ai-note) {
+		max-width: none;
+	}
+
 	.hero {
 		background: var(--color-dark);
 		color: var(--color-light);

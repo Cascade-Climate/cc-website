@@ -1674,6 +1674,7 @@
 
 	.wrap :global(.ai-note) {
 		margin-top: 2.25rem;
+		max-width: none;
 	}
 
 	.site {
