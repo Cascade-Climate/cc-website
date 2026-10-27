@@ -51,8 +51,7 @@
 		<div class="spotlights">
 			<div class="spotlight">
 				<img src={lrmCylinders} alt="Stacked refrigerant cylinders" />
-				<h2>Introducing the LRM Cost Explorer</h2>
-				<p>Lifecycle refrigerant management can help limit near-term warming — but what does it actually cost? Our new tool breaks it down.</p>
+				<h2>Introducing the LRM Cost Explorer, a new tool that breaks down what lifecycle refrigerant management actually costs</h2>
 				<a href="/our-work/refrigerant-management-and-transition/costs">Learn More</a>
 			</div>
 			<div class="spotlight">
