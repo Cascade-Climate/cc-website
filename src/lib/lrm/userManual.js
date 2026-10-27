@@ -105,33 +105,11 @@ export const sections = [
           {
             "parts": [
               {
-                "text": "Destruction",
+                "text": "Recovery",
                 "bold": true
               },
               {
-                "text": ": This end-use pathway refers to the permanent chemical decomposition of refrigerants at a destruction facility using a technology that meets the ",
-                "bold": false
-              },
-              {
-                "text": "Montreal Protocol’s Technology and Economic Assessment Panel (TEAP) standards",
-                "href": "https://ozone.unep.org/sites/default/files/2019-04/TEAP-DecXXIX4-TF-Report-April2018.pdf",
-                "external": true
-              },
-              {
-                "text": ".",
-                "bold": false
-              }
-            ],
-            "children": []
-          },
-          {
-            "parts": [
-              {
-                "text": "Reclamation",
-                "bold": true
-              },
-              {
-                "text": ": This end-use pathway refers to the reprocessing of recovered refrigerants through mechanisms such as distillation or chemical treatment to meet the purity specifications of AHRI Standard 700 in a full-scale reclamation facility, verified through lab testing. Certified reclaimed refrigerants can then be either reused by the owner or sold to other users.",
+                "text": ": The collection and storage of controlled substances from machinery, equipment, containment vessels, etc., during servicing or prior to disposal.",
                 "bold": false
               }
             ],
@@ -144,7 +122,42 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": ": This end-use pathway refers to the extraction and basic cleaning (such as filtering and drying) of refrigerant for immediate reuse on-site, without meeting all of the requirements for reclamation. This option is not made available for ‘Residential AC’ as, in practice, refrigerant recovered from this sector is usually too contaminated and almost always needs to be reprocessed in a reclamation facility prior to reuse.",
+                "text": ": The extraction and cleaning of recovered refrigerants for reuse, often in the same system, without bringing it to full AHRI 700 reclamation standard. A typical setup combines acid and moisture filters, an oil separator, a dryer or purifier using desiccants or molecular sieves, and a vacuum pump and cylinders for recharging the gas into the same or comparable equipment.",
+                "bold": false
+              }
+            ],
+            "children": []
+          },
+          {
+            "parts": [
+              {
+                "text": "Reclamation",
+                "bold": true
+              },
+              {
+                "text": ": The processing of recovered refrigerants to meet international purity standards such as AHRI 700 in a full-scale reclamation facility. The process generally involves four stages: initial filtering and drying to remove moisture and larger particles; separating mixtures and contaminants, through fractional distillation or molecular filtration; chemical treatment to neutralize acids and other impurities; and gas chromatography (GC) testing to confirm composition and purity. Simple distillation is the most common reclamation method worldwide. However, simple distillation typically requires recovered refrigerants to have ~98% purity, limiting its applicability for mixed or contaminated gas. Fractional distillation is a more complex process that can handle lower-purity refrigerants, but they are significantly more expensive to own and operate.",
+                "bold": false
+              }
+            ],
+            "children": []
+          },
+          {
+            "parts": [
+              {
+                "text": "Destruction",
+                "bold": true
+              },
+              {
+                "text": ": The permanent decomposition of refrigerants at a destruction facility using a technology that meets or exceeds the ",
+                "bold": false
+              },
+              {
+                "text": "Montreal Protocol's Technology and Economic Assessment Panel (TEAP) standards",
+                "href": "https://ozone.unep.org/sites/default/files/2019-04/TEAP-DecXXIX4-TF-Report-April2018.pdf",
+                "external": true
+              },
+              {
+                "text": ". During the destruction process, refrigerants chemicals are broken down at very high temperatures, to a standard of decomposing at least 99.99 percent of the molecules for concentrated sources, with the by-products captured and treated. There are several TEAP-approved destruction technologies, including cement kiln, rotary kiln, argon plasma arc and municipal solid waste incineration.",
                 "bold": false
               }
             ],
