@@ -718,7 +718,16 @@ export const sections = [
         "type": "p",
         "parts": [
           {
-            "text": "This input determines whether the recovered refrigerant’s processing will be conducted domestically or if it needs to be delivered or shipped to another country for processing. The user’s selection will impact the cost range used for the ‘Transport & handling to end-use facility’ operational cost, which is included in the data reference sheet (refer to note in the Output section write up below for details about this sheet). For the ‘Recycling’ pathway, it is assumed that processing costs will be zero since the recycled refrigerant is directly reused on-site and will not need to be transported to a processing facility.",
+            "text": "This input determines whether the recovered refrigerant’s processing will be conducted domestically or if it needs to be delivered or shipped to another country for processing. The user’s selection will impact the cost range used for the ‘Transport & handling to end-use facility’ operational cost, which is included in the ",
+            "bold": false
+          },
+          {
+            "text": "data reference sheet",
+            "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+            "external": true
+          },
+          {
+            "text": " (refer to note in the Output section write up below for details about this sheet). For the ‘Recycling’ pathway, it is assumed that processing costs will be zero since the recycled refrigerant is directly reused on-site and will not need to be transported to a processing facility.",
             "bold": false
           }
         ]
@@ -950,7 +959,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": " based directly on the input variables entered by the user (or the default values). For example, recovery labor costs are calculated using information inputted by the user such as recovery time, labor hourly rate, etc. In this case, the tool does not source from Cascade’s data reference sheet to determine costs and uses only the information entered into the Input section.",
+                "text": " based directly on the input variables entered by the user (or the default values). For example, recovery labor costs are calculated using information inputted by the user such as recovery time, labor hourly rate, etc. In this case, the tool does not source from Cascade’s ",
+                "bold": false
+              },
+              {
+                "text": "data reference sheet",
+                "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+                "external": true
+              },
+              {
+                "text": " to determine costs and uses only the information entered into the Input section.",
                 "bold": false
               }
             ],
@@ -963,7 +981,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Cascade collected data from stakeholder interviews and field visits to LRM facilities in Southeast Asia, which we compiled into the data reference sheet. All sources have been anonymized and all cost components (e.g., destruction processing cost/kg) appear as a range of values rather than a single value that can be attributed to a specific source. For cost components that cannot be calculated directly by formula, the tool references the cost component in the data reference sheet, and refers to a value based on the cost scenario (high, medium, or low) determined by the user.",
+                "text": "Cascade collected data from stakeholder interviews and field visits to LRM facilities in Southeast Asia, which we compiled into the ",
+                "bold": false
+              },
+              {
+                "text": "data reference sheet",
+                "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+                "external": true
+              },
+              {
+                "text": ". All sources have been anonymized and all cost components (e.g., destruction processing cost/kg) appear as a range of values rather than a single value that can be attributed to a specific source. For cost components that cannot be calculated directly by formula, the tool references the cost component in the data reference sheet, and refers to a value based on the cost scenario (high, medium, or low) determined by the user.",
                 "bold": false
               }
             ],
@@ -1042,7 +1069,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Values sourced from the data reference sheet based on the determined cost scenario.",
+                "text": "Values sourced from the ",
+                "bold": false
+              },
+              {
+                "text": "data reference sheet",
+                "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+                "external": true
+              },
+              {
+                "text": " based on the determined cost scenario.",
                 "bold": false
               }
             ],
@@ -1099,7 +1135,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Values sourced from the data reference sheet based on the cost scenario.",
+                "text": "Values sourced from the ",
+                "bold": false
+              },
+              {
+                "text": "data reference sheet",
+                "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+                "external": true
+              },
+              {
+                "text": " based on the cost scenario.",
                 "bold": false
               }
             ],
@@ -1178,7 +1223,16 @@ export const sections = [
               {
                 "parts": [
                   {
-                    "text": "Central storage facility operational costs (USD/kg) is sourced from the data reference sheet, based on the cost scenario.",
+                    "text": "Central storage facility operational costs (USD/kg) is sourced from the ",
+                    "bold": false
+                  },
+                  {
+                    "text": "data reference sheet",
+                    "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+                    "external": true
+                  },
+                  {
+                    "text": ", based on the cost scenario.",
                     "bold": false
                   }
                 ],
@@ -1477,7 +1531,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Sourced from the data reference sheet. Capex costs for new destruction and retrofit facilities reference published figures (",
+                "text": "Sourced from the ",
+                "bold": false
+              },
+              {
+                "text": "data reference sheet",
+                "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+                "external": true
+              },
+              {
+                "text": ". Capex costs for new destruction and retrofit facilities reference published figures (",
                 "bold": false
               },
               {
@@ -1671,7 +1734,16 @@ export const sections = [
                 "bold": true
               },
               {
-                "text": "Based on the user’s inputs, the model will determine the estimated number of units required for each type of equipment and output cost figures based on the per unit equipment cost in the data reference sheet. These are calculated estimates based on the following formulas:",
+                "text": "Based on the user’s inputs, the model will determine the estimated number of units required for each type of equipment and output cost figures based on the per unit equipment cost in the ",
+                "bold": false
+              },
+              {
+                "text": "data reference sheet",
+                "href": "/LRM-Cost-Explorer-Data-Reference-Sheet.pdf",
+                "external": true
+              },
+              {
+                "text": ". These are calculated estimates based on the following formulas:",
                 "bold": false
               }
             ],
