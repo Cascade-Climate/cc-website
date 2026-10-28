@@ -159,11 +159,6 @@
 			<h1>Noemma Olagaray</h1>
 			<span>Program Manager</span>
 		</a>
-		<a class="team-card" href="/people/asabi-rawlins">
-			<img src="/images/people/asabi-rawlins.png" alt="Asabi Rawlins" />
-			<h1>Asabi Rawlins</h1>
-			<span>International Policy Manager</span>
-		</a>
 		<a class="team-card" href="/people/anna-sophia-roberts">
 			<img src={annaSophiaRoberts} alt="Anna Sophia Roberts" />
 			<h1>Anna Sophia Roberts</h1>
