@@ -9,6 +9,20 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
+				<a href="/erw/dq-updates">Data Quarry: Recent Updates</a>
+			</h1>
+			<p>
+				Ten unique datasets are now available, each a window into a real-world ERW project. We encourage researchers
+				to request data to advance non-commercial ERW science.
+			</p>
+			<p class="details">
+				<span class="date">11/12/2026</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+		<div class="post">
+			<h1>
 				<a href="/bedrock-initiative/modeling/blog/may-workshop">
 					Mapping the Terrain: Notes from the ERW Modeling Workshop
 				</a>
@@ -21,22 +35,6 @@
 				<span class="date">07/22/2026</span>
 				·
 				<span class="read-time">5 MIN READ</span>
-			</p>
-		</div>
-		<div class="post">
-			<h1>
-				<a href="/blog/data-quarry-update-summer-26">
-					The Data Quarry, One Year In
-				</a>
-			</h1>
-			<p>
-				Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what they
-				hold, what they can already tell us, and what future contributions may reveal.
-			</p>
-			<p class="details">
-				<span class="date">07/08/2026</span>
-				·
-				<span class="read-time">10 MIN READ</span>
 			</p>
 		</div>
 		<div class="post">

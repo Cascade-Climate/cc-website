@@ -2,6 +2,15 @@ import { dev } from '$app/environment';
 
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
+	const path = event.url.pathname.replace(/\/$/, '') || '/';
+	const dqUpdates = '/erw/dq-updates';
+	if (
+		path === '/blog/data-quarry-update-summer-26' ||
+		path.toLowerCase() === '/erw/dq-overview' ||
+		(path.toLowerCase() === '/erw/dq-updates' && path !== dqUpdates)
+	) {
+		return Response.redirect(new URL(dqUpdates, event.url), 301);
+	}
 	// Redirect lowercase blog URL to actual route (Windows keeps folder as LRM-gaps)
 	if (event.url.pathname === '/blog/lrm-gaps') {
 		return Response.redirect(new URL('/blog/LRM-gaps', event.url), 302);

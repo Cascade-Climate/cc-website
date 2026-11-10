@@ -76,12 +76,12 @@
 					src="/images/blog/data-quarry-summer-26-hero.jpg"
 					alt="View through a window overlooking agricultural fields and tropical vegetation"
 				/>
-				<h2>The Data Quarry, One Year In</h2>
+				<h2>Data Quarry: Recent Updates</h2>
 				<p>
-					Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what
-					they tell us, and what future contributions may reveal.
+					Ten unique datasets are now available, each a window into a real-world ERW project. We encourage
+					researchers to request data to advance non-commercial ERW science.
 				</p>
-				<a href="/blog/data-quarry-update-summer-26" target="_blank">Learn More</a>
+				<a href="/erw/dq-updates" target="_blank">Learn More</a>
 			</div>
 		</div>
 
@@ -90,6 +90,25 @@
 		<h3>RECENT <a href="/blog">BLOGS ↗</a></h3>
 		<div id="blog">
 	<div id="post-list">
+
+		<div class="post">
+			<h1>
+				<a href="/erw/dq-updates" target="_blank" style="color: var(--color-accent);">
+					Data Quarry: Recent Updates
+				</a>
+			</h1>
+			<p>
+				Ten unique datasets are now available, each a window into a real-world ERW project. We encourage researchers
+				to request data to advance non-commercial ERW science.
+			</p>
+			<p class="details">
+				<span class="date">11/12/2026</span>
+				·
+				<span class="read-time">10 MIN READ</span>
+			</p>
+		</div>
+
+		<hr>
 
 		<div class="post">
 			<h1>
@@ -104,25 +123,6 @@
 				<span class="date">07/22/2026</span>
 				·
 				<span class="read-time">5 MIN READ</span>
-			</p>
-		</div>
-
-		<hr>
-
-		<div class="post">
-			<h1>
-				<a href="/blog/data-quarry-update-summer-26" target="_blank" style="color: var(--color-accent);">
-					The Data Quarry, One Year In
-				</a>
-			</h1>
-			<p>
-				Six commercial datasets are now available, each a window into a real-world ERW project. Here&apos;s what they
-				hold, what they can already tell us, and what future contributions may reveal.
-			</p>
-			<p class="details">
-				<span class="date">07/08/2026</span>
-				·
-				<span class="read-time">10 MIN READ</span>
 			</p>
 		</div>
 

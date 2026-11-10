@@ -148,10 +148,7 @@
 			<ul>
 				<li>
 					<strong>Check out visualizations of currently available data</strong> —
-					<a href="/blog/data-quarry-update-summer-26"
-						>See our latest overview of current projects and variable coverage in the Data Quarry as
-						of September 2026</a
-					>.
+					<a href="/erw/dq-updates">Data Quarry: Recent Updates</a>.
 				</li>
 				<li>
 					<strong>Log in</strong> — Set up a Data Quarry user profile at
