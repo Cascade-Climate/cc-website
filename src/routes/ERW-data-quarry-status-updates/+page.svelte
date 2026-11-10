@@ -115,8 +115,8 @@
 
 	const sections = [
 		{ id: 'available-datasets', title: 'Available Datasets' },
-		{ id: 'requesting-access', title: 'Requesting Access' },
-		{ id: 'upcoming-contributions', title: 'Upcoming Contributions' }
+		{ id: 'upcoming-contributions', title: 'Upcoming Contributions' },
+		{ id: 'requesting-access', title: 'Requesting Access' }
 	];
 
 	let active = sections[0].id;
@@ -266,59 +266,8 @@
 			</div>
 		</section>
 
-		<section id="requesting-access" class="section">
-			<h2>Requesting access</h2>
-			<p>You can request access to datasets if you are exploring a non-commercial research question.</p>
-			<p>To do this:</p>
-			<ul>
-				<li>
-					<strong>Check out an overview, including visualizations, of currently available data</strong>
-					—
-					<a href="/erw/dq-updates"
-						>See our latest overview of current projects and variable coverage in the Data Quarry as of
-						November 2026</a
-					>.
-				</li>
-				<li>
-					<strong>Log in</strong> — Set up a Data Quarry user profile at
-					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
-						>data.cascadeclimate.org</a
-					>.
-				</li>
-				<li>
-					<strong>Review datasets</strong> — Dataset abstracts and variable coverage are posted in the
-					Data Quarry catalog (Datasets menu at
-					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
-						>data.cascadeclimate.org</a
-					>).
-				</li>
-				<li>
-					<strong>Explore which specific variables are included</strong> — Looking for dissolution,
-					soil, feedstock, biomass, weather, or agronomic variables? Dataset coverage varies by
-					project; available variables are listed by project.
-				</li>
-				<li>
-					<strong>Submit a research proposal</strong> — Request the dataset(s) most relevant to your
-					analysis using the Request Form linked to each dataset in the catalog.
-				</li>
-			</ul>
-			<p>
-				Note that all health &amp; safety data is already publicly available via the
-				<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener"
-					>Data Quarry CDRXIV channel</a
-				>, which is also where full datasets will be available upon inclusion in an academic
-				publication.
-			</p>
-			<p>
-				If you have any additional questions, please reach out to our team at
-				<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a>, and we will be happy to
-				assist.
-			</p>
-		</section>
-
 		<section id="upcoming-contributions" class="section">
 			<h2>Upcoming contributions</h2>
-			<h2>Pipeline of expected commercial datasets</h2>
 			<p>
 				The Data Quarry is a voluntary data-sharing effort, and participation evolves over time as
 				projects progress. Submission timing can vary for multiple reasons, including lab turnaround
@@ -387,6 +336,56 @@
 					</li>
 				</ol>
 			</div>
+		</section>
+
+		<section id="requesting-access" class="section">
+			<h2>Requesting access</h2>
+			<p>You can request access to datasets if you are exploring a non-commercial research question.</p>
+			<p>To do this:</p>
+			<ul>
+				<li>
+					<strong>Check out an overview, including visualizations, of currently available data</strong>
+					—
+					<a href="/erw/dq-updates"
+						>See our latest overview of current projects and variable coverage in the Data Quarry as of
+						November 2026</a
+					>.
+				</li>
+				<li>
+					<strong>Log in</strong> — Set up a Data Quarry user profile at
+					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
+						>data.cascadeclimate.org</a
+					>.
+				</li>
+				<li>
+					<strong>Review datasets</strong> — Dataset abstracts and variable coverage are posted in the
+					Data Quarry catalog (Datasets menu at
+					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
+						>data.cascadeclimate.org</a
+					>).
+				</li>
+				<li>
+					<strong>Explore which specific variables are included</strong> — Looking for dissolution,
+					soil, feedstock, biomass, weather, or agronomic variables? Dataset coverage varies by
+					project; available variables are listed by project.
+				</li>
+				<li>
+					<strong>Submit a research proposal</strong> — Request the dataset(s) most relevant to your
+					analysis using the Request Form linked to each dataset in the catalog.
+				</li>
+			</ul>
+			<p>
+				Note that all health &amp; safety data is already publicly available via the
+				<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener"
+					>Data Quarry CDRXIV channel</a
+				>, which is also where full datasets will be available upon inclusion in an academic
+				publication.
+			</p>
+			<p>
+				If you have any additional questions, please reach out to our team at
+				<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a>, and we will be happy to
+				assist.
+			</p>
 		</section>
 	</article>
 </div>
@@ -528,10 +527,6 @@
 
 	.section:first-of-type {
 		margin-top: 1.5rem;
-	}
-
-	.section h2 ~ h2 {
-		margin-top: 2.5rem;
 	}
 
 	.article a {
