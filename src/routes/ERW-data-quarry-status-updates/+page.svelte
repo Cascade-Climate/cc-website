@@ -192,6 +192,11 @@
 				>
 			</div>
 		</div>
+		<img
+			class="hero-photo"
+			src="/images/blog/erw-data-quarry-hero.png"
+			alt="Aerial view of an industrial rock quarry"
+		/>
 	</section>
 
 	<div class="scroll-nav-wrapper" class:pinned bind:this={navWrapper}>
@@ -279,6 +284,7 @@
 			</p>
 			<div class="table-card">
 				<p class="table-label">Expected commercial datasets</p>
+				<p class="table-updated">Updated November 2026</p>
 				<div class="table-wrap pipeline-wrap">
 					<table>
 						<thead>
@@ -310,7 +316,6 @@
 					</table>
 				</div>
 			</div>
-			<p class="table-note">Table updated as of: November 2026</p>
 			<div class="footnotes">
 				<h3>Footnotes</h3>
 				<ol>
@@ -399,13 +404,27 @@
 	}
 
 	.hero {
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
 		background: var(--color-dark);
 		color: var(--color-light);
 		padding: calc(4rem + 2.75rem) 4rem 2.65rem;
 	}
 
 	.hero-copy {
+		flex: 1 1 34rem;
 		max-width: 48rem;
+	}
+
+	.hero-photo {
+		flex: 1 1 22rem;
+		width: 40%;
+		max-width: 40%;
+		height: 18rem;
+		object-fit: cover;
+		border-radius: 1rem;
+		margin: 0;
 	}
 
 	.hero h1 {
@@ -564,6 +583,15 @@
 		color: var(--color-dark);
 	}
 
+	.table-updated {
+		margin: -0.45rem 0 0;
+		padding: 0 1.1rem 0.75rem;
+		font-size: 0.82rem;
+		font-weight: 400;
+		line-height: 1.3;
+		color: color-mix(in srgb, var(--color-dark) 68%, white);
+	}
+
 	.table-wrap {
 		width: 100%;
 		overflow-x: auto;
@@ -687,12 +715,6 @@
 		vertical-align: 0.08em;
 	}
 
-	.table-note {
-		font-size: 0.9rem;
-		font-style: italic;
-		margin-top: 0;
-	}
-
 	.footnotes {
 		margin-top: 1.5rem;
 		padding-top: 1.25rem;
@@ -725,6 +747,19 @@
 	.dq-pipeline :focus-visible {
 		outline: 2px solid color-mix(in srgb, var(--color-highlight) 85%, transparent);
 		outline-offset: 3px;
+	}
+
+	@media (max-width: 960px) {
+		.hero {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.hero-photo {
+			width: 100%;
+			max-width: none;
+			height: 14rem;
+		}
 	}
 
 	@media (max-width: 660px) {
