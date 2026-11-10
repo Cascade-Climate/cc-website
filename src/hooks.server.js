@@ -15,11 +15,13 @@ export async function handle({ event, resolve }) {
 	if (event.url.pathname === '/blog/lrm-gaps') {
 		return Response.redirect(new URL('/blog/LRM-gaps', event.url), 302);
 	}
-	if (event.url.pathname.toLowerCase() === '/blog/erw-data-quarry-status-updates') {
-		return Response.redirect(new URL('/ERW-data-quarry-status-updates', event.url), 302);
-	}
-	if (event.url.pathname === '/erw-data-quarry-status-updates') {
-		return Response.redirect(new URL('/ERW-data-quarry-status-updates', event.url), 302);
+	const dqUpcoming = '/erw-dq-upcoming';
+	if (
+		path.toLowerCase() === '/blog/erw-data-quarry-status-updates' ||
+		path.toLowerCase() === '/erw-data-quarry-status-updates' ||
+		(path.toLowerCase() === dqUpcoming && path !== dqUpcoming)
+	) {
+		return Response.redirect(new URL(dqUpcoming, event.url), 301);
 	}
 	// Legacy / alternate press PDF URLs → canonical static file
 	if (event.url.pathname === '/bedrock-initiative/pressrelease.pdf') {

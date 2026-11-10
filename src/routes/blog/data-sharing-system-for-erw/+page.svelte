@@ -36,7 +36,7 @@
 				<h1>Introducing the ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
                 <div class="links">
                     <a href="/erw/dq-updates">Data Quarry: Recent Updates↗</a>
-                    <a href="/ERW-data-quarry-status-updates">Explore available and upcoming datasets↗</a>
+                    <a href="/erw-dq-upcoming">Explore available and upcoming datasets↗</a>
                 </div>
                 <p></p>
 				<p>
