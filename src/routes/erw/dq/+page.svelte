@@ -86,7 +86,7 @@
 		<div class="hero-copy">
 			<h1>ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
 			<div class="hero-actions">
-				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Access the ERW Data Quarry↗</a>
+				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Log in or sign up to access↗</a>
 			</div>
 			<p>
 				Enhanced rock weathering (ERW) offers meaningful carbon removal alongside the promise of healthier soils and higher crop yields. Researchers need detailed field data to understand how much carbon it can remove, where and to what extent it benefits crops, and how to deploy and scale the practice safely and sustainably.
