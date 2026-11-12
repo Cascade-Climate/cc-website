@@ -275,8 +275,9 @@
 					<strong
 						>After signing up, a short proposal through the
 						<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Data Quarry</a> is all it takes
-						to request access</strong
-					>, and we add new datasets regularly — join the
+						to request access, and we add new datasets regularly.</strong
+					>
+					Join the
 					<a
 						href="https://groups.google.com/a/cascadeclimate.org/g/notifs-dataquarry"
 						target="_blank"
@@ -785,6 +786,10 @@
 
 	.figure-block {
 		margin: 0 0 1.25rem;
+	}
+
+	.access-callout + .figure-block {
+		margin-top: 3rem;
 	}
 
 	.figure-image {
