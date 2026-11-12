@@ -321,7 +321,7 @@
 
 	#about div {
 		background-color: var(--color-dark);
-		padding: 1rem 4rem;
+		padding: 1rem 4rem 3rem;
 		color: var(--color-light);
 	}
 
@@ -461,6 +461,10 @@
 		#about div,
 		.bedrock-topbar {
 			padding: 1rem 2rem;
+		}
+
+		#about div {
+			padding-bottom: 3rem;
 		}
 
 		.bedrock-topbar {
