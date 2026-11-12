@@ -154,11 +154,14 @@
 		property="og:description"
 		content="Ten unique datasets are now available, each a window into a real-world ERW project. We encourage researchers to request data to advance non-commercial ERW science."
 	/>
-	<meta property="og:image" content="https://cascadeclimate.org/images/blog/erw-data-quarry-hero.png" />
-	<meta property="og:image:width" content="1024" />
-	<meta property="og:image:height" content="683" />
+	<meta property="og:url" content="https://cascadeclimate.org/erw/dq-updates" />
+	<meta property="og:image" content="https://cascadeclimate.org/images/blog/erw-data-quarry-og.jpg" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="800" />
+	<meta property="og:image:alt" content="Aerial view of an industrial rock quarry" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="https://cascadeclimate.org/images/blog/erw-data-quarry-hero.png" />
+	<meta name="twitter:image" content="https://cascadeclimate.org/images/blog/erw-data-quarry-og.jpg" />
 </svelte:head>
 
 <div class="dq-updates">
