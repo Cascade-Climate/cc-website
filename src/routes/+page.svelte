@@ -46,7 +46,6 @@
 				Our current work is focused on enhanced rock weathering, our entry point in durable carbon removal, and lifecycle refrigerant management, our entry point in super pollutant mitigation.
 			</p>
 			<a class="about-more" href="/about-us">Learn more</a>
-			<hr style="margin: 64px;">
 		</div>
 	</section>
 
@@ -351,7 +350,11 @@
 	}
 
 	#our-work {
-		padding: 2rem 4rem;
+		padding: 1.5rem 4rem 2rem;
+	}
+
+	#our-work > h3 {
+		margin-top: 0;
 	}
 
 	.bedrock-topbar {
