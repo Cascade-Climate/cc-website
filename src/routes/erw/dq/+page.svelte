@@ -94,13 +94,13 @@
 			<p>
 				Launched in May 2025, the ERW Data Quarry makes data from commercial projects and field trials available for non-commercial research.
 			</p>
-			<p>
-				<strong>To learn more about the state of ERW science, how the Data Quarry works, and flagship contributors, scroll to read more.</strong>
-			</p>
 			<div class="hero-actions">
 				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates↗</a>
 				<a class="cta" href="/erw-dq-upcoming">Explore available and forthcoming datasets↗</a>
 			</div>
+			<p>
+				<strong>To learn more about the state of ERW science, how the Data Quarry works, and flagship contributors, scroll to read more.</strong>
+			</p>
 		</div>
 		<img class="hero-photo" src={data} alt="Enhanced Rock Weathering" />
 	</section>
