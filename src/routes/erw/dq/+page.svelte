@@ -29,11 +29,15 @@
 	const rockFlourLogo = '/images/logos/rock-flour-transparent.png';
 </script>
 
+<svelte:head>
+	<title>ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering - Cascade Climate</title>
+</svelte:head>
+
 <div>
 	<section class="intro">
 		<div class="content">
 			<div class="copy">
-				<h1>Introducing the ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
+				<h1>ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
                 <div class="links">
                     <a href="/erw/dq-updates">ERW Data Quarry: Latest Updates↗</a>
                     <a href="/erw-dq-upcoming">Explore available and forthcoming datasets↗</a>
