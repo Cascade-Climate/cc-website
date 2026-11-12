@@ -453,19 +453,13 @@
 
 	.cta {
 		display: inline-block;
-		padding: 0.55rem 1.35rem;
+		padding: 0.5rem 1.25rem;
 		border-radius: 2rem;
-		background: var(--color-accent);
+		background-color: var(--color-accent);
 		color: var(--color-light);
 		text-decoration: none;
-		font-weight: 500;
-		font-size: 1rem;
-		line-height: 1.3;
-		border: 1px solid transparent;
-	}
-
-	.cta:hover {
-		opacity: 0.92;
+		font-weight: 300;
+		font-size: 0.95rem;
 	}
 
 	.scroll-nav-spacer {
@@ -551,7 +545,7 @@
 	.article a.cta:hover {
 		color: var(--color-light);
 		text-decoration: none;
-		font-weight: 500;
+		font-weight: 300;
 	}
 
 	.section-cta {

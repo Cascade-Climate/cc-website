@@ -75,10 +75,13 @@
 		<p>
 			Through our lifecycle refrigerant management program, we're now applying our distinctive approach to reduce refrigerant emissions and help expand access to clean cooling. Potent greenhouse-trapping refrigerants in the world's cooling equipment are still vented by default, and the systems to recover them barely exist. In Asia, we're mobilizing catalytic funding for demonstration projects to establish the foundations for a refrigerant recovery, reuse, and disposal network, while working in parallel toward embedding lifecycle refrigerant management in policy and cooling industry practice.
 		</p>
+		<p class="work-more-wrap">
+			<a class="work-more" href="/our-work">Learn more about our work</a>
+		</p>
 	</section>
 </main>
 <section id="supporters">
-	Supported by:
+	<h1>Supported by</h1>
 	<div id="supporters-container">
 		<a href="https://astera.org">
 			<img width="680" height="365" src={asteraLogo} alt="Astera Institute Logo" />
@@ -108,9 +111,6 @@
 		</a>
 	</div>
 </section>
-<p class="work-more-wrap">
-	<a class="work-more" href="/our-work">Learn more about our work</a>
-</p>
 
 <style>
 	main h1,
@@ -178,11 +178,17 @@
 	#supporters {
 		padding: 4rem;
 	}
+	#supporters h1 {
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: initial;
+		margin: 0;
+	}
+
 	#supporters-container {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		border-top: 1px solid var(--color-text);
 		margin-top: 1rem;
 		width: 100%;
 	}
@@ -199,19 +205,18 @@
 	}
 
 	.work-more-wrap {
-		margin: 0;
-		padding: 0 4rem 4rem;
+		margin: 1.25rem 0 0;
 	}
 
 	.work-more {
 		display: inline-block;
 		background-color: var(--color-accent);
 		color: var(--color-light);
-		padding: 0.5rem 1.2rem;
+		padding: 0.5rem 1.25rem;
 		border-radius: 2rem;
 		text-decoration: none;
-		font-size: 1rem;
-		font-weight: 500;
+		font-size: 0.95rem;
+		font-weight: 300;
 	}
 
 	@media (max-width: 660px) {
@@ -219,10 +224,6 @@
 		.intro,
 		#supporters {
 			padding: 2rem;
-		}
-
-		.work-more-wrap {
-			padding: 0 2rem 3rem;
 		}
 
 		main {

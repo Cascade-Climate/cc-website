@@ -420,14 +420,16 @@
 	}
 
 	.spotlight a {
-		background-color: var(--color-accent);
-		color: var(--color-light);
-		padding: 0.5rem 1rem;
-		border-radius: 2rem;
+		align-self: flex-start;
 		margin-top: auto;
 		margin-bottom: 1rem;
-		font-size: 1rem;
-		width: 100%;
+		border-radius: 2rem;
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		padding: 0.5rem 1.25rem;
+		text-decoration: none;
+		font-size: 0.95rem;
+		font-weight: 300;
 	}
 
 	.about-more {
@@ -435,10 +437,11 @@
 		margin-top: 1.25rem;
 		background-color: var(--color-accent);
 		color: var(--color-light);
-		padding: 0.5rem 1.2rem;
+		padding: 0.5rem 1.25rem;
 		border-radius: 2rem;
 		text-decoration: none;
-		font-size: 1rem;
+		font-size: 0.95rem;
+		font-weight: 300;
 	}
 
 	@media (max-width: 660px) {
