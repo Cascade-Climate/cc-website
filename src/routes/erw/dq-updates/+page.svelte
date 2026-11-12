@@ -49,7 +49,7 @@
 			status: 'Available upon request'
 		},
 		{
-			contributor: 'Carbon Drawdown Initiative — 1200t Secondary Clay Formation Research',
+			contributor: 'Carbon Drawdown Initiative — 1200 t Secondary Clay Formation Research',
 			region: 'Germany',
 			crops: ['43 ha Mixed'],
 			uploaded: 'March 2026',
@@ -149,6 +149,16 @@
 		name="description"
 		content="Ten unique datasets are now available, each a window into a real-world ERW project. We encourage researchers to request data to advance non-commercial ERW science."
 	/>
+	<meta property="og:title" content="ERW Data Quarry: Latest Updates" />
+	<meta
+		property="og:description"
+		content="Ten unique datasets are now available, each a window into a real-world ERW project. We encourage researchers to request data to advance non-commercial ERW science."
+	/>
+	<meta property="og:image" content="https://cascadeclimate.org/images/blog/erw-data-quarry-hero.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="683" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://cascadeclimate.org/images/blog/erw-data-quarry-hero.png" />
 </svelte:head>
 
 <div class="dq-updates">
@@ -167,6 +177,11 @@
 				<a class="cta" href="/erw-dq-upcoming">See datasets in our pipeline↗</a>
 			</div>
 		</div>
+		<img
+			class="hero-photo"
+			src="/images/blog/data-quarry-summer-26-hero.jpg"
+			alt="View through a window overlooking agricultural fields and tropical vegetation"
+		/>
 	</section>
 
 	<div class="scroll-nav-wrapper" class:pinned bind:this={navWrapper}>
@@ -197,7 +212,7 @@
 				<h2 id="access-callout-heading">How does Data Quarry access work?</h2>
 				<p>
 					Researchers request datasets through a lightweight, proposal-based system overseen by a
-					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Governance Board</a>, designed
+					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Governance Board</a> and designed
 					to advance non-commercial ERW science. Health and safety data is released publicly on our
 					<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener noreferrer"
 						>CDRXIV channel</a
@@ -313,7 +328,7 @@
 			</p>
 			<p>
 				The commercial datasets give insight into how ERW is being actively deployed today. InPlanet&apos;s two
-				Brazilian sites (Serra da Mantiqueira and Project Araçari) have the most variable coverage, spanning all five
+				Brazilian sites (Serra da Mantiqueira and Project Araçari) have the broadest variable coverage, spanning all five
 				categories. The second year of Serra da Mantiqueira data is now hosted as well, with additional years coming
 				soon. Mati, Varaha,
 				and Flux have contributed data from especially data-sparse regions. Silica’s Mata de Agua uses a unique
@@ -321,7 +336,7 @@
 			</p>
 			<p>
 				The academic and experimental datasets investigate all aspects of ERW MRV. For example, the Carbon Drawdown
-				Initiative&apos;s XXL-lysimeter project contributes rich lysimetry data, UC Davis’s SFREC experiment was
+				Initiative&apos;s XXL Lysimeter project contributes rich lysimetry data, UC Davis’s SFREC experiment was
 				designed to test a variety of MRV approaches, and the Energy Farm site offers data from repeated years of rock
 				spread.
 			</p>
@@ -377,7 +392,7 @@
 			</ul>
 			<p>
 				<strong>None of these questions can be fully answered by today&apos;s collection</strong> — but our catalog is
-				growing more and more capable. Here&apos;s what the data shows today.
+				growing more capable. Here&apos;s what the data shows today.
 			</p>
 			<ul>
 				<li>
@@ -391,7 +406,7 @@
 					than a single year of project data can provide.
 					Currently seven datasets have SOC data (ranging from 18 to 323 SOC samples reported, with 155 SOC samples
 					reported on average).
-					As the depth and breadth of this data expands, so will our ability to interrogate SOC trajectories.
+					As the depth and breadth of this data expand, so will our ability to interrogate SOC trajectories.
 				</li>
 				<li>
 					<strong>MRV time lags.</strong> Most records are too short to investigate these questions directly, but the
@@ -440,13 +455,27 @@
 	}
 
 	.hero {
+		display: flex;
+		align-items: center;
+		gap: 2.5rem;
 		background: var(--color-dark);
 		color: var(--color-light);
 		padding: calc(4rem + 2.75rem) 4rem 2.65rem;
 	}
 
 	.hero-copy {
+		flex: 1 1 34rem;
 		max-width: 48rem;
+	}
+
+	.hero-photo {
+		flex: 1 1 22rem;
+		width: 40%;
+		max-width: 40%;
+		height: 18rem;
+		object-fit: cover;
+		border-radius: 1rem;
+		margin: 0;
 	}
 
 	.hero h1 {
@@ -815,6 +844,19 @@
 	.dq-updates :focus-visible {
 		outline: 2px solid color-mix(in srgb, var(--color-highlight) 85%, transparent);
 		outline-offset: 3px;
+	}
+
+	@media (max-width: 960px) {
+		.hero {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.hero-photo {
+			width: 100%;
+			max-width: none;
+			height: 14rem;
+		}
 	}
 
 	@media (max-width: 660px) {

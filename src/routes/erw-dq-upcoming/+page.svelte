@@ -50,7 +50,7 @@
 			status: 'Available upon request'
 		},
 		{
-			contributor: 'Carbon Drawdown Initiative — 1200t Secondary Clay Formation Research',
+			contributor: 'Carbon Drawdown Initiative — 1200 t Secondary Clay Formation Research',
 			region: 'Germany',
 			crops: ['43 ha Mixed'],
 			uploaded: 'March 2026',
@@ -301,7 +301,7 @@
 				</li>
 			</ul>
 			<p>
-				Note that all health &amp; safety data is already publicly available via the
+				Note that all health and safety data is already publicly available via the
 				<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener"
 					>Data Quarry CDRXIV channel</a
 				>, which is also where full datasets will be available upon inclusion in an academic
@@ -334,7 +334,7 @@
 							<tr>
 								<th>Commercial dataset contributor</th>
 								<th>Region</th>
-								<th>Dataset sharing expected by</th>
+								<th>Dataset sharing expected</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -365,7 +365,7 @@
 					<li id="footnote1">
 						Though they are not reflected in the pipeline above, we also welcome academic field trial
 						datasets. We expect to host academic field trial datasets from our
-						<a href="/blog/erw-field-grant-awardees">Field Data Partnerships Grants</a>’ deployments at
+						<a href="/blog/erw-field-grant-awardees">Field Data Partnership Grants</a>’ deployments at
 						academic research stations, and welcome any others who wish to leverage the Data Quarry
 						platform to share ERW deployment datasets prior to publication. Reach out to
 						<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a> if you are interested
@@ -377,7 +377,7 @@
 						committed data-sharing timeline, but the partners continue to communicate and work with us
 						on how to follow through on that commitment. Commitments with 3 or more months of
 						unexplained delay and/or 3 or more follow-ups without a response are labeled as “lapsed,”
-						indicating data sharing to the Data Quarry is no longer certain. Contributors are removed
+						indicating that data sharing to the Data Quarry is no longer certain. Contributors are removed
 						from the contributors list if a contribution is no longer expected because no ERW
 						deployment data will be generated.
 						<a href="#citation2">Back to text</a>
