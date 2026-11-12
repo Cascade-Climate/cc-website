@@ -1,9 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
 
-	// BEFORE GO-LIVE: remind the editor these table cells are still placeholders.
-	// - UC Davis crops/area is ".4 ha" and "Grass Clover Rangeland"
-	// - University of Illinois crops/area is only "Corn Belt" (no crop or hectares)
+	// BEFORE GO-LIVE: remind the editor these table cells are still thin.
+	// - UC Davis crops/area is ".4 ha Grass Clover Rangeland"
+	// - University of Illinois crops/area is only "Corn" (no hectares)
 	// - Carbon Drawdown Initiative XXL Lysimeter crops/area is only "<1 ha" (no crop)
 	const datasets = [
 		{
@@ -60,7 +60,7 @@
 		{
 			contributor: 'Varaha — Project Khargone',
 			region: 'India',
-			crops: ['195 ha Cotton Wheat rotation'],
+			crops: ['195 ha Cotton and Wheat'],
 			uploadedEmphasis: 'October 2026',
 			years: '1',
 			status: 'Available upon request',
@@ -78,7 +78,7 @@
 		{
 			contributor: 'University of California, Davis — Sierra Foothill Research and Extension Center',
 			region: 'USA',
-			crops: ['.4 ha', 'Grass Clover Rangeland'],
+			crops: ['.4 ha Grass Clover Rangeland'],
 			uploadedEmphasis: 'October 2026',
 			years: '1',
 			status: 'Available upon request',
@@ -87,7 +87,7 @@
 		{
 			contributor: 'University of Illinois — Energy Farm',
 			region: 'USA',
-			crops: ['Corn Belt'],
+			crops: ['Corn'],
 			uploadedEmphasis: 'October 2026',
 			years: '1',
 			status: 'Available upon request',
@@ -98,8 +98,7 @@
 	const sections = [
 		{ id: 'overview', title: 'Overview' },
 		{ id: 'current-datasets', title: 'Current Datasets' },
-		{ id: 'overlap-insights', title: 'Overlap and Insights' },
-		{ id: 'access-the-quarry', title: 'Access the Data Quarry' }
+		{ id: 'overlap-insights', title: 'Insights' }
 	];
 
 	let active = sections[0].id;
@@ -145,7 +144,7 @@
 </script>
 
 <svelte:head>
-	<title>Data Quarry: Recent Updates - Cascade Climate</title>
+	<title>ERW Data Quarry: Latest Updates - Cascade Climate</title>
 	<meta
 		name="description"
 		content="Ten unique datasets are now available, each a window into a real-world ERW project. We encourage researchers to request data to advance non-commercial ERW science."
@@ -155,17 +154,17 @@
 <div class="dq-updates">
 	<section class="hero">
 		<div class="hero-copy">
-			<h1>Data Quarry: Recent Updates</h1>
+			<h1>ERW Data Quarry: Latest Updates</h1>
 			<p class="date">November 12, 2026</p>
 			<p class="lede">
 				Ten unique datasets are now available, each a window into a real-world ERW project. We encourage
 				researchers to request data to advance non-commercial ERW science.
 			</p>
 			<div class="hero-actions">
-				<a class="cta" href="/blog/data-sharing-system-for-erw">Learn more about the ERW Data Quarry↗</a>
 				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
 					>Access the ERW Data Quarry↗</a
 				>
+				<a class="cta" href="/erw-dq-upcoming">See datasets in our pipeline↗</a>
 			</div>
 		</div>
 	</section>
@@ -188,10 +187,10 @@
 			long-term field stations studying ERW have shared datasets through the Data Quarry.
 		</p>
 		<p>
-			Today the Data Quarry holds ten unique datasets, each representing a year or more of field projects across six
-			countries and five continents. We highlight these datasets here to encourage researchers to work with ERW
-			deployment data through a common access framework designed to unlock more commercial data that advances
-			non-commercial ERW science.
+			Today the Data Quarry hosts ten unique datasets, each representing a year or more of field projects across six
+			countries and five continents. We encourage researchers to engage with this ERW deployment data through the
+			Data Quarry's common access framework designed to unlock more commercial data that advances non-commercial ERW
+			science.
 		</p>
 
 			<aside class="access-callout" aria-labelledby="access-callout-heading">
@@ -234,10 +233,7 @@
 								{@const contributor = row.contributor.split(' — ')}
 								<tr class:is-new={row.isNew}>
 									<td class="contributor">
-										<span class="contributor-name">
-											{#if row.isNew}<span class="new-tag">New</span>{/if}
-											{contributor[0]}
-										</span>
+										<span class="contributor-name">{contributor[0]}</span>
 										{#if contributor[1]}<span class="contributor-project">{contributor[1]}</span>{/if}
 									</td>
 									<td class="region">{row.region}</td>
@@ -247,6 +243,7 @@
 										{/each}
 									</td>
 									<td class="uploaded">
+										{#if row.isNew}<span class="new-tag">New</span>{/if}
 										{#if row.uploaded}
 											{row.uploaded}
 										{:else}
@@ -267,6 +264,27 @@
 					</table>
 				</div>
 			</div>
+			<aside class="access-callout">
+				<p>
+					This is a unique set of commercial and experimental data available to the research community — in total there
+					are ten datasets, from five continents, characterized in depth and ready to work with today. If you study
+					dissolution, feedstock behavior, or field-scale ERW across diverse soils and climates, there is something here
+					for you, and the collection is only growing.
+				</p>
+				<p>
+					<strong
+						>After signing up, a short proposal through the
+						<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Data Quarry</a> is all it takes
+						to request access</strong
+					>, and we add new datasets regularly — join the
+					<a
+						href="https://groups.google.com/a/cascadeclimate.org/g/notifs-dataquarry"
+						target="_blank"
+						rel="noopener">notifications group</a
+					>
+					to hear when. We&apos;re excited to see what the community can do with this data!
+				</p>
+			</aside>
 
 			<figure class="figure-block">
 				<img
@@ -279,8 +297,9 @@
 				/>
 				<figcaption>
 					<em
-						>Figure 1. Tag coverage by category for each dataset. Categories span weather and agronomy, aqueous
-						(lysimeter) chemistry, feedstock characterization, biomass, and solid-phase soil measurements.</em
+						>Figure 1. Tag coverage by category for each dataset. Categories span contextual (weather and agronomy)
+						variables, lysimeter (aqueous chemistry), feedstock (characterization data), biomass, and soil (solid-phase)
+						measurements.</em
 					>
 				</figcaption>
 			</figure>
@@ -294,8 +313,8 @@
 			<p>
 				The commercial datasets give insight into how ERW is being actively deployed today. InPlanet&apos;s two
 				Brazilian sites (Serra da Mantiqueira and Project Araçari) have the most variable coverage, spanning all five
-				categories and complementing each other well. The second year of Serra da Mantiqueira data is now hosted as
-				well, with additional years coming soon to many of our hosted datasets as they are developed. Mati, Varaha,
+				categories. The second year of Serra da Mantiqueira data is now hosted as well, with additional years coming
+				soon. Mati, Varaha,
 				and Flux have contributed data from especially data-sparse regions. Silica’s Mata de Agua uses a unique
 				pyroclastic feedstock in a newly represented region for the Quarry.
 			</p>
@@ -357,7 +376,7 @@
 			</ul>
 			<p>
 				<strong>None of these questions can be fully answered by today&apos;s collection</strong> — but our catalog is
-				growing more and more capable. Here&apos;s where the data shows today.
+				growing more and more capable. Here&apos;s what the data shows today.
 			</p>
 			<ul>
 				<li>
@@ -369,9 +388,8 @@
 				<li>
 					<strong>Soil organic carbon.</strong> Resolving SOC dynamics will require denser and longer-term sampling
 					than a single year of project data can provide.
-					<mark class="fix-before-live"
-						>Currently seven datasets have SOC data (mean n = 155, sd = 166).</mark
-					>
+					Currently seven datasets have SOC data (ranging from 18 to 323 SOC samples reported, with 155 SOC samples
+					reported on average).
 					As the depth and breadth of this data expands, so will our ability to interrogate SOC trajectories.
 				</li>
 				<li>
@@ -400,28 +418,8 @@
 				the second year of data from several datasets already in the Quarry — the first step toward the longer time
 				series that questions like time lags and SOC changes require.
 			</p>
-		</section>
-
-		<section id="access-the-quarry" class="section">
-			<h2>How can I use these datasets today?</h2>
-			<p>
-				This is a unique set of commercial and experimental data available to the research community — in total there
-				are ten datasets, from five continents, characterized in depth and ready to work with today. If you study
-				dissolution, feedstock behavior, or field-scale ERW across diverse soils and climates, there is something here
-				for you, and the collection is only growing.
-			</p>
-			<p>
-				<strong
-					>After signing up, a short proposal through the
-					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Data Quarry</a> is all it takes
-					to request access</strong
-				>, and we add new datasets regularly — join the
-				<a
-					href="https://groups.google.com/a/cascadeclimate.org/g/notifs-dataquarry"
-					target="_blank"
-					rel="noopener">notifications group</a
-				>
-				to hear when. We&apos;re excited to see what the community can do with this data!
+			<p class="section-cta">
+				<a class="cta" href="/erw-dq-upcoming">See datasets in our pipeline↗</a>
 			</p>
 			<p>
 				<strong>Do you have field data of your own to contribute?</strong> If you hold results from a commercial
@@ -472,9 +470,10 @@
 
 	.hero-actions {
 		display: flex;
+		flex-direction: column;
 		flex-wrap: wrap;
 		gap: 0.75rem;
-		align-items: center;
+		align-items: flex-start;
 		margin-top: 1.35rem;
 	}
 
@@ -541,7 +540,7 @@
 	}
 
 	.article {
-		max-width: 70rem;
+		max-width: 78rem;
 		margin: 0 auto;
 		padding: 2rem 4rem 6rem;
 	}
@@ -576,6 +575,17 @@
 
 	.article a:hover {
 		color: #023c40;
+	}
+
+	.article a.cta,
+	.article a.cta:hover {
+		color: var(--color-light);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.section-cta {
+		margin: 0.35rem 0 1.25rem;
 	}
 
 	.article ul {
@@ -660,7 +670,7 @@
 
 	.table-wrap th,
 	.table-wrap td {
-		padding: 0.85rem 1rem;
+		padding: 0.75rem 0.65rem;
 		text-align: left;
 		vertical-align: middle;
 		font-size: 0.92rem;
@@ -694,7 +704,7 @@
 	}
 
 	.contributor {
-		min-width: 16rem;
+		min-width: 20.5rem;
 	}
 
 	.contributor-name,
@@ -706,6 +716,7 @@
 	.contributor-name {
 		font-weight: 550;
 		color: var(--color-dark);
+		white-space: nowrap;
 	}
 
 	.contributor-project,
@@ -715,15 +726,27 @@
 		font-weight: 400;
 	}
 
-	.region,
-	.years {
+	.region {
 		white-space: nowrap;
 	}
 
-	.years {
+	.table-wrap th.years,
+	.table-wrap td.years {
+		width: 4.5rem;
+		min-width: 4.5rem;
+		max-width: 5.25rem;
+		white-space: normal;
 		text-align: center;
 		font-variant-numeric: tabular-nums;
+	}
+
+	.table-wrap td.years {
 		color: var(--color-dark);
+	}
+
+	.crops,
+	.uploaded {
+		white-space: nowrap;
 	}
 
 	.uploaded-new {
@@ -758,13 +781,6 @@
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		vertical-align: 0.08em;
-	}
-
-	.fix-before-live {
-		background-color: #ffe566;
-		color: var(--color-text);
-		padding: 0.05em 0.2em;
-		border-radius: 0.15em;
 	}
 
 	.figure-block {

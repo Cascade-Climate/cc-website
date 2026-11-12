@@ -50,7 +50,7 @@ import erwHero from '$lib/images/nature/erw-hero-program.jpg';
 			<h2 id="recent-blogs-h" class="section-title">RECENT BLOGS</h2>
 			<div class="blog-list">
 				<article>
-					<h4><a href="/erw/dq-updates">Data Quarry: Recent Updates</a></h4>
+					<h4><a href="/erw/dq-updates">ERW Data Quarry: Latest Updates</a></h4>
 				</article>
 				<article>
 					<h4>

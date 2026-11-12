@@ -9,7 +9,7 @@
 	<div id="post-list">
 		<div class="post">
 			<h1>
-				<a href="/erw/dq-updates">Data Quarry: Recent Updates</a>
+				<a href="/erw/dq-updates">ERW Data Quarry: Latest Updates</a>
 			</h1>
 			<p>
 				Ten unique datasets are now available, each a window into a real-world ERW project. We encourage researchers

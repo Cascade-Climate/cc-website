@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 
 	// Same current-datasets table as the November overview.
-	// BEFORE GO-LIVE: remind the editor these table cells are still placeholders.
-	// - UC Davis crops/area is ".4 ha" and "Grass Clover Rangeland"
-	// - University of Illinois crops/area is only "Corn Belt" (no crop or hectares)
+	// BEFORE GO-LIVE: remind the editor these table cells are still thin.
+	// - UC Davis crops/area is ".4 ha Grass Clover Rangeland"
+	// - University of Illinois crops/area is only "Corn" (no hectares)
 	// - Carbon Drawdown Initiative XXL Lysimeter crops/area is only "<1 ha" (no crop)
 	const availableDatasets = [
 		{
@@ -61,7 +61,7 @@
 		{
 			contributor: 'Varaha — Project Khargone',
 			region: 'India',
-			crops: ['195 ha Cotton Wheat rotation'],
+			crops: ['195 ha Cotton and Wheat'],
 			uploadedEmphasis: 'October 2026',
 			years: '1',
 			status: 'Available upon request',
@@ -79,7 +79,7 @@
 		{
 			contributor: 'University of California, Davis — Sierra Foothill Research and Extension Center',
 			region: 'USA',
-			crops: ['.4 ha', 'Grass Clover Rangeland'],
+			crops: ['.4 ha Grass Clover Rangeland'],
 			uploadedEmphasis: 'October 2026',
 			years: '1',
 			status: 'Available upon request',
@@ -88,7 +88,7 @@
 		{
 			contributor: 'University of Illinois — Energy Farm',
 			region: 'USA',
-			crops: ['Corn Belt'],
+			crops: ['Corn'],
 			uploadedEmphasis: 'October 2026',
 			years: '1',
 			status: 'Available upon request',
@@ -115,8 +115,8 @@
 
 	const sections = [
 		{ id: 'available-datasets', title: 'Available Datasets' },
-		{ id: 'upcoming-contributions', title: 'Upcoming Contributions' },
-		{ id: 'requesting-access', title: 'Requesting Access' }
+		{ id: 'requesting-access', title: 'Requesting Access' },
+		{ id: 'upcoming-contributions', title: 'Upcoming Contributions' }
 	];
 
 	let active = sections[0].id;
@@ -162,7 +162,7 @@
 </script>
 
 <svelte:head>
-	<title>ERW Data Quarry: Available and upcoming datasets - Cascade Climate</title>
+	<title>ERW Data Quarry Pipeline: Available and Forthcoming Datasets - Cascade Climate</title>
 	<meta
 		name="description"
 		content="An up-to-date view of the datasets currently available on the ERW Data Quarry, upcoming contributions, and how to request access for non-commercial use."
@@ -174,7 +174,7 @@
 <div class="dq-pipeline">
 	<section class="hero">
 		<div class="hero-copy">
-			<h1>ERW Data Quarry: Available and upcoming datasets</h1>
+			<h1>ERW Data Quarry Pipeline: Available and Forthcoming Datasets</h1>
 			<p class="date">Updated November 2026</p>
 			<p class="lede">
 				The ERW Data Quarry gives researchers and practitioners access to a growing body of data for
@@ -217,7 +217,7 @@
 			</p>
 			<div class="table-card">
 				<p class="table-label">Current Datasets</p>
-				<div class="table-wrap">
+				<div class="table-wrap datasets-wrap">
 					<table>
 						<thead>
 							<tr>
@@ -234,10 +234,7 @@
 								{@const contributor = row.contributor.split(' — ')}
 								<tr class:is-new={row.isNew}>
 									<td class="contributor">
-										<span class="contributor-name">
-											{#if row.isNew}<span class="new-tag">New</span>{/if}
-											{contributor[0]}
-										</span>
+										<span class="contributor-name">{contributor[0]}</span>
 										{#if contributor[1]}<span class="contributor-project">{contributor[1]}</span>{/if}
 									</td>
 									<td class="region">{row.region}</td>
@@ -247,6 +244,7 @@
 										{/each}
 									</td>
 									<td class="uploaded">
+										{#if row.isNew}<span class="new-tag">New</span>{/if}
 										{#if row.uploaded}
 											{row.uploaded}
 										{:else}
@@ -269,6 +267,51 @@
 					</table>
 				</div>
 			</div>
+			<p class="section-cta">
+				<a class="cta" href="/erw/dq-updates">See the latest updates↗</a>
+			</p>
+		</section>
+
+		<section id="requesting-access" class="section">
+			<h2>Requesting access</h2>
+			<p>You can request access to datasets if you are exploring a non-commercial research question.</p>
+			<p>To do this:</p>
+			<ul>
+				<li>
+					<strong>Log in</strong> — Set up a Data Quarry user profile at
+					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
+						>data.cascadeclimate.org</a
+					>.
+				</li>
+				<li>
+					<strong>Review datasets</strong> — Dataset abstracts and variable coverage are posted in the
+					Data Quarry catalog (Datasets menu at
+					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
+						>data.cascadeclimate.org</a
+					>).
+				</li>
+				<li>
+					<strong>Explore which specific variables are included</strong> — Looking for dissolution,
+					soil, feedstock, biomass, weather, or agronomic variables? Dataset coverage varies by
+					project; available variables are listed by project.
+				</li>
+				<li>
+					<strong>Submit a research proposal</strong> — Request the dataset(s) most relevant to your
+					analysis using the Request Form linked to each dataset in the catalog.
+				</li>
+			</ul>
+			<p>
+				Note that all health &amp; safety data is already publicly available via the
+				<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener"
+					>Data Quarry CDRXIV channel</a
+				>, which is also where full datasets will be available upon inclusion in an academic
+				publication.
+			</p>
+			<p>
+				If you have any additional questions, please reach out to our team at
+				<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a>, and we will be happy to
+				assist.
+			</p>
 		</section>
 
 		<section id="upcoming-contributions" class="section">
@@ -327,7 +370,7 @@
 						platform to share ERW deployment datasets prior to publication. Reach out to
 						<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a> if you are interested
 						in sharing your field trial data.
-						<a href="#citation1">↩</a>
+						<a href="#citation1">Back to text</a>
 					</li>
 					<li id="footnote2">
 						Commitments are labeled as “overdue” if they are more than 6 months past their initially
@@ -337,60 +380,10 @@
 						indicating data sharing to the Data Quarry is no longer certain. Contributors are removed
 						from the contributors list if a contribution is no longer expected because no ERW
 						deployment data will be generated.
-						<a href="#citation2">↩</a>
+						<a href="#citation2">Back to text</a>
 					</li>
 				</ol>
 			</div>
-		</section>
-
-		<section id="requesting-access" class="section">
-			<h2>Requesting access</h2>
-			<p>You can request access to datasets if you are exploring a non-commercial research question.</p>
-			<p>To do this:</p>
-			<ul>
-				<li>
-					<strong>Check out an overview, including visualizations, of currently available data</strong>
-					—
-					<a href="/erw/dq-updates"
-						>See our latest overview of current projects and variable coverage in the Data Quarry as of
-						November 2026</a
-					>.
-				</li>
-				<li>
-					<strong>Log in</strong> — Set up a Data Quarry user profile at
-					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
-						>data.cascadeclimate.org</a
-					>.
-				</li>
-				<li>
-					<strong>Review datasets</strong> — Dataset abstracts and variable coverage are posted in the
-					Data Quarry catalog (Datasets menu at
-					<a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
-						>data.cascadeclimate.org</a
-					>).
-				</li>
-				<li>
-					<strong>Explore which specific variables are included</strong> — Looking for dissolution,
-					soil, feedstock, biomass, weather, or agronomic variables? Dataset coverage varies by
-					project; available variables are listed by project.
-				</li>
-				<li>
-					<strong>Submit a research proposal</strong> — Request the dataset(s) most relevant to your
-					analysis using the Request Form linked to each dataset in the catalog.
-				</li>
-			</ul>
-			<p>
-				Note that all health &amp; safety data is already publicly available via the
-				<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener"
-					>Data Quarry CDRXIV channel</a
-				>, which is also where full datasets will be available upon inclusion in an academic
-				publication.
-			</p>
-			<p>
-				If you have any additional questions, please reach out to our team at
-				<a href="mailto:data@cascadeclimate.org">data@cascadeclimate.org</a>, and we will be happy to
-				assist.
-			</p>
 		</section>
 	</article>
 </div>
@@ -522,7 +515,7 @@
 	}
 
 	.article {
-		max-width: 70rem;
+		max-width: 78rem;
 		margin: 0 auto;
 		padding: 2rem 4rem 6rem;
 	}
@@ -553,6 +546,17 @@
 		font-weight: 500;
 		text-decoration: underline;
 		text-underline-offset: 0.15em;
+	}
+
+	.article a.cta,
+	.article a.cta:hover {
+		color: var(--color-light);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.section-cta {
+		margin: 0.35rem 0 1.25rem;
 	}
 
 	.article ul {
@@ -610,7 +614,7 @@
 
 	.table-wrap th,
 	.table-wrap td {
-		padding: 0.85rem 1rem;
+		padding: 0.75rem 0.65rem;
 		text-align: left;
 		vertical-align: middle;
 		font-size: 0.92rem;
@@ -647,6 +651,10 @@
 		min-width: 14rem;
 	}
 
+	.datasets-wrap .contributor {
+		min-width: 20.5rem;
+	}
+
 	.contributor-name,
 	.contributor-project,
 	.crops span {
@@ -658,6 +666,10 @@
 		color: var(--color-dark);
 	}
 
+	.datasets-wrap .contributor-name {
+		white-space: nowrap;
+	}
+
 	.contributor-project,
 	.crop-detail {
 		margin-top: 0.15rem;
@@ -665,15 +677,27 @@
 		font-weight: 400;
 	}
 
-	.region,
-	.years {
+	.region {
 		white-space: nowrap;
 	}
 
-	.years {
+	.table-wrap th.years,
+	.table-wrap td.years {
+		width: 4.5rem;
+		min-width: 4.5rem;
+		max-width: 5.25rem;
+		white-space: normal;
 		text-align: center;
 		font-variant-numeric: tabular-nums;
+	}
+
+	.table-wrap td.years {
 		color: var(--color-dark);
+	}
+
+	.datasets-wrap .crops,
+	.datasets-wrap .uploaded {
+		white-space: nowrap;
 	}
 
 	.uploaded-new {

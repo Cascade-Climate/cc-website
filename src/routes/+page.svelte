@@ -76,7 +76,7 @@
 					src="/images/blog/data-quarry-summer-26-hero.jpg"
 					alt="View through a window overlooking agricultural fields and tropical vegetation"
 				/>
-				<h2>Data Quarry: Recent Updates</h2>
+				<h2>ERW Data Quarry: Latest Updates</h2>
 				<p>
 					Ten unique datasets are now available, each a window into a real-world ERW project. We encourage
 					researchers to request data to advance non-commercial ERW science.
@@ -94,7 +94,7 @@
 		<div class="post">
 			<h1>
 				<a href="/erw/dq-updates" target="_blank" style="color: var(--color-accent);">
-					Data Quarry: Recent Updates
+					ERW Data Quarry: Latest Updates
 				</a>
 			</h1>
 			<p>
