@@ -24,8 +24,8 @@
             <img src={cost} alt="Enhanced Rock Weathering" />
 		</div>
 		<div class="links">
-			<a href="https://emce.cascadeclimate.org/">Link to Model↗</a>
-            <a href="https://docs.google.com/spreadsheets/d/1mWgcD9wqkQpAhdb79h4AymDnmuCPAPM_mQFrN60RC2o/edit?gid=0#gid=0">Link to Database↗</a>
+			<a href="https://emce.cascadeclimate.org/">Link to Model</a>
+            <a href="https://docs.google.com/spreadsheets/d/1mWgcD9wqkQpAhdb79h4AymDnmuCPAPM_mQFrN60RC2o/edit?gid=0#gid=0">Link to Database</a>
 		</div>
 	</section>
 	<ScrollNav />

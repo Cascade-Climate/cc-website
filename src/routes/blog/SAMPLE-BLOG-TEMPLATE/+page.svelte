@@ -30,8 +30,8 @@
 			<img src={erw} alt="Enhanced Rock Weathering" />
 		</div>
 		<div class="links">
-			<PDFLink link="/example.pdf">Foundations - full document↗</PDFLink>
-			<PDFLink link="/example.pdf">Foundations - technical executive summary↗</PDFLink>
+			<PDFLink link="/example.pdf">Foundations - full document</PDFLink>
+			<PDFLink link="/example.pdf">Foundations - technical executive summary</PDFLink>
 			<a href="https://www.google.com">Google</a>
 		</div>
 	</section>
@@ -64,8 +64,8 @@
 				chart if we hope to identify interventions that can be deployed safely, effectively, and
 				responsibly.
 			</p>
-			<PDFLink link="/example.pdf" variant="accent">Foundations for Carbon Removal Quantification in ERW Deployments - full document↗</PDFLink>
-			<PDFLink link="/example.pdf" variant="accent">Foundations for Carbon Removal Quantification in ERW Deployments - technical executive summary↗</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent">Foundations for Carbon Removal Quantification in ERW Deployments - full document</PDFLink>
+			<PDFLink link="/example.pdf" variant="accent">Foundations for Carbon Removal Quantification in ERW Deployments - technical executive summary</PDFLink>
 		</section>
 		<section id="citation-and-usage">
 			<h1>Citation and Usage</h1>

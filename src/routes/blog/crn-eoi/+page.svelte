@@ -37,20 +37,20 @@
 					style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 					target="_blank"
 					rel="noopener"
-					href="https://forms.gle/WRgTqeFRHa8mBooJ7">Submit: Expression of Interest↗</a
+					href="https://forms.gle/WRgTqeFRHa8mBooJ7">Submit: Expression of Interest</a
 				>
 			</div>
 			<a
 				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf">Document A: Site Selection Criteria↗</a
+				href="/Cascade%20Climate_CRN_EOI_Site_Selection_Criteria.pdf">Document A: Site Selection Criteria</a
 			>
 			<a
 				style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf">Document B: Conflict of Interest Policy↗</a
+				href="/Cascade Climate_CRN_EOI_Conflict of Interest_Policy.pdf">Document B: Conflict of Interest Policy</a
 			>
 		</div>
 	</section>
@@ -94,7 +94,7 @@
 		<p class="eoi-deadline"><strong>If you are potentially interested in hosting a CRN site</strong>, please complete the Expression of Interest form by March 10, 2026.</p>
 
 		<div class="eoi-submit-wrap">
-			<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest↗</a>
+			<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Submit: Expression of Interest</a>
 		</div>
 
 		<p>For more information on:</p>

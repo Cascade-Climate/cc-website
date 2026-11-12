@@ -317,7 +317,7 @@
 			<h2>User Guide</h2>
 			<p>The following PDF is a practical guide to using the Weathering Potential Explorer. It explains what each button does, how to navigate the map, and what the different layers and filters will show. It also includes walkthroughs for key functions.</p>
 			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%; padding-bottom: 1.5rem;">
-				<PDFLink link="/Weathering Potential Explorer User Guide.pdf" variant="accent" style="display: block; text-align: left;">Weathering Potential Explorer User Guide.pdf↗</PDFLink>
+				<PDFLink link="/Weathering Potential Explorer User Guide.pdf" variant="accent" style="display: block; text-align: left;">Weathering Potential Explorer User Guide.pdf</PDFLink>
 			</div>
 			<p>The following explainer (the rest of this page) details what the tool is for, how it works mechanistically, and its limitations.</p>
 			<br>

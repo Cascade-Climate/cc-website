@@ -86,7 +86,7 @@
 		<div class="hero-copy">
 			<h1>ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
 			<div class="hero-actions">
-				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Log in or sign up to access↗</a>
+				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Log in or sign up to access</a>
 			</div>
 			<p>
 				Enhanced rock weathering (ERW) offers meaningful carbon removal alongside the promise of healthier soils and higher crop yields. Researchers need detailed field data to understand how much carbon it can remove, where and to what extent it benefits crops, and how to deploy and scale the practice safely and sustainably.
@@ -95,8 +95,8 @@
 				Launched in May 2025, the ERW Data Quarry makes data from commercial projects and field trials available for non-commercial research.
 			</p>
 			<div class="hero-actions">
-				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates↗</a>
-				<a class="cta" href="/erw-dq-upcoming">Explore available and forthcoming datasets↗</a>
+				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates</a>
+				<a class="cta" href="/erw-dq-upcoming">Explore available and forthcoming datasets</a>
 			</div>
 			<p>
 				<strong>To learn more about the state of ERW science, how the Data Quarry works, and flagship contributors, scroll to read more.</strong>
@@ -283,7 +283,7 @@
 				As of November 2026, ten unique datasets are available in the Data Quarry, each a window into a real-world ERW project. To preview these contributions and insights so far, see 'Latest Updates.'
 			</p>
 			<p class="section-cta">
-				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates↗</a>
+				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates</a>
 			</p>
 		</section>
 
@@ -304,7 +304,7 @@
 <h2>Data Variables:</h2>
 <p>Whenever possible, datasets in the Data Quarry will share a common set of core variables, as listed in the pdf below. These variables were selected based on their importance to answering the highest priority research questions that overlap with data collected in commercial deployments.</p>
 <div class="variable-list">
-	<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" target="_blank" rel="noopener" variant="accent">ERW Data Quarry Variable List↗</PDFLink>
+	<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" target="_blank" rel="noopener" variant="accent">ERW Data Quarry Variable List</PDFLink>
 </div>
 <p></p>
 <p>Building on learnings from the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;</em></a> process, these research themes are:&nbsp;&nbsp;</p>

@@ -20,8 +20,8 @@
 				</p>
 				<h4>Latest blogs:</h4>
 				<div class="links">
-					<a href="/blog/drawdown-to-durable">Sep 17, 2025: Drawdown to Durable Storage: Understanding ERW in EU Carbon Removal Policy↗</a>
-					<a href="/blog/recommendations-from-foundations">Jun 2, 2025: Recommendations from Foundations as the EU Explores Enhanced Rock Weathering↗</a>
+					<a href="/blog/drawdown-to-durable">Sep 17, 2025: Drawdown to Durable Storage: Understanding ERW in EU Carbon Removal Policy</a>
+					<a href="/blog/recommendations-from-foundations">Jun 2, 2025: Recommendations from Foundations as the EU Explores Enhanced Rock Weathering</a>
 				</div>
 			</div>
 			<img src={policy} alt="Farm"/>
@@ -32,8 +32,8 @@
 		<section id="policyPriorities">
 			<h1>Policy Priorities for ERW</h1>
 			<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering - Executive Summary.pdf" variant="accent" style="display: block; text-align: left;">[Executive Summary] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
-				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering.pdf" variant="accent" style="display: block; text-align: left;">[Full] Policy Priorities for Enhanced Rock Weathering↗</PDFLink>
+				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering - Executive Summary.pdf" variant="accent" style="display: block; text-align: left;">[Executive Summary] Policy Priorities for Enhanced Rock Weathering</PDFLink>
+				<PDFLink link="/Cascade Climate - Policy Priorities for Enhanced Rock Weathering.pdf" variant="accent" style="display: block; text-align: left;">[Full] Policy Priorities for Enhanced Rock Weathering</PDFLink>
 			</div>
 			<br>
 			<p>
@@ -48,12 +48,12 @@
 		<section id="governmentEngagement">
 			<h1>Government Engagement</h1>
 			<div>Cascade provides policy support and advice through responses to formal calls for public comment across various jurisdictions.</div>
-			<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Feedback on EU CRCF Review Paper on Carbon Removal through ERW↗</PDFLink>
-			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to EU ETS Review Consultation Integrating Carbon Removal with Safeguards↗</PDFLink>
-			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals↗</PDFLink>
-			<PDFLink link="/Response to UNFCCC Article 6.4 Removal Guidance.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Removal Guidance↗</PDFLink>
-			<PDFLink link="/Response to NRCS RFI on Climate-Smart Ag CPS.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; U.S. Department of Agriculture (USDA) on Implementation of the Conservation Practices to Support Climate Change Mitigation and Adaptation↗</PDFLink>
-			<PDFLink link="/GCSA RFI Response.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; USDA on the Greenhouse Gas Technical Assistance Provider and Third Party Verifier Program↗</PDFLink>
+			<PDFLink link="/Feedback on EU CRCF Review Paper on Carbon Removal through ERW.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Feedback on EU CRCF Review Paper on Carbon Removal through ERW</PDFLink>
+			<PDFLink link="/Response to EU ETS Review Consultation_ Integrating Carbon Removal with Safeguards.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to EU ETS Review Consultation Integrating Carbon Removal with Safeguards</PDFLink>
+			<PDFLink link="/Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Addressing Non-Permanence Reversals</PDFLink>
+			<PDFLink link="/Response to UNFCCC Article 6.4 Removal Guidance.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; Response to UNFCCC Article 6.4 Removal Guidance</PDFLink>
+			<PDFLink link="/Response to NRCS RFI on Climate-Smart Ag CPS.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; U.S. Department of Agriculture (USDA) on Implementation of the Conservation Practices to Support Climate Change Mitigation and Adaptation</PDFLink>
+			<PDFLink link="/GCSA RFI Response.pdf" variant="accent" style="display: block; text-align: left;">Comment Letter:&nbsp; USDA on the Greenhouse Gas Technical Assistance Provider and Third Party Verifier Program</PDFLink>
 			<br>
 			<div>Cascade also participates in formal government advisory groups and consortiums including:</div>
 			<ul>
@@ -71,10 +71,10 @@
 		</section>
 		<section id="resources">
 			<h1>Resources</h1>
-			<PDFLink link="/Cascade Climate_Enhanced Rock Weathering 101_vFinal.pdf" variant="accent">Enhanced Rock Weathering 101↗</PDFLink>
-			<PDFLink link="/Cascade Climate_Dissolved Carbon in the Oceans_vFinal.pdf" variant="accent">Dissolved Carbon in the Oceans↗</PDFLink>
-			<PDFLink link="/Cascade Climate_ERW Value Chain Graphic_vF.pdf" variant="accent">ERW Value Chain Graphic↗</PDFLink>
-			<PDFLink link="/CRA0225_Enhanced_Rock_Weathering.pdf" variant="accent">Enhanced Weathering Policy Working Group R&D Priorities↗</PDFLink>
+			<PDFLink link="/Cascade Climate_Enhanced Rock Weathering 101_vFinal.pdf" variant="accent">Enhanced Rock Weathering 101</PDFLink>
+			<PDFLink link="/Cascade Climate_Dissolved Carbon in the Oceans_vFinal.pdf" variant="accent">Dissolved Carbon in the Oceans</PDFLink>
+			<PDFLink link="/Cascade Climate_ERW Value Chain Graphic_vF.pdf" variant="accent">ERW Value Chain Graphic</PDFLink>
+			<PDFLink link="/CRA0225_Enhanced_Rock_Weathering.pdf" variant="accent">Enhanced Weathering Policy Working Group R&D Priorities</PDFLink>
 		</section>
 	</main>
 </div>

@@ -11,7 +11,7 @@
 			<div class="copy">
 				<h1><strong>Request for Proposals:</strong> ERW Field Data Partnership Grants</h1>
                 <div class="links">
-                    <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="/blog/erw-field-grant-awardees">Now closed. Awardees announced here↗</a>
+                    <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="/blog/erw-field-grant-awardees">Now closed. Awardees announced here</a>
                 </div>
                 <p></p>
                 
@@ -27,10 +27,10 @@
 		</div>
         <div class="links">
             <div style="text-align: center;">
-                <PDFLink target="_blank" rel="noopener" link="/Cascade-Climate-Regranting-Solicitation.pdf">RFP Solicitation↗</PDFLink>
+                <PDFLink target="_blank" rel="noopener" link="/Cascade-Climate-Regranting-Solicitation.pdf">RFP Solicitation</PDFLink>
             </div>
-            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form">Proposal Application Form↗</a>
-            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfBKrkh9e52YAT2R5z2rQ7_ZlqSWJiIzzIPIIOGKbB1qyOAsA/viewform">Networking List↗</a>
+            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://airtable.com/appcGyiQ7jehlyViG/pagFBoCoe32I9wJ87/form">Proposal Application Form</a>
+            <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfBKrkh9e52YAT2R5z2rQ7_ZlqSWJiIzzIPIIOGKbB1qyOAsA/viewform">Networking List</a>
         </div>
 	</section>
 	<ScrollNav />
@@ -55,7 +55,7 @@
         <p>We expect that initial measurements characterizing the feedstock and initial soil conditions, as well as measurements of feedstock dissolution rates in surface soils, are already paid for in the deployment through some other means (e.g. commercial carbon credit sales). Thus, this RFP will not fund the collection of these <strong>Contextual Data</strong> variables; it will fund only the collection of the ‘additional’ dataset (e.g., sample collection and lab analyses) along with associated research and analysis.</p>
 
         <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
-			<PDFLink link="/Cascade-Climate-Regranting-Solicitation.pdf" variant="accent">Link to Full RFP Solicitation PDF↗</PDFLink>
+			<PDFLink link="/Cascade-Climate-Regranting-Solicitation.pdf" variant="accent">Link to Full RFP Solicitation PDF</PDFLink>
 		</div>
 
     </section>

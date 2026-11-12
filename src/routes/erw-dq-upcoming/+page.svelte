@@ -185,9 +185,9 @@
 				non-commercial use.
 			</p>
 			<div class="hero-actions">
-				<a class="cta" href="/erw/dq">Learn more about the ERW Data Quarry↗</a>
+				<a class="cta" href="/erw/dq">Learn more about the ERW Data Quarry</a>
 				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
-					>Access the ERW Data Quarry↗</a
+					>Access the ERW Data Quarry</a
 				>
 			</div>
 		</div>
@@ -267,7 +267,7 @@
 				</div>
 			</div>
 			<p class="section-cta">
-				<a class="cta" href="/erw/dq-updates">See the latest updates↗</a>
+				<a class="cta" href="/erw/dq-updates">See the latest updates</a>
 			</p>
 		</section>
 

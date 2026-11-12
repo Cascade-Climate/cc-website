@@ -12,7 +12,7 @@
 			<div class="copy">
 				<h1>ERW Field Data Partnership Grant Awardees</h1>
                 <div class="links">
-                    <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="/blog/erw-field-grants">Original Solicitation Page↗</a>
+                    <a style="border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px; font-size: 1.2rem; flex-grow: 1; font-weight: 400;" target="_blank" href="/blog/erw-field-grants">Original Solicitation Page</a>
                 </div>
                 <p></p>
                 <p>In collaboration with the Grantham Foundation, Google, and Frontier, Cascade is excited to announce the awardees for our ERW Field Data Partnership Grants: over $1.2M in funding across 9 projects focused on addressing key research priorities in enhanced rock weathering (ERW).

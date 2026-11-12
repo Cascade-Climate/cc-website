@@ -31,7 +31,7 @@
 		<p>
 			Join a passionate, curious, and dedicated team working to address one of the most pressing challenges of our time. At Cascade Climate, we are committed to being one of the best places to work in climate. To us, this means surrounding ourselves with exceptional people, creating opportunities for personal growth and learning, cultivating a vibrant culture, and offering competitive compensation and benefits. 
 		</p>
-		<a target="_blank" href="https://jobs.lever.co/cascade-climate">Current Openings ↗</a>
+		<a target="_blank" href="https://jobs.lever.co/cascade-climate">Current Openings</a>
 	</div>
 	<div class="image">
 		<img src={team7Image} alt="Careers" />

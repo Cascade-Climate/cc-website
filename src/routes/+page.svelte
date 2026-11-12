@@ -15,7 +15,7 @@
 	<title>Cascade Climate</title>
 	<meta
 		name="description"
-		content="Advancing emerging climate solutions from stuck to self-sustaining scale."
+		content="Advancing emerging climate solutions from stuck to self-sustaining scale"
 	/>
 </svelte:head>
 <div>
@@ -24,7 +24,7 @@
 	</a>
 	<section id="headline" style="width: 100%;">
 		<h1>
-			Advancing emerging climate solutions from stuck to self-sustaining scale.
+			Advancing emerging climate solutions from stuck to self-sustaining scale
 		</h1>
 	</section>
 	<section id="about">
@@ -45,7 +45,7 @@
 			<p style="font-weight: 200;">
 				Our current work is focused on enhanced rock weathering, our entry point in durable carbon removal, and lifecycle refrigerant management, our entry point in super pollutant mitigation.
 			</p>
-			<a class="about-more" href="/about-us">Learn more↗</a>
+			<a class="about-more" href="/about-us">Learn more</a>
 			<hr style="margin: 64px;">
 		</div>
 	</section>

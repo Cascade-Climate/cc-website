@@ -42,7 +42,7 @@
 					style="border: none; cursor: pointer; border-radius: 30px; flex-grow: 1; font-weight: 400;"
 					target="_blank"
 					rel="noopener"
-					href="https://forms.gle/SHk1ARNGVocATaiA8">Enviar: Manifestação de Interesse↗</a
+					href="https://forms.gle/SHk1ARNGVocATaiA8">Enviar: Manifestação de Interesse</a
 				>
 			</div>
 			<a
@@ -50,14 +50,14 @@
 				style="border: none; cursor: pointer; border-radius: 30px; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				href="/Cascade%20Climate_CRN_EOI_PT_Documento_A.pdf">Documento A: Critérios de Seleção de Locais↗</a
+				href="/Cascade%20Climate_CRN_EOI_PT_Documento_A.pdf">Documento A: Critérios de Seleção de Locais</a
 			>
 			<a
 				class="link-btn"
 				style="border: none; cursor: pointer; border-radius: 30px; flex-grow: 1; font-weight: 400;"
 				target="_blank"
 				rel="noopener"
-				href="/Cascade%20Climate_CRN_EOI_PT_Documento_B.pdf">Documento B: Política de Conflito de Interesses↗</a
+				href="/Cascade%20Climate_CRN_EOI_PT_Documento_B.pdf">Documento B: Política de Conflito de Interesses</a
 			>
 		</div>
 	</section>
@@ -106,7 +106,7 @@
 		<p class="eoi-deadline"><strong>Se você tiver interesse em sediar um local de campo</strong>, enviar o formulário de Manifestação de Interesse até 10 de março de 2026.</p>
 
 		<div class="eoi-submit-wrap">
-			<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Enviar: Manifestação de Interesse↗</a>
+			<a class="eoi-submit-button" href="https://forms.gle/WRgTqeFRHa8mBooJ7" target="_blank" rel="noopener">Enviar: Manifestação de Interesse</a>
 		</div>
 
 		<p>Para obter mais informações sobre:</p>
