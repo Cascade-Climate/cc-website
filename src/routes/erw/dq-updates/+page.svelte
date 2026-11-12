@@ -3,7 +3,6 @@
 
 	// BEFORE GO-LIVE: remind the editor these table cells are still thin.
 	// - UC Davis crops/area is ".4 ha Grass Clover Rangeland"
-	// - University of Illinois crops/area is only "Corn" (no hectares)
 	// - Carbon Drawdown Initiative XXL Lysimeter crops/area is only "<1 ha" (no crop)
 	const datasets = [
 		{
@@ -87,7 +86,7 @@
 		{
 			contributor: 'University of Illinois — Energy Farm',
 			region: 'USA',
-			crops: ['Corn'],
+			crops: ['<10ha, Corn and Soybean'],
 			uploadedEmphasis: 'October 2026',
 			years: '1',
 			status: 'Available upon request',
