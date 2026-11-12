@@ -194,8 +194,8 @@
 		</div>
 		<img
 			class="hero-photo"
-			src="/images/blog/erw-data-quarry-hero.png"
-			alt="Aerial view of an industrial rock quarry"
+			src="/images/blog/data-quarry-summer-26-hero.jpg"
+			alt="View through a window overlooking agricultural fields and tropical vegetation"
 		/>
 	</section>
 
