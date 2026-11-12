@@ -174,7 +174,7 @@
 				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
 					>Access the ERW Data Quarry↗</a
 				>
-				<a class="cta" href="/erw-dq-upcoming">See datasets in our pipeline↗</a>
+				<a class="cta" href="/erw-dq-upcoming">ERW Data Quarry: Forthcoming contributions↗</a>
 			</div>
 		</div>
 		<img
@@ -435,7 +435,7 @@
 				series that questions like time lags and SOC changes require.
 			</p>
 			<p class="section-cta">
-				<a class="cta" href="/erw-dq-upcoming">See datasets in our pipeline↗</a>
+				<a class="cta" href="/erw-dq-upcoming">ERW Data Quarry: Forthcoming contributions↗</a>
 			</p>
 			<p>
 				<strong>Do you have field data of your own to contribute?</strong> If you hold results from a commercial
