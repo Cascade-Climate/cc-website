@@ -108,6 +108,9 @@
 		</a>
 	</div>
 </section>
+<p class="work-more-wrap">
+	<a class="work-more" href="/our-work">Learn more about our work</a>
+</p>
 
 <style>
 	main h1,
@@ -195,11 +198,31 @@
 		scale: 1.1;
 	}
 
+	.work-more-wrap {
+		margin: 0;
+		padding: 0 4rem 4rem;
+	}
+
+	.work-more {
+		display: inline-block;
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		padding: 0.5rem 1.2rem;
+		border-radius: 2rem;
+		text-decoration: none;
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
 	@media (max-width: 660px) {
 		main,
 		.intro,
 		#supporters {
 			padding: 2rem;
+		}
+
+		.work-more-wrap {
+			padding: 0 2rem 3rem;
 		}
 
 		main {
