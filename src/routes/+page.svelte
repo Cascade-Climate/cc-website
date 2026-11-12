@@ -73,8 +73,8 @@
 			</div>
 			<div class="spotlight">
 				<img
-					src="/images/blog/data-quarry-summer-26-hero.jpg"
-					alt="View through a window overlooking agricultural fields and tropical vegetation"
+					src="/images/blog/erw-data-quarry-hero.png"
+					alt="Aerial view of an industrial rock quarry"
 				/>
 				<h2>ERW Data Quarry: Latest Updates</h2>
 				<p>
