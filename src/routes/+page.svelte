@@ -56,6 +56,18 @@
 				<a href="/our-work/refrigerant-management-and-transition/costs">Learn More</a>
 			</div>
 			<div class="spotlight">
+				<img
+					src="/images/blog/erw-data-quarry-hero.png"
+					alt="Aerial view of an industrial rock quarry"
+				/>
+				<h2>ERW Data Quarry: Latest Updates</h2>
+				<p>
+					Ten unique datasets are now available, each a window into a real-world ERW project. We encourage
+					researchers to request data to advance non-commercial ERW science.
+				</p>
+				<a href="/erw/dq-updates" target="_blank">Learn More</a>
+			</div>
+			<div class="spotlight">
 				<img src={bedrockInitiativeHero} alt="Bedrock Initiative" />
 				<h2>Cascade announces Bedrock Initiative to unlock potential of enhanced rock weathering</h2>
 				<p>
@@ -70,18 +82,6 @@
 					Learn how Cascade is sequencing financing, policy, and markets to build practical refrigerant recovery systems in Southeast Asia.
 				</p>
 				<a href="/blog/lrm-financing" target="_blank">Learn More</a>
-			</div>
-			<div class="spotlight">
-				<img
-					src="/images/blog/erw-data-quarry-hero.png"
-					alt="Aerial view of an industrial rock quarry"
-				/>
-				<h2>ERW Data Quarry: Latest Updates</h2>
-				<p>
-					Ten unique datasets are now available, each a window into a real-world ERW project. We encourage
-					researchers to request data to advance non-commercial ERW science.
-				</p>
-				<a href="/erw/dq-updates" target="_blank">Learn More</a>
 			</div>
 		</div>
 
