@@ -1,5 +1,4 @@
 <script>
-	import { page } from '$app/stores';
 	import ScrollNav from '$lib/components/ScrollNav.svelte';
 	import asteraLogo from '$lib/images/supporters/astera.webp';
 	import czLogo from '$lib/images/supporters/chan-zuckerberg.webp';
@@ -16,50 +15,65 @@
     <title>About Us - Cascade Climate</title> 
     <meta
 	name="description"
-	content="Propelling high-potential climate solutions from the margins to the mainstream."
+	content="Cascade Climate helps overlooked climate solutions with outsized potential move from stuck to self-sustaining scale."
 />
 </svelte:head>
 
 <section class="intro">
-	<h1>About Us</h1>
+	<h1>About Cascade</h1>
 	<p>
-		Cascade is a philanthropy-backed nonprofit helping mobilize a more comprehensive response to the climate crisis by advancing high-potential solutions that remain on the margins of mainstream climate action. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.</p>
+		Cascade Climate is a global, philanthropy-backed nonprofit helping mobilize a more comprehensive response to the climate crisis. We help overlooked climate solutions with outsized potential move from stuck to self-sustaining scale. Our team is composed of scientists, policy strategists, field builders, and organizational leaders united by curiosity and humility.
+	</p>
+	<p>
+		Our first two program areas are enhanced rock weathering, which durably removes carbon while benefiting agricultural productivity, and lifecycle refrigerant management, which curbs near-term warming by capturing potent greenhouse gases before they're vented.
+	</p>
 </section>
 <ScrollNav />
 <main>
-	<section id="motivation">
-		<h1>Our motivation</h1>
-		<h2>: the climate crisis needs a more holistic strategy.</h2>
+	<section id="challenge">
+		<h1>Our challenge</h1>
+		<h2>: decarbonization alone isn't enough.</h2>
 		<p>
-			The climate crisis has outpaced our response. While the world has rightly focused on rapid decarbonization in trying to limit warming to 1.5°C, we are already crossing that threshold. Earlier versions of our climate strategy are no longer sufficient in scope. We need dramatically expanded efforts on near-term warming mitigation, large-scale durable carbon removal for climate restoration, and measures to avoid triggering irreversible tipping points.
+			Ambitious efforts to reduce CO₂ emissions are accelerating. But to secure a livable future, we have a lot more work ahead.
 		</p>
 		<p>
-			Previously neglected approaches—from natural system climate interventions to super pollutant mitigation and more—must now be seriously pursued alongside urgent decarbonization. Many promising solutions remain sidelined not because they lack potential, but because they haven't gotten the push needed to overcome adoption bottlenecks. We founded Cascade to provide that push, accelerating high-potential solutions and catalyzing a full-spectrum response that matches the scale and urgency of the climate crisis.
+			We must put the brakes on super pollutant emissions to limit near-term warming in the coming decades. We must remove carbon already accumulated in the atmosphere to help limit harm and lower temperatures over time. And we must protect the people and ecosystems most at risk from irreversible shifts in Earth systems.
+		</p>
+		<p>
+			Yet these fronts remain critically underserved. Super pollutant mitigation is insufficiently prioritized relative to its potential impact on near-term warming. Our durable carbon removal capacity remains a tiny fraction of the planetary scale needed. And efforts to address escalating risks to the stability of Earth systems are still in their infancy.
+		</p>
+		<p>
+			Many solutions already exist but require coordinated work across R&amp;D, market shaping, and policy development to reach meaningful scale. Excellent organizations are advancing individual pieces. The work that goes unowned is stitching those efforts together — and mobilizing partners to collectively build what's missing.
+		</p>
+		<p>Cascade is built for that work.</p>
+	</section>
+	<section id="how">
+		<h1>How we work</h1>
+		<h2>: Cascade operates as an independent hub for collective action.</h2>
+		<p>
+			Researchers answer scientific questions, companies build projects, buyers drive early demand, and policymakers create durable support and accountability. Each is rightly focused on its part of the puzzle.
+		</p>
+		<p>
+			Cascade's role is to see the whole and mobilize partners to close the gaps that fall between institutional mandates.
+		</p>
+		<p>
+			To do this, we partner closely with scientists, project developers, catalytic funders, governments, and other actors without being beholden to any interest group. We assess how advances across different parts of a field will need to stack upon one another; build key analytical, data, and evidence-based foundations whose absence prevents different actors from doing their part; and organize ambitious initiatives that spur field-wide action.
+		</p>
+		<p>
+			Every intervention is designed backward from the conditions that make for durable climate solutions: rigorous science, viable economics, healthy markets, and supportive policy.
+		</p>
+		<p>
+			In every field, we aim to work ourselves out of a job by setting a virtuous cycle in motion: self-reinforcing progress and impacts that cascade without us.
 		</p>
 	</section>
-	<section id="work">
-		<h1>Our work</h1>
-		<h2>
-			: orchestrating ambitious initiatives across markets, policy, and science.
-		</h2>
+	<section id="programs">
+		<h1>Current programs</h1>
+		<h2>: we're focused on durable carbon removal and super pollutant mitigation.</h2>
 		<p>
-			Cascade tackles the systemic bottlenecks that aren’t the “job” of any existing actor—challenges that markets, policy, and science can't solve in isolation. We coordinate across these spheres to overcome collective action problems, build novel tools and platforms that speed the pace of learning, and direct substantially more resources toward these critical emerging climate solutions. 
+			Our first major focus is enhanced rock weathering (ERW). Cascade has accelerated the field by mobilizing partnerships around shared priorities to build the scientific and market foundations ERW needs to scale. We convened over 100 researchers and practitioners to lay the groundwork for rigorous carbon removal quantification; launched the ERW Data Quarry, the field's first system for sharing commercial data with academic researchers; and helped leading buyers build research and data sharing into their purchases. Our Bedrock Initiative builds on this to deliver the global evidence base ERW needs through standardized, multi-year field research across major agricultural regions.
 		</p>
 		<p>
-			Over the past two years, we've demonstrated this approach in enhanced rock weathering (ERW)—accelerating high-priority R&D, creating deployment-driven learning cycles through early voluntary markets, and building policy momentum for the field. Learn more about our work in ERW <a href={$page.data.previewBedrockOurWork ? '/our-work/enhanced-rock-weathering' : '/our-work#erw'}>here</a>.
-		</p>
-		<p>
-			We're now expanding this model to address the immediate challenge of near-term warming. Rapid temperature rise risks crossing planetary boundaries and cascading impacts across societies and ecosystems. Averting the worst of this demands coordinated preparation and response that spans industry, governments, and scientists.
-		</p>
-		<p>
-			Super pollutants like methane and HFCs offer the fastest path to slowing this warming, given their outsized climate impact and shorter atmospheric lifespans. Cascade is contributing to early policy and market development foundations for super pollutant mitigation, applying some of the strategies that have advanced ERW and durable carbon removal in recent years.
-		</p>
-	</section>
-	<section id="approach">
-		<h1>Our approach</h1>
-		<h2>: building deep, trust-based relationships across the ecosystem.</h2>
-		<p>
-			The “how” in our approach is every bit as important as the “what.” We orchestrate ambitious cross-sector initiatives that shape markets and policies. But first we have to earn the invitation to do this by building broad and deep relationships across any ecosystem we work in—establishing trust through humility, an independent voice, and always keeping climate impact as our north star. Philosophically, we put learning at the heart of our work, tackling complexity through learning-by-doing cycles rather than wishing it away.
+			Through our lifecycle refrigerant management program, we're now applying our distinctive approach to reduce refrigerant emissions and help expand access to clean cooling. Potent greenhouse-trapping refrigerants in the world's cooling equipment are still vented by default, and the systems to recover them barely exist. In Asia, we're mobilizing catalytic funding for demonstration projects to establish the foundations for a refrigerant recovery, reuse, and disposal network, while working in parallel toward embedding lifecycle refrigerant management in policy and cooling industry practice.
 		</p>
 	</section>
 </main>

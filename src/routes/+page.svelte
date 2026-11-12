@@ -15,7 +15,7 @@
 	<title>Cascade Climate</title>
 	<meta
 		name="description"
-		content="Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by accelerating high-potential solutions that remain on the margins of mainstream climate action."
+		content="Advancing emerging climate solutions from stuck to self-sustaining scale."
 	/>
 </svelte:head>
 <div>
@@ -24,17 +24,28 @@
 	</a>
 	<section id="headline" style="width: 100%;">
 		<h1>
-			Propelling high-potential climate solutions from the margins to the mainstream.
+			Advancing emerging climate solutions from stuck to self-sustaining scale.
 		</h1>
 	</section>
 	<section id="about">
 		<img src={heroPhoto4} alt="Cascade Climate" />
 		<div>
 			<p style="font-weight: 200;">
-				Intensifying global warming demands a faster and smarter response. We need to sustain focus on rapid decarbonization while pursuing a broader range of interventions to prevent and manage the worst effects of climate change. This holistic strategy must encompass near-term warming mitigation, large-scale durable carbon removal for climate restoration, and measures to avoid triggering irreversible tipping points.
-				<br><br>
-				Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
+				Decarbonization is essential to a livable planet, but insufficient on its own.
 			</p>
+			<p style="font-weight: 200;">
+				However fast we move, decarbonization can't close three widening gaps in the world's climate response: putting the brakes on near-term warming, removing accumulated carbon from the atmosphere, and protecting the people and ecosystems most at risk from irreversible shifts in Earth systems.
+			</p>
+			<p style="font-weight: 200;">
+				Many emerging solutions could help close these gaps but are held back by missing pieces across science, markets, and policy. Putting the puzzle together isn't anyone's primary job. We've made it ours.
+			</p>
+			<p style="font-weight: 200;">
+				Cascade assembles that puzzle through partnership: diagnosing what emerging solutions need to take hold, building missing foundations with the right collaborators, and orchestrating action that no single actor can take alone.
+			</p>
+			<p style="font-weight: 200;">
+				Our current work is focused on enhanced rock weathering, our entry point in durable carbon removal, and lifecycle refrigerant management, our entry point in super pollutant mitigation.
+			</p>
+			<a class="about-more" href="/about-us">Learn more↗</a>
 			<hr style="margin: 64px;">
 		</div>
 	</section>
@@ -315,6 +326,10 @@
 		color: var(--color-light);
 	}
 
+	#about p + p {
+		margin-top: 1rem;
+	}
+
 	#about img {
 		margin: 0;
 		display: block;
@@ -413,6 +428,17 @@
 		margin-bottom: 1rem;
 		font-size: 1rem;
 		width: 100%;
+	}
+
+	.about-more {
+		display: inline-block;
+		margin-top: 1.25rem;
+		background-color: var(--color-accent);
+		color: var(--color-light);
+		padding: 0.5rem 1.2rem;
+		border-radius: 2rem;
+		text-decoration: none;
+		font-size: 1rem;
 	}
 
 	@media (max-width: 660px) {
