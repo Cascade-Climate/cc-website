@@ -176,7 +176,7 @@
 	}
 
 	#supporters {
-		padding: 4rem;
+		padding: 1.625rem 4rem 4rem;
 	}
 	#supporters h1 {
 		font-weight: 500;
@@ -205,7 +205,7 @@
 	}
 
 	.work-more-wrap {
-		margin: 1.25rem 0 0;
+		margin: 3.625rem 0 0;
 	}
 
 	.work-more {
@@ -228,6 +228,10 @@
 
 		main {
 			padding-bottom: 6rem;
+		}
+
+		#supporters {
+			padding-top: 1.625rem;
 		}
 	}
 </style>
