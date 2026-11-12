@@ -150,7 +150,7 @@
 				meaningfully advanced measurement, monitoring and verification approaches. Data sharing
 				efforts such as our
 				<a
-					href="https://cascadeclimate.org/blog/data-sharing-system-for-erw"
+					href="https://cascadeclimate.org/erw/dq"
 					target="_blank"
 					rel="noopener noreferrer">ERW Data Quarry</a
 				> initiative aims to ensure that insights from commercial deployments contribute to the broader

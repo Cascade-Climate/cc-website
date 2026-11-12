@@ -190,7 +190,7 @@
 						Learn about the first-ever ERW data sharing system, the ERW Data Quarry, that connects researchers to
 						data from commercial ERW deployments to unlock deployment-led learning.
 					</p>
-					<a href="/blog/data-sharing-system-for-erw">Learn More</a>
+					<a href="/erw/dq">Learn More</a>
 				</div>
 			</div>
 		</section>

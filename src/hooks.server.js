@@ -15,6 +15,13 @@ export async function handle({ event, resolve }) {
 	if (event.url.pathname === '/blog/lrm-gaps') {
 		return Response.redirect(new URL('/blog/LRM-gaps', event.url), 302);
 	}
+	const dq = '/erw/dq';
+	if (
+		path.toLowerCase() === '/blog/data-sharing-system-for-erw' ||
+		(path.toLowerCase() === dq && path !== dq)
+	) {
+		return Response.redirect(new URL(dq, event.url), 301);
+	}
 	const dqUpcoming = '/erw-dq-upcoming';
 	if (
 		path.toLowerCase() === '/blog/erw-data-quarry-status-updates' ||

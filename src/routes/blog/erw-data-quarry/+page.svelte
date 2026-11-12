@@ -24,7 +24,7 @@
 				<h1>Introducing the ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
                 <p></p>
                 <div class="links">
-                    <a href="/blog/data-sharing-system-for-erw">Note: this page is now deprecated. Please visit the most updated ERW Data Quarry Landing Page for the most up-to-date information.↗</a>
+                    <a href="/erw/dq">Note: this page is now deprecated. Please visit the most updated ERW Data Quarry Landing Page for the most up-to-date information.↗</a>
                 </div>
 				<p>
 					Enhanced Rock Weathering (ERW) has the potential to deliver meaningful carbon removal alongside agriculture benefits. Yet there remains a number of open scientific questions related to <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em> carbon removal quantification↗ </em></a> and safety that will be critical to address to unlock this potential.

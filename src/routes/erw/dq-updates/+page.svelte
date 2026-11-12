@@ -181,7 +181,7 @@
 	<article class="article">
 		<section id="overview" class="section">
 		<p>
-			The <a href="/blog/data-sharing-system-for-erw">ERW Data Quarry</a> was built to make ERW data available to the
+			The <a href="/erw/dq">ERW Data Quarry</a> was built to make ERW data available to the
 			research community. This investment is starting to take shape and reflect a broader range of ERW global
 			deployments. Since May 2025, Carbon Drawdown Initiative, Flux, InPlanet, Mati, Silica, Varaha, and two academic
 			long-term field stations studying ERW have shared datasets through the Data Quarry.
@@ -202,7 +202,7 @@
 					<a href="https://cdrxiv.org/channels/erw-data-quarry" target="_blank" rel="noopener noreferrer"
 						>CDRXIV channel</a
 					>, with no proposal required. You can read more about the structure of the DQ system and the thinking
-					behind it <a href="/blog/data-sharing-system-for-erw">here</a>.
+					behind it <a href="/erw/dq">here</a>.
 				</p>
 				<p>
 					What follows is an overview of what the Data Quarry holds, what it can support, where it&apos;s growing

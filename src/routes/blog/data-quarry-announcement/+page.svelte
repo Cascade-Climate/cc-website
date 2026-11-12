@@ -11,7 +11,7 @@
 				<p class="date">May 27, 2025</p>
 				<hr>
                 <div class="links">
-                    <a href="/blog/data-sharing-system-for-erw">Learn more about the ERW Data Quarry↗</a>
+                    <a href="/erw/dq">Learn more about the ERW Data Quarry↗</a>
                     <a href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Access the ERW Data Quarry↗</a>
                 </div>
 			</div>

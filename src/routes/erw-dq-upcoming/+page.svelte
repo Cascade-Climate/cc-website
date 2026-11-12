@@ -186,7 +186,7 @@
 				non-commercial use.
 			</p>
 			<div class="hero-actions">
-				<a class="cta" href="/blog/data-sharing-system-for-erw">Learn more about the ERW Data Quarry↗</a>
+				<a class="cta" href="/erw/dq">Learn more about the ERW Data Quarry↗</a>
 				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener"
 					>Access the ERW Data Quarry↗</a
 				>
