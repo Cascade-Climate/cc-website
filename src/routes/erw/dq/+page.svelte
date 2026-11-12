@@ -86,20 +86,20 @@
 		<div class="hero-copy">
 			<h1>ERW Data Quarry: A Data Sharing System for Enhanced Rock Weathering</h1>
 			<div class="hero-actions">
-				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates↗</a>
-				<a class="cta" href="/erw-dq-upcoming">Explore available and forthcoming datasets↗</a>
+				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Access the ERW Data Quarry↗</a>
 			</div>
 			<p>
-				Enhanced Rock Weathering (ERW) has the potential to deliver meaningful carbon removal alongside agriculture benefits. Yet there remains a number of open scientific questions related to <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>carbon removal quantification</em></a> and safety that will be critical to address to unlock this potential.
+				Enhanced rock weathering (ERW) offers meaningful carbon removal alongside the promise of healthier soils and higher crop yields. Researchers need detailed field data to understand how much carbon it can remove, where and to what extent it benefits crops, and how to deploy and scale the practice safely and sustainably.
 			</p>
 			<p>
-				Without addressing these open questions, the ERW field risks being stuck in a limited-demand future: one in which substantial uncertainty discounting, expensive, measurement-intensive quantification, field heterogeneity, and an incomplete health and safety regulatory framework limits ERW’s ability to scale. We don’t want this future for ERW. We want to quickly, transparently, and collaboratively answer these open questions to help ERW reach its full climate and agronomic impact potential.
+				Launched in May 2025, the ERW Data Quarry makes data from commercial projects and field trials available for non-commercial research.
 			</p>
 			<p>
-				<strong>But answering these questions requires data. Granular, real-world data. And lots of it.</strong>
+				<strong>To learn more about the state of ERW science, how the Data Quarry works, and flagship contributors, scroll to read more.</strong>
 			</p>
 			<div class="hero-actions">
-				<a class="cta" href="https://data.cascadeclimate.org/" target="_blank" rel="noopener">Access the ERW Data Quarry↗</a>
+				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates↗</a>
+				<a class="cta" href="/erw-dq-upcoming">Explore available and forthcoming datasets↗</a>
 			</div>
 		</div>
 		<img class="hero-photo" src={data} alt="Enhanced Rock Weathering" />
@@ -118,6 +118,15 @@
 		<section id="the-oppportunity" class="section">
 			<h1>The Opportunity</h1>
 			<p>
+				Enhanced Rock Weathering (ERW) has the potential to deliver meaningful carbon removal alongside agriculture benefits. Yet there remains a number of open scientific questions related to <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>carbon removal quantification</em></a> and safety that will be critical to address to unlock this potential.
+			</p>
+			<p>
+				Without addressing these open questions, the ERW field risks being stuck in a limited-demand future: one in which substantial uncertainty discounting, expensive, measurement-intensive quantification, field heterogeneity, and an incomplete health and safety regulatory framework limits ERW’s ability to scale. We don’t want this future for ERW. We want to quickly, transparently, and collaboratively answer these open questions to help ERW reach its full climate and agronomic impact potential.
+			</p>
+			<p>
+				<strong>But answering these questions requires data. Granular, real-world data. And lots of it.</strong>
+			</p>
+			<p>
 				Unlocking commercial ERW datasets to answer the most pressing scientific questions facing the field can help to jumpstart a virtuous cycle of <a href="https://cascadeclimate.org/blog/foundations-for-a-healthy-erw-market-cycle" target="_blank" rel="noopener">deployment-led learning</a>. In a deployment-led learning scenario, real-world deployments help further scientific understanding, which builds trust in the process, unlocking more deployments, and more carbon and farmer benefits.
 			</p>
 
@@ -135,9 +144,9 @@
 
             <section id="the-action" class="section">
             <h1>The Action</h1>
-            <p>We are incredibly energized to launch the <a href="https://data.cascadeclimate.org" target="_blank" rel="noopener">ERW Data Quarry</a>–the first-ever ERW data sharing system–together with <b>9 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
+            <p>We are incredibly energized to launch the <a href="https://data.cascadeclimate.org" target="_blank" rel="noopener">ERW Data Quarry</a> – the first-ever ERW data sharing system – together with <b>9 leading ERW companies</b> who have proactively committed to sharing datasets as a part of this system. This is one of the first systems of its kind to proactively share commercial data for the benefit of broad scientific learning in the CDR space. Each of the following companies have committed to sharing specific dataset(s) tied to individual deployments, within a set time frame, through this system. </p>
 
-            <h2>The 9 Flagship Data Quarry contributors include:</h2>
+            <h2>The 9 Flagship Data Quarry contributors included</h2>
 
             <section id="supporters">
                 <div id="supporters-container">
@@ -235,18 +244,18 @@
 		<section id="the-data-quarry-solution" class="section">
 			<h1>The ERW Data Quarry Solution</h1>
 			<p>
-				Finding the right balance between transparency, speed, and commercial interests is a delicate balancing act. Through dozens of stakeholder listening sessions and iterative designs, Cascade has developed the ERW Data Quarry to navigate these tensions by building around the following core principles:
+				Finding the right balance between transparency, speed, and commercial interests is a delicate balancing act. Through dozens of stakeholder listening sessions and iterative designs, Cascade developed the ERW Data Quarry to navigate these tensions by building around the following core principles:
 			</p>
 
             <ol>
-                <li><strong>Focus on priority questions: </strong>Building on the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;↗ </em></a> process, we have identified four priority research topics that commercial datasets can help address. These questions informed the variables collected through the Data Quarry system.</li>
+                <li><strong>Focus on priority questions: </strong>Building on the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;</em></a> process, we have identified four priority research topics that commercial datasets can help address. These questions informed the variables collected through the Data Quarry system.</li>
                 <li><strong>Segment initial access: </strong>Health and safety data will be made fully public to build trust in the safety of ERW. Additional data will be made available to researchers through a proposal-based request system.</li>
-                <li><strong>Fair use:</strong> A commitment to use data shared for advancing scientific learning&ndash;not for commercial purposes.</li>
+                <li><strong>Fair use:</strong> A commitment to use data shared for advancing scientific learning &ndash; not for commercial purposes.</li>
                 <li><strong>Build on existing data norms: </strong>Consistent with farmer data sharing norms, ensure farmers&rsquo; consent to data sharing and anonymize location data to protect farmer privacy. Consistent with academic norms, make datasets used for peer-reviewed articles public upon publication.&nbsp;</li>
                 <li><strong>Complement to existing market infrastructure:</strong> The Data Quarry focuses on advancing the state of ERW science, and not on validating carbon claims. It is in no way a replacement for the critical role that registries, validation and verification bodies (VVBs), and other carbon market integrity initiatives play in the ecosystem.&nbsp;</li>
                 </ol>
 
-            <p>A detailed description of how we are putting these principles into action is available in the post-script below.</p>
+            <p>A detailed description of how we are putting these principles into action is available in the <a href="#post-script">post-script</a>.</p>
 
 		</section>
 		<section id="next-steps" class="section">
@@ -261,19 +270,21 @@
                 <ul>
                 <li>Commercial datasets are just one part of the puzzle. More complete and accessible datasets from non-commercial field trials can also help advance the state of the field. If you have data from an ERW field trial and would like to be part of advancing the state of ERW science, please reach out.&nbsp;</li>
                 </ul>
-                <li><strong>For Anyone Else:</strong> You are interested in following along in this journey, sign up for our general newsletter <a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1" target="_blank" rel="noopener">here↗</a>.&nbsp;</li>
+                <li><strong>For Anyone Else:</strong> You are interested in following along in this journey, sign up for our general newsletter <a href="https://docs.google.com/forms/d/e/1FAIpQLScYIERiJVoobnCRYQ8uYmFuHm7_jsyR67Aw1XbfiFdzAYx-sw/viewform?pli=1&pli=1" target="_blank" rel="noopener">here</a>.&nbsp;</li>
             </ul>
 
 			<p>
-				We hope that this data sharing system is just the beginning. The organizations committing to the Data Quarry have recognized that the field will grow faster through collaboration and shared learning than if research is conducted in silos–and that they can tap into additional scientific resources as world class researchers build on their work. As researchers begin to connect with commercial datasets, new collaborations between partners proliferate, and scientific understanding of ERW advances, collectively, we’ll learn a lot more than we would have otherwise.
+				We hope that this data sharing system is just the beginning. The organizations committing to the Data Quarry have recognized that the field will grow faster through collaboration and shared learning than if research is conducted in silos – and that they can tap into additional scientific resources as world class researchers build on their work. As researchers begin to connect with commercial datasets, new collaborations between partners proliferate, and scientific understanding of ERW advances, collectively, we’ll learn a lot more than we would have otherwise.
 			</p>
 			<p>
 				At Cascade, we are committed to stewarding this data sharing process to support the ERW community in advancing the most pressing scientific questions. We expect to learn a few things about unlocking deployment-led learning that can help other climate pathways along the way.
 			</p>
-
-            <p>
-                In the meantime, tip your hat to the leading companies who have rolled up their sleeves, moved from talk to action, and are committing real data to advance the state of ERW science.
-            </p>
+			<p>
+				As of November 2026, ten unique datasets are available in the Data Quarry, each a window into a real-world ERW project. To preview these contributions and insights so far, see 'Latest Updates.'
+			</p>
+			<p class="section-cta">
+				<a class="cta" href="/erw/dq-updates">ERW Data Quarry: Latest Updates↗</a>
+			</p>
 		</section>
 
         <section id="post-script" class="section">
@@ -292,9 +303,11 @@
 
 <h2>Data Variables:</h2>
 <p>Whenever possible, datasets in the Data Quarry will share a common set of core variables, as listed in the pdf below. These variables were selected based on their importance to answering the highest priority research questions that overlap with data collected in commercial deployments.</p>
-<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" target="_blank" rel="noopener" variant="accent">ERW Data Quarry Variable List ↗</PDFLink>
+<div class="variable-list">
+	<PDFLink link="/cascadeclimate-data-quarry-variable-list.pdf" target="_blank" rel="noopener" variant="accent">ERW Data Quarry Variable List↗</PDFLink>
+</div>
 <p></p>
-<p>Building on learnings from the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;↗ </em></a>  process, these research themes are:&nbsp;&nbsp;</p>
+<p>Building on learnings from the <a href="/blog/foundations-for-carbon-removal-quantification-in-erw-deployments" target="_blank" rel="noopener"><em>&ldquo;Foundations&rdquo;</em></a> process, these research themes are:&nbsp;&nbsp;</p>
 <ol>
 <li>Health and safety</li>
 <li>Time lags in carbon removal</li>
@@ -370,6 +383,10 @@
 		line-height: 1.62;
 	}
 
+	.hero strong {
+		font-weight: 650;
+	}
+
 	.hero a {
 		color: var(--color-highlight);
 		font-weight: 500;
@@ -405,6 +422,31 @@
 	}
 
 	.cta:hover {
+		opacity: 0.92;
+	}
+
+	.variable-list {
+		margin: 0.35rem 0 1.25rem;
+	}
+
+	.variable-list :global(button) {
+		display: inline-flex;
+		align-items: center;
+		width: auto;
+		flex-grow: 0;
+		padding: 0.55rem 1.35rem;
+		border-radius: 2rem;
+		background: var(--color-accent);
+		color: var(--color-light);
+		font-family: inherit;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.3;
+		border: 1px solid transparent;
+		cursor: pointer;
+	}
+
+	.variable-list :global(button:hover) {
 		opacity: 0.92;
 	}
 
@@ -504,6 +546,17 @@
 
 	.article a:hover {
 		color: #023c40;
+	}
+
+	.article a.cta,
+	.article a.cta:hover {
+		color: var(--color-light);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.section-cta {
+		margin: 0.35rem 0 1.25rem;
 	}
 
 	.article ul,
