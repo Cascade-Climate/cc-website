@@ -45,12 +45,12 @@
 			<p style="font-weight: 200;">
 				Our current work is focused on enhanced rock weathering, our entry point in durable carbon removal, and lifecycle refrigerant management, our entry point in super pollutant mitigation.
 			</p>
-			<a class="about-more" href="/about-us">Learn more</a>
+			<a class="about-more" href="/about-cascade">Learn more</a>
 		</div>
 	</section>
 
 	<section id="our-work">
-		<!-- <h3><a href="about-us">ABOUT US ↗</a></h3>
+		<!-- <h3><a href="about-cascade">ABOUT US ↗</a></h3>
 		<h4 style="text-align: center; margin: 18px; font-weight: 200; line-height: 1.4; font-size: 150%;">
 			Cascade is a philanthropy-backed nonprofit helping mobilize a comprehensive response to the climate crisis by <b>accelerating high-potential solutions that remain on the margins of mainstream climate action</b>. We do this by leading ambitious initiatives spanning markets, policy and science to overcome the biggest bottlenecks to progress.
 		</h4>

@@ -3,6 +3,9 @@ import { dev } from '$app/environment';
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
 	const path = event.url.pathname.replace(/\/$/, '') || '/';
+	if (path === '/about-us') {
+		return Response.redirect(new URL('/about-cascade', event.url), 301);
+	}
 	const dqUpdates = '/erw/dq-updates';
 	if (
 		path === '/blog/data-quarry-update-summer-26' ||

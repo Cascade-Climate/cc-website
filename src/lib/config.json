@@ -3,11 +3,11 @@
 	"navItems": [
 		{
 			"label": "About",
-			"url": "/about-us",
+			"url": "/about-cascade",
 			"children": [
 				{
 					"label": "About Us",
-					"url": "/about-us"
+					"url": "/about-cascade"
 				}
 			]
 		},
